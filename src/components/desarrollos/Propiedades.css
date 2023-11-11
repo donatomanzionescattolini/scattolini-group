@@ -1,0 +1,15 @@
+.propiedades a:hover {
+    color: inherit !IMportant;
+}
+
+.propiedades-img {
+    width: 100% !important;
+    height: 250px !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.propiedades .row {
+
+    justify-content: center !important;
+}
