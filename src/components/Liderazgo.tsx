@@ -19,6 +19,7 @@ export default function Liderazgo() {
                     Florida. Elda ha ayudado a cientos de clientes de diferentes partes
                     del mundo a alcanzar sus objetivos inmobiliarios, con profesionalismo,
                     integridad y dedicación.
+
                 </p>
 
                 <p className="text-muted ">
