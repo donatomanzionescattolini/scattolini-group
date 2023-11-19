@@ -25,7 +25,8 @@ export default function Pinecrest() {
                 <div className="row d-flex align-items-center justify-content-around">
                     <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 ps-5 pe-5 pb-2">
                         <br></br>
-                        <p>
+                        <p className={"text-muted"}>
+                            <small>
                             Bienvenido a Pinecrest, considerada una de las areas residenciales
                             mas hermosas del Sur de la Florida. Pinecrest es una comunidad
                             altamente habitable con un excelente gobierno, finanzas estables,
@@ -40,6 +41,7 @@ export default function Pinecrest() {
                             casas unifamiliares hasta condominios de lujo, Pinecrest ofrece
                             algo para todos. ¡Ven a descubrir todo lo que Pinecrest tiene para
                             ofrecer y encuentra tu hogar perfecto en esta hermosa comunidad!
+                        </small>
                         </p>
                         <br></br>
                         <br></br>

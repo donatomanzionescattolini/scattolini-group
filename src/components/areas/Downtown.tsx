@@ -28,7 +28,7 @@ export default function Downtown() {
             <div className="city-firstsection w-100 row">
                 <div className="row d-flex align-items-center justify-content-around">
                     <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 ps-5 pe-5 pb-2">
-                        <h5> Downtown Miami: El Centro de Negocios y Compras en Miami</h5>
+                        <h2 className={"text-center "}> Downtown Miami: El Centro de Negocios y Compras en Miami</h2>
 
                         <p className="text-muted ">
                             <small>

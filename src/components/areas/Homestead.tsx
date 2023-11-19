@@ -27,15 +27,17 @@ export default function Homestead() {
                 <div className="row d-flex align-items-center justify-content-around">
                     <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 ps-5 pe-5 pb-2">
                         <br></br>
-                        <h5>La Puerta de Entrada al Parque Nacional de los Everglades</h5>
+                        <h2 className={"text-center"}>La Puerta de Entrada al Parque Nacional de los Everglades</h2>
                         <br></br>
-                        <p>
+                        <p className={"text-muted"}>
+                            <small>
                             Homestead es un lugar hermoso para vivir y trabajar, con días
                             soleados y una temperatura promedio de 75 grados. Ubicado a solo
                             treinta millas al norte de Miami, una de las ciudades más
                             vibrantes y culturalmente ricas del país, Homestead ofrece lo
                             mejor de ambos mundos: la tranquilidad de una pequeña ciudad con
                             todas las comodidades de una gran ciudad.
+                        </small>
                         </p>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
