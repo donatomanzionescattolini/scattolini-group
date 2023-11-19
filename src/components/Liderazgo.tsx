@@ -3,7 +3,7 @@ export default function Liderazgo() {
         <div className="row  p-0 m-0">
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-center p-5 text-center">
                 <img
-                    src={"/assets2/elda/blob-9064d3c.jpg"}
+                    src={"https://pagina-mama.s3.amazonaws.com/assets2/elda/blob-9064d3c.jpg"}
                     alt="Elda"
                     className="w-75 m-auto img-thumbnail"
                 />

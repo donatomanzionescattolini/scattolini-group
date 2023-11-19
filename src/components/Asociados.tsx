@@ -23,7 +23,7 @@ export default function Equipo() {
                             <div className="img-container w-80 h-100 mx-auto">
                                 <img
                                     className="img-responsive object-fit-cover w-100 m-0 p-0  "
-                                    src="/assets2/elda/elda-transparent-bg.png"
+                                    src="https://pagina-mama.s3.amazonaws.com/assets2/elda/elda-transparent-bg.png"
                                     width="80%"
                                     height="auto"
                                 />
@@ -41,7 +41,7 @@ export default function Equipo() {
                             <div className="img-container w-80 h-100 mx-auto">
                                 <img
                                     className="img-responsive object-fit-cover w-100 m-0 p-0  "
-                                    src="/assets2/asociados/veru-transparent-bg.png"
+                                    src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/veru-transparent-bg.png"
                                     width="80%"
                                     height="auto"
                                 />
@@ -59,7 +59,7 @@ export default function Equipo() {
                             <div className="img-container w-80 h-100 mx-auto">
                                 <img
                                     className="img-responsive object-fit-cover w-100 m-0 p-0  "
-                                    src="/assets2/asociados/laila-transparent-bg.png"
+                                    src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/laila-transparent-bg.png"
                                     width="80%"
                                     height="auto"
                                 />
@@ -81,7 +81,7 @@ export default function Equipo() {
                             <div className="img-container w-80 h-100 mx-auto">
                                 <img
                                     className="img-responsive object-fit-cover w-100 m-0 p-0  "
-                                    src="/assets2/asociados/monica-transparent-bg.png"
+                                    src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/monica-transparent-bg.png"
                                     width="80%"
                                     height="100%"
                                 />
@@ -99,7 +99,7 @@ export default function Equipo() {
                             <div className="img-container p-0">
                                 <img
                                     className="img-responsive object-fit-cover w-100 m-0 p-0  "
-                                    src="/assets2/asociados/carmen-transparent-bg.png"
+                                    src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/carmen-transparent-bg.png"
                                     width="80%"
                                     height="100%"
                                     style={{minHeight: "100%!important"}}
@@ -119,7 +119,7 @@ export default function Equipo() {
                             <div className="img-container w-80 h-100 mx-auto">
                                 <img
                                     className="img-responsive object-fit-cover w-100 m-0 p-0  "
-                                    src="/assets2/asociados/mariolga-transparent-bg.png"
+                                    src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/mariolga-transparent-bg.png"
                                     width="80%"
                                     height="auto"
                                     style={{minHeight: "100%!important"}}
@@ -138,7 +138,7 @@ export default function Equipo() {
                             <div className="img-container w-80 h-100 mx-auto">
                                 <img
                                     className="img-responsive object-fit-cover w-100 m-0 p-0  "
-                                    src="/assets2/asociados/victoria-transparent-bg.png"
+                                    src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/victoria-transparent-bg.png"
                                     width="80%"
                                     height="auto"
                                     style={{minHeight: "100%!important"}}
@@ -157,7 +157,7 @@ export default function Equipo() {
                             <div className="img-container w-80 h-100 mx-auto">
                                 <img
                                     className="img-responsive object-fit-cover h-100 m-0 p-0  "
-                                    src="/assets2/asociados/dayana-transparent-bg.png"
+                                    src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/dayana-transparent-bg.png"
                                     width="80%"
                                     height="auto"
                                     style={{minHeight: "100%!important"}}
@@ -176,7 +176,7 @@ export default function Equipo() {
                             <div className="img-container w-80 h-100 mx-auto">
                                 <img
                                     className="img-responsive object-fit-cover w-100 m-0 p-0  "
-                                    src="/assets2/asociados/anahid-transparent-bg.png"
+                                    src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/anahid-transparent-bg.png"
                                     width="80%"
                                     height="auto"
                                     style={{minHeight: "100%!important"}}

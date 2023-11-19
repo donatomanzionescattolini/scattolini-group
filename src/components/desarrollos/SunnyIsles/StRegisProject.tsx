@@ -94,7 +94,7 @@ export function StRegisProject() {
                         </ul>
                         <img
                             alt={"price list"}
-                            src={"/assets2/desarrollos/st-regis/pricelist.jpg"}
+                            src={"https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/st-regis/pricelist.jpg"}
                         />
                     </div>
                 ),

@@ -11,7 +11,7 @@ export default function PropiedadesCoralGables() {
                     <div
                         className="propiedades-img p-0 m-0"
                         style={{
-                            background: "url('/assets2/areas/coral-gables/the-avenue.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/coral-gables/the-avenue.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>

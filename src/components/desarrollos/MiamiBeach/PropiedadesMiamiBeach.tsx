@@ -12,7 +12,7 @@ export default function PropiedadesMiamiBeach() {
                     <div
                         className="propiedades-img p-0 m-0"
                         style={{
-                            background: "url('/assets2/areas/miami-beach/nexo.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/miami-beach/nexo.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -25,7 +25,7 @@ export default function PropiedadesMiamiBeach() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/miami-beach/one-park.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/miami-beach/one-park.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -37,7 +37,7 @@ export default function PropiedadesMiamiBeach() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/miami-beach/72-park.jpg')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/miami-beach/72-park.jpg')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -49,7 +49,7 @@ export default function PropiedadesMiamiBeach() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/miami-beach/five-park.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/miami-beach/five-park.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -61,7 +61,7 @@ export default function PropiedadesMiamiBeach() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/miami-beach/ella.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/miami-beach/ella.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>

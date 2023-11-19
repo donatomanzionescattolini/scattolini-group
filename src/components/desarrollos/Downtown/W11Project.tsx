@@ -115,7 +115,7 @@ export function W11Project(): JSX.Element {
     const [nombre] = useState(params.nombre);
     const [numberOfImages] = useState(params.numberOfImages);
     const [tabVisible, setTabVisible] = useState("brochure");
-    let vid: string = `/assets2/desarrollos/${nombre}/video.mov`;
+    let vid: string = `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mov`;
     const [video] = useState<string>(vid);
     const [introduccion] = useState(params.introduccion);
     const [titulo] = useState(params.titulo);
@@ -160,14 +160,14 @@ export function W11Project(): JSX.Element {
                         className="col-4 m-0 p-0 responsive"
                         style={{
                             height: "250px",
-                            backgroundImage: `url('/assets2/desarrollos/${nombre}/banner-left.jpg')`,
+                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-left.jpg')`,
                             backgroundSize: "cover",
                         }}
                     />
                     <div
                         style={{
                             height: "250px",
-                            backgroundImage: `url('/assets2/desarrollos/${nombre}/banner-center.jpg')`,
+                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-center.jpg')`,
                             backgroundSize: "cover",
                             backgroundPosition: "center",
                         }}
@@ -176,7 +176,7 @@ export function W11Project(): JSX.Element {
                     <div
                         style={{
                             height: "250px",
-                            backgroundImage: `url('/assets2/desarrollos/${nombre}/banner-right.jpg')`,
+                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-right.jpg')`,
                             backgroundSize: "cover",
                         }}
                         className="col-4 m-0 p-0 responsive"
@@ -322,7 +322,7 @@ export function W11Project(): JSX.Element {
                                     <embed
                                         className={""}
                                         type="application/pdf"
-                                        src={`/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                        src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                                     />
                                 </object>
                             )}

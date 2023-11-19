@@ -34,7 +34,7 @@ const SlideshowGallery = (props: PropsSlideshow) => {
                         key={index}
                         id={`second-carousel-${index}`}
                         style={{
-                            backgroundImage: `url('/assets2/areas/${areaObject.getName()}/${x.getName()}.webp`,
+                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject.getName()}/${x.getName()}.webp`,
                         }}
                     >
                         <Carousel.Caption>

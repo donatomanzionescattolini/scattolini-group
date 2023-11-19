@@ -67,10 +67,9 @@ function Contacto() {
 export default function App() {
   return (
     <BrowserRouter>
-      <a id="top"></a>
       <Nav />
-      <main className={" p-0 m-0"}>
-        <Routes>
+      <Routes>
+
           {/*pestañas*/}
           <Route element={<Home />} path="/" />
           <Route element={<Aliados />} path="/aliados" />
@@ -208,8 +207,8 @@ export default function App() {
             path={"/desarrollos/pine-park-villas"}
           />
           <Route element={<CentrisProject />} path={"/desarrollos/centris"} />
-        </Routes>
-      </main>
+
+      </Routes>
       <Footer />
     </BrowserRouter>
   );

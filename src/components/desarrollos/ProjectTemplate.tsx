@@ -29,7 +29,7 @@ export default function ProjectTemplate(params: ProjectParams) {
     const [tabVisible, setTabVisible] = useState("brochure");
     let vid: string | JSX.Element = params.video
         ? params.video
-        : `/assets2/desarrollos/${nombre}/video.mp4`;
+        : `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`;
     const [video] = useState<string | JSX.Element>(vid);
 
     const [caract] = useState(params.caracteristicas as caracteristicas);
@@ -88,7 +88,7 @@ export default function ProjectTemplate(params: ProjectParams) {
                             className="p-0 m-0 well"
                             autoFocus
                             style={{
-                                backgroundImage: `url("../../../public/assets2/desarrollos/${nombre}/banner.jpg")`,
+                                backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
                                 backgroundSize: "cover",
                                 backgroundRepeat: "no-repeat",
                                 backgroundPositionX: "center",
@@ -102,7 +102,7 @@ export default function ProjectTemplate(params: ProjectParams) {
                                 className="col-4 m-0 p-0 responsive"
                                 style={{
                                     height: "250px",
-                                    backgroundImage: `url(../../../public/assets2/desarrollos/${nombre}/banner-left.jpg)`,
+                                    backgroundImage: `url(../../..https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-left.jpg)`,
                                     backgroundSize: "cover",
                                 }}
                             />
@@ -110,7 +110,7 @@ export default function ProjectTemplate(params: ProjectParams) {
                                 autoFocus
                                 style={{
                                     height: "250px",
-                                    backgroundImage: `url('/assets2/desarrollos/${nombre}/banner-center.jpg')`,
+                                    backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-center.jpg')`,
                                     backgroundSize: "cover",
                                     backgroundPositionX: "center",
                                     backgroundPositionY: "top",
@@ -121,7 +121,7 @@ export default function ProjectTemplate(params: ProjectParams) {
                                 autoFocus
                                 style={{
                                     height: "250px",
-                                    backgroundImage: `url('/assets2/desarrollos/${nombre}/banner-right.jpg')`,
+                                    backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-right.jpg')`,
                                     backgroundSize: "cover",
                                 }}
                                 className="col-4 m-0 p-0 responsive"
@@ -171,7 +171,7 @@ export default function ProjectTemplate(params: ProjectParams) {
                         <source
                             width={700}
                             height={500}
-                            src={`/assets2/desarrollos/${nombre}/video.mp4?autoplay=1&controls=0`}
+                            src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4?autoplay=1&controls=0`}
                             type="video/mp4"
                             className="d-flex flex-row justify-content-center align-items-center"
                         />
@@ -307,21 +307,21 @@ export default function ProjectTemplate(params: ProjectParams) {
               //   fs.readFileSync(path.resolve("public/assets/Bonus_1.pdf")).toString("base64"); */}
 
                     {/* <PDFV
-              //     url={`/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+              //     url={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
       
         {/* <embed
-              //     src={`/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+              //     src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
               //     width="800px"
               //     height="2100px" */}
                     {/* //   /> */}
                     {/* // </object> */}
-                    {/* data={`/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                    {/* data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
               style={{ width: "100%", height: 500 }}
             > */}
                     <MDBTabsContent>
                         <MDBTabsPane show={tabVisible === "brochure"}>
                             <object
-                                data={`/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                                 type="application/pdf"
                                 width="100%"
                                 height="500px"
@@ -333,7 +333,7 @@ export default function ProjectTemplate(params: ProjectParams) {
                                             target="_blank"
                                             className="text-decoration-underline"
                                             download
-                                            to={`/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                            to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                                         >
                                             Descárgalo
                                         </Link>{" "}
@@ -344,7 +344,7 @@ export default function ProjectTemplate(params: ProjectParams) {
                         </MDBTabsPane>
                         <MDBTabsPane show={tabVisible === "hoja"}>
                             <object
-                                data={`/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                                 type="application/pdf"
                                 width="100%"
                                 height="500px"
@@ -356,7 +356,7 @@ export default function ProjectTemplate(params: ProjectParams) {
                                             target="_blank"
                                             className="text-decoration-underline"
                                             download
-                                            to={`/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                            to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                                         >
                                             Descárgalo
                                         </Link>{" "}
@@ -367,7 +367,7 @@ export default function ProjectTemplate(params: ProjectParams) {
                         </MDBTabsPane>
                         <MDBTabsPane show={tabVisible === "planos"}>
                             <object
-                                data={`/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                                 type="application/pdf"
                                 width="100%"
                                 height="500px"
@@ -379,7 +379,7 @@ export default function ProjectTemplate(params: ProjectParams) {
                                             target="_blank"
                                             className="text-decoration-underline"
                                             download
-                                            to={`/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                            to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                                         >
                                             Descárgalo
                                         </Link>{" "}
@@ -394,7 +394,7 @@ export default function ProjectTemplate(params: ProjectParams) {
                                     className="btn btn-outline-secondary btn-small"
                                     type="button"
                                     target="#top"
-                                    to={`/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                    to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                                     download
                                 >
                                     Descargar

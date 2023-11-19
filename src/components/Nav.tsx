@@ -39,7 +39,7 @@ const Nav = () => {
                             <div>
                                 <img
                                     width={"40%"}
-                                    src="/assets2/logos/logo-transparent-background-1.png"
+                                    src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
                                     alt="logo"
                                 />
                             </div>
@@ -69,7 +69,7 @@ const Nav = () => {
                                 <MDBNavbarBrand href="/">
                                     <img
                                         width={300}
-                                        src="/assets2/logos/logo-transparent-background-1.png"
+                                        src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
                                         alt="logo"
                                     />
                                 </MDBNavbarBrand>

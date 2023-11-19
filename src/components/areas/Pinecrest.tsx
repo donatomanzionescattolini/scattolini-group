@@ -11,7 +11,7 @@ export default function Pinecrest() {
                 <div
                     className="container-fluid m-0 p-5"
                     style={{
-                        backgroundImage: "url('/assets2/areas/pinecrest/banner.webp')",
+                        backgroundImage: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/banner.webp')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}
@@ -47,7 +47,7 @@ export default function Pinecrest() {
                     <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
                         <picture className="">
                             <img
-                                src="/assets2/areas/pinecrest/firstsection.webp"
+                                src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/firstsection.webp"
                                 className="w-100 img-responsive align-self-center justify-self-center m-auto"
                                 alt="Pinecrest City Center"
                             />
@@ -59,42 +59,42 @@ export default function Pinecrest() {
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/pinecrest/carousel-1.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-1.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/pinecrest/carousel-2.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-2.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/pinecrest/carousel-3.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-3.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/pinecrest/carousel-4.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-4.webp"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/pinecrest/carousel-5.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-5.webp"
                 ></Image>
 
-                {/*<Image fluid rounded src="/assets2/areas/pinecrest/carousel-6.webp"></Image>
+                {/*<Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-6.webp"></Image>
 
-       <Image fluid rounded src="/assets2/areas/pinecrest/carousel-7.webp"></Image>
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-7.webp"></Image>
 
-       <Image fluid rounded src="/assets2/areas/pinecrest/carousel-8.webp"></Image>
-       <Image fluid rounded src="/assets2/areas/pinecrest/carousel-9.webp"></Image>
-       <Image fluid rounded src="/assets2/areas/pinecrest/carousel-10.webp"></Image>
-       <Image fluid rounded src="/assets2/areas/pinecrest/carousel-11.webp"></Image> */}
-                {/*<Image fluid rounded src="/assets2/areas/pinecrest/carousel-12.webp"></Image>
-       <Image fluid rounded src="/assets2/areas/pinecrest/carousel-13.webp"></Image> */}
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-8.webp"></Image>
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-9.webp"></Image>
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-10.webp"></Image>
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-11.webp"></Image> */}
+                {/*<Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-12.webp"></Image>
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/carousel-13.webp"></Image> */}
             </div>
             {/* <DividerFirst /> */}
             <div className="propiedades">

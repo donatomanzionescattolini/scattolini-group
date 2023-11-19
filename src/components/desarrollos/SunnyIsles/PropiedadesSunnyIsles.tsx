@@ -13,7 +13,7 @@ export default function PropiedadesSunnyIsles() {
                         className="propiedades-img p-0 m-0"
                         style={{
                             background:
-                                "url('/assets2/areas/sunny-isles/the-mansions-at-acqualina.jpg')",
+                                "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/sunny-isles/the-mansions-at-acqualina.jpg')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -29,7 +29,7 @@ export default function PropiedadesSunnyIsles() {
                         className="propiedades-img p-0 m-0"
                         style={{
                             background:
-                                "url('/assets2/areas/sunny-isles/bentley-residences.webp')",
+                                "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/sunny-isles/bentley-residences.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -42,7 +42,7 @@ export default function PropiedadesSunnyIsles() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/sunny-isles/st-regis.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/sunny-isles/st-regis.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>

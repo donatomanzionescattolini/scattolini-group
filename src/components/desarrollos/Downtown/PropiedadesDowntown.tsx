@@ -11,7 +11,7 @@ export default function PropiedadesDowntown() {
                     <div
                         className="propiedades-img p-0 m-0"
                         style={{
-                            background: "url('/assets2/areas/downtown/w11.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/downtown/w11.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -24,7 +24,7 @@ export default function PropiedadesDowntown() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/downtown/cipriani.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/downtown/cipriani.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -36,7 +36,7 @@ export default function PropiedadesDowntown() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/downtown/waldorf-astoria.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/downtown/waldorf-astoria.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -49,7 +49,7 @@ export default function PropiedadesDowntown() {
                     <div
                         className="propiedades-img p-0 m-0"
                         style={{
-                            background: "url('/assets2/areas/downtown/aston-martin.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/downtown/aston-martin.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -62,7 +62,7 @@ export default function PropiedadesDowntown() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/downtown/theelser.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/downtown/theelser.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -74,7 +74,7 @@ export default function PropiedadesDowntown() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/downtown/casabella.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/downtown/casabella.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>

@@ -11,7 +11,7 @@ export default function BayHarbor() {
                 <div
                     className="container-fluid m-0 p-5"
                     style={{
-                        backgroundImage: "url('/assets2/areas/bay-harbor/banner.webp')",
+                        backgroundImage: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/banner.webp')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}
@@ -54,7 +54,7 @@ export default function BayHarbor() {
                     <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
                         <picture className="">
                             <img
-                                src="/assets2/areas/bay-harbor/firstsection.webp"
+                                src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/firstsection.webp"
                                 className="w-100 img-responsive align-self-center justify-self-center m-auto"
                                 alt=""
                             />
@@ -66,82 +66,82 @@ export default function BayHarbor() {
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-1.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-1.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-2.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-2.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-3.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-3.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-4.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-4.webp"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-5.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-5.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-6.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-6.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-7.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-7.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-8.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-8.webp"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-9.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-9.webp"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-10.png"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-10.png"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-11.jpeg"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-11.jpeg"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-12.jpg"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-12.jpg"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-13.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-13.webp"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/bay-harbor/carousel-14.jpg"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-14.jpg"
                 ></Image>
-                {/*<Image fluid rounded src="/assets2/areas/bay-harbor/carousel-15.webp"></Image>
-       <Image fluid rounded src="/assets2/areas/bay-harbor/carousel-16.webp"></Image>
-       <Image fluid rounded src="/assets2/areas/bay-harbor/carousel-17.webp"></Image>
+                {/*<Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-15.webp"></Image>
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-16.webp"></Image>
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/carousel-17.webp"></Image>
        <Image fluid rounded src="/areas/areas/bay-harbor/carousel-18.webp"></Image> */}
             </div>
             {/* <DividerFirst /> */}

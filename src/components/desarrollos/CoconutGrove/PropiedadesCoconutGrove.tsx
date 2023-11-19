@@ -11,7 +11,7 @@ export default function PropiedadesCoconutGrove() {
                     <div
                         className="propiedades-img p-0 m-0"
                         style={{
-                            background: "url('/assets2/areas/coconut-grove/vita.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/coconut-grove/vita.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>

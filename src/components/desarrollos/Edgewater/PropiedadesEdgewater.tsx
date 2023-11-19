@@ -11,7 +11,7 @@ export default function PropiedadesEdgewater() {
                     <div
                         className="propiedades-img p-0 m-0"
                         style={{
-                            background: "url('/assets2/areas/edgewater/the-villa.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/edgewater/the-villa.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -24,7 +24,7 @@ export default function PropiedadesEdgewater() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/edgewater/missoni-baia.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/edgewater/missoni-baia.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -36,7 +36,7 @@ export default function PropiedadesEdgewater() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/edgewater/vida.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/edgewater/vida.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -50,7 +50,7 @@ export default function PropiedadesEdgewater() {
                         className="propiedades-img p-0 m-0"
                         style={{
                             background:
-                                "url('/assets2/areas/edgewater/edition-residences.webp')",
+                                "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/edgewater/edition-residences.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -63,7 +63,7 @@ export default function PropiedadesEdgewater() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/edgewater/aria-reserve.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/edgewater/aria-reserve.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>

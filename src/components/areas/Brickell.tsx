@@ -13,7 +13,7 @@ export default function Brickell() {
                     className="container-fluid m-0 p-5"
                     style={{
                         backgroundImage:
-                            "url('/assets2/areas/brickell/brickell-banner.webp')",
+                            "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/brickell-banner.webp')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}
@@ -62,48 +62,48 @@ export default function Brickell() {
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/brickell/brickell-firstcarousel-1.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/brickell-firstcarousel-1.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/brickell/brickell-firstcarousel-2.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/brickell-firstcarousel-2.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/brickell/brickell-firstcarousel-3.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/brickell-firstcarousel-3.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/brickell/brickell-firstcarousel-4.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/brickell-firstcarousel-4.webp"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/brickell/brickell-firstcarousel-5.webp"
-                ></Image>
-
-                <Image
-                    fluid
-                    rounded
-                    src="/assets2/areas/brickell/brickell-firstcarousel-6.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/brickell-firstcarousel-5.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/brickell/brickell-firstcarousel-7.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/brickell-firstcarousel-6.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/brickell/brickell-firstcarousel-8.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/brickell-firstcarousel-7.webp"
+                ></Image>
+
+                <Image
+                    fluid
+                    rounded
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/brickell-firstcarousel-8.webp"
                 ></Image>
 
                 <Image

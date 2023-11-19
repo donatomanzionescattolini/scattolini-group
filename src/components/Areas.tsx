@@ -16,7 +16,7 @@ const Areas = function (): React.JSX.Element {
                             <Link to={"/areas/" + areaObject.getName()}>
                                 <CardImg
                                     className=""
-                                    src={`/assets2/areas/${areaObject.getName()}/firstsection.webp`}
+                                    src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject.getName()}/firstsection.webp`}
                                 />
                             </Link>
                         </Card>

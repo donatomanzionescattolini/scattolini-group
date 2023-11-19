@@ -14,7 +14,7 @@ export default function Aliados() {
                 <MDBCol xs={12} sm={12} md={12} lg={4} xl={4}>
                     <Link to="https://www.huehouseagency.com//">
                         <img
-                            src="/assets2/aliados/hue-house.png"
+                            src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/hue-house.png"
                             alt="Hue House"
                             width="100%"
                         />
@@ -24,7 +24,7 @@ export default function Aliados() {
                     {" "}
                     <Link to="https://www.manzionesdesign.com//">
                         <img
-                            src="/assets2/aliados/manzionesdesign.png"
+                            src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/manzionesdesign.png"
                             alt="Manzione S. Design"
                             width="100%"
                         />
@@ -33,7 +33,7 @@ export default function Aliados() {
                 <MDBCol xs={12} sm={12} md={12} lg={4} xl={4}>
                     <MDBCardLink href="/manzione-properties/">
                         <img
-                            src="/assets2/aliados/manzioneproperties.webp"
+                            src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/manzioneproperties.webp"
                             alt="Manzione Properties"
                             width="100%"
                         />

@@ -11,7 +11,7 @@ export default function Homestead() {
                 <div
                     className="container-fluid m-0 p-5"
                     style={{
-                        backgroundImage: "url('/assets2/areas/homestead/banner.webp')",
+                        backgroundImage: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/banner.webp')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}
@@ -41,7 +41,7 @@ export default function Homestead() {
                     <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
                         <picture className="">
                             <img
-                                src="/assets2/areas/homestead/firstsection.webp"
+                                src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/firstsection.webp"
                                 className="w-100 img-responsive align-self-center justify-self-center m-auto"
                                 alt="Homestead City Center"
                             />
@@ -53,66 +53,66 @@ export default function Homestead() {
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/homestead/carousel-1.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-1.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/homestead/carousel-2.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-2.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/homestead/carousel-3.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-3.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/homestead/carousel-4.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-4.webp"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/homestead/carousel-5.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-5.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/homestead/carousel-6.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-6.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/homestead/carousel-7.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-7.webp"
                 ></Image>
 
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/homestead/carousel-8.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-8.webp"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/homestead/carousel-9.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-9.webp"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/homestead/carousel-10.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-10.webp"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/homestead/carousel-11.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-11.webp"
                 ></Image>
-                {/*<Image fluid rounded src="/assets2/areas/homestead/carousel-12.webp"></Image>
-       <Image fluid rounded src="/assets2/areas/homestead/carousel-13.webp"></Image> */}
+                {/*<Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-12.webp"></Image>
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/homestead/carousel-13.webp"></Image> */}
             </div>
             {/* <DividerFirst /> */}
             <div className="propiedades">

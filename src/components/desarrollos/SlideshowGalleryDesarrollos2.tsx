@@ -18,7 +18,7 @@ export default function SlideshowGalleryDesarrollo2(props: Props) {
                     className=" d-block"
                     itemId={1}
                     src={
-                        "/assets2/desarrollos/" +
+                        "https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/" +
                         name +
                         "/image-gallery/image (" +
                         j +
@@ -28,25 +28,25 @@ export default function SlideshowGalleryDesarrollo2(props: Props) {
                 >
                     <picture>
                         <source
-                            srcSet={`/assets2/desarrollos/${name}/image-gallery/image (${j}).JPEG`}
+                            srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).JPEG`}
                             height={500}
                         />
                         <source
-                            srcSet={`/assets2/desarrollos/${name}/image-gallery/image (${j}).jpeg`}
+                            srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).jpeg`}
                             height={500}
                         />
                         <source
-                            srcSet={`/assets2/desarrollos/${name}/image-gallery/image (${j}).png`}
+                            srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).png`}
                             height={500}
                         />
                         <source
                             height={500}
-                            srcSet={`/assets2/desarrollos/${name}/image-gallery/image (${j}).webp`}
+                            srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).webp`}
                         />
                         <img
                             autoFocus
                             height={500}
-                            src={`/assets2/desarrollos/${name}/image-gallery/image (${j}).jpg`}
+                            src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).jpg`}
                             alt=""
                         />
                     </picture>

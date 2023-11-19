@@ -5,7 +5,7 @@ export default function DividerSecond() {
                 <div
                     className="d-none d-md-block d-lg-block d-xl-block"
                     style={{
-                        backgroundImage: "url('/assets2/divider-second-left.jpg')",
+                        backgroundImage: "url('https://pagina-mama.s3.amazonaws.com/assets2/divider-second-left.jpg')",
                     }}
                 >
                     <br></br>
@@ -19,7 +19,7 @@ export default function DividerSecond() {
                 </div>
                 <div
                     style={{
-                        backgroundImage: "url('/assets2/divider-second.jpg')",
+                        backgroundImage: "url('https://pagina-mama.s3.amazonaws.com/assets2/divider-second.jpg')",
                     }}
                 >
                     <br></br>
@@ -34,7 +34,7 @@ export default function DividerSecond() {
                 <div
                     className="col d-none d-md-block d-lg-block d-xl-block"
                     style={{
-                        backgroundImage: "url('/assets2/divider-second-right.jpg')",
+                        backgroundImage: "url('https://pagina-mama.s3.amazonaws.com/assets2/divider-second-right.jpg')",
                     }}
                 >
                     <br></br>

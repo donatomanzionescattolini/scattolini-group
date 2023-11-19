@@ -10,7 +10,7 @@ export default function PropiedadesBayHarbor() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/bay-harbor/the-well.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/the-well.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -23,7 +23,7 @@ export default function PropiedadesBayHarbor() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/bay-harbor/origin.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/origin.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -36,7 +36,7 @@ export default function PropiedadesBayHarbor() {
                     <div
                         className="propiedades-img p-0 m-0"
                         style={{
-                            background: "url('/assets2/areas/bay-harbor/la-mare.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/la-mare.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -49,7 +49,7 @@ export default function PropiedadesBayHarbor() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/bay-harbor/la-baia-north.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/bay-harbor/la-baia-north.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>

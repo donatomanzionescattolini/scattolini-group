@@ -5,7 +5,7 @@ export default function ManzioneProperties() {
         <div className="row  p-0 m-0">
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 justify-content-center p-5 text-center">
                 <img
-                    src={"/assets2/asociados/monica.webp"}
+                    src={"https://pagina-mama.s3.amazonaws.com/assets2/asociados/monica.webp"}
                     alt="Elda"
                     className="w-75 m-auto img-thumbnail"
                 />

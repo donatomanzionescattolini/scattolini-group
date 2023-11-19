@@ -12,7 +12,7 @@ export default function PropiedadesPinecrest() {
                         className="propiedades-img m-0 p-0"
                         style={{
                             background:
-                                "url('/assets2/areas/pinecrest/pine-park-villas.webp')",
+                                "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/pine-park-villas.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -25,7 +25,7 @@ export default function PropiedadesPinecrest() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/pinecrest/centris.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/pinecrest/centris.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>

@@ -12,7 +12,7 @@ export default function Doral() {
                 <div
                     className="container-fluid m-0 p-5"
                     style={{
-                        backgroundImage: "url('/assets2/areas/doral/banner.webp')",
+                        backgroundImage: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/banner.webp')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}
@@ -64,7 +64,7 @@ export default function Doral() {
                     <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
                         <picture className="">
                             <img
-                                src="/assets2/areas/doral/firstsection.webp"
+                                src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/firstsection.webp"
                                 className="w-100 img-responsive align-self-center justify-self-center m-auto"
                                 alt=""
                             />
@@ -73,41 +73,41 @@ export default function Doral() {
                 </div>
             </div>
             <div className="city-firstcarousel">
-                <Image fluid rounded src="/assets2/areas/doral/carousel-1.webp"></Image>
+                <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-1.webp"></Image>
 
-                <Image fluid rounded src="/assets2/areas/doral/carousel-2.webp"></Image>
+                <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-2.webp"></Image>
 
-                <Image fluid rounded src="/assets2/areas/doral/carousel-3.webp"></Image>
+                <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-3.webp"></Image>
 
-                <Image fluid rounded src="/assets2/areas/doral/carousel-4.webp"></Image>
-                <Image fluid rounded src="/assets2/areas/doral/carousel-5.webp"></Image>
+                <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-4.webp"></Image>
+                <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-5.webp"></Image>
 
-                <Image fluid rounded src="/assets2/areas/doral/carousel-6.webp"></Image>
+                <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-6.webp"></Image>
 
-                <Image fluid rounded src="/assets2/areas/doral/carousel-7.webp"></Image>
+                <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-7.webp"></Image>
 
-                <Image fluid rounded src="/assets2/areas/doral/carousel-8.webp"></Image>
-                <Image fluid rounded src="/assets2/areas/doral/carousel-9.webp"></Image>
+                <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-8.webp"></Image>
+                <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-9.webp"></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/doral/carousel-10.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-10.webp"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/doral/carousel-11.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-11.webp"
                 ></Image>
                 <Image
                     fluid
                     rounded
-                    src="/assets2/areas/doral/carousel-12.webp"
+                    src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-12.webp"
                 ></Image>
-                {/*<Image fluid rounded src="/assets2/areas/doral/carousel-13.webp"></Image>
-       <Image fluid rounded src="/assets2/areas/doral/carousel-14.webp"></Image>
-       <Image fluid rounded src="/assets2/areas/doral/carousel-15.webp"></Image>
-       <Image fluid rounded src="/assets2/areas/doral/carousel-16.webp"></Image>
-       <Image fluid rounded src="/assets2/areas/doral/carousel-17.webp"></Image>
+                {/*<Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-13.webp"></Image>
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-14.webp"></Image>
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-15.webp"></Image>
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-16.webp"></Image>
+       <Image fluid rounded src="https://pagina-mama.s3.amazonaws.com/assets2/areas/doral/carousel-17.webp"></Image>
        <Image fluid rounded src="/areas/areas/doral/carousel-18.webp"></Image> */}
             </div>
             {/* <DividerFirst /> */}

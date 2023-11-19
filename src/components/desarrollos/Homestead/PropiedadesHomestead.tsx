@@ -10,7 +10,7 @@ export default function PropiedadesHomestead() {
             className="propiedades-img p-0 m-0"
             style={{
               background:
-                "url('/assets2/areas/Homestead/silverland-estates.webp')",
+                "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/Homestead/silverland-estates.webp')",
               backgroundSize: "cover",
             }}
           ></div>
@@ -23,7 +23,7 @@ export default function PropiedadesHomestead() {
           <div
             className="propiedades-img m-0 p-0"
             style={{
-              background: "url('/assets2/areas/Homestead/sedona-estates.webp')",
+              background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/Homestead/sedona-estates.webp')",
               backgroundSize: "cover",
             }}
           ></div>
@@ -36,7 +36,7 @@ export default function PropiedadesHomestead() {
             className="propiedades-img m-0 p-0"
             style={{
               background:
-                "url('/assets2/areas/Homestead/salerno-estates.webp')",
+                "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/Homestead/salerno-estates.webp')",
               backgroundSize: "cover",
             }}
           ></div>
@@ -48,7 +48,7 @@ export default function PropiedadesHomestead() {
           <div
             className="propiedades-img m-0 p-0"
             style={{
-              background: "url('/assets2/areas/Homestead/oasis.webp')",
+              background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/Homestead/oasis.webp')",
               backgroundSize: "cover",
             }}
           ></div>
@@ -60,7 +60,7 @@ export default function PropiedadesHomestead() {
           <div
             className="propiedades-img m-0 p-0"
             style={{
-              background: "url('/assets2/areas/Homestead/alba.webp')",
+              background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/Homestead/alba.webp')",
               backgroundSize: "cover",
             }}
           ></div>
@@ -72,7 +72,7 @@ export default function PropiedadesHomestead() {
           <div
             className="propiedades-img p-0 m-0"
             style={{
-              background: "url('/assets2/areas/Homestead/terra-sol.webp')",
+              background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/Homestead/terra-sol.webp')",
               backgroundSize: "cover",
             }}
           ></div>
@@ -85,7 +85,7 @@ export default function PropiedadesHomestead() {
           <div
             className="propiedades-img m-0 p-0"
             style={{
-              background: "url('/assets2/areas/Homestead/parc-villas.webp')",
+              background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/Homestead/parc-villas.webp')",
               backgroundSize: "cover",
             }}
           ></div>
@@ -97,7 +97,7 @@ export default function PropiedadesHomestead() {
           <div
             className="propiedades-img m-0 p-0"
             style={{
-              background: "url('/assets2/areas/Homestead/park-square.webp')",
+              background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/Homestead/park-square.webp')",
               backgroundSize: "cover",
             }}
           ></div>

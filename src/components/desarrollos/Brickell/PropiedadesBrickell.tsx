@@ -11,7 +11,7 @@ export default function PropiedadesBrickell() {
                     <div
                         className="propiedades-img p-0 m-0"
                         style={{
-                            background: "url('/assets2/areas/brickell/ora.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/ora.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -24,7 +24,7 @@ export default function PropiedadesBrickell() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/brickell/1428-brickell.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/1428-brickell.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -36,7 +36,7 @@ export default function PropiedadesBrickell() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/brickell/baccarat.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/baccarat.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -50,7 +50,7 @@ export default function PropiedadesBrickell() {
                         className="propiedades-img p-0 m-0"
                         style={{
                             background:
-                                "url('/assets2/areas/brickell/14-river-district.webp')",
+                                "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/14-river-district.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -63,7 +63,7 @@ export default function PropiedadesBrickell() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/brickell/domus.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/domus.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
@@ -75,7 +75,7 @@ export default function PropiedadesBrickell() {
                     <div
                         className="propiedades-img m-0 p-0"
                         style={{
-                            background: "url('/assets2/areas/brickell/lofty.webp')",
+                            background: "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/brickell/lofty.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>

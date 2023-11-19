@@ -12,7 +12,7 @@ export default function PropiedadesNorthBayVillage() {
                         className="propiedades-img p-0 m-0"
                         style={{
                             background:
-                                "url('/assets2/areas/north-bay-village/shoma-bay.webp')",
+                                "url('https://pagina-mama.s3.amazonaws.com/assets2/areas/north-bay-village/shoma-bay.webp')",
                             backgroundSize: "cover",
                         }}
                     ></div>
