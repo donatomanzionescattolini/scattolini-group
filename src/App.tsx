@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import Areas from "./components/Areas";
 import "material-components-web/dist/material-components-web.css";
 import { Home } from "./Home";
+import Contacto from "./components/Contacto.tsx"
 import "mdb-ui-kit/css/mdb.min.css";
 import "mdb-ui-kit/js/mdb.min.js";
 import "material-components-web/dist/material-components-web.js";
@@ -53,16 +54,14 @@ import CentrisProject from "./components/desarrollos/Pinecrest/CentrisProject";
 import BentleyResidencesProject from "./components/desarrollos/SunnyIsles/BentleyResidencesProject";
 import TheMansionsAtAcqualinaProject from "./components/desarrollos/SunnyIsles/TheMansionsAtAcqualinaProject";
 import TheAvenueProject from "./components/desarrollos/CoralGables/TheAvenueProject";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route,  Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Aliados from "./components/Aliados";
 import Liderazgo from "./components/Liderazgo.tsx";
 import Brickell from "./components/areas/Brickell.tsx";
 
-function Contacto() {
-  return null;
-}
+
 
 export default function App() {
   return (

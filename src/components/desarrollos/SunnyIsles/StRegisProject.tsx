@@ -18,7 +18,7 @@ export function StRegisProject() {
                 "The St. Regis Residences, Miami representa un futuro impulsado por un pasado histórico. Un lugar donde las nuevas generaciones crearán una vida de momentos legendarios, en hogares únicos para personas que perciben sus legados personales innatamente entrelazados con la rica herencia de Miami.",
                 "Desarrollado por Grupo Relacionado e Integra Investments, St. Regis Residences ofrece un diseño majestuoso de Robert AM Stern Architects que presenta interiores exclusivos de Rockwell Group y paisajismo de Enzo Enea Group.",
             ]}
-            banner
+            banner={true}
             caracteristicas={{
                 edificio: (
                     <p>
