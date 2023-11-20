@@ -40,7 +40,7 @@ export default function Equipo() {
                         <div className="mc-content">
                             <div className="img-container w-80 h-100 mx-auto">
                                 <img
-                                    className="img-responsive object-fit-cover w-100 m-0 p-0  "
+                                    className="img-responsive object-fit-cover w-100 h-100 m-0 p-0  "
                                     src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/veru-transparent-bg.png"
                                     width="80%"
                                     height="auto"
