@@ -134,10 +134,11 @@ export default function ProjectTemplate(params: ProjectParams) {
             <section className="colour-block">
                 <MDBContainer>
                     {
+                        innerWidth < 768 && <br/>}
                         <h2 className=" text-center animate-charcter" style={{}}>
                             {titulo}
                         </h2>
-                    }
+
                     <hr className="hr hr-blurry w-50 mx-auto"/>
                     {<h4 className="mt-0 text-center">{subtitulo}</h4>}
                     <div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3    text-justify responsive">
