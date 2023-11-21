@@ -29,7 +29,7 @@ export function Home() {
                 <div className="video-container">
                     <video autoPlay loop muted playsInline className={" m-0 p-0"}>
                         <source
-                            src="https://dl.dropboxusercontent.com/scl/fi/p4z5pf694a2cak5xb2317/Untitled-design.mp4?rlkey=do953fp93h931w0zfigtnlbzl&dl=0&autoPlay=true"
+                            src="https://pagina-mama.s3.amazonaws.com/assets2/video-homepage.mp4"
                             type="video/mp4"
                         />
                     </video>
