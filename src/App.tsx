@@ -8,17 +8,17 @@ import Contacto from "./components/Contacto.tsx"
 import "mdb-ui-kit/css/mdb.min.css";
 import "mdb-ui-kit/js/mdb.min.js";
 import "material-components-web/dist/material-components-web.js";
-import Homestead from "./components/areas/Homestead";
-import Downtown from "./components/areas/Downtown";
-import BayHarbor from "./components/areas/BayHarbor";
-import CoralGables from "./components/areas/CoralGables";
+import HomesteadComponent from "./components/areas/HomesteadComponent.tsx";
+import DowntownComponent from "./components/areas/./DowntownComponent.tsx";
+import BayHarborComponent from "./components/areas/BayHarborComponent.tsx";
+import CoralGablesComponent from "./components/areas/CoralGablesComponent.tsx";
 import CoconutGrove from "./components/areas/CoconutGrove";
-import NorthBayVillage from "./components/areas/NorthBayVillage";
-import Doral from "./components/areas/Doral";
-import Pinecrest from "./components/areas/Pinecrest";
-import SunnyIsles from "./components/areas/SunnyIsles";
-import Edgewater from "./components/areas/Edgewater";
-import MiamiBeach from "./components/areas/MiamiBeach";
+import NorthBayVillageComponent from "./components/areas/NorthBayVillageComponent.tsx";
+import DoralComponent from "./components/areas/DoralComponent.tsx";
+import PinecrestComponent from "./components/areas/PinecrestComponent.tsx";
+import SunnyIslesComponent from "./components/areas/SunnyIslesComponent.tsx";
+import EdgewaterComponent from "./components/areas/EdgewaterComponent.tsx";
+import MiamiBeachComponent from "./components/areas/MiamiBeachComponent.tsx";
 import DesarrollosTodos from "./components/desarrollos/Desarrollos";
 import {FourteenTwentyEightProject} from "./components/desarrollos/Brickell/FourteenTwentyEightProject";
 import {StRegisProject} from "./components/desarrollos/SunnyIsles/StRegisProject";
@@ -59,7 +59,7 @@ import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Aliados from "./components/Aliados";
 import Liderazgo from "./components/Liderazgo.tsx";
-import Brickell from "./components/areas/Brickell.tsx";
+import BrickellComponent from "./components/areas/BrickellComponent.tsx";
 
 
 export default function App() {
@@ -77,21 +77,21 @@ export default function App() {
                 <Route element={<Areas/>} path="/areas"/>
 
                 {/* areas */}
-                <Route element={<Brickell/>} path="/areas/brickell"/>
-                <Route element={<Downtown/>} path="/areas/downtown"/>
-                <Route element={<Homestead/>} path="/areas/homestead"/>
-                <Route element={<BayHarbor/>} path="/areas/bay-harbor"/>
+                <Route element={<BrickellComponent/>} path="/areas/brickell"/>
+                <Route element={<DowntownComponent/>} path="/areas/downtown"/>
+                <Route element={<HomesteadComponent/>} path="/areas/homestead"/>
+                <Route element={<BayHarborComponent/>} path="/areas/bay-harbor"/>
                 <Route
-                    element={<NorthBayVillage/>}
+                    element={<NorthBayVillageComponent/>}
                     path="/areas/north-bay-village"
                 />
-                <Route element={<CoralGables/>} path="/areas/coral-gables"/>
+                <Route element={<CoralGablesComponent/>} path="/areas/coral-gables"/>
                 <Route element={<CoconutGrove/>} path="/areas/coconut-grove"/>
-                <Route element={<Doral/>} path="/areas/doral"></Route>
-                <Route element={<Pinecrest/>} path="/areas/pinecrest"></Route>
-                <Route element={<SunnyIsles/>} path="/areas/sunny-isles"></Route>
-                <Route element={<Edgewater/>} path="/areas/edgewater"></Route>
-                <Route element={<MiamiBeach/>} path="/areas/miami-beach"></Route>
+                <Route element={<DoralComponent/>} path="/areas/doral"></Route>
+                <Route element={<PinecrestComponent/>} path="/areas/pinecrest"></Route>
+                <Route element={<SunnyIslesComponent/>} path="/areas/sunny-isles"></Route>
+                <Route element={<EdgewaterComponent/>} path="/areas/edgewater"></Route>
+                <Route element={<MiamiBeachComponent/>} path="/areas/miami-beach"></Route>
 
                 {/* desarrollos
            */}
@@ -102,7 +102,7 @@ export default function App() {
                     path={"/desarrollos/the-avenue"}
                 />
 
-                {/* Brickell */}
+                {/* BrickellComponent */}
                 <Route
                     element={<FourteenTwentyEightProject/>}
                     path="/desarrollos/1428-brickell"
@@ -117,7 +117,7 @@ export default function App() {
                     path={"/desarrollos/the-elser"}
                 />
 
-                {/* Edgewater */}
+                {/* EdgewaterComponent */}
                 <Route
                     element={<AriaReserveProject/>}
                     path={"/desarrollos/aria-reserve"}
@@ -168,7 +168,7 @@ export default function App() {
                 />
                 <Route element={<OraProject/>} path={"/desarrollos/ora"}/>
                 <Route element={<LoftyProject/>} path={"/desarrollos/lofty"}/>
-                {/* Edgewater */}
+                {/* EdgewaterComponent */}
 
                 <Route
                     element={<TheVillaProject/>}

@@ -1,13 +1,13 @@
-import {Brickell} from "./brickell/Brickell";
-import {BayHarbor} from "./bay-harbor/BayHarbor";
-import {Downtown} from "./downtown/Downtown";
-import {Edgewater} from "./edgewater/Edgewater";
-import {Homestead} from "./homestead/Homestead";
-import NorthBayVillage from "./north-bay-village/NorthBayVillage";
-import Pinecrest from "./pinecrest/Pinecrest";
-import SunnyIsles from "./sunny-isles/SunnyIsles";
-import {CoralGables} from "./coral-gables/CoralGables";
-import {CoconutGrove} from "./coconut-grove/CoconutGrove";
+import {Brickell} from "../Brickell.tsx";
+import {BayHarbor} from "./BayHarbor.tsx";
+import {Downtown} from "./Downtown.tsx";
+import {Edgewater} from "./Edgewater.tsx";
+import {Homestead} from "./Homestead.tsx";
+import NorthBayVillage from "./NorthBayVillage.tsx";
+import Pinecrest from "./Pinecrest.tsx";
+import SunnyIsles from "./SunnyIsles.tsx";
+import {CoralGables} from "../CoralGables.tsx";
+import {CoconutGrove} from "./CoconutGrove.tsx";
 import {Area} from "../Area";
 
 

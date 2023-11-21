@@ -1,22 +1,29 @@
 import {Desarrollo} from "./Desarrollo";
+import {ReactNode} from "react";
 
 
 export class Area {
 
-    private name?: string;
-    private desarrollos?: Desarrollo[] = [];
-    private slogan?: string;
+    private name: string;
+    private titulo: string;
+    private desarrollos: Desarrollo[] = [];
+    private slogan: string;
     private descripcion: Array<string>;
-    private propiedadesComponent: Element;
+    private propiedadesComponent: ReactNode;
+    private numberOfImages:number;
 
-    constructor(name: string, slogan:string, descripcion:Array<string>, propiedadesComponent:Element) {
+    constructor(name: string,titulo:string, slogan: string, descripcion: Array<string>, propiedadesComponent: JSX.Element, numberOfImages:number) {
+        this.titulo=titulo;
         this.name=name;
         this.slogan=slogan;
         this.descripcion=descripcion;
         this.propiedadesComponent=propiedadesComponent;
-
+        this.numberOfImages=numberOfImages;
     }
 
+    public getNumberOfImages(){
+        return this.numberOfImages;
+    }
     public getName(): string {
         return (this.name || "unknown");
     }
@@ -71,7 +78,11 @@ export class Area {
         return this.descripcion;
     }
 
-    getPropiedadesComponent() {
+    getPropiedadesComponent():ReactNode {
         return this.propiedadesComponent;
+    }
+
+    getTitulo() {
+        return this.titulo;
     }
 }

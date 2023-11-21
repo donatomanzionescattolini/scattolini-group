@@ -1,4 +1,4 @@
-// import NorthBayVillage from "./areas/NorthBayVillage";
+// import NorthBayVillageComponent from "./areas/NorthBayVillageComponent";
 import {useState} from "react";
 import {
     MDBCollapse,

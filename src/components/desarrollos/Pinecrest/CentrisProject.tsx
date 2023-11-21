@@ -112,7 +112,7 @@ export default function CentrisProject() {
                 ),
             }}
             introduccion={[
-                "Presentamos Centris, una comunidad de casas adosadas y propiedades de lujo nuevas a la venta en Miami, FL. Centris está idealmente ubicado en SW 120th Street y 82nd Avenue, cerca de Pinecrest y The Falls, con fácil acceso a las playas y al centro de Miami. En Centris, los residentes disfrutarán de entrada con acceso controlado para vehículos, un pabellón con piscina, área de juegos infantiles y un parque en el corazón de la comunidad, y cada casa está equipada con accesorios y acabados de lujo, todo sin costo adicional.",
+                "Presentamos Centris, una comunidad de casas adosadas y propiedades de lujo nuevas a la venta en Miami, FL. Centris está idealmente ubicado en SW 120th Street y 82nd Avenue, cerca de PinecrestComponent y The Falls, con fácil acceso a las playas y al centro de Miami. En Centris, los residentes disfrutarán de entrada con acceso controlado para vehículos, un pabellón con piscina, área de juegos infantiles y un parque en el corazón de la comunidad, y cada casa está equipada con accesorios y acabados de lujo, todo sin costo adicional.",
             ]}
             titulo={"Centris"}
             subtitulo={""}

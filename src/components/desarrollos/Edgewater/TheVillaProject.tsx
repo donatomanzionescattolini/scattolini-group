@@ -10,7 +10,7 @@ export default function TheVillaProject() {
                 <iframe
                     height="500"
                     src="https://www.youtube.com/embed/tn194BN9-8U?autoplay=1&controls=0"
-                    title="Villa Miami Residences (2027) - Edgewater Miami"
+                    title="Villa Miami Residences (2027) - EdgewaterComponent Miami"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                     className="embed-responsive video-js vjs-default-skin "
@@ -241,7 +241,7 @@ export default function TheVillaProject() {
                 <p className="text-lowercase w-50 mx-auto">
                     <span className="text-capitalize">¡El</span> rascacielos residencial
                     más sorprendente de{" "}
-                    <span className="text-capitalize">Edgewater, Miami </span>finalmente
+                    <span className="text-capitalize">EdgewaterComponent, Miami </span>finalmente
                     está aquí!
                     <br></br>
                 </p>

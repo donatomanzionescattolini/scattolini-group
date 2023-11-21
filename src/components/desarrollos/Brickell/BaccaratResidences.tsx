@@ -181,7 +181,7 @@ export default function BaccaratResidences() {
             }}
             introduccion={[
                 "Baccarat presenta con orgullo su primera colección de residencias al mercado de Miami.",
-                "Iluminada por el brillo infinito del sol, esta torre elevada se mantendrá radiante en el paseo marítimo donde el río se encuentra con la bahía, en el corazón de las brillantes luces de la ciudad. Combinando la vitalidad brillante y el dinamismo magnético de Brickell con un diseño iluminado y un servicio ingenioso, los residentes pueden esperar un estilo de vida infundido con delicias inesperadas y brillantez inspirada",
+                "Iluminada por el brillo infinito del sol, esta torre elevada se mantendrá radiante en el paseo marítimo donde el río se encuentra con la bahía, en el corazón de las brillantes luces de la ciudad. Combinando la vitalidad brillante y el dinamismo magnético de BrickellComponent con un diseño iluminado y un servicio ingenioso, los residentes pueden esperar un estilo de vida infundido con delicias inesperadas y brillantez inspirada",
                 "Penthouse residences disponibles para vista previa exclusiva.",
             ]}
             titulo={"Baccarat Residences"}
