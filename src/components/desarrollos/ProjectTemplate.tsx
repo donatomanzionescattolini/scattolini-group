@@ -7,7 +7,7 @@ import {caracteristicas, ProjectParams} from "../../models/ProjectParams";
 import ContactForm from "../ContactForm";
 
 import * as React from "react";
-import {useState} from "react";
+import {useLayoutEffect, useState} from "react";
 import {
     MDBAccordion,
     MDBAccordionItem,
@@ -43,11 +43,13 @@ export default function ProjectTemplate(params: ProjectParams) {
     const [CaracteristicasEdificio] = useState(() => caract.edificio);
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
     const [CaracteristicasResidencias] = useState(() => caract.residencias);
-
+    const [pdfUrl, setPdfUrl] = useState(`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`);
     window.onresize = () => {
         setInnerWidth(window.innerWidth);
     };
-
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     function openTab(docType: string) {
         switch (docType) {
             case "brochure":
@@ -322,11 +324,12 @@ export default function ProjectTemplate(params: ProjectParams) {
                     <MDBTabsContent>
                         <MDBTabsPane show={tabVisible === "brochure"}>
                             <object
-                                data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                data={(innerWidth>768)?pdfUrl:""}
                                 type="application/pdf"
                                 width="100%"
                                 height="500px"
-                            >
+                                >
+
                                 <big>
                                     <p>
                                         No se puede mostrar el archivo PDF.{" "}

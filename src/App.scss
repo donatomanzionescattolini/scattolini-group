@@ -124,6 +124,7 @@ section h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  max-width:100%!important;
 }
 
 .video-container .content {
@@ -265,22 +266,22 @@ main > section.city-firstsection {
   padding: 0% important;
   justify-content: center;
 }
-
-.video-container {
-
-
-  font-size: 1rem;
-  line-height: 1.5;
-  -webkit-tap-highlight-color: transparent;
-  color: $brown;
-  box-sizing: border-box;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  position: relative;
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-}
+//
+//.video-container {
+//
+//
+//  font-size: 1rem;
+//  line-height: 1.5;
+//  -webkit-tap-highlight-color: transparent;
+//  color: $brown;
+//  box-sizing: border-box;
+//  font-family: "Cormorant Garamond", serif;
+//  font-weight: 500;
+//  position: relative;
+//  width: 100%;
+//  height: 500px;
+//  overflow: hidden;
+//}
 
 .propiedades a:hover {
   color: inherit;
@@ -674,10 +675,10 @@ nav ul ul {
   background-color: $background;
   color: #84705c;
   list-style-type: none;
-  padding-bottom: "8 px";
-  padding-left: '16px';
-  padding-right: '16px';
-  padding-top: '8px';
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
   margin: 0;
   overflow-y: scroll;
 }
@@ -1042,11 +1043,11 @@ main {
 
 
 .carousel-control-next-icon {
-  background-image: url("..https://pagina-mama.s3.amazonaws.com/assets2/icons/next.png");
+  background-image: url("https://pagina-mama.s3.amazonaws.com/assets2/icons/next.png");
 }
 
 .carousel-control-prev-icon {
-  background-image: url("..https://pagina-mama.s3.amazonaws.com/assets2/icons/prev.png");
+  background-image: url("https://pagina-mama.s3.amazonaws.com/assets2/icons/prev.png");
 }
 
 #accordion ul {
