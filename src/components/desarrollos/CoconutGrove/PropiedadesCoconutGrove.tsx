@@ -1,4 +1,3 @@
-
 import {MDBCol,} from "mdb-react-ui-kit";
 import {Link} from "react-router-dom";
 import "../Propiedades.css";

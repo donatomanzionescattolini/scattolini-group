@@ -13,7 +13,7 @@ export default function Liderazgo() {
                     Equipo de expertos, Servicio Personalizado
                 </h4>
                 <br></br>
-                <p className=" h-100 mt-5" >
+                <p className=" h-100 mt-5">
                     Scattolini Group está dirigido por Elda Scattolini, una agente de
                     bienes raíces con 20 años de experiencia en el mercado del sur de
                     Florida. Elda ha ayudado a cientos de clientes de diferentes partes

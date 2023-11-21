@@ -1,4 +1,3 @@
-
 import Quote from "../models/Quote";
 import {Carousel, CarouselItem} from "react-bootstrap";
 

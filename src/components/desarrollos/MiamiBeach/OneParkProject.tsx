@@ -1,4 +1,3 @@
-
 import ProjectTemplate from "../ProjectTemplate";
 import PropiedadesMiamiBeach from "./PropiedadesMiamiBeach";
 

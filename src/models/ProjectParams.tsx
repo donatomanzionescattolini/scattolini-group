@@ -1,5 +1,3 @@
-
-
 export interface caracteristicas {
     edificio: React.ReactNode;
     residencias: React.ReactNode;

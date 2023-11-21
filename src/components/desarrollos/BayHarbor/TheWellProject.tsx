@@ -1,5 +1,3 @@
-
-
 import ProjectTemplate from "../ProjectTemplate";
 import PropiedadesBayHarbor from "./PropiedadesBayHarbor";
 

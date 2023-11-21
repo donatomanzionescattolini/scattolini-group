@@ -1,6 +1,4 @@
-
-
-export default function AreaTemplate(){
+export default function AreaTemplate() {
 
 
 }

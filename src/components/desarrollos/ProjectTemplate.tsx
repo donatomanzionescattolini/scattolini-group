@@ -50,6 +50,7 @@ export default function ProjectTemplate(params: ProjectParams) {
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     function openTab(docType: string) {
         switch (docType) {
             case "brochure":
@@ -137,9 +138,9 @@ export default function ProjectTemplate(params: ProjectParams) {
                 <MDBContainer>
                     {
                         innerWidth < 768 && <br/>}
-                        <h2 className=" text-center animate-charcter" style={{}}>
-                            {titulo}
-                        </h2>
+                    <h2 className=" text-center animate-charcter" style={{}}>
+                        {titulo}
+                    </h2>
 
                     <hr className="hr hr-blurry w-50 mx-auto"/>
                     {<h4 className="mt-0 text-center">{subtitulo}</h4>}
@@ -324,11 +325,11 @@ export default function ProjectTemplate(params: ProjectParams) {
                     <MDBTabsContent>
                         <MDBTabsPane show={tabVisible === "brochure"}>
                             <object
-                                data={(innerWidth>768)?pdfUrl:""}
+                                data={(innerWidth > 768) ? pdfUrl : ""}
                                 type="application/pdf"
                                 width="100%"
                                 height="500px"
-                                >
+                            >
 
                                 <big>
                                     <p>

@@ -31,13 +31,13 @@ export default function Homestead() {
                         <br></br>
                         <p className={"text-muted"}>
                             <small>
-                            Homestead es un lugar hermoso para vivir y trabajar, con días
-                            soleados y una temperatura promedio de 75 grados. Ubicado a solo
-                            treinta millas al norte de Miami, una de las ciudades más
-                            vibrantes y culturalmente ricas del país, Homestead ofrece lo
-                            mejor de ambos mundos: la tranquilidad de una pequeña ciudad con
-                            todas las comodidades de una gran ciudad.
-                        </small>
+                                Homestead es un lugar hermoso para vivir y trabajar, con días
+                                soleados y una temperatura promedio de 75 grados. Ubicado a solo
+                                treinta millas al norte de Miami, una de las ciudades más
+                                vibrantes y culturalmente ricas del país, Homestead ofrece lo
+                                mejor de ambos mundos: la tranquilidad de una pequeña ciudad con
+                                todas las comodidades de una gran ciudad.
+                            </small>
                         </p>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">

@@ -124,7 +124,7 @@ section h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  max-width:100%!important;
+  max-width: 100% !important;
 }
 
 .video-container .content {
@@ -266,6 +266,7 @@ main > section.city-firstsection {
   padding: 0% important;
   justify-content: center;
 }
+
 //
 //.video-container {
 //
@@ -1136,5 +1137,10 @@ MDBCard, .card, md-card, mdc-card {
 
 
 .propiedades {
-  margin-inline:10%;
+  margin-inline: 10%;
+}
+
+video {
+  max-width: 100% !important;
+
 }

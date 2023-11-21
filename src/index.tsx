@@ -1,5 +1,3 @@
-
-
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
@@ -15,11 +13,12 @@ root.render(
     </React.StrictMode>
 );
 
-let videos = document.getElementsByTagName("video");
+const videos = document.getElementsByTagName("video");
 for (let i = 0; i < videos.length; i++) {
     videos[i].controls = false;
     videos[i].loop = true;
     videos[i].muted = false;
+
     videos[i].autoplay = true;
     videos[i].playsInline = true;
     videos[i].defaultPlaybackRate = 1;
@@ -28,12 +27,12 @@ for (let i = 0; i < videos.length; i++) {
 }
 
 for (let i = 0; i < document.getElementsByTagName("iframe").length; i++) {
-    let myIframe: HTMLIFrameElement = document.getElementsByTagName("iframe")[i];
+    const myIframe: HTMLIFrameElement = document.getElementsByTagName("iframe")[i];
     myIframe.style.maxWidth = "100%";
 }
-let images = document.getElementsByTagName("img");
+const images = document.getElementsByTagName("img");
 for (let i = 0; i < images.length; i++) {
-    let image = images[i];
+    const image = images[i];
     image.style.maxWidth = "100%";
     image.style.padding = "0";
     image.style.margin = "auto";
@@ -43,7 +42,7 @@ for (let i = 0; i < images.length; i++) {
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
-let lists = document.getElementsByTagName("ul");
+const lists = document.getElementsByTagName("ul");
 
 for (let i = 0; i < lists.length; i++) {
     lists[i].style.listStyleType = "none";
@@ -51,8 +50,8 @@ for (let i = 0; i < lists.length; i++) {
     lists[i].classList.add("list-unstyled");
 }
 
-let sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section");
 
-for (let section of sections) {
+for (const section of sections) {
     section.classList.add("p-2 m-0");
 }

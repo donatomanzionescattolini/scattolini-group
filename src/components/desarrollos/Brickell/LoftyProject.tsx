@@ -1,4 +1,3 @@
-
 import ProjectTemplate from "../ProjectTemplate";
 import PropiedadesBrickell from "./PropiedadesBrickell";
 

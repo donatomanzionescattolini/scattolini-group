@@ -1,5 +1,3 @@
-
-
 export default function ManzioneProperties() {
     return (
         <div className="row  p-0 m-0">
