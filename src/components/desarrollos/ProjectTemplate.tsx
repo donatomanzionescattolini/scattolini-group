@@ -24,7 +24,7 @@ import {Link} from "react-router-dom";
 export default function ProjectTemplate(params: ProjectParams) {
     const [nombre] = useState(params.nombre);
     const [propiedades] = useState(params.properties);
-    const [direccion] = useState(params.direccion);
+    const [okdireccion] = useState(params.direccion);
     const [numberOfImages] = useState(params.numberOfImages);
     const [tabVisible, setTabVisible] = useState("brochure");
     let vid: string | JSX.Element = params.video
@@ -137,7 +137,7 @@ export default function ProjectTemplate(params: ProjectParams) {
             <section className="colour-block">
                 <MDBContainer>
                     {
-                        innerWidth < 768 && <br/>}
+                        innerWidth < 768 && <div><br/><br/><br/></div>}
                     <h2 className=" text-center animate-charcter" style={{}}>
                         {titulo}
                     </h2>

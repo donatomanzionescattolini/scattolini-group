@@ -5,11 +5,15 @@ export class Area {
 
     private name?: string;
     private desarrollos?: Desarrollo[] = [];
+    private slogan?: string;
+    private descripcion: Array<string>;
+    private propiedadesComponent: Element;
 
-    constructor(name: string) {
-        this.setName(name);
-        this.setDesarrollos(new Array<Desarrollo>());
-
+    constructor(name: string, slogan:string, descripcion:Array<string>, propiedadesComponent:Element) {
+        this.name=name;
+        this.slogan=slogan;
+        this.descripcion=descripcion;
+        this.propiedadesComponent=propiedadesComponent;
 
     }
 
@@ -47,13 +51,27 @@ export class Area {
     addDesarrollos(nombres: string[]) {
         if (!this.desarrollos) {
             this.desarrollos = new Array<Desarrollo>();
-        } else {
-
-        }
+        } else { /* empty */ }
         for (let i = 0; i < nombres.length; i++) {
             this.desarrollos.push(new Desarrollo(nombres[i]));
         }
 
 
+    }
+
+    getSlogan() {
+        return this.slogan;
+    }
+
+    private setSlogan(slogan: string) {
+        this.slogan=slogan;
+    }
+
+    getDescripcion(): Array<string> {
+        return this.descripcion;
+    }
+
+    getPropiedadesComponent() {
+        return this.propiedadesComponent;
     }
 }
