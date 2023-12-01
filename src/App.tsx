@@ -61,6 +61,7 @@ import Aliados from "./components/Aliados";
 import Liderazgo from "./components/Liderazgo.tsx";
 import BrickellComponent from "./components/areas/BrickellComponent.tsx";
 import LaBaiaNorthProject from "./components/desarrollos/BayHarbor/LaBaiaNorthProject.tsx";
+import LaMaréProject from "./components/desarrollos/BayHarbor/LaMaréProject.tsx";
 
 
 export default function App() {
@@ -210,6 +211,7 @@ export default function App() {
 
 
                 <Route element={<LaBaiaNorthProject/>} path={"/desarrollos/la-baia"}/>
+                <Route element={<LaMaréProject/>} path={"/desarrollos/la-maré"}/>
             </Routes>
             <Footer/>
         </BrowserRouter>

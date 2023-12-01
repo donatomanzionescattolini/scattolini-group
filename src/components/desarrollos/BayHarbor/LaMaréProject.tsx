@@ -39,7 +39,7 @@ export default function LaMaréProject() {
                 amenidades: (
                     <>
                         <ul>
-                            <li> Piscina</li>
+                            <li>Piscina</li>
                             <li>Gimnasio</li>
                             <li>Exuberante paisaje</li>
                             <li>Salón</li>
