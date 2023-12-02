@@ -118,7 +118,7 @@ export default function Equipo() {
                             <div className="img-container w-80 h-100 mx-auto">
                                 <img
                                     className="img-responsive object-fit-cover w-100 h-100 m-0 p-0  "
-                                    src={"https://pagina-mama.s3.amazonaws.com/assets2/asociados/carmen-transparent-bg.png"}
+                                    src={"https://pagina-mama.s3.amazonaws.com/assets2/asociados/carmen-transparent-bg.jpg"}
                                     width="80%"
                                     height="auto"
                                 />
@@ -241,6 +241,10 @@ export default function Equipo() {
                         </div>
                     </article>
                 </div>
+            </div>
+            <div>
+                <iframe width="320" height="1000" src="https://www.instagram.com/scattolinigroup/embed/" frameBorder="0"></iframe>
+
             </div>
         </section>
     );
