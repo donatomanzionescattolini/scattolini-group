@@ -10,7 +10,7 @@ export default function AreaTemplate(props:AreaProps) {
     const nombre = area.getName();
     const titulo = area.getTitulo();
     const images = [];
-    for(let i = 0;i<area.getNumberOfImages();i++){
+    for(let i = 1;i<=area.getNumberOfImages();i++){
         images.push(<Image
             fluid
             rounded
