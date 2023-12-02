@@ -34,6 +34,25 @@ export default function Equipo() {
                 <div className="col-md-4 col-sm-6 col-xs-12">
                     <article className="material-card Pink">
                         <h2>
+                            <span>Dania Scattolini</span>
+                            <strong>🏠 Agente y Office Manager</strong>
+                        </h2>
+                        <div className="mc-content">
+                            <div className="img-container w-80 h-100 mx-auto">
+                                <img
+                                    className="img-responsive object-fit-cover w-100 h-100 m-0 p-0  "
+                                    src={"https://pagina-mama.s3.amazonaws.com/assets2/asociados/dania-transparent-bg.png"}
+                                    width="80%"
+                                    height="auto"
+                                />
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div className="col-md-4 col-sm-6 col-xs-12">
+                    <article className="material-card Pink">
+                        <h2>
                             <span>Veruschka Jaimes</span>
                             <strong>🏠 Agente</strong>
                         </h2>
@@ -41,8 +60,8 @@ export default function Equipo() {
                             <div className="img-container w-80 h-100 mx-auto">
                                 <img
                                     className="img-responsive object-fit-cover w-100 h-100 m-0 p-0  "
-                                    src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/veru-transparent-bg.png"
-                                    width="80%"
+                                    src={"https://pagina-mama.s3.amazonaws.com/assets2/asociados/veru-transparent-bg.png"}
+                                        width="80%"
                                     height="auto"
                                 />
                             </div>
@@ -96,10 +115,47 @@ export default function Equipo() {
                             <strong>🏠 Agente</strong>
                         </h2>
                         <div className="mc-content">
+                            <div className="img-container w-80 h-100 mx-auto">
+                                <img
+                                    className="img-responsive object-fit-cover w-100 h-100 m-0 p-0  "
+                                    src={"https://pagina-mama.s3.amazonaws.com/assets2/asociados/carmen-transparent-bg.png"}
+                                    width="80%"
+                                    height="auto"
+                                />
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div className="col-md-4 col-sm-6 col-xs-12">
+                    <article className="material-card Pink">
+                        <h2>
+                            <span>Róbinson Ávila</span>
+                            <strong>🏠 Agente</strong>
+                        </h2>
+                        <div className="mc-content">
+                            <div className="img-container w-80 h-100 mx-auto">
+                                <img
+                                    className="img-responsive object-fit-cover w-100 h-100 m-0 p-0  "
+                                    src={"https://pagina-mama.s3.amazonaws.com/assets2/asociados/robison-transparent-bg.png"}
+                                    width="80%"
+                                    height="auto"
+                                />
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div className="col-md-4 col-sm-6 col-xs-12">
+                    <article className="material-card Pink">
+                        <h2>
+                            <span>Gabriela Peña</span>
+                            <strong>🏠 Agente</strong>
+                        </h2>
+                        <div className="mc-content">
                             <div className="img-container p-0">
                                 <img
                                     className="img-responsive object-fit-cover w-100 m-0 p-0  "
-                                    src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/carmen-transparent-bg.png"
+                                    src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/gabriela-transparent-bg.png"
                                     width="80%"
                                     height="100%"
                                     style={{minHeight: "100%!important"}}
