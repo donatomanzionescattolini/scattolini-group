@@ -38,11 +38,11 @@ export default function Equipo() {
                             <strong>🏠 Agente y Office Manager</strong>
                         </h2>
                         <div className="mc-content">
-                            <div className="img-container w-80 h-100 mx-auto">
+                            <div className="img-container w-50 h-100 mx-auto">
                                 <img
                                     className="img-responsive object-fit-cover w-100 h-100 m-0 p-0  "
                                     src={"https://pagina-mama.s3.amazonaws.com/assets2/asociados/dania-transparent-bg.png"}
-                                    width="80%"
+                                    width="70%"
                                     height="auto"
                                 />
                             </div>

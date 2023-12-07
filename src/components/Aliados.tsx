@@ -12,7 +12,7 @@ export default function Aliados() {
                 className="p-5 d-flex flex-row flex-nowrap justify-content-center align-items-center"
             >
                 <MDBCol xs={12} sm={12} md={12} lg={4} xl={4}>
-                    <Link to="https://www.huehouseagency.com//">
+                    <Link to="#">
                         <img
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/hue-house.png"
                             alt="Hue House"
