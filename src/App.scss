@@ -1144,3 +1144,35 @@ video {
   max-width: 100% !important;
 
 }
+.floating-element {
+
+  position: fixed;
+
+  bottom: 10px;
+
+  right: 10px;
+
+  width: 400px;
+
+  height: fit-content;
+
+  border: 1px solid $brown;
+
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  z-index: 9999;
+
+  display: initial; /* Hide by default */
+
+  background-color:$background!important;
+
+}
+
+
+.navbar-light{
+
+  height:143px!important;
+
+}
