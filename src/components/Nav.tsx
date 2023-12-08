@@ -1,5 +1,6 @@
 // import NorthBayVillageComponent from "./areas/NorthBayVillageComponent";
 import {useState} from "react";
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import {
     MDBCollapse,
     MDBContainer,
@@ -434,9 +435,13 @@ const Nav = () => {
                                 </MDBDropdownMenu>
                             </MDBDropdown>
                         </MDBNavbarItem>
+                        <FloatingWhatsApp phoneNumber={"13056139338"} chatMessage={"¿Cómo te puedo ayudar hoy?"} statusMessage={"Respuestas dentro de las primeras 24 horas"} placeholder={"Quisiera programar una llamada telefónica o una reunión con un agente para aprender más sobre el mercado inmobiliario en el Sur de la Florida y analizar las opciones disponibles para mí "} accountName={"Scattolini Group"} notificationSound className={"floating-whatsapp"}/>
+
                     </MDBNavbarNav>
+
                 </MDBCollapse>
             </MDBContainer>
+
         </MDBNavbar>
     );
 };

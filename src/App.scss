@@ -176,8 +176,8 @@ nav {
 }
 
 #navbarNavDropdown > ul > li a:hover, #navbarNavDropdown > ul > li:hover, .dropdown-item:hover {
-  background: #1b3433!important;
-  color: $background !important;
+  //background: #1b3433!important;
+  color: $brown !important;
   cursor: pointer !important;
 }
 
@@ -617,6 +617,7 @@ nav ul li {
 
 a {
   text-decoration: none;
+  background:$secondBackground;
   color: $brown !important;
 }
 
@@ -952,8 +953,8 @@ div.react-pdf__Page .annotationLayer {
 
 img {
   justify-content: center;
-  max-width: "100%";
-  max-height: "100%";
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #asociados-row div {
@@ -1180,4 +1181,9 @@ video {
 
   height:143px!important;
 
+}
+.floating-whatsapp {
+  position:fixed!important;
+  bottom:0!important;
+  left:0!important;
 }
