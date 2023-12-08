@@ -11,7 +11,7 @@ export default function FloatingContactForm() {
     const [successAlert, setSuccessAlert] = useState(false);
     const [failureAlert, setFailureAlert] = useState(false);
     const [from_name] = useState("");
-    const [client_email, setClient_email] = useState("");
+    const [client_email] = useState("");
     const [message, setmessage] = useState("");
     const [phone] = useState("");
     const [toSend, setToSend] = useState({
@@ -115,17 +115,18 @@ export default function FloatingContactForm() {
                 <MDBInput
                     type="email"
                     className="formInput"
+                    required
                     wrapperClass="mb-4"
                     label="Correo electrónico"
                     name="client_email"
                     formNoValidate={false}
                     onChange={handleChange}
                     value={toSend.client_email}
-                    required
                 />
                 <MDBInput
                     type="phone"
                     className="formInput"
+                    required
                     wrapperClass="mb-4"
                     label="Número de Teléfono"
                     name="phone"
@@ -137,6 +138,7 @@ export default function FloatingContactForm() {
                 <MDBTextArea
                     className="formInput"
                     wrapperClass="mb-4"
+                    required
                     rows={4}
                     label="Mensaje"
                     value={toSend.message}
