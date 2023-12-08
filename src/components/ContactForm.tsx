@@ -14,13 +14,14 @@ export default function ContactForm(props: ContactFormProps) {
     const [successAlert, setSuccessAlert] = useState(false);
     const [failureAlert, setFailureAlert] = useState(false);
     const [from_name, setFromName] = useState("");
-
+    const [client_email, setClient_email] = useState("");
     const [message, setmessage] = useState("");
     const [phone, setPhone] = useState("");
     const [toSend, setToSend] = useState({
         from_name: from_name,
         to_name: "Scattolini Group",
         message: message,
+        client_email:client_email,
         reply_to: reply_to,
         phone: phone,
     });
