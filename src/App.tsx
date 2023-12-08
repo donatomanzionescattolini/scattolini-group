@@ -66,6 +66,7 @@ import { MDBBtn } from "mdb-react-ui-kit";
 import React, { useState } from "react";
 import FloatingContactForm from "./components/FloatingContactForm.tsx";
 import "./App.scss";
+import {FloatingWhatsApp} from "react-floating-whatsapp";
 export default function App() {
     // State variable to store the visibility of the floating element
     const [show, setShow] = useState(true);
@@ -256,6 +257,7 @@ export default function App() {
                     />
                     <Route element={<LaMaréProject />} path={"/desarrollos/la-maré"} />
                 </Routes>
+                <FloatingWhatsApp phoneNumber={"13056139338"} chatMessage={"¿Cómo te puedo ayudar hoy?"} statusMessage={"Respuestas dentro de las primeras 24 horas"} placeholder={"Quisiera programar una llamada telefónica o una reunión con un agente para aprender más sobre el mercado inmobiliario en el Sur de la Florida y analizar las opciones disponibles para mí "} accountName={"Scattolini Group"} notificationSound className={"floating-whatsapp"}/>
                 <Footer />
             </BrowserRouter>
 
