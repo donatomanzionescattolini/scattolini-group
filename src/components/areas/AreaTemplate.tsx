@@ -48,6 +48,7 @@ export default function AreaTemplate(props:AreaProps) {
                                 })}
 
                     </div>
+                    {innerWidth >650 &&
                     <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
                         <picture className="">
                             <img
@@ -57,6 +58,7 @@ export default function AreaTemplate(props:AreaProps) {
                             />
                         </picture>
                     </div>
+                    }
                 </div>
             </div>
             <div className="city-firstcarousel">
@@ -66,10 +68,11 @@ export default function AreaTemplate(props:AreaProps) {
             </div>
             {/* <DividerFirst /> */}
             <div className="propiedades">
+                {area.getDesarrollos().length>0&&
                 <div>
                     <h3 className="text-center">Propiedades en el Área</h3>
                 </div>
-
+                }
                 <br></br>
                 <MDBRow>
                     {propiedadesComponent}
