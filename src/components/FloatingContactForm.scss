@@ -19,7 +19,6 @@ $black-70: darken(#fff, 70%);
 $black-80: darken(#fff, 80%);
 $black-90: darken(#fff, 90%);
 #floatingContact .formInput {
-  width:100%!important;
   background-blend-mode: screen!important;
 }
 
@@ -39,4 +38,14 @@ background:$background;
 button {
   color:#8A6944!important;
   background:#ede3d6!important;
+}
+
+@media screen and (max-width: 760px) {
+  .floating-element{
+    visibility: hidden!important;
+  }
+}
+
+.navbar-toggler {
+  background:none!Important;
 }
