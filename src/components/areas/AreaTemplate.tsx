@@ -1,16 +1,19 @@
 import {Image} from "react-bootstrap";
-import {MDBRow} from "mdb-react-ui-kit";
-import {Area} from "../../models/Area.tsx";
-import React, {ReactNode} from "react";
+import {MDBCol, MDBRow} from "mdb-react-ui-kit";
+import {Area} from "../../models/areas/Area.tsx";
+import React from "react";
+import {Link} from "react-router-dom";
+
 interface AreaProps {
-    area:Area;
+    area: Area;
 }
-export default function AreaTemplate(props:AreaProps) {
+
+export default function AreaTemplate(props: AreaProps) {
     const area = props.area;
     const nombre = area.getName();
     const titulo = area.getTitulo();
     const images = [];
-    for(let i = 1;i<=area.getNumberOfImages();i++){
+    for (let i = 1; i <= area.getNumberOfImages(); i++) {
         images.push(<Image
             fluid
             rounded
@@ -18,7 +21,6 @@ export default function AreaTemplate(props:AreaProps) {
         ></Image>);
     }
     const firstImage = `https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/firstImage.jpg`;
-    const propiedadesComponent:ReactNode = area.getPropiedadesComponent();
     return (
         <>
             <div className="city-banner p-0 ">
@@ -43,39 +45,53 @@ export default function AreaTemplate(props:AreaProps) {
                     <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 ps-5 pe-5 pb-2">
 
 
-                                {area.getDescripcion().map((paragraph:string)=>{
-                                    return (<p className={"text-muted"}><small>{paragraph}<br/><br/></small></p>)
-                                })}
+                        {area.getDescripcion().map((paragraph: string) => {
+                            return (<p className={"text-muted"}><small>{paragraph}<br/><br/></small></p>)
+                        })}
 
                     </div>
-                    {innerWidth >650 &&
-                    <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
-                        <picture className="">
-                            <img
-                                src={firstImage}
-                                className="w-100 img-thumbnail align-self-center justify-self-center m-auto"
-                                alt="BrickellComponent City Center"
-                            />
-                        </picture>
-                    </div>
+                    {innerWidth > 650 &&
+                        <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+                            <picture className="">
+                                <img
+                                    src={firstImage}
+                                    className="w-100 img-thumbnail align-self-center justify-self-center m-auto"
+                                    alt="BrickellComponent City Center"
+                                />
+                            </picture>
+                        </div>
                     }
                 </div>
             </div>
             <div className="city-firstcarousel">
-                {images.map(image=>(image))}
+                {images.map(image => (image))}
 
 
             </div>
-            {/* <DividerFirst /> */}
+            {/* <DividerFirstComponent /> */}
             <div className="propiedades">
-                {area.getDesarrollos().length>0&&
-                <div>
-                    <h3 className="text-center">Propiedades en el Área</h3>
-                </div>
+                {area.getDesarrollos().length > 0 &&
+                    <div>
+                        <h3 className="text-center">Propiedades en el Área</h3>
+                    </div>
                 }
                 <br></br>
                 <MDBRow>
-                    {propiedadesComponent}
+                    {area.getDesarrollos().map(desarrollo => {
+                        return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
+                            <Link to={`/desarrollos/${desarrollo.nombre}/`}>
+                                <div
+                                    className="propiedades-img p-0 m-0"
+                                    style={{
+                                        background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.getName()}/${desarrollo.nombre}.webp')`,
+                                        backgroundSize: "cover",
+                                    }}
+                                ></div>
+
+                                <h4 className="text-center card-title m-2 ">{desarrollo.nombre.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ")}</h4>
+                            </Link>
+                        </MDBCol>)
+                    })}
                 </MDBRow>
             </div>
             <div className="container-fluid m-0 p-0 overflow-scroll horizontal-scrollable"></div>

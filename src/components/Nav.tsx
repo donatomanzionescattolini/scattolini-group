@@ -1,6 +1,5 @@
 // import NorthBayVillageComponent from "./areas/NorthBayVillageComponent";
 import {useState} from "react";
-import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import {
     MDBCollapse,
     MDBContainer,
@@ -429,7 +428,7 @@ const Nav = () => {
                                         The Avenue
                                     </MDBDropdownItem>
                                     <MDBDropdownItem
-                                    link className={"dropdown-item"} href={"/desarrollos/la-baia"}>La Baia North
+                                        link className={"dropdown-item"} href={"/desarrollos/la-baia"}>La Baia North
 
                                     </MDBDropdownItem>
                                 </MDBDropdownMenu>

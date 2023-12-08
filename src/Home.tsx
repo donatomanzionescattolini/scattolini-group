@@ -2,12 +2,12 @@ import {AboutUs} from "./AboutUs";
 
 import {MDBContainer} from "mdb-react-ui-kit";
 import React, {useState} from "react";
-import Aliados from "./components/Aliados";
-import EquipoSmall from "./components/EquipoSmall";
+import AliadosComponent from "./components/AliadosComponent.tsx";
+import AsociadosSmallComponent from "./components/AsociadosSmallComponent.tsx";
 import Quotes from "./components/Quotes";
 import Servicios from "./components/Servicios";
-import Areas from "./components/areas/Areas";
-import DesarrollosTodos from "./components/desarrollos/Desarrollos";
+import AreasComponent from "./components/areas/AreasComponent.tsx";
+import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
 import Quote, {quotes} from "./models/Quote";
 
 export function Home() {
@@ -59,17 +59,17 @@ export function Home() {
             <div className="skew-c"></div>
 
             <section className="colour-block">
-                <Areas/>
+                <AreasComponent/>
             </section>
 
             <div className="skew-cc"></div>
             <section className="white-block">
                 <MDBContainer>
-                    <EquipoSmall/>
+                    <AsociadosSmallComponent/>
                 </MDBContainer>
             </section>
             <div className="skew-c"></div>
-            {/* <DividerSecond /> */}
+            {/* <DividerSecondComponent /> */}
             <br/>
             <section className="colour-block">
                 <MDBContainer>
@@ -86,7 +86,7 @@ export function Home() {
             <div className="skew-c"></div>
             <section className="colour-block">
                 <MDBContainer>
-                    <Aliados/>
+                    <AliadosComponent/>
                 </MDBContainer>
             </section>
             <div className="skew-cc"></div>

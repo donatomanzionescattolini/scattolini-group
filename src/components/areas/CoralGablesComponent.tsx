@@ -1,6 +1,6 @@
 import AreaTemplate from "./AreaTemplate.tsx";
-import {CoralGables} from "../../models/CoralGables.tsx";
+import {CoralGables} from "../../models/areas/CoralGables.tsx";
 
-export default function CoralGablesComponent(){
+export default function CoralGablesComponent() {
     return <AreaTemplate area={CoralGables}/>;
 }

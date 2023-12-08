@@ -1,20 +1,12 @@
-import ProjectTemplate from "../ProjectTemplate";
-import PropiedadesPinecrest from "./PropiedadesPinecrest";
+import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
+import PinelandRocklandEstates from "../../../models/desarrollos/Pinecrest/PinelandRocklandEstates.tsx";
+
 
 export default function RocklandEstatesProject() {
     return (
         <ProjectTemplate
-            properties={<PropiedadesPinecrest/>}
-            nombre={"pine-rockland-estates"}
-            caracteristicas={{
-                edificio: <></>,
-                residencias: <></>,
-                amenidades: <></>,
-            }}
-            introduccion={[]}
-            titulo={"Pine Rockland Estates"}
-            subtitulo={"Vivir en cualquier otro lugar no se puede comparar"}
-            numberOfImages={0}
+
+            desarrollo={PinelandRocklandEstates}
         />
     );
 }

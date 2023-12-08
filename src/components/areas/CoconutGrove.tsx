@@ -1,7 +1,6 @@
 import {MDBRow,} from "mdb-react-ui-kit";
 
 import {Image} from "react-bootstrap";
-import PropiedadesCoconutGrove from "../desarrollos/CoconutGrove/PropiedadesCoconutGrove";
 
 export default function CoconutGrove() {
     return (
@@ -124,7 +123,7 @@ export default function CoconutGrove() {
 
             <div className="propiedades">
                 <MDBRow className="flex-row flex-wrap">
-                    <PropiedadesCoconutGrove/>
+
                 </MDBRow>
             </div>
             <div className="container-fluid m-0 p-0 overflow-scroll horizontal-scrollable"></div>

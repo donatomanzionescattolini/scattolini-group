@@ -1540,10 +1540,11 @@ h3 {
   font-weight: 200 !important;
 }
 
-#root > section > div.row.active-with-click > div:nth-child(2) > article > div > div > img,#root > section > div.row.active-with-click > div:nth-child(5) > article > div > div > img,#root > section > div.row.active-with-click > div:nth-child(8) > article > div > div > img,#root > section > div.row.active-with-click > div:nth-child(12) > article > div > div > img,#root > section > div.row.active-with-click > div:nth-child(12) > article>div>div>img {
-  width:70%!important;
-  margin-inline:15%!Important;
+#root > section > div.row.active-with-click > div:nth-child(2) > article > div > div > img, #root > section > div.row.active-with-click > div:nth-child(5) > article > div > div > img, #root > section > div.row.active-with-click > div:nth-child(8) > article > div > div > img, #root > section > div.row.active-with-click > div:nth-child(12) > article > div > div > img, #root > section > div.row.active-with-click > div:nth-child(12) > article > div > div > img {
+  width: 70% !important;
+  margin-inline: 15% !Important;
 }
-#root > section > div.row.active-with-click > div:nth-child(12)> article>div>div>img {
-  height:105%!important;
+
+#root > section > div.row.active-with-click > div:nth-child(12) > article > div > div > img {
+  height: 105% !important;
 }

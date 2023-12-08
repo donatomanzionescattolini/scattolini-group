@@ -617,7 +617,7 @@ nav ul li {
 
 a {
   text-decoration: none;
-  background:$secondBackground;
+  background: $secondBackground;
   color: $brown !important;
 }
 
@@ -1084,12 +1084,13 @@ main {
   width: 100% !important;
   margin: auto !important;
   align-items: center !important;
-  background:$secondBackground!important;
-  height:fit-content!important;
+  background: $secondBackground !important;
+  height: fit-content !important;
 
 }
+
 .navbar-toggler {
-  background:none!important;
+  background: none !important;
 }
 
 section.white-block h4 {
@@ -1126,11 +1127,11 @@ MDBCard, .card, md-card, mdc-card {
   #collapsibleNavbar {
 
 
-    height: fit-content!important;
-    padding: 20px!important;
-    justify-content: center!important;
-    margin-inline: 25%!important;
-    text-align: center!important;
+    height: fit-content !important;
+    padding: 20px !important;
+    justify-content: center !important;
+    margin-inline: 25% !important;
+    text-align: center !important;
   }
   p.text-muted {
 
@@ -1150,6 +1151,7 @@ video {
   max-width: 100% !important;
 
 }
+
 .floating-element {
 
   position: fixed;
@@ -1172,17 +1174,18 @@ video {
 
   display: initial; /* Hide by default */
 
-  background-color:$background!important;
+  background-color: $background !important;
 
 }
 
 
-.navbar-light{
+.navbar-light {
 
-  height:143px!important;
+  height: 143px !important;
 
 }
+
 .floating-whatsapp {
-  position:relative!important;
-  
+  position: relative !important;
+
 }

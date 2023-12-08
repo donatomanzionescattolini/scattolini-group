@@ -21,8 +21,11 @@ export default function Quotes(props: Props) {
                     accessKey={`${props.quotes.indexOf(quote)}`}
                     key={props.quotes.indexOf(quote)}
                 >
-                    <blockquote className="blockquote overflow-visible" style={{overflow:"visible!important"}}>
-                        <p style={{overflow:"scroll!important", minHeight:"fit-content!important"}}>{quote.getQuote()}</p>
+                    <blockquote className="blockquote overflow-visible" style={{overflow: "visible!important"}}>
+                        <p style={{
+                            overflow: "scroll!important",
+                            minHeight: "fit-content!important"
+                        }}>{quote.getQuote()}</p>
                         <footer className="blockquote-footer">
                             <cite title="Source title">{quote.getAuthor()}</cite>
                         </footer>
