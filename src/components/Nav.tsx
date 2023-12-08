@@ -53,7 +53,7 @@ const Nav = () => {
                 <MDBCollapse navbar show={showNavCentred} id="navbarCenteredExample">
                     <MDBNavbarNav fullWidth={true} className="mb-2 mb-lg-0">
                         <MDBNavbarItem>
-                            <MDBNavbarLink active aria-current="page" href="/">
+                            <MDBNavbarLink aria-current="page" href="/">
                                 Inicio
                             </MDBNavbarLink>
                         </MDBNavbarItem>

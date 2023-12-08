@@ -176,8 +176,8 @@ nav {
 }
 
 #navbarNavDropdown > ul > li a:hover, #navbarNavDropdown > ul > li:hover, .dropdown-item:hover {
-  /* background: #1b3433!important;
-  color: $background !important; */
+  background: #1b3433!important;
+  color: $background !important;
   cursor: pointer !important;
 }
 
@@ -1083,7 +1083,12 @@ main {
   width: 100% !important;
   margin: auto !important;
   align-items: center !important;
+  background:$secondBackground!important;
+  height:fit-content!important;
 
+}
+.navbar-toggler {
+  background:none!important;
 }
 
 section.white-block h4 {
@@ -1120,11 +1125,11 @@ MDBCard, .card, md-card, mdc-card {
   #collapsibleNavbar {
 
 
-    height: fit-content;
-    padding: 20px;
-    justify-content: center;
-    margin-inline: 25%;
-    text-align: center;
+    height: fit-content!important;
+    padding: 20px!important;
+    justify-content: center!important;
+    margin-inline: 25%!important;
+    text-align: center!important;
   }
   p.text-muted {
 
