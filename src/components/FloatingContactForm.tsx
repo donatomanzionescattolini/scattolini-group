@@ -7,11 +7,11 @@ import {Alert, AlertHeading} from "react-bootstrap";
 
 import "./FloatingContactForm.scss"
 export default function FloatingContactForm() {
-    const [reply_to] = useState("");
+    const [reply_to] = useState("office@scattolinigroup.com");
     const [successAlert, setSuccessAlert] = useState(false);
     const [failureAlert, setFailureAlert] = useState(false);
     const [from_name] = useState("");
-
+    const [client_email, setClient_email] = useState("");
     const [message, setmessage] = useState("");
     const [phone] = useState("");
     const [toSend, setToSend] = useState({
@@ -19,12 +19,13 @@ export default function FloatingContactForm() {
         to_name: "Scattolini Group",
         message: message,
         reply_to: reply_to,
+        client_email:client_email,
         phone: phone,
     });
     const onSubmit = (e) => {
         e.preventDefault();
         send(
-            "service_lppwadh",
+            "service_ikq9lvg",
             "template_z9nsgpj",
 
             toSend,
@@ -53,6 +54,7 @@ export default function FloatingContactForm() {
             to_name: "Scattolini Group",
             message: "",
             reply_to: "",
+            client_email: "",
             phone: "",
         });
         setmessage("");
@@ -115,10 +117,10 @@ export default function FloatingContactForm() {
                     className="formInput"
                     wrapperClass="mb-4"
                     label="Correo electrónico"
-                    name="reply_to"
+                    name="client_email"
                     formNoValidate={false}
                     onChange={handleChange}
-                    value={toSend.reply_to}
+                    value={toSend.client_email}
                     required
                 />
                 <MDBInput

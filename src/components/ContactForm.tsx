@@ -27,13 +27,13 @@ export default function ContactForm(props: ContactFormProps) {
     const onSubmit = (e: any) => {
         e.preventDefault();
         send(
-            "service_lppwadh",
+            "service_ikq9lvg",
             "template_z9nsgpj",
 
             toSend,
             "mYq5Vmn6onS_iOFJc"
         )
-            .then((response) => {
+                .then((response) => {
                 console.log("SUCCESS!", response.status, response.text);
                 setSuccessAlert(true);
                 setFailureAlert(false);
@@ -56,6 +56,7 @@ export default function ContactForm(props: ContactFormProps) {
             to_name: "Scattolini Group",
             message: "",
             reply_to: "",
+            client_email:"",
             phone: "",
         });
         setmessage("");
@@ -119,10 +120,10 @@ export default function ContactForm(props: ContactFormProps) {
                     id="form4Example2"
                     wrapperClass="mb-4"
                     label="Correo electrónico"
-                    name="reply_to"
+                    name="client_email"
                     formNoValidate={false}
                     onChange={handleChange}
-                    value={toSend.reply_to}
+                    value={toSend.client_email}
                     required
                 />
                 <MDBInput
