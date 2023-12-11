@@ -1,9 +1,9 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import FourteenRiverDistrict from "../../../models/desarrollos/Brickell/FourteenRiverDistrict.tsx";
+import ProjectTemplate from "../ProjectTemplate.tsx";
+import FourteenRiverDistrict from "../../../objects/desarrollos/Brickell/FourteenRiverDistrict.tsx";
 
 
 export default function FourteenRiverDistrictProject() {
     return (
         <ProjectTemplate
-            desarrollo={FourteenRiverDistrict}/>);
+            desarrollo={FourteenRiverDistrict()}/>);
 }

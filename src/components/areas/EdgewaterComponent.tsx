@@ -1,8 +1,8 @@
 import AreaTemplate from "./AreaTemplate.tsx";
-import {Edgewater} from "../../models/areas/Edgewater.tsx";
+import Edgewater from "../../objects/areas/Edgewater.tsx";
 
 export default function EdgewaterComponent() {
     return (
-        <AreaTemplate area={Edgewater}/>
+        <AreaTemplate area={Edgewater()}/>
     );
 }

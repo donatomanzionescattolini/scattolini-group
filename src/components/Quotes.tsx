@@ -25,9 +25,9 @@ export default function Quotes(props: Props) {
                         <p style={{
                             overflow: "scroll!important",
                             minHeight: "fit-content!important"
-                        }}>{quote.getQuote()}</p>
+                        }}>{quote.quote}</p>
                         <footer className="blockquote-footer">
-                            <cite title="Source title">{quote.getAuthor()}</cite>
+                            <cite title="Source title">{quote.author}</cite>
                         </footer>
                     </blockquote>
                 </CarouselItem>

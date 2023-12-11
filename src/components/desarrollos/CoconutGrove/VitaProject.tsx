@@ -1,8 +1,8 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import Vita from "../../../models/desarrollos/CoconutGrove/Vita.tsx"
+import ProjectTemplate from "../ProjectTemplate.tsx";
+import VitaObject from "../../../objects/desarrollos/CoconutGrove/VitaObject.tsx"
 
 export default function VitaProject() {
     return (
         <ProjectTemplate
-            desarrollo={Vita}/>);
+            desarrollo={VitaObject()}/>);
 }

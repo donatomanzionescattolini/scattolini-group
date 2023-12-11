@@ -1,11 +1,13 @@
 import {MDBCol, MDBRow} from "mdb-react-ui-kit";
-import Areas from "../../models/areas/Areas.tsx";
-import {Area} from "../../models/areas/Area.tsx";
-import {Desarrollo} from "../../models/desarrollos/Desarrollo.tsx";
+import Areas from "../../objects/areas/Areas.tsx";
+import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import {Link} from "react-router-dom";
+import {Area} from "../../models/areas/Area.tsx";
+import {getDesarrollosForArea} from "../../objects/desarrollos/GetAllDesarrollos.ts";
 
 
 export default function DesarrollosTodos() {
+
     return (
         <>
             <br></br>
@@ -17,24 +19,29 @@ export default function DesarrollosTodos() {
             <br></br>
             <MDBRow className="">
                 {Areas().map((area: Area) => {
-                    return (<>
-                        {area.getDesarrollos().map((desarrollo: Desarrollo) => {
-                            return (<MDBCol xs={12} sm={12} md={4} lg={4} xl={4}>
-                                <Link to={`/desarrollos/${desarrollo.nombre}`}>
-                                    <div
-                                        className="propiedades-img p-0 m-0"
-                                        style={{
-                                            background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.getName()}/${desarrollo.nombre}.webp')`,
-                                            backgroundSize: "cover",
-                                        }}
-                                    ></div>
+                    const desarr = getDesarrollosForArea(area);
+                    if(!desarr||desarr.length==0){
+                        return <MDBCol></MDBCol>;
+                    }else {
+                        return (<>
+                            {desarr.map((desarrollo: Desarrollo) => {
+                                return (<MDBCol xs={12} sm={12} md={4} lg={4} xl={4}>
+                                    <Link to={`/desarrollos/${desarrollo.nombre}`}>
+                                        <div
+                                            className="propiedades-img p-0 m-0"
+                                            style={{
+                                                background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
+                                                backgroundSize: "cover",
+                                            }}
+                                        ></div>
 
-                                    <h4 className="text-center card-title m-2 ">{desarrollo.nombre.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ")}</h4>
-                                </Link>
-                            </MDBCol>)
-                        })}
-                    </>);
-                })}
+                                        <h4 className="text-center card-title m-2 ">{desarrollo.nombre.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ")}</h4>
+                                    </Link>
+                                </MDBCol>)
+                            })}
+                        </>);
+                    }   })}
+
             </MDBRow>
         </>
     );

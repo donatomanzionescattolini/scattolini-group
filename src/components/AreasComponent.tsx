@@ -2,7 +2,7 @@ import {MDBCol, MDBContainer, MDBRow} from "mdb-react-ui-kit";
 import React, {useState} from "react";
 import {Card, CardImg} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import Areas from "../models/areas/Areas.tsx";
+import Areas from "../objects/areas/Areas.tsx";
 
 const AreasComponent = function (): React.JSX.Element {
     const [returnColumns] = useState<JSX.Element[]>(
@@ -13,10 +13,10 @@ const AreasComponent = function (): React.JSX.Element {
                 temp.push(
                     <MDBCol className="col-3">
                         <Card autoFocus className={" h-100 p-0 m-0"}>
-                            <Link to={"/areas/" + areaObject.getName()}>
+                            <Link to={"/areas/" + areaObject.name}>
                                 <CardImg
                                     className=""
-                                    src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject.getName()}/firstsection.webp`}
+                                    src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject.name}/firstsection.webp`}
                                 />
                             </Link>
                         </Card>

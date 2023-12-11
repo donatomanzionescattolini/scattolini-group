@@ -1,6 +1,6 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import Nexo from "../../../models/desarrollos/MiamiBeach/Nexo.tsx";
+import ProjectTemplate from "../ProjectTemplate.tsx";
+import Nexo from "../../../objects/desarrollos/MiamiBeach/Nexo.tsx";
 
 export default function NexoProject() {
-    return (<ProjectTemplate desarrollo={Nexo}/>);
+    return (<ProjectTemplate desarrollo={Nexo()}/>);
 }

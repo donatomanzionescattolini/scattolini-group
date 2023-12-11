@@ -1,7 +1,7 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import Ella from "../../../models/desarrollos/MiamiBeach/Ella.tsx";
+import ProjectTemplate from "../ProjectTemplate.tsx";
+import Ella from "../../../objects/desarrollos/MiamiBeach/Ella.tsx";
 
 export default function EllaProject() {
-    return (<ProjectTemplate desarrollo={Ella}/>);
+    return (<ProjectTemplate desarrollo={Ella()}/>);
 
 }

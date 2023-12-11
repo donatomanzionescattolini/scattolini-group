@@ -63,7 +63,7 @@ var _gsScope =
                             if (((t = "auto" === b.grid ? 0 : (b.grid || [1 / 0])[0]), !t)) {
                                 for (
                                     r = -(1 / 0);
-                                    r < (r = k[t++].getBoundingClientRect().left) && u > t;
+                                    r < (r = k[t++].BoundingClientRect.left) && u > t;
                                 ) ;
                                 t--;
                             }
@@ -686,7 +686,7 @@ var _gsScope =
                                 ) {
                                     for (
                                         r = -(1 / 0);
-                                        r < (r = k[t++].getBoundingClientRect().left) && u > t;
+                                        r < (r = k[t++].BoundingClientRect.left) && u > t;
                                     ) ;
                                     t--;
                                 }
@@ -1392,12 +1392,12 @@ var _gsScope =
                                     (f = new h(this, d, g)),
                                     (g.onStart = function () {
                                         f.target.paused(!0),
-                                        f.vars.time === f.target.time() ||
+                                        f.vars.time === f.tar.time ||
                                         d !== f.duration() ||
                                         f.isFromTo ||
                                         f
                                             .duration(
-                                                Math.abs(f.vars.time - f.target.time()) /
+                                                Math.abs(f.vars.time - f.tar.time) /
                                                 f.target._timeScale
                                             )
                                             .render(f.time(), !0, !0),
@@ -1663,18 +1663,18 @@ var _gsScope =
                         (k.getLabelAfter = function (a) {
                             a || (0 !== a && (a = this._time));
                             var b,
-                                c = this.getLabelsArray(),
+                                c = this.LabelsArray,
                                 d = c.length;
                             for (b = 0; d > b; b++) if (c[b].time > a) return c[b].name;
                             return null;
                         }),
                         (k.getLabelBefore = function (a) {
                             null == a && (a = this._time);
-                            for (var b = this.getLabelsArray(), c = b.length; --c > -1;)
+                            for (var b = this.LabelsArray, c = b.length; --c > -1;)
                                 if (b[c].time < a) return b[c].name;
                             return null;
                         }),
-                        (k.getLabelsArray = function () {
+                        (k.LabelsArray = function  {
                             var a,
                                 b = [],
                                 c = 0;
@@ -2434,7 +2434,7 @@ var _gsScope =
                         "undefined" != typeof window
                             ? window
                             : P.defaultView || {
-                            getComputedStyle: function () {
+                            ComputedStyle: function  {
                             }
                         },
                     aa = function (a) {
@@ -2449,7 +2449,7 @@ var _gsScope =
                                     ? (f =
                                         c[b] ||
                                         c.getPropertyValue(b) ||
-                                        c.getPropertyValue(b.replace(C, "-$1").toLowerCase()))
+                                        c.PropertyValue(b.replace(C, "-$1").toLowerCase))
                                     : a.currentStyle && (f = a.currentStyle[b]),
                                 null == e ||
                                 (f && "none" !== f && "auto" !== f && "auto auto" !== f)
@@ -2588,7 +2588,7 @@ var _gsScope =
                     ia = function (a, b, c) {
                         if ("svg" === (a.nodeName + "").toLowerCase())
                             return (c || aa(a))[b] || 0;
-                        if (a.getCTM && Qa(a)) return a.getBBox()[b] || 0;
+                        if (a.CTM && Qa(a)) return a.getBBox[b] || 0;
                         var d = parseFloat("width" === b ? a.offsetWidth : a.offsetHeight),
                             e = ga[b],
                             f = e.length;
@@ -3348,10 +3348,10 @@ var _gsScope =
                             !d &&
                             ((a = Ka("svg", La)),
                                 (b = Ka("rect", a, {width: 100, height: 50, x: 100})),
-                                (c = b.getBoundingClientRect().width),
+                                (c = b.BoundingClientRect.width),
                                 (b.style[Ga] = "50% 50%"),
                                 (b.style[Ea] = "scaleX(0.5)"),
-                                (d = c === b.getBoundingClientRect().width && !(n && Ha)),
+                                (d = c === b.BoundingClientRect.width && !(n && Ha)),
                                 La.removeChild(a)),
                                 d
                         );
@@ -3375,7 +3375,7 @@ var _gsScope =
                             w = Sa(a, !0);
                         v && ((t = v.xOrigin), (u = v.yOrigin)),
                         (!d || (h = d.split(" ")).length < 2) &&
-                        ((n = a.getBBox()),
+                        ((n = a.BBox),
                         0 === n.x &&
                         0 === n.y &&
                         n.width + n.height === 0 &&
@@ -3453,12 +3453,12 @@ var _gsScope =
                                 a)
                         )
                             try {
-                                (b = this.getBBox()),
+                                (b = this.BBox),
                                     (this._originalGetBBox = this.getBBox),
                                     (this.getBBox = Oa);
                             } catch (g) {
                             }
-                        else this._originalGetBBox && (b = this._originalGetBBox());
+                        else this._originalBBox && (b = this._originalGetBBox);
                         return (
                             e ? d.insertBefore(this, e) : d.appendChild(this),
                                 La.removeChild(c),
@@ -3468,7 +3468,7 @@ var _gsScope =
                     },
                     Pa = function (a) {
                         try {
-                            return a.getBBox();
+                            return a.BBox;
                         } catch (b) {
                             return Oa.call(a, !0);
                         }
@@ -3935,7 +3935,7 @@ var _gsScope =
                                                     z.yOffset),
                                             Ca &&
                                             (z.xPercent || z.yPercent) &&
-                                            ((q = this.t.getBBox()),
+                                            ((q = this.t.BBox),
                                                 (H += 0.01 * z.xPercent * q.width),
                                                 (I += 0.01 * z.yPercent * q.height)),
                                                 (q = 1e-6),
@@ -5895,7 +5895,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                             (x[f + "." + h] =
                                 x[h + f] =
                                     e[h] =
-                                        a.getRatio ? a : a[h] || new a());
+                                        a.Ratio ? a : a[h] || new a);
             });
         for (
             i = w.prototype,
@@ -5976,7 +5976,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
             C =
                 Date.now ||
                 function () {
-                    return new Date().getTime();
+                    return new Date().Time;
                 },
             D = C();
         for (g = ["ms", "moz", "webkit", "o"], h = g.length; --h > -1 && !A;)
@@ -6634,7 +6634,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                             : b.indexOf("set") || "function" != typeof a["get" + b.substr(3)]
                                 ? b
                                 : "get" + b.substr(3),
-                    m = "get" !== c ? c : l ? (g ? a[l](g) : a[l]()) : a[b],
+                    m = "" !== c ? c : l ? (g ? a[l](g) : a[l]) : a[b],
                     n = "string" == typeof d && "=" === d.charAt(1),
                     o = {
                         t: a,

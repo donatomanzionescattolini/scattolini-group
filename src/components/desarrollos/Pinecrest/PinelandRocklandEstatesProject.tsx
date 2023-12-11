@@ -1,12 +1,12 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import PinelandRocklandEstates from "../../../models/desarrollos/Pinecrest/PinelandRocklandEstates.tsx";
+import ProjectTemplate from "../ProjectTemplate.tsx";
+import PinelandRocklandEstates from "../../../objects/desarrollos/Pinecrest/PinelandRocklandEstates.tsx";
 
 
 export default function RocklandEstatesProject() {
     return (
         <ProjectTemplate
 
-            desarrollo={PinelandRocklandEstates}
+            desarrollo={PinelandRocklandEstates()}
         />
     );
 }

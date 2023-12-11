@@ -1,11 +1,11 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import PineParkVillas from "../../../models/desarrollos/Pinecrest/PineParkVillas.tsx";
+import ProjectTemplate from "../ProjectTemplate.tsx";
+import PineParkVillasObject from "../../../objects/desarrollos/Pinecrest/PineParkVillas.tsx";
 
 
 export default function PineParkVillasProject() {
     return (
         <ProjectTemplate
-            desarrollo={PineParkVillas}
+            desarrollo={PineParkVillasObject()}
         />
     );
 }

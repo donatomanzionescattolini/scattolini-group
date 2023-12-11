@@ -1,10 +1,13 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import BaccaratResidences from "../../../models/desarrollos/Brickell/BaccaratResidences.tsx";
+import ProjectTemplate from "../ProjectTemplate.tsx";
+
+
+import BaccaratResidences from "../../../objects/desarrollos/Brickell/BaccaratResidences.tsx";
 
 
 export default function BaccaratResidencesProject() {
+
     return (
-        <ProjectTemplate desarrollo={BaccaratResidences}/>);
+        <ProjectTemplate desarrollo={BaccaratResidences()}/>);
 }
 
 

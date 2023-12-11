@@ -1,11 +1,11 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import BentleyResidences from "../../../models/desarrollos/SunnyIsles/BentleyResidences.tsx";
+import ProjectTemplate from "../ProjectTemplate.tsx";
+import BentleyResidences from "../../../objects/desarrollos/SunnyIsles/BentleyResidences.tsx";
 
 
 export default function BentleyResidencesProject() {
     return (
         <ProjectTemplate
-            desarrollo={BentleyResidences}
+            desarrollo={BentleyResidences()}
         />
     );
 }

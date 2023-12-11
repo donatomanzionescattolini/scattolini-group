@@ -1,12 +1,12 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import StRegis from "../../../models/desarrollos/SunnyIsles/StRegis.tsx";
+import ProjectTemplate from "../ProjectTemplate.tsx";
+import StRegis from "../../../objects/desarrollos/SunnyIsles/StRegis.tsx";
 
 
 export function StRegisProject() {
     return (
         <ProjectTemplate
             //   banner
-            desarrollo={StRegis}
+            desarrollo={StRegis()}
         />
     );
 }

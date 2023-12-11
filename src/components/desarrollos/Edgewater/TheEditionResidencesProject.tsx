@@ -1,9 +1,9 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import TheEditionResidences from "../../../models/desarrollos/Edgewater/TheEditionResidences.tsx";
+import ProjectTemplate from "../ProjectTemplate.tsx";
+import TheEditionResidences from "../../../objects/desarrollos/Edgewater/TheEditionResidences.tsx";
 
 export function TheEditionResidencesProject() {
     return (
-        <ProjectTemplate desarrollo={TheEditionResidences}
+        <ProjectTemplate desarrollo={TheEditionResidences()}
         />
     );
 }

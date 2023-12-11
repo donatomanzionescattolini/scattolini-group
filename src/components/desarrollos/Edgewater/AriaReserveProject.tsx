@@ -1,10 +1,9 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import AriaReserve from "../../../models/desarrollos/Edgewater/AriaReserve.tsx";
-
+import ProjectTemplate from "../ProjectTemplate.tsx";
+import AriaReserve from "../../../objects/desarrollos/Edgewater/AriaReserve.tsx";
 
 export default function AriaReserveProject() {
     return (
         <ProjectTemplate
-            desarrollo={AriaReserve}/>
+            desarrollo={AriaReserve()}/>
     );
 }

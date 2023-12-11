@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 import {Carousel} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Areas from "../../models/areas/Areas.tsx";
-import {Area} from "../../models/areas/Area.tsx";
-import {Desarrollo} from "../../models/desarrollos/Desarrollo.tsx";
+import Areas from "../../objects/areas/Areas.tsx";
+import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import {MDBCarousel, MDBContainer} from "mdb-react-ui-kit";
+import {getDesarrollosForArea} from "../../objects/desarrollos/GetAllDesarrollos.ts";
+import {Area} from "../../models/areas/Area.tsx";
 
 export interface GalleryImage {
     src: string;
@@ -12,14 +13,17 @@ export interface GalleryImage {
 }
 
 interface PropsSlideshow {
-    areas: Area[];
+    areas: string[];
 }
 
 const SlideshowGallery = (props: PropsSlideshow) => {
     const [index, setIndex] = useState(0);
     const [areaObjects] = useState<Area[]>(
-        props.areas ? props.areas : Areas()
+        (props.areas ? props.areas : Areas()) as Area[]
     );
+
+
+    const [areaDesarrollos, setAreaDesarrollos] = useState<Desarrollo[]>([])
     const handleSelect = (selectedIndex: number) => {
         if (areaObjects[index]) return setIndex(selectedIndex);
         else return setIndex(0);
@@ -28,13 +32,14 @@ const SlideshowGallery = (props: PropsSlideshow) => {
     const [returnEls] = useState(() => {
         const temp: React.JSX.Element[] = new Array<React.JSX.Element>();
         areaObjects.forEach((areaObject: Area) => {
-            areaObject.getDesarrollos().forEach((x: Desarrollo, index: number) => {
+            setAreaDesarrollos(getDesarrollosForArea(areaObject));
+            areaDesarrollos.forEach((x: Desarrollo) => {
                 temp.push(
                     <Carousel.Item
                         key={index}
                         id={`second-carousel-${index}`}
                         style={{
-                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject.getName()}/${x.nombre}.webp`,
+                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject.name}/${x.nombre}.webp`,
                         }}
                     >
                         <Carousel.Caption>
@@ -49,7 +54,7 @@ const SlideshowGallery = (props: PropsSlideshow) => {
                             </h3>
                             <p className="lead font-weight-bold text-white">
                                 {areaObject
-                                    .getName()
+                                    .name
                                     .split("-")
                                     .map((n) => n.charAt(0).toUpperCase() + n.substring(1))
                                     .join(" ")}

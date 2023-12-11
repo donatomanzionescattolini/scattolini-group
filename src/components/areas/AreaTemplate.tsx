@@ -1,19 +1,24 @@
 import {Image} from "react-bootstrap";
 import {MDBCol, MDBRow} from "mdb-react-ui-kit";
-import {Area} from "../../models/areas/Area.tsx";
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
+
+import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
+import {Area} from "../../models/areas/Area.tsx";
+import {getDesarrollosForArea} from "../../objects/desarrollos/GetAllDesarrollos.ts";
 
 interface AreaProps {
     area: Area;
 }
 
 export default function AreaTemplate(props: AreaProps) {
-    const area = props.area;
-    const nombre = area.getName();
-    const titulo = area.getTitulo();
+    const [area] = useState(props.area);
+
+    const nombre = area.name;
+    const titulo = area.titulo;
     const images = [];
-    for (let i = 1; i <= area.getNumberOfImages(); i++) {
+    const [areaDesarrollos] = useState<Array<Desarrollo>>(getDesarrollosForArea(area));
+    for (let i = 1; i <= area.numberOfImages; i++) {
         images.push(<Image
             fluid
             rounded
@@ -36,7 +41,7 @@ export default function AreaTemplate(props: AreaProps) {
                     <h2 className="text-center text-white">{titulo}</h2>
                 </div>
                 <div className="container-fluid text-center">
-                    <h2 className="text-center mt-5">{area.getSlogan()}</h2>
+                    <h2 className="text-center mt-5">{area.slogan}</h2>
                     <hr className="hr hr-blurry w-50 mx-auto"/>
                 </div>
             </div>
@@ -45,7 +50,7 @@ export default function AreaTemplate(props: AreaProps) {
                     <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 ps-5 pe-5 pb-2">
 
 
-                        {area.getDescripcion().map((paragraph: string) => {
+                        {area.descripcion.map((paragraph: string) => {
                             return (<p className={"text-muted"}><small>{paragraph}<br/><br/></small></p>)
                         })}
 
@@ -70,20 +75,20 @@ export default function AreaTemplate(props: AreaProps) {
             </div>
             {/* <DividerFirstComponent /> */}
             <div className="propiedades">
-                {area.getDesarrollos().length > 0 &&
+                {areaDesarrollos.length > 0 &&
                     <div>
                         <h3 className="text-center">Propiedades en el Área</h3>
                     </div>
                 }
                 <br></br>
                 <MDBRow>
-                    {area.getDesarrollos().map(desarrollo => {
+                    {areaDesarrollos.map(desarrollo => {
                         return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
                             <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                                 <div
                                     className="propiedades-img p-0 m-0"
                                     style={{
-                                        background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.getName()}/${desarrollo.nombre}.webp')`,
+                                        background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
                                         backgroundSize: "cover",
                                     }}
                                 ></div>

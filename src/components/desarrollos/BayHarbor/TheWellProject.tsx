@@ -1,6 +1,6 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import TheWell from "../../../models/desarrollos/BayHarbor/TheWell.tsx";
+import ProjectTemplate from "../ProjectTemplate.tsx";
+import TheWell from "../../../objects/desarrollos/BayHarbor/TheWell.tsx";
 
 export default function TheWellProject() {
-    return (<ProjectTemplate desarrollo={TheWell}/>);
+    return (<ProjectTemplate desarrollo={TheWell()}/>);
 }

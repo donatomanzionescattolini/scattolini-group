@@ -1,6 +1,6 @@
 import AreaTemplate from "./AreaTemplate.tsx";
-import Pinecrest from "../../models/areas/Pinecrest.tsx";
+import Pinecrest from "../../objects/areas/Pinecrest.tsx";
 
 export default function PinecrestComponent() {
-    return <AreaTemplate area={Pinecrest}/>
+    return <AreaTemplate area={Pinecrest()}/>
 }

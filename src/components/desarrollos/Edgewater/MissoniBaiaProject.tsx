@@ -1,12 +1,12 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
-import MissoniBaia from "../../../models/desarrollos/Edgewater/MissoniBaia.tsx";
+import ProjectTemplate from "../ProjectTemplate.tsx";
+import MissoniBaia from "../../../objects/desarrollos/Edgewater/MissoniBaia.tsx";
 
 
 export default function MissoniBaiaProject() {
     return (
         <ProjectTemplate
 
-          desarrollo={MissoniBaia}
+            desarrollo={MissoniBaia()}
         />
     );
 }

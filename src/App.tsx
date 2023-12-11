@@ -1,5 +1,5 @@
 import "./App.scss";
-
+import 'vite/modulepreload-polyfill';
 import "bootstrap/dist/css/bootstrap.css";
 import AreasComponent from "./components/AreasComponent.tsx";
 import "material-components-web/dist/material-components-web.css";

@@ -1,8 +1,8 @@
-import ProjectTemplate from "../../../models/desarrollos/ProjectTemplate.tsx";
+import ProjectTemplate from "../ProjectTemplate.tsx";
 
-import lofty from "../../../models/desarrollos/Brickell/Lofty.tsx";
+import lofty from "../../../objects/desarrollos/Brickell/Lofty.tsx";
 
 
 export default function LoftyProject() {
-    return (<ProjectTemplate desarrollo={lofty}/>);
+    return (<ProjectTemplate desarrollo={lofty()}/>);
 }

@@ -1,6 +1,6 @@
 import AreaTemplate from "./AreaTemplate.tsx";
-import SunnyIsles from "../../models/areas/SunnyIsles.tsx";
+import SunnyIsles from "../../objects/areas/SunnyIsles.tsx";
 
 export default function SunnyIslesComponent() {
-    return <AreaTemplate area={SunnyIsles}/>
+    return <AreaTemplate area={SunnyIsles()}/>
 }

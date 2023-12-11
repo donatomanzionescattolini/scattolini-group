@@ -1,4 +1,4 @@
-import {Desarrollo} from "./Desarrollo.tsx";
+import Desarrollo from "./Desarrollo.tsx";
 
 export interface caracteristicas {
     edificio: React.ReactNode;
