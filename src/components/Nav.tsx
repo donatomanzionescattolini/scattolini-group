@@ -46,14 +46,14 @@ const Nav = () => {
         return (
 
 
-            <MDBDropdownMenu className="responsive">
+            <MDBDropdownMenu className="responsive p-2">
                 <MDBRow around className={"w-responsive  flex-row-reverse"}style={{minWidth:400}}>
                     <MDBCol md={6}>
                         {leftColumn.map((area) => {
 
                             return (<>
-                                    <MDBDropdownItem header className={"list-group-item"}style={{textIndent:15}}>{area.titulo}</MDBDropdownItem>
-                            {[...getDesarrollosForArea(area)].map(des=>
+                                    <MDBDropdownItem header className={"list-group-item "}style={{textIndent:15,fontVariant:"small-caps"}}>{area.titulo}</MDBDropdownItem>
+                                    {[...getDesarrollosForArea(area)].map(des=>
                             <MDBDropdownItem
                                 link
                                 className="dropdown-item"
@@ -66,11 +66,11 @@ const Nav = () => {
                         })}</MDBCol>
                     <MDBCol md={6}>
                         {rightColumn.map((area) =>  {return (<>
-                                <MDBDropdownItem header className={"list-group-item"}style={{textIndent:15}}>{area.titulo}</MDBDropdownItem>                    {[...getDesarrollosForArea(area)].map(des=>
+                                <MDBDropdownItem header className={"list-group-item "}style={{textIndent:15,fontVariant:"small-caps"}}>{area.titulo}</MDBDropdownItem>                    {[...getDesarrollosForArea(area)].map(des=>
                         <MDBDropdownItem
                             link
                             className="dropdown-item"
-                            href={`/areas/${des.nombre}/`}
+                            href={`/desarrollos/${des.nombre}/`}
 
                         >{des.titulo}</MDBDropdownItem>
                     )}
