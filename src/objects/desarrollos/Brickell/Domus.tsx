@@ -70,15 +70,9 @@ export default function Domus() {
     ];
     Domus.banner = true;
     Domus.video =
-        <iframe
-            width={600}
-            height={400}
-            src="https://www.youtube.com/embed/M_9_sCBNLDQ?si=zQ87OlHY7rGusVBK?autoplay=true"
-            title="Domus Brickell Park video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            className="mx-auto d-flex flex-row justify-content-center align-items-center"
-            allowFullScreen
-        ></iframe>
+        <iframe id="ytplayer" width="720" height="405"
+                src="https://www.youtube.com/embed/M_9_sCBNLDQ?autoplay=1&controls=0"
+                frameBorder={0} allowFullScreen/>
     ;
     Domus.titulo = "Domus FLATS";
     Domus.subtitulo = "";

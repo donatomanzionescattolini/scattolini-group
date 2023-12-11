@@ -127,12 +127,12 @@ export default function Origin() {
         ),
     };
     OriginObject.introduccion = [
-        // "OriginObject es un edificio boutique elegante que combina el inigualable estilo de vida de Miami, fantásticas amenidades y planos de gran tamaño. A tan solo pasos de las blancas playas de Miami y las reconocidas tiendas Bal Harbour, OriginObject es un paraíso urbano cerca de cada comodidad de la ciudad. Una exclusiva colección de 27 residencias costeras diseñadas para la familia moderna, que evocan sofisticación y bienestar",
+        // "Origin es un edificio boutique elegante que combina el inigualable estilo de vida de Miami, fantásticas amenidades y planos de gran tamaño. A tan solo pasos de las blancas playas de Miami y las reconocidas tiendas Bal Harbour, Origin es un paraíso urbano cerca de cada comodidad de la ciudad. Una exclusiva colección de 27 residencias costeras diseñadas para la familia moderna, que evocan sofisticación y bienestar",
         "Una exquisita colección de 27 residencias de lujo de edición limitada frente al mar, en colaboración con Artefacto, los proveedores de la sofisticada vida del Sur de la Florida",
         "Este elegante edificio residencial boutique personifica lo último en estilo de vida de Miami, seductoras vistas y amplios planos de planta. A pocos pasos de las prístinas playas de Miami y de las mundialmente conocidas tiendas de Bal Harbour, ORIGIN es lo último en vida urbana isleña, a la vez que se encuentra a pocos pasos de todas las comodidades de la vida en la ciudad",
         "Artefacto decodifica un estilo de vida que goza de gran prestigio entre los grandes nombres de la arquitectura y la decoración, creando el epítome de la vida cálida y contemporánea.",
     ];
-    OriginObject.titulo = "OriginObject Residences";
+    OriginObject.titulo = "Origin Residences";
     OriginObject.subtitulo = "Sofisticada VidaResidences Isleña";
     OriginObject.numberOfImages = 52;
     OriginObject.area = BayHarbor();

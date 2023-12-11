@@ -24,25 +24,39 @@ export default function LaMaré() {
                     <dt>Fecha Estimada de Finalización</dt>
                     <dd>2026</dd>
                 </dl>
+                <ul>
+                    <li>Hermosa costa ajardinada frente a la bahía</li>
+                    <li>Grandes terrazas con paredes de cristal perfectas para el entretenimiento</li>
+                    <li>Garaje de estacionamiento seguro con amplio estacionamiento</li>
+                    <li>Acogedor vestíbulo de entrada y salón con portero las 24 horas</li>
+                    <li>Cómodas trasteras privadas para cada residencia</li>
+                    <li>8 pisos con 33 residencias amplias, aireadas y llenas de luz, muchas de ellas con vistas a la bahía</li>
+                    <li>Distribuciones de planos de planta de 2 a 4 dormitorios que van desde 1,567 a más de 4,200 pies cuadrados.</li>
+                    <li>Muelles para botes disponibles para residents</li>
+                </ul>
             </>
         ),
         residencias: (
             <>
                 <ul>
-                    <li> Planos de planta espaciosos</li>
-                    <li>Techos de 10 pies</li>
-                    <li>Elegantes gabinetes de cocina</li>
-                    <li>Electrodomésticos de cocina de acero inoxidable</li>
+                    <li>Elegantes y grandes alturas de techo de 9'2" a 10'2" en residencias selectas</li>
+                    <li>Los ascensores privados llevan a los residentes directamente a sus hogares con un sistema de cerradura con llave</li>
+                    <li>Cocinas Poliform personalizadas con encimeras de piedra con un conjunto de electrodomésticos Miele de primera línea, que incluye sistema de café y nevera para vinos</li>
+                    <li>Elegantes accesorios italianos en cocinas y baños de by Antonio Lupi</li>
+                    <li>Vistas panorámicas de la bahía a través de ventanas de piso a techo de 9 pies</li>
+                    <li>2 amplios áticos, cada uno con piscinas privadas en la azotea</li>
+                    <li>Ducha doble y bañera profunda en los baños principales</li>
                 </ul>
             </>
         ),
         amenidades: (
             <>
                 <ul>
-                    <li>Piscina</li>
-                    <li>Gimnasio</li>
-                    <li>Exuberante paisaje</li>
-                    <li>Salón</li>
+                    <li>Espacio al aire libre frente a la bahía con paisajismo, muelles para botes y áreas de descanso</li>
+                    <li>Instalaciones de spa con vapor y sauna</li>
+                    <li>Bar en la azotea y cocina de verano</li>
+                    <li>Gimnasio de última generación</li>
+                    <li>Terraza ajardinada de la piscina en la azotea tipo centro turístico con piscina, jacuzzi, tumbonas y tumbonas</li>
                 </ul>
             </>
         ),
@@ -52,7 +66,7 @@ export default function LaMaré() {
     ];
     LaMaréObject.titulo = "La Maré";
     LaMaréObject.subtitulo = "Regency";
-    LaMaréObject.numberOfImages = 36;
+    LaMaréObject.numberOfImages = 24;
     LaMaréObject.banner = true;
 
     return LaMaréObject;

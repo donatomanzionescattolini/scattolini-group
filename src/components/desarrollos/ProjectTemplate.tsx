@@ -164,24 +164,24 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             </section>
             <div className="skew-cc"></div>
             <section className="white-block">
-                {typeof video !== "string" ? (
+                {(typeof video !== "string" || !video) ? (
                     video
                 ) : (
                     <video
                         width="auto"
                         height="500"
-                        controls={true}
-                        autoPlay={true}
+                        controls
+                        autoPlay
                         autoFocus={true}
                         className={
-                            "autoplay controls mx-auto my-0 p-0 d-flex flex-row justify-content-center"
+                            "mx-auto my-0 p-0 d-flex flex-row justify-content-center"
                         }
                     >
                         {video}
                         <source
                             width={700}
                             height={500}
-                            src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4?autoplay=1&controls=0`}
+                            src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}
                             type="video/mp4"
                             className="d-flex flex-row justify-content-center align-items-center"
                         />

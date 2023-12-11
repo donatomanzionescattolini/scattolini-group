@@ -951,11 +951,7 @@ div.react-pdf__Page .annotationLayer {
   color: rgb(130, 114, 89);
 }
 
-img {
-  justify-content: center;
-  max-width: 100%;
-  max-height: 100%;
-}
+
 
 #asociados-row div {
   height: 250px !Important;
@@ -1191,4 +1187,10 @@ video {
 }
 #panel1a-header > h2 > button,#panel3a-header > h2:nth-child(1) > button:nth-child(1),#panel2a-header > h2:nth-child(1) > button:nth-child(1) {
   background:$background!important;
+}
+
+img {
+  justify-content: center;
+  max-width: 100%!important;
+  max-height: 100%!important;
 }
