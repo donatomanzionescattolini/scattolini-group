@@ -42,11 +42,11 @@ button {
 
 @media screen and (max-width: 760px) {
   .floating-element {
-    width: 20vw !important;
-    left: auto !important;
-    right: auto !important;
-
+    width: 84vw !important;
+    left: 8vw !important;
+    right: 8vw !important;
+    height: auto;
+    top: 3vh;
+    bottom: auto;
   }
 }
-
-

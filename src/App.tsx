@@ -31,7 +31,7 @@ import CasaBellaProject from "./components/desarrollos/Downtown/CasaBellaProject
 import WaldorfAstoriaProject from "./components/desarrollos/Downtown/WaldorfAstoriaProject";
 import ShomaBayProject from "./components/desarrollos/NorthBayVillage/ShomaBayProject";
 import OraProject from "./components/desarrollos/Brickell/OraProject";
-import BaccaratResidencesProject from "./components/desarrollos/Brickell/BaccaratResidencesProject.tsx";
+import BaccaratResidencesComponent from "./components/desarrollos/Brickell/BaccaratResidencesComponent.tsx";
 import FourteenRiverDistrict from "./components/desarrollos/Brickell/FourteenRiverDistrictProject.tsx";
 import DomusProject from "./components/desarrollos/Brickell/DomusProject";
 import ManzioneProperties from "./components/aliados/ManzioneProperties";
@@ -155,7 +155,7 @@ export default function App() {
                     path="/desarrollos/1428-brickell"
                 />
                 <Route
-                    element={<BaccaratResidencesProject/>}
+                    element={<BaccaratResidencesComponent/>}
                     path="/desarrollos/baccarat"
                 />
                 <Route element={<TheWellProject/>} path={"/desarrollos/the-well"}/>
