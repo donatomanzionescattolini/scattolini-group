@@ -2,10 +2,10 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
 export default function Lofty() {
-    const LoftyObject = new Desarrollo();
-    LoftyObject.nombre = "lofty";
-
-    LoftyObject.caracteristicas = {
+    const Lofty = new Desarrollo();
+    Lofty.nombre = "lofty";
+    Lofty.titulo = "Lofty";
+    Lofty.caracteristicas = {
         residencias: (
             <ul>
                 <br></br>
@@ -145,16 +145,16 @@ export default function Lofty() {
             </>
         ),
     };
-    LoftyObject.introduccion = [
-        "LoftyObject Residences es un elegante condominio de 43 pisos que presenta un nuevo estándar de vida cosmopolita en BrickellComponent. Esta nueva torre residencial cuenta con interiores y vistas espectaculares, con el valor añadido de permitir a los propietarios hacer alquileres a corto plazo. Fue diseñado por la firma de fama mundial, Arquitectonica. La ubicación perfecta de LoftyObject Residences BrickellComponent permite a los residentes vivir a solo minutos de distancia de varias atracciones culturales, artes, restaurantes, tiendas de lujo, parques y mucho más.",
+    Lofty.introduccion = [
+        "Lofty Residences es un elegante condominio de 43 pisos que presenta un nuevo estándar de vida cosmopolita en Brickell. Esta nueva torre residencial cuenta con interiores y vistas espectaculares, con el valor añadido de permitir a los propietarios hacer alquileres a corto plazo. Fue diseñado por la firma de fama mundial, Arquitectonica. La ubicación perfecta de Lofty Residences Brickell permite a los residentes vivir a solo minutos de distancia de varias atracciones culturales, artes, restaurantes, tiendas de lujo, parques y mucho más.",
     ];
 
-    LoftyObject.titulo = "LoftyObject Residences BrickellComponent";
-    LoftyObject.subtitulo = "Un Nuevo Estándar de Vida Cosmopolita en BrickellComponent";
+    Lofty.titulo = "Lofty Residences Brickell";
+    Lofty.subtitulo = "Un Nuevo Estándar de Vida Cosmopolita en Brickell";
 
 
-    LoftyObject.numberOfImages = 55;
-    LoftyObject.video = <iframe
+    Lofty.numberOfImages = 55;
+    Lofty.video = <iframe
         style={{margin: "auto"}}
         width="700"
         height="394"
@@ -164,9 +164,9 @@ export default function Lofty() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
     ></iframe>;
-    LoftyObject.banner = true;
-    LoftyObject.area = Brickell();
+    Lofty.banner = true;
+    Lofty.area = Brickell();
 
 
-    return LoftyObject;
+    return Lofty;
 }

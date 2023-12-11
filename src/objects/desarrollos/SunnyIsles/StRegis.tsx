@@ -7,10 +7,10 @@ export default function StRegis() {
 
     StRegisObject.numberOfImages = 52;
     StRegisObject.nombre = "st-regis";
-    StRegisObject.titulo = "St. Regis® BrickellComponent";
+    StRegisObject.titulo = "St. Regis® ";
     StRegisObject.subtitulo = "Vivir exquisito es vivir extraordinario";
     StRegisObject.introduccion = [
-        "Situado a lo largo de la hermosa costa de South BrickellComponent con exquisitas vistas frente a la bahía, The St. Regis Residences, Miami personifica la vida elegante. Refleja las sensibilidades de aquellos que son impulsados por el conocimiento, exigen excelencia, respetan la tradición y valoran la individualidad por encima de todo.",
+        "Situado a lo largo de la hermosa costa de South  con exquisitas vistas frente a la bahía, The St. Regis Residences, Miami personifica la vida elegante. Refleja las sensibilidades de aquellos que son impulsados por el conocimiento, exigen excelencia, respetan la tradición y valoran la individualidad por encima de todo.",
         "The St. Regis Residences, Miami representa un futuro impulsado por un pasado histórico. Un lugar donde las nuevas generaciones crearán una vida de momentos legendarios, en hogares únicos para personas que perciben sus legados personales innatamente entrelazados con la rica herencia de Miami.",
         "Desarrollado por Grupo Relacionado e Integra Investments, St. Regis Residences ofrece un diseño majestuoso de Robert AM Stern Architects que presenta interiores exclusivos de Rockwell Group y paisajismo de Enzo Enea Group.",
     ];
@@ -19,7 +19,7 @@ export default function StRegis() {
     StRegisObject.caracteristicas = {
         edificio: (
             <p>
-                St. Regis® BrickellComponent se encuentra dentro de una red de conexiones de
+                St. Regis®  se encuentra dentro de una red de conexiones de
                 transporte cercanas, lo que brinda fácil acceso al Aeropuerto
                 Internacional de Miami, el Puerto de Miami, el Distrito de las Artes
                 de Wynwood, el Distrito de Diseño, los teatros y museos
@@ -31,7 +31,7 @@ export default function StRegis() {
             <div>
                 <p>
                     Una sola torre de 48 pisos que alberga 150 residencias, incluidos
-                    penthouses y sky villas. St. Regis® BrickellComponent es una colección de
+                    penthouses y sky villas. St. Regis®  es una colección de
                     casas de 2 a 7 habitaciones que miden entre 2,616 y 7,391 pies
                     cuadrados. Pie. Con techos de 10 pies, tecnología inteligente
                     integrada y tocador en cada unidad. Este edificio ofrece mucho
