@@ -25,12 +25,12 @@ const SlideshowGallery = (props: PropsSlideshow) => {
         if (areaObjects[index]) return setIndex(selectedIndex);
         else return setIndex(0);
     };
-    const [areaDesarrollos, setAreaDesarrollos] = useState<Array<Desarrollo>>([]);
+    const [areaDesarrollos, setAreaDesarrollos] = useState<Set<Desarrollo>>(new Set());
     const [returnEls] = useState(() => {
         const temp: React.JSX.Element[] = new Array<React.JSX.Element>();
         areaObjects.forEach((areaObject: Area) => {
             setAreaDesarrollos(getDesarrollosForArea(areaObject));
-            areaDesarrollos.forEach((x: Desarrollo, index: number) => {
+            [...areaDesarrollos].map((x: Desarrollo, index: number) => {
                 temp.push(
                     <Carousel.Item
                         key={index}

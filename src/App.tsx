@@ -12,7 +12,7 @@ import HomesteadComponent from "./components/areas/HomesteadComponent.tsx";
 import DowntownComponent from "./components/areas/./DowntownComponent.tsx";
 import BayHarborComponent from "./components/areas/BayHarborComponent.tsx";
 import CoralGablesComponent from "./components/areas/CoralGablesComponent.tsx";
-import CoconutGrove from "./components/areas/CoconutGrove";
+import CoconutGroveComponent from "./components/areas/CoconutGroveComponent.tsx";
 import NorthBayVillageComponent from "./components/areas/NorthBayVillageComponent.tsx";
 import DoralComponent from "./components/areas/DoralComponent.tsx";
 import PinecrestComponent from "./components/areas/PinecrestComponent.tsx";
@@ -66,6 +66,8 @@ import React, {useState} from "react";
 import FloatingContactFormComponent from "./components/FloatingContactFormComponent.tsx";
 import {FloatingWhatsApp} from "react-floating-whatsapp";
 import TheWellProject from "./components/desarrollos/BayHarbor/TheWellProject.tsx";
+import AlbaComponent from "./components/desarrollos/Homestead/AlbaComponent.tsx";
+import PineRocklandEstatesProject from "./components/desarrollos/Pinecrest/PinelandRocklandEstatesProject.tsx";
 
 export default function App() {
     // State variable to store the visibility of the floating element
@@ -119,7 +121,7 @@ export default function App() {
                     element={<CoralGablesComponent/>}
                     path="/areas/coral-gables"
                 />
-                <Route element={<CoconutGrove/>} path="/areas/coconut-grove"/>
+                <Route element={<CoconutGroveComponent/>} path="/areas/coconut-grove"/>
                 <Route element={<DoralComponent/>} path="/areas/doral"></Route>
                 <Route
                     element={<PinecrestComponent/>}
@@ -249,6 +251,7 @@ export default function App() {
                     element={<PineParkVillasProject/>}
                     path={"/desarrollos/pine-park-villas"}
                 />
+                <Route element={<PineRocklandEstatesProject/>} path={"/desarrollos/pine-rockland-estates"}/>
                 <Route element={<CentrisProject/>} path={"/desarrollos/centris"}/>
 
                 <Route
@@ -256,6 +259,7 @@ export default function App() {
                     path={"/desarrollos/la-baia"}
                 />
                 <Route Component={LaMaréProject} path={"/desarrollos/la-maré"}/>
+                <Route Component={AlbaComponent} path={"/desarrollos/alba"}/>
             </Routes>
             <FloatingWhatsApp phoneNumber={"13056139338"} chatMessage={"¿Cómo te puedo ayudar hoy?"}
                               statusMessage={"Respuestas dentro de las primeras 24 horas"}

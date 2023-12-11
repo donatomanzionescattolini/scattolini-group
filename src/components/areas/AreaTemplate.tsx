@@ -12,7 +12,7 @@ interface AreaProps {
 }
 
 export default function AreaTemplate(props: AreaProps) {
-    const [area] = useState(props.area);
+   const [area] = useState(props.area);
 
     const nombre = area.name;
     const titulo = area.titulo;
@@ -20,7 +20,7 @@ export default function AreaTemplate(props: AreaProps) {
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    const [areaDesarrollos] = useState<Array<Desarrollo>>(getDesarrollosForArea(area));
+    const [areaDesarrollos] = useState<Set<Desarrollo>>(getDesarrollosForArea(area));
     for (let i = 1; i <= area.numberOfImages; i++) {
         images.push(<Image
             fluid
@@ -78,14 +78,14 @@ export default function AreaTemplate(props: AreaProps) {
             </div>
             {/* <DividerFirstComponent /> */}
             <div className="propiedades">
-                {areaDesarrollos.length > 0 &&
+                {areaDesarrollos.size > 0 &&
                     <div>
                         <h3 className="text-center">Propiedades en el Área</h3>
                     </div>
                 }
                 <br></br>
                 <MDBRow>
-                    {areaDesarrollos.map(desarrollo => {
+                    {[...areaDesarrollos.values()].map(desarrollo => {
                         return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
                             <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                                 <div

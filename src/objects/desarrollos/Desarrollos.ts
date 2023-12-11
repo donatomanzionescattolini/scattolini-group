@@ -1,4 +1,3 @@
-import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import Alba from "./Homestead/Alba.tsx";
 import Nexo from "./MiamiBeach/Nexo.tsx";
 import Ella from "./MiamiBeach/Ella.tsx";
@@ -7,7 +6,7 @@ import OnePark from "./MiamiBeach/OnePark.tsx";
 import SeventyTwoPark from "./MiamiBeach/SeventyTwoPark.tsx";
 import ShomaBay from "./NorthBayVillage/ShomaBay.tsx";
 import Centris from "./Pinecrest/Centris.tsx";
-import PinelandRocklandEstates from "./Pinecrest/PinelandRocklandEstates.tsx";
+import PineRocklandEstates from "./Pinecrest/PineRocklandEstates.tsx";
 import PineParkVillas from "./Pinecrest/PineParkVillas.tsx";
 import BentleyResidences from "./SunnyIsles/BentleyResidences.tsx";
 import StRegis from "./SunnyIsles/StRegis.tsx";
@@ -56,40 +55,41 @@ import SunnyIsles from "../areas/SunnyIsles.tsx";
 import CoralGables from "../areas/CoralGables.tsx";
 import {Area} from "../../models/areas/Area.tsx";
 import Areas from "../areas/Areas.tsx";
+import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 
 interface desarrolloMapItem {
     area: string;
-    des: Desarrollo[]
+    des: Set<Desarrollo>
+
 }
 
 export const desarrolloMap: desarrolloMapItem[] = new Array<desarrolloMapItem>();
 
-desarrolloMap.push({area: Brickell().name.trim().toLowerCase(), des: [BaccaratResidences(), Domus(), FourteenRiverDistrict(), FourteenTwentyEight(), Lofty(), Ora]});
+desarrolloMap.push({area: Brickell().name.trim().toLowerCase(), des: new Set([BaccaratResidences(), Domus(), FourteenRiverDistrict(), FourteenTwentyEight(), Lofty(), Ora])});
 
-desarrolloMap.push({area: BayHarbor().name.trim().toLowerCase(), des: [LaMaré(), LaBaia(), Origin(), TheWell()]});
-desarrolloMap.push({area: CoconutGrove().name.trim().toLowerCase(), des: [Vita()]});
-desarrolloMap.push({area: Doral().name.trim().toLowerCase(), des: []});
-desarrolloMap.push({area: Downtown().name.trim().toLowerCase(), des: [AstonMartin(), CasaBella(), Cipriani(), TheElser(), W11(), WaldorfAstoria()]});
-desarrolloMap.push({area: Edgewater().name.trim().toLowerCase(), des: [AriaReserve(), MissoniBaia(), TheEditionResidences(), TheVilla(), Vida()]});
-desarrolloMap.push({area: Homestead().name.trim().toLowerCase(), des: [Alba(), Oasis(), ParcVillas(), ParkSquare(), SalernoEstates(), SedonaEstates(), SilverlandEstates(), TerraSol()]});
-desarrolloMap.push({area: MiamiBeach().name.trim().toLowerCase(), des: [Ella(), FivePark(), Nexo(), OnePark(), SeventyTwoPark()]});
-desarrolloMap.push({area: NorthBayVillage().name.trim().toLowerCase(), des: [ShomaBay()]});
-desarrolloMap.push({area: Pinecrest().name.trim().toLowerCase(), des: [Centris(), PinelandRocklandEstates(), PineParkVillas()]});
-desarrolloMap.push({area: SunnyIsles().name.trim().toLowerCase(), des: [BentleyResidences(), StRegis(), TheMansionsAtAcqualina()]});
+desarrolloMap.push({area: BayHarbor().name.trim().toLowerCase(), des: new Set([LaMaré(), LaBaia(), Origin(), TheWell()])});
+desarrolloMap.push({area: CoconutGrove().name.trim().toLowerCase(), des: new Set([Vita()])});
+desarrolloMap.push({area: Doral().name.trim().toLowerCase(), des: new Set([])});
+desarrolloMap.push({area: Downtown().name.trim().toLowerCase(), des: new Set([AstonMartin(), CasaBella(), Cipriani(), TheElser(), W11(), WaldorfAstoria()])});
+desarrolloMap.push({area: Edgewater().name.trim().toLowerCase(), des: new Set([AriaReserve(), MissoniBaia(), TheEditionResidences(), TheVilla(), Vida()])});
+desarrolloMap.push({area: Homestead().name.trim().toLowerCase(), des: new Set([Alba(), Oasis(), ParcVillas(), ParkSquare(), SalernoEstates(), SedonaEstates(), SilverlandEstates(), TerraSol()])});
+desarrolloMap.push({area: MiamiBeach().name.trim().toLowerCase(), des: new Set([Ella(), FivePark(), Nexo(), OnePark(), SeventyTwoPark()])});
+desarrolloMap.push({area: NorthBayVillage().name.trim().toLowerCase(), des: new Set([ShomaBay()])});
+desarrolloMap.push({area: Pinecrest().name.trim().toLowerCase(), des: new Set([Centris(), PineRocklandEstates(), PineParkVillas()])});
+desarrolloMap.push({area: SunnyIsles().name.trim().toLowerCase(), des: new Set([BentleyResidences(), StRegis(), TheMansionsAtAcqualina()])});
 
-desarrolloMap.push({area: CoralGables().name.trim().toLowerCase(), des: [TheAvenue()]});
+desarrolloMap.push({area: CoralGables().name.trim().toLowerCase(), des: new Set([TheAvenue()])});
 desarrolloMap.map(entry => {
-    entry.des = entry.des.map(desar => {
+    entry.des = new Set([...entry.des].map(desar => {
             desar.area = Areas().find(a => a.name === entry.area);
             return desar;
         }
-    );
+    ));
     return entry;
 });
 
-export function getDesarrollosForArea(area: Area): Desarrollo[] {
-
-    return desarrolloMap.find(mapItem => mapItem.area.toLowerCase().trim() === area.name.trim().toLowerCase()).des;
+export function getDesarrollosForArea(area: Area): Set<Desarrollo> {
+    return desarrolloMap.filter(entry => entry.area.toLowerCase().trim().includes(area.name.trim().toLowerCase()))[0].des;
 
 
 }

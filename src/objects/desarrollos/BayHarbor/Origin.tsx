@@ -1,4 +1,5 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import BayHarbor from "../../areas/BayHarbor.tsx";
 
 export default function Origin() {
     const OriginObject = new Desarrollo();
@@ -134,6 +135,6 @@ export default function Origin() {
     OriginObject.titulo = "OriginObject Residences";
     OriginObject.subtitulo = "Sofisticada Vida Isleña";
     OriginObject.numberOfImages = 52;
-
+    OriginObject.area = BayHarbor();
     return OriginObject;
 }

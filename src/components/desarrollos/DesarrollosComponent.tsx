@@ -20,11 +20,11 @@ export default function DesarrollosTodos() {
             <MDBRow className="">
                 {Areas().map((area: Area) => {
                     const desarr = getDesarrollosForArea(area);
-                    if (!desarr || desarr.length == 0) {
+                    if (!desarr || desarr.size == 0) {
                         return <MDBCol></MDBCol>;
                     } else {
                         return (<>
-                            {desarr.map((desarrollo: Desarrollo) => {
+                            {[...desarr].map((desarrollo: Desarrollo) => {
                                 return (<MDBCol xs={12} sm={12} md={4} lg={4} xl={4}>
                                     <Link to={`/desarrollos/${desarrollo.nombre}`}>
                                         <div

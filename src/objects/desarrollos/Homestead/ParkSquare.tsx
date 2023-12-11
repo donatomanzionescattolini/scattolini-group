@@ -2,8 +2,8 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
 export default function ParkSquare() {
     const ParkSquareObject = new Desarrollo();
-    ParkSquareObject.nombre = "parc-square";
-    ParkSquareObject.titulo = "";
+    ParkSquareObject.nombre = "park-square";
+    ParkSquareObject.titulo = "Park Square";
     ParkSquareObject.subtitulo = "";
     ParkSquareObject.caracteristicas = {edificio: <></>, residencias: <></>, amenidades: <></>};
 

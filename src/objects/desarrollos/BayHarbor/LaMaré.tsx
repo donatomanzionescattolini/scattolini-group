@@ -1,7 +1,8 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import BayHarbor from "../../areas/BayHarbor.tsx";
 
 export default function LaMaré() {
-    const LaMaréObject = new Desarrollo();
+    const LaMaréObject = new Desarrollo(BayHarbor());
 
     LaMaréObject.nombre = "la-maré";
 

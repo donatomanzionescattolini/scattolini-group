@@ -4,7 +4,7 @@ import Edgewater from "../../areas/Edgewater.tsx";
 export default function AriaReserve() {
 
     const AriaReserveObject = new Desarrollo();
-    AriaReserveObject.nombre = " aria-reserve";
+    AriaReserveObject.nombre = "aria-reserve";
     AriaReserveObject.caracteristicas = {
         edificio: (
             <>

@@ -1,6 +1,8 @@
 import AreaTemplate from "./AreaTemplate.tsx";
 import BayHarbor from "../../objects/areas/BayHarbor.tsx";
 
-export default function BayHarborComponent() {
-    return <AreaTemplate area={BayHarbor()}/>
+import {useLayoutEffect} from "react";export default function BayHarborComponent() {
+ useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);    return <AreaTemplate area={BayHarbor()}/>
 }

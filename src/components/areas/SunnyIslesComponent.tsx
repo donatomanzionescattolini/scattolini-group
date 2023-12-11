@@ -1,6 +1,9 @@
 import AreaTemplate from "./AreaTemplate.tsx";
 import SunnyIsles from "../../objects/areas/SunnyIsles.tsx";
 
-export default function SunnyIslesComponent() {
-    return <AreaTemplate area={SunnyIsles()}/>
+import {useLayoutEffect} from "react";export default function SunnyIslesComponent() {
+ useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+ return <AreaTemplate area={SunnyIsles()}/>
 }

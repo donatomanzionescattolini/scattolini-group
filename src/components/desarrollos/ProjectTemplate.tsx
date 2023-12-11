@@ -8,11 +8,6 @@ import {JSX, ReactNode, useLayoutEffect, useState} from "react";
 import {
     MDBAccordion,
     MDBAccordionItem,
-    MDBCard,
-    MDBCardHeader,
-    MDBCardImage,
-    MDBCardSubTitle,
-    MDBCardTitle,
     MDBCol,
     MDBContainer,
     MDBRow,
@@ -27,13 +22,12 @@ import {caracteristicas, ProjectParams} from "../../models/desarrollos/ProjectPa
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
 import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
-import Areas from "../../objects/areas/Areas.tsx";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
 
     const params = paramz.desarrollo;
     const [nombre] = useState(params.nombre);
-    const [area] = useState(Areas().find(a => a.name === params.area.name));
+    const [area] = useState(params.area);
     const [desarrollosArea] = useState(getDesarrollosForArea(area));
     const [numberOfImages] = useState(params.numberOfImages);
     const [tabVisible, setTabVisible] = useState("brochure");
@@ -142,8 +136,10 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                         </>
                     )}
                 </header>
+
             </MDBContainer>
             <div className="skew-c"></div>
+
             <section className="colour-block">
                 <MDBContainer>
                     {
@@ -430,20 +426,37 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                     <hr className="hr hr-blurry w-50 mx-auto"/>
 
                     <br></br>
-                    <MDBRow className="d-flex flex-row flex-wrap justify-content-between">
+                    {/*<MDBRow className="d-flex flex-row flex-wrap justify-content-between mt-3 mx-auto">*/}
 
-                        {desarrollosArea.map((des) => {
+                    {/*    {[...desarrollosArea].map((des) => {*/}
+                    {/*        return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>*/}
+                    {/*            <MDBCard>*/}
+                    {/*                <MDBCardHeader><MDBCardTitle>{des.titulo}</MDBCardTitle></MDBCardHeader>*/}
+                    {/*                <MDBCardSubTitle>{des.subtitulo}</MDBCardSubTitle>*/}
+                    {/*                <MDBCardImage className="img-thumbnail img-fluid"*/}
+                    {/*                              src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${des.nombre}.webp)`}></MDBCardImage>*/}
+
+                    {/*            </MDBCard>*/}
+                    {/*        </MDBCol>);*/}
+                    {/*    })}*/}
+
+                    {/*</MDBRow>*/}
+                    <MDBRow>
+                        {[...desarrollosArea.values()].map(desarrollo => {
                             return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
-                                <MDBCard>
-                                    <MDBCardHeader><MDBCardTitle>{titulo}</MDBCardTitle></MDBCardHeader>
-                                    <MDBCardSubTitle>{des.subtitulo}</MDBCardSubTitle>
-                                    <MDBCardImage className="img-thumbnail img-fluid"
-                                                  src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${des.nombre}.webp)`}></MDBCardImage>
+                                <Link to={`/desarrollos/${desarrollo.nombre}/`}>
+                                    <div
+                                        className="propiedades-img p-0 m-0"
+                                        style={{
+                                            background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
+                                            backgroundSize: "cover",
+                                        }}
+                                    ></div>
 
-                                </MDBCard>
-                            </MDBCol>);
+                                    <h4 className="text-center card-title m-2 ">{desarrollo.titulo || desarrollo.nombre.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ")}</h4>
+                                </Link>
+                            </MDBCol>)
                         })}
-
                     </MDBRow>
                 </MDBContainer>
                 {/* <div> */}
@@ -472,6 +485,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 )}
             </section>
             <div className="skew-c"></div>
+
         </>
     );
 }

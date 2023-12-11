@@ -23,7 +23,7 @@ const SlideshowGallery = (props: PropsSlideshow) => {
     );
 
 
-    const [areaDesarrollos, setAreaDesarrollos] = useState<Desarrollo[]>([])
+    const [areaDesarrollos, setAreaDesarrollos] = useState<Set<Desarrollo>>(new Set())
     const handleSelect = (selectedIndex: number) => {
         if (areaObjects[index]) return setIndex(selectedIndex);
         else return setIndex(0);
