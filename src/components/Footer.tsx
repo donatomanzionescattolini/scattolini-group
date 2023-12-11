@@ -49,14 +49,7 @@ export default function Footer() {
 
 
 
-                <section className='mb-0'style={{background:"#f2f2ed"}}>
 
-                    <MDBBtn outline color="light" floating className='m-1' href='https://www.instagram.com/scattolinigroup' role='button'>
-                        <MDBIcon fab icon='instagram' />
-                    </MDBBtn>
-
-
-                </section>
                 <section  className="d-flex flex-row justify-content-center"style={{background:"#f2f2ed"}}>
                     © 2023 Copyright Scattolini Group
                 </section>
