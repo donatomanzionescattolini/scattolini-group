@@ -51,7 +51,7 @@ export default function Footer() {
 
                 <section className='mb-0'style={{background:"#f2f2ed"}}>
 
-                    <MDBBtn outline color="light" floating className='m-1' href='www.instagram.com/scattolinigroup' role='button'>
+                    <MDBBtn outline color="light" floating className='m-1' href='https://www.instagram.com/scattolinigroup' role='button'>
                         <MDBIcon fab icon='instagram' />
                     </MDBBtn>
 
