@@ -1,6 +1,6 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function  SalernoEstates() {
+export default function SalernoEstates() {
     const SalernoEstates = new Desarrollo();
     SalernoEstates.nombre = "salerno-estates";
     SalernoEstates.titulo = "";

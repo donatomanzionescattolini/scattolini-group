@@ -1,8 +1,10 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
-export default function  TheEditionResidences() {
-    const TheEditionResidencesObject = new Desarrollo();    TheEditionResidencesObject.banner=true;     TheEditionResidencesObject.area = Edgewater();
+export default function TheEditionResidences() {
+    const TheEditionResidencesObject = new Desarrollo();
+    TheEditionResidencesObject.banner = true;
+    TheEditionResidencesObject.area = Edgewater();
 
     TheEditionResidencesObject.nombre = "edition-residences";
     TheEditionResidencesObject.caracteristicas = {

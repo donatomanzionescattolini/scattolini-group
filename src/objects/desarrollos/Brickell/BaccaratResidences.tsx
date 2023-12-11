@@ -2,11 +2,12 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
 import Brickell from "../../areas/Brickell.tsx";
 
-export default function  BaccaratResidences() {
+export default function BaccaratResidences() {
 
 
     const baccaratResidencesObject = Object.getPrototypeOf(Desarrollo);
- baccaratResidencesObject.banner=true;     baccaratResidencesObject.area = Brickell();
+    baccaratResidencesObject.banner = true;
+    baccaratResidencesObject.area = Brickell();
 
     baccaratResidencesObject.nombre = "baccarat";
     baccaratResidencesObject.caracteristicas = {

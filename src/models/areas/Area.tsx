@@ -1,6 +1,4 @@
 import {ReactNode} from "react";
-import {getDesarrollosForArea} from "../../objects/desarrollos/GetAllDesarrollos.ts";
-import Desarrollo from "../desarrollos/Desarrollo.tsx";
 
 
 export class Area {
@@ -19,7 +17,7 @@ export class Area {
     }
 }
 
-export function AreaDto(name:string){
+export function AreaDto(name: string) {
     return new Area(name);
 
 }

@@ -1,6 +1,6 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function  Origin() {
+export default function Origin() {
     const OriginObject = new Desarrollo();
 
 

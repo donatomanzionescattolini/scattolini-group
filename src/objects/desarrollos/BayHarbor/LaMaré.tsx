@@ -1,6 +1,6 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function  LaMaré() {
+export default function LaMaré() {
     const LaMaréObject = new Desarrollo();
 
     LaMaréObject.nombre = "la-maré";

@@ -1,6 +1,6 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function  Domus() {
+export default function Domus() {
     const DomusObject = new Desarrollo();
     DomusObject.nombre = "domus";
 
@@ -66,7 +66,7 @@ export default function  Domus() {
     DomusObject.introduccion = [
         "Bienvenido a DomusObject, una colección de FLATS (Apartamentos Flexibles para Estancias Temporales) diseñada para adaptarse a tu vida: las comodidades del hogar con el servicio, la seguridad y la consistencia de un hotel en un entorno local, divertido y totalmente conectado. DomusObject ofrece todos los elementos esenciales con excelente gusto y todas las comodidades que importan. Ubicado en el corazón de DomusObject BrickellComponent Park, encontrará Peacock Room: un espacio de reunión colectivo y alegre con un ambiente que atrae naturalmente a una multitud y se nutre de la energía del vecindario siempre activo de BrickellComponent.",
     ];
-    DomusObject.banner=true;
+    DomusObject.banner = true;
     DomusObject.video =
         <iframe
             width={600}

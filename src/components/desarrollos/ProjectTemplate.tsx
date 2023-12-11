@@ -26,14 +26,14 @@ import {Link} from "react-router-dom";
 import {caracteristicas, ProjectParams} from "../../models/desarrollos/ProjectParams.tsx";
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
-import {getDesarrollosForArea} from "../../objects/desarrollos/GetAllDesarrollos.ts";
+import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
 import Areas from "../../objects/areas/Areas.tsx";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
 
     const params = paramz.desarrollo;
     const [nombre] = useState(params.nombre);
-    const [area] = useState(Areas().find(a=>a.name===params.area.name));
+    const [area] = useState(Areas().find(a => a.name === params.area.name));
     const [desarrollosArea] = useState(getDesarrollosForArea(area));
     const [numberOfImages] = useState(params.numberOfImages);
     const [tabVisible, setTabVisible] = useState("brochure");
@@ -432,17 +432,17 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                     <br></br>
                     <MDBRow className="d-flex flex-row flex-wrap justify-content-between">
 
-                        {desarrollosArea.map((des)=>  {
-                                return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
-                                    <MDBCard>
-                                        <MDBCardHeader><MDBCardTitle>{titulo}</MDBCardTitle></MDBCardHeader>
-                                        <MDBCardSubTitle>{des.subtitulo}</MDBCardSubTitle>
-                                        <MDBCardImage className="img-thumbnail img-fluid"
-                                                      src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${des.nombre}.webp)`}></MDBCardImage>
+                        {desarrollosArea.map((des) => {
+                            return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
+                                <MDBCard>
+                                    <MDBCardHeader><MDBCardTitle>{titulo}</MDBCardTitle></MDBCardHeader>
+                                    <MDBCardSubTitle>{des.subtitulo}</MDBCardSubTitle>
+                                    <MDBCardImage className="img-thumbnail img-fluid"
+                                                  src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${des.nombre}.webp)`}></MDBCardImage>
 
-                                    </MDBCard>
-                                </MDBCol>);
-                            })}
+                                </MDBCard>
+                            </MDBCol>);
+                        })}
 
                     </MDBRow>
                 </MDBContainer>

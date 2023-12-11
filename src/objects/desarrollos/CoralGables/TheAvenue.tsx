@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import CoralGables from "../../areas/CoralGables.tsx";
 
-export default function  TheAvenue() {
+export default function TheAvenue() {
     const TheAvenueObject = new Desarrollo();
     TheAvenueObject.nombre = "the-avenue";
     TheAvenueObject.caracteristicas = {
@@ -100,7 +100,9 @@ export default function  TheAvenue() {
     ];
     TheAvenueObject.titulo = "The Avenue";
     TheAvenueObject.subtitulo = "La esencia de la avenida Coral Gables";
-    TheAvenueObject.numberOfImages = 27;    TheAvenueObject.banner=true;     TheAvenueObject.area = CoralGables();
+    TheAvenueObject.numberOfImages = 27;
+    TheAvenueObject.banner = true;
+    TheAvenueObject.area = CoralGables();
 
     return TheAvenueObject;
 }

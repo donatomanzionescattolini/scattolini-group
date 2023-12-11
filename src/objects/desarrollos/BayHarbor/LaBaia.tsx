@@ -1,6 +1,6 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function  LaBaia() {
+export default function LaBaia() {
     const LaBaiaObject = new Desarrollo();
     LaBaiaObject.nombre = 'la-baia';
     LaBaiaObject.caracteristicas = {

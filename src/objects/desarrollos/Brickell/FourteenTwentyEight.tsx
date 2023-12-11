@@ -1,8 +1,10 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
-export default function  FourteenTwentyEight() {
-    const FourteenTwentyEightObject = new Desarrollo();    FourteenTwentyEightObject.banner=true;     FourteenTwentyEightObject.area = Brickell();
+export default function FourteenTwentyEight() {
+    const FourteenTwentyEightObject = new Desarrollo();
+    FourteenTwentyEightObject.banner = true;
+    FourteenTwentyEightObject.area = Brickell();
     FourteenTwentyEightObject.numberOfImages = 39;
 
     FourteenTwentyEightObject.nombre = "1428-brickell";

@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Homestead from "../../areas/Homestead.tsx";
 
-export default function  SilverlandEstates() {
+export default function SilverlandEstates() {
     const SilverlandEstates = new Desarrollo();
     SilverlandEstates.nombre = "silverland-estates";
     SilverlandEstates.titulo = "";

@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
-export default function  MissoniBaia() {
+export default function MissoniBaia() {
     const MissoniBaiaObject = new Desarrollo();
     MissoniBaiaObject.nombre = "missoni-baia";
     MissoniBaiaObject.direccion = "700 NE 26th Ter, Miami, FL 33137"
@@ -261,6 +261,8 @@ export default function  MissoniBaia() {
     ];
     MissoniBaiaObject.titulo = "Missoni Baia";
     MissoniBaiaObject.subtitulo = "";
-    MissoniBaiaObject.numberOfImages = 51;    MissoniBaiaObject.banner=true;     MissoniBaiaObject.area = Edgewater();
+    MissoniBaiaObject.numberOfImages = 51;
+    MissoniBaiaObject.banner = true;
+    MissoniBaiaObject.area = Edgewater();
     return MissoniBaiaObject;
 }

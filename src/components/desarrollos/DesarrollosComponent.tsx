@@ -3,7 +3,7 @@ import Areas from "../../objects/areas/Areas.tsx";
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import {Link} from "react-router-dom";
 import {Area} from "../../models/areas/Area.tsx";
-import {getDesarrollosForArea} from "../../objects/desarrollos/GetAllDesarrollos.ts";
+import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
 
 
 export default function DesarrollosTodos() {
@@ -20,9 +20,9 @@ export default function DesarrollosTodos() {
             <MDBRow className="">
                 {Areas().map((area: Area) => {
                     const desarr = getDesarrollosForArea(area);
-                    if(!desarr||desarr.length==0){
+                    if (!desarr || desarr.length == 0) {
                         return <MDBCol></MDBCol>;
-                    }else {
+                    } else {
                         return (<>
                             {desarr.map((desarrollo: Desarrollo) => {
                                 return (<MDBCol xs={12} sm={12} md={4} lg={4} xl={4}>
@@ -40,7 +40,8 @@ export default function DesarrollosTodos() {
                                 </MDBCol>)
                             })}
                         </>);
-                    }   })}
+                    }
+                })}
 
             </MDBRow>
         </>

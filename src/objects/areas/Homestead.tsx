@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function  Homestead() {
+export default function Homestead() {
     const homestead = AreaDto("homestead");
     homestead.name = "homestead";
     homestead.titulo = "Homestead";

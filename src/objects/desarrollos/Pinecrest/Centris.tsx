@@ -1,8 +1,10 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Pinecrest from "../../areas/Pinecrest.tsx";
 
-export default function  Centris() {
-    const CentrisObject = new Desarrollo();    CentrisObject.banner=true;     CentrisObject.area =  Pinecrest();
+export default function Centris() {
+    const CentrisObject = new Desarrollo();
+    CentrisObject.banner = true;
+    CentrisObject.area = Pinecrest();
 
     CentrisObject.nombre = "centris";
 

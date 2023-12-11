@@ -1,11 +1,12 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
-export default function  AstonMartin() {
+export default function AstonMartin() {
 
 
     const AstonMartinObject = new Desarrollo();
-    AstonMartinObject.banner=true;     AstonMartinObject.area = Downtown();
+    AstonMartinObject.banner = true;
+    AstonMartinObject.area = Downtown();
 
     AstonMartinObject.nombre = "aston-martin";
     AstonMartinObject.video =

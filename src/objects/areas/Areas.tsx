@@ -13,7 +13,7 @@ import Pinecrest from "./Pinecrest.tsx";
 import SunnyIsles from "./SunnyIsles.tsx";
 import {Area} from "../../models/areas/Area.tsx";
 
-export default function  Areas(): Area[] {
+export default function Areas(): Area[] {
     const AllAreaObjects: Area[] = [];
 
 

@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function  Downtown() {
+export default function Downtown() {
     const downtown = AreaDto("downtown");
     downtown.name = "downtown";
     downtown.titulo = "Downtown";

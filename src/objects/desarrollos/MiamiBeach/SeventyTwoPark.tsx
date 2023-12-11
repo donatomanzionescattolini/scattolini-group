@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
-export default function  SeventyTwoPark() {
+export default function SeventyTwoPark() {
     const SeventyTwoParkObject = new Desarrollo();
 
 
@@ -164,7 +164,9 @@ export default function  SeventyTwoPark() {
         <span className="pb-0 mb-0">
           La vida en Miami Beach <em>redefinida</em>
         </span>
-    ;SeventyTwoParkObject.numberOfImages = 19;    SeventyTwoParkObject.banner=true;     SeventyTwoParkObject.area = MiamiBeach();
+    ;SeventyTwoParkObject.numberOfImages = 19;
+    SeventyTwoParkObject.banner = true;
+    SeventyTwoParkObject.area = MiamiBeach();
 
     return SeventyTwoParkObject;
 }

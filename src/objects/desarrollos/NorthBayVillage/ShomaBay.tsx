@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
 
-export default function  ShomaBay() {
+export default function ShomaBay() {
     const ShomaBayObject = new Desarrollo();
     ShomaBayObject.nombre = "shoma-bay";
 
@@ -74,7 +74,9 @@ export default function  ShomaBay() {
     ShomaBayObject.introduccion = [
         "Escondido en North Bay Village y perfectamente alejado del ritmo apresurado de Miami, Shoma Bay es el primero de su tipo, un lugar donde puedes vivir y jugar con lujo. Un lugar diseñado para aquellos que anhelan integrar su vida, trabajo, bienestar y estilo de vida de juego.",
         "Cada accesorio es intencional, cada detalle está meticulosamente atendido, los espacios de vida muestran lo último en sofisticación contemporánea al tiempo que reflejan las raíces clásicas de la histórica ciudad de Nueva York. ",
-    ];    ShomaBayObject.banner=true;     ShomaBayObject.area =  NorthBayVillage();
+    ];
+    ShomaBayObject.banner = true;
+    ShomaBayObject.area = NorthBayVillage();
     ShomaBayObject.titulo = "Shoma Bay";
     ShomaBayObject.subtitulo = "";
     ShomaBayObject.numberOfImages = 16;

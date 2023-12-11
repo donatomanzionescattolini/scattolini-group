@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
-export default function  AriaReserve() {
+export default function AriaReserve() {
 
     const AriaReserveObject = new Desarrollo();
     AriaReserveObject.nombre = " aria-reserve";
@@ -161,6 +161,8 @@ export default function  AriaReserve() {
 //     ></iframe>
 //   }
     AriaReserveObject.subtitulo = " ";
-    AriaReserveObject.numberOfImages = 59;    AriaReserveObject.banner=true;     AriaReserveObject.area = Edgewater();
+    AriaReserveObject.numberOfImages = 59;
+    AriaReserveObject.banner = true;
+    AriaReserveObject.area = Edgewater();
     return AriaReserveObject;
 }

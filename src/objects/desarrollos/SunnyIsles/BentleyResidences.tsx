@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
 
-export default function  BentleyResidences() {
+export default function BentleyResidences() {
     const BentleyResidencesObject = new Desarrollo();
 
     BentleyResidencesObject.nombre = "bentley-residences";
@@ -73,6 +73,8 @@ export default function  BentleyResidences() {
     ;
     BentleyResidencesObject.titulo = "Bentley Residences";
     BentleyResidencesObject.subtitulo = "Espacio que puedes abrazar";
-    BentleyResidencesObject.numberOfImages = 47;    BentleyResidencesObject.banner=true;     BentleyResidencesObject.area =  SunnyIsles();
+    BentleyResidencesObject.numberOfImages = 47;
+    BentleyResidencesObject.banner = true;
+    BentleyResidencesObject.area = SunnyIsles();
     return BentleyResidencesObject;
 }

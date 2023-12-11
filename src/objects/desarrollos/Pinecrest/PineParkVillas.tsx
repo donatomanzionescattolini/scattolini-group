@@ -1,6 +1,6 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function  PineParkVillas() {
+export default function PineParkVillas() {
     const PineParkVillasObject = new Desarrollo();
     PineParkVillasObject.nombre = "pine-park-villas";
     PineParkVillasObject.caracteristicas = {

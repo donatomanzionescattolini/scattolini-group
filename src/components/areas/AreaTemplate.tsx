@@ -1,11 +1,11 @@
 import {Image} from "react-bootstrap";
 import {MDBCol, MDBRow} from "mdb-react-ui-kit";
-import React, {useState} from "react";
+import React, {useLayoutEffect, useState} from "react";
 import {Link} from "react-router-dom";
 
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import {Area} from "../../models/areas/Area.tsx";
-import {getDesarrollosForArea} from "../../objects/desarrollos/GetAllDesarrollos.ts";
+import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
 
 interface AreaProps {
     area: Area;
@@ -17,6 +17,9 @@ export default function AreaTemplate(props: AreaProps) {
     const nombre = area.name;
     const titulo = area.titulo;
     const images = [];
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const [areaDesarrollos] = useState<Array<Desarrollo>>(getDesarrollosForArea(area));
     for (let i = 1; i <= area.numberOfImages; i++) {
         images.push(<Image

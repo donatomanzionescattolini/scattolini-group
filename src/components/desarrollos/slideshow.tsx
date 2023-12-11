@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Areas from "../../objects/areas/Areas.tsx";
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import {MDBCarousel, MDBContainer} from "mdb-react-ui-kit";
-import {getDesarrollosForArea} from "../../objects/desarrollos/GetAllDesarrollos.ts";
+import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
 import {Area} from "../../models/areas/Area.tsx";
 
 export interface GalleryImage {

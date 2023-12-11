@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
-export default function  TheElse() {
+export default function TheElse() {
     const TheElserObject = new Desarrollo();
     TheElserObject.caracteristicas = {
         edificio:
@@ -90,7 +90,9 @@ export default function  TheElse() {
         "The Elser Hotel and Residences, comparte el mismo lugar bullicioso y las vistas Illuminosas de Biscayne Bay que se disfrutaron anteriormente a principios de 1900 en Elser Pier",
         "El legado y el asombroso éxito de este muelle, como una de las primeras atracciones populares en el corredor del centro, ayudaron a liderar la transformación en la próspera metrópolis frente a la bahía que conocemos hoy",
         "The Elser Hotel and Residences, ofrece un estilo de vida dinámico y animado para los creadores de todas las tendencias. El Elser es una torre de condominios de lujo en el centro de Miami que cuenta con increíbles estudios, configuraciones de 1 a 3 dormitorios. Desarrollado por el prestigioso New York and Miami Developer Property Markets Group. Las casas están amuebladas y diseñadas de manera eficiente para vivir a lo grande, con capacidades de alquileres a corto plazo. Las comodidades incluyen un enorme gimnasio moderno y un estudio de fitness, una enorme terraza con piscina, un laboratorio de trabajo compartido, un restaurante y bar en el vestíbulo y eventos comunitarios diarios. La ubicación perfecta del Elser permite a los residentes vivir a poca distancia de algunos de los principales puntos de acceso de Miami, incluido el nuevo Miami World Center, el FTX Arena, el Museo de Arte de Ciencia y Pérez y más... a pocos minutos de las playas de Miami, los aeropuertos internacionales, la terminal de cruceros y varias atracciones culturales, artísticas, turísticas y de moda.",
-    ];    TheElserObject.banner=true;     TheElserObject.area = Downtown();
+    ];
+    TheElserObject.banner = true;
+    TheElserObject.area = Downtown();
     TheElserObject.titulo = "The Elser Residences";
     TheElserObject.subtitulo = "Lugar bullicioso y vistas brillantes de la bahía de Biscayne";
     TheElserObject.numberOfImages = 44;

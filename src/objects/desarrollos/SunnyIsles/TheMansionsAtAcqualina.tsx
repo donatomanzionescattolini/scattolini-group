@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
 
-export default function  TheMansionsAtAcqualina() {
+export default function TheMansionsAtAcqualina() {
     const TheMansionsAtAcqualinaObject = new Desarrollo();
 
     TheMansionsAtAcqualinaObject.video =
@@ -83,6 +83,8 @@ export default function  TheMansionsAtAcqualina() {
     ];
     TheMansionsAtAcqualinaObject.titulo = "The Mansions at Acqualina";
     TheMansionsAtAcqualinaObject.subtitulo = "Descubre la vida en condominio en Sunny Isles Beach";
-    TheMansionsAtAcqualinaObject.numberOfImages = 24;    TheMansionsAtAcqualinaObject.banner=true;     TheMansionsAtAcqualinaObject.area =  SunnyIsles();
+    TheMansionsAtAcqualinaObject.numberOfImages = 24;
+    TheMansionsAtAcqualinaObject.banner = true;
+    TheMansionsAtAcqualinaObject.area = SunnyIsles();
     return TheMansionsAtAcqualinaObject;
 }

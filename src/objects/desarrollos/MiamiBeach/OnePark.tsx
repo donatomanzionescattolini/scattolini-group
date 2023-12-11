@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
-export default function  OnePark() {
+export default function OnePark() {
     const OneParkObject = new Desarrollo();
     OneParkObject.nombre = "one-park";
 
@@ -152,7 +152,9 @@ export default function  OnePark() {
     ];
     OneParkObject.titulo = "One Park";
     OneParkObject.subtitulo = <em>by Turnberry</em>;
-    OneParkObject.numberOfImages = 27;    OneParkObject.banner=true;     OneParkObject.area = MiamiBeach();
+    OneParkObject.numberOfImages = 27;
+    OneParkObject.banner = true;
+    OneParkObject.area = MiamiBeach();
     OneParkObject.direccion = "2411 Laguna Circle, North Miami, FL 33181";
     return OneParkObject;
 }

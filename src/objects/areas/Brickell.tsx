@@ -1,6 +1,6 @@
-import {AreaDto, Area} from "../../models/areas/Area.tsx";
+import {Area, AreaDto} from "../../models/areas/Area.tsx";
 
-export default function  Brickell(): Area {
+export default function Brickell(): Area {
 
 
     const brickell = AreaDto("brickell");

@@ -1,8 +1,10 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
-export default function  W11() {
-    const W11Object = new Desarrollo();    W11Object.banner=true;     W11Object.area = Downtown();
+export default function W11() {
+    const W11Object = new Desarrollo();
+    W11Object.banner = true;
+    W11Object.area = Downtown();
 
     W11Object.nombre = "w11";
     W11Object.numberOfImages = 12;

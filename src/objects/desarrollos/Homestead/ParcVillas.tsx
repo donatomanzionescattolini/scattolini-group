@@ -1,6 +1,6 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function  ParcVillas() {
+export default function ParcVillas() {
     const ParcVillasObject = new Desarrollo();
     ParcVillasObject.nombre = "parc-villas";
     ParcVillasObject.titulo = "";

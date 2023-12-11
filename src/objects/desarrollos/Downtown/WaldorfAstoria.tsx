@@ -1,11 +1,13 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
-export default function  WaldorfAstoria() {
+export default function WaldorfAstoria() {
     const WaldorfAstoriaObject = new Desarrollo();
 
 
-    WaldorfAstoriaObject.nombre = "waldorf-astoria";    WaldorfAstoriaObject.banner=true;     WaldorfAstoriaObject.area = Downtown();
+    WaldorfAstoriaObject.nombre = "waldorf-astoria";
+    WaldorfAstoriaObject.banner = true;
+    WaldorfAstoriaObject.area = Downtown();
     WaldorfAstoriaObject.video = (<iframe height={500} className=" h-300 m-auto autoplay"
                                           src="https://www.youtube.com/embed/ECvGpRYiy3k?si=ntjyJcGsf3V18EYm?autoplay=1"
                                           title="YouTube video player"

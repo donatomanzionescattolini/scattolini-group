@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import CoconutGrove from "../../areas/CoconutGrove.tsx";
 
-export default function  Vita() {
+export default function Vita() {
     const VitaObject = new Desarrollo();
 
 
@@ -282,7 +282,9 @@ export default function  Vita() {
         "Vita at Grove Isle es un edificio de 7 pisos frente al mar, con amplios balcones. El edificio fue diseñado por la firma de renombre mundial CallisonRTKL: un impresionante condominio curvilíneo envuelve el extremo norte de la isla, junto a la Bahía de Biscayne. Cuando se trata de relajación y entretenimiento, hay muchas comodidades disponibles, que incluyen un salón para residentes, piscina y jacuzzi frente a la bahía, cabañas y más. Las 65 residencias frente al mar ofrecen vistas supremas de la Bahía de Biscayne y un diseño interior moderno, así como accesorios y electrodomésticos finos. La colección de penthouses de dos niveles en Vita cuenta con 14 unidades exageradas, todas ellas con espectaculares terrazas en la azotea con piscinas privadas e impresionantes vistas de la Bahía de Biscayne, Key Biscayne, Coconut Grove y el centro de Miami. Vita at Grove Isle se destaca por su entorno familiar seguro, con algo para que todos disfruten. Su conveniente ubicación está a solo unos pasos de tiendas y restaurantes. La flora y fauna de Coconut Grove define la experiencia con cientos de años de crecimiento y esplendor natural.",
     ];
     VitaObject.titulo = "Vita at Grove Isle";
-    VitaObject.numberOfImages = 55;    VitaObject.banner=true;     VitaObject.area = CoconutGrove();
+    VitaObject.numberOfImages = 55;
+    VitaObject.banner = true;
+    VitaObject.area = CoconutGrove();
     VitaObject.video = <iframe
         height={500}
         className=" h-400 embed-responsive-item m-0 p-0"

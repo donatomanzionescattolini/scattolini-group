@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
-export default function  FivePark() {
+export default function FivePark() {
     const FiveParkObject = new Desarrollo();
     FiveParkObject.nombre = "five-park";
 
@@ -150,6 +150,8 @@ export default function  FivePark() {
     ];
     FiveParkObject.titulo = "Five Park";
     FiveParkObject.subtitulo = "Vida a un Nivel Superior";
-    FiveParkObject.numberOfImages = 45;    FiveParkObject.banner=true;     FiveParkObject.area = MiamiBeach();
+    FiveParkObject.numberOfImages = 45;
+    FiveParkObject.banner = true;
+    FiveParkObject.area = MiamiBeach();
     return FiveParkObject;
 }

@@ -1,10 +1,12 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
-export default function  FourteenRiverDistrict() {
+export default function FourteenRiverDistrict() {
     const FourteenRiverDistrictObject = new Desarrollo();
 
-    FourteenRiverDistrictObject.nombre = "14-river-district";    FourteenRiverDistrictObject.banner=true;     FourteenRiverDistrictObject.area = Brickell();
+    FourteenRiverDistrictObject.nombre = "14-river-district";
+    FourteenRiverDistrictObject.banner = true;
+    FourteenRiverDistrictObject.area = Brickell();
 
     FourteenRiverDistrictObject.caracteristicas = {
         edificio: (

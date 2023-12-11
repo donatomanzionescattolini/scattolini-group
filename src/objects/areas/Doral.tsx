@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function  Doral() {
+export default function Doral() {
     const doral = AreaDto("doral");
     doral.name = "doral";
     doral.titulo = "Doral";

@@ -1,6 +1,6 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function  PinelandRocklandEstates() {
+export default function PinelandRocklandEstates() {
     const PinelandRocklandEstatesObject = new Desarrollo();
     PinelandRocklandEstatesObject.nombre = "pineland-rockland-estates";
     PinelandRocklandEstatesObject.caracteristicas = {

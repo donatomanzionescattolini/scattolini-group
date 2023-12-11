@@ -57,35 +57,39 @@ import CoralGables from "../areas/CoralGables.tsx";
 import {Area} from "../../models/areas/Area.tsx";
 import Areas from "../areas/Areas.tsx";
 
-interface desarrolloMapItem {area:string; des:Desarrollo[]}
-export const desarrolloMap:desarrolloMapItem[] = new Array<desarrolloMapItem>();
+interface desarrolloMapItem {
+    area: string;
+    des: Desarrollo[]
+}
 
-desarrolloMap.push({area:Brickell().name.trim().toLowerCase(),des:[BaccaratResidences(), Domus(), FourteenRiverDistrict(), FourteenTwentyEight(), Lofty(), Ora]});
+export const desarrolloMap: desarrolloMapItem[] = new Array<desarrolloMapItem>();
 
-desarrolloMap.push({area:BayHarbor().name.trim().toLowerCase(),des:[LaMaré(), LaBaia(), Origin(), TheWell()]});
-desarrolloMap.push({area:CoconutGrove().name.trim().toLowerCase(),des:[Vita()]});
-desarrolloMap.push({area:Doral().name.trim().toLowerCase(),des: []});
-desarrolloMap.push({area:Downtown().name.trim().toLowerCase(),des:[AstonMartin(), CasaBella(), Cipriani(), TheElser(), W11(), WaldorfAstoria()]});
-desarrolloMap.push({area:Edgewater().name.trim().toLowerCase(),des:[AriaReserve(), MissoniBaia(), TheEditionResidences(), TheVilla(), Vida()]});
-desarrolloMap.push({area:Homestead().name.trim().toLowerCase(),des:[Alba(), Oasis(), ParcVillas(), ParkSquare(), SalernoEstates(), SedonaEstates(), SilverlandEstates(), TerraSol()]});
-desarrolloMap.push({area:MiamiBeach().name.trim().toLowerCase(),des:[Ella(), FivePark(), Nexo(), OnePark(), SeventyTwoPark()]});
-desarrolloMap.push({area:NorthBayVillage().name.trim().toLowerCase(),des:[ShomaBay()]});
-desarrolloMap.push({area:Pinecrest().name.trim().toLowerCase(),des:[Centris(), PinelandRocklandEstates(), PineParkVillas()]});
-desarrolloMap.push({area:SunnyIsles().name.trim().toLowerCase(),des:[BentleyResidences(), StRegis(), TheMansionsAtAcqualina()]});
+desarrolloMap.push({area: Brickell().name.trim().toLowerCase(), des: [BaccaratResidences(), Domus(), FourteenRiverDistrict(), FourteenTwentyEight(), Lofty(), Ora]});
 
-desarrolloMap.push({area:CoralGables().name.trim().toLowerCase(),des:[TheAvenue()]});
-desarrolloMap.map(entry=>{
-    entry.des = entry.des.map(desar=> {
-        desar.area = Areas().find(a=>a.name===entry.area);
-        return desar;
-    }
+desarrolloMap.push({area: BayHarbor().name.trim().toLowerCase(), des: [LaMaré(), LaBaia(), Origin(), TheWell()]});
+desarrolloMap.push({area: CoconutGrove().name.trim().toLowerCase(), des: [Vita()]});
+desarrolloMap.push({area: Doral().name.trim().toLowerCase(), des: []});
+desarrolloMap.push({area: Downtown().name.trim().toLowerCase(), des: [AstonMartin(), CasaBella(), Cipriani(), TheElser(), W11(), WaldorfAstoria()]});
+desarrolloMap.push({area: Edgewater().name.trim().toLowerCase(), des: [AriaReserve(), MissoniBaia(), TheEditionResidences(), TheVilla(), Vida()]});
+desarrolloMap.push({area: Homestead().name.trim().toLowerCase(), des: [Alba(), Oasis(), ParcVillas(), ParkSquare(), SalernoEstates(), SedonaEstates(), SilverlandEstates(), TerraSol()]});
+desarrolloMap.push({area: MiamiBeach().name.trim().toLowerCase(), des: [Ella(), FivePark(), Nexo(), OnePark(), SeventyTwoPark()]});
+desarrolloMap.push({area: NorthBayVillage().name.trim().toLowerCase(), des: [ShomaBay()]});
+desarrolloMap.push({area: Pinecrest().name.trim().toLowerCase(), des: [Centris(), PinelandRocklandEstates(), PineParkVillas()]});
+desarrolloMap.push({area: SunnyIsles().name.trim().toLowerCase(), des: [BentleyResidences(), StRegis(), TheMansionsAtAcqualina()]});
+
+desarrolloMap.push({area: CoralGables().name.trim().toLowerCase(), des: [TheAvenue()]});
+desarrolloMap.map(entry => {
+    entry.des = entry.des.map(desar => {
+            desar.area = Areas().find(a => a.name === entry.area);
+            return desar;
+        }
     );
     return entry;
 });
 
-export function getDesarrollosForArea(area:Area):Desarrollo[]{
+export function getDesarrollosForArea(area: Area): Desarrollo[] {
 
-    return desarrolloMap.find(mapItem=>mapItem.area.toLowerCase().trim()===area.name.trim().toLowerCase()).des;
+    return desarrolloMap.find(mapItem => mapItem.area.toLowerCase().trim() === area.name.trim().toLowerCase()).des;
 
 
 }

@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function  SunnyIsles() {
+export default function SunnyIsles() {
     const sunnyIsles = AreaDto("sunny-isles");
     sunnyIsles.name = "sunny-isles";
     sunnyIsles.titulo = "Sunny Isles";

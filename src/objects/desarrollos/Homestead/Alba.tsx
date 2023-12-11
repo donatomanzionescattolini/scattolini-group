@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Homestead from "../../areas/Homestead.tsx";
 
-export default function  Alba() {
+export default function Alba() {
     const AlbaObject = new Desarrollo();
     AlbaObject.nombre = "alba";
     AlbaObject.titulo = "";

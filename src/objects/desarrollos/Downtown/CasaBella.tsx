@@ -3,10 +3,11 @@ import React from "react";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
-export default function  CasaBella() {
+export default function CasaBella() {
     const CasaBellaObject: Desarrollo = new Desarrollo();
 
-    CasaBellaObject.banner=true;     CasaBellaObject.area = Downtown();
+    CasaBellaObject.banner = true;
+    CasaBellaObject.area = Downtown();
 
     CasaBellaObject.nombre = "casa-bella";
     CasaBellaObject.caracteristicas = {

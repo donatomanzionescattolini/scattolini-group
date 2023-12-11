@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
-export default function  Lofty() {
+export default function Lofty() {
     const LoftyObject = new Desarrollo();
     LoftyObject.nombre = "lofty";
 
@@ -163,7 +163,9 @@ export default function  Lofty() {
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-    ></iframe>;    LoftyObject.banner=true;     LoftyObject.area = Brickell();
+    ></iframe>;
+    LoftyObject.banner = true;
+    LoftyObject.area = Brickell();
 
 
     return LoftyObject;

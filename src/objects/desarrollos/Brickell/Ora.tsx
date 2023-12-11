@@ -1,9 +1,10 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
-export default function  Ora() {
+export default function Ora() {
     const OraObject = new Desarrollo();
-    OraObject.banner=true;     OraObject.area = Brickell();
+    OraObject.banner = true;
+    OraObject.area = Brickell();
 
     OraObject.nombre = "ora";
     OraObject.caracteristicas = {

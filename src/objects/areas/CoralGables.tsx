@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function  CoralGables() {
+export default function CoralGables() {
     const coralGables = AreaDto("coral-gables");
 
     coralGables.name = "coral-gables";

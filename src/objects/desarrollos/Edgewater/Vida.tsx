@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
-export default function  Vida() {
+export default function Vida() {
     const VidaObject = new Desarrollo();
     VidaObject.nombre = "vida";
     VidaObject.direccion = "3050 Biscayne Blvd, Miami, FL 33137";
@@ -73,7 +73,9 @@ export default function  Vida() {
     ];
     VidaObject.titulo = "VidaObject Residences";
     VidaObject.subtitulo = "Un tramo más allá de lo ordinario...";
-    VidaObject.numberOfImages = 24;    VidaObject.banner=true;     VidaObject.area = Edgewater();
+    VidaObject.numberOfImages = 24;
+    VidaObject.banner = true;
+    VidaObject.area = Edgewater();
 
 
     return VidaObject;

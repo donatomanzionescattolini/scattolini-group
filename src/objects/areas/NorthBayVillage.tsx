@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function  NorthBayVillage() {
+export default function NorthBayVillage() {
     const northBayVillage = AreaDto("north-bay-village");
     northBayVillage.name = "north-bay-village";
     northBayVillage.titulo = "North Bay Village";
