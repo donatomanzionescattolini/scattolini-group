@@ -241,7 +241,7 @@ export default function TheVilla() {
     TheVillaObject.subtitulo =
         <p className="text-lowercase w-50 mx-auto">
             <span className="text-capitalize">¡El</span> rascacielos residencial
-            más sorprendente de" "; <span className="text-capitalize">EdgewaterComponent, Miami </span>finalmente
+            más sorprendente de" "; <span className="text-capitalize">Edgewater, Miami </span>finalmente
             está aquí!
             <br></br>
         </p>

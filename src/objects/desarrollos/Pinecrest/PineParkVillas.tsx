@@ -82,8 +82,8 @@ export default function PineParkVillas() {
         ),
     };
     PineParkVillasObject.introduccion = [
-        "Pine Park Villas está estableciendo el nuevo estándar de vida en casas adosadas de lujo en uno de los vecindarios más atractivos del sur de Florida. PinecrestComponent, un pueblo suburbano ideal, cuenta con proximidad y fácil acceso a la Bahía de Biscayne, extraordinarios parques públicos, excelentes tiendas y algunas de las mejores escuelas públicas y privadas del sureste.",
-        "The Village of PinecrestComponent fue reconocido como uno de los diez mejores lugares de Florida por su calidad de vida en general por el South Florida Business Journal. Pine Park Villas ofrece una ubicación ideal en PinecrestComponent con fácil acceso al centro de Miami, Coral Gables y el aeropuerto internacional de Miami.      ",
+        "Pine Park Villas está estableciendo el nuevo estándar de vida en casas adosadas de lujo en uno de los vecindarios más atractivos del sur de Florida. Pinecrest, un pueblo suburbano ideal, cuenta con proximidad y fácil acceso a la Bahía de Biscayne, extraordinarios parques públicos, excelentes tiendas y algunas de las mejores escuelas públicas y privadas del sureste.",
+        "The Village of Pinecrest fue reconocido como uno de los diez mejores lugares de Florida por su calidad de vida en general por el South Florida Business Journal. Pine Park Villas ofrece una ubicación ideal en Pinecrest con fácil acceso al centro de Miami, Coral Gables y el aeropuerto internacional de Miami.      ",
     ];
     PineParkVillasObject.titulo = "Pine Park Villas";
     PineParkVillasObject.subtitulo = "Estilo de vida redefinido";
@@ -93,7 +93,7 @@ export default function PineParkVillas() {
 //       width="1280"
 //       height="720"
 //       src="https://www.youtube.com/embed/KMvPmEZyzx8"
-//       title="Pine Park Villas in PinecrestComponent, FL"
+//       title="Pine Park Villas in Pinecrest, FL"
 //       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 //       allowFullScreen
 //     ></iframe>

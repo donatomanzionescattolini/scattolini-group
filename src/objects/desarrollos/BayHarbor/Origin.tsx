@@ -133,7 +133,7 @@ export default function Origin() {
         "Artefacto decodifica un estilo de vida que goza de gran prestigio entre los grandes nombres de la arquitectura y la decoración, creando el epítome de la vida cálida y contemporánea.",
     ];
     OriginObject.titulo = "OriginObject Residences";
-    OriginObject.subtitulo = "Sofisticada Vida Isleña";
+    OriginObject.subtitulo = "Sofisticada VidaResidences Isleña";
     OriginObject.numberOfImages = 52;
     OriginObject.area = BayHarbor();
     return OriginObject;

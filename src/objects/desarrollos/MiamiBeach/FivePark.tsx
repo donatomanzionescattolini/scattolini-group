@@ -149,7 +149,7 @@ export default function FivePark() {
         "Un flamante torre residencial llega a Miami Beach con vistas incomparables en todas las direcciones.Amenidades excepcionales a lo largo de 50.000 pies cuadrados (4645 metros cuadrados) con serviciospropios de bienestar, club de playa privado y parque con un terreno de tres acres (más de una hectárea) frente a la puerta de su casa. Una creación verdaderamente impresionante de las mentes de diseño más visionarias del mundo",
     ];
     FiveParkObject.titulo = "Five Park";
-    FiveParkObject.subtitulo = "Vida a un Nivel Superior";
+    FiveParkObject.subtitulo = "VidaResidences a un Nivel Superior";
     FiveParkObject.numberOfImages = 45;
     FiveParkObject.banner = true;
     FiveParkObject.area = MiamiBeach();

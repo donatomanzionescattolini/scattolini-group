@@ -51,7 +51,7 @@ export default function TheElse() {
                     <br/>
                     <li>
                         Una piscina de 132 pies de largo al mejor estilo resort con
-                        salones privados y vistas hacia DowntownComponent Miami y Biscayne Bay,
+                        salones privados y vistas hacia Downtown Miami y Biscayne Bay,
                         además de una pantalla LED de 16 pies y zona de parrilla.
                     </li>
                     <br/>
@@ -101,7 +101,7 @@ export default function TheElse() {
             width="1280"
             height="720"
             src="https://www.youtube.com/embed/BaD-8BLN9nM?autoplay=1&controls=0"
-            title="Episode 15: The Elser in DowntownComponent Miami (Short-term Rentals Allowed)"
+            title="Episode 15: The Elser in Downtown Miami (Short-term Rentals Allowed)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
         ></iframe>;

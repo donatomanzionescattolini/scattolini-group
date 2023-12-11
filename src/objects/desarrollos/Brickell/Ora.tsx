@@ -154,7 +154,7 @@ export default function Ora() {
         ),
     };
     OraObject.introduccion = [
-        "Presentamos ORA by Casa Tua, un nuevo destino realmente único al que llamar hogar. ORA ofrece residencias de propiedad flexible a corto, mediano y largo plazo, perfectamente ubicadas en BrickellComponent, el Distrito Financiero de Miami. Con residencias cuidadosamente curadas, restaurantes de primer nivel y hermosas áreas sociales dedicadas al arte y la cultura lideradas por la icónica marca Casa Tua, ORA se convertirá en el epicentro de la ciudad.      ",
+        "Presentamos ORA by Casa Tua, un nuevo destino realmente único al que llamar hogar. ORA ofrece residencias de propiedad flexible a corto, mediano y largo plazo, perfectamente ubicadas en Brickell, el Distrito Financiero de Miami. Con residencias cuidadosamente curadas, restaurantes de primer nivel y hermosas áreas sociales dedicadas al arte y la cultura lideradas por la icónica marca Casa Tua, ORA se convertirá en el epicentro de la ciudad.      ",
     ];
     OraObject.titulo =
         <>

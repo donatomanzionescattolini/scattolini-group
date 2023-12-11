@@ -17,7 +17,7 @@ import AriaReserve from "./Edgewater/AriaReserve.tsx";
 import MissoniBaia from "./Edgewater/MissoniBaia.tsx";
 import TheEditionResidences from "./Edgewater/TheEditionResidences.tsx";
 import TheVilla from "./Edgewater/TheVilla.tsx";
-import Vida from "./Edgewater/Vida.tsx";
+import VidaResidences from "./Edgewater/VidaResidences.tsx";
 import Oasis from "./Homestead/Oasis.tsx";
 import ParcVillas from "./Homestead/ParcVillas.tsx";
 import SalernoEstates from "./Homestead/SalernoEstates.tsx";
@@ -71,7 +71,7 @@ desarrolloMap.push({area: BayHarbor().name.trim().toLowerCase(), des: new Set([L
 desarrolloMap.push({area: CoconutGrove().name.trim().toLowerCase(), des: new Set([Vita()])});
 desarrolloMap.push({area: Doral().name.trim().toLowerCase(), des: new Set([])});
 desarrolloMap.push({area: Downtown().name.trim().toLowerCase(), des: new Set([AstonMartin(), CasaBella(), Cipriani(), TheElser(), W11(), WaldorfAstoria()])});
-desarrolloMap.push({area: Edgewater().name.trim().toLowerCase(), des: new Set([AriaReserve(), MissoniBaia(), TheEditionResidences(), TheVilla(), Vida()])});
+desarrolloMap.push({area: Edgewater().name.trim().toLowerCase(), des: new Set([AriaReserve(), MissoniBaia(), TheEditionResidences(), TheVilla(), VidaResidences()])});
 desarrolloMap.push({area: Homestead().name.trim().toLowerCase(), des: new Set([Alba(), Oasis(), ParcVillas(), ParkSquare(), SalernoEstates(), SedonaEstates(), SilverlandEstates(), TerraSol()])});
 desarrolloMap.push({area: MiamiBeach().name.trim().toLowerCase(), des: new Set([Ella(), FivePark(), Nexo(), OnePark(), SeventyTwoPark()])});
 desarrolloMap.push({area: NorthBayVillage().name.trim().toLowerCase(), des: new Set([ShomaBay()])});

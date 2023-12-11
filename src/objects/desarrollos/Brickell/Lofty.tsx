@@ -150,7 +150,7 @@ export default function Lofty() {
     ];
 
     Lofty.titulo = "Lofty Residences Brickell";
-    Lofty.subtitulo = "Un Nuevo Estándar de Vida Cosmopolita en Brickell";
+    Lofty.subtitulo = "Un Nuevo Estándar de VidaResidences Cosmopolita en Brickell";
 
 
     Lofty.numberOfImages = 55;
