@@ -1,6 +1,6 @@
-// import NorthBayVillageComponent from "./areas/NorthBayVillageComponent";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {
+    MDBCol,
     MDBCollapse,
     MDBContainer,
     MDBDropdown,
@@ -13,10 +13,11 @@ import {
     MDBNavbarItem,
     MDBNavbarLink,
     MDBNavbarNav,
-    MDBNavbarToggler,
+    MDBNavbarToggler, MDBRow,
 } from "mdb-react-ui-kit";
 import Areas from "../objects/areas/Areas.tsx";
 import {getDesarrollosForArea} from "../objects/desarrollos/Desarrollos.ts";
+
 
 const Nav = () => {
     const [showNavCentred, setShowNavCentred] = useState(false);
@@ -25,7 +26,60 @@ const Nav = () => {
     window.addEventListener("resize", () => {
         setInnerWidth(window.innerWidth);
     });
-    return (
+
+    const [items] = useState(Areas());
+    // useEffect(() => {
+    //
+    //     function addDesarrollos() {
+    //         Areas().forEach(area => setItems(items => [...items,area].concat([...getDesarrollosForArea(area)])));
+    //
+    //         }
+    //         addDesarrollos();
+    //     },[]);
+
+
+    const renderMenuItems = () => {
+        const half = Math.ceil(items.length / 2);
+        const leftColumn = items.slice(0, half);
+        const rightColumn = items.slice(-half);
+
+        return (
+
+
+            <MDBDropdownMenu className="responsive">
+                <MDBRow around className={"w-responsive  flex-row-reverse"}style={{minWidth:400}}>
+                    <MDBCol md={6}>
+                        {leftColumn.map((area) => {
+
+                            return (<>
+                                    <MDBDropdownItem header className={"list-group-item"}style={{textIndent:15}}>{area.titulo}</MDBDropdownItem>
+                            {[...getDesarrollosForArea(area)].map(des=>
+                            <MDBDropdownItem
+                                link
+                                className="dropdown-item"
+                                href={`/desarrollos/${des.nombre}/`}
+
+                            >{des.titulo||des.nombre.split("-").map(word=>word.charAt(0).toUpperCase()+word.substring(1)).join(" ")}</MDBDropdownItem>
+                            )}
+                            </>
+                            );
+                        })}</MDBCol>
+                    <MDBCol md={6}>
+                        {rightColumn.map((area) =>  {return (<>
+                                <MDBDropdownItem header className={"list-group-item"}style={{textIndent:15}}>{area.titulo}</MDBDropdownItem>                    {[...getDesarrollosForArea(area)].map(des=>
+                        <MDBDropdownItem
+                            link
+                            className="dropdown-item"
+                            href={`/areas/${des.nombre}/`}
+
+                        >{des.titulo}</MDBDropdownItem>
+                    )}
+                </>
+                )})}</MDBCol>
+                </MDBRow>
+            </MDBDropdownMenu>);
+    }
+    return(
         <MDBNavbar expand="lg" light bgColor="light">
             <MDBContainer fluid>
                 <MDBNavbarToggler
@@ -80,20 +134,13 @@ const Nav = () => {
                         <MDBNavbarItem>
                             <MDBDropdown>
                                 <MDBDropdownToggle tag="a">Áreas</MDBDropdownToggle>
-
                                 <MDBDropdownMenu className="responsive">
-                                    {Areas().map(area=>
-                                        <MDBDropdownItem
-                                            link
-                                            className="dropdown-item"
-                                            href={`/areas/${area.name}/`}
-                                        >
-                                            {area.titulo}
-                                        </MDBDropdownItem>
-                                    )}
+                                {Areas().map(area=>{
+                                    return <MDBDropdownItem link href={"/areas/" + area.name}>
+                                        {area.titulo}
+                                    </MDBDropdownItem>
+                                })}
                                 </MDBDropdownMenu>
-
-
 
                             </MDBDropdown>
                         </MDBNavbarItem>
@@ -106,23 +153,11 @@ const Nav = () => {
                                 <MDBDropdownToggle tag="a" link>
                                     Desarrollos
                                 </MDBDropdownToggle>
-                                <MDBDropdownMenu responsive='end'>
 
-                                    {Areas().map(area=>
-                                        (<>
-                                            <MDBDropdownItem header className='dropdown-header'>
-                                                {area.titulo}
-                                            </MDBDropdownItem>
-                                            {[...getDesarrollosForArea(area)].map(des=><MDBDropdownItem
-                                            link
 
-                                            href={`/desarrollos/${des.nombre}/`}
-                                        >
-                                                <span className={"dropdown-item-text"}>{des.titulo || des.nombre.split("-").map(word=>word.charAt(0).toUpperCase()+word.substring(1).toLowerCase()).join(" ")}</span>
-                                        </MDBDropdownItem>)}
-                                            <MDBDropdownItem divider   /></>)
-                                    )}
-                                </MDBDropdownMenu>
+                                       {renderMenuItems()}
+
+
 
                             </MDBDropdown>
                         </MDBNavbarItem>
@@ -136,5 +171,6 @@ const Nav = () => {
         </MDBNavbar>
     );
 };
+
 
 export default Nav;
