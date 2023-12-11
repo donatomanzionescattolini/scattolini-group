@@ -50,22 +50,41 @@ export default function LaMaré() {
             </>
         ),
         amenidades: (
-            <>
-                <ul>
-                    <li>Espacio al aire libre frente a la bahía con paisajismo, muelles para botes y áreas de descanso</li>
-                    <li>Instalaciones de spa con vapor y sauna</li>
-                    <li>Bar en la azotea y cocina de verano</li>
+            <dl><dt>Colección Regency</dt>
+                <dd><ul>
+
+                    <li>Espacio al aire libre frente a la bahía con jardines y áreas de descanso</li>
                     <li>Gimnasio de última generación</li>
-                    <li>Terraza ajardinada de la piscina en la azotea tipo centro turístico con piscina, jacuzzi, tumbonas y tumbonas</li>
-                </ul>
-            </>
+                    <li>Instalaciones de spa con vapor y sauna</li>
+                    <li>Terraza ajardinada de la piscina en la azotea tipo centro turístico con piscina infinita, jacuzzi, tumbonas y tumbonas</li>
+                    <li>Bar en la azotea y cocina de verano</li>
+                    <li>Salón residencial para reuniones grupales y proyecciones</li>
+                    <li>Muelles privados disponibles para los residentes</li>
+                    <li>Vestíbulo de entrada y salón de bienvenida</li>
+                    <li>Los ascensores semiprivados y privados llevan a los residentes directamente a sus hogares con sistema de cerradura con llave</li>
+                    <li>Cómodas trasteras privadas para cada residencia</li>
+                    <li>Garaje de estacionamiento con 69 espacios de estacionamiento (2 espacios por residencia), así como estacionamiento adicional cerrado y cerrado en la planta baja</li>
+                </ul></dd>
+                <dt>Colección Signature</dt>
+                <dd><ul>
+                    <li>Espacio al aire libre frente a la bahía con paisajismo y áreas de descanso</li>
+                    <li>Bodega</li>
+                    <li>Gran habitación para el disfrute de amigos y familiares</li>
+                    <li>Terraza ajardinada de la piscina en la azotea tipo centro turístico con piscina, jacuzzi, tumbonas, tumbonas, cocina al aire libre y bar / salón</li>
+                    <li>Muelles privados disponibles para los residentes</li>
+                    <li>Vestíbulo de entrada y salón de bienvenida</li>
+                    <li>Los ascensores semiprivados y privados llevan a los residentes directamente a sus hogares con sistema de cerradura con llave</li>
+                    <li>Cómodas trasteras privadas para cada residencia</li>
+                    <li>Garaje de estacionamiento seguro con amplio estacionamiento</li>
+                </ul></dd>
+            </dl>
         ),
     };
     LaMaréObject.introduccion = [
-        "La Maré se compone de dos exquisitas torres que ofrecen una experiencia de vida extraordinaria.El Regency Collection es un moderno edificio de cristal definido por su sorprendente belleza, sostenibilidad y refinada sensación de comodidad, con un interior en el que destaca una paleta suave y natural.La Signature Collection, por su parte, es una estructura contemporánea de impresionante diseño con interiores armoniosos.Aquí, la exclusividad es la norma, ya que cada unidad cuenta con ventanas envolventes de suelo a techo que brindan una vista clara de su impresionante estética náutica.Con componentes aerodinámicos, elementos tropicales y el generoso uso de piedra color arena, travertino y maderas aclaradas, los residentes disfrutan de privacidad y se ven envueltos en una atmósfera estilo resort",
+        "La Maré se compone de dos exquisitas torres que ofrecen una experiencia de vida extraordinaria. El Regency Collection es un moderno edificio de cristal definido por su sorprendente belleza, sostenibilidad y refinada sensación de comodidad, con un interior en el que destaca una paleta suave y natural. La Signature Collection, por su parte, es una estructura contemporánea de impresionante diseño con interiores armoniosos.Aquí, la exclusividad es la norma, ya que cada unidad cuenta con ventanas envolventes de suelo a techo que brindan una vista clara de su impresionante estética náutica.Con componentes aerodinámicos, elementos tropicales y el generoso uso de piedra color arena, travertino y maderas aclaradas, los residentes disfrutan de privacidad y se ven envueltos en una atmósfera estilo resort",
     ];
     LaMaréObject.titulo = "La Maré";
-    LaMaréObject.subtitulo = "Regency";
+    LaMaréObject.subtitulo = <p>Bay Harbor Islands<br/><small><em>Espacio y comodidad reinventados</em></small></p>;
     LaMaréObject.numberOfImages = 24;
     LaMaréObject.banner = true;
 
