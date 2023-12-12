@@ -65,6 +65,7 @@ const Nav = () => {
     setSearchQuery(event.target.value);
     if (searchQuery === "") {
       setFilteredDesarrollos(allDesarrollos);
+
       return;
     }
 
@@ -88,6 +89,22 @@ const Nav = () => {
       })
     );
   };
+  const [searchQueryArea, setSearchQueryArea] = useState("");
+  const handleSearchArea = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQueryArea(event.target.value);
+    if (searchQuery === "") {
+      setFilteredAreas(areas);
+      return;
+    }
+
+    const filteredAreaz = areas.filter(
+      (area) =>
+        area.name.toLowerCase().includes(event.target.value.toLowerCase()) ||
+        event.target.value.toLowerCase().includes(area.name.toLowerCase())
+    );
+
+    setFilteredAreas(filteredAreaz);
+  };
 
   const desarrollosInFilteredArea = (area: Area) => {
     return filteredDesarrollos.filter(
@@ -97,8 +114,6 @@ const Nav = () => {
     );
   };
   const renderMenuItems = () => {
-    const half = Math.ceil(areas.length / 2);
-
     return (
       <MDBRow
         around
@@ -234,13 +249,20 @@ const Nav = () => {
               <MDBDropdown>
                 <MDBDropdownToggle tag="a">Áreas</MDBDropdownToggle>
                 <MDBDropdownMenu className="responsive">
-                  {Areas().map((area) => {
-                    return (
-                      <MDBDropdownItem link href={"/areas/" + area.name}>
-                        {area.titulo}
-                      </MDBDropdownItem>
-                    );
-                  })}
+                  <>
+                    <MDBInput
+                      placeholder="Buscar"
+                      value={searchQueryArea}
+                      onChange={handleSearchArea}
+                    />
+                    {filteredAreas.map((area) => {
+                      return (
+                        <MDBDropdownItem link href={"/areas/" + area.name}>
+                          {area.titulo}
+                        </MDBDropdownItem>
+                      );
+                    })}
+                  </>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
