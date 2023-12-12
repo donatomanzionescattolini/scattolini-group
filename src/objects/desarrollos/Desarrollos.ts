@@ -56,6 +56,7 @@ import CoralGables from "../areas/CoralGables.tsx";
 import {Area} from "../../models/areas/Area.tsx";
 import Areas from "../areas/Areas.tsx";
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
+import OnGrandville from "./Homestead/OnGrandville.tsx";
 
 interface desarrolloMapItem {
     area: string;
@@ -72,7 +73,7 @@ desarrolloMap.push({area: CoconutGrove().name.trim().toLowerCase(), des: new Set
 desarrolloMap.push({area: Doral().name.trim().toLowerCase(), des: new Set([])});
 desarrolloMap.push({area: Downtown().name.trim().toLowerCase(), des: new Set([AstonMartin(), CasaBella(), Cipriani(), TheElser(), W11(), WaldorfAstoria()])});
 desarrolloMap.push({area: Edgewater().name.trim().toLowerCase(), des: new Set([AriaReserve(), MissoniBaia(), EditionResidences(), TheVilla(), VidaResidences()])});
-desarrolloMap.push({area: Homestead().name.trim().toLowerCase(), des: new Set([Alba(), Oasis(), ParcVillas(), ParkSquare(), SalernoEstates(), SedonaEstates(), SilverlandEstates(), TerraSol()])});
+desarrolloMap.push({area: Homestead().name.trim().toLowerCase(), des: new Set([Alba(), Oasis(), ParcVillas(), ParkSquare(), SalernoEstates(), SedonaEstates(), SilverlandEstates(), TerraSol(),OnGrandville()])});
 desarrolloMap.push({area: MiamiBeach().name.trim().toLowerCase(), des: new Set([Ella(), FivePark(), Nexo(), OnePark(), SeventyTwoPark()])});
 desarrolloMap.push({area: NorthBayVillage().name.trim().toLowerCase(), des: new Set([ShomaBay()])});
 desarrolloMap.push({area: Pinecrest().name.trim().toLowerCase(), des: new Set([Centris(), PineRocklandEstates(), PineParkVillas()])});

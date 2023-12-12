@@ -1,9 +1,9 @@
 import "./App.scss";
-import 'vite/modulepreload-polyfill';
+import "vite/modulepreload-polyfill";
 import "bootstrap/dist/css/bootstrap.css";
 import AreasComponent from "./components/AreasComponent.tsx";
 import "material-components-web/dist/material-components-web.css";
-import {Home} from "./Home";
+import { Home } from "./Home";
 import Contacto from "./components/ContactoComponent.tsx";
 import "mdb-ui-kit/css/mdb.min.css";
 import "mdb-ui-kit/js/mdb.min.js";
@@ -20,13 +20,13 @@ import SunnyIslesComponent from "./components/areas/SunnyIslesComponent.tsx";
 import EdgewaterComponent from "./components/areas/EdgewaterComponent.tsx";
 import MiamiBeachComponent from "./components/areas/MiamiBeachComponent.tsx";
 import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
-import {FourteenTwentyEightProject} from "./components/desarrollos/Brickell/FourteenTwentyEightProject";
-import {StRegisProject} from "./components/desarrollos/SunnyIsles/StRegisProject";
+import { FourteenTwentyEightProject } from "./components/desarrollos/Brickell/FourteenTwentyEightProject";
+import { StRegisProject } from "./components/desarrollos/SunnyIsles/StRegisProject";
 import Equipo from "./components/AsociadosComponent.tsx";
-import {CiprianiProjec} from "./components/desarrollos/Downtown/CiprianiProject";
-import {W11Project} from "./components/desarrollos/Downtown/W11Project";
+import { CiprianiProjec } from "./components/desarrollos/Downtown/CiprianiProject";
+import { W11Project } from "./components/desarrollos/Downtown/W11Project";
 import AstonMartinProject from "./components/desarrollos/Downtown/AstonMartinProject";
-import {TheEditionResidencesProject} from "./components/desarrollos/Edgewater/TheEditionResidencesProject.tsx";
+import { TheEditionResidencesProject } from "./components/desarrollos/Edgewater/TheEditionResidencesProject.tsx";
 import CasaBellaProject from "./components/desarrollos/Downtown/CasaBellaProject";
 import WaldorfAstoriaProject from "./components/desarrollos/Downtown/WaldorfAstoriaProject";
 import ShomaBayProject from "./components/desarrollos/NorthBayVillage/ShomaBayProject";
@@ -53,7 +53,7 @@ import CentrisProject from "./components/desarrollos/Pinecrest/CentrisProject";
 import BentleyResidencesProject from "./components/desarrollos/SunnyIsles/BentleyResidencesProject";
 import TheMansionsAtAcqualinaProject from "./components/desarrollos/SunnyIsles/TheMansionsAtAcqualinaProject";
 import TheAvenueProject from "./components/desarrollos/CoralGables/TheAvenueProject";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import AliadosComponent from "./components/AliadosComponent.tsx";
@@ -61,212 +61,195 @@ import Liderazgo from "./components/Liderazgo.tsx";
 import BrickellComponent from "./components/areas/BrickellComponent.tsx";
 import LaBaiaNorthProject from "./components/desarrollos/BayHarbor/LaBaiaNorthProject.tsx";
 import LaMaréProject from "./components/desarrollos/BayHarbor/LaMaréProject.tsx";
-import {MDBBtn} from "mdb-react-ui-kit";
-import React, {useState} from "react";
+import { MDBBtn } from "mdb-react-ui-kit";
+import React, { useState } from "react";
 import FloatingContactFormComponent from "./components/FloatingContactFormComponent.tsx";
-import {FloatingWhatsApp} from "react-floating-whatsapp";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 import TheWellProject from "./components/desarrollos/BayHarbor/TheWellProject.tsx";
 import AlbaComponent from "./components/desarrollos/Homestead/AlbaComponent.tsx";
 import PineRocklandEstatesProject from "./components/desarrollos/Pinecrest/PinelandRocklandEstatesProject.tsx";
+import OnGrandvilleComponent from "./components/desarrollos/Homestead/OnGrandvilleComponent.tsx";
 
 export default function App() {
-    // State variable to store the visibility of the floating element
-    const [show, setShow] = useState(true);
+  // State variable to store the visibility of the floating element
+  const [show, setShow] = useState(true);
 
-    // Function to toggle the visibility of the floating element
-    const toggleShow = () => {
-        setShow(!show);
-    };
-    return (
+  // Function to toggle the visibility of the floating element
+  const toggleShow = () => {
+    setShow(!show);
+  };
+  return (
+    <BrowserRouter>
+      <Nav />
+      {show && (
+        <div
+          className={"floating-element object-fit-cover"}
+          style={{ background: "rgb(255,255,255,0.0)" }}
+        >
+          <MDBBtn className="close-button" onClick={toggleShow} type={"button"}>
+            Close
+          </MDBBtn>
+          <FloatingContactFormComponent />
+        </div>
+      )}
 
-        <BrowserRouter>
-            <Nav/>
-            {show && (
-                <div
-                    className={
-                        "floating-element object-fit-cover"
-                    }
-                    style={{background: "rgb(255,255,255,0.0)"}}
-                >
-                    <MDBBtn
-                        className="close-button"
-                        onClick={toggleShow}
-                        type={"button"}
-                    >
-                        Close
-                    </MDBBtn>
-                    <FloatingContactFormComponent/>
-                </div>
-            )}
+      <Routes>
+        {/*pestañas*/}
+        <Route element={<Home />} path="/" />
+        <Route element={<AliadosComponent />} path="/aliados" />
+        <Route element={<Liderazgo />} path="/liderazgo" />
+        <Route element={<Contacto />} path="/contacto" />
+        <Route element={<DesarrollosTodos />} path={"/desarrollos"} />
+        <Route element={<AreasComponent />} path="/areas" />
 
-            <Routes>
-                {/*pestañas*/}
-                <Route element={<Home/>} path="/"/>
-                <Route element={<AliadosComponent/>} path="/aliados"/>
-                <Route element={<Liderazgo/>} path="/liderazgo"/>
-                <Route element={<Contacto/>} path="/contacto"/>
-                <Route element={<DesarrollosTodos/>} path={"/desarrollos"}/>
-                <Route element={<AreasComponent/>} path="/areas"/>
+        {/* areas */}
+        <Route element={<BrickellComponent />} path="/areas/brickell" />
+        <Route element={<DowntownComponent />} path="/areas/downtown" />
+        <Route element={<HomesteadComponent />} path="/areas/homestead" />
+        <Route element={<BayHarborComponent />} path="/areas/bay-harbor" />
+        <Route
+          element={<NorthBayVillageComponent />}
+          path="/areas/north-bay-village"
+        />
+        <Route element={<CoralGablesComponent />} path="/areas/coral-gables" />
+        <Route
+          element={<CoconutGroveComponent />}
+          path="/areas/coconut-grove"
+        />
+        <Route element={<DoralComponent />} path="/areas/doral"></Route>
+        <Route element={<PinecrestComponent />} path="/areas/pinecrest"></Route>
+        <Route
+          element={<SunnyIslesComponent />}
+          path="/areas/sunny-isles"
+        ></Route>
+        <Route element={<EdgewaterComponent />} path="/areas/edgewater"></Route>
+        <Route
+          element={<MiamiBeachComponent />}
+          path="/areas/miami-beach"
+        ></Route>
+        <Route
+          element={<OnGrandvilleComponent />}
+          path="/desarrollos/on-grandville"
+        />
 
-                {/* areas */}
-                <Route element={<BrickellComponent/>} path="/areas/brickell"/>
-                <Route element={<DowntownComponent/>} path="/areas/downtown"/>
-                <Route element={<HomesteadComponent/>} path="/areas/homestead"/>
-                <Route element={<BayHarborComponent/>} path="/areas/bay-harbor"/>
-                <Route
-                    element={<NorthBayVillageComponent/>}
-                    path="/areas/north-bay-village"
-                />
-                <Route
-                    element={<CoralGablesComponent/>}
-                    path="/areas/coral-gables"
-                />
-                <Route element={<CoconutGroveComponent/>} path="/areas/coconut-grove"/>
-                <Route element={<DoralComponent/>} path="/areas/doral"></Route>
-                <Route
-                    element={<PinecrestComponent/>}
-                    path="/areas/pinecrest"
-                ></Route>
-                <Route
-                    element={<SunnyIslesComponent/>}
-                    path="/areas/sunny-isles"
-                ></Route>
-                <Route
-                    element={<EdgewaterComponent/>}
-                    path="/areas/edgewater"
-                ></Route>
-                <Route
-                    element={<MiamiBeachComponent/>}
-                    path="/areas/miami-beach"
-                ></Route>
+        {/* desarrollos
+         */}
 
-                {/* desarrollos
-           */}
+        {/* Coral Gables */}
+        <Route
+          element={<TheAvenueProject />}
+          path={"/desarrollos/the-avenue"}
+        />
 
-                {/* Coral Gables */}
-                <Route
-                    element={<TheAvenueProject/>}
-                    path={"/desarrollos/the-avenue"}
-                />
+        {/* BrickellComponent */}
+        <Route
+          element={<FourteenTwentyEightProject />}
+          path="/desarrollos/1428-brickell"
+        />
+        <Route
+          element={<BaccaratResidencesComponent />}
+          path="/desarrollos/baccarat"
+        />
+        <Route element={<TheWellProject />} path={"/desarrollos/the-well"} />
+        <Route element={<TheElserProject />} path={"/desarrollos/the-elser"} />
 
-                {/* BrickellComponent */}
-                <Route
-                    element={<FourteenTwentyEightProject/>}
-                    path="/desarrollos/1428-brickell"
-                />
-                <Route
-                    element={<BaccaratResidencesComponent/>}
-                    path="/desarrollos/baccarat"
-                />
-                <Route element={<TheWellProject/>} path={"/desarrollos/the-well"}/>
-                <Route
-                    element={<TheElserProject/>}
-                    path={"/desarrollos/the-elser"}
-                />
+        {/* EdgewaterComponent */}
+        <Route
+          element={<AriaReserveProject />}
+          path={"/desarrollos/aria-reserve"}
+        />
+        <Route
+          element={<MissoniBaiaProject />}
+          path={"/desarrollos/missoni-baia"}
+        />
+        <Route element={<VidaProject />} path={"/desarrollos/vida"} />
 
-                {/* EdgewaterComponent */}
-                <Route
-                    element={<AriaReserveProject/>}
-                    path={"/desarrollos/aria-reserve"}
-                />
-                <Route
-                    element={<MissoniBaiaProject/>}
-                    path={"/desarrollos/missoni-baia"}
-                />
-                <Route element={<VidaProject/>} path={"/desarrollos/vida"}/>
+        {/* Sunny Isles */}
+        <Route path="/desarrollos/st-regis" element={<StRegisProject />} />
+        <Route
+          element={<BentleyResidencesProject />}
+          path="/desarrollos/bentley-residences"
+        />
+        <Route
+          element={<TheMansionsAtAcqualinaProject />}
+          path="/desarrollos/the-mansions-at-acqualina"
+        />
 
-                {/* Sunny Isles */}
-                <Route path="/desarrollos/st-regis" element={<StRegisProject/>}/>
-                <Route
-                    element={<BentleyResidencesProject/>}
-                    path="/desarrollos/bentley-residences"
-                />
-                <Route
-                    element={<TheMansionsAtAcqualinaProject/>}
-                    path="/desarrollos/the-mansions-at-acqualina"
-                />
+        <Route path="/desarrollos/cipriani" element={<CiprianiProjec />} />
+        <Route element={<W11Project />} path={"/desarrollos/w11"} />
+        <Route
+          element={<AstonMartinProject />}
+          path={"/desarrollos/aston-martin"}
+        />
+        <Route
+          element={<TheEditionResidencesProject />}
+          path={"/desarrollos/edition-residences"}
+        />
+        <Route
+          element={<CasaBellaProject />}
+          path={"/desarrollos/casa-bella"}
+        />
+        <Route
+          element={<WaldorfAstoriaProject />}
+          path={"/desarrollos/waldorf-astoria"}
+        />
+        <Route element={<ShomaBayProject />} path={"/desarrollos/shoma-bay"} />
+        <Route element={<DomusProject />} path={"/desarrollos/domus"} />
+        <Route
+          element={<FourteenRiverDistrict />}
+          path={"/desarrollos/14-river-district"}
+        />
+        <Route element={<OraProject />} path={"/desarrollos/ora"} />
+        <Route element={<LoftyProject />} path={"/desarrollos/lofty"} />
+        {/* EdgewaterComponent */}
 
-                <Route path="/desarrollos/cipriani" element={<CiprianiProjec/>}/>
-                <Route element={<W11Project/>} path={"/desarrollos/w11"}/>
-                <Route
-                    element={<AstonMartinProject/>}
-                    path={"/desarrollos/aston-martin"}
-                />
-                <Route
-                    element={<TheEditionResidencesProject/>}
-                    path={"/desarrollos/edition-residences"}
-                />
-                <Route
-                    element={<CasaBellaProject/>}
-                    path={"/desarrollos/casa-bella"}
-                />
-                <Route
-                    element={<WaldorfAstoriaProject/>}
-                    path={"/desarrollos/waldorf-astoria"}
-                />
-                <Route
-                    element={<ShomaBayProject/>}
-                    path={"/desarrollos/shoma-bay"}
-                />
-                <Route element={<DomusProject/>} path={"/desarrollos/domus"}/>
-                <Route
-                    element={<FourteenRiverDistrict/>}
-                    path={"/desarrollos/14-river-district"}
-                />
-                <Route element={<OraProject/>} path={"/desarrollos/ora"}/>
-                <Route element={<LoftyProject/>} path={"/desarrollos/lofty"}/>
-                {/* EdgewaterComponent */}
+        <Route element={<TheVillaProject />} path={"/desarrollos/the-villa"} />
+        {/* Coconut Grove */}
+        <Route element={<VitaProject />} path={"/desarrollos/vita"} />
 
-                <Route
-                    element={<TheVillaProject/>}
-                    path={"/desarrollos/the-villa"}
-                />
-                {/* Coconut Grove */}
-                <Route element={<VitaProject/>} path={"/desarrollos/vita"}/>
+        {/* Bay Harbor Islands */}
+        <Route element={<VitaProject />} path={"/desarrollos/vita"} />
+        <Route element={<OriginProject />} path={"/desarrollos/origin"} />
 
-                {/* Bay Harbor Islands */}
-                <Route element={<VitaProject/>} path={"/desarrollos/vita"}/>
-                <Route element={<OriginProject/>} path={"/desarrollos/origin"}/>
+        <Route element={<Equipo />} path={"/asociados"} />
 
-                <Route element={<Equipo/>} path={"/asociados"}/>
+        <Route element={<ManzioneProperties />} path={"/manzione-properties"} />
 
-                <Route
-                    element={<ManzioneProperties/>}
-                    path={"/manzione-properties"}
-                />
+        {/* Miami Beach */}
 
-                {/* Miami Beach */}
+        <Route element={<FiveParkProject />} path={"/desarrollos/five-park"} />
+        <Route
+          element={<SeventyTwoParkProject />}
+          path={"/desarrollos/72-park"}
+        />
+        <Route element={<OneParkProject />} path={"/desarrollos/one-park"} />
+        {/* Pembroke Pines */}
+        <Route
+          element={<PineParkVillasProject />}
+          path={"/desarrollos/pine-park-villas"}
+        />
+        <Route
+          element={<PineRocklandEstatesProject />}
+          path={"/desarrollos/pine-rockland-estates"}
+        />
+        <Route element={<CentrisProject />} path={"/desarrollos/centris"} />
 
-                <Route
-                    element={<FiveParkProject/>}
-                    path={"/desarrollos/five-park"}
-                />
-                <Route
-                    element={<SeventyTwoParkProject/>}
-                    path={"/desarrollos/72-park"}
-                />
-                <Route element={<OneParkProject/>} path={"/desarrollos/one-park"}/>
-                {/* Pembroke Pines */}
-                <Route
-                    element={<PineParkVillasProject/>}
-                    path={"/desarrollos/pine-park-villas"}
-                />
-                <Route element={<PineRocklandEstatesProject/>} path={"/desarrollos/pine-rockland-estates"}/>
-                <Route element={<CentrisProject/>} path={"/desarrollos/centris"}/>
-
-                <Route
-                    element={<LaBaiaNorthProject/>}
-                    path={"/desarrollos/la-baia"}
-                />
-                <Route Component={LaMaréProject} path={"/desarrollos/la-maré"}/>
-                <Route Component={AlbaComponent} path={"/desarrollos/alba"}/>
-            </Routes>
-            <FloatingWhatsApp phoneNumber={"13056139338"} chatMessage={"¿Cómo te puedo ayudar hoy?"}
-                              statusMessage={"Respuestas dentro de las primeras 24 horas"}
-                              placeholder={"Quisiera programar una llamada telefónica o una reunión con un agente para aprender más sobre el mercado inmobiliario en el Sur de la Florida y analizar las opciones disponibles para mí "}
-                              accountName={"Scattolini Group"} notificationSound className={"floating-whatsapp"}/>
-            <Footer/>
-        </BrowserRouter>
-
-    );
+        <Route element={<LaBaiaNorthProject />} path={"/desarrollos/la-baia"} />
+        <Route Component={LaMaréProject} path={"/desarrollos/la-maré"} />
+        <Route Component={AlbaComponent} path={"/desarrollos/alba"} />
+      </Routes>
+      <FloatingWhatsApp
+        phoneNumber={"13056139338"}
+        chatMessage={"¿Cómo te puedo ayudar hoy?"}
+        statusMessage={"Respuestas dentro de las primeras 24 horas"}
+        placeholder={
+          "Quisiera programar una llamada telefónica o una reunión con un agente para aprender más sobre el mercado inmobiliario en el Sur de la Florida y analizar las opciones disponibles para mí "
+        }
+        accountName={"Scattolini Group"}
+        notificationSound
+        className={"floating-whatsapp"}
+      />
+      <Footer />
+    </BrowserRouter>
+  );
 }
