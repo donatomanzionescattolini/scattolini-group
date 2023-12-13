@@ -70,6 +70,7 @@ import AlbaComponent from "./components/desarrollos/Homestead/AlbaComponent.tsx"
 import PineRocklandEstatesProject from "./components/desarrollos/Pinecrest/PinelandRocklandEstatesProject.tsx";
 import OnGrandvilleComponent from "./components/desarrollos/Homestead/OnGrandvilleComponent.tsx";
 import FloridaCityComponent from "./components/areas/FloridaCityComponent.tsx";
+import SalernoEstatesComponent from "./components/desarrollos/Homestead/SalernoEstatesComponent.tsx";
 
 export default function App() {
   // State variable to store the visibility of the floating element
@@ -213,6 +214,10 @@ export default function App() {
         />
         {/* Bay Harbor Islands */}
         <Route element={<VitaProject />} path={"/desarrollos/vita"} />
+        <Route
+          element={<SalernoEstatesComponent />}
+          path={"/desarrollos/salerno-estates"}
+        />
         <Route element={<OriginProject />} path={"/desarrollos/origin"} />
 
         <Route element={<Equipo />} path={"/asociados"} />

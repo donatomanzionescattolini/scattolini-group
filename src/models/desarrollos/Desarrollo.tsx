@@ -31,7 +31,7 @@ class Desarrollo {
   public banner?: boolean;
   video?: ReactNode;
 
-  residencias?: string[];
+  residencias?: string[] | Map<String, string[]>;
   numberOfImages?: number;
   edificio: {
     añoDeConstrucciónOFinalización: number;
@@ -46,7 +46,7 @@ class Desarrollo {
   };
   direccion: string;
   añoDeConstrucciónOFinalización: number;
-  piesCuadrados: number | number[];
+  piesCuadrados: number | { start: number; end: number } | string;
   ubicación: string | ReactNode;
   numberOfUnits: number;
   typeOfUnits: string;
@@ -54,7 +54,7 @@ class Desarrollo {
   constructora: string | Constructora;
   numberOfBathrooms: number | string | { start: number; end: number };
   numberOfRooms: number | { start: number; end: number } | string;
-
+  numberOfParkingSpots: number | { start: number; end: number } | string;
   constructor(area?: Area) {
     this.area = area;
   }
@@ -83,43 +83,83 @@ class Desarrollo {
   }
 
   numberOfUnitsDisplay() {
-    return this.edificio.numberOfUnits + " " + this.edificio.typeOfUnits;
+    return this.numberOfUnits + " " + this.typeOfUnits;
   }
 
   displayCaracteristicasEdificio() {
     return (
       <dl>
         <dt>Ubicación</dt>
-        <dd>{this.edificio.ubicación}</dd>
+        <dd>{this.ubicación}</dd>
         <dt>Constructora</dt>
-        <dd>{this.edificio.constructora.toString()}</dd>
+        <dd>{this.constructora.toString()}</dd>
         <dt>Año de Construcción</dt>
-        <dd>{this.edificio.añoDeConstrucciónOFinalización}</dd>
+        <dd>{this.añoDeConstrucciónOFinalización}</dd>
         <dt>Tamaño de viviendas en pies cuadrados</dt>
-        <dd>{this.edificio.piesCuadrados}</dd>
+        <dd>{this.piesCuadrados as string}</dd>
         <dt>Modelos</dt>
-        <dd>{this.edificio.numberOfModels}</dd>
+        <dd>{this.numberOfModels}</dd>
         <dt>Número de viviendas</dt>
-        <dd>{this.edificio.numberOfUnits}</dd>
+        <dd>{this.numberOfUnits}</dd>
         <dt>Tipo de viviendas</dt>
-        <dd>{this.edificio.typeOfUnits}</dd>
+        <dd>{this.typeOfUnits}</dd>
         <dt>Número de cuartos</dt>
         <dd>
-          {typeof this.edificio.numberOfRooms === "number" ||
-          typeof this.edificio.numberOfRooms === "string"
-            ? this.edificio.numberOfRooms
-            : this.edificio.numberOfRooms["start"] +
-              " a " +
-              this.edificio.numberOfRooms["end"]}
+          {typeof this.numberOfRooms === "number" ||
+          typeof this.numberOfRooms === "string"
+            ? this.numberOfRooms
+            : this.numberOfRooms["start"] + " a " + this.numberOfRooms["end"]}
         </dd>
         <dt>Número de baños</dt>
         <dd>
-          {this.edificio.numberOfBathrooms["start"] +
-            " a " +
-            this.edificio.numberOfBathrooms["end"]}
+          {((typeof this.numberOfBathrooms === "string" ||
+            typeof this.numberOfBathrooms === "number") &&
+            this.numberOfBathrooms) ||
+            this.numberOfBathrooms["start"] +
+              " a " +
+              this.numberOfBathrooms["end"]}
         </dd>
       </dl>
     );
+  }
+  displayCaracteristicasResidencias() {
+    if (this.residencias instanceof Array) {
+      return (
+        <ul>
+          {this.residencias.map((r) => (
+            <>
+              <li>{r}</li>
+            </>
+          ))}
+        </ul>
+      );
+    } else {
+      return (
+        <dl>
+          {[...this.residencias.keys()].map((k: string) => (
+            <>
+              <dt>{k}</dt>
+              <dd>
+                <ul>
+                  {(this.residencias as Map<string, string[]>)
+                    .get(k)
+                    .map((r) => (
+                      <li>{r}</li>
+                    ))}
+                </ul>
+              </dd>
+            </>
+          ))}
+        </dl>
+      );
+    }
+  }
+  createCaracteristicas(): React.ReactNode | caracteristicas {
+    return {
+      residencias: <>{this.displayCaracteristicasResidencias()}</>,
+      edificio: <>{this.displayCaracteristicasEdificio()}</>,
+      amenidades: <>{this.displayAmenidades()}</>,
+    };
   }
 }
 

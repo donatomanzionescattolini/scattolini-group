@@ -16,17 +16,17 @@ export default function Alba() {
   AlbaObject.titulo = "On Alba";
   AlbaObject.subtitulo = "Una nueva era de hogares y vecindarios";
 
-  AlbaObject.edificio = {
-    numberOfBathrooms: { start: 3, end: 4.5 },
-    numberOfUnits: 137,
-    piesCuadrados: 2281,
-    numberOfModels: 5,
-    typeOfUnits: "viviendas unifamiliares",
-    constructora: "Onx Homes",
-    ubicación: <address>1100 W Palm Drive Florida City, FL 33034</address>,
-    añoDeConstrucciónOFinalización: 2023,
-    numberOfRooms: 5,
-  };
+  AlbaObject.numberOfBathrooms = { start: 3, end: 4.5 };
+  AlbaObject.numberOfUnits = 137;
+  AlbaObject.piesCuadrados = 2281;
+  AlbaObject.numberOfModels = 5;
+  AlbaObject.typeOfUnits = "viviendas unifamiliares";
+  AlbaObject.constructora = "Onx Homes";
+  AlbaObject.ubicación = (
+    <address>1100 W Palm Drive Florida City; FL 33034</address>
+  );
+  AlbaObject.añoDeConstrucciónOFinalización = 2023;
+  AlbaObject.numberOfRooms = 5;
 
   const amenidades = new Map();
 
@@ -75,19 +75,7 @@ export default function Alba() {
     "Gabinetes de cocina de 30",
   ];
 
-  AlbaObject.caracteristicas = {
-    residencias: (
-      <ul>
-        {AlbaObject.residencias.map((r) => (
-          <>
-            <li>{r}</li>
-          </>
-        ))}
-      </ul>
-    ),
-    edificio: <>{AlbaObject.displayCaracteristicasEdificio()}</>,
-    amenidades: <>{AlbaObject.displayAmenidades()}</>,
-  };
+  AlbaObject.caracteristicas = AlbaObject.createCaracteristicas();
   AlbaObject.area = FloridaCity();
 
   return AlbaObject;

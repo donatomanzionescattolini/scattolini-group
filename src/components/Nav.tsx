@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import {
+  MDBBtn,
   MDBCol,
   MDBCollapse,
   MDBContainer,
@@ -9,6 +10,7 @@ import {
   MDBDropdownToggle,
   MDBIcon,
   MDBInput,
+  MDBInputGroup,
   MDBNavbar,
   MDBNavbarBrand,
   MDBNavbarItem,
@@ -248,11 +250,15 @@ const Nav = () => {
             <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle tag="a">Áreas</MDBDropdownToggle>
-                <MDBDropdownMenu className="responsive">
+                <MDBDropdownMenu
+                  className="responsive"
+                  onDrop={() => setSearchQuery("")}
+                >
                   <>
                     <MDBInput
                       placeholder="Buscar"
                       value={searchQueryArea}
+                      alt="Buscar"
                       onChange={handleSearchArea}
                     />
                     {filteredAreas.map((area) => {
@@ -275,13 +281,21 @@ const Nav = () => {
                 <MDBDropdownToggle tag="a" link>
                   Desarrollos
                 </MDBDropdownToggle>
-                <MDBDropdownMenu className="responsive p-2">
-                  <MDBInput
-                    placeholder="Buscar"
-                    value={searchQuery}
-                    onChange={handleSearch}
-                  />
-
+                <MDBDropdownMenu
+                  className="responsive p-2"
+                  onDrop={() => setSearchQueryArea("")}
+                >
+                  <MDBInputGroup tag="form" className="d-flex w-50 ms-4 my-3">
+                    <input
+                      className="form-control"
+                      placeholder="Buscar"
+                      aria-label="Buscar"
+                      type="Search"
+                      value={searchQuery}
+                      onChange={handleSearch}
+                    />
+                    {/* <MDBBtn outline>Buscar</MDBBtn> */}
+                  </MDBInputGroup>
                   {renderMenuItems()}
                 </MDBDropdownMenu>
               </MDBDropdown>
