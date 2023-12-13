@@ -3,7 +3,7 @@ $lightblue: #1F595A;
 $brown: #8A6944;
 $lightbrown: #EDE3D6;
 $background: #f2f2ed;
-$secondBackground: #ECEFF1;
+$secondBackground: rgb(251, 251, 251);
 .fa-spin-fast {
   -webkit-animation: fa-spin-fast 0.2s infinite linear !important;
   animation: fa-spin-fast 0.2s infinite linear !important;
@@ -1540,11 +1540,28 @@ h3 {
   font-weight: 200 !important;
 }
 
-#root > section > div.row.active-with-click > div:nth-child(2) > article > div > div > img, #root > section > div.row.active-with-click > div:nth-child(5) > article > div > div > img, #root > section > div.row.active-with-click > div:nth-child(8) > article > div > div > img, #root > section > div.row.active-with-click > div:nth-child(12) > article > div > div > img, #root > section > div.row.active-with-click > div:nth-child(12) > article > div > div > img {
+#asociados > div.row.active-with-click > div:nth-child(8) > article > div > div > img,#asociados > div.row.active-with-click > div:nth-child(12) > article > div > div > img,#asociados > div.row.active-with-click > div:nth-child(2) > article > div > div > img{
   width: 70% !important;
   margin-inline: 15% !Important;
 }
 
-#root > section > div.row.active-with-click > div:nth-child(12) > article > div > div > img {
+#root > section > div.row.active-with-click > div:nth-child(12) > article > div > div > img, #asociados > div.row.active-with-click > div:nth-child(10) > article > div > div > img, #asociados > div.row.active-with-click > div:nth-child(1) > article > div > div > img, #asociados > div.row.active-with-click > div:nth-child(4) > article > div > div > img{
   height: 105% !important;
+  margin-top:5%!important;
+}
+
+
+section#asociados {
+  background: $background!important;
+}
+
+#root {
+  background:$background;
+}
+#asociados > div.row.active-with-click > div  article  {
+ 
+  padding:2rem;
+}
+.img-container {
+  background:#F2ECE5!important;
 }
