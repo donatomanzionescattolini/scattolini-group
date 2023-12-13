@@ -1540,12 +1540,15 @@ h3 {
   font-weight: 200 !important;
 }
 
-#asociados > div.row.active-with-click > div:nth-child(8) > article > div > div > img,#asociados > div.row.active-with-click > div:nth-child(12) > article > div > div > img,#asociados > div.row.active-with-click > div:nth-child(2) > article > div > div > img{
+#foto-dania, #foto-victoria,#foto-anahid, #foto-gabriela,#foto-dayana{
   width: 70% !important;
   margin-inline: 15% !Important;
 }
-
-#root > section > div.row.active-with-click > div:nth-child(12) > article > div > div > img, #asociados > div.row.active-with-click > div:nth-child(10) > article > div > div > img, #asociados > div.row.active-with-click > div:nth-child(1) > article > div > div > img, #asociados > div.row.active-with-click > div:nth-child(4) > article > div > div > img{
+#foto-dayana, #foto-mariolga{
+  width: 80% !important;
+  margin-inline: 10% !Important;
+}
+#foto-victoria,#foto-mariolga,#foto-elda,#foto-laila,#foto-anahid{
   height: 105% !important;
   margin-top:5%!important;
 }

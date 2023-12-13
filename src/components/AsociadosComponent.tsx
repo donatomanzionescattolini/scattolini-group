@@ -26,6 +26,7 @@ export default function Equipo() {
             <div className="mc-content">
               <div className="img-container w-80 h-100 mx-auto">
                 <img
+                  id="foto-elda"
                   className="img-responsive object-fit-cover w-100 m-0 p-0  "
                   src="https://pagina-mama.s3.amazonaws.com/assets2/elda/elda-transparent-bg.png"
                   width="80%"
@@ -44,6 +45,7 @@ export default function Equipo() {
             <div className="mc-content">
               <div className="img-container w-50 h-100 mx-auto">
                 <img
+                  id="foto-dania"
                   className="img-responsive object-fit-cover w-100 h-100 m-0 p-0  "
                   src={
                     "https://pagina-mama.s3.amazonaws.com/assets2/asociados/dania-transparent-bg.png"
@@ -85,6 +87,7 @@ export default function Equipo() {
             <div className="mc-content">
               <div className="img-container w-80 h-100 mx-auto">
                 <img
+                  id="foto-laila"
                   className="img-responsive object-fit-cover w-100 m-0 p-0  "
                   src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/laila-transparent-bg.png"
                   width="80%"
@@ -99,7 +102,7 @@ export default function Equipo() {
           <Link to="/manzione-properties">
             <article className="material-card Pink">
               <h2>
-                <span>Monica Manzione</span>
+                <span>Mónica Manzione</span>
                 <strong>
                   {/* <i className="fa fa-fw fa-star" /> */}
                   🏡 Agente y Property Manager
@@ -168,6 +171,7 @@ export default function Equipo() {
             <div className="mc-content">
               <div className="img-container p-0">
                 <img
+                  id="foto-gabriela"
                   className="img-responsive object-fit-cover w-100 m-0 p-0  "
                   src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/gabriela-transparent-bg.png"
                   width="80%"
@@ -186,11 +190,12 @@ export default function Equipo() {
               <strong>🏠 Agente</strong>
             </h2>
             <div className="mc-content">
-              <div className="img-container w-80 h-100 mx-auto">
+              <div className="img-container h-100 mx-auto">
                 <img
+                  id="foto-mariolga"
                   className="img-responsive object-fit-cover w-100 m-0 p-0  "
                   src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/mariolga-transparent-bg.png"
-                  width="80%"
+                  width="100%"
                   height="auto"
                   style={{ minHeight: "100%!important" }}
                 />
@@ -207,6 +212,7 @@ export default function Equipo() {
             <div className="mc-content">
               <div className="img-container w-80 h-100 mx-auto">
                 <img
+                  id="foto-victoria"
                   className="img-responsive object-fit-cover w-100 m-0 p-0  "
                   src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/victoria-transparent-bg.png"
                   width="80%"
@@ -230,6 +236,7 @@ export default function Equipo() {
                   src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/dayana-transparent-bg.png"
                   width="80%"
                   height="auto"
+                  id="foto-dayana"
                   style={{ minHeight: "100%!important" }}
                 />
               </div>
@@ -245,6 +252,7 @@ export default function Equipo() {
             <div className="mc-content">
               <div className="img-container w-80 h-100 mx-auto">
                 <img
+                  id="foto-anahid"
                   className="img-responsive object-fit-cover w-100 m-0 p-0  "
                   src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/anahid-transparent-bg.png"
                   width="80%"
