@@ -11,6 +11,6 @@ export default function FloridaCity() {
   floridaDto.slogan =
     "Puerta de Entrada a los Cayos de Florida y los Everglades";
   floridaDto.titulo = "Florida City";
-
+  floridaDto.numberOfImages = 15;
   return floridaDto;
 }

@@ -57,6 +57,7 @@ import {Area} from "../../models/areas/Area.tsx";
 import Areas from "../areas/Areas.tsx";
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import OnGrandville from "./Homestead/OnGrandville.tsx";
+import FloridaCity from "../areas/FloridaCity.tsx";
 
 interface desarrolloMapItem {
     area: string;
@@ -78,6 +79,8 @@ desarrolloMap.push({area: MiamiBeach().name.trim().toLowerCase(), des: new Set([
 desarrolloMap.push({area: NorthBayVillage().name.trim().toLowerCase(), des: new Set([ShomaBay()])});
 desarrolloMap.push({area: Pinecrest().name.trim().toLowerCase(), des: new Set([Centris(), PineRocklandEstates(), PineParkVillas()])});
 desarrolloMap.push({area: SunnyIsles().name.trim().toLowerCase(), des: new Set([BentleyResidences(), StRegis(), TheMansionsAtAcqualina()])});
+
+desarrolloMap.push({area:FloridaCity().name.trim().toLowerCase(),des:new Set()});
 
 desarrolloMap.push({area: CoralGables().name.trim().toLowerCase(), des: new Set([TheAvenue()])});
 desarrolloMap.map(entry => {
