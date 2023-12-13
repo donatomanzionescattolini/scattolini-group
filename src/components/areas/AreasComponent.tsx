@@ -19,7 +19,7 @@ function AreasComponent() {
                   style={{
                     background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/thumbnail.webp')`,
                     backgroundSize: "cover",
-                    backgroundPosition: "center",
+                    backgroundPosition: "50% 15%",
                   }}
                 ></div>
                 <h4 className="text-center card-title m-2">{area.titulo}</h4>
