@@ -71,6 +71,8 @@ import PineRocklandEstatesProject from "./components/desarrollos/Pinecrest/Pinel
 import OnGrandvilleComponent from "./components/desarrollos/Homestead/OnGrandvilleComponent.tsx";
 import FloridaCityComponent from "./components/areas/FloridaCityComponent.tsx";
 import SalernoEstatesComponent from "./components/desarrollos/Homestead/SalernoEstatesComponent.tsx";
+import AreasRoutes from "./routes/AreasRoutes.tsx";
+import DesarrollosRoutes from "./routes/desarrollos/DesarrollosRoutes.tsx";
 
 export default function App() {
   // State variable to store the visibility of the floating element
@@ -104,148 +106,12 @@ export default function App() {
         <Route element={<DesarrollosTodos />} path={"/desarrollos"} />
         <Route element={<AreasComponent />} path="/areas" />
 
-        {/* areas */}
-        <Route element={<BrickellComponent />} path="/areas/brickell" />
-        <Route element={<DowntownComponent />} path="/areas/downtown" />
-        <Route element={<HomesteadComponent />} path="/areas/homestead" />
-        <Route element={<BayHarborComponent />} path="/areas/bay-harbor" />
-        <Route
-          element={<NorthBayVillageComponent />}
-          path="/areas/north-bay-village"
-        />
-        <Route element={<CoralGablesComponent />} path="/areas/coral-gables" />
-        <Route
-          element={<CoconutGroveComponent />}
-          path="/areas/coconut-grove"
-        />
-        <Route element={<DoralComponent />} path="/areas/doral"></Route>
-        <Route element={<PinecrestComponent />} path="/areas/pinecrest"></Route>
-        <Route
-          element={<SunnyIslesComponent />}
-          path="/areas/sunny-isles"
-        ></Route>
-        <Route element={<EdgewaterComponent />} path="/areas/edgewater"></Route>
-        <Route
-          element={<MiamiBeachComponent />}
-          path="/areas/miami-beach"
-        ></Route>
-        <Route
-          element={<OnGrandvilleComponent />}
-          path="/desarrollos/on-grandville"
-        />
-
-        {/* desarrollos
-         */}
-
-        {/* Coral Gables */}
-        <Route
-          element={<TheAvenueProject />}
-          path={"/desarrollos/the-avenue"}
-        />
-
-        {/* BrickellComponent */}
-        <Route
-          element={<FourteenTwentyEightProject />}
-          path="/desarrollos/1428-brickell"
-        />
-        <Route
-          element={<BaccaratResidencesComponent />}
-          path="/desarrollos/baccarat"
-        />
-        <Route element={<TheWellProject />} path={"/desarrollos/the-well"} />
-        <Route element={<TheElserProject />} path={"/desarrollos/the-elser"} />
-
-        {/* EdgewaterComponent */}
-        <Route
-          element={<AriaReserveProject />}
-          path={"/desarrollos/aria-reserve"}
-        />
-        <Route
-          element={<MissoniBaiaProject />}
-          path={"/desarrollos/missoni-baia"}
-        />
-        <Route element={<VidaProject />} path={"/desarrollos/vida"} />
-
-        {/* Sunny Isles */}
-        <Route path="/desarrollos/st-regis" element={<StRegisProject />} />
-        <Route
-          element={<BentleyResidencesProject />}
-          path="/desarrollos/bentley-residences"
-        />
-        <Route
-          element={<TheMansionsAtAcqualinaProject />}
-          path="/desarrollos/the-mansions-at-acqualina"
-        />
-
-        <Route path="/desarrollos/cipriani" element={<CiprianiProjec />} />
-        <Route element={<W11Project />} path={"/desarrollos/w11"} />
-        <Route
-          element={<AstonMartinProject />}
-          path={"/desarrollos/aston-martin"}
-        />
-        <Route
-          element={<TheEditionResidencesProject />}
-          path={"/desarrollos/edition-residences"}
-        />
-        <Route
-          element={<CasaBellaProject />}
-          path={"/desarrollos/casa-bella"}
-        />
-        <Route
-          element={<WaldorfAstoriaProject />}
-          path={"/desarrollos/waldorf-astoria"}
-        />
-        <Route element={<ShomaBayProject />} path={"/desarrollos/shoma-bay"} />
-        <Route element={<DomusProject />} path={"/desarrollos/domus"} />
-        <Route
-          element={<FourteenRiverDistrict />}
-          path={"/desarrollos/14-river-district"}
-        />
-        <Route element={<OraProject />} path={"/desarrollos/ora"} />
-        <Route element={<LoftyProject />} path={"/desarrollos/lofty"} />
-        {/* EdgewaterComponent */}
-
-        <Route element={<TheVillaProject />} path={"/desarrollos/the-villa"} />
-        {/* Coconut Grove */}
-        <Route element={<VitaProject />} path={"/desarrollos/vita"} />
-        <Route
-          element={<FloridaCityComponent />}
-          path={"/areas/florida-city"}
-        />
-        {/* Bay Harbor Islands */}
-        <Route element={<VitaProject />} path={"/desarrollos/vita"} />
-        <Route
-          element={<SalernoEstatesComponent />}
-          path={"/desarrollos/salerno-estates"}
-        />
-        <Route element={<OriginProject />} path={"/desarrollos/origin"} />
+        {DesarrollosRoutes()}
 
         <Route element={<Equipo />} path={"/asociados"} />
 
         <Route element={<ManzioneProperties />} path={"/manzione-properties"} />
-
-        {/* Miami Beach */}
-
-        <Route element={<FiveParkProject />} path={"/desarrollos/five-park"} />
-        <Route
-          element={<SeventyTwoParkProject />}
-          path={"/desarrollos/72-park"}
-        />
-        <Route element={<OneParkProject />} path={"/desarrollos/one-park"} />
-        {/* Pembroke Pines */}
-        <Route
-          element={<PineParkVillasProject />}
-          path={"/desarrollos/pine-park-villas"}
-        />
-        <Route
-          element={<PineRocklandEstatesProject />}
-          path={"/desarrollos/pine-rockland-estates"}
-        />
-        <Route element={<CentrisProject />} path={"/desarrollos/centris"} />
-
-        <Route element={<LaBaiaNorthProject />} path={"/desarrollos/la-baia"} />
-        <Route Component={LaMaréProject} path={"/desarrollos/la-maré"} />
-        <Route Component={AlbaComponent} path={"/desarrollos/alba"} />
+        {AreasRoutes()}
       </Routes>
       <FloatingWhatsApp
         phoneNumber={"13056139338"}

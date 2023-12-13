@@ -94,7 +94,7 @@ const Nav = () => {
   const [searchQueryArea, setSearchQueryArea] = useState("");
   const handleSearchArea = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQueryArea(event.target.value);
-    if (searchQuery === "") {
+    if (searchQueryArea === "") {
       setFilteredAreas(areas);
       return;
     }
@@ -250,10 +250,7 @@ const Nav = () => {
             <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle tag="a">Áreas</MDBDropdownToggle>
-                <MDBDropdownMenu
-                  className="responsive"
-                  onDrop={() => setSearchQuery("")}
-                >
+                <MDBDropdownMenu className="responsive">
                   <>
                     <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
                       <input
@@ -286,10 +283,7 @@ const Nav = () => {
                 <MDBDropdownToggle tag="a" link>
                   Desarrollos
                 </MDBDropdownToggle>
-                <MDBDropdownMenu
-                  className="responsive p-2"
-                  onDrop={() => setSearchQueryArea("")}
-                >
+                <MDBDropdownMenu className="responsive p-2">
                   <MDBInputGroup tag="form" className="d-flex w-50 ms-4 my-3">
                     <input
                       className="form-control"

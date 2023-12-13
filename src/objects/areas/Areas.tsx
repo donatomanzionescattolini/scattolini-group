@@ -13,23 +13,9 @@ import Pinecrest from "./Pinecrest.tsx";
 import SunnyIsles from "./SunnyIsles.tsx";
 import { Area } from "../../models/areas/Area.tsx";
 import FloridaCity from "./FloridaCity.tsx";
+import MiamiBeach from "./MiamiBeach.tsx";
+import { desarrolloMap } from "../desarrollos/Desarrollos.ts";
 
-export default function Areas(): Area[] {
-  const AllAreaObjects: Area[] = [];
-
-  AllAreaObjects.push(Brickell());
-  AllAreaObjects.push(CoconutGrove());
-  AllAreaObjects.push(CoralGables());
-  AllAreaObjects.push(BayHarbor());
-  AllAreaObjects.push(Downtown());
-
-  AllAreaObjects.push(Edgewater());
-
-  AllAreaObjects.push(Homestead());
-  AllAreaObjects.push(Doral());
-  AllAreaObjects.push(NorthBayVillage());
-  AllAreaObjects.push(Pinecrest());
-  AllAreaObjects.push(SunnyIsles());
-  AllAreaObjects.push(FloridaCity());
-  return AllAreaObjects;
+export default function Areas() {
+  return [...desarrolloMap.values()].map((x) => x.area) as Area[];
 }
