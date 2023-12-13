@@ -255,12 +255,17 @@ const Nav = () => {
                   onDrop={() => setSearchQuery("")}
                 >
                   <>
-                    <MDBInput
-                      placeholder="Buscar"
-                      value={searchQueryArea}
-                      alt="Buscar"
-                      onChange={handleSearchArea}
-                    />
+                    <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
+                      <input
+                        className="form-control"
+                        placeholder="Buscar"
+                        aria-label="Buscar"
+                        type="Search"
+                        value={searchQueryArea}
+                        onChange={handleSearchArea}
+                      />
+                      {/* <MDBBtn outline>Buscar</MDBBtn> */}
+                    </MDBInputGroup>
                     {filteredAreas.map((area) => {
                       return (
                         <MDBDropdownItem link href={"/areas/" + area.name}>
