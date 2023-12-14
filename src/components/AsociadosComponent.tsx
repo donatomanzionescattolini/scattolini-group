@@ -39,6 +39,7 @@ export default function Equipo() {
                       .toLowerCase()}-transparent-bg.png`}
                     width="80%"
                     height="auto"
+                    alt={asociado.firstName+" " + asociado.lastName}
                   />
                 </div>
               </div>

@@ -75,27 +75,11 @@ import AreasRoutes from "./routes/AreasRoutes.tsx";
 import DesarrollosRoutes from "./routes/desarrollos/DesarrollosRoutes.tsx";
 
 export default function App() {
-  // State variable to store the visibility of the floating element
-  const [show, setShow] = useState(true);
 
-  // Function to toggle the visibility of the floating element
-  const toggleShow = () => {
-    setShow(!show);
-  };
   return (
     <BrowserRouter>
       <Nav />
-      {show && (
-        <div
-          className={"floating-element object-fit-cover"}
-          style={{ background: "rgb(255,255,255,0.0)" }}
-        >
-          <MDBBtn className="close-button" onClick={toggleShow} type={"button"}>
-            Close
-          </MDBBtn>
-          <FloatingContactFormComponent />
-        </div>
-      )}
+      
 
       <Routes>
         {/*pestañas*/}

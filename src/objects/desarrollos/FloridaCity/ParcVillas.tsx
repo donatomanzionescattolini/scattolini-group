@@ -4,7 +4,7 @@ import FloridaCity from "../../areas/FloridaCity.tsx";
 export default function ParcVillas() {
   const ParcVillasObject = new Desarrollo();
   ParcVillasObject.nombre = "parc-villas";
-  ParcVillasObject.titulo = "Park Villas";
+  ParcVillasObject.titulo = "Parc Villas";
   ParcVillasObject.subtitulo = "";
   ParcVillasObject.caracteristicas = {
     edificio: <></>,

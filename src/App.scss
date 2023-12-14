@@ -1201,7 +1201,6 @@ img {
   }
   #galeria-proyectos .container {
     height: 400px;
-    max-block-size: fit-content !important;
   }
   #galeria-proyectos > div > div.e > div > a.carousel-control-next {
     height: 100px;
@@ -1216,4 +1215,7 @@ img {
     width: 20px;
     margin-inline: auto;
   }
+}
+a {
+  text-decoration:none!important;
 }
