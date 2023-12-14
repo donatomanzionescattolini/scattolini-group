@@ -3,12 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700;800;900&family=Arima:wght@100;200;300;400;500;600;700&family=GFS+Neohellenic&family=Josefin+Slab:wght@100;200;300;400;500;600;700&family=Cormorant Garamond:wght@100;300;400;700;900&family=Merriweather:wght@300;400;700;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Mulish:wght@200;300;400&family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arima:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Mulish:wght@200;300;400&family=Quicksand:wght@300;400;500;600;700&display=swap");
 
-$darkblue: #0E2D2F;
-$lightblue: #1F595A;
-$brown: #8A6944;
-$lightbrown: #EDE3D6;
+$darkblue: #0e2d2f;
+$lightblue: #1f595a;
+$brown: #8a6944;
+$lightbrown: #ede3d6;
 $background: #f2f2ed;
-;
 $secondBackground: rgb(251, 251, 251);
 $white: #fff;
 $black: #000;
@@ -27,13 +26,11 @@ div {
   font-family: "Cormorant Garamond";
 }
 
-
 .Servicios a {
   font-size: 12px;
   font-weight: bolder;
   margin: top 5px;
 }
-
 
 #hero-subheading {
   color: $background;
@@ -42,7 +39,6 @@ div {
 .card-title,
 .card-body {
   margin-block-end: 8%;
-
 }
 
 .card {
@@ -85,7 +81,8 @@ main {
   padding: 0;
 }
 
-.colour-block h4.card-title, .white-block h4.card-title {
+.colour-block h4.card-title,
+.white-block h4.card-title {
   color: $darkblue !important;
 }
 
@@ -108,7 +105,6 @@ section > h2 {
 section h4 {
   font-size: calc(1.275rem + 0.3vw);
 }
-
 
 .video-container {
   position: relative;
@@ -164,7 +160,7 @@ section h4 {
 
 .video-container .btn-large {
   color: white !important;
-  background: rgb(79, 79, 79)
+  background: rgb(79, 79, 79);
 }
 
 /* .btn:hover {
@@ -175,7 +171,9 @@ nav {
   color: #84705c; /* background: #1b3433  ;  color: $background  ;  color: #AC9474 ; */
 }
 
-#navbarNavDropdown > ul > li a:hover, #navbarNavDropdown > ul > li:hover, .dropdown-item:hover {
+#navbarNavDropdown > ul > li a:hover,
+#navbarNavDropdown > ul > li:hover,
+.dropdown-item:hover {
   //background: #1b3433!important;
   color: $brown !important;
   cursor: pointer !important;
@@ -196,7 +194,6 @@ nav {
 a:hover {
   cursor: pointer !important;
 }
-
 
 .carouselExampleInterval {
   width: 70%;
@@ -239,7 +236,6 @@ section.Servicios p {
   background-position-x: center;
 }
 
-
 main > section.city-firstsection {
   line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
@@ -259,10 +255,10 @@ main > section.city-firstsection {
 }
 
 #root
-> main
-> section.city-firstsection.w-100.row
-> div.row.d-flex.align-items-center.justify-content-around
-> div.col-xs-12.col-sm-12.col-md-4.col-lg-4 {
+  > main
+  > section.city-firstsection.w-100.row
+  > div.row.d-flex.align-items-center.justify-content-around
+  > div.col-xs-12.col-sm-12.col-md-4.col-lg-4 {
   padding: 0% important;
   justify-content: center;
 }
@@ -404,7 +400,6 @@ div.container-fluid {
   padding: 0;
 }
 
-
 .Servicios {
   color: $brown;
 }
@@ -451,39 +446,39 @@ main {
 }
 
 .github-corner:hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out
+  animation: octocat-wave 560ms ease-in-out;
 }
 
 @keyframes octocat-wave {
-  0%, 100% {
-    transform: rotate(0)
+  0%,
+  100% {
+    transform: rotate(0);
   }
-  20%, 60% {
-    transform: rotate(-25deg)
+  20%,
+  60% {
+    transform: rotate(-25deg);
   }
-  40%, 80% {
-    transform: rotate(10deg)
+  40%,
+  80% {
+    transform: rotate(10deg);
   }
 }
 
 @media (max-width: 500px) {
   .github-corner:hover .octo-arm {
-    animation: none
+    animation: none;
   }
   .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out
+    animation: octocat-wave 560ms ease-in-out;
   }
 }
 
-
 hr {
-
   border: 1px solid $darkblue;
   height: 1px;
   width: 10%;
   position: relative;
   margin: 30px auto;
-
 
   &.center-ball {
     background: $darkblue;
@@ -498,7 +493,7 @@ hr {
 
       margin-top: -4px !important;
       margin-left: 50% !important;
-      margin: 0 0 0 -3px !Important;
+      margin: 0 0 0 -3px !important;
     }
   }
 
@@ -705,7 +700,6 @@ nav ul ul {
 }
 
 .navbar-nav > * {
-
   margin-inline: 15px;
 }
 
@@ -738,7 +732,6 @@ section.Servicios p {
 }
 
 @media screen and (min-width: 768px) {
-
   main > section.city-firstsection {
     font-family: "Cormorant Garamond", serif;
     color: $brown;
@@ -757,13 +750,12 @@ section.Servicios p {
   max-height: 300px !important;
   width: auto !important;
   max-width: 100% !important;
-
 }
 
 #root
-> main
-> section.city-firstsection.w-100.row
-> div.row.d-flex.align-items-center.justify-content-around {
+  > main
+  > section.city-firstsection.w-100.row
+  > div.row.d-flex.align-items-center.justify-content-around {
   margin: 0;
 }
 
@@ -775,7 +767,6 @@ section.Servicios p {
   text-align: justify;
   line-height: 1.5;
 }
-
 
 .video-container {
   font-size: 1rem;
@@ -872,7 +863,12 @@ section.Servicios p {
   margin: auto;
 }
 
-#root > div > main > div > div.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xl-6.p-4 > h4 {
+#root
+  > div
+  > main
+  > div
+  > div.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xl-6.p-4
+  > h4 {
   margin-top: 10%;
 }
 
@@ -937,9 +933,7 @@ div.react-pdf__Page .annotationLayer {
 #root > div > main > div.video-container > div.content.text-center.w-100 > a {
   background-color: #2b2a2e;
   color: $background;
-
 }
-
 
 #banner {
   width: "100%";
@@ -947,14 +941,11 @@ div.react-pdf__Page .annotationLayer {
 }
 
 #propiedades-en-area a:hover {
-
   color: rgb(130, 114, 89);
 }
 
-
-
 #asociados-row div {
-  height: 250px !Important;
+  height: 250px !important;
   align-items: center;
   padding: 10px !important;
   margin-block: 20px !important;
@@ -997,9 +988,7 @@ h2 {
 
 p {
   font-size: 16px;
-
 }
-
 
 /*------------------*/
 /*  SKEW CLOCKWISE  */
@@ -1009,9 +998,13 @@ p {
   height: 100px;
   position: absolute;
   left: 0px;
-  background: linear-gradient(to right bottom, $secondBackground 49%, $background 50%), linear-gradient(-50deg, $background 16px, $secondBackground 0);
+  background: linear-gradient(
+      to right bottom,
+      $secondBackground 49%,
+      $background 50%
+    ),
+    linear-gradient(-50deg, $background 16px, $secondBackground 0);
 }
-
 
 /*-------------------------*/
 /* SKEW COUNTER CLOCKWISE  */
@@ -1023,12 +1016,15 @@ p {
   margin-top: 0;
   padding-top: 0;
   left: 0px;
-  background: linear-gradient(to left bottom, $background 49%, $secondBackground 50%);
+  background: linear-gradient(
+    to left bottom,
+    $background 49%,
+    $secondBackground 50%
+  );
 }
 
-
 h2 {
-  text-align: center !Important;
+  text-align: center !important;
 }
 
 iframe {
@@ -1038,7 +1034,6 @@ iframe {
 main {
   padding: 5%;
 }
-
 
 .carousel-control-next-icon {
   background-image: url("https://pagina-mama.s3.amazonaws.com/assets2/icons/next.png");
@@ -1050,7 +1045,6 @@ main {
 
 #accordion ul {
   text-align: left;
-
 }
 
 /* hr {
@@ -1069,7 +1063,7 @@ main {
   }
   #asociados-row {
     padding: 0 !important;
-    margin: 0 !Important;
+    margin: 0 !important;
   }
 }
 
@@ -1082,7 +1076,6 @@ main {
   align-items: center !important;
   background: $secondBackground !important;
   height: fit-content !important;
-
 }
 
 .navbar-toggler {
@@ -1097,10 +1090,10 @@ dl {
   text-align: justify;
 }
 
-#root > div > main > video, #root > div > main > iframe {
+#root > div > main > video,
+#root > div > main > iframe {
   width: 90vw;
 }
-
 
 /* html{
 
@@ -1114,15 +1107,15 @@ dl {
 
 } */
 
-
-MDBCard, .card, md-card, mdc-card {
+MDBCard,
+.card,
+md-card,
+mdc-card {
   border-radius: 10px !important;
 }
 
 @media screen and (max-width: 760px) {
   #collapsibleNavbar {
-
-
     height: fit-content !important;
     padding: 20px !important;
     justify-content: center !important;
@@ -1130,14 +1123,11 @@ MDBCard, .card, md-card, mdc-card {
     text-align: center !important;
   }
   p.text-muted {
-
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
   }
-
 }
-
 
 .propiedades {
   margin-inline: 10%;
@@ -1145,11 +1135,9 @@ MDBCard, .card, md-card, mdc-card {
 
 video {
   max-width: 100% !important;
-
 }
 
 .floating-element {
-
   position: fixed;
 
   bottom: 10px;
@@ -1171,29 +1159,61 @@ video {
   display: initial; /* Hide by default */
 
   background-color: $background !important;
-
 }
 
-
 .navbar-light {
-
   height: 143px !important;
-
 }
 
 .floating-whatsapp {
   position: relative !important;
-
 }
-#panel1a-header > h2 > button,#panel3a-header > h2:nth-child(1) > button:nth-child(1),#panel2a-header > h2:nth-child(1) > button:nth-child(1) {
-  background:$background!important;
+#panel1a-header > h2 > button,
+#panel3a-header > h2:nth-child(1) > button:nth-child(1),
+#panel2a-header > h2:nth-child(1) > button:nth-child(1) {
+  background: $background !important;
 }
 
 img {
   justify-content: center;
-  max-width: 100%!important;
-  max-height: 100%!important;
+  max-width: 100% !important;
+  max-height: 100% !important;
 }
-#root > section > div > h2{
-  margin-top:2rem!important;
+#root > section > div > h2 {
+  margin-top: 2rem !important;
+}
+@media screen and (max-width: 768px) {
+  #domus header {
+    height: 160px !important;
+  }
+  #domus #banner {
+    background-size: 300% 125% !important;
+    background-position: center !important;
+  }
+  .e picture {
+    height: 160px !important;
+    align-items: flex-start !important;
+    margin-top: 0 !important;
+  }
+  #galeria-proyectos h3 {
+    margin-top: 25% !important;
+    margin-bottom: 2% !important;
+  }
+  #galeria-proyectos .container {
+    height: 400px;
+    max-block-size: fit-content !important;
+  }
+  #galeria-proyectos > div > div.e > div > a.carousel-control-next {
+    height: 100px;
+    margin-top: 23px;
+  }
+  #galeria-proyectos > div > div.e > div > a.carousel-control-next,
+  #galeria-proyectos > div > div.e > div .carousel-control-next-icon::after,
+  #galeria-proyectos > div > div.e > div > a.carousel-control-prev,
+  #galeria-proyectos > div > div.e > div .carousel-control-prev-icon::after {
+    height: 50px;
+    margin-top: 60px;
+    width: 20px;
+    margin-inline: auto;
+  }
 }

@@ -237,7 +237,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         </MDBContainer>
       </section>
       <div className="skew-cc"></div>
-      <section className="white-block">
+      <section className="white-block" id="galeria-proyectos">
         <MDBContainer>
           <br></br>
 
