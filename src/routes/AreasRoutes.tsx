@@ -12,6 +12,7 @@ import NorthBayVillageComponent from "../components/areas/NorthBayVillageCompone
 import PinecrestComponent from "../components/areas/PinecrestComponent";
 import SunnyIslesComponent from "../components/areas/SunnyIslesComponent";
 import React, { ReactFragment } from "react";
+import FloridaCityComponent from "../components/areas/FloridaCityComponent";
 
 export default function AreasRoutes() {
   return (
@@ -36,6 +37,10 @@ export default function AreasRoutes() {
       <Route
         element={<MiamiBeachComponent />}
         path="/areas/miami-beach"
+      ></Route>
+      <Route
+        element={<FloridaCityComponent />}
+        path="/areas/florida-city"
       ></Route>
     </React.Fragment>
   );
