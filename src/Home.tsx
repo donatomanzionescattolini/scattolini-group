@@ -60,7 +60,7 @@ export function Home() {
           <div className="overlay"></div>
 
           <div className="content text-center ">
-            <h1 className="display-2">SCATTOLINI GROUP</h1>
+            <h1 className="display-2" id="hero-heading">SCATTOLINI GROUP</h1>
             <p className="lead" id="hero-subheading">
               Agencia Inmobiliaria
             </p>
