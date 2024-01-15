@@ -17,7 +17,7 @@ export default function Servicios() {
 
             <br/>
 
-            <MDBCardGroup className="text-center">
+            <MDBCardGroup className="text-center" style={{ "textTransform": "capitalize"}}>
                 <MDBCard className="m-xs-0 m-sm-0 m-md-2 m-lg-2 m-xl-2">
                     <MDBCardHeader>
                         <MDBCardTitle>
@@ -33,6 +33,7 @@ export default function Servicios() {
                         <MDBCardLink
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
+                            
                         >
                             Obtener más información
                         </MDBCardLink>
