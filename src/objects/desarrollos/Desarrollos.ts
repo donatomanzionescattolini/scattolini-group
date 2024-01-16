@@ -58,6 +58,7 @@ import Areas from "../areas/Areas.tsx";
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import OnGrandville from "./Homestead/OnGrandville.tsx";
 import FloridaCity from "../areas/FloridaCity.tsx";
+import Jem from "./Downtown/Jem.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -94,6 +95,7 @@ desarrolloMap.push({
     TheElser(),
     W11(),
     WaldorfAstoria(),
+    Jem(),
   ]),
 });
 desarrolloMap.push({

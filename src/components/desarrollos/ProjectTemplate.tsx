@@ -43,7 +43,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   const [subtitulo] = useState(params.subtitulo);
   const [introduccion] = useState(params.introduccion);
   const [CaracteristicasAmenidades] = useState(
-    () => (params.caracteristicas as caracteristicas).amenidades
+    () => caract.amenidades
   );
   const [CaracteristicasEdificio] = useState(() => caract.edificio);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);

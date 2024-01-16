@@ -91,14 +91,14 @@ class Desarrollo {
       <dl>
         <dt>Ubicación</dt>
         <dd>{this.ubicación}</dd>
-        <dt>Constructora</dt>
-        <dd>{this.constructora.toString()}</dd>
+        {this.constructora &&<>   <dt>Constructora</dt>
+       <dd>{this.constructora.toString()}</dd></>}
         <dt>Año de Construcción</dt>
         <dd>{this.añoDeConstrucciónOFinalización}</dd>
-        <dt>Tamaño de viviendas en pies cuadrados</dt>
-        <dd>{this.piesCuadrados as string}</dd>
-        <dt>Modelos</dt>
-        <dd>{this.numberOfModels}</dd>
+        {this.piesCuadrados &&  <><dt>Tamaño de viviendas en pies cuadrados</dt>
+        <dd>{this.piesCuadrados as string}</dd></>}
+        {this.numberOfModels && <><dt>Modelos</dt>
+        <dd>{this.numberOfModels}</dd></>}
         <dt>Número de viviendas</dt>
         <dd>{this.numberOfUnits}</dd>
         <dt>Tipo de viviendas</dt>
@@ -111,7 +111,7 @@ class Desarrollo {
             : this.numberOfRooms["start"] + " a " + this.numberOfRooms["end"]}
         </dd>
         <dt>Número de baños</dt>
-        <dd>
+     {this.numberOfBathrooms && <>   <dd>
           {((typeof this.numberOfBathrooms === "string" ||
             typeof this.numberOfBathrooms === "number") &&
             this.numberOfBathrooms) ||
@@ -119,6 +119,7 @@ class Desarrollo {
               " a " +
               this.numberOfBathrooms["end"]}
         </dd>
+     </>}
       </dl>
     );
   }
