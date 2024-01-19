@@ -7,6 +7,7 @@ import OraProject from "../../components/desarrollos/Brickell/OraProject";
 import FourteenRiverDistrict from "../../objects/desarrollos/Brickell/FourteenRiverDistrict";
 import FourteenRiverDistrictProject from "../../components/desarrollos/Brickell/FourteenRiverDistrictProject";
 import EllaProject from "../../components/desarrollos/MiamiBeach/EllaProject";
+import NexoProject from "../../components/desarrollos/MiamiBeach/NexoProject";
 
 export default function MiamiBeachRoutes() {
   return (
@@ -24,6 +25,7 @@ export default function MiamiBeachRoutes() {
       />
       <Route element={<OraProject />} path={"/desarrollos/ora"} />
       <Route element={<EllaProject/>} path={"/desarrollos/ella"} />
+      <Route element={<NexoProject/>} path={"/desarrollos/nexo"} />
     </React.Fragment>
   );
 }
