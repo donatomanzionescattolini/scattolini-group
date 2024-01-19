@@ -89,15 +89,15 @@ main {
   color: $darkblue !important;
 }
 
-section > h2 {
+#root>section>div>div>h3, #root>section:nth-child(5)>div>h2 {
   box-sizing: inherit;
   letter-spacing: normal;
   text-transform: none;
-  margin-top: 3% !important;
+  margin-top: 5rem !important;
   margin-left: auto;
   margin-inline-end: 0px;
   word-wrap: break-word;
-  font-size: 35px;
+  font-size: 25px;
   text-align: center;
   line-height: 1.4;
   margin-bottom: 0;
