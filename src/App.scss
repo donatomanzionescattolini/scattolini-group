@@ -1234,3 +1234,9 @@ a {
   font-family:'Acumin Variable Concept';
   font-weight:bolder;
 }
+
+
+a:active {
+  text-decoration:none!important;
+  background-color:none!Important;
+}

@@ -46,7 +46,7 @@ export function Home() {
           <MDBBtn className="close-button" onClick={toggleShow} type={"button"}>
             Close
           </MDBBtn>
-          <FloatingContactFormComponent />
+          {/* <FloatingContactFormComponent /> */}
         </div>
       )}
       <MDBContainer fluid jumbotron>
