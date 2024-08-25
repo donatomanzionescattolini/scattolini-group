@@ -38,7 +38,7 @@ export function Home() {
   const [quotez] = useState<Quote[]>(quotes);
   return (
     <>
-      {show && (
+      {/* {show && (
         <div
           className={"floating-element object-fit-cover"}
           style={{ background: "rgb(255,255,255,0.0)" }}
@@ -47,8 +47,8 @@ export function Home() {
             Close
           </MDBBtn>
           {/* <FloatingContactFormComponent /> */}
-        </div>
-      )}
+        {/* </div> */}
+      {/* )} */}
       <MDBContainer fluid jumbotron>
         <div className="video-container">
           <video autoPlay loop muted playsInline className={" m-0 p-0"}>
