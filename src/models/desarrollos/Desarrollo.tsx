@@ -52,7 +52,7 @@ class Desarrollo {
   numberOfUnits: number;
   typeOfUnits: string;
   numberOfModels: string | number;
-  constructora: string | Constructora;
+  constructora: string | Array<Constructora> | Constructora;
   numberOfBathrooms: number | string | { start: number; end: number };
   numberOfRooms: number | { start: number; end: number } | string;
   numberOfParkingSpots: number | { start: number; end: number } | string;
