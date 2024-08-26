@@ -15,7 +15,7 @@ class Constructora {
 }
 
 class Desarrollo {
-  public area: Area;
+  public area?: Area;
 
   public nombre: string;
 
@@ -49,7 +49,7 @@ class Desarrollo {
   piesCuadrados: number | { start: number; end: number } | string;
   ubicación: string | ReactNode;
   numberOfUnits: number;
-  typeOfUnits: string;
+  typeOfUnits: string | Array<string>;
   numberOfModels: string | number;
   constructora: string | Array<Constructora> | Constructora;
   numberOfBathrooms: number | string | { start: number; end: number };

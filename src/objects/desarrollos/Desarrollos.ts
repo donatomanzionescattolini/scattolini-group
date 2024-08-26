@@ -101,14 +101,13 @@ desarrolloMap.push({
 });
 desarrolloMap.push({
   area: Edgewater(),
-  des: new Set([
-    AriaReserve(),
+  des:new Set<Desarrollo | void>([AriaReserve(),
     MissoniBaia(),
     EditionResidences(),
     TheVilla(),
     VidaResidences(),
     ElleResidences()
-  ]),
+  ]) as Set<Desarrollo >,
 });
 
 desarrolloMap.push({

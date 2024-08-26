@@ -4,15 +4,15 @@ import Edgewater from "../../areas/Edgewater.tsx";
 
 export default function ElleResidences() {
 
-    const ElleObject = new Desarrollo();
-    ElleObject.nombre = "Elle Residences ";
+    const ElleObject = new Desarrollo(Edgewater());
     ElleObject.area= Edgewater();
     ElleObject.constructora = [new Constructora("Vertical Developments"),new Constructora("Urban Network Capital Group")];
     ElleObject.añoDeConstrucciónOFinalización=  2027;
     ElleObject.numberOfUnits = 180;
-    ElleObject.typeOfUnits  = "Pied-à-Terre";
+    ElleObject.typeOfUnits  = ["Pied-à-Terre", "Apartment","Residence", "Luxury"];
     ElleObject.piesCuadrados = {start: 610, end:995};
     ElleObject.numberOfRooms = {start: 1, end: 2};
+
 
 
     ElleObject.caracteristicas = {
@@ -169,15 +169,15 @@ export default function ElleResidences() {
         ),
     };
 
-    ElleObject.titulo = " Elle Residences";
+    ElleObject.titulo = "Elle Residences | Edgewater";
     ElleObject.introduccion = ["Viva en la pasarela de los distritos culturales, de moda y de diseño de Miami en ELLE Residences , inspirado en 80 años de moda y decoración que marcan tendencia, completamente terminado, perfectamente amueblado y listo para vivir"];
 
     ElleObject.direccion = "3618 NE 5th Ave, Miami, FL 33137, USA";
     ElleObject.añoDeConstrucciónOFinalización = 2022;
 
     ElleObject.subtitulo = "El Nuevo Hogar del Alto Estilo";
-    ElleObject.numberOfImages =27 ;
     ElleObject.banner = true;
+    ElleObject.numberOfImages =27 ;
     ElleObject.area = Edgewater();
-    return ElleObject;
+    ElleObject.video=<iframe width="500" height="300" className="object-fit-cover" src="https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/elle-residences/video.mp4"  title="Elle Residences Miami " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>;
 }
