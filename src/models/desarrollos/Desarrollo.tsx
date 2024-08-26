@@ -15,7 +15,6 @@ class Constructora {
 }
 
 class Desarrollo {
-  [x: string]: { añoDeConstrucciónOFinalización: any; constructora: any; numberOfRooms: any; typeOfUnits: any; ubicación: any; };
   public area: Area;
 
   public nombre: string;

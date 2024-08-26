@@ -59,6 +59,7 @@ import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import OnGrandville from "./Homestead/OnGrandville.tsx";
 import FloridaCity from "../areas/FloridaCity.tsx";
 import Jem from "./Downtown/Jem.tsx";
+import ElleResidences from "./Edgewater/ElleResidences.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -106,6 +107,7 @@ desarrolloMap.push({
     EditionResidences(),
     TheVilla(),
     VidaResidences(),
+    ElleResidences()
   ]),
 });
 

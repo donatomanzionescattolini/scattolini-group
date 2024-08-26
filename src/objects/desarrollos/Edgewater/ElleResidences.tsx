@@ -8,10 +8,9 @@ export default function ElleResidences() {
     ElleObject.nombre = "Elle Residences ";
     ElleObject.area= Edgewater();
     ElleObject.constructora = [new Constructora("Vertical Developments"),new Constructora("Urban Network Capital Group")];
-    ElleObject.
     ElleObject.añoDeConstrucciónOFinalización=  2027;
     ElleObject.numberOfUnits = 180;
-    ElleObject.typeOfUnits = "Pied-à-Terre";
+    ElleObject.typeOfUnits  = "Pied-à-Terre";
     ElleObject.piesCuadrados = {start: 610, end:995};
     ElleObject.numberOfRooms = {start: 1, end: 2};
 
