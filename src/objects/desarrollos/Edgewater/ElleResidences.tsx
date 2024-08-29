@@ -15,7 +15,7 @@ export default function ElleResidences() {
     ElleResidencesObject.amenidades = [];
     ElleResidencesObject.introduccion = ["Viva en la pasarela de los distritos de diseño, moda y cultura de Miami en ELLE Residences, inspirada por 80 años de moda y decoración que marcan tendencia: totalmente terminado, perfectamente amueblado y listo para vivir.", "Elle Residences Miami es una colección de 180 residencias elegantes sin restricciones de alquiler. Su diseño interior presenta un guiño a las raíces parisinas de la revista. Un diseño exclusivo de Behar Font & Partners e interiores refinados de The One Atelier se unen para ofrecer una exquisita colección de viviendas en el área de Edgewater. Las comodidades están ubicadas en dos niveles exclusivos e incluyen: un gimnasio de última generación, césped para ejercicios al aire libre, jardín de meditación, spa, piscina en la azotea, salón exclusivo para residentes y más. Edgewater es un vecindario popular para quienes se dedican a las artes o buscan restaurantes de vanguardia en Miami."];
     ElleResidencesObject.banner = true;
-    ElleResidencesObject.numberOfImages = 19;
+    ElleResidencesObject.numberOfImages = 24;
     ElleResidencesObject.subtitulo = "El Nuevo Hogar Del Alto Estilo";
     ElleResidencesObject.caracteristicas = {
         residencias: <><p>Adquiera su propio piso en el corazón de Miami.
