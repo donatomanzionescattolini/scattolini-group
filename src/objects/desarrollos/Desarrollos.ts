@@ -60,6 +60,8 @@ import OnGrandville from "./Homestead/OnGrandville.tsx";
 import FloridaCity from "../areas/FloridaCity.tsx";
 import Jem from "./Downtown/Jem.tsx";
 import ElleResidences from "./Edgewater/ElleResidences.tsx";
+import SouthMiami from "../areas/SouthMiami.tsx";
+import SomiWalk from "./SouthMiami/SomiWalk.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -97,6 +99,12 @@ desarrolloMap.push({
     W11(),
     WaldorfAstoria(),
     Jem(),
+  ]),
+});
+desarrolloMap.push({
+  area: SouthMiami(),
+  des: new Set([
+    SomiWalk(),
   ]),
 });
 desarrolloMap.push({

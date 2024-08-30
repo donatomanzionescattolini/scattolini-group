@@ -11,8 +11,11 @@ import FloridaCityRoutes from "./FloridaCityRoutes";
 import NorthBayVillageRoutes from "./NorthBayVillageRoutes";
 import CoralGablesRoutes from "./CoralGablesRoutes";
 import CoconutGroveRoutes from "./CoconutGroveRoutes";
+import SouthMiamiRoutes from "./SouthMiamiRoutes";
 
 export default function DesarrollosRoutes() {
+  
+
   return (
     <React.Fragment>
       {MiamiBeachRoutes()}
@@ -27,6 +30,7 @@ export default function DesarrollosRoutes() {
       {NorthBayVillageRoutes()}
       {CoralGablesRoutes()}
       {CoconutGroveRoutes()}
+      {SouthMiamiRoutes()}
     </React.Fragment>
   );
 }
