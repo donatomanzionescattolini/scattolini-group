@@ -1,12 +1,15 @@
-import React from 'react'
-import { Route } from 'react-router-dom'
-import NatiivoFtLauderdaleProject from '../../components/desarrollos/FtLauderdale/NatiivoFtLauderdaleProject'
+import React from "react";
+import { Route } from "react-router-dom";
+import NatiivoFtLauderdaleProject from "../../components/desarrollos/FtLauderdale/NatiivoFtLauderdaleProject";
 
-const fragment = (
-  <React.Fragment>
-    <Route path="/desarrollos/natiivo-ft-lauderdale" element={<NatiivoFtLauderdaleProject />} />
-  </React.Fragment>
-);
-export default fragment;
-
-
+export default function FtLauderdaleRoutes() {
+  return (
+    <React.Fragment>
+      {" "}
+      <Route
+        element={<NatiivoFtLauderdaleProject />}
+        path="/desarrollos/natiivo-ft-lauderdale"
+      />
+    </React.Fragment>
+  );
+}
