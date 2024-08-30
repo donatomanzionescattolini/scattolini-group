@@ -72,7 +72,8 @@ import OnGrandvilleComponent from "./components/desarrollos/Homestead/OnGrandvil
 import FloridaCityComponent from "./components/areas/FloridaCityComponent.tsx";
 import SalernoEstatesComponent from "./components/desarrollos/Homestead/SalernoEstatesComponent.tsx";
 import AreasRoutes from "./routes/AreasRoutes.tsx";
-import DesarrollosRoutes from "./routes/desarrollos/DesarrollosRoutes.tsx";
+import DesarrollosRoutes from "./routes/DesarrollosRoutes.tsx";
+import NatiivoFtLauderdaleProject from "./components/desarrollos/FtLauderdale/NatiivoFtLauderdaleProject.tsx";
 
 export default function App() {
 

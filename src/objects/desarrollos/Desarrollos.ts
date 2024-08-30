@@ -62,6 +62,8 @@ import Jem from "./Downtown/Jem.tsx";
 import ElleResidences from "./Edgewater/ElleResidences.tsx";
 import SouthMiami from "../areas/SouthMiami.tsx";
 import SomiWalk from "./SouthMiami/SomiWalk.tsx";
+import FtLauderdale from "../areas/FtLauderdale.tsx";
+import NatiivoFtLauderdale from "./FtLauderdale/NattivoFtLauderdale.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -137,6 +139,7 @@ desarrolloMap.push({
   area: FloridaCity(),
   des: new Set([Alba(), Oasis(), ParcVillas(), ParkSquare()]),
 });
+desarrolloMap.push({ area: FtLauderdale(), des: new Set([NatiivoFtLauderdale()]) });
 desarrolloMap.push({
   area: Homestead(),
   des: new Set([

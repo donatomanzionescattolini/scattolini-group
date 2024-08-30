@@ -14,6 +14,8 @@ import SunnyIslesComponent from "../components/areas/SunnyIslesComponent";
 import React, { ReactFragment } from "react";
 import FloridaCityComponent from "../components/areas/FloridaCityComponent";
 import SouthMiamiComponent from "../components/areas/SouthMiamiComponent";
+import FtLauderdale from "../objects/areas/FtLauderdale";
+import FtLauderdaleComponent from "../components/areas/FtLauderdaleComponent";
 
 export default function AreasRoutes() {
   return (
@@ -40,6 +42,7 @@ export default function AreasRoutes() {
         element={<MiamiBeachComponent />}
         path="/areas/miami-beach"
       ></Route>
+      <Route element={<FtLauderdaleComponent />} path={"/areas/ft-lauderdale"} />
       <Route
         element={<FloridaCityComponent />}
         path="/areas/florida-city"
