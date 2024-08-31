@@ -64,7 +64,6 @@ import SouthMiami from "../areas/SouthMiami.tsx";
 import SomiWalk from "./SouthMiami/SomiWalk.tsx";
 import FtLauderdale from "../areas/FtLauderdale.tsx";
 import NatiivoFtLauderdale from "./FtLauderdale/NattivoFtLauderdale.tsx";
-import CasaTuaResidences from "./Brickell/CasaTuaResidences.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -77,13 +76,12 @@ export const desarrolloMap: desarrolloMapItem[] =
 desarrolloMap.push({
   area: Brickell(),
   des: new Set([
-    CasaTuaResidences(),
     BaccaratResidences(),
     Domus(),
     FourteenRiverDistrict(),
     FourteenTwentyEight(),
     Lofty(),
-    Ora,
+    Ora(),
   ]),
 });
 
