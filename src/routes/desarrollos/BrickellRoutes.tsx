@@ -5,7 +5,8 @@ import LoftyProject from "../../components/desarrollos/Brickell/LoftyProject";
 import BaccaratResidencesComponent from "../../components/desarrollos/Brickell/BaccaratResidencesComponent";
 import { FourteenTwentyEightProject } from "../../components/desarrollos/Brickell/FourteenTwentyEightProject";
 import OraProject from "../../components/desarrollos/Brickell/OraProject";
-
+import MercedesBenzPlacesMiami from "../../objects/desarrollos/Brickell/MercedesBenzPlacesMiami";
+import MercedesBenzPlacesMiamiComponent from "../../components/desarrollos/Brickell/MercedesBenzPlacesComponent";
 export default function BrickellRoutes() {
   return (
     <React.Fragment>
@@ -21,6 +22,7 @@ export default function BrickellRoutes() {
         path="/desarrollos/baccarat"
       />
       <Route element={<OraProject/>} path="/desarrollos/ora" />
+      <Route element={<MercedesBenzPlacesMiamiComponent/>} path="/desarrollos/mercedes-benz-places-miami" />
     </React.Fragment>
   );
 }

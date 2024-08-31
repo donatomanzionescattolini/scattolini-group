@@ -64,6 +64,7 @@ import SouthMiami from "../areas/SouthMiami.tsx";
 import SomiWalk from "./SouthMiami/SomiWalk.tsx";
 import FtLauderdale from "../areas/FtLauderdale.tsx";
 import NatiivoFtLauderdale from "./FtLauderdale/NattivoFtLauderdale.tsx";
+import MercedesBenzPlacesMiami from "./Brickell/MercedesBenzPlacesMiami.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -82,6 +83,7 @@ desarrolloMap.push({
     FourteenTwentyEight(),
     Lofty(),
     Ora(),
+    MercedesBenzPlacesMiami()
   ]),
 });
 
