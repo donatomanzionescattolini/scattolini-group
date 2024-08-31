@@ -10,7 +10,7 @@ export default function MercedesBenzPlacesMiami() {
   MercedesBenzPlacesObject.caracteristicas = {
     edificio: <><ul><li>Pisos: 64</li><li>Residencias: 791</li><li>Ubicación: 1133 SW 2nd Ave, Miami, FL 3313</li></ul></>,
     residencias: <><ul>
-      <b>Interiores</b>
+      <b><big>Interiores</big></b>
       <li>    Ventanas de piso a techo de hasta 10'</li>
       <li>    Terrazas de 5' de profundidad</li>
       <li>    Pisos de madera de nogal diseñados en todas partes</li>
@@ -27,7 +27,6 @@ export default function MercedesBenzPlacesMiami() {
       <li>    Accesorios de plomería personalizados en acabado cromado.</li>
       <li>    Conjunto totalmente integrado de electrodomésticos Miele que incluye: refrigerador, placa de inducción, horno de convección, lavavajillas, refrigerador para vinos* y horno rápido</li>
       <b>Bano Principal</b>
-      <li></li>
       <li>    Ducha de mármol Nero Marquina o Bianco Gioia con cabezal de ducha de lluvia totalmente integrado, repisa de mármol Bianco Gioia iluminada y puertas de vidrio estriado</li>
       <li>    Tocador flotante con encimeras de mármol Bianco Gioia y puertas con incrustaciones de nogal gris pizarra acanaladas y tiradores personalizados</li>
       <li>    Grifería y sistemas de ducha personalizados</li>
