@@ -4,6 +4,7 @@ import DomusProject from "../../components/desarrollos/Brickell/DomusProject";
 import LoftyProject from "../../components/desarrollos/Brickell/LoftyProject";
 import BaccaratResidencesComponent from "../../components/desarrollos/Brickell/BaccaratResidencesComponent";
 import { FourteenTwentyEightProject } from "../../components/desarrollos/Brickell/FourteenTwentyEightProject";
+import CasaTuaResidencesComponent from "../../components/desarrollos/Brickell/CasaTuaResidencesComponent";
 
 export default function BrickellRoutes() {
   return (
@@ -19,6 +20,7 @@ export default function BrickellRoutes() {
         element={<BaccaratResidencesComponent />}
         path="/desarrollos/baccarat"
       />
+      <Route element={<CasaTuaResidencesComponent/>} path="/desarrollos/casa-tua-residences" />
     </React.Fragment>
   );
 }
