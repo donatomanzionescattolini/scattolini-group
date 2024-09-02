@@ -14,7 +14,7 @@ export default function _2200Brickell() {
     edificio: <><ul>
       <li>Pisos: 5</li><li>Residencias: 105</li><li>Ubicación: 2200 Brickell Avenue, Miami, FL 33129</li></ul></>,
     residencias: <ul style={{ textAlign: "justify" }}>
-      <b> Un Santuario Urbano</b><p style={{ textAlign: "justify", fontSize: "smaller" }}  >Creadas por amantes de la vida en la ciudad que encuentran una gran inspiración en la naturaleza, estas residencias únicas logran un equilibrio perfecto con un enfoque de lo mejor de ambos mundos que ofrece una serenidad suntuosa en medio de la vibrante vida de la ciudad.</p><b>Un Equilibrio Perfecto</b><p style={{ textAlign: "justify", fontSize: "smaller" }}  >Un espacio armonioso donde la exuberante vegetación coexiste con la sofisticación urbana, 2200 BRICKELL fue cuidadosamente diseñado para poner a los residentes en primer lugar y ofrecer una vida urbana enérgica junto con la apreciación de un retiro tranquilo.</p><b>Vida Elevada de Brickell</b><p style={{ textAlign: "justify", fontSize: "smaller" }}>Las residencias están meticulosamente diseñadas por el galardonado equipo de ODA New York, y cuentan con ventanas de piso a techo, exuberantes balcones privados y cocinas y baños ricamente decorados.</p>
+      <b> Un Santuario Urbano</b><p style={{ textAlign: "justify",  }}  >Creadas por amantes de la vida en la ciudad que encuentran una gran inspiración en la naturaleza, estas residencias únicas logran un equilibrio perfecto con un enfoque de lo mejor de ambos mundos que ofrece una serenidad suntuosa en medio de la vibrante vida de la ciudad.</p><b>Un Equilibrio Perfecto</b><p style={{ textAlign: "justify",  }}  >Un espacio armonioso donde la exuberante vegetación coexiste con la sofisticación urbana, 2200 BRICKELL fue cuidadosamente diseñado para poner a los residentes en primer lugar y ofrecer una vida urbana enérgica junto con la apreciación de un retiro tranquilo.</p><b>Vida Elevada de Brickell</b><p style={{ textAlign: "justify",  }}>Las residencias están meticulosamente diseñadas por el galardonado equipo de ODA New York, y cuentan con ventanas de piso a techo, exuberantes balcones privados y cocinas y baños ricamente decorados.</p>
       <b>Interiores Residenciales</b>
       <li >Ventanas de vidrio de impacto de piso a techo y vidrio corredizo
         Puertas balconeras </li>
@@ -33,7 +33,7 @@ export default function _2200Brickell() {
       <li >Lavandería dedicada con lavadora y secadora de tamaño completo</li>
 
     </ul>, amenidades: 
-    <ul style={{ textAlign: "justify" }}> <b style={{textAlign:'left'}}>Brindemos Por Una Vida Bien Vivida</b><p style={{ textAlign: "justify", fontSize: "smaller" }}  >Desde sus inicios, 2200 BRICKELL fue diseñado para brindar a los residentes una experiencia de vida más reflexiva e intencional que mejoraría su salud, felicidad y bienestar.</p><p style={{ textAlign: "justify", fontSize: "smaller" }}  > <b style={{textAlign:'left'}}>El hogar es donde está la armonía</b><br></br>Adoptando un enfoque holístico para vivir bien, 2200 BRICKELL complementa la naturaleza armoniosa de nuestras residencias con una variedad de espacios y comodidades, fácil acceso durante todo el año al aire libre de Miami, lo mejor que Brickell tiene para ofrecer y espacios habitables que realmente están destinados a ser vividos.</p><p style={{ textAlign: "justify", fontSize: "smaller" }}  ><b  style={{textAlign:'left'}}>Cuidadosamente Elaborado</b><br></br>Desde espacios compartidos de última generación hasta innovadoras características privadas, estas comodidades cuidadosamente diseñadas evolucionan lo que significa vivir bien en Brickell.</p>
+    <ul style={{ textAlign: "justify" }}> <b style={{textAlign:'left'}}>Brindemos Por Una Vida Bien Vivida</b><p style={{ textAlign: "justify",  }}  >Desde sus inicios, 2200 BRICKELL fue diseñado para brindar a los residentes una experiencia de vida más reflexiva e intencional que mejoraría su salud, felicidad y bienestar.</p><p style={{ textAlign: "justify",  }}  > <b style={{textAlign:'left'}}>El hogar es donde está la armonía</b><br></br>Adoptando un enfoque holístico para vivir bien, 2200 BRICKELL complementa la naturaleza armoniosa de nuestras residencias con una variedad de espacios y comodidades, fácil acceso durante todo el año al aire libre de Miami, lo mejor que Brickell tiene para ofrecer y espacios habitables que realmente están destinados a ser vividos.</p><p style={{ textAlign: "justify",  }}  ><b  style={{textAlign:'left'}}>Cuidadosamente Elaborado</b><br></br>Desde espacios compartidos de última generación hasta innovadoras características privadas, estas comodidades cuidadosamente diseñadas evolucionan lo que significa vivir bien en Brickell.</p>
       <b>Amenidades</b>
       
       <li >Porte-cochère cubierto</li>
@@ -52,17 +52,17 @@ export default function _2200Brickell() {
         y espacios intencionales que mejoren la salud y el bienestar humano </li>
       <li  >Salón de bienestar con sala de tratamiento y sauna</li>
       <b>Azotea</b>
-      <p style={{ textAlign: "justify", fontSize: "smaller" }}  >Abarcando cerca de un acre de pies cuadrados bañados por el sol, el exuberante paisaje de la azotea de 2200 Brickell es una experiencia exquisitamente elevada. Igualmente idílico y vigorizante, aquí encontrará una gran variedad de características y comodidades de lujo que realmente llevan la satisfacción cotidiana, la serenidad y tomar el sol a nuevas alturas.</p>
+      <p style={{ textAlign: "justify",  }}  >Abarcando cerca de un acre de pies cuadrados bañados por el sol, el exuberante paisaje de la azotea de 2200 Brickell es una experiencia exquisitamente elevada. Igualmente idílico y vigorizante, aquí encontrará una gran variedad de características y comodidades de lujo que realmente llevan la satisfacción cotidiana, la serenidad y tomar el sol a nuevas alturas.</p>
     
-        <li style={{textTransform:"capitalize"}}> Piscina con asientos del resort</li>
-        <li style={{textTransform:"capitalize"}}> FITNESS AL AIRE LIBRE / YOGA</li>
-        <li style={{textTransform:"capitalize"}}> PISTA PARA CAMINAR DE 1/4 DE MILLA</li>
-        <li style={{textTransform:"capitalize"}}> COCINAS DE VERANO CON ZONA DE ESTAR</li>
-        <li style={{textTransform:"capitalize"}}> Balneario</li>
-        <li style={{textTransform:"capitalize"}}> SALA DE ESTAR AL AIRE LIBRE</li>
-        <li style={{textTransform:"capitalize"}}> CANCHA DE PICKLEBALL</li>
-        <li style={{textTransform:"capitalize"}}> ZONA DE JUEGOS INFANTILES</li>
-        <li style={{textTransform:"capitalize"}}> RETIRO EN EL JARDÍN</li>
+        <li style={{textTransform:"lowercase"}}> <span style={{textTransform:"capitalize"}}>Piscina con asientos del resort</span></li>
+        <li style={{textTransform:"lowercase"}}> <span style={{textTransform:"capitalize"}}>FITNESS AL AIRE LIBRE / YOGA</span></li>
+        <li style={{textTransform:"lowercase"}}> <span style={{textTransform:"capitalize"}}>PISTA PARA CAMINAR DE 1/4 DE MILLA</span></li>
+        <li style={{textTransform:"lowercase"}}> <span style={{textTransform:"capitalize"}}>COCINAS DE VERANO CON ZONA DE ESTAR</span></li>
+        <li style={{textTransform:"lowercase"}}> <span style={{textTransform:"capitalize"}}>Balneario</span></li>
+        <li style={{textTransform:"lowercase"}}> <span style={{textTransform:"capitalize"}}>SALA DE ESTAR AL AIRE LIBRE</span></li>
+        <li style={{textTransform:"lowercase"}}> <span style={{textTransform:"capitalize"}}>CANCHA DE PICKLEBALL</span></li>
+        <li style={{textTransform:"lowercase"}}> <span style={{textTransform:"capitalize"}}>ZONA DE JUEGOS INFANTILES</span></li>
+        <li style={{textTransform:"lowercase"}}> <span style={{textTransform:"capitalize"}}>RETIRO EN EL JARDÍN</span></li>
 </ul>};
 _2200BrickellObject.numberOfImages = 41;
 _2200BrickellObject.direccion = "2200 Brickell Avenue, Miami, FL 33129";
