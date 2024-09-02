@@ -18,6 +18,8 @@ class Desarrollo {
   [x: string]: { añoDeConstrucciónOFinalización: any; constructora: any; numberOfRooms: any; typeOfUnits: any; ubicación: any; };
   public area: Area;
 
+  public numberOfFloors: number;
+
   public nombre: string;
 
   public caracteristicas: caracteristicas | React.ReactNode;
