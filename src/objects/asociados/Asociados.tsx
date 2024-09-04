@@ -20,7 +20,7 @@ const victoria = new Asociado("Victoria", "Martínez", "🏠 Agente");
 const gabriela = new Asociado("Gabriela", "Peña", "🏠 Agente");
 const anahid = new Asociado("Anahid", "Chalikian", "🏚️ Broker");
 const daniaDominguez = new Asociado("Dania Dominguez", "", "🏠 Agente");
-
+const shere = new Asociado("Sherezade", "Vacas", "🏠 Agente");
 const asociados = [
   elda,
   laila,
@@ -37,6 +37,7 @@ const asociados = [
   gabriela,
   daniaDominguez,
   anahid,
+  shere
 ];
 
 export default function Asociados() {
