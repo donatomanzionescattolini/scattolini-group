@@ -28,17 +28,14 @@ export default function Equipo() {
               <div className="mc-content">
                 <div className="img-container w-80 h-100 mx-auto">
                   <img
-                    id={`foto-${asociado.firstName
-                      .split(" ")
-                      .join("-")
-                      .toLowerCase()}`}
-                    className="img-responsive object-fit-cover w-100 m-0 p-0  "
+                   
+              
+                    className="img-fluid object-fit-cover w-100 m-0 p-0  h-100"
                     src={`https://pagina-mama.s3.amazonaws.com/assets2/asociados/${asociado.firstName
                       .split(" ")
                       .join("-")
                       .toLowerCase()}-transparent-bg.png`}
-                    width="80%"
-                    height="auto"
+                    
                     alt={asociado.firstName+" " + asociado.lastName}
                   />
                 </div>
