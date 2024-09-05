@@ -11,7 +11,8 @@ import {
 export default function Servicios() {
     return (
         <>
-            <br></br>
+       {innerWidth <= 560 && <><br></br><br></br></>}
+        <br></br>
             <h2 className="text-center mt-5">Servicios</h2>
             <hr className="hr hr-blurry w-50 mx-auto"/>
 

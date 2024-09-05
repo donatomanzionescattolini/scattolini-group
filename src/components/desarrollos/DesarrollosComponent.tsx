@@ -8,7 +8,7 @@ import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts"
 export default function DesarrollosTodos() {
   return (
     <>
-      <br></br>
+      <br></br>{innerWidth <= 560 && <><br></br><br></br></>}
       <h2 className="text-center mt-5 pt-xs-5 pt-sm-5 pt-md-2 pt-lg-0 ">
         Proyectos en Desarrollo
       </h2>

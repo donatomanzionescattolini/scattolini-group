@@ -5,7 +5,8 @@ export default function AsociadosSmallComponent() {
     const nav = useNavigate();
     return (
         <>
-            <br></br>
+       {innerWidth <= 560 && <><br></br><br></br></>}
+        <br></br>
             <h2 className="text-center mt-5">Nuestro Equipo</h2>
             <hr className="hr hr-blurry w-50 mx-auto"/>
             <div className="xcontainer d-flex justify-content-center">

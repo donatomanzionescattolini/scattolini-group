@@ -5,7 +5,7 @@ import Areas from "../../objects/areas/Areas";
 function AreasComponent() {
   return (
     <MDBContainer>
-      <br></br>
+      <br></br>{innerWidth <= 560 && <><br></br><br></br></>}
       <h2 className="text-center mt-5">Áreas</h2>
       <hr className="hr hr-blurry w-50 mx-auto" />
 
