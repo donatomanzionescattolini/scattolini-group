@@ -67,6 +67,7 @@ import NatiivoFtLauderdale from "./FtLauderdale/NattivoFtLauderdale.tsx";
 import MercedesBenzPlacesMiami from "./Brickell/MercedesBenzPlacesMiami.tsx";
 import _2200Brickell from "./Brickell/2200Brickell.tsx";
 import Wynwood from "../areas/Wynwood.tsx";
+import NomadResidences from "./Wynwood/NomadResidences.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -77,7 +78,7 @@ export const desarrolloMap: desarrolloMapItem[] =
   new Array<desarrolloMapItem>();
 desarrolloMap.push({
   area: Wynwood(),
-  des: new Set()
+  des: new Set([NomadResidences()])
 })
 desarrolloMap.push({
   area: Brickell(),

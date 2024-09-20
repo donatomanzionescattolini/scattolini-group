@@ -13,6 +13,7 @@ import CoralGablesRoutes from "./desarrollos/CoralGablesRoutes";
 import CoconutGroveRoutes from "./desarrollos/CoconutGroveRoutes";
 import SouthMiamiRoutes from "./desarrollos/SouthMiamiRoutes";
 import FtLauderdaleRoutes from "./desarrollos/FtLauderdaleRoutes";
+import WynwoodRoutes from "./desarrollos/WynwoodRoutes";
 
 export default function DesarrollosRoutes() {
   
@@ -33,6 +34,7 @@ export default function DesarrollosRoutes() {
       {CoconutGroveRoutes()}
       {SouthMiamiRoutes()}
       {FtLauderdaleRoutes()}
+      {WynwoodRoutes()}
     </React.Fragment>
   );
 }
