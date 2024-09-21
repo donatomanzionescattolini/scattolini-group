@@ -23,6 +23,7 @@ import Areas from "../objects/areas/Areas.tsx";
 import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos.ts";
 import Desarrollo from "../models/desarrollos/Desarrollo.tsx";
 import { Area } from "../models/areas/Area.tsx";
+import { Col, Row } from "react-bootstrap";
 
 const Nav = () => {
   const [showNavCentred, setShowNavCentred] = useState(false);
@@ -42,26 +43,17 @@ const Nav = () => {
   const [leftColumn, setLeftColumn] = useState(
     areas.slice(0, Math.floor(areas.length / 2))
   );
-  const [leftColumnFiltered, setLeftColumnFiltered] = useState(leftColumn);
 
-  const [rightColumn, setRightColumn] = useState(
-    areas.slice(Math.floor(areas.length / 2))
-  );
 
-  const [rightColumnFiltered, setRightColumnFiltered] = useState(rightColumn);
 
   const [filteredDesarrollos, setFilteredDesarrollos] =
     useState<Desarrollo[]>(allDesarrollos);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredDesarrollosLeft, setFilteredDesarrollosLeft] = useState(
-    leftColumn
-      .map((area) => [...getDesarrollosForArea(area)])
-      .reduce((prev, cur) => [...prev, ...cur])
+    []
   );
   const [filteredDesarrollosRight, setFilteredDesarrollosRight] = useState(
-    rightColumn
-      .map((area) => [...getDesarrollosForArea(area)])
-      .reduce((prev, cur) => [...prev, ...cur])
+    []
   );
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
@@ -82,14 +74,25 @@ const Nav = () => {
     );
 
     setFilteredDesarrollos(filteredDesarrolloz);
-    setFilteredAreas(
-      areas.filter((area) => {
-        getDesarrollosForArea(area).forEach((des) => {
-          if ((des: Desarrollo) => des.area.name === area.name) return true;
-        });
-        return false;
-      })
+
+  };
+
+
+  const [searchQueryDesarrollo, setSearchQueryDesarrollo] = useState("");
+  const handleSearchDesarrollo = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQueryDesarrollo(event.target.value);
+    if (searchQueryDesarrollo === "") {
+      setFilteredDesarrollos(allDesarrollos);
+      return;
+    }
+
+    const filteredDesarrolloz = allDesarrollos.filter(
+      (desarrollo) =>
+        desarrollo.nombre.toLowerCase().includes(event.target.value.toLowerCase()) ||
+        event.target.value.toLowerCase().includes(desarrollo.nombre.toLowerCase())
     );
+
+    setFilteredDesarrollos(filteredDesarrolloz);
   };
   const [searchQueryArea, setSearchQueryArea] = useState("");
   const handleSearchArea = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -108,93 +111,9 @@ const Nav = () => {
     setFilteredAreas(filteredAreaz);
   };
 
-  const desarrollosInFilteredArea = (area: Area) => {
-    return filteredDesarrollos.filter(
-      (des) =>
-        des.area.name.toLowerCase().includes(area.name.toLowerCase()) ||
-        area.name.toLowerCase().includes(des.area.name.toLowerCase())
-    );
-  };
-  const renderMenuItems = () => {
-    return (
-      <MDBRow
-        around
-        className={"w-responsive  flex-row-reverse"}
-        style={{ minWidth: 400 }}
-      >
-        <MDBCol md={6}>
-          {leftColumnFiltered.map((area) => {
-            return (
-              <>
-                {desarrollosInFilteredArea(area).length > 0 && (
-                  <>
-                    <MDBDropdownItem
-                      header
-                      className={"list-group-item "}
-                      style={{ textIndent: 15, fontVariant: "small-caps" }}
-                    >
-                      {area.titulo}
-                    </MDBDropdownItem>
-                    {desarrollosInFilteredArea(area).map((des) => (
-                      <MDBDropdownItem
-                        link
-                        className="dropdown-item"
-                        href={`/desarrollos/${des.nombre}/`}
-                      >
-                        {des.titulo ||
-                          des.nombre
-                            .split("-")
-                            .map(
-                              (word) =>
-                                word.charAt(0).toUpperCase() + word.substring(1)
-                            )
-                            .join(" ")}
-                      </MDBDropdownItem>
-                    ))}
-                  </>
-                )}
-              </>
-            );
-          })}
-        </MDBCol>
-        <MDBCol md={6}>
-          {rightColumnFiltered.map((area) => {
-            return (
-              <>
-                {desarrollosInFilteredArea(area).length > 0 && (
-                  <>
-                    <MDBDropdownItem
-                      header
-                      className={"list-group-item "}
-                      style={{ textIndent: 15, fontVariant: "small-caps" }}
-                    >
-                      {area.titulo}
-                    </MDBDropdownItem>
-                    {desarrollosInFilteredArea(area).map((des) => (
-                      <MDBDropdownItem
-                        link
-                        className="dropdown-item"
-                        href={`/desarrollos/${des.nombre}/`}
-                      >
-                        {des.titulo ||
-                          des.nombre
-                            .split("-")
-                            .map(
-                              (word) =>
-                                word.charAt(0).toUpperCase() + word.substring(1)
-                            )
-                            .join(" ")}
-                      </MDBDropdownItem>
-                    ))}
-                  </>
-                )}
-              </>
-            );
-          })}
-        </MDBCol>
-      </MDBRow>
-    );
-  };
+
+
+
   return (
     <MDBNavbar expand="lg" light bgColor="light">
       <MDBContainer fluid>
@@ -250,7 +169,7 @@ const Nav = () => {
             <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle tag="a">Áreas</MDBDropdownToggle>
-                <MDBDropdownMenu className="responsive">
+                <MDBDropdownMenu className="responsive column">
                   <>
                     <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
                       <input
@@ -280,22 +199,28 @@ const Nav = () => {
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBDropdown>
-                <MDBDropdownToggle tag="a" link>
-                  Desarrollos
-                </MDBDropdownToggle>
-                <MDBDropdownMenu className="responsive p-2">
-                  <MDBInputGroup tag="form" className="d-flex w-50 ms-4 my-3">
-                    <input
-                      className="form-control"
-                      placeholder="Buscar"
-                      aria-label="Buscar"
-                      type="Search"
-                      value={searchQuery}
-                      onChange={handleSearch}
-                    />
-                    {/* <MDBBtn outline>Buscar</MDBBtn> */}
-                  </MDBInputGroup>
-                  {renderMenuItems()}
+                <MDBDropdownToggle tag="a">Desarrollos</MDBDropdownToggle>
+                <MDBDropdownMenu className="responsive column">
+                  <>
+                    <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
+                      <input
+                        className="form-control"
+                        placeholder="Buscar"
+                        aria-label="Buscar"
+                        type="Search"
+                        value={searchQueryDesarrollo}
+                        onChange={handleSearchDesarrollo}
+                      />
+                      {/* <MDBBtn outline>Buscar</MDBBtn> */}
+                    </MDBInputGroup>
+                    {filteredDesarrollos.map((desarrollo) => {
+                      return (
+                        <MDBDropdownItem link href={"/areas/" + desarrollo.nombre}>
+                          {desarrollo.titulo}
+                        </MDBDropdownItem>
+                      );
+                    })}
+                  </>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
