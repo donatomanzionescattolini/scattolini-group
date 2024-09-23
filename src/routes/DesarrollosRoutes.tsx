@@ -14,7 +14,7 @@ import CoconutGroveRoutes from "./desarrollos/CoconutGroveRoutes";
 import SouthMiamiRoutes from "./desarrollos/SouthMiamiRoutes";
 import FtLauderdaleRoutes from "./desarrollos/FtLauderdaleRoutes";
 import WynwoodRoutes from "./desarrollos/WynwoodRoutes";
-import AventuraRoutes from "./AventuraRoutes";
+import AventuraRoutes from "./desarrollos/AventuraRoutes";
 
 export default function DesarrollosRoutes() {
   

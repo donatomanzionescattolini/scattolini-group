@@ -18,6 +18,8 @@ import FtLauderdale from "../objects/areas/FtLauderdale";
 import FtLauderdaleComponent from "../components/areas/FtLauderdaleComponent";
 import Wynwood from "../objects/areas/Wynwood";
 import WynwoodCoponent from "../components/areas/WynwoodComponent";
+import AventuraComponent from "../components/areas/AventuraComponent";
+import PembrokePinesComponent from "../components/areas/PembrokePinesComponent";
 
 export default function AreasRoutes() {
   return (
@@ -49,7 +51,10 @@ export default function AreasRoutes() {
         element={<FloridaCityComponent />}
         path="/areas/florida-city"
       ></Route>
+      <Route element={<AventuraComponent/>} path="/areas/aventura"/>
+      <Route element={<PembrokePinesComponent/>} path="/areas/pembroke-pines"/>
       <Route element={<WynwoodCoponent/>} path="/areas/wynwood"/>
+      <Route element={<AventuraComponent/>} path="/areas/aventura"/>
     </React.Fragment>
   );
 }
