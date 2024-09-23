@@ -27,7 +27,7 @@ export default function Footer() {
         >
           <MDBRow
             className={
-              "d-flex flex-row flex-sm-nowrap mx-auto flex-fill justify-content-around bg-transparent"
+              "d-flex flex-row flex-sm-nowrap overflow-x-scroll mx-auto flex-fill justify-content-around bg-transparent"
             }
           >
             {Areas().map((area) => {
