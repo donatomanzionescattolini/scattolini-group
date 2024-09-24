@@ -70,6 +70,7 @@ import Wynwood from "../areas/Wynwood.tsx";
 import NomadResidences from "./Wynwood/NomadResidences.tsx";
 import Aventura from "../areas/Aventura.tsx";
 import PembrokePines from "../areas/PembrokePines.tsx";
+import Hollywood from "../areas/Hollywood.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -81,6 +82,11 @@ export const desarrolloMap: desarrolloMapItem[] =
 desarrolloMap.push({
   area: Wynwood(),
   des: new Set([NomadResidences()])
+})
+
+desarrolloMap.push({
+  area: Hollywood(),
+  des: new Set([])
 })
 desarrolloMap.push({area: PembrokePines(),des: new Set([])})
 desarrolloMap.push({
