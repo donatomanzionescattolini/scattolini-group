@@ -20,6 +20,8 @@ import Wynwood from "../objects/areas/Wynwood";
 import WynwoodCoponent from "../components/areas/WynwoodComponent";
 import AventuraComponent from "../components/areas/AventuraComponent";
 import PembrokePinesComponent from "../components/areas/PembrokePinesComponent";
+import Hollywood from "../objects/areas/Hollywood";
+import HollyWoodComponent from "../components/areas/HollywoodComponent";
 
 export default function AreasRoutes() {
   return (
@@ -55,6 +57,7 @@ export default function AreasRoutes() {
       <Route element={<PembrokePinesComponent/>} path="/areas/pembroke-pines"/>
       <Route element={<WynwoodCoponent/>} path="/areas/wynwood"/>
       <Route element={<AventuraComponent/>} path="/areas/aventura"/>
+      <Route element={<HollyWoodComponent/>} path="/areas/hollywood"/>
     </React.Fragment>
   );
 }
