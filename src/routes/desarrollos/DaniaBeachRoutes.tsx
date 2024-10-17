@@ -2,7 +2,8 @@ import React from "react";
 
 
 
-export default function HollywoodRoutes() {
+
+export default function DaniaBeachRoutes() {
 
 
 

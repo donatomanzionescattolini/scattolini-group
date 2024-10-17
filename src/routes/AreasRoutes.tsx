@@ -22,6 +22,7 @@ import AventuraComponent from "../components/areas/AventuraComponent";
 import PembrokePinesComponent from "../components/areas/PembrokePinesComponent";
 import Hollywood from "../objects/areas/Hollywood";
 import HollyWoodComponent from "../components/areas/HollywoodComponent";
+import DaniaBeachComponent from "../components/areas/DaniaBeachComponent";
 
 export default function AreasRoutes() {
   return (
@@ -53,11 +54,12 @@ export default function AreasRoutes() {
         element={<FloridaCityComponent />}
         path="/areas/florida-city"
       ></Route>
-      <Route element={<AventuraComponent/>} path="/areas/aventura"/>
-      <Route element={<PembrokePinesComponent/>} path="/areas/pembroke-pines"/>
-      <Route element={<WynwoodCoponent/>} path="/areas/wynwood"/>
-      <Route element={<AventuraComponent/>} path="/areas/aventura"/>
-      <Route element={<HollyWoodComponent/>} path="/areas/hollywood"/>
+      <Route element={<AventuraComponent />} path="/areas/aventura" />
+      <Route element={<PembrokePinesComponent />} path="/areas/pembroke-pines" />
+      <Route element={<WynwoodCoponent />} path="/areas/wynwood" />
+      <Route element={<AventuraComponent />} path="/areas/aventura" />
+      <Route element={<HollyWoodComponent />} path="/areas/hollywood" />
+      <Route element={<DaniaBeachComponent />} path="/areas/dania-beach" />
     </React.Fragment>
   );
 }

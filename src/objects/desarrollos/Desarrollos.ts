@@ -71,6 +71,7 @@ import NomadResidences from "./Wynwood/NomadResidences.tsx";
 import Aventura from "../areas/Aventura.tsx";
 import PembrokePines from "../areas/PembrokePines.tsx";
 import Hollywood from "../areas/Hollywood.tsx";
+import DaniaBeach from "../areas/DaniaBeach.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -88,13 +89,25 @@ desarrolloMap.push({
   area: Hollywood(),
   des: new Set([])
 })
-desarrolloMap.push({area: PembrokePines(),des: new Set([])})
+desarrolloMap.push({ area: PembrokePines(), des: new Set([]) })
 desarrolloMap.push({
   area: Aventura(),
   des: new Set([
 
   ]
   )
+})
+
+desarrolloMap.push({
+  area: DaniaBeach(),
+  des: new Set()
+
+})
+
+
+desarrolloMap.push({
+  area: Hollywood(),
+  des: new Set()
 })
 desarrolloMap.push({
   area: Brickell(),
