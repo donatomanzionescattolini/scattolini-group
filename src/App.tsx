@@ -46,9 +46,11 @@ export default function App() {
         {AreasRoutes()}
       </Routes>
       <FloatingWhatsApp
+        
         phoneNumber={"13056139338"}
         chatMessage={"¿Cómo te puedo ayudar hoy?"}
         statusMessage={"Respuestas dentro de las primeras 24 horas"}
+        avatar="https://pagina-mama.s3.amazonaws.com/assets2/asociados/elda-whatsapp.png"
         placeholder={
           "Quisiera programar una llamada telefónica o una reunión con un agente para aprender más sobre el mercado inmobiliario en el Sur de la Florida y analizar las opciones disponibles para mí "
         }
