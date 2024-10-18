@@ -72,6 +72,7 @@ import Aventura from "../areas/Aventura.tsx";
 import PembrokePines from "../areas/PembrokePines.tsx";
 import Hollywood from "../areas/Hollywood.tsx";
 import DaniaBeach from "../areas/DaniaBeach.tsx";
+import Atlantica from "./DaniaBeach/Atlantica.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -100,7 +101,7 @@ desarrolloMap.push({
 
 desarrolloMap.push({
   area: DaniaBeach(),
-  des: new Set()
+  des: new Set([Atlantica()])
 
 })
 
