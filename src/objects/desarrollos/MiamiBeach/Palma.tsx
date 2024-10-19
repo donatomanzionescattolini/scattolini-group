@@ -21,7 +21,7 @@ export default function Palma() {
 
 
 
-    PalmaObject.numberOfImages = 0;
+    PalmaObject.numberOfImages = 15;
 
 
     PalmaObject.introduccion = ["Palma Residences Miami Beach es una espectacular torre de condominios en el área de North Beach. Este edificio de 13 pisos ofrece 126 apartamentos de lujo con balcones, que varían de 468 pies cuadrados para un apartamento de una habitación a 1,086 pies cuadrados para una unidad de dos habitaciones. Las comodidades de superlujo incluyen una terraza con una plataforma de piscina ajardinada, asientos, cabañas y un bar; 40 espacios de estacionamiento para vehículos y 140 espacios para bicicletas; y 7,000 pies cuadrados de espacio comercial."];
@@ -37,30 +37,13 @@ export default function Palma() {
 
     PalmaObject.area = MiamiBeach();
     PalmaObject.caracteristicas = {
-        edificio: <>
-
-            <dl>
-
-                <dt>Ubicación</dt>
-                <dd>
-                    <>
-                    <ul style={{listStyleType:"none"}}>
-
-                    </ul>
-                    <address>600 71st Street, Miami Beach, Florida 33141</address>
-                </dd>
-                <dt>Número de Pisos</dt>
-                    <dd>Edificio emblemático de 14 pisos diseñado por Built Form</dd>
-                    
-                    <li>Edificio ecológico de vanguardia con tecnología SMART y certificación LEED Gold</li>
-                    <li>Locales comerciales al nivel de planta baja</li>
-                </dt>
-
-
-            </dl>
-
-        </>,
-        residencias: <>
+        edificio: <ul>
+        <li>Edificio emblemático de 14 pisos diseñado por Built Form</li>
+        <li>Ubicación privilegiada en Miami Beach, a solo unos pasos de la playa</li>
+        <li>Edificio ecológico de vanguardia con tecnología SMART y certificación LEED Gold</li>
+        <li>Locales comerciales al nivel de planta baja</li>
+    </ul>,
+        residencias:
             <ul>
                 <li>Residencias de lujo en la playa con diseños modernos y abiertos Todas las residencias están completamente terminadas y amobladas por</li>
                 <li>el galardonado Studio Ramírez</li>
@@ -69,8 +52,7 @@ export default function Palma() {
                 <li>Gabinetes europeos importados con accesorios premium Paquete de electrodomésticos Bosch con refrigerador, horno, cocina, microondas y lavavajillas Encimeras y salpicaderos de piedra premium para la experiencia culinaria definitiva Fregadero de acero inoxidable contemporáneo montado debajo del mostrador Grifo elegante con mango de rociado integrado</li>
                 <li>BAÑO PRINCIPAL</li>
                 <li>Gabinetes europeos importados con herrajes premium y tiradores de cajones Encimeras y salpicaderos de piedra premium Lavabos de porcelana rectangular con elegantes grifos dobles (en algunas residencias) Suelos y paredes de porcelana con acabado personalizado en áreas húmedas Cabinas de ducha de vidrio Accesorios y complementos de estilo europeo premium</li>
-            </ul>
-        </>,
+            </ul>,
         amenidades: <>
             <ul>
                 <li>Recepción</li>
@@ -86,5 +68,7 @@ export default function Palma() {
                 <li>Edificio inteligente con tecnología avanzada y acceso a internet de fibra óptica de alta velocidad</li>
                 <li>WiFi en todas las áreas comunes.</li>
             </ul></>
-    }
+    };
+
+    return PalmaObject;
 }

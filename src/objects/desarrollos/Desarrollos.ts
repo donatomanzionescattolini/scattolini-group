@@ -73,6 +73,7 @@ import PembrokePines from "../areas/PembrokePines.tsx";
 import Hollywood from "../areas/Hollywood.tsx";
 import DaniaBeach from "../areas/DaniaBeach.tsx";
 import Atlantica from "./DaniaBeach/Atlantica.tsx";
+import Palma from "./MiamiBeach/Palma.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -162,7 +163,7 @@ desarrolloMap.push({
 
 desarrolloMap.push({
   area: MiamiBeach(),
-  des: new Set([Ella(), FivePark(), Nexo(), OnePark(), SeventyTwoPark()]),
+  des: new Set([Ella(), FivePark(), Nexo(), OnePark(), SeventyTwoPark(), Palma()]),
 });
 desarrolloMap.push({ area: NorthBayVillage(), des: new Set([ShomaBay()]) });
 desarrolloMap.push({
