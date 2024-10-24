@@ -27,12 +27,15 @@ export default function Footer() {
         >
           <MDBRow
             className={
-              "d-flex flex-row flex-sm-nowrap overflow-x-scroll mx-auto flex-fill justify-content-around bg-transparent"
+              "d-flex flex-row flex-sm-wrap overflow-x-scroll mx-auto flex-fill justify-content-around bg-transparent"
             }
           >
+
             {Areas().map((area) => {
+              if(getDesarrollosForArea(area) && [...getDesarrollosForArea(area)].length > 0) {
+
               return (
-                <MDBCol className="mb-2 mb-md-0 mx-auto my-5">
+                <MDBCol className="mb-2 mb-md-0 mx-auto my-5 ">
                   <h5 className="text-center">{area.titulo}</h5>
                   <small className={"w-75 mx-auto list-unstyled"}>
                     <li className={"mdc-list-divider mb-3"}></li>
@@ -43,6 +46,7 @@ export default function Footer() {
                       horizontalSize={"100"}
                       className={" mb-0 mx-0 px-0 list-unstyled"}
                     >
+
                       {[...getDesarrollosForArea(area)].map((des) => {
                         return (
                           <MDBListGroupItem className="text-sm-center bg-transparent border-0 text-nowrap text-muted py-0 my-0">
@@ -67,6 +71,7 @@ export default function Footer() {
                   </small>
                 </MDBCol>
               );
+              }
             })}
           </MDBRow>
 
