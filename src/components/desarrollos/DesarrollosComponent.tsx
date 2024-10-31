@@ -25,7 +25,7 @@ export default function DesarrollosTodos() {
               <>
                 {[...desarr].map((desarrollo: Desarrollo) => {
                   return (
-                    <MDBCol xs={12} sm={12} md={4} lg={4} xl={4}>
+                    <MDBCol key={[...desarr].indexOf(desarrollo)} xs={12} sm={12} md={4} lg={4} xl={4}>
                       <Link to={`/desarrollos/${desarrollo.nombre}`}>
                         <div
                           className="propiedades-img p-0 m-0"

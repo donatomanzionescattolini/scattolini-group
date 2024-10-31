@@ -87,10 +87,6 @@ desarrolloMap.push({
   des: new Set([NomadResidences()])
 })
 
-desarrolloMap.push({
-  area: Hollywood(),
-  des: new Set([])
-})
 desarrolloMap.push({ area: PembrokePines(), des: new Set([]) })
 desarrolloMap.push({
   area: Aventura(),

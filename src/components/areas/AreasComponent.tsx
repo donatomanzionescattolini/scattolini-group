@@ -1,8 +1,12 @@
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 import Areas from "../../objects/areas/Areas";
+import { useState } from "react";
 
-function AreasComponent() {
+function AreasComponent() 
+{
+  const [areas]=useState([... new Set(Areas())]);
+
   return (
     <MDBContainer>
       <br></br>{innerWidth <= 560 && <><br></br><br></br></>}
@@ -10,8 +14,8 @@ function AreasComponent() {
       <hr className="hr hr-blurry w-50 mx-auto" />
 
       <MDBRow center>
-        {Areas().map((area) => (
-          <MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
+        {areas.map((area) => (
+          <MDBCol key={areas.indexOf(area)}xs={12} sm={12} md={6} lg={4} xl={4}>
             <div className="thumbnail">
               <Link to={`/areas/${area.name}/`}>
                 <div

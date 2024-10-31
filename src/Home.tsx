@@ -31,9 +31,6 @@ export function Home() {
   const [show, setShow] = useState(true);
 
   // Function to toggle the visibility of the floating element
-  const toggleShow = () => {
-    setShow(!show);
-  };
 
   const [quotez] = useState<Quote[]>(quotes);
   return (

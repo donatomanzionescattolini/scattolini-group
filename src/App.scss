@@ -1260,3 +1260,13 @@ a:active, li:active, a:hover, li:hover {
   overflow-x: visible !important;
   min-width:fit-content !important;
 }
+
+
+
+#root > div.container-fluid.m-0.p-0.overflow-scroll.horizontal-scrollable {
+  overflow:visible !important;
+}
+
+.city-firstcarousel {
+  overflow:visible;
+}
