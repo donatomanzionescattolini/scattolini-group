@@ -104,8 +104,8 @@ const Nav = () => {
 
     const filteredAreaz = areas.filter(
       (area) =>
-        area.name.toLowerCase().includes(event.target.value.toLowerCase()) ||
-        event.target.value.toLowerCase().includes(area.name.toLowerCase())
+        area.titulo.toLowerCase().includes(event.target.value.toLowerCase()) ||
+        event.target.value.toLowerCase().includes(area.titulo.toLowerCase())
     );
 
     setFilteredAreas(filteredAreaz);
