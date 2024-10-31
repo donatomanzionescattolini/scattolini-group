@@ -3,7 +3,7 @@ import React, { useLayoutEffect } from "react";
 
 import { Link } from "react-router-dom";
 import Areas from "../objects/areas/Areas.tsx";
-import { desarrolloMap } from "../objects/desarrollos/Desarrollos.ts";
+import { desarrollos } from "../objects/desarrollos/Desarrollos.ts";
 import { Area } from "../models/areas/Area.tsx";
 
 const AreasComponent = function (): React.JSX.Element {
