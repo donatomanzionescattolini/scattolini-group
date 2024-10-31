@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
-  MDBBtn,
-  MDBCol,
   MDBCollapse,
   MDBContainer,
   MDBDropdown,
@@ -9,7 +7,6 @@ import {
   MDBDropdownMenu,
   MDBDropdownToggle,
   MDBIcon,
-  MDBInput,
   MDBInputGroup,
   MDBNavbar,
   MDBNavbarBrand,
@@ -17,13 +14,11 @@ import {
   MDBNavbarLink,
   MDBNavbarNav,
   MDBNavbarToggler,
-  MDBRow,
 } from "mdb-react-ui-kit";
 import Areas from "../objects/areas/Areas.tsx";
 import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos.ts";
 import Desarrollo from "../models/desarrollos/Desarrollo.tsx";
 import { Area } from "../models/areas/Area.tsx";
-import { Col, Row } from "react-bootstrap";
 
 const Nav = () => {
   const [showNavCentred, setShowNavCentred] = useState(false);
@@ -32,50 +27,17 @@ const Nav = () => {
   window.addEventListener("resize", () => {
     setInnerWidth(window.innerWidth);
   });
-  const [areas, setAreas] = useState(Areas());
-  const [filteredAreas, setFilteredAreas] = useState<Array<Area>>(areas);
+  const [allAreas] = useState(Areas());
+  const [filteredAreas, setFilteredAreas] = useState<Array<Area>>(allAreas);
 
-  const [allDesarrollos, setAllDesarrollos] = useState<Desarrollo[]>(
+  const [allDesarrollos] = useState<Desarrollo[]>(
     Areas()
       .map((area) => [...getDesarrollosForArea(area)])
       .reduce((prev, cur) => [...prev, ...cur])
   );
-  const [leftColumn, setLeftColumn] = useState(
-    areas.slice(0, Math.floor(areas.length / 2))
-  );
-
-
 
   const [filteredDesarrollos, setFilteredDesarrollos] =
     useState<Desarrollo[]>(allDesarrollos);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredDesarrollosLeft, setFilteredDesarrollosLeft] = useState(
-    []
-  );
-  const [filteredDesarrollosRight, setFilteredDesarrollosRight] = useState(
-    []
-  );
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value);
-    if (searchQuery === "") {
-      setFilteredDesarrollos(allDesarrollos);
-
-      return;
-    }
-
-    const filteredDesarrolloz = allDesarrollos.filter(
-      (item) =>
-        (item.titulo as string)
-          .toLowerCase()
-          .includes(event.target.value.toLowerCase()) ||
-        event.target.value
-          .toLowerCase()
-          .includes((item.titulo as string).toLowerCase())
-    );
-
-    setFilteredDesarrollos(filteredDesarrolloz);
-
-  };
 
 
   const [searchQueryDesarrollo, setSearchQueryDesarrollo] = useState("");
@@ -98,14 +60,14 @@ const Nav = () => {
   const handleSearchArea = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQueryArea(event.target.value);
     if (searchQueryArea === "") {
-      setFilteredAreas(areas);
+      setFilteredAreas(allAreas);
       return;
     }
 
-    const filteredAreaz = areas.filter(
+    const filteredAreaz = allAreas.filter(
       (area) =>
-        area.name.toLowerCase().includes(event.target.value.toLowerCase()) ||
-        event.target.value.toLowerCase().includes(area.name.toLowerCase())
+        area.titulo.toLowerCase().includes(event.target.value.toLowerCase()) ||
+        event.target.value.toLowerCase().includes(area.titulo.toLowerCase())
     );
 
     setFilteredAreas(filteredAreaz);
@@ -184,7 +146,7 @@ const Nav = () => {
                     </MDBInputGroup>
                     {filteredAreas.map((area) => {
                       return (
-                        <MDBDropdownItem link href={"/areas/" + area.name}>
+                        <MDBDropdownItem link href={"/areas/" + area.name} key={filteredAreas.indexOf(area)}>
                           {area.titulo}
                         </MDBDropdownItem>
                       );
@@ -215,7 +177,7 @@ const Nav = () => {
                     </MDBInputGroup>
                     {filteredDesarrollos.map((desarrollo) => {
                       return (
-                        <MDBDropdownItem link href={"/areas/" + desarrollo.nombre}>
+                        <MDBDropdownItem key={filteredDesarrollos.indexOf(desarrollo)}link href={"/areas/" + desarrollo.nombre}>
                           {desarrollo.titulo}
                         </MDBDropdownItem>
                       );

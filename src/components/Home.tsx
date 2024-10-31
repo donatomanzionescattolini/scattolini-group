@@ -1,15 +1,14 @@
-import { AboutUs } from "./AboutUs";
 
-import { MDBBtn, MDBContainer } from "mdb-react-ui-kit";
+import { MDBContainer } from "mdb-react-ui-kit";
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import AliadosComponent from "./components/AliadosComponent.tsx";
-import AsociadosSmallComponent from "./components/AsociadosSmallComponent.tsx";
-import Quotes from "./components/Quotes";
-import Servicios from "./components/Servicios";
-import AreasComponent from "./components/areas/AreasComponent.tsx";
-import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
-import Quote, { quotes } from "./models/Quote";
-import FloatingContactFormComponent from "./components/FloatingContactFormComponent.tsx";
+import { AboutUs } from "../AboutUs";
+import Quote, { quotes } from "../models/Quote";
+import AliadosComponent from "./AliadosComponent";
+import AreasComponent from "./AreasComponent";
+import AsociadosSmallComponent from "./AsociadosSmallComponent";
+import DesarrollosTodos from "./desarrollos/DesarrollosComponent";
+import Quotes from "./Quotes";
+import Servicios from "./Servicios";
 
 export function Home() {
   const [width, setWidth] = React.useState(window.innerWidth);
@@ -28,12 +27,7 @@ export function Home() {
     window.resizeTo(0, 0);
   });
   // State variable to store the visibility of the floating element
-  const [show, setShow] = useState(true);
-
   // Function to toggle the visibility of the floating element
-  const toggleShow = () => {
-    setShow(!show);
-  };
 
   const [quotez] = useState<Quote[]>(quotes);
   return (
