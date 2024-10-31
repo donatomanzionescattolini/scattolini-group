@@ -183,7 +183,7 @@ const Nav = () => {
                     <div className="dropdown-menu-content">
                     {filteredDesarrollos.map((desarrollo) => {
                       return (
-                        <MDBDropdownItem link key={filteredDesarrollos.indexOf(desarrollo)} href={"/areas/" + desarrollo.nombre}>
+                        <MDBDropdownItem link key={filteredDesarrollos.indexOf(desarrollo)} href={"/desarrollos/" + desarrollo.nombre}>
                           {desarrollo.titulo}
                         </MDBDropdownItem>
                       );
