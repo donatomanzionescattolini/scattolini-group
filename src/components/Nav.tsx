@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
-  MDBBtn,
-  MDBCol,
   MDBCollapse,
   MDBContainer,
   MDBDropdown,
@@ -9,21 +7,19 @@ import {
   MDBDropdownMenu,
   MDBDropdownToggle,
   MDBIcon,
-  MDBInput,
   MDBInputGroup,
+  MDBListGroup,
   MDBNavbar,
   MDBNavbarBrand,
   MDBNavbarItem,
   MDBNavbarLink,
   MDBNavbarNav,
   MDBNavbarToggler,
-  MDBRow,
 } from "mdb-react-ui-kit";
 import Areas from "../objects/areas/Areas.tsx";
 import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos.ts";
 import Desarrollo from "../models/desarrollos/Desarrollo.tsx";
 import { Area } from "../models/areas/Area.tsx";
-import { Col, Row } from "react-bootstrap";
 
 const Nav = () => {
   const [showNavCentred, setShowNavCentred] = useState(false);
@@ -32,50 +28,19 @@ const Nav = () => {
   window.addEventListener("resize", () => {
     setInnerWidth(window.innerWidth);
   });
-  const [areas, setAreas] = useState(Areas());
+  const [areas] = useState(Areas());
   const [filteredAreas, setFilteredAreas] = useState<Array<Area>>(areas);
 
-  const [allDesarrollos, setAllDesarrollos] = useState<Desarrollo[]>(
+  const [allDesarrollos] = useState<Desarrollo[]>(
     Areas()
       .map((area) => [...getDesarrollosForArea(area)])
       .reduce((prev, cur) => [...prev, ...cur])
-  );
-  const [leftColumn, setLeftColumn] = useState(
-    areas.slice(0, Math.floor(areas.length / 2))
   );
 
 
 
   const [filteredDesarrollos, setFilteredDesarrollos] =
     useState<Desarrollo[]>(allDesarrollos);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredDesarrollosLeft, setFilteredDesarrollosLeft] = useState(
-    []
-  );
-  const [filteredDesarrollosRight, setFilteredDesarrollosRight] = useState(
-    []
-  );
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value);
-    if (searchQuery === "") {
-      setFilteredDesarrollos(allDesarrollos);
-
-      return;
-    }
-
-    const filteredDesarrolloz = allDesarrollos.filter(
-      (item) =>
-        (item.titulo as string)
-          .toLowerCase()
-          .includes(event.target.value.toLowerCase()) ||
-        event.target.value
-          .toLowerCase()
-          .includes((item.titulo as string).toLowerCase())
-    );
-
-    setFilteredDesarrollos(filteredDesarrolloz);
-
-  };
 
 
   const [searchQueryDesarrollo, setSearchQueryDesarrollo] = useState("");
@@ -169,7 +134,7 @@ const Nav = () => {
             <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle tag="a">Áreas</MDBDropdownToggle>
-                <MDBDropdownMenu className="responsive column">
+                <MDBDropdownMenu className="responsive column ">
                   <>
                     <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
                       <input
@@ -182,13 +147,15 @@ const Nav = () => {
                       />
                       {/* <MDBBtn outline>Buscar</MDBBtn> */}
                     </MDBInputGroup>
+                    <div className="dropdown-menu-content ">
                     {filteredAreas.map((area) => {
                       return (
-                        <MDBDropdownItem link href={"/areas/" + area.name}>
+                        <MDBDropdownItem key={filteredAreas.indexOf(area)} link href={"/areas/" + area.name}>
                           {area.titulo}
                         </MDBDropdownItem>
                       );
                     })}
+                    </div>
                   </>
                 </MDBDropdownMenu>
               </MDBDropdown>
@@ -198,9 +165,9 @@ const Nav = () => {
               <MDBNavbarLink href="/contacto/">Contacto</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBDropdown>
+              <MDBDropdown >
                 <MDBDropdownToggle tag="a">Desarrollos</MDBDropdownToggle>
-                <MDBDropdownMenu className="responsive column">
+                <MDBDropdownMenu  className="responsive column" >
                   <>
                     <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
                       <input
@@ -213,13 +180,15 @@ const Nav = () => {
                       />
                       {/* <MDBBtn outline>Buscar</MDBBtn> */}
                     </MDBInputGroup>
+                    <div className="dropdown-menu-content">
                     {filteredDesarrollos.map((desarrollo) => {
                       return (
-                        <MDBDropdownItem link href={"/areas/" + desarrollo.nombre}>
+                        <MDBDropdownItem link key={filteredDesarrollos.indexOf(desarrollo)} href={"/areas/" + desarrollo.nombre}>
                           {desarrollo.titulo}
                         </MDBDropdownItem>
                       );
                     })}
+                    </div>
                   </>
                 </MDBDropdownMenu>
               </MDBDropdown>

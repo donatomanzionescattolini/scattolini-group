@@ -1247,3 +1247,16 @@ a:active, li:active, a:hover, li:hover {
   float:left!Important;
   padding:10px!important;
 }
+
+
+.dropdown-menu-content {
+  column-count: 2 !important;
+  min-width: 15rem !important;
+  column-gap: 20px;
+  overflow-x:visible !important;
+}
+
+.dropdown-menu {
+  overflow-x: visible !important;
+  min-width:fit-content !important;
+}
