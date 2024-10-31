@@ -19,7 +19,7 @@ export default function DesarrollosTodos() {
         {Areas().map((area: Area) => {
           const desarr = getDesarrollosForArea(area);
           if (!desarr || desarr.size == 0) {
-            return <MDBCol></MDBCol>;
+            return <></>;
           } else {
             return (
               <>
