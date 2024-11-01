@@ -35,7 +35,7 @@ export default function DesarrollosTodos() {
                           }}
                         ></div>
 
-                        <h4 className="text-center card-title m-2 ">
+                        <h6 className="text-center card-title m-2 ">
                           {desarrollo.nombre
                             .split("-")
                             .map(
@@ -43,7 +43,7 @@ export default function DesarrollosTodos() {
                                 word.charAt(0).toUpperCase() + word.substring(1)
                             )
                             .join(" ")}
-                        </h4>
+                        </h6>
                       </Link>
                     </MDBCol>
                   );

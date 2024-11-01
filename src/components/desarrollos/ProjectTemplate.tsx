@@ -155,7 +155,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           </h2>
 
           <hr className="hr hr-blurry w-50 mx-auto" />
-          {<h4 className="mt-0 text-center">{subtitulo}</h4>}
+          {<h6 className="mt-0 text-center">{subtitulo}</h6>}
           <div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3    text-justify responsive">
             <p className=" mx-lg-5 mx-xl-5 mx-md-1 mx-sm-1 mx-xs-1 px-5 font-16 text-center">
               {(introduccion as Array<string>).map((par: string) => (
@@ -449,7 +449,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           <MDBRow>
             {[...desarrollosArea.values()].map((desarrollo) => {
               return (
-                <MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
+                <MDBCol key={[...desarrollosArea.values()].indexOf(desarrollo)} xs={12} sm={12} md={6} lg={4} xl={4}>
                   <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                     <div
                       className="propiedades-img p-0 m-0"
@@ -459,7 +459,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                       }}
                     ></div>
 
-                    <h4 className="text-center card-title m-2 ">
+                    <h6 className="text-center card-title m-2 ">
                       {desarrollo.titulo ||
                         desarrollo.nombre
                           .split("-")
@@ -468,7 +468,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                               word.charAt(0).toUpperCase() + word.substring(1)
                           )
                           .join(" ")}
-                    </h4>
+                    </h6>
                   </Link>
                 </MDBCol>
               );
