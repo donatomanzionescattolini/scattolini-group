@@ -519,6 +519,8 @@ hr {
       transform: rotate(45deg);
       -ms-transform: rotate(45deg); /* IE 9 */
       -webkit-transform: rotate(45deg); /* Opera, Chrome, and Safari */
+      transform: rotate(45deg);
+
     }
   }
 
@@ -627,7 +629,7 @@ a {
 .navbar-brand img {
   top: 10px;
   left: 10px;
-  width: 7em;
+  width: 4em;
   max-width: 100%;
   height: auto;
   height: inherit;
@@ -1066,7 +1068,7 @@ main {
 }
 
 #root > nav {
-  padding: 5%;
+  padding: 3%;
   display: flex;
   justify-content: space-evenly !important;
   width: 100% !important;
@@ -1075,7 +1077,6 @@ main {
   background: $secondBackground !important;
   height: fit-content !important;
 
-    max-height: 200px!important;
 
 }
 
@@ -1229,7 +1230,7 @@ a {
 
 #hero-heading {
   font-variant:normal!important;
-  font-family:'Gayathri', sans /***** Section *****/  /***** End Section *****/
+  font-family:'the-seasons', sans-serif /***** Section *****/  /***** End Section *****/
   ;
   font-weight:bolder;
 }
@@ -1279,7 +1280,9 @@ a:active, li:active, a:hover, li:hover {
   font-weight: 300;
   font-style: normal;
 }
-
+#root > section:nth-child(14) > div > div > div > a {
+background-color:transparent;
+}
 div {
   font-family:tt-commons-pro-thin, sans-serif;
 }

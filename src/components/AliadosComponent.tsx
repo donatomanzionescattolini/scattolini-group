@@ -23,7 +23,7 @@ export default function AliadosComponent() {
                 </MDBCol>
                 <MDBCol xs={12} sm={12} md={12} lg={4} xl={4}>
                     {" "}
-                    <Link to="https://www.manzionesdesign.com//">
+                    <Link to="https://www.manzionesdesign.com">
                         <img
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/manzionesdesign.png"
                             alt="Manzione S. Design"
