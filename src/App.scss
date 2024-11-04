@@ -88,10 +88,10 @@ body,
 html {
   margin: 0;
   background: $background;
-  color: $darkblue;
+  color: $brown;
 }
  section > div > p {
-  colour:$darkblue!important;
+  colour:$brown!important;
 }
 main {
   margin: 0;
@@ -165,8 +165,8 @@ main {
 
 .btn {
   background: none;
-  border: solid thin $darkblue;
-  color: $darkblue;
+  border: solid thin $brown;
+  color: $brown;
 }
 
 .video-container .btn-large {
@@ -186,7 +186,7 @@ nav {
 #navbarNavDropdown > ul > li:hover,
 .dropdown-item:hover {
   //background: #1b3433!important;
-  color: $darkblue !important;
+  color: $brown !important;
   cursor: pointer !important;
 }
 
@@ -216,7 +216,7 @@ a:hover {
   margin-left: 15%;
   max-width: 40vw;
   height: auto;
-  /* color: $darkblue ; */
+  /* color: $brown ; */
   overflow: hidden;
 }
 
@@ -225,7 +225,7 @@ h4 {
 }
 
 a {
-  color: $darkblue;
+  color: $brown;
 }
 
 section.Servicios p {
@@ -251,7 +251,7 @@ main > section.city-firstsection {
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
   font-family: "Cormorant Garamond", serif;
-  color: $darkblue;
+  color: $brown;
   -webkit-font-smoothing: antialiased;
   font-weight: 500;
     --bs-gutter-x: 1.5rem;
@@ -278,7 +278,7 @@ main > section.city-firstsection {
 //
 //  //  line-height: 1.5;
 //  -webkit-tap-highlight-color: transparent;
-//  color: $darkblue;
+//  color: $brown;
 //  box-sizing: border-box;
 //  font-family: "Cormorant Garamond", serif;
 //  font-weight: 500;
@@ -304,7 +304,7 @@ main > section.city-firstsection {
   line-height: 1.5;
 
   -webkit-tap-highlight-color: transparent;
-  color: $darkblue;
+  color: $brown;
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   box-sizing: border-box;
@@ -322,7 +322,7 @@ main > section.city-firstsection {
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
   font-family: "Cormorant Garamond", serif;
-  color: $darkblue;
+  color: $brown;
   -webkit-font-smoothing: antialiased;
   font-weight: 500;
     margin: 1%;
@@ -362,7 +362,7 @@ section.city-firstcarousel {
     line-height: 1.5;
 
   -webkit-tap-highlight-color: transparent;
-  color: $darkblue;
+  color: $brown;
   box-sizing: border-box;
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
@@ -381,7 +381,7 @@ section.city-firstcarousel {
     line-height: 1.5;
 
   -webkit-tap-highlight-color: transparent;
-  color: $darkblue;
+  color: $brown;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
 
@@ -406,7 +406,7 @@ div.container-fluid {
 }
 
 .Servicios {
-  color: $darkblue;
+  color: $brown;
 }
 
 #hero-subheading {
@@ -442,7 +442,7 @@ html {
   margin: 0;
   padding: 0;
   background: $background;
-  color: $darkblue;
+  color: $brown;
 }
 
 main {
@@ -479,22 +479,22 @@ main {
 }
 
 hr {
-  border: 1px solid $darkblue;
+  border: 1px solid $brown;
   height: 1px;
   width: 10%;
   position: relative;
   margin: 30px auto;
 
   &.center-ball {
-    background: $darkblue;
+    background: $brown;
 
     &:before {
       content: "";
       width: 6px !important;
       height: 6px !important;
-      background: $darkblue !important;
+      background: $brown !important;
       display: inline-block !important;
-      border: 2px solid $darkblue !important;
+      border: 2px solid $brown !important;
 
       margin-top: -4px !important;
       margin-left: 50% !important;
@@ -503,15 +503,15 @@ hr {
   }
 
   &.center-diamond {
-    background: $darkblue;
+    background: $brown;
 
     &:before {
       content: "";
       width: 6px;
       height: 6px;
-      background: $darkblue;
+      background: $brown;
       display: inline-block;
-      border: 2px solid $darkblue;
+      border: 2px solid $brown;
       position: absolute;
       top: -5px;
       left: 50%;
@@ -525,15 +525,15 @@ hr {
   }
 
   &.center-square {
-    background: $darkblue;
+    background: $brown;
 
     &:before {
       content: "";
       width: 6px;
       height: 6px;
-      background: $darkblue;
+      background: $brown;
       display: inline-block;
-      border: 2px solid $darkblue;
+      border: 2px solid $brown;
       position: absolute;
       top: -5px;
       left: 50%;
@@ -542,11 +542,11 @@ hr {
   }
 
   &.center-star {
-    background: $darkblue;
+    background: $brown;
 
     &:before {
       content: "★";
-      color: $darkblue;
+      color: $brown;
       display: inline-block;
       position: absolute;
       top: 0px;
@@ -594,8 +594,8 @@ hr {
 
 .btn {
   background: none;
-  border: solid thin $darkblue;
-  color: $darkblue;
+  border: solid thin $brown;
+  color: $brown;
 }
 
 .navbar-toggle {
@@ -619,7 +619,7 @@ nav ul li {
 a {
   text-decoration: none;
   background: $secondBackground;
-  color: $darkblue !important;
+  color: $brown !important;
 }
 
 .navbar-brand {
@@ -655,7 +655,7 @@ html {
 }
 
 section {
-  color: $darkblue;
+  color: $brown;
   -webkit-font-smoothing: antialiased;
   font-weight: 500;
     padding: 2%;
@@ -727,7 +727,7 @@ h4 {
 }
 
 a {
-  color: $darkblue;
+  color: $brown;
 }
 
 section.Servicios p {
@@ -737,7 +737,7 @@ section.Servicios p {
 @media screen and (min-width: 768px) {
   main > section.city-firstsection {
     font-family: "Cormorant Garamond", serif;
-    color: $darkblue;
+    color: $brown;
 
     display: flex;
     flex-wrap: wrap;
@@ -810,7 +810,7 @@ section.Servicios p {
   content: "";
   display: inline-block;
 
-  /* border: solid $darkblue;
+  /* border: solid $brown;
   border-width: 1.5px 1.5px 0 0; 
   border: none;
 
@@ -838,7 +838,7 @@ section.Servicios p {
 
 #quotes .blockquote {
   height: 100px;
-  color: $darkblue;
+  color: $brown;
     vertical-align: middle;
 }
 
@@ -970,14 +970,14 @@ body {
   background: $secondBackground;
   width: 100%;
   padding: 7% 1% 10% 1%;
-  color: $darkblue !important;
+  color: $brown !important;
 }
 
 .colour-block {
   background: $background;
   width: 100%;
   padding: 7% 1% 10% 3%;
-color: $darkblue;
+color: $brown;
 }
 
 p {
@@ -1085,7 +1085,7 @@ main {
 }
 
 section.colour-block h4 {
-  color: $darkblue !important;
+  color: $brown !important;
 }
 
 dl {
@@ -1150,7 +1150,7 @@ video {
 
   height: fit-content;
 
-  border: 1px solid $darkblue;
+  border: 1px solid $brown;
 
   padding: 10px;
 
