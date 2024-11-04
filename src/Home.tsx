@@ -77,19 +77,19 @@ export function Home() {
       {/* <div> */}
       {/* <h3 className="text-center">Otras Áreas</h3> */}
       {/* </div> */}
-      <div className="skew-c"></div>
+      <div className="skew-cc"></div>
 
       <section className="colour-block">
         <AreasComponent />
       </section>
 
-      <div className="skew-cc"></div>
+      <div className="skew-c"></div>
       <section className="white-block">
         <MDBContainer>
           <AsociadosSmallComponent />
         </MDBContainer>
       </section>
-      <div className="skew-c"></div>
+      <div className="skew-cc"></div>
       {/* <DividerSecondComponent /> */}
       <br />
       <section className="colour-block">
@@ -98,19 +98,19 @@ export function Home() {
         </MDBContainer>
         <br />
       </section>
-      <div className="skew-cc"></div>
+      <div className="skew-c"></div>
       <section className="white-block">
         <MDBContainer>
           <DesarrollosTodos />
         </MDBContainer>
       </section>
-      <div className="skew-c"></div>
+      <div className="skew-cc"></div>
       <section className="colour-block">
         <MDBContainer>
           <AliadosComponent />
         </MDBContainer>
       </section>
-      <div className="skew-cc"></div>
+      <div className="skew-c"></div>
       <section className="white-block">
         <Quotes quotes={quotez} />
       </section>
