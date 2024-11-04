@@ -12,7 +12,7 @@ interface AreaProps {
 }
 
 export default function AreaTemplate(props: AreaProps) {
-   const [area] = useState(props.area);
+    const [area] = useState(props.area);
 
     const nombre = area.name;
     const titulo = area.titulo;
@@ -48,27 +48,22 @@ export default function AreaTemplate(props: AreaProps) {
                     <hr className="hr hr-blurry w-50 mx-auto"/>
                 </div>
             </div>
-            <div className="city-firstsection w-100 row">
-                <div className="row d-flex align-items-center justify-content-around">
-                    <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 ps-5 pe-5 pb-2">
+            <div
+                className="city-firstsection w-100 d-flex flex-row flex-md-nowrap flex-sm-wrap flex-xs-wrap               flex-xl-nowrap  flex-lg-nowrap">
+                <div className="w-75 m-auto p-2">
 
 
-                        {area.descripcion.map((paragraph: string) => {
-                            return (<p className={"text-muted"}><small>{paragraph}<br/><br/></small></p>)
-                        })}
+                    {area.descripcion.map((paragraph: string) => {
+                        return (<p className={"text-muted"}>{paragraph}<br/><br/></p>)
+                    })}
 
-                    </div>
-                    {innerWidth > 650 &&
-                        <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
-                            <picture className="">
-                                <img
-                                    src={firstImage}
-                                    className="w-100 img-thumbnail align-self-center justify-self-center m-auto"
-                                    alt="BrickellComponent City Center"
-                                />
-                            </picture>
-                        </div>
-                    }
+                </div>
+
+                <div className={"flex-row justify-content-center align-items-center p-2"}>
+                    <img
+                        src={firstImage}
+                        className="w-75 m-auto img-thumbnail "
+                    />
                 </div>
             </div>
             <div className="city-firstcarousel">

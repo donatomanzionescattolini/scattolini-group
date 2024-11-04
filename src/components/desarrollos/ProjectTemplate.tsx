@@ -5,16 +5,16 @@ import "@material/banner/dist/mdc.banner.min.css";
 import * as React from "react";
 import {JSX, ReactNode, useLayoutEffect, useState} from "react";
 import {
-  MDBAccordion,
-  MDBAccordionItem,
-  MDBCol,
-  MDBContainer,
-  MDBRow,
-  MDBTabs,
-  MDBTabsContent,
-  MDBTabsItem,
-  MDBTabsLink,
-  MDBTabsPane,
+    MDBAccordion,
+    MDBAccordionItem,
+    MDBCol,
+    MDBContainer,
+    MDBRow,
+    MDBTabs,
+    MDBTabsContent,
+    MDBTabsItem,
+    MDBTabsLink,
+    MDBTabsPane,
 } from "mdb-react-ui-kit";
 import {Link} from "react-router-dom";
 import {caracteristicas, ProjectParams,} from "../../models/desarrollos/ProjectParams.tsx";
@@ -96,7 +96,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                             autoFocus
                             style={{
                                 backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
-                                backgroundSize: "cover",
+                                backgroundSize: "100%",
                                 backgroundRepeat: "no-repeat",
                                 backgroundPositionX: "center",
                             }}
@@ -140,7 +140,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             <div className="skew-c"></div>
 
             <section className="white-block">
-                <MDBContainer>
+                <MDBContainer fluid className={"d-flex flex-column justify-content-center align-items-center"}>
                     {innerWidth < 768 && (
                         <div>
                             <br/>
@@ -154,15 +154,24 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
                     <hr className="hr hr-blurry w-50 mx-auto"/>
                     {<h5 className="mt-0 text-center">{subtitulo}</h5>}
-                    <div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3    text-justify responsive">
+                    {window.innerWidth < 610 &&
+                        (<div className="px-3 text-justify responsive">
 
-                        {(introduccion as Array<string>).map((par: string) => (
-                            <p>
+                            {(introduccion as Array<string>).map((par: string) => <p>
                                 {par}
                                 <br></br>
-                            </p>
-                        ))}
-                    </div>
+                            </p>)}
+
+                        </div>)
+                        || (<div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3    text-justify responsive">
+                            {(introduccion as Array<string>).map((par: string) => (
+                                <p>
+                                    {par}
+                                    <br></br>
+                                </p>
+                            ))}
+                        </div>)}
+
                 </MDBContainer>
             </section>
             <div className="skew-cc"></div>
@@ -177,7 +186,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                         autoPlay
                         autoFocus={true}
                         className={
-                            "mx-auto my-0 p-0 d-flex flex-row justify-content-center"
+                            " w-100 mx-auto my-0 p-0 d-flex flex-row justify-content-center"
                         }
                     >
                         {video}
@@ -200,7 +209,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                     </div>
                     <hr className="hr hr-blurry w-50 mx-auto"/>
 
-                    <MDBAccordion id="accordion" className="m-5 w-fit-content">
+                    <MDBAccordion id="accordion" className="m-5 w-fit-content" flush>
                         <MDBAccordionItem
                             collapseId={1}
                             headerTitle="Edificio"
@@ -276,17 +285,17 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                     <hr className="hr hr-blurry w-50 mx-auto"/>
 
                     <br></br>
-                    <MDBTabs>
-                        <MDBTabsItem
-                            style={{color: "#2b2a2e!important"}}
-                            title="Brochure"
+                    <MDBTabs fill>
+                        <MDBTabsItem className={"text-md-center"}
+                                     style={{color: "#2b2a2e!important"}}
+                                     title="Brochure"
                         >
                             <MDBTabsLink onClick={() => openTab("brochure")} href="#docs">
                                 {" "}
                                 Brochure
                             </MDBTabsLink>
                         </MDBTabsItem>
-                        <MDBTabsItem>
+                        <MDBTabsItem className={"text-md-center"}>
                             <MDBTabsLink
                                 style={{color: "#2b2a2e!important"}}
                                 onClick={() => openTab("hoja")}
@@ -295,7 +304,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                                 Hoja Informativa
                             </MDBTabsLink>
                         </MDBTabsItem>
-                        <MDBTabsItem>
+                        <MDBTabsItem className={"text-md-center"}>
                             <MDBTabsLink
                                 style={{color: "#2b2a2e!important"}}
                                 aria-keyshortcuts=""
