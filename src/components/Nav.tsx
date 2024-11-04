@@ -90,8 +90,8 @@ const Nav = () => {
           aria-label="Toggle navigation"
           onClick={() => setShowNavCentred(!showNavCentred)}
         >
-          <div className="d-flex flex-column align-items-top justify-content-center">
-            {innerWidth < 650 && (
+          <div className="d-flex flex-row align-items-center justify-content-center">
+            {innerWidth < 768 && (
               <div>
                 <img
                   width={"40%"}
@@ -99,9 +99,9 @@ const Nav = () => {
                   alt="logo"
                 />
               </div>
-            )}
+            ) || <h1 className="text-center">Menú&nbsp;</h1>}
             <div>
-              <MDBIcon icon="caret-down"></MDBIcon>
+              <MDBIcon icon="caret-right"></MDBIcon>
             </div>
           </div>
         </MDBNavbarToggler>
