@@ -141,7 +141,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       </MDBContainer>
       <div className="skew-c"></div>
 
-      <section className="colour-block">
+      <section className="white-block">
         <MDBContainer>
           {innerWidth < 768 && (
             <div>
@@ -169,7 +169,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         </MDBContainer>
       </section>
       <div className="skew-cc"></div>
-      <section className="white-block">
+      <section className="colour-block">
         {typeof video !== "string" || !video ? (
           video
         ) : (
@@ -195,7 +195,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         )}
       </section>
       <div className="skew-c"></div>
-      <section className="colour-block">
+      <section className="white-block">
         <MDBContainer small responsive centered>
           <br></br>
           <div>
@@ -237,7 +237,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         </MDBContainer>
       </section>
       <div className="skew-cc"></div>
-      <section className="white-block" id="galeria-proyectos">
+      <section className="colour-block" id="galeria-proyectos">
         <MDBContainer>
           <br></br>
 
@@ -270,7 +270,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           allowFullScreen
         ></iframe> */}
       {/* </div> */}
-      <section className="colour-block">
+      <section className="white-block">
         <MDBContainer className="embed-responsive">
           <br></br>
           <div>
@@ -421,7 +421,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         </MDBContainer>
       </section>
       <div className="skew-cc"></div>
-      <section className="white-block">
+      <section className="colour-block">
         <MDBContainer>
           <br />
           <br></br>
@@ -459,7 +459,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                       }}
                     ></div>
 
-                    <h6 className="text-center card-title m-2 ">
+                    <h4 className="text-center card-title m-2 ">
                       {desarrollo.titulo ||
                         desarrollo.nombre
                           .split("-")
@@ -468,7 +468,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                               word.charAt(0).toUpperCase() + word.substring(1)
                           )
                           .join(" ")}
-                    </h6>
+                    </h4>
                   </Link>
                 </MDBCol>
               );
@@ -481,11 +481,11 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         <br></br>
       </section>
       <div className="skew-c"></div>
-      <section className="colour-block">
+      <section className="white-block">
         <AreasComponent />
       </section>
       <div className="skew-cc"></div>
-      <section className="white-block">
+      <section className="colour-block">
         {innerWidth <= 768 && (
           <MDBContainer>
             <ContactFormComponent projectName={titulo as string} />
