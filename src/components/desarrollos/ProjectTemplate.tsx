@@ -21,6 +21,7 @@ import {caracteristicas, ProjectParams,} from "../../models/desarrollos/ProjectP
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
 import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
+import {Image} from "react-bootstrap";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
     const params = paramz.desarrollo;
@@ -79,104 +80,97 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
     return (
         <>
-            <a id="top"></a>
-            <MDBContainer
-                fluid
-                jumbotron
-                id={"banner"}
-                className=""
-                style={{height: "300px"}}
-            >
-                <header
-                    className="mdc-banner d-flex row flex-nowrap overflow-none  justify-content-center h-100 m-0 p-0 responsive">
-                    {banner && (
-                        <div
-                            id="banner"
-                            className="p-0 m-0 well"
-                            autoFocus
-                            style={{
-                                backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
-                                backgroundSize: "100%",
-                                backgroundRepeat: "no-repeat",
-                                backgroundPositionX: "center",
-                            }}
-                        />
-                    )}
-                    {!banner && (
-                        <>
-                            <div
-                                autoFocus
-                                className="col-4 m-0 p-0 responsive"
-                                style={{
-                                    height: "250px",
-                                    backgroundImage: `url(../../..https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-left.jpg)`,
-                                    backgroundSize: "cover",
-                                }}
-                            />
-                            <div
-                                autoFocus
-                                style={{
-                                    height: "250px",
-                                    backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-center.jpg')`,
-                                    backgroundSize: "cover",
-                                    backgroundPositionX: "center",
-                                    backgroundPositionY: "top",
-                                }}
-                                className="col-4"
-                            />
-                            <div
-                                autoFocus
-                                style={{
-                                    height: "250px",
-                                    backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-right.jpg')`,
-                                    backgroundSize: "cover",
-                                }}
-                                className="col-4 m-0 p-0 responsive"
-                            />
-                        </>
-                    )}
-                </header>
-            </MDBContainer>
-            <div className="skew-c"></div>
+    <a id="top"></a>
+    <MDBContainer
+        fluid
+        jumbotron
+        id={"banner"}
+        className=""
+        style={{height: "300px"}}
+    >
+        <header
+            className="mdc-banner d-flex row flex-nowrap overflow-none  justify-content-center h-100 m-0 p-0 responsive">
+            {banner && (
+                <div
+                    id="banner"
+                    className="p-0 m-0 well"
+                    autoFocus
+                    style={{
+                        backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
+                        backgroundSize: "250%",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
 
-            <section className="white-block">
-                <MDBContainer fluid className={"d-flex flex-column justify-content-center align-items-center"}>
-                    {innerWidth < 768 && (
-                        <div>
-                            <br/>
-                            <br/>
-                            <br/>
-                        </div>
-                    )}
-                    <h2 className=" text-center animate-charcter" style={{}}>
-                        {titulo}
-                    </h2>
+                    }}
+                />
+            )}
+            {!banner && (
+                <>
+                    <div
+                        autoFocus
+                        className="col-4 m-0 p-0 responsive"
+                        style={{
+                            height: "250px",
+                            backgroundImage: `url(../../..https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-left.jpg)`,
+                            backgroundSize: "cover",
+                        }}
+                    />
+                    <div
+                        autoFocus
+                        style={{
+                            height: "250px",
+                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-center.jpg')`,
+                            backgroundSize: "cover",
+                            backgroundPositionX: "center",
+                            backgroundPositionY: "top",
+                        }}
+                        className="col-4"
+                    />
+                    <div
+                        autoFocus
+                        style={{
+                            height: "250px",
+                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-right.jpg')`,
+                            backgroundSize: "cover",
+                        }}
+                        className="col-4 m-0 p-0 responsive"
+                    />
+                </>
+            )}
+        </header>
+    </MDBContainer>
+    <div className="skew-c"></div>
+<section className="white-block d-flex flex-column">
+            {innerWidth < 768 && (
+                <div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+            )}
+            <h2 className=" text-center animate-charcter" style={{}}>
+                {titulo}
+            </h2>
 
-                    <hr className="hr hr-blurry w-50 mx-auto"/>
-                    {<h5 className="mt-0 text-center">{subtitulo}</h5>}
-                    {window.innerWidth < 610 &&
-                        (<div className="px-3 text-justify responsive">
+            <hr className="hr hr-blurry w-50 mx-auto"/>
+            {<h5 className="mt-0 text-center">{subtitulo}</h5>}
+        <MDBRow className={"row w-75 mx-auto mt-5"}>
+            <MDBCol xs={12} sm={12} md={6} lg={6} xl={6} className={"align-content-center justify-content-center"}>
+            {(introduccion as Array<string>).map((par: string) =>
+                <p className={""}>{par}</p>)
+            }
+            </MDBCol>
 
-                            {(introduccion as Array<string>).map((par: string) => <p>
-                                {par}
-                                <br></br>
-                            </p>)}
+            <MDBCol xs={12} sm={12} md={6} lg={6} xl={6} className={"p-md-5 p-sm-2"}>
+                <img src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${nombre}.webp`} className={"img-fluid "}/>
+            </MDBCol>
+        </MDBRow>
 
-                        </div>)
-                        || (<div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3    text-justify responsive">
-                            {(introduccion as Array<string>).map((par: string) => (
-                                <p>
-                                    {par}
-                                    <br></br>
-                                </p>
-                            ))}
-                        </div>)}
-
-                </MDBContainer>
-            </section>
+    </section>
             <div className="skew-cc"></div>
             <section className="colour-block">
-                {typeof video !== "string" || !video ? (
+            {typeof video !== "string" || !video ? (
                     video
                 ) : (
                     <video

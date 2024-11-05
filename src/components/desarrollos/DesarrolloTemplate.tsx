@@ -156,15 +156,17 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
           <hr className="hr hr-blurry w-50 mx-auto" />
           {<h4 className="mt-0 text-center">{subtitulo}</h4>}
-          <div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3    text-justify responsive">
-            <p className=" mx-lg-5 mx-xl-5 mx-md-1 mx-sm-1 mx-xs-1 px-5 font-16 text-center">
+          <div className="text-justify">
               {(introduccion as Array<string>).map((par: string) => (
                 <>
-                  {par}
+                <p className=" mx-lg-5 mx-xl-5 mx-md-1 mx-sm-1 mx-xs-1 px-5 font-16 text-center">
+
+                {par}
                   <br></br>
+                </p>
                 </>
               ))}
-            </p>
+            <img src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/thumbnail.webp/`} className={"w-100 float-md-end"}/>
           </div>
         </MDBContainer>
       </section>

@@ -33,16 +33,13 @@ body, html {
 h1,
 
 ,
-h2, p, h3, h4 {
+h2, p,h5,h6, h3, h4 {
   font-family: "the-seasons", sans-serif;
   font-weight: 100;
 
 
 }
 
-h5, h6 {
-  font-family: "tt-commons-pro-thin", sans-serif;
-}
 
 a, .card-link, .card-title {
   color: $lightblue !important;
