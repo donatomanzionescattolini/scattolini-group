@@ -21,7 +21,7 @@ export function AboutUs() {
                 <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 px-5">
                     <h4 className="text-center mt-0">Quiénes Somos</h4>
                     {window.innerWidth < 768 && <br></br>}
-                    <p className="text-muted px-lg-5 px-xl-5 px-sm-0 px-md-0 pt-sm-4 pt-md-4  pt-xs-4 text-align-justify">
+                    <p className="fs-6 text-muted px-lg-5 px-xl-5 px-sm-0 px-md-0 pt-sm-4 pt-md-4  pt-xs-4 text-align-justify">
                         Scattolini Group es un equipo de expertos con décadas de experiencia
                         en el mercado inmobiliario del sur de Florida. Hemos tenido el
                         privilegio de asistir a numerosos clientes provenientes de diversas

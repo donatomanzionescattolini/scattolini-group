@@ -1,20 +1,20 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import {
-  MDBCollapse,
-  MDBContainer,
-  MDBDropdown,
-  MDBDropdownItem,
-  MDBDropdownMenu,
-  MDBDropdownToggle,
-  MDBIcon,
-  MDBInputGroup,
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBNavbarNav,
-  MDBNavbarToggler,
+    MDBCollapse,
+    MDBContainer,
+    MDBDropdown,
+    MDBDropdownItem,
+    MDBDropdownMenu,
+    MDBDropdownToggle,
+    MDBIcon, MDBInputGroup,
+    MDBNavbar,
+    MDBNavbarBrand,
+    MDBNavbarItem,
+    MDBNavbarLink,
+    MDBNavbarNav,
+    MDBNavbarToggler,
 } from "mdb-react-ui-kit";
+
 import Areas from "../objects/areas/Areas.tsx";
 import {getDesarrollosForArea} from "../objects/desarrollos/Desarrollos.ts";
 import Desarrollo from "../models/desarrollos/Desarrollo.tsx";
@@ -75,6 +75,7 @@ const Nav = () => {
     };
 
 
+    // @ts-ignore
     return (
         <MDBNavbar expand="lg" light bgColor="light">
             <MDBContainer fluid>
@@ -128,13 +129,14 @@ const Nav = () => {
                                 </MDBNavbarBrand>
                             </MDBNavbarItem>
                         )}
+
                         <MDBNavbarItem>
-                            <MDBDropdown>
+                            <MDBDropdown drop={"center"}>
                                 <MDBDropdownToggle tag="a">Áreas</MDBDropdownToggle>
                                 <MDBDropdownMenu className="responsive column ">
                                     <>
-                                        <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
-                                            <input
+                                        <div className="input-group d-flex w-75 ms-4 my-3">
+                                        <input
                                                 className="form-control"
                                                 placeholder="Buscar"
                                                 aria-label="Buscar"
@@ -143,7 +145,7 @@ const Nav = () => {
                                                 onChange={handleSearchArea}
                                             />
                                             {/* <MDBBtn outline>Buscar</MDBBtn> */}
-                                        </MDBInputGroup>
+                                        </div>
                                         <div className="dropdown-menu-content ">
                                             {filteredAreas.map((area) => {
                                                 return (
@@ -163,11 +165,10 @@ const Nav = () => {
                             <MDBNavbarLink href="/contacto/">Contacto</MDBNavbarLink>
                         </MDBNavbarItem>
                         <MDBNavbarItem>
-                            <MDBDropdown>
+                            <MDBDropdown drop={"center"}>
                                 <MDBDropdownToggle tag="a">Desarrollos</MDBDropdownToggle>
                                 <MDBDropdownMenu className="responsive column">
-                                    <>
-                                        <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
+                                        <MDBInputGroup className="d-flex w-75 ms-4 my-3">
                                             <input
                                                 className="form-control"
                                                 placeholder="Buscar"
@@ -188,7 +189,6 @@ const Nav = () => {
                                                 );
                                             })}
                                         </div>
-                                    </>
                                 </MDBDropdownMenu>
                             </MDBDropdown>
                         </MDBNavbarItem>

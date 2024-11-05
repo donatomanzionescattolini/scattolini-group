@@ -90,7 +90,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
     >
         <header
             className="mdc-banner d-flex row flex-nowrap overflow-none  justify-content-center h-100 m-0 p-0 responsive">
-            {banner && (
+            {innerWidth < 610 && (banner && (
                 <div
                     id="banner"
                     className="p-0 m-0 well"
@@ -98,6 +98,18 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                     style={{
                         backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
                         backgroundSize: "250%",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+
+                    }}
+                />
+            )) || (banner && <div
+                    id="banner"
+                    className="p-0 m-0 well"
+                    autoFocus
+                    style={{
+                        backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
+                        backgroundSize: "150%",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
 
@@ -280,17 +292,17 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
                     <br></br>
                     <MDBTabs fill>
-                        <MDBTabsItem className={"text-md-center"}
+                        <MDBTabsItem className={"text-md-center fs-2"}
                                      style={{color: "#2b2a2e!important"}}
                                      title="Brochure"
                         >
-                            <MDBTabsLink onClick={() => openTab("brochure")} href="#docs">
+                          <MDBTabsLink className={"fs-5"}  onClick={() => openTab("brochure")} href="#docs">
                                 {" "}
                                 Brochure
                             </MDBTabsLink>
                         </MDBTabsItem>
                         <MDBTabsItem className={"text-md-center"}>
-                            <MDBTabsLink
+                          <MDBTabsLink className={"fs-5"}
                                 style={{color: "#2b2a2e!important"}}
                                 onClick={() => openTab("hoja")}
                                 href="#docs"
@@ -299,7 +311,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                             </MDBTabsLink>
                         </MDBTabsItem>
                         <MDBTabsItem className={"text-md-center"}>
-                            <MDBTabsLink
+                          <MDBTabsLink className={"fs-5"}
                                 style={{color: "#2b2a2e!important"}}
                                 aria-keyshortcuts=""
                                 href="#docs"
