@@ -1299,6 +1299,10 @@ div {
 }
 
 
-html, body {
+html {
   background-color: $darkblue !important;
+}
+
+body {
+  background-color: $background !Important;
 }
