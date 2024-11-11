@@ -28,7 +28,7 @@ export default function App() {
         <BrowserRouter>
             <Nav/>
 
-            <div className={"bg-dark"}>
+            <div className={"bg-transparent"}>
                 <Routes>
 
                     {/*pestañas*/}
