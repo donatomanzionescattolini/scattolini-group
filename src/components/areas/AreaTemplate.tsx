@@ -73,7 +73,7 @@ export default function AreaTemplate(props: AreaProps) {
                 </MDBCol>
             </MDBRow>
             {innerWidth < 610 &&
-                <div className={"d-flex flex-row justify-content-evenly vw-100 h-auto flex-nowrap overflow-scroll mt-4"}>
+                <div className={"d-flex flex-row justify-content-evenly vw-100 h-auto flex-nowrap overflow-scroll mt-4 mb-5"}>
 
                     { images.slice(0,3).map(image=>(<div className={"col-3 h-100 my-auto"}>{image}</div>))}
 
@@ -94,7 +94,7 @@ export default function AreaTemplate(props: AreaProps) {
                     <div className="propiedades">
                         {areaDesarrollos.size > 0 &&
                             <div>
-                                <h3 className="text-center">Propiedades en el Área</h3>
+                                <h2 className="text-center">Propiedades en el Área</h2>
                             </div>
                         }
                         <br></br>
@@ -110,7 +110,7 @@ export default function AreaTemplate(props: AreaProps) {
                                             }}
                                         ></div>
 
-                                        <h4 className="text-center card-title m-2 ">{desarrollo.nombre.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ")}</h4>
+                                        <h4 className="text-center card-title m-2 " style={{fontFamily:"tt-commons-pro-thin, sans-serif"}}>{desarrollo.nombre.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ")}</h4>
                                     </Link>
                                 </MDBCol>)
                             })}

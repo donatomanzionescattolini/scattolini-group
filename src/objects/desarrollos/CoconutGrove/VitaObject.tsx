@@ -5,7 +5,7 @@ export default function Vita() {
     const VitaObject = new Desarrollo();
 
 
-    VitaObject.nombre = "vita";
+    VitaObject.nombre = "vita-grove";
     VitaObject.caracteristicas = {
         residencias: (
             <ul>
