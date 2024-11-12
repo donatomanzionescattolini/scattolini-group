@@ -6,10 +6,11 @@ import {Link} from "react-router-dom";
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import {Area} from "../../models/areas/Area.tsx";
 import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
-
+import {Router} from "express";
 interface AreaProps {
     area: Area;
 }
+
 
 export default function AreaTemplate(props: AreaProps) {
     const [area] = useState(props.area);
@@ -17,9 +18,7 @@ export default function AreaTemplate(props: AreaProps) {
     const nombre = area.name;
     const titulo = area.titulo;
     const images = [];
-    useLayoutEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
     const [areaDesarrollos] = useState<Set<Desarrollo>>(getDesarrollosForArea(area));
     for (let i = 1; i <= area.numberOfImages; i++) {
         images.push(<Image
@@ -44,12 +43,11 @@ export default function AreaTemplate(props: AreaProps) {
                     }}
                 >
                     <div className={"mask  w-100 h-100 justify-content-center align-content-center "}
-                         style={{backgroundColor: "rgba(0,0,0,0.1)"}}>
-                        <h2 className="text-center text-white ">{titulo}</h2>
+                         style={{backgroundColor: "rgba(0,0,0,0.2)"}}>
+                        <h1 className="text-center text-white display-1">{titulo}</h1>
                     </div>
                 </div>
-                <div className="container-fluid text-center align-content-center">
-                    <h2 className="fs-2 text-center mt-5">{area.slogan}</h2>
+                <div className="container-fluid text-center align-content-center"><h2 className="fs-2 text-center mt-5">{area.slogan}</h2>
                     <hr className="hr hr-blurry w-50 mx-auto"/>
                 </div>
             </div>
