@@ -76,6 +76,10 @@ export default function BentleyResidences() {
     BentleyResidencesObject.numberOfImages = 47;
     BentleyResidencesObject.banner = true;
     BentleyResidencesObject.area = SunnyIsles();
-    BentleyResidencesObject.video = <iframe width="1600" height="900" src="https://www.youtube.com/embed/RmtuXP6nIiI?list=TLGGweicZODCOb8xMTEyMjAyMw&autoplay=1&controls=0" title="Bentley Residences Miami - Residences" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>;
+    BentleyResidencesObject.video = <iframe width="1600" height="900"
+                                            src="https://www.youtube.com/embed/RmtuXP6nIiI?list=TLGGweicZODCOb8xMTEyMjAyMw&autoplay=1&controls=0"
+                                            title="Bentley Residences Miami - Residences" frameBorder={0}
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowFullScreen></iframe>;
     return BentleyResidencesObject;
 }

@@ -1,6 +1,4 @@
-import { Area } from "../../models/areas/Area";
-
-
+import {Area} from "../../models/areas/Area";
 
 
 export default function Hollywood() {

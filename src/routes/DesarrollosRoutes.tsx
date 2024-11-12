@@ -18,27 +18,27 @@ import AventuraRoutes from "./desarrollos/AventuraRoutes";
 import DaniaBeachRoutes from "./desarrollos/DaniaBeachRoutes";
 
 export default function DesarrollosRoutes() {
-  
 
-  return (
-    <React.Fragment>
-      {MiamiBeachRoutes()}
-      {BrickellRoutes()}
-      {DowntownRoutes()}
-      {BayHarborIslands()}
-      {EdgewaterRoutes()}
-      {HomesteadRoutes()}
-      {PinecrestRoutes()}
-      {fragment}
-      {FloridaCityRoutes()}
-      {NorthBayVillageRoutes()}
-      {CoralGablesRoutes()}
-      {CoconutGroveRoutes()}
-      {SouthMiamiRoutes()}
-      {FtLauderdaleRoutes()}
-      {WynwoodRoutes()}
-      {AventuraRoutes()}
-      {DaniaBeachRoutes()}
-    </React.Fragment>
-  );
+
+    return (
+        <React.Fragment>
+            {MiamiBeachRoutes()}
+            {BrickellRoutes()}
+            {DowntownRoutes()}
+            {BayHarborIslands()}
+            {EdgewaterRoutes()}
+            {HomesteadRoutes()}
+            {PinecrestRoutes()}
+            {fragment}
+            {FloridaCityRoutes()}
+            {NorthBayVillageRoutes()}
+            {CoralGablesRoutes()}
+            {CoconutGroveRoutes()}
+            {SouthMiamiRoutes()}
+            {FtLauderdaleRoutes()}
+            {WynwoodRoutes()}
+            {AventuraRoutes()}
+            {DaniaBeachRoutes()}
+        </React.Fragment>
+    );
 }

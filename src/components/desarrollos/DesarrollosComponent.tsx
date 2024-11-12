@@ -36,9 +36,11 @@ export default function DesarrollosTodos() {
                                                     }}
                                                 ></div>
 
-                                                <h4 className="text-center card-title m-2 "style={{fontFamily: '"tt-commons-pro", sans-serif',
-fontWeight: "200",
-fontStyle:"normal"}}>
+                                                <h4 className="text-center card-title m-2 " style={{
+                                                    fontFamily: '"tt-commons-pro", sans-serif',
+                                                    fontWeight: "100",
+                                                    fontStyle: "normal"
+                                                }}>
                                                     {desarrollo.nombre
                                                         .split("-")
                                                         .map(

@@ -3,7 +3,7 @@ import ProjectTemplate from '../ProjectTemplate'
 import ParcVillas from '../../../objects/desarrollos/FloridaCity/ParcVillas'
 
 export default function ParcVillasComponent() {
-  return (
-    <ProjectTemplate desarrollo={ParcVillas()}/>
-  )
+    return (
+        <ProjectTemplate desarrollo={ParcVillas()}/>
+    )
 }

@@ -39,26 +39,29 @@ export default function NomadResidences() {
                 <li>Accesorios de latón en baños</li>
                 <li>Amplias duchas de hidromasaje</li>
                 <li>Lavadora y secadora</li>
-            </ul></>,
-        amenidades: <><ul>
-            <li>Curaduría y diseño NoMad aclamados a nivel mundial</li>
-            <li>Restaurante y bar NoMad en la azotea con ascensor independiente</li>
-            <li>Paisajismo inspirado e impecable</li>
-            <li>Piscina en la azotea de servicio completo, terraza y cabañas</li>
-            <li>Conserjería las 24 horas y seguridad del edificio</li>
-            <li>Dos amplios vestíbulos y locales comerciales</li>
-            <li>Servicio de aparcacoches 24/7 y garaje en el edificio</li>
-            <li>Centro de fitness y bienestar de primer nivel, con césped dedicado al fitness al aire libre</li>
-            <li>Zona de parrillas y cine al aire libre</li>
-            <li>Amplia biblioteca y espacios de coworking</li>
-            <li>Almacenamiento de bicicletas</li>
-            <li>Cocina en la residencia entregada a pedido</li>
-            <li>Servicios de check-in dedicados</li>
-            <li>Acceso al ascensor con control privado</li>
-            <li>Climatización inteligente</li>
-            <li>Almacenamiento privado</li>
-            <li>Se admiten mascotas</li>
-        </ul></>
+            </ul>
+        </>,
+        amenidades: <>
+            <ul>
+                <li>Curaduría y diseño NoMad aclamados a nivel mundial</li>
+                <li>Restaurante y bar NoMad en la azotea con ascensor independiente</li>
+                <li>Paisajismo inspirado e impecable</li>
+                <li>Piscina en la azotea de servicio completo, terraza y cabañas</li>
+                <li>Conserjería las 24 horas y seguridad del edificio</li>
+                <li>Dos amplios vestíbulos y locales comerciales</li>
+                <li>Servicio de aparcacoches 24/7 y garaje en el edificio</li>
+                <li>Centro de fitness y bienestar de primer nivel, con césped dedicado al fitness al aire libre</li>
+                <li>Zona de parrillas y cine al aire libre</li>
+                <li>Amplia biblioteca y espacios de coworking</li>
+                <li>Almacenamiento de bicicletas</li>
+                <li>Cocina en la residencia entregada a pedido</li>
+                <li>Servicios de check-in dedicados</li>
+                <li>Acceso al ascensor con control privado</li>
+                <li>Climatización inteligente</li>
+                <li>Almacenamiento privado</li>
+                <li>Se admiten mascotas</li>
+            </ul>
+        </>
     }
 
 

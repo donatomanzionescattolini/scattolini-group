@@ -5,7 +5,8 @@ import {useLayoutEffect} from "react";
 "../../objects/areas/CoralGables.tsx";
 
 export default function CoralGablesComponent() {
- useLayoutEffect(() => {
+    useLayoutEffect(() => {
         window.scrollTo(0, 0);
-    }, []);    return <AreaTemplate area={CoralGables()}/>;
+    }, []);
+    return <AreaTemplate area={CoralGables()}/>;
 }

@@ -174,76 +174,76 @@ export default function Vita() {
                 </p>
                 <ul className="list ">
                     <li>
-                        <strong>Gastrónomo</strong><br />
+                        <strong>Gastrónomo</strong><br/>
                         Un restaurante y bar de alta gama que sirve almuerzos, cenas y
                         cócteles.
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>
-                        <strong>Fitness y Bienestar</strong><br />
+                        <strong>Fitness y Bienestar</strong><br/>
                         El gimnasio y centro de bienestar incluye un gimnasio de última
                         generación, una sala de estudio dedicada y un spa.
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>
-                        <strong>Deportivo</strong><br />
+                        <strong>Deportivo</strong><br/>
                         Canchas de tenis iluminadas para juegos nocturnos, canchas de
                         pickleball y pádel.
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>
-                        <strong>Niños</strong><br />
+                        <strong>Niños</strong><br/>
                         Patio de recreo
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>
-                        <strong>Piscina</strong><br />
+                        <strong>Piscina</strong><br/>
                         Una piscina privada frente a la bahía solo para residentes, un
                         bar junto a la piscina y un salón.
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>
-                        <strong>Acceso VIP</strong><br />
+                        <strong>Acceso VIP</strong><br/>
                         Membresía de la casa al Vita en Grove Isle Club.
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>
-                        <strong>Navegación</strong><br />
+                        <strong>Navegación</strong><br/>
                         Puerto deportivo con muelles para barcos.
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>Vistas panorámicas de la Bahía de Biscayne</li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>
-                        <strong>Aparcacoches</strong><br />
+                        <strong>Aparcacoches</strong><br/>
                         El servicio de aparcacoches de Vita las 24 horas está siempre
                         disponible para ayudar a los residentes y sus invitados en la
                         entrada cubierta con dosel de cristal
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>
-                        <strong>Garaje Cerrado</strong><br />
+                        <strong>Garaje Cerrado</strong><br/>
                         Garajes privados individuales cerrados con capacidad para cuatro
                         vehículos.
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>
                         <strong>Conserje</strong>
 
-                        <li className="list-style-none" />
+                        <li className="list-style-none"/>
 
                         <li>Disponible para ayudar con una amplia gama de arreglos.</li>
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>
-                        <strong>Vita Linc</strong><br />
+                        <strong>Vita Linc</strong><br/>
                         Una aplicación de conserjería digital para registrar a los
                         huéspedes y proporcionarles una llave electrónica.
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>
                         <strong>Vestíbulos Privados</strong>
-                        <br />
+                        <br/>
                         Los ascensores inteligentes proporcionan un acceso seguro a
                         vestíbulos privados
                     </li>
@@ -251,19 +251,19 @@ export default function Vita() {
                     <li>
                         <strong>Aparcacoches</strong>
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
 
                     <li>
                         Servicio de aparcacoches las 24 horas para los residentes y sus
                         invitados.
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                     <li>
                         <strong>WIFI</strong>
-                        <br />
+                        <br/>
                         Wi-Fi en todos los espacios compartidos interiores y exteriores.
                     </li>
-                    <li className="list-style-none" />
+                    <li className="list-style-none"/>
                 </ul>
             </>
         ),

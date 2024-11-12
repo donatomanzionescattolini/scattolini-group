@@ -80,109 +80,111 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
     return (
         <>
-    <a id="top"></a>
-    <MDBContainer
-        fluid
-        jumbotron
-        id={"banner"}
-        className=""
-        style={{height: "300px"}}
-    >
-        <header
-            className="mdc-banner d-flex row flex-nowrap overflow-none  justify-content-center h-100 m-0 p-0 responsive">
-            {innerWidth < 610 && (banner && (
-                <div
-                    id="banner"
-                    className="p-0 m-0 well"
-                    autoFocus
-                    style={{
-                        backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
-                        backgroundSize: "250%",
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center",
+            <a id="top"></a>
+            <MDBContainer
+                fluid
+                jumbotron
+                id={"banner"}
+                className=""
+                style={{height: "300px"}}
+            >
+                <header
+                    className="mdc-banner d-flex row flex-nowrap overflow-none  justify-content-center h-100 m-0 p-0 responsive">
+                    {innerWidth < 610 && (banner && (
+                        <div
+                            id="banner"
+                            className="p-0 m-0 well"
+                            autoFocus
+                            style={{
+                                backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
+                                backgroundSize: "250%",
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition: "center",
 
-                    }}
-                />
-            )) || (banner && <div
-                    id="banner"
-                    className="p-0 m-0 well"
-                    autoFocus
-                    style={{
-                        backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
-                        backgroundSize: "150%",
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center",
+                            }}
+                        />
+                    )) || (banner && <div
+                            id="banner"
+                            className="p-0 m-0 well"
+                            autoFocus
+                            style={{
+                                backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
+                                backgroundSize: "150%",
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition: "center",
 
-                    }}
-                />
-            )}
-            {!banner && (
-                <>
-                    <div
-                        autoFocus
-                        className="col-4 m-0 p-0 responsive"
-                        style={{
-                            height: "250px",
-                            backgroundImage: `url(../../..https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-left.jpg)`,
-                            backgroundSize: "cover",
-                        }}
-                    />
-                    <div
-                        autoFocus
-                        style={{
-                            height: "250px",
-                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-center.jpg')`,
-                            backgroundSize: "cover",
-                            backgroundPositionX: "center",
-                            backgroundPositionY: "top",
-                        }}
-                        className="col-4"
-                    />
-                    <div
-                        autoFocus
-                        style={{
-                            height: "250px",
-                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-right.jpg')`,
-                            backgroundSize: "cover",
-                        }}
-                        className="col-4 m-0 p-0 responsive"
-                    />
-                </>
-            )}
-        </header>
-    </MDBContainer>
-    <div className="skew-c"></div>
-<section className="white-block d-flex flex-column">
-            {innerWidth < 768 && (
-                <div>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                </div>
-            )}
-            <h2 className=" text-center animate-charcter" style={{}}>
-                {titulo}
-            </h2>
+                            }}
+                        />
+                    )}
+                    {!banner && (
+                        <>
+                            <div
+                                autoFocus
+                                className="col-4 m-0 p-0 responsive"
+                                style={{
+                                    height: "250px",
+                                    backgroundImage: `url(../../..https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-left.jpg)`,
+                                    backgroundSize: "cover",
+                                }}
+                            />
+                            <div
+                                autoFocus
+                                style={{
+                                    height: "250px",
+                                    backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-center.jpg')`,
+                                    backgroundSize: "cover",
+                                    backgroundPositionX: "center",
+                                    backgroundPositionY: "top",
+                                }}
+                                className="col-4"
+                            />
+                            <div
+                                autoFocus
+                                style={{
+                                    height: "250px",
+                                    backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-right.jpg')`,
+                                    backgroundSize: "cover",
+                                }}
+                                className="col-4 m-0 p-0 responsive"
+                            />
+                        </>
+                    )}
+                </header>
+            </MDBContainer>
+            <div className="skew-c"></div>
+            <section className="white-block d-flex flex-column">
+                {innerWidth < 768 && (
+                    <div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                    </div>
+                )}
+                <h2 className=" text-center animate-charcter" style={{}}>
+                    {titulo}
+                </h2>
 
-            <hr className="hr hr-blurry w-50 mx-auto"/>
-            {<h5 className="mt-0 text-center">{subtitulo}</h5>}
-        <MDBRow className={"row w-75 mx-auto mt-5"}>
-            <MDBCol xs={12} sm={12} md={6} lg={6} xl={6} className={"align-content-center justify-content-center"}>
-            {(introduccion as Array<string>).map((par: string) =>
-                <p className={""}>{par}</p>)
-            }
-            </MDBCol>
+                <hr className="hr hr-blurry w-50 mx-auto"/>
+                {<h5 className="mt-0 text-center">{subtitulo}</h5>}
+                <MDBRow className={"row w-75 mx-auto mt-5"}>
+                    <MDBCol xs={12} sm={12} md={6} lg={6} xl={6}
+                            className={"align-content-center justify-content-center"}>
+                        {(introduccion as Array<string>).map((par: string) =>
+                            <p className={""}>{par}</p>)
+                        }
+                    </MDBCol>
 
-            <MDBCol xs={12} sm={12} md={6} lg={6} xl={6} className={"p-md-5 p-sm-2"}>
-                <img src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${nombre}.webp`} className={"img-fluid "}/>
-            </MDBCol>
-        </MDBRow>
+                    <MDBCol xs={12} sm={12} md={6} lg={6} xl={6} className={"p-md-5 p-sm-2"}>
+                        <img src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${nombre}.webp`}
+                             className={"img-fluid "}/>
+                    </MDBCol>
+                </MDBRow>
 
-    </section>
+            </section>
             <div className="skew-cc"></div>
             <section className="colour-block">
-            {typeof video !== "string" || !video ? (
+                {typeof video !== "string" || !video ? (
                     video
                 ) : (
                     <video
@@ -208,7 +210,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             </section>
             <div className="skew-c"></div>
             <section className="white-block">
-                <MDBContainer small responsive centered>
+                <MDBContainer fluid small responsive centered>
                     <br></br>
                     <div>
                         <h3 className="text-center">Características</h3>
@@ -283,7 +285,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         ></iframe> */}
             {/* </div> */}
             <section className="white-block">
-                <MDBContainer className="embed-responsive">
+                <MDBContainer fluid className="embed-responsive">
                     <br></br>
                     <div>
                         <h3 className="text-center">Documentos De Interés</h3>
@@ -296,26 +298,26 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                                      style={{color: "#2b2a2e!important"}}
                                      title="Brochure"
                         >
-                          <MDBTabsLink className={"fs-5"}  onClick={() => openTab("brochure")} href="#docs">
+                            <MDBTabsLink className={"fs-5"} onClick={() => openTab("brochure")} href="#docs">
                                 {" "}
                                 Brochure
                             </MDBTabsLink>
                         </MDBTabsItem>
                         <MDBTabsItem className={"text-md-center"}>
-                          <MDBTabsLink className={"fs-5"}
-                                style={{color: "#2b2a2e!important"}}
-                                onClick={() => openTab("hoja")}
-                                href="#docs"
+                            <MDBTabsLink className={"fs-5"}
+                                         style={{color: "#2b2a2e!important"}}
+                                         onClick={() => openTab("hoja")}
+                                         href="#docs"
                             >
                                 Hoja Informativa
                             </MDBTabsLink>
                         </MDBTabsItem>
                         <MDBTabsItem className={"text-md-center"}>
-                          <MDBTabsLink className={"fs-5"}
-                                style={{color: "#2b2a2e!important"}}
-                                aria-keyshortcuts=""
-                                href="#docs"
-                                onClick={() => openTab("planos")}
+                            <MDBTabsLink className={"fs-5"}
+                                         style={{color: "#2b2a2e!important"}}
+                                         aria-keyshortcuts=""
+                                         href="#docs"
+                                         onClick={() => openTab("planos")}
                             >
                                 Planos
                             </MDBTabsLink>
@@ -434,7 +436,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             </section>
             <div className="skew-cc"></div>
             <section className="colour-block">
-                <MDBContainer>
+                <MDBContainer fluid>
                     <br/>
                     <br></br>
                     <div>
@@ -472,9 +474,11 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                                             }}
                                         ></div>
 
-                                        <h4 className="text-center card-title m-2 "style={{fontFamily: '"tt-commons-pro", sans-serif',
-fontWeight: "200",
-fontStyle:"normal"}}>
+                                        <h4 className="text-center card-title m-2 " style={{
+                                            fontFamily: '"tt-commons-pro", sans-serif',
+                                            fontWeight: "100",
+                                            fontStyle: "normal"
+                                        }}>
                                             {desarrollo.titulo ||
                                                 desarrollo.nombre
                                                     .split("-")

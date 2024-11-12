@@ -25,7 +25,7 @@ $black-90: darken(#fff, 90%);
 
 #root {
   overflow-x: hidden !important;
-  max-width: 1000px !important;
+  max-width: 1250px !important;
   margin: 0 auto !important;
 }
 
@@ -33,7 +33,8 @@ $black-90: darken(#fff, 90%);
 h1,
 h2, p, h5, h6, h3, h4 {
   font-family: "the-seasons", sans-serif;
-  font-weight: 100;
+  font-weight:lighter;
+letter-spacing:calc(add(normal,normal));
   overflow: visible !important;
 
 }
@@ -565,7 +566,8 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   color: $background;
-  font-weight: 100;
+  font-weight:lighter;
+letter-spacing:calc(add(normal,normal));
   font-family: "Montserrat";
 }
 
@@ -986,14 +988,16 @@ p {
   text-align: justify;
   text-indent: 2rem;
   font-weight: normal;
-  font-family:"tt-commons-pro",sans-serif;
-  font-weight:100;
+  font-family: "tt-commons-pro", sans-serif;
+  font-weight:lighter;
+letter-spacing:calc(add(normal,normal));
 }
 
 .nav-link, .dropdown-item, .navbar-toggler {
   font-family: "tt-commons-pro", sans-serif;
-font-weight: 300;
-font-style: normal;
+  font-weight: 100 !important;
+  font-style: normal;
+
 }
 
 /*------------------*/
@@ -1003,7 +1007,7 @@ font-style: normal;
   width: 100%;
   height: 100px;
   position: absolute;
-  max-width: 1000px !Important;
+  max-width: 1250px !Important;
 
   left: auto;
   right: auto;
@@ -1021,7 +1025,7 @@ font-style: normal;
 .skew-c {
   width: 100%;
   height: 100px;
-  max-width: 1000px !Important;
+  max-width: 1250px !Important;
   position: absolute;
   margin-top: 0;
   padding-top: 0;
@@ -1295,8 +1299,10 @@ a:active, li:active, a:hover, li:hover {
 
 div {
   font-family: "tt-commons-pro", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+  font-weight:lighter;
+letter-spacing:calc(add(normal,normal));letter-spacing:calc(add(normal,normal));
+
+  letter-spacing:calc(add(normal,normal));
 }
 
 
@@ -1305,10 +1311,14 @@ div {
 }
 
 
-html {
+html, body {
   background-color: $darkblue !important;
 }
 
-body {
-  background-color: $background !Important;
+//
+//body {
+//  background-color: $background !Important;
+//}
+.bg-darkblue {
+  background: $darkblue !Important;
 }

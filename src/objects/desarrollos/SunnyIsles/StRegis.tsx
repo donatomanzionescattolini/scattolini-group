@@ -19,7 +19,7 @@ export default function StRegis() {
     StRegisObject.caracteristicas = {
         edificio: (
             <p>
-                St. Regis®  se encuentra dentro de una red de conexiones de
+                St. Regis® se encuentra dentro de una red de conexiones de
                 transporte cercanas, lo que brinda fácil acceso al Aeropuerto
                 Internacional de Miami, el Puerto de Miami, el Distrito de las Artes
                 de Wynwood, el Distrito de Diseño, los teatros y museos
@@ -31,7 +31,7 @@ export default function StRegis() {
             <div>
                 <p>
                     Una sola torre de 48 pisos que alberga 150 residencias, incluidos
-                    penthouses y sky villas. St. Regis®  es una colección de
+                    penthouses y sky villas. St. Regis® es una colección de
                     casas de 2 a 7 habitaciones que miden entre 2,616 y 7,391 pies
                     cuadrados. Pie. Con techos de 10 pies, tecnología inteligente
                     integrada y tocador en cada unidad. Este edificio ofrece mucho

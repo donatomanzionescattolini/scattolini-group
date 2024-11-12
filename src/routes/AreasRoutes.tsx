@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import {Route} from "react-router-dom";
 import BayHarborComponent from "../components/areas/BayHarborComponent";
 import BrickellComponent from "../components/areas/BrickellComponent";
 import CoconutGroveComponent from "../components/areas/CoconutGroveComponent";
@@ -22,41 +22,41 @@ import HollyWoodComponent from "../components/areas/HollywoodComponent";
 import DaniaBeachComponent from "../components/areas/DaniaBeachComponent";
 
 export default function AreasRoutes() {
-  return (
-    <React.Fragment>
-      <Route element={<BrickellComponent />} path="/areas/brickell" />
-      <Route element={<DowntownComponent />} path="/areas/downtown" />
-      <Route element={<HomesteadComponent />} path="/areas/homestead" />
-      <Route element={<BayHarborComponent />} path="/areas/bay-harbor" />
-      <Route
-        element={<NorthBayVillageComponent />}
-        path="/areas/north-bay-village"
-      />
-      <Route element={<SouthMiamiComponent />} path="/areas/south-miami" />
-      <Route element={<CoralGablesComponent />} path="/areas/coral-gables" />
-      <Route element={<CoconutGroveComponent />} path="/areas/coconut-grove" />
-      <Route element={<DoralComponent />} path="/areas/doral"></Route>
-      <Route element={<PinecrestComponent />} path="/areas/pinecrest"></Route>
-      <Route
-        element={<SunnyIslesComponent />}
-        path="/areas/sunny-isles"
-      ></Route>
-      <Route element={<EdgewaterComponent />} path="/areas/edgewater"></Route>
-      <Route
-        element={<MiamiBeachComponent />}
-        path="/areas/miami-beach"
-      ></Route>
-      <Route element={<FtLauderdaleComponent />} path={"/areas/ft-lauderdale"} />
-      <Route
-        element={<FloridaCityComponent />}
-        path="/areas/florida-city"
-      ></Route>
-      <Route element={<AventuraComponent />} path="/areas/aventura" />
-      <Route element={<PembrokePinesComponent />} path="/areas/pembroke-pines" />
-      <Route element={<WynwoodCoponent />} path="/areas/wynwood" />
-      <Route element={<AventuraComponent />} path="/areas/aventura" />
-      <Route element={<HollyWoodComponent />} path="/areas/hollywood" />
-      <Route element={<DaniaBeachComponent />} path="/areas/dania-beach" />
-    </React.Fragment>
-  );
+    return (
+        <React.Fragment>
+            <Route element={<BrickellComponent/>} path="/areas/brickell"/>
+            <Route element={<DowntownComponent/>} path="/areas/downtown"/>
+            <Route element={<HomesteadComponent/>} path="/areas/homestead"/>
+            <Route element={<BayHarborComponent/>} path="/areas/bay-harbor"/>
+            <Route
+                element={<NorthBayVillageComponent/>}
+                path="/areas/north-bay-village"
+            />
+            <Route element={<SouthMiamiComponent/>} path="/areas/south-miami"/>
+            <Route element={<CoralGablesComponent/>} path="/areas/coral-gables"/>
+            <Route element={<CoconutGroveComponent/>} path="/areas/coconut-grove"/>
+            <Route element={<DoralComponent/>} path="/areas/doral"></Route>
+            <Route element={<PinecrestComponent/>} path="/areas/pinecrest"></Route>
+            <Route
+                element={<SunnyIslesComponent/>}
+                path="/areas/sunny-isles"
+            ></Route>
+            <Route element={<EdgewaterComponent/>} path="/areas/edgewater"></Route>
+            <Route
+                element={<MiamiBeachComponent/>}
+                path="/areas/miami-beach"
+            ></Route>
+            <Route element={<FtLauderdaleComponent/>} path={"/areas/ft-lauderdale"}/>
+            <Route
+                element={<FloridaCityComponent/>}
+                path="/areas/florida-city"
+            ></Route>
+            <Route element={<AventuraComponent/>} path="/areas/aventura"/>
+            <Route element={<PembrokePinesComponent/>} path="/areas/pembroke-pines"/>
+            <Route element={<WynwoodCoponent/>} path="/areas/wynwood"/>
+            <Route element={<AventuraComponent/>} path="/areas/aventura"/>
+            <Route element={<HollyWoodComponent/>} path="/areas/hollywood"/>
+            <Route element={<DaniaBeachComponent/>} path="/areas/dania-beach"/>
+        </React.Fragment>
+    );
 }

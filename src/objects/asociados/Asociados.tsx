@@ -5,9 +5,9 @@ const DaniaScattolini = new Asociado("Dania", "Scattolini", "🏘️ Agente y Of
 const LailaSaade = new Asociado("Laila", "Saade", "🏠 Agente");
 const VerushkaJaimes = new Asociado("Veruschka", "Jaimes", "🏠 Agente");
 const MonicaManzione = new Asociado(
-  "Mónica",
-  "Manzione",
-  "🏘️ Agente y Property Manager"
+    "Mónica",
+    "Manzione",
+    "🏘️ Agente y Property Manager"
 );
 
 const CarmenHerrera = new Asociado("Carmen", "Herrera", "🏠 Agente");
@@ -21,30 +21,30 @@ const GabrielaPena = new Asociado("Gabriela", "Peña", "🏠 Agente");
 const AnahidChalikian = new Asociado("Anahid", "Chalikian", "🏚️ Broker");
 const DaniaDominguez = new Asociado("Dania Dominguez", "", "🏠 Agente");
 const SherezadeVacas = new Asociado("Sherezade", "Vacas", "🏠 Agente");
-const LauraMartinez = new Asociado("Laura","Martínez", "🏠 Agente");
-const JesusGonzalez = new Asociado("Jesús","González", "🏠 Agente");
+const LauraMartinez = new Asociado("Laura", "Martínez", "🏠 Agente");
+const JesusGonzalez = new Asociado("Jesús", "González", "🏠 Agente");
 const asociados = [
-  EldaScattolini,
-  LailaSaade,
-  VerushkaJaimes,
+    EldaScattolini,
+    LailaSaade,
+    VerushkaJaimes,
 
-  DaniaScattolini,
-  MonicaManzione,
+    DaniaScattolini,
+    MonicaManzione,
 
-  CarmenHerrera,
-  MariolgaVillasana,
-  DayanaTrejo,
-  RobinsonAvila,
-  VictoriaMartinez,
-  GabrielaPena,
-  DaniaDominguez,
-  AnahidChalikian,
-  SherezadeVacas,
-  LauraMartinez,
-  JesusGonzalez
+    CarmenHerrera,
+    MariolgaVillasana,
+    DayanaTrejo,
+    RobinsonAvila,
+    VictoriaMartinez,
+    GabrielaPena,
+    DaniaDominguez,
+    AnahidChalikian,
+    SherezadeVacas,
+    LauraMartinez,
+    JesusGonzalez
 
 ];
 
 export default function Asociados() {
-  return asociados;
+    return asociados;
 }

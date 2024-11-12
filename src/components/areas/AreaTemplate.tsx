@@ -73,51 +73,49 @@ export default function AreaTemplate(props: AreaProps) {
                 </MDBCol>
             </MDBRow>
             {innerWidth < 610 &&
-                <div className={"d-flex flex-row justify-content-evenly vw-100 h-auto flex-nowrap overflow-scroll mt-4"}>
+                <div
+                    className={"d-flex flex-row justify-content-evenly vw-100 h-auto flex-nowrap overflow-scroll mt-4"}>
 
-                    { images.slice(0,3).map(image=>(<div className={"col-3 h-100 my-auto"}>{image}</div>))}
-
-
-
+                    {images.slice(0, 3).map(image => (<div className={"col-3 h-100 my-auto"}>{image}</div>))}
 
 
-                        </div>
+                </div>
 
-            ||
-                    <div className="city-firstcarousel">
-                        {images.map(image => (image))}
+                ||
+                <div className="city-firstcarousel">
+                    {images.map(image => (image))}
 
 
-                    </div>
+                </div>
             }
-                    {/* <DividerFirstComponent /> */}
-                    <div className="propiedades">
-                        {areaDesarrollos.size > 0 &&
-                            <div>
-                                <h3 className="text-center">Propiedades en el Área</h3>
-                            </div>
-                        }
-                        <br></br>
-                        <MDBRow>
-                            {[...areaDesarrollos.values()].map(desarrollo => {
-                                return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
-                                    <Link to={`/desarrollos/${desarrollo.nombre}/`}>
-                                        <div
-                                            className="propiedades-img p-0 m-0"
-                                            style={{
-                                                background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
-                                                backgroundSize: "cover",
-                                            }}
-                                        ></div>
-
-                                        <h4 className="text-center card-title m-2 ">{desarrollo.nombre.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ")}</h4>
-                                    </Link>
-                                </MDBCol>)
-                            })}
-                        </MDBRow>
+            {/* <DividerFirstComponent /> */}
+            <div className="propiedades">
+                {areaDesarrollos.size > 0 &&
+                    <div>
+                        <h3 className="text-center">Propiedades en el Área</h3>
                     </div>
-                    <div className="container-fluid m-0 p-0 overflow-scroll horizontal-scrollable"></div>
-                </>
-                );
+                }
+                <br></br>
+                <MDBRow>
+                    {[...areaDesarrollos.values()].map(desarrollo => {
+                        return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
+                            <Link to={`/desarrollos/${desarrollo.nombre}/`}>
+                                <div
+                                    className="propiedades-img p-0 m-0"
+                                    style={{
+                                        background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
+                                        backgroundSize: "cover",
+                                    }}
+                                ></div>
 
-            }
+                                <h4 className="text-center card-title m-2 ">{desarrollo.nombre.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ")}</h4>
+                            </Link>
+                        </MDBCol>)
+                    })}
+                </MDBRow>
+            </div>
+            <div className="container-fluid m-0 p-0 overflow-scroll horizontal-scrollable"></div>
+        </>
+    );
+
+}

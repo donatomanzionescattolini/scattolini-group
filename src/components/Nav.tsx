@@ -6,7 +6,8 @@ import {
     MDBDropdownItem,
     MDBDropdownMenu,
     MDBDropdownToggle,
-    MDBIcon, MDBInputGroup,
+    MDBIcon,
+    MDBInputGroup,
     MDBNavbar,
     MDBNavbarBrand,
     MDBNavbarItem,
@@ -104,7 +105,7 @@ const Nav = () => {
 
                 </MDBNavbarToggler>
 
-                <MDBCollapse navbar show={showNavCentred} id="navbarCenteredExample">
+                <MDBCollapse navbar show={showNavCentred} id="navbarCenteredExample" className={"py-2"}>
                     <MDBNavbarNav fullWidth={true} className="mb-2 mb-lg-0">
                         <MDBNavbarItem>
                             <MDBNavbarLink aria-current="page" href="/">
@@ -136,7 +137,7 @@ const Nav = () => {
                                 <MDBDropdownMenu className="responsive column ">
                                     <>
                                         <div className="input-group d-flex w-75 ms-4 my-3">
-                                        <input
+                                            <input
                                                 className="form-control"
                                                 placeholder="Buscar"
                                                 aria-label="Buscar"
@@ -168,27 +169,27 @@ const Nav = () => {
                             <MDBDropdown drop={"center"}>
                                 <MDBDropdownToggle tag="a">Desarrollos</MDBDropdownToggle>
                                 <MDBDropdownMenu className="responsive column">
-                                        <MDBInputGroup className="d-flex w-75 ms-4 my-3">
-                                            <input
-                                                className="form-control"
-                                                placeholder="Buscar"
-                                                aria-label="Buscar"
-                                                type="Search"
-                                                value={searchQueryDesarrollo}
-                                                onChange={handleSearchDesarrollo}
-                                            />
-                                            {/* <MDBBtn outline>Buscar</MDBBtn> */}
-                                        </MDBInputGroup>
-                                        <div className="dropdown-menu-content">
-                                            {filteredDesarrollos.map((desarrollo) => {
-                                                return (
-                                                    <MDBDropdownItem link key={filteredDesarrollos.indexOf(desarrollo)}
-                                                                     href={"/desarrollos/" + desarrollo.nombre}>
-                                                        {desarrollo.titulo}
-                                                    </MDBDropdownItem>
-                                                );
-                                            })}
-                                        </div>
+                                    <MDBInputGroup className="d-flex w-75 ms-4 my-3">
+                                        <input
+                                            className="form-control"
+                                            placeholder="Buscar"
+                                            aria-label="Buscar"
+                                            type="Search"
+                                            value={searchQueryDesarrollo}
+                                            onChange={handleSearchDesarrollo}
+                                        />
+                                        {/* <MDBBtn outline>Buscar</MDBBtn> */}
+                                    </MDBInputGroup>
+                                    <div className="dropdown-menu-content">
+                                        {filteredDesarrollos.map((desarrollo) => {
+                                            return (
+                                                <MDBDropdownItem link key={filteredDesarrollos.indexOf(desarrollo)}
+                                                                 href={"/desarrollos/" + desarrollo.nombre}>
+                                                    {desarrollo.titulo}
+                                                </MDBDropdownItem>
+                                            );
+                                        })}
+                                    </div>
                                 </MDBDropdownMenu>
                             </MDBDropdown>
                         </MDBNavbarItem>

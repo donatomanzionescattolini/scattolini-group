@@ -1,7 +1,6 @@
 import React from 'react'
 import Desarrollo from '../../../models/desarrollos/Desarrollo';
 import Edgewater from '../../areas/Edgewater';
-import Constructora from '../../../models/constructora/Constructora';
 
 export default function ElleResidences() {
     const ElleResidencesObject = new Desarrollo();
@@ -19,7 +18,10 @@ export default function ElleResidences() {
     ElleResidencesObject.subtitulo = "El Nuevo Hogar Del Alto Estilo";
     ElleResidencesObject.caracteristicas = {
         residencias: <><p>Adquiera su propio piso en el corazón de Miami.
-            Inspiradas por las páginas de ELLE Decor, las residencias combinan el estilo moderno de mediados de siglo y el estilo francés contemporáneo con un toque de lujo tropical, para darle un nuevo giro a la vida en el sur de Florida.</p><ul>
+            Inspiradas por las páginas de ELLE Decor, las residencias combinan el estilo moderno de mediados de siglo y
+            el estilo francés contemporáneo con un toque de lujo tropical, para darle un nuevo giro a la vida en el sur
+            de Florida.</p>
+            <ul>
                 <li>Planos de planta bien pensados ​​con techos altos y vistas al agua y al horizonte.</li>
                 <li>Suites Grande en el piso superior con techos de 11 pies</li>
                 <li>Ventanas y puertas resistentes a impactos de piso a techo</li>
@@ -31,8 +33,11 @@ export default function ElleResidences() {
                 <li>Sistemas de control climático inteligentes</li>
                 <li>Lavadora/secadora de alta eficiencia</li>
                 <li>Armarios empotrados</li>
-                <li>Opción de utilizar plataformas de alquiler flexibles o utilizar un programa de alquiler completamente administrado</li>
-            </ul></>,
+                <li>Opción de utilizar plataformas de alquiler flexibles o utilizar un programa de alquiler
+                    completamente administrado
+                </li>
+            </ul>
+        </>,
         edificio:
             <ul>
                 <li>25 Pisos</li>
@@ -41,36 +46,42 @@ export default function ElleResidences() {
             </ul>
         ,
         amenidades:
-            <><p>Descubra una colección de comodidades de estilo de vida diseñadas para una vida elegante y sin esfuerzo. No es solo un apartamento tipo piso. ELLE es su salón, cafetería, club de piscina, área de juegos y mucho más.</p><ul>
-                <b>El vestíbulo</b>
-                <li>Gran vestíbulo de doble altura</li>
-                <li>Servicios de check-in de huéspedes</li>
-                <li>Servicio de aparcacoches</li>
-                <li>Conserjería 24 horas</li>
-                <li>Seguridad y control las 24 horas</li>
-                <li>Limpieza y mantenimiento las 24 horas</li>
-                <li>Oficina de administración</li>
-                <li>Sala de correo y paquetes</li>
-                <li>Tiendas minoristas boutique</li>
-                <li>Casa de bicicletas y almacenamiento de bicicletas</li>
-                <li>WiFi de alta velocidad</li>
-                <b>La Terraza</b>
-                <li>Terraza estilo resort inspirada en la Riviera Francesa</li>
-                <li>Piscina del complejo con exposición de norte a sur.</li>
-                <li>Cabañas privadas y tumbonas</li>
-                <li>Cocina de verano gourmet con barra y zona de estar al aire libre</li>
-                <li>Cine al aire libre</li>
-                <li>Canchas de tejo y bochas</li>
-                <li>Gimnasio de última generación con programación de fitness de marca.</li>
-                <li>Gimnasio al aire libre y área de yoga con jardín de meditación, spa y piscina de agua fría</li>
-                <li>Spa con sauna, baño de vapor, ducha de sensaciones y pared de sal.</li>
-                <li>Sala privada para tratamientos de salón y bienestar.</li>
-                <b>La Azotea de Sommet</b>
-                <li>Piscina del complejo con vistas despejadas al norte, este y oeste.</li>
-                <li>Terraza solárium con cabañas privadas</li>
-                <li>Club de residentes con biblioteca, sala de escucha, salón con bar y espacio de entretenimiento.</li>
-                <li>Sala de cine</li>
-            </ul></>
+            <><p>Descubra una colección de comodidades de estilo de vida diseñadas para una vida elegante y sin
+                esfuerzo. No es solo un apartamento tipo piso. ELLE es su salón, cafetería, club de piscina, área de
+                juegos y mucho más.</p>
+                <ul>
+                    <b>El vestíbulo</b>
+                    <li>Gran vestíbulo de doble altura</li>
+                    <li>Servicios de check-in de huéspedes</li>
+                    <li>Servicio de aparcacoches</li>
+                    <li>Conserjería 24 horas</li>
+                    <li>Seguridad y control las 24 horas</li>
+                    <li>Limpieza y mantenimiento las 24 horas</li>
+                    <li>Oficina de administración</li>
+                    <li>Sala de correo y paquetes</li>
+                    <li>Tiendas minoristas boutique</li>
+                    <li>Casa de bicicletas y almacenamiento de bicicletas</li>
+                    <li>WiFi de alta velocidad</li>
+                    <b>La Terraza</b>
+                    <li>Terraza estilo resort inspirada en la Riviera Francesa</li>
+                    <li>Piscina del complejo con exposición de norte a sur.</li>
+                    <li>Cabañas privadas y tumbonas</li>
+                    <li>Cocina de verano gourmet con barra y zona de estar al aire libre</li>
+                    <li>Cine al aire libre</li>
+                    <li>Canchas de tejo y bochas</li>
+                    <li>Gimnasio de última generación con programación de fitness de marca.</li>
+                    <li>Gimnasio al aire libre y área de yoga con jardín de meditación, spa y piscina de agua fría</li>
+                    <li>Spa con sauna, baño de vapor, ducha de sensaciones y pared de sal.</li>
+                    <li>Sala privada para tratamientos de salón y bienestar.</li>
+                    <b>La Azotea de Sommet</b>
+                    <li>Piscina del complejo con vistas despejadas al norte, este y oeste.</li>
+                    <li>Terraza solárium con cabañas privadas</li>
+                    <li>Club de residentes con biblioteca, sala de escucha, salón con bar y espacio de
+                        entretenimiento.
+                    </li>
+                    <li>Sala de cine</li>
+                </ul>
+            </>
     }
 
     return ElleResidencesObject;

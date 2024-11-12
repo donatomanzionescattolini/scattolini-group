@@ -21,7 +21,7 @@ export default function Quotes(props: Props) {
                     accessKey={`${props.quotes.indexOf(quote)}`}
                     key={props.quotes.indexOf(quote)}
                 >
-      {innerWidth <= 560 && <><br></br><br></br></>}
+                    {innerWidth <= 560 && <><br></br><br></br></>}
 
                     <blockquote className="blockquote overflow-visible" style={{overflow: "visible!important"}}>
                         <p style={{
@@ -31,7 +31,7 @@ export default function Quotes(props: Props) {
                         <footer className="blockquote-footer">
                             <cite title="Source title">{quote.author}</cite>
                         </footer>
-        {innerWidth <= 560 && <><br></br><br></br></>}
+                        {innerWidth <= 560 && <><br></br><br></br></>}
 
                     </blockquote>
                 </CarouselItem>

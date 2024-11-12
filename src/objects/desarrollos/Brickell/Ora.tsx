@@ -158,7 +158,7 @@ export default function Ora() {
     ];
     OraObject.titulo =
         <>
-            Ora 
+            Ora
             <span className="m-0" style={{fontSize: "12px!important"}}>
             <i> by</i> Casa Tua
           </span>

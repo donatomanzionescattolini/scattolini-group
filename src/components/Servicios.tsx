@@ -11,14 +11,14 @@ import {
 export default function Servicios() {
     return (
         <>
-       {innerWidth <= 560 && <><br></br><br></br></>}
-        <br></br>
+            {innerWidth <= 560 && <><br></br><br></br></>}
+            <br></br>
             <h2 className="text-center mt-5">Servicios</h2>
             <hr className="hr hr-blurry w-50 mx-auto"/>
 
             <br/>
 
-            <MDBCardGroup className="text-center" style={{ "textTransform": "capitalize"}}>
+            <MDBCardGroup className="text-center" style={{"textTransform": "capitalize"}}>
                 <MDBCard className="m-xs-0 m-sm-0 m-md-2 m-lg-2 m-xl-2">
                     <MDBCardHeader>
                         <MDBCardTitle>
@@ -34,7 +34,7 @@ export default function Servicios() {
                         <MDBCardLink
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
-                            
+
                         >
                             Obtener más información
                         </MDBCardLink>

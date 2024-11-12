@@ -2,7 +2,6 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import DaniaBeach from "../../areas/DaniaBeach";
 
 
-
 export default function Atlantica() {
 
 
@@ -11,13 +10,21 @@ export default function Atlantica() {
     AtlanticaObject.banner = true;
     AtlanticaObject.caracteristicas = {
         edificio: <dl>
-            <dt>Dirección</dt><dd><address>624 NE 2nd St, Dania Beach, Florida 33304</address></dd>
-            <dt>Tipo de Residencias</dt>    <dd>Condominios</dd>
+            <dt>Dirección</dt>
+            <dd>
+                <address>624 NE 2nd St, Dania Beach, Florida 33304</address>
+            </dd>
+            <dt>Tipo de Residencias</dt>
+            <dd>Condominios</dd>
 
-            <dt>Número de Habitaciones</dt><dd>Una habitación, dos habitaciones, o dos habitaciones más un estudio</dd>
+            <dt>Número de Habitaciones</dt>
+            <dd>Una habitación, dos habitaciones, o dos habitaciones más un estudio</dd>
             <dt>Destinos Populares</dt>
             <dd>
-                <p>Experimenta la conveniencia de vivir cerca de destinos populares no solo en Dania Beach, sino en toda el área del Sur de la Florida. Desde andar en bicicleta hasta la playa, pasear hasta el Casino de Dania Beach y explorar el centro de Fort Lauderdale o el Hard Rock Hotel; ¡todo está a solo unos momentos de distancia!</p>
+                <p>Experimenta la conveniencia de vivir cerca de destinos populares no solo en Dania Beach, sino en toda
+                    el área del Sur de la Florida. Desde andar en bicicleta hasta la playa, pasear hasta el Casino de
+                    Dania Beach y explorar el centro de Fort Lauderdale o el Hard Rock Hotel; ¡todo está a solo unos
+                    momentos de distancia!</p>
                 <ul>
                     <li>Hard Rock Hotel & Casino</li>
                     <li>Aeropuerto Internacional de Fort Lauderdale</li>
@@ -44,7 +51,8 @@ export default function Atlantica() {
             <li>Lavadora y secadora en la unidad</li>
         </ul>,
         amenidades: <>
-            <p>Descubre amenidades únicas, diseñadas cuidadosamente para mejorar tu estilo de vida costero mientras agregan conveniencia a tu rutina diaria.</p>
+            <p>Descubre amenidades únicas, diseñadas cuidadosamente para mejorar tu estilo de vida costero mientras
+                agregan conveniencia a tu rutina diaria.</p>
             <ul>
                 <li>Relájate con amigos y familiares junto a la piscina en un día caluroso de Florida.</li>
 

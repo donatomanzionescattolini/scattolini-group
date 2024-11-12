@@ -4,8 +4,8 @@ import {MDBCardLink, MDBCol, MDBRow,} from "mdb-react-ui-kit";
 export default function AliadosComponent() {
     return (
         <>
-       {innerWidth <= 560 && <><br></br><br></br></>}
-        <br></br>
+            {innerWidth <= 560 && <><br></br><br></br></>}
+            <br></br>
             <h2 className="text-center mt-5 display-6">Aliados</h2>
             <hr className="hr hr-blurry w-50 mx-auto"/>
             <MDBRow
