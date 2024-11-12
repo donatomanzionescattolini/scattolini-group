@@ -11,16 +11,13 @@ import MiamiBeachComponent from "../components/areas/MiamiBeachComponent";
 import NorthBayVillageComponent from "../components/areas/NorthBayVillageComponent";
 import PinecrestComponent from "../components/areas/PinecrestComponent";
 import SunnyIslesComponent from "../components/areas/SunnyIslesComponent";
-import React, { ReactFragment } from "react";
+import React from "react";
 import FloridaCityComponent from "../components/areas/FloridaCityComponent";
 import SouthMiamiComponent from "../components/areas/SouthMiamiComponent";
-import FtLauderdale from "../objects/areas/FtLauderdale";
 import FtLauderdaleComponent from "../components/areas/FtLauderdaleComponent";
-import Wynwood from "../objects/areas/Wynwood";
 import WynwoodCoponent from "../components/areas/WynwoodComponent";
 import AventuraComponent from "../components/areas/AventuraComponent";
 import PembrokePinesComponent from "../components/areas/PembrokePinesComponent";
-import Hollywood from "../objects/areas/Hollywood";
 import HollyWoodComponent from "../components/areas/HollywoodComponent";
 import DaniaBeachComponent from "../components/areas/DaniaBeachComponent";
 

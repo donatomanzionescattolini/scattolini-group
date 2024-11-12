@@ -26,7 +26,9 @@ function AreasComponent()
                     backgroundPosition: "50% 15%",
                   }}
                 ></div>
-                <h4 className="text-center card-title m-2">{area.titulo}</h4>
+                <h4 className="text-center card-title m-2"style={{fontFamily: '"tt-commons-pro", sans-serif',
+fontWeight: "200",
+fontStyle:"normal"}}>{area.titulo}</h4>
               </Link>
             </div>
           </MDBCol>

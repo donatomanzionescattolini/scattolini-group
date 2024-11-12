@@ -986,10 +986,14 @@ p {
   text-align: justify;
   text-indent: 2rem;
   font-weight: normal;
+  font-family:"tt-commons-pro",sans-serif;
+  font-weight:100;
 }
 
-p, .nav-link, .dropdown-item, .navbar-toggler {
-  font-family: tt-commons-pro-thin;
+.nav-link, .dropdown-item, .navbar-toggler {
+  font-family: "tt-commons-pro", sans-serif;
+font-weight: 300;
+font-style: normal;
 }
 
 /*------------------*/
@@ -1290,7 +1294,9 @@ a:active, li:active, a:hover, li:hover {
 }
 
 div {
-  font-family: tt-commons-pro-thin, sans-serif;
+  font-family: "tt-commons-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 

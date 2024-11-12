@@ -5,7 +5,7 @@ import VitaProject from "../../components/desarrollos/CoconutGrove/VitaProject";
 export default function CoconutGroveRoutes() {
   return (
     <React.Fragment>
-      <Route element={<VitaProject />} path={"/desarrollos/vita"} />
+      <Route element={<VitaProject />} path={"/desarrollos/vita-grove"} />
     </React.Fragment>
   );
 }
