@@ -22,9 +22,9 @@ const AnahidChalikian = new Asociado("Anahid", "Chalikian", "🏚️ Broker");
 const DaniaDominguez = new Asociado("Dania Dominguez", "", "🏠 Agente");
 const SherezadeVacas = new Asociado("Sherezade", "Vacas", "🏠 Agente");
 const LauraMartinez = new Asociado("Laura","Martínez", "🏠 Agente");
+const JesusGonzalez = new Asociado("Jesús","González", "🏠 Agente");
 const asociados = [
   EldaScattolini,
-  LauraMartinez,
   LailaSaade,
   VerushkaJaimes,
 
@@ -39,7 +39,10 @@ const asociados = [
   GabrielaPena,
   DaniaDominguez,
   AnahidChalikian,
-  SherezadeVacas
+  SherezadeVacas,
+  LauraMartinez,
+  JesusGonzalez
+
 ];
 
 export default function Asociados() {
