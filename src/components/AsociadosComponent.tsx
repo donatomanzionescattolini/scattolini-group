@@ -1,7 +1,6 @@
 import "material-components-web/dist/material-components-web.css";
 import "./Asociados.scss";
 import "mdb-ui-kit/css/mdb.min.css";
-import { Link } from "react-router-dom";
 import Asociados from "../objects/asociados/Asociados";
 
 export default function Equipo() {
@@ -17,7 +16,7 @@ export default function Equipo() {
       </div>
       <div className="row active-with-click">
         {Asociados().map((asociado) => (
-          <div className="col-md-4 col-sm-6 col-xs-12">
+          <div key={Asociados().indexOf(asociado)} className="col-md-4 col-sm-6 col-xs-12">
             <article className="material-card Pink">
               <h2>
                 <span>{asociado.firstName + " " + asociado.lastName}</span>

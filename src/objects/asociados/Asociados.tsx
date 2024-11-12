@@ -1,43 +1,45 @@
 import Asociado from "../../models/asociados/Asociado";
 
-const elda = new Asociado("Elda", "Scattolini", "🏘️ Dueña y Agente");
-const dania = new Asociado("Dania", "Scattolini", "🏘️ Agente y Office Manager");
-const laila = new Asociado("Laila", "Saade", "🏠 Agente");
-const veru = new Asociado("Veruschka", "Jaimes", "🏠 Agente");
-const monica = new Asociado(
+const EldaScattolini = new Asociado("Elda", "Scattolini", "🏘️ Dueña y Agente");
+const DaniaScattolini = new Asociado("Dania", "Scattolini", "🏘️ Agente y Office Manager");
+const LailaSaade = new Asociado("Laila", "Saade", "🏠 Agente");
+const VerushkaJaimes = new Asociado("Veruschka", "Jaimes", "🏠 Agente");
+const MonicaManzione = new Asociado(
   "Mónica",
   "Manzione",
   "🏘️ Agente y Property Manager"
 );
 
-const carmen = new Asociado("Carmen", "Herrera", "🏠 Agente");
-const robinson = new Asociado("Róbinson", "Ávila", "🏠 Agente");
-const mariolga = new Asociado("Mariolga", "Villasana", "🏠 Agente");
+const CarmenHerrera = new Asociado("Carmen", "Herrera", "🏠 Agente");
+const RobinsonAvila = new Asociado("Róbinson", "Ávila", "🏠 Agente");
+const MariolgaVillasana = new Asociado("Mariolga", "Villasana", "🏠 Agente");
 
-const dayana = new Asociado("Dayana", "Trejo", "🏠 Agente");
-const victoria = new Asociado("Victoria", "Martínez", "🏠 Agente");
+const DayanaTrejo = new Asociado("Dayana", "Trejo", "🏠 Agente");
+const VictoriaMartinez = new Asociado("Victoria", "Martínez", "🏠 Agente");
 
-const gabriela = new Asociado("Gabriela", "Peña", "🏠 Agente");
-const anahid = new Asociado("Anahid", "Chalikian", "🏚️ Broker");
-const daniaDominguez = new Asociado("Dania Dominguez", "", "🏠 Agente");
-const shere = new Asociado("Sherezade", "Vacas", "🏠 Agente");
+const GabrielaPena = new Asociado("Gabriela", "Peña", "🏠 Agente");
+const AnahidChalikian = new Asociado("Anahid", "Chalikian", "🏚️ Broker");
+const DaniaDominguez = new Asociado("Dania Dominguez", "", "🏠 Agente");
+const SherezadeVacas = new Asociado("Sherezade", "Vacas", "🏠 Agente");
+const LauraMartinez = new Asociado("Laura","Martínez", "🏠 Agente");
 const asociados = [
-  elda,
-  laila,
-  veru,
+  EldaScattolini,
+  LauraMartinez,
+  LailaSaade,
+  VerushkaJaimes,
 
-  dania,
-  monica,
+  DaniaScattolini,
+  MonicaManzione,
 
-  carmen,
-  mariolga,
-  dayana,
-  robinson,
-  victoria,
-  gabriela,
-  daniaDominguez,
-  anahid,
-  shere
+  CarmenHerrera,
+  MariolgaVillasana,
+  DayanaTrejo,
+  RobinsonAvila,
+  VictoriaMartinez,
+  GabrielaPena,
+  DaniaDominguez,
+  AnahidChalikian,
+  SherezadeVacas
 ];
 
 export default function Asociados() {
