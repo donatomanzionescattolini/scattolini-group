@@ -51,8 +51,8 @@ const AreasComponent = function (): React.JSX.Element {
                                 ></div>
 
                                 <h4 className="text-center card-title m-2 " style={{
-                                    fontFamily: '"tt-commons-pro", sans-serif',
-                                    fontWeight: "100",
+                                    fontFamily: '"the-seasons", serif',
+                                    fontWeight: "200",
                                     fontStyle: "normal"
                                 }}>{area.titulo}</h4>
                             </Link>

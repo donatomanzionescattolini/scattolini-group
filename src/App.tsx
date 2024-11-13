@@ -8,7 +8,7 @@ import Contacto from "./components/ContactoComponent.tsx";
 import "mdb-ui-kit/css/mdb.min.css";
 import "mdb-ui-kit/js/mdb.min.js";
 import "material-components-web/dist/material-components-web.js";
-import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
+import Desarrollos from "./components/desarrollos/Desarrollos.tsx";
 import Equipo from "./components/AsociadosComponent.tsx";
 import ManzioneProperties from "./components/aliados/ManzioneProperties";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
@@ -36,7 +36,7 @@ export default function App() {
                     <Route element={<AliadosComponent/>} path="/aliados"/>
                     <Route element={<Liderazgo/>} path="/liderazgo"/>
                     <Route element={<Contacto/>} path="/contacto"/>
-                    <Route element={<DesarrollosTodos/>} path={"/desarrollos"}/>
+                    <Route element={<Desarrollos/>} path={"/desarrollos"}/>
                     <Route element={<AreasComponent/>} path="/areas"/>
 
                     {DesarrollosRoutes()}

@@ -7,7 +7,7 @@ import AsociadosSmallComponent from "./components/AsociadosSmallComponent.tsx";
 import Quotes from "./components/Quotes";
 import Servicios from "./components/Servicios";
 import AreasComponent from "./components/areas/AreasComponent.tsx";
-import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
+import Desarrollos from "./components/desarrollos/Desarrollos.tsx";
 import Quote, {quotes} from "./models/Quote";
 
 export function Home() {
@@ -100,7 +100,7 @@ export function Home() {
             <div className="skew-c"></div>
             <section className="white-block">
                 <MDBContainer>
-                    <DesarrollosTodos/>
+                    <Desarrollos/>
                 </MDBContainer>
             </section>
             <div className="skew-cc"></div>

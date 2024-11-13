@@ -1,11 +1,11 @@
-import {Image} from "react-bootstrap";
-import {MDBCol, MDBRow} from "mdb-react-ui-kit";
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
+import { Image } from "react-bootstrap";
+import { MDBCol, MDBRow } from "mdb-react-ui-kit";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
-import {Area} from "../../models/areas/Area.tsx";
-import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
+import { Area } from "../../models/areas/Area.tsx";
+import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
 
 interface AreaProps {
     area: Area;
@@ -23,14 +23,16 @@ export default function AreaTemplate(props: AreaProps) {
     for (let i = 1; i <= area.numberOfImages; i++) {
         images.push(<Image
             rounded
+            fluid
+            className="h-auto my-auto overflow-visible"
             src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/carousel-${i}.webp`}
         ></Image>);
     }
+    const [showDesarrollos] = useState(getDesarrollosForArea(area).size > 0);
     const firstImage = `https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/firstImage.jpg`;
     return (
         <>
-            <div className="city-banner p-0 ">
-                <div
+            <header
                     className="w-100 p-0 m-0 d-flex flex-row justify-content-center align-items-center align-content-center bg-image "
                     style={{
                         backgroundImage:
@@ -42,52 +44,55 @@ export default function AreaTemplate(props: AreaProps) {
                     }}
                 >
                     <div className={"mask  w-100 h-100 justify-content-center align-content-center "}
-                         style={{backgroundColor: "rgba(0,0,0,0.2)"}}>
-                        <h1 className="text-center text-white display-1">{titulo}</h1>
+                        style={{ backgroundColor: "rgba(0,0,0,0.2)" }}>
+                       
                     </div>
-                </div>
-                <div className="container-fluid text-center align-content-center"><h2
-                    className="fs-2 text-center mt-5">{area.slogan}</h2>
-                    <hr className="hr hr-blurry w-50 mx-auto"/>
-                </div>
-            </div>
-            <MDBRow
-                className="">
-                <MDBCol className="d-flex flex-column text-muted justify-content-center align-content-center">
+
+                    <div className="row mask d-flex align-content-center"> <div className="col text-center text-white"> <h1>{titulo}</h1> <h2 className="subtitle">{area.slogan}</h2> </div></div>
+
+            </header>
+            <div className="skew-c"></div>
+            <section className="white-block mb-auto">
+                <MDBRow className="ps-lg-5 ps-xl-5 ps-md-0 px-sm-1 px-xs-1 align-items-center overflow-visible">
+
+                    <MDBCol xs={12} sm={12} md={6} lg={8} xl={8} className=" d-flex flex-column justify-content-evenly align-items-center overflow-visible py-5">
+                  
+                        {area.descripcion.map((paragraph: string) => {
+                            return (<p className="px-auto overflow-visible z-5">{paragraph}<br /></p>)
+                        })}
 
 
-                    {area.descripcion.map((paragraph: string) => {
-                        return (<p className={"px-5"}>{paragraph}<br/><br/></p>)
-                    })}
-
-                </MDBCol>
-
-                <MDBCol sm={12} xs={12} lg={6} xl={6} md={6}
-                        className={"d-flex flex-row justify-content-center align-content-center justify-content-center align-items-center mx-auto"}>
+                    </MDBCol>
+                    <MDBCol className={"ms-md-2 ms-sm-0 m-auto d-flex justify-content-center"}>
                     <img
+                        
                         src={firstImage}
-                        className="w-sm-50 w-md-75 img-thumbnail img-fluid float-right"
+                        className="  img-fluid img-thumbnail flex-shrink-1"
                     />
-                </MDBCol>
-            </MDBRow>
+
+                    </MDBCol>
+                </MDBRow>
+            </section>
+            <div className="skew-cc"></div>
             {innerWidth < 610 &&
-                <div
-                    className={"d-flex flex-row justify-content-evenly vw-100 h-auto flex-nowrap overflow-scroll mt-4"}>
+                <section
+                    className={"d-flex flex-row justify-content-evenly vw-100 h-auto flex-nowrap overflow-scroll mt-4 colour-block"}>
 
-                    {images.slice(0, 3).map(image => (<div className={"col-3"}>{image}</div>))}
+                    {images.slice(0, 3).map(image => (<div className={"col-3 "}>{image}</div>))}
 
 
-                </div>
+                </section>
 
                 ||
-                <div className="city-firstcarousel">
+                <section className="city-firstcarousel colour-block h-fit-content">
                     {images.map(image => (image))}
 
 
-                </div>
+                </section>
             }
             {/* <DividerFirstComponent /> */}
-            <div className="propiedades">
+            {showDesarrollos &&
+            <section className="propiedades white-block" >
                 {areaDesarrollos.size > 0 &&
                     <div>
                         <h3 className="text-center">Propiedades en el Área</h3>
@@ -111,8 +116,9 @@ export default function AreaTemplate(props: AreaProps) {
                         </MDBCol>)
                     })}
                 </MDBRow>
-            </div>
-            <div className="container-fluid m-0 p-0 overflow-scroll horizontal-scrollable"></div>
+            </section>
+}
+            {/* <div className="container-fluid m-0 p-0 overflow-scroll horizontal-scrollable"></div> */}
         </>
     );
 

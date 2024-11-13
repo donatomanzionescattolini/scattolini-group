@@ -153,7 +153,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             <div className="skew-c"></div>
             <section className="white-block py-5 my-5">
 
-                <h4 className=" text-center display-4 m-0 p-0 h-100 w-100 overflow-visible z-5" style={{}}>
+                <h4 className=" text-center display-5 m-0 p-0 h-100 w-100 overflow-visible z-5" style={{}}>
                     {titulo}
                 </h4>
 
@@ -467,8 +467,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                                         ></div>
 
                                         <h4 className="text-center card-title m-2 " style={{
-                                            fontFamily: '"tt-commons-pro", sans-serif',
-                                            fontWeight: "100",
+                                            fontFamily: '"the-seasons", serif',
+                                            fontWeight: "200",
                                             fontStyle: "normal"
                                         }}>
                                             {desarrollo.titulo ||

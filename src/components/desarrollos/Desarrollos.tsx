@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import {Area} from "../../models/areas/Area.tsx";
 import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
 
-export default function DesarrollosTodos() {
+export default function Desarrollos() {
     return (
         <>
             <br></br>{innerWidth <= 560 && <><br></br><br></br></>}
@@ -37,8 +37,8 @@ export default function DesarrollosTodos() {
                                                 ></div>
 
                                                 <h4 className="text-center card-title m-2 " style={{
-                                                    fontFamily: '"tt-commons-pro", sans-serif',
-                                                    fontWeight: "100",
+                                                    fontFamily: '"the-seasons", serif',
+                                                    fontWeight: "200",
                                                     fontStyle: "normal"
                                                 }}>
                                                     {desarrollo.nombre
