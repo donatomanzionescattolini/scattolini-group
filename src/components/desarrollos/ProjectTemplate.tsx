@@ -85,7 +85,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 fluid
                 jumbotron
                 id={"banner"}
-                className=""
+                className="py-0 my-0 overflow-y-hidden"
                 style={{height: "300px"}}
             >
                 <header
@@ -109,7 +109,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                             autoFocus
                             style={{
                                 backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
-                                backgroundSize: "150%",
+                                backgroundSize: "cover",
                                 backgroundRepeat: "no-repeat",
                                 backgroundPosition: "center",
 
@@ -152,18 +152,11 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 </header>
             </MDBContainer>
             <div className="skew-c"></div>
-            <section className="white-block d-flex flex-column">
-                {innerWidth < 768 && (
-                    <div>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                    </div>
-                )}
-                <h2 className=" text-center animate-charcter" style={{}}>
+            <section className="white-block py-5 my-5">
+
+                <h4 className=" text-center display-4 m-0 p-0 h-100 w-100 overflow-visible z-5" style={{}}>
                     {titulo}
-                </h2>
+                </h4>
 
                 <hr className="hr hr-blurry w-50 mx-auto"/>
                 {<h5 className="mt-0 text-center">{subtitulo}</h5>}
@@ -183,7 +176,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
             </section>
             <div className="skew-cc"></div>
-            <section className="colour-block">
+            <section className="colour-block pt-5">
                 {typeof video !== "string" || !video ? (
                     video
                 ) : (
@@ -209,11 +202,11 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 )}
             </section>
             <div className="skew-c"></div>
-            <section className="white-block">
+            <section className="white-block pt-5">
                 <MDBContainer fluid small responsive centered>
                     <br></br>
                     <div>
-                        <h3 className="text-center">Características</h3>
+                        <h3 className="text-center display-7">Características</h3>
                     </div>
                     <hr className="hr hr-blurry w-50 mx-auto"/>
 
@@ -245,13 +238,13 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                             id="panel3a-header"
                             className={"text-center"}
                         >
-                            {CaracteristicasAmenidades as JSX.Element}
+                           {CaracteristicasAmenidades as JSX.Element}
                         </MDBAccordionItem>
                     </MDBAccordion>
                 </MDBContainer>
             </section>
             <div className="skew-cc"></div>
-            <section className="colour-block" id="galeria-proyectos">
+            <section className="colour-block pt-5" id="galeria-proyectos">
                 <MDBContainer>
                     <br></br>
 
@@ -284,7 +277,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           allowFullScreen
         ></iframe> */}
             {/* </div> */}
-            <section className="white-block">
+            <section className="white-block pt-5">
                 <MDBContainer fluid className="embed-responsive">
                     <br></br>
                     <div>
@@ -294,7 +287,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
                     <br></br>
                     <MDBTabs fill>
-                        <MDBTabsItem className={"text-md-center fs-2"}
+                        <MDBTabsItem className={"text-md-center fs-6"}
                                      style={{color: "#2b2a2e!important"}}
                                      title="Brochure"
                         >
@@ -435,7 +428,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 </MDBContainer>
             </section>
             <div className="skew-cc"></div>
-            <section className="colour-block">
+            <section className="colour-block pt-5">
                 <MDBContainer fluid>
                     <br/>
                     <br></br>
@@ -500,11 +493,11 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 <br></br>
             </section>
             <div className="skew-c"></div>
-            <section className="white-block">
+            <section className="white-block pt-5">
                 <AreasComponent/>
             </section>
             <div className="skew-cc"></div>
-            <section className="colour-block">
+            <section className="colour-block pt-5">
                 {innerWidth <= 768 && (
                     <MDBContainer>
                         <ContactFormComponent projectName={titulo as string}/>

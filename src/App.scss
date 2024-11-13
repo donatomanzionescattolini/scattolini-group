@@ -92,9 +92,9 @@ html {
   color: $brown;
 }
 
-section > div > p {
-  colour: $brown !important;
-}
+//section > div > p {
+//  colour: $brown !important;
+//}
 
 main {
   margin: 0;
@@ -113,6 +113,9 @@ main {
   //   text-align: center;
   line-height: 1.4;
   margin-bottom: 0;
+  font-family:"tt-commons-pro",sans-serif;
+  font-weight:200;
+  letter-spacing:calc(initial * 2);
 
 }
 
@@ -231,7 +234,7 @@ a {
 }
 
 section.Servicios p {
-  font-weight: 400px;
+  font-weight: 100;
 }
 
 #divider-first-3 {
@@ -643,9 +646,9 @@ a {
   background: none;
 }
 
-.App {
-  background: transparent;
-}
+//.App {
+//  background: transparent;
+//}
 
 main {
   margin: 0;
@@ -734,7 +737,7 @@ a {
 }
 
 section.Servicios p {
-  font-weight: 400;
+  font-weight: 100;
 }
 
 @media screen and (min-width: 768px) {
@@ -989,7 +992,7 @@ p {
   text-indent: 2rem;
   font-weight: normal;
   font-family: "tt-commons-pro", sans-serif;
-  font-weight:lighter;
+  font-weight:200;
 letter-spacing:calc(add(normal,normal));
 }
 
@@ -1194,9 +1197,9 @@ img {
   max-height: 100% !important;
 }
 
-#root > section > div > p {
-  margin-top: 2rem !important;
-}
+//#root > section > div > p {
+//  margin-top: 2rem !important;
+//}
 
 @media screen and (max-width: 768px) {
   #domus header {
@@ -1305,7 +1308,7 @@ letter-spacing:calc(add(normal,normal));letter-spacing:calc(add(normal,normal));
   letter-spacing:calc(add(normal,normal));
 }
 
-
+//p {
 .city-firstcarousel {
   overflow-x: scroll !important;
 }
@@ -1322,3 +1325,12 @@ html, body {
 .bg-darkblue {
   background: $darkblue !Important;
 }
+
+
+button.accordion-button{
+  background-color:$secondBackground!important;
+  font-family:"the-seasons",sans-serif;
+  font-weight:300;
+  font-size:x-large;
+}
+
