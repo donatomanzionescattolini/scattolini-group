@@ -106,7 +106,7 @@ const Nav = () => {
                 </MDBNavbarToggler>
 
                 <MDBCollapse navbar show={showNavCentred} id="navbarCenteredExample" className={"mx-auto "}>
-                    <MDBNavbarNav fullWidth={true} className="mb-2 mb-lg-0">
+                    <MDBNavbarNav fullWidth className="mb-2 mb-lg-0">
                         <MDBNavbarItem>
                             <MDBNavbarLink aria-current="page" href="/">
                                 Inicio
@@ -134,7 +134,7 @@ const Nav = () => {
                         <MDBNavbarItem>
                             <MDBDropdown drop={"center"}>
                                 <MDBDropdownToggle tag="a">Áreas</MDBDropdownToggle>
-                                <MDBDropdownMenu className="responsive column ">
+                                <MDBDropdownMenu className="vw-sm-100 vw-xs-100 w-75 mx-auto min-vw-fit-content">
                                     <>
                                         <div className="input-group d-flex w-75 ms-4 my-3">
                                             <input

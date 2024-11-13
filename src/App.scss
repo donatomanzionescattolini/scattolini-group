@@ -115,7 +115,6 @@ main {
   margin-bottom: 0;
   font-family: "tt-commons-pro", sans-serif;
   font-weight: 200;
-  letter-spacing: calc(initial * 2);
 
 }
 
@@ -255,10 +254,10 @@ main > section.city-firstsection {
   line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "tt-commons-pro", serif;
   color: $brown;
   -webkit-font-smoothing: antialiased;
-  font-weight: 500;
+  font-weight: 100;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
@@ -266,6 +265,7 @@ main > section.city-firstsection {
   width: 100%;
   padding: 0;
   margin: 0;
+  
 }
 
 #root
@@ -993,14 +993,14 @@ p {
   font-weight: normal;
   font-family: "tt-commons-pro", sans-serif;
   font-weight: 200;
-  letter-spacing: calc(add(normal, normal));
+  
 }
 
 .nav-link, .dropdown-item, .navbar-toggler {
   font-family: "tt-commons-pro", sans-serif;
   font-weight: 100 !important;
   font-style: normal;
-
+  
 }
 
 /*------------------*/

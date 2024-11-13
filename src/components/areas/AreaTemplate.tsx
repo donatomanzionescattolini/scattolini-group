@@ -22,7 +22,6 @@ export default function AreaTemplate(props: AreaProps) {
     const [areaDesarrollos] = useState<Set<Desarrollo>>(getDesarrollosForArea(area));
     for (let i = 1; i <= area.numberOfImages; i++) {
         images.push(<Image
-            fluid
             rounded
             src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/carousel-${i}.webp`}
         ></Image>);
@@ -75,7 +74,7 @@ export default function AreaTemplate(props: AreaProps) {
                 <div
                     className={"d-flex flex-row justify-content-evenly vw-100 h-auto flex-nowrap overflow-scroll mt-4"}>
 
-                    {images.slice(0, 3).map(image => (<div className={"col-3 h-100 my-auto"}>{image}</div>))}
+                    {images.slice(0, 3).map(image => (<div className={"col-3"}>{image}</div>))}
 
 
                 </div>
