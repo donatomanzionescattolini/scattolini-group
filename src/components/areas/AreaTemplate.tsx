@@ -1,12 +1,12 @@
 import {Image} from "react-bootstrap";
 import {MDBCol, MDBRow} from "mdb-react-ui-kit";
-import React, {useLayoutEffect, useState} from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import {Area} from "../../models/areas/Area.tsx";
 import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
-import {Router} from "express";
+
 interface AreaProps {
     area: Area;
 }
@@ -47,7 +47,8 @@ export default function AreaTemplate(props: AreaProps) {
                         <h1 className="text-center text-white display-1">{titulo}</h1>
                     </div>
                 </div>
-                <div className="container-fluid text-center align-content-center"><h2 className="fs-2 text-center mt-5">{area.slogan}</h2>
+                <div className="container-fluid text-center align-content-center"><h2
+                    className="fs-2 text-center mt-5">{area.slogan}</h2>
                     <hr className="hr hr-blurry w-50 mx-auto"/>
                 </div>
             </div>

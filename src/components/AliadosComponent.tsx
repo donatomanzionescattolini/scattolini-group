@@ -13,7 +13,7 @@ export default function AliadosComponent() {
                 className="p-5 d-flex flex-row flex-nowrap justify-content-center align-items-center bg-transparent"
             >
                 <MDBCol xs={12} sm={12} md={12} lg={4} xl={4} className={"bg-transparent"}>
-                    <Link to="#"className={"bg-transparent"}>
+                    <Link to="#" className={"bg-transparent"}>
                         <img
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/hue-house.png"
                             alt="Hue House"

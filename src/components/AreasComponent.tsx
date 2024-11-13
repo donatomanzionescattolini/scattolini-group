@@ -1,10 +1,8 @@
 import {MDBCol, MDBContainer, MDBRow} from "mdb-react-ui-kit";
-import React, {useLayoutEffect} from "react";
+import React from "react";
 
 import {Link} from "react-router-dom";
 import Areas from "../objects/areas/Areas.tsx";
-import {desarrollos} from "../objects/desarrollos/Desarrollos.ts";
-import {Area} from "../models/areas/Area.tsx";
 
 const AreasComponent = function (): React.JSX.Element {
     // const [returnColumns] = useState<JSX.Element[]>(

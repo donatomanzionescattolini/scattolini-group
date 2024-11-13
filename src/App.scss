@@ -33,8 +33,8 @@ $black-90: darken(#fff, 90%);
 h1,
 h2, p, h5, h6, h3, h4 {
   font-family: "the-seasons", sans-serif;
-  font-weight:lighter;
-letter-spacing:calc(add(normal,normal));
+  font-weight: lighter;
+  letter-spacing: calc(add(normal, normal));
   overflow: visible !important;
 
 }
@@ -113,9 +113,9 @@ main {
   //   text-align: center;
   line-height: 1.4;
   margin-bottom: 0;
-  font-family:"tt-commons-pro",sans-serif;
-  font-weight:200;
-  letter-spacing:calc(initial * 2);
+  font-family: "tt-commons-pro", sans-serif;
+  font-weight: 200;
+  letter-spacing: calc(initial * 2);
 
 }
 
@@ -569,8 +569,8 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   color: $background;
-  font-weight:lighter;
-letter-spacing:calc(add(normal,normal));
+  font-weight: lighter;
+  letter-spacing: calc(add(normal, normal));
   font-family: "Montserrat";
 }
 
@@ -992,8 +992,8 @@ p {
   text-indent: 2rem;
   font-weight: normal;
   font-family: "tt-commons-pro", sans-serif;
-  font-weight:200;
-letter-spacing:calc(add(normal,normal));
+  font-weight: 200;
+  letter-spacing: calc(add(normal, normal));
 }
 
 .nav-link, .dropdown-item, .navbar-toggler {
@@ -1302,10 +1302,11 @@ a:active, li:active, a:hover, li:hover {
 
 div {
   font-family: "tt-commons-pro", sans-serif;
-  font-weight:lighter;
-letter-spacing:calc(add(normal,normal));letter-spacing:calc(add(normal,normal));
+  font-weight: lighter;
+  letter-spacing: calc(add(normal, normal));
+  letter-spacing: calc(add(normal, normal));
 
-  letter-spacing:calc(add(normal,normal));
+  letter-spacing: calc(add(normal, normal));
 }
 
 //p {
@@ -1327,10 +1328,10 @@ html, body {
 }
 
 
-button.accordion-button{
-  background-color:$secondBackground!important;
-  font-family:"the-seasons",sans-serif;
-  font-weight:300;
-  font-size:x-large;
+button.accordion-button {
+  background-color: $secondBackground !important;
+  font-family: "the-seasons", sans-serif;
+  font-weight: 300;
+  font-size: x-large;
 }
 

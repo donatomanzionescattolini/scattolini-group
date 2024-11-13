@@ -79,7 +79,7 @@ const Nav = () => {
     // @ts-ignore
     return (
         <MDBNavbar expand="lg" light bgColor="light">
-            <MDBContainer fluid>
+            <MDBContainer fluid className={"d-flex flex-row justify-content-center"}>
                 <MDBNavbarToggler
                     type="button"
                     data-target="#navbarCenteredExample"
@@ -105,7 +105,7 @@ const Nav = () => {
 
                 </MDBNavbarToggler>
 
-                <MDBCollapse navbar show={showNavCentred} id="navbarCenteredExample" className={"py-2"}>
+                <MDBCollapse navbar show={showNavCentred} id="navbarCenteredExample" className={"mx-auto "}>
                     <MDBNavbarNav fullWidth={true} className="mb-2 mb-lg-0">
                         <MDBNavbarItem>
                             <MDBNavbarLink aria-current="page" href="/">

@@ -21,7 +21,6 @@ import {caracteristicas, ProjectParams,} from "../../models/desarrollos/ProjectP
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
 import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
-import {Image} from "react-bootstrap";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
     const params = paramz.desarrollo;
@@ -238,7 +237,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                             id="panel3a-header"
                             className={"text-center"}
                         >
-                           {CaracteristicasAmenidades as JSX.Element}
+                            {CaracteristicasAmenidades as JSX.Element}
                         </MDBAccordionItem>
                     </MDBAccordion>
                 </MDBContainer>
