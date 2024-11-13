@@ -168,7 +168,7 @@ const Nav = () => {
                         <MDBNavbarItem>
                             <MDBDropdown drop={"center"}>
                                 <MDBDropdownToggle tag="a">Desarrollos</MDBDropdownToggle>
-                                <MDBDropdownMenu className="responsive column">
+                                <MDBDropdownMenu className="" responsive>
                                     <MDBInputGroup className="d-flex w-75 ms-4 my-3">
                                         <input
                                             className="form-control"

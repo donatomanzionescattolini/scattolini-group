@@ -31,23 +31,28 @@ export default function SlideshowGalleryDesarrollo(props: Props) {
                         <source
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).JPEG`}
                             height={500}
+                            className={"w-100"}
                         />
                         <source
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).jpeg`}
                             height={500}
+                            className={"w-100"}
                         />
                         <source
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).png`}
                             height={500}
+                            className={"w-100"}
                         />
                         <source
                             height={500}
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).webp`}
+                            className={"w-100"}
                         />
                         <img
                             autoFocus
                             height={500}
                             src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).jpg`}
+                            className={"w-100"}
                             alt=""
                         />
                     </picture>
