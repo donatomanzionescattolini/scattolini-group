@@ -1,5 +1,5 @@
-import {Image} from "react-bootstrap";
-import {MDBCol, MDBRow} from "mdb-react-ui-kit";
+import {Carousel, Image} from "react-bootstrap";
+import {MDBCarousel, MDBCarouselItem, MDBCol, MDBContainer, MDBRow} from "mdb-react-ui-kit";
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 
@@ -49,22 +49,23 @@ export default function AreaTemplate(props: AreaProps) {
                 </div>
 
                 <div className="row mask d-flex align-content-center">
-                    <div className="col text-center text-white"><h1>{titulo}</h1> <h2
-                        className="subtitle">{area.slogan}</h2></div>
+                    <div className="col text-center text-white"><h1>{titulo}</h1></div>
                 </div>
 
             </header>
-            <div className="skew-c"></div>
-            <section className="white-block mb-auto">
+            {/*<div className="skew-cc"></div>*/}
+            <section className="colour-block ">
+                <MDBContainer fluid className="container-fluid text-center "><h1>{titulo}</h1> <h2
+                    className="subtitle">{area.slogan}</h2></MDBContainer>
                 <MDBRow className="ps-lg-5 ps-xl-5 ps-md-0 px-sm-1 px-xs-1 align-items-center overflow-visible">
 
                     <MDBCol xs={12} sm={12} md={6} lg={8} xl={8}
-                            className=" d-flex flex-column justify-content-evenly align-items-center overflow-visible py-5">
+                            className=" d-flex flex-column justify-content-center align-items-center overflow-visible ">
 
-                        {area.descripcion.map((paragraph: string) => {
-                            return (<p className="px-auto p-sm-5 p-xs-5 overflow-visible z-5">{paragraph}<br/></p>)
+                        <p className="px-5 mt-5">{area.descripcion.map((paragraph: string) => {
+                            return (<p className={"text-indent"}>{paragraph}<br/><br/></p>)
                         })}
-
+                        </p>
 
                     </MDBCol>
                     <MDBCol className={"ms-md-2 ms-sm-0 m-auto d-flex justify-content-center"}>
@@ -72,28 +73,39 @@ export default function AreaTemplate(props: AreaProps) {
 
                             src={firstImage}
                             className="  img-fluid img-thumbnail flex-shrink-1"
-                         alt={area.name}/>
+                            alt={area.name}/>
 
                     </MDBCol>
                 </MDBRow>
+
+
+
+            {innerWidth < 610 ? (
+                <div className={"d-flex flex-row justify-content-evenly"}>
+                    <Carousel className={"bg-transparent"}>
+                        {images.map((image, index) => (
+                            <Carousel.Item key={index}>
+                                {image}
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+                </div>
+            ) : (
+                <div className="city-firstcarousel  h-fit-content">
+                    {images.map(image => image)}
+                </div>
+            )}
             </section>
-            <div className="skew-cc"></div>
+            <div className={"skew-c"}></div>
 
-            <section className="city-firstcarousel colour-block h-fit-content">
-                {images.map(image => (image))}
-
-
-            </section>
             {/* <DividerFirstComponent /> */}
             {showDesarrollos &&
-                <section className="m-0 p-0 propiedades white-block">
-                    {areaDesarrollos.size > 0 &&
-                        <div>
-                            <h3 className="text-center">Propiedades en el Área</h3>
-                        </div>
-                    }
-                    <br></br>
+                <section className="white-block">
+                    <h2 className="text-center fs-2 my-5">Propiedades en el Área</h2>
                     <MDBRow>
+
+
+
                         {[...areaDesarrollos.values()].map(desarrollo => {
                             return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
                                 <Link to={`/desarrollos/${desarrollo.nombre}/`}>
