@@ -1,6 +1,6 @@
 import {Carousel, Image} from "react-bootstrap";
 import {MDBCarousel, MDBCarouselItem, MDBCol, MDBContainer, MDBRow} from "mdb-react-ui-kit";
-import React, {useState} from "react";
+import React, {useLayoutEffect, useState} from "react";
 import {Link} from "react-router-dom";
 
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
@@ -30,6 +30,9 @@ export default function AreaTemplate(props: AreaProps) {
     }
     const [showDesarrollos] = useState(getDesarrollosForArea(area).size > 0);
     const firstImage = `https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/firstImage.jpg`;
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <header
@@ -54,10 +57,10 @@ export default function AreaTemplate(props: AreaProps) {
 
             </header>
             {/*<div className="skew-cc"></div>*/}
-            <section className="colour-block ">
-                <MDBContainer fluid className="container-fluid text-center "><h1>{titulo}</h1> <h2
-                    className="subtitle">{area.slogan}</h2></MDBContainer>
-                <MDBRow className="ps-lg-5 ps-xl-5 ps-md-0 px-sm-1 px-xs-1 align-items-center overflow-visible">
+            <section className="white-block py-5 ">
+                <MDBContainer fluid className="container-fluid text-center "><h1 className="display-4">{titulo}</h1> <h5
+                    className="subtitle text-lead w-75 mx-auto my-0 py-0 fs-4"><i>{area.slogan}</i></h5></MDBContainer>
+                <MDBRow className="ps-lg-5 ps-xl-5 ps-md-0 px-sm-1 px-xs-1 align-items-center overflow-visible ">
 
                     <MDBCol xs={12} sm={12} md={6} lg={8} xl={8}
                             className=" d-flex flex-column justify-content-center align-items-center overflow-visible ">
@@ -79,9 +82,9 @@ export default function AreaTemplate(props: AreaProps) {
                 </MDBRow>
 
 
-
             {innerWidth < 610 ? (
-                <div className={"d-flex flex-row justify-content-evenly"}>
+                <div className={"d-flex flex-column align-content-center align-items-center  justify-content-evenly my-5"}>
+                    <h2 className="text-center display-6 my-5">Galería</h2>
                     <Carousel className={"bg-transparent"}>
                         {images.map((image, index) => (
                             <Carousel.Item key={index}>
@@ -96,18 +99,18 @@ export default function AreaTemplate(props: AreaProps) {
                 </div>
             )}
             </section>
-            <div className={"skew-c"}></div>
+            <div className={"skew-cc"}></div>
 
             {/* <DividerFirstComponent /> */}
             {showDesarrollos &&
-                <section className="white-block">
-                    <h2 className="text-center fs-2 my-5">Propiedades en el Área</h2>
+                <section className="colour-block py-5 ">
+                    <h2 className="text-center display-6 my-5">Propiedades en el Área</h2>
                     <MDBRow>
 
 
 
-                        {[...areaDesarrollos.values()].map(desarrollo => {
-                            return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
+                        {[...areaDesarrollos.values()].map((desarrollo,index) => {
+                            return (<MDBCol key={index+1} xs={12} sm={12} md={6} lg={4} xl={4}>
                                 <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                                     <div
                                         className="propiedades-img p-0 m-0"

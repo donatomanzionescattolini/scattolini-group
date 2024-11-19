@@ -84,11 +84,11 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 fluid
                 jumbotron
                 id={"banner"}
-                className="py-0 my-0 overflow-y-hidden"
+                className="py-0 my-0 overflow-y-hidden   object-fit-cover"
                 style={{height: "300px"}}
             >
                 <header
-                    className="mdc-banner d-flex row flex-nowrap overflow-none  justify-content-center h-100 m-0 p-0 responsive">
+                    className="mdc-banner d-flex row flex-nowrap   justify-content-center h-100 m-0 p-0 responsive overflow-hidden">
                     {innerWidth < 610 && (banner && (
                         <div
                             id="banner"
@@ -151,15 +151,13 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 </header>
             </MDBContainer>
             <div className="skew-c"></div>
-            <section className="white-block py-5 my-5">
+            <section className="white-block py-5  mt-5">
 
-                <h4 className=" text-center display-5 m-0 p-0 h-100 w-100 overflow-visible z-5" style={{}}>
-                    {titulo}
-                </h4>
+            <MDBContainer fluid className="container-fluid text-center "><h1 className="display-4">{titulo}</h1>                 <hr className="hr hr-blurry w-50 mx-auto"/>
+            <h5
+                    className="subtitle text-lead w-75 mx-auto my-0 py-0  fs-4"><i>{subtitulo}</i></h5></MDBContainer>
 
-                <hr className="hr hr-blurry w-50 mx-auto"/>
-                {<h5 className="mt-0 text-center">{subtitulo}</h5>}
-                <MDBRow className={"row w-75 mx-auto mt-5"}>
+                <MDBRow className={"row w-75 mx-auto mt-5 bg-transparent py-5"}>
                     <MDBCol xs={12} sm={12} md={6} lg={6} xl={6}
                             className={"align-content-center justify-content-center"}>
                         {(introduccion as Array<string>).map((par: string) =>
@@ -168,54 +166,54 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                     </MDBCol>
 
                     <MDBCol xs={12} sm={12} md={6} lg={6} xl={6} className={"p-md-5 p-sm-2"}>
-                        <img src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${nombre}.webp`}
+                        <img alt ={area.name}src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${nombre}.webp`}
                              className={"img-fluid "}/>
                     </MDBCol>
                 </MDBRow>
 
             </section>
             <div className="skew-cc"></div>
-            <section className="colour-block pt-5">
+            <section className="colour-block p-auto">
                 {typeof video !== "string" || !video ? (
                     video
                 ) : (
                     <video
-                        width="auto"
-                        height="500"
+                        width="100%"
+                        height="auto"
                         controls
                         autoPlay
                         autoFocus={true}
                         className={
-                            " w-100 mx-auto my-0 p-0 d-flex flex-row justify-content-center"
+                            "m-auto p-auto"
                         }
                     >
                         {video}
                         <source
-                            width={700}
-                            height={500}
                             src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}
                             type="video/mp4"
-                            className="d-flex flex-row justify-content-center align-items-center"
+                            className="m-auto p-auto"
                         />
                     </video>
                 )}
             </section>
             <div className="skew-c"></div>
-            <section className="white-block pt-5">
+            <section className="white-block py-5  ">
                 <MDBContainer fluid small responsive centered>
                     <br></br>
+                    <br/>
                     <div>
-                        <h3 className="text-center display-7">Características</h3>
+                        <h4 className="text-center display-6 title">Características</h4>
                     </div>
                     <hr className="hr hr-blurry w-50 mx-auto"/>
 
-                    <MDBAccordion id="accordion" className="m-5 w-fit-content" flush>
+                    <MDBAccordion id="accordion" className="m-5 w-fit-content " flush>
                         <MDBAccordionItem
                             collapseId={1}
                             headerTitle="Edificio"
+
                             aria-controls="panel1a-content"
                             id="panel1a-header"
-                            className={"text-align-center"}
+                            className={"text-center "}
                         >
                             {CaracteristicasEdificio}
                         </MDBAccordionItem>
@@ -243,12 +241,12 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 </MDBContainer>
             </section>
             <div className="skew-cc"></div>
-            <section className="colour-block pt-5" id="galeria-proyectos">
+            <section className="colour-block py-5  " id="galeria-proyectos">
                 <MDBContainer>
                     <br></br>
-
+                    <br></br>
                     <div>
-                        <h3 className="text-center">Galería Fotográfica</h3>
+                        <h4 className="text-center title display-6">Galería Fotográfica</h4>
                     </div>
                     <hr className="hr hr-blurry w-50 mx-auto"/>
 
@@ -276,18 +274,18 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           allowFullScreen
         ></iframe> */}
             {/* </div> */}
-            <section className="white-block pt-5">
-                <MDBContainer fluid className="embed-responsive">
+            <section className="white-block py-5  embed-responsive">
+                    <br></br>
                     <br></br>
                     <div>
-                        <h3 className="text-center">Documentos De Interés</h3>
+                        <h4 className="text-center mb-1 display-6" >Documentos De Interés</h4>
                     </div>
                     <hr className="hr hr-blurry w-50 mx-auto"/>
 
                     <br></br>
                     <MDBTabs fill>
-                        <MDBTabsItem className={"text-md-center fs-6"}
-                                     style={{color: "#2b2a2e!important"}}
+                        <MDBTabsItem className={"text-md-center display-6"}
+                                     style={{color: "#2b2a2e!importsant"}}
                                      title="Brochure"
                         >
                             <MDBTabsLink className={"fs-5"} onClick={() => openTab("brochure")} href="#docs">
@@ -424,15 +422,14 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                             </div>
                         </MDBTabsPane>
                     </MDBTabsContent>
-                </MDBContainer>
             </section>
             <div className="skew-cc"></div>
-            <section className="colour-block pt-5">
-                <MDBContainer fluid>
+            <section className="colour-block py-5  ">
+                <>
                     <br/>
                     <br></br>
                     <div>
-                        <h3 className="text-center mb-1">Propiedades en el Área</h3>
+                        <h4 className="text-center my-1 display-6">Propiedades en el Área</h4>
                     </div>
                     <hr className="hr hr-blurry w-50 mx-auto"/>
 
@@ -485,18 +482,18 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                             );
                         })}
                     </MDBRow>
-                </MDBContainer>
+                </>
                 {/* <div> */}
-                {/* <h3 className="text-center">Otras Áreas</h3> */}
+                {/* <h4 className="text-center">Otras Áreas</h4> */}
                 {/* </div> */}
                 <br></br>
             </section>
             <div className="skew-c"></div>
-            <section className="white-block pt-5">
+            <section className="white-block py-5  ">
                 <AreasComponent/>
             </section>
             <div className="skew-cc"></div>
-            <section className="colour-block pt-5">
+            <section className="colour-block py-5  ">
                 {innerWidth <= 768 && (
                     <MDBContainer>
                         <ContactFormComponent projectName={titulo as string}/>

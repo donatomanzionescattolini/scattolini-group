@@ -28,11 +28,11 @@ const AreasComponent = function (): React.JSX.Element {
     //     }
     // );
     return (
-        <MDBContainer>
+        <>
             <br/>
             <br></br>
             <div>
-                <h3 className="text-center mb-1">Otras Áreas</h3>
+                <h3 className="text-center mb-1 display-6">Otras Áreas</h3>
             </div>
             <hr className="hr hr-blurry w-50 mx-auto"/>
 
@@ -60,7 +60,7 @@ const AreasComponent = function (): React.JSX.Element {
                     );
                 })}
             </MDBRow>
-        </MDBContainer>
+        </>
     );
 };
 

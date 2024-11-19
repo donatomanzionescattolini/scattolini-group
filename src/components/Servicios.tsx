@@ -64,7 +64,7 @@ export default function Servicios() {
             <MDBCardGroup className="text-center">
                 <MDBCard className="m-2">
                     <MDBCardHeader>
-                        <MDBCardTitle>Venta de Propiedades</MDBCardTitle>
+                        <MDBCardTitle><h4>Venta de Propiedades</h4></MDBCardTitle>
                     </MDBCardHeader>
                     <MDBCardBody>
                         <MDBCardText>
@@ -84,7 +84,7 @@ export default function Servicios() {
 
                 <MDBCard className="m-2">
                     <MDBCardHeader>
-                        <MDBCardTitle>Compra de Propiedades</MDBCardTitle>
+                        <MDBCardTitle><h4>Compra de Propiedades</h4></MDBCardTitle>
                     </MDBCardHeader>
                     <MDBCardBody>
                         <MDBCardText>
