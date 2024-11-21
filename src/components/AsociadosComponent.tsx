@@ -11,7 +11,7 @@ export default function Equipo() {
         >
             <div className="page-header">
 
-                <h1 className="text-center mt-5 display-6">Asociados</h1>
+                <h1 className="text-center mt-5 display-6 pt-5    my-5">Asociados</h1>
                 <hr className="hr hr-blurry w-50 mx-auto mb-5"/>
             </div>
             <div className="row active-with-click">

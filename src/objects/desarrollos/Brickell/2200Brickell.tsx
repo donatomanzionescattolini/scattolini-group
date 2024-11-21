@@ -20,16 +20,16 @@ export default function _2200Brickell() {
                 <li>Ubicación: 2200 Brickell Avenue, Miami, FL 33129</li>
             </ul>
         </>,
-        residencias: <ul style={{textAlign: "justify"}}>
-            <b> Un Santuario Urbano</b><p>Creadas por amantes de la vida en la ciudad que encuentran una gran
+        residencias: <dl style={{textAlign: "justify"}}>
+            <dt> Un Santuario Urbano</dt><dd>Creadas por amantes de la vida en la ciudad que encuentran una gran
             inspiración en la naturaleza, estas residencias únicas logran un equilibrio perfecto con un enfoque de lo
-            mejor de ambos mundos que ofrece una serenidad suntuosa en medio de la vibrante vida de la ciudad.</p><b>Un
-            Equilibrio Perfecto</b><p>Un espacio armonioso donde la exuberante vegetación coexiste con la sofisticación
+            mejor de ambos mundos que ofrece una serenidad suntuosa en medio de la vibrante vida de la ciudad.</dd><dt>Un
+            Equilibrio Perfecto</dt><dd>Un espacio armonioso donde la exuberante vegetación coexiste con la sofisticación
             urbana, 2200 BRICKELL fue cuidadosamente diseñado para poner a los residentes en primer lugar y ofrecer una
-            vida urbana enérgica junto con la apreciación de un retiro tranquilo.</p><b>Vida Elevada de Brickell</b>
-            <p>Las residencias están meticulosamente diseñadas por el galardonado equipo de ODA New York, y cuentan con
-                ventanas de piso a techo, exuberantes balcones privados y cocinas y baños ricamente decorados.</p>
-            <b>Interiores Residenciales</b>
+            vida urbana enérgica junto con la apreciación de un retiro tranquilo.</dd><dt>Vida Elevada de Brickell</dt>
+            <dd>Las residencias están meticulosamente diseñadas por el galardonado equipo de ODA New York, y cuentan con
+                ventanas de piso a techo, exuberantes balcones privados y cocinas y baños ricamente decorados.</dd>
+            <dt>Interiores Residenciales</dt>
             <li>Ventanas de vidrio de impacto de piso a techo y vidrio corredizo
                 Puertas balconeras
             </li>
@@ -52,7 +52,7 @@ export default function _2200Brickell() {
             <li>Armarios personalizados espaciosos y totalmente construidos</li>
             <li>Lavandería dedicada con lavadora y secadora de tamaño completo</li>
 
-        </ul>, amenidades:
+        </dl>, amenidades:
             <ul style={{textAlign: "justify"}}><b style={{textAlign: 'left'}}>Brindemos Por Una Vida Bien Vivida</b>
                 <p>Desde sus inicios, 2200 BRICKELL fue diseñado para brindar a los residentes una experiencia de vida
                     más reflexiva e intencional que mejoraría su salud, felicidad y bienestar.</p><p><b
@@ -63,7 +63,7 @@ export default function _2200Brickell() {
                     vividos.</p><p><b style={{textAlign: 'left'}}>Cuidadosamente Elaborado</b><br></br>Desde espacios
                     compartidos de última generación hasta innovadoras características privadas, estas comodidades
                     cuidadosamente diseñadas evolucionan lo que significa vivir bien en Brickell.</p>
-                <b>Amenidades</b>
+                <dt>Amenidades</dt>
 
                 <li>Porte-cochère cubierto</li>
                 <li>Servicio de aparcacoches en el hotel</li>
@@ -82,7 +82,7 @@ export default function _2200Brickell() {
                     y espacios intencionales que mejoren la salud y el bienestar humano
                 </li>
                 <li>Salón de bienestar con sala de tratamiento y sauna</li>
-                <b>Azotea</b>
+                <dt>Azotea</dt>
                 <p>Abarcando cerca de un acre de pies cuadrados bañados por el sol, el exuberante paisaje de la azotea
                     de 2200 Brickell es una experiencia exquisitamente elevada. Igualmente idílico y vigorizante, aquí
                     encontrará una gran variedad de características y comodidades de lujo que realmente llevan la

@@ -33,7 +33,7 @@ export default function TheWell() {
             <>
                 <ul>
                     <li>
-                        <b>Hogar</b>
+                        <dt>Hogar</dt>
                     </li>
                     <li>
                         {" "}

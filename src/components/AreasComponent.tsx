@@ -32,7 +32,7 @@ const AreasComponent = function (): React.JSX.Element {
             <br/>
             <br></br>
             <div>
-                <h3 className="text-center mb-1 display-6">Otras Áreas</h3>
+                <h3 className="text-center mb-1 display-6 pt-5    my-5">Otras Áreas</h3>
             </div>
             <hr className="hr hr-blurry w-50 mx-auto"/>
 

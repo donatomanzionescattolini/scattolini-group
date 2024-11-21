@@ -19,7 +19,7 @@ export default function Page() {
                         Teléfono: (305) 381-5120<br></br>
                         Fax: (305) 381-5423<br></br>
                         <br></br>
-                        <b> Horas de Oficina</b>
+                        <dt> Horas de Oficina</dt>
                         <br></br>
                         <br></br>
                         Lunes a viernes: 9am - 5pm<br></br>

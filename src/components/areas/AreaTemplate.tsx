@@ -84,7 +84,7 @@ export default function AreaTemplate(props: AreaProps) {
 
             {innerWidth < 610 ? (
                 <div className={"d-flex flex-column align-content-center align-items-center  justify-content-evenly my-5"}>
-                    <h2 className="text-center display-6 my-5">Galería</h2>
+                    <h2 className="text-center display-6 pt-5    my-5 my-5">Galería</h2>
                     <Carousel className={"bg-transparent"}>
                         {images.map((image, index) => (
                             <Carousel.Item key={index}>
@@ -104,7 +104,7 @@ export default function AreaTemplate(props: AreaProps) {
             {/* <DividerFirstComponent /> */}
             {showDesarrollos &&
                 <section className="colour-block py-5 ">
-                    <h2 className="text-center display-6 my-5">Propiedades en el Área</h2>
+                    <h2 className="text-center display-6 pt-5    my-5 my-5">Propiedades en el Área</h2>
                     <MDBRow>
 
 

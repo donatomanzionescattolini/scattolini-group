@@ -23,24 +23,24 @@ export default function AstonMartin() {
         edificio: (
             <ul className="list-unstyled">
                 <li>
-                    <b>Ubicación:</b> 300 Biscayne Boulevard Way
+                    <dt>Ubicación:</dt> 300 Biscayne Boulevard Way
                 </li>
 
                 <li>
-                    <b>Número de residencias:</b> 391 Residencias en Condominio
+                    <dt>Número de residencias:</dt> 391 Residencias en Condominio
                 </li>
 
                 <li>
-                    <b>Número de pisos:</b> 66 Pisos
+                    <dt>Número de pisos:</dt> 66 Pisos
                 </li>
 
                 <li>
-                    <b>Dormitorios por residencia:</b> Residencias de 1-5 dormitorios,
+                    <dt>Dormitorios por residencia:</dt> Residencias de 1-5 dormitorios,
                     dúplex, áticos y áticos triples
                 </li>
 
                 <li>
-                    <b>Clasificación de residencias:</b>
+                    <dt>Clasificación de residencias:</dt>
 
                     <ul>
                         <li>Niveles 3-14: River Residences</li>

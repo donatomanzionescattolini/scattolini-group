@@ -1,5 +1,6 @@
+@use "sass:color";
+$color: #000;
 @import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap');
-
 $darkblue: #0e2d2f;
 $lightblue: #1f595a;
 $brown: #8a6944;
@@ -9,15 +10,15 @@ $secondBackground: rgb(251, 251, 251);
 $white: #fff;
 $black: #000;
 
-$black-10: darken(#fff, 10%);
-$black-20: darken(#fff, 20%);
-$black-30: darken(#fff, 30%);
-$black-40: darken(#fff, 40%);
-$black-50: darken(#fff, 50%);
-$black-60: darken(#fff, 60%);
-$black-70: darken(#fff, 70%);
-$black-80: darken(#fff, 80%);
-$black-90: darken(#fff, 90%);
+$black-10: color.scale($color, $lightness: 10%);
+$black-20: color.scale($color, $lightness: 20%);
+$black-30: color.scale($color, $lightness: 30%);
+$black-40: color.scale($color, $lightness: 40%);
+$black-50: color.scale($color, $lightness: 50%);
+$black-60: color.scale($color, $lightness: 60%);
+$black-70: color.scale($color, $lightness: 70%);
+$black-80: color.scale($color, $lightness: 80%);
+$black-90: color.scale($color, $lightness: 90%);
 
 #root {
   overflow-x: hidden !important;
@@ -554,7 +555,7 @@ hr {
       left: 50%;
       margin: 0 0 0 -3px;
       line-height: 0;
-      text-shadow: 0 0 3px lighten($black-20, 5%);
+      text-shadow: 0 0 3px color.scale($black-20, $lightness: 5%);
     }
   }
 }
@@ -598,6 +599,9 @@ hr {
   background: none;
   border: solid thin $brown;
   color: $brown;
+}
+section *.display-6 pt-5    my-5 {
+  margin-top:5rem!important;
 }
 
 .navbar-toggle {
@@ -784,6 +788,10 @@ section.Servicios p {
   width: 100%;
   height: 500px;
   overflow: hidden;
+}
+
+iframe {
+  min-height:30rem;
 }
 
 .propiedades-img {
@@ -1322,12 +1330,21 @@ html, body {
 .bg-darkblue {
   background: $darkblue !Important;
 }
-
-
-button.accordion-button {
-  background-color: $secondBackground !important;
-  font-family: "the-seasons", sans-serif;
-  font-weight: 300;
-  font-size: x-large;
+.accordion {
+  background:transparent;
 }
+.accordion-flush .accordion-button:focus {
+  background:$background !important;
+  color:$brown !Important;
+}
+button.accordion-button {
+  background:$secondBackground !important;
 
+  font-family: "the-seasons", sans-serif;
+  font-size:inherit;
+}
+.accordion-body * {
+  text-indent: 1rem!important;
+  list-style-position: inside;
+  margin-bottom:1rem!important;
+}

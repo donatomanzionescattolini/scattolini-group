@@ -314,7 +314,7 @@
 //                         </MDBTabsItem>
 //                     </MDBTabs>
 //                     {/*{tabVisible === "none" &&*/}
-//                     {/*    (<><h1 className="display-6 text-center"><small className={"text-muted "}>Aprenda mas sobre este maravilloso proyecto!</small></h1>*/}
+//                     {/*    (<><h1 className="display-6 pt-5    my-5 text-center"><small className={"text-muted "}>Aprenda mas sobre este maravilloso proyecto!</small></h1>*/}
 //                     {/*    <br></br>*/}
 //                     {/*    <h1 className="display-3 text-center">Selecciona una de las fichas en la esquina izquierda de esta seccion </h1></>)*/}
 //                     {/*}*/}

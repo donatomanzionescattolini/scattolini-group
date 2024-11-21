@@ -50,7 +50,7 @@ export default function ElleResidences() {
                 esfuerzo. No es solo un apartamento tipo piso. ELLE es su salón, cafetería, club de piscina, área de
                 juegos y mucho más.</p>
                 <ul>
-                    <b>El vestíbulo</b>
+                    <dt>El vestíbulo</dt>
                     <li>Gran vestíbulo de doble altura</li>
                     <li>Servicios de check-in de huéspedes</li>
                     <li>Servicio de aparcacoches</li>
@@ -62,7 +62,7 @@ export default function ElleResidences() {
                     <li>Tiendas minoristas boutique</li>
                     <li>Casa de bicicletas y almacenamiento de bicicletas</li>
                     <li>WiFi de alta velocidad</li>
-                    <b>La Terraza</b>
+                    <dt>La Terraza</dt>
                     <li>Terraza estilo resort inspirada en la Riviera Francesa</li>
                     <li>Piscina del complejo con exposición de norte a sur.</li>
                     <li>Cabañas privadas y tumbonas</li>
@@ -73,7 +73,7 @@ export default function ElleResidences() {
                     <li>Gimnasio al aire libre y área de yoga con jardín de meditación, spa y piscina de agua fría</li>
                     <li>Spa con sauna, baño de vapor, ducha de sensaciones y pared de sal.</li>
                     <li>Sala privada para tratamientos de salón y bienestar.</li>
-                    <b>La Azotea de Sommet</b>
+                    <dt>La Azotea de Sommet</dt>
                     <li>Piscina del complejo con vistas despejadas al norte, este y oeste.</li>
                     <li>Terraza solárium con cabañas privadas</li>
                     <li>Club de residentes con biblioteca, sala de escucha, salón con bar y espacio de

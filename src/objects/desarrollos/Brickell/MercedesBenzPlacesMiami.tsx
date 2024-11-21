@@ -17,14 +17,14 @@ export default function MercedesBenzPlacesMiami() {
         </>,
         residencias: <>
             <ul>
-                <b><big>Interiores</big></b>
+                <dt><big>Interiores</big></dt>
                 <li> Ventanas de piso a techo de hasta 10'</li>
                 <li> Terrazas de 5' de profundidad</li>
                 <li> Pisos de madera de nogal diseñados en todas partes</li>
                 <li> Lavadora y secadora Miele</li>
                 <li> Luminarias personalizadas en acabado cromado</li>
                 <li> Tecnología integrada en el hogar</li>
-                <b>Cocina</b>
+                <dt>Cocina</dt>
                 <li> Cocinas diseñadas a medida por Woods Bagot que cuentan con zócalos y rejillas de cromo pulido e
                     iluminación oculta debajo de los gabinetes.
                 </li>
@@ -37,7 +37,7 @@ export default function MercedesBenzPlacesMiami() {
                 <li> Conjunto totalmente integrado de electrodomésticos Miele que incluye: refrigerador, placa de
                     inducción, horno de convección, lavavajillas, refrigerador para vinos* y horno rápido
                 </li>
-                <b>Bano Principal</b>
+                <dt>Bano Principal</dt>
                 <li> Ducha de mármol Nero Marquina o Bianco Gioia con cabezal de ducha de lluvia totalmente integrado,
                     repisa de mármol Bianco Gioia iluminada y puertas de vidrio estriado
                 </li>

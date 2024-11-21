@@ -3,7 +3,7 @@ export function AboutUs() {
         <>
             <h2
                 style={{textIndent: "20px", marginBottom: `4%!important`}}
-                className=" text-center pt-0 mt-0 display-6 justify"
+                className=" text-center pt-0 mt-0 display-6 pt-5    my-5 justify"
             >
 
 

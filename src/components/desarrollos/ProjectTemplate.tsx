@@ -3,7 +3,7 @@ import SlideshowGalleryDesarrollo from "./SlideshowGalleryDesarrollo";
 import "@material/banner/dist/mdc.banner.min.css";
 
 import * as React from "react";
-import {JSX, ReactNode, useLayoutEffect, useState} from "react";
+import { JSX, ReactNode, useLayoutEffect, useState } from "react";
 import {
     MDBAccordion,
     MDBAccordionItem,
@@ -16,11 +16,11 @@ import {
     MDBTabsLink,
     MDBTabsPane,
 } from "mdb-react-ui-kit";
-import {Link} from "react-router-dom";
-import {caracteristicas, ProjectParams,} from "../../models/desarrollos/ProjectParams.tsx";
+import { Link } from "react-router-dom";
+import { caracteristicas, ProjectParams, } from "../../models/desarrollos/ProjectParams.tsx";
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
-import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
+import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
     const params = paramz.desarrollo;
@@ -85,7 +85,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 jumbotron
                 id={"banner"}
                 className="py-0 my-0 overflow-y-hidden   object-fit-cover"
-                style={{height: "300px"}}
+                style={{ height: "300px" }}
             >
                 <header
                     className="mdc-banner d-flex row flex-nowrap   justify-content-center h-100 m-0 p-0 responsive overflow-hidden">
@@ -103,18 +103,18 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                             }}
                         />
                     )) || (banner && <div
-                            id="banner"
-                            className="p-0 m-0 well"
-                            autoFocus
-                            style={{
-                                backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
-                                backgroundSize: "cover",
-                                backgroundRepeat: "no-repeat",
-                                backgroundPosition: "center",
+                        id="banner"
+                        className="p-0 m-0 well"
+                        autoFocus
+                        style={{
+                            backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
+                            backgroundSize: "cover",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center",
 
-                            }}
-                        />
-                    )}
+                        }}
+                    />
+                        )}
                     {!banner && (
                         <>
                             <div
@@ -153,87 +153,77 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             <div className="skew-c"></div>
             <section className="white-block py-5  mt-5">
 
-            <MDBContainer fluid className="container-fluid text-center "><h1 className="display-4">{titulo}</h1>                 <hr className="hr hr-blurry w-50 mx-auto"/>
-            <h5
-                    className="subtitle text-lead w-75 mx-auto my-0 py-0  fs-4"><i>{subtitulo}</i></h5></MDBContainer>
+                <MDBContainer fluid className="container-fluid text-center "><h1 className="display-4">{titulo}</h1>                 <hr className="hr hr-blurry w-50 mx-auto" />
+                    <h5
+                        className="subtitle text-lead w-75 mx-auto my-0 py-0  fs-4"><i>{subtitulo}</i></h5></MDBContainer>
 
                 <MDBRow className={"row w-75 mx-auto mt-5 bg-transparent py-5"}>
                     <MDBCol xs={12} sm={12} md={6} lg={6} xl={6}
-                            className={"align-content-center justify-content-center"}>
+                        className={"align-content-center justify-content-center"}>
                         {(introduccion as Array<string>).map((par: string) =>
                             <p className={""}>{par}</p>)
                         }
                     </MDBCol>
 
                     <MDBCol xs={12} sm={12} md={6} lg={6} xl={6} className={"p-md-5 p-sm-2"}>
-                        <img alt ={area.name}src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${nombre}.webp`}
-                             className={"img-fluid "}/>
+                        <img alt={area.name} src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${nombre}.webp`}
+                            className={"img-fluid "} />
                     </MDBCol>
                 </MDBRow>
 
             </section>
             <div className="skew-cc"></div>
             <section className="colour-block p-auto">
-                {typeof video !== "string" || !video ? (
+                {typeof video !== "string" && video ? (
                     video
                 ) : (
-                    <video
-                        width="100%"
-                        height="auto"
-                        controls
-                        autoPlay
-                        autoFocus={true}
-                        className={
-                            "m-auto p-auto"
-                        }
-                    >
-                        {video}
-                        <source
-                            src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}
-                            type="video/mp4"
-                            className="m-auto p-auto"
-                        />
-                    </video>
+                    <div className="embed-responsive">
+                        <iframe width="100%" height="auto" title={nombre + " video"} className="embed-responsive-item" src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}>
+                        </iframe>
+                    </div>
                 )}
-            </section>
+            </section >
             <div className="skew-c"></div>
             <section className="white-block py-5  ">
                 <MDBContainer fluid small responsive centered>
                     <br></br>
-                    <br/>
+                    <br />
                     <div>
-                        <h4 className="text-center display-6 title">Características</h4>
+                        <h4 className="text-center display-6 pt-5    my-5 title">Características</h4>
                     </div>
-                    <hr className="hr hr-blurry w-50 mx-auto"/>
+                    <hr className="hr hr-blurry w-50 mx-auto" />
 
                     <MDBAccordion id="accordion" className="m-5 w-fit-content " flush>
                         <MDBAccordionItem
                             collapseId={1}
+                            headerClassName="fs-5" 
                             headerTitle="Edificio"
 
                             aria-controls="panel1a-content"
                             id="panel1a-header"
-                            className={"text-center "}
+                            className={"fs-5 w-75 m-auto"}
                         >
                             {CaracteristicasEdificio}
                         </MDBAccordionItem>
 
                         <MDBAccordionItem
                             collapseId={2}
+                            headerClassName="fs-5" 
                             headerTitle="Residencias"
                             aria-controls="panel2a-content"
                             id="panel2a-header"
-                            className={"text-center"}
+className={"fs-5 w-75 m-auto"}
                         >
                             {CaracteristicasResidencias}
                         </MDBAccordionItem>
 
                         <MDBAccordionItem
                             collapseId={3}
+                            headerClassName="fs-5"     
                             headerTitle="Amenidades"
                             aria-controls="panel3a-content"
                             id="panel3a-header"
-                            className={"text-center"}
+className={"fs-5 w-75 m-auto"}
                         >
                             {CaracteristicasAmenidades as JSX.Element}
                         </MDBAccordionItem>
@@ -246,9 +236,9 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                     <br></br>
                     <br></br>
                     <div>
-                        <h4 className="text-center title display-6">Galería Fotográfica</h4>
+                        <h4 className="text-center title display-6 pt-5    my-5">Galería Fotográfica</h4>
                     </div>
-                    <hr className="hr hr-blurry w-50 mx-auto"/>
+                    <hr className="hr hr-blurry w-50 mx-auto" />
 
                     <br></br>
 
@@ -275,50 +265,47 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         ></iframe> */}
             {/* </div> */}
             <section className="white-block py-5  embed-responsive">
-                    <br></br>
-                    <br></br>
-                    <div>
-                        <h4 className="text-center mb-1 display-6" >Documentos De Interés</h4>
-                    </div>
-                    <hr className="hr hr-blurry w-50 mx-auto"/>
+                <br></br>
+                <br></br>
+                <div>
+                    <h4 className="text-center mb-1 display-6 pt-5    my-5" >Documentos De Interés</h4>
+                </div>
+                <hr className="hr hr-blurry w-50 mx-auto" />
 
-                    <br></br>
-                    <MDBTabs fill>
-                        <MDBTabsItem className={"text-md-center display-6"}
-                                     style={{color: "#2b2a2e!importsant"}}
-                                     title="Brochure"
+                <br></br>
+                <MDBTabs fill>
+                    <MDBTabsItem className={" "}
+                        title="Brochure"
+                    >
+                        <MDBTabsLink className="fs-5" onClick={() => openTab("brochure")} href="#docs">
+                            {" "}
+                            Brochure
+                        </MDBTabsLink>
+                    </MDBTabsItem>
+                    <MDBTabsItem className={""}>
+                        <MDBTabsLink className="fs-5" 
+                            onClick={() => openTab("hoja")}
+                            href="#docs"
                         >
-                            <MDBTabsLink className={"fs-5"} onClick={() => openTab("brochure")} href="#docs">
-                                {" "}
-                                Brochure
-                            </MDBTabsLink>
-                        </MDBTabsItem>
-                        <MDBTabsItem className={"text-md-center"}>
-                            <MDBTabsLink className={"fs-5"}
-                                         style={{color: "#2b2a2e!important"}}
-                                         onClick={() => openTab("hoja")}
-                                         href="#docs"
-                            >
-                                Hoja Informativa
-                            </MDBTabsLink>
-                        </MDBTabsItem>
-                        <MDBTabsItem className={"text-md-center"}>
-                            <MDBTabsLink className={"fs-5"}
-                                         style={{color: "#2b2a2e!important"}}
-                                         aria-keyshortcuts=""
-                                         href="#docs"
-                                         onClick={() => openTab("planos")}
-                            >
-                                Planos
-                            </MDBTabsLink>
-                        </MDBTabsItem>
-                    </MDBTabs>
-                    {/*{tabVisible === "none" &&*/}
-                    {/*    (<><h1 className="display-6 text-center"><small className={"text-muted "}>Aprenda mas sobre este maravilloso proyecto!</small></h1>*/}
-                    {/*    <br></br>*/}
-                    {/*    <h1 className="display-3 text-center">Selecciona una de las fichas en la esquina izquierda de esta seccion </h1></>)*/}
-                    {/*}*/}
-                    {/* {(tabVisible === "brochure" ||
+                            Hoja Informativa
+                        </MDBTabsLink>
+                    </MDBTabsItem>
+                    <MDBTabsItem className={""}>
+                        <MDBTabsLink className="fs-5" 
+                            aria-keyshortcuts=""
+                            href="#docs"
+                            onClick={() => openTab("planos")}
+                        >
+                            Planos
+                        </MDBTabsLink>
+                    </MDBTabsItem>
+                </MDBTabs>
+                {/*{tabVisible === "none" &&*/}
+                {/*    (<><h1 className="display-6 pt-5    my-5 text-center"><small className={"text-muted "}>Aprenda mas sobre este maravilloso proyecto!</small></h1>*/}
+                {/*    <br></br>*/}
+                {/*    <h1 className="display-3 text-center">Selecciona una de las fichas en la esquina izquierda de esta seccion </h1></>)*/}
+                {/*}*/}
+                {/* {(tabVisible === "brochure" ||
             tabVisible === "hoja" ||
             tabVisible === "planos") && (
             <object
@@ -326,112 +313,112 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               //   {/* const file =
               //   fs.readFileSync(path.resolve("public/assets/Bonus_1.pdf")).toString("base64"); */}
 
-                    {/* <PDFV
+                {/* <PDFV
               //     url={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
 
         {/* <embed
               //     src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
               //     width="800px"
               //     height="2100px" */}
-                    {/* //   /> */}
-                    {/* // </object> */}
-                    {/* data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                {/* //   /> */}
+                {/* // </object> */}
+                {/* data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
               style={{ width: "100%", height: 500 }}
             > */}
-                    <MDBTabsContent>
-                        <MDBTabsPane show={tabVisible === "brochure"}>
-                            <object
-                                data={innerWidth > 768 ? pdfUrl : ""}
-                                type="application/pdf"
-                                width="100%"
-                                height="500px"
+                <MDBTabsContent>
+                    <MDBTabsPane show={tabVisible === "brochure"}>
+                        <object
+                            data={innerWidth > 768 ? pdfUrl : ""}
+                            type="application/pdf"
+                            width="100%"
+                            height="500px"
+                        >
+                            <big>
+                                <p>
+                                    No se puede mostrar el archivo PDF.{" "}
+                                    <Link
+                                        target="_blank"
+                                        className="text-decoration-underline"
+                                        download
+                                        to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                    >
+                                        Descárgalo
+                                    </Link>{" "}
+                                    en vez.
+                                </p>
+                            </big>
+                        </object>
+                    </MDBTabsPane>
+                    <MDBTabsPane show={tabVisible === "hoja"}>
+                        <object
+                            data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                            type="application/pdf"
+                            width="100%"
+                            height="500px"
+                        >
+                            <big>
+                                <p>
+                                    No se puede mostrar el archivo PDF.{" "}
+                                    <Link
+                                        target="_blank"
+                                        className="text-decoration-underline"
+                                        download
+                                        to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                    >
+                                        Descárgalo
+                                    </Link>{" "}
+                                    en vez.
+                                </p>
+                            </big>
+                        </object>
+                    </MDBTabsPane>
+                    <MDBTabsPane show={tabVisible === "planos"}>
+                        <object
+                            data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                            type="application/pdf"
+                            width="100%"
+                            height="500px"
+                        >
+                            <big>
+                                <p>
+                                    No se puede mostrar el archivo PDF.{" "}
+                                    <Link
+                                        target="_blank"
+                                        className="text-decoration-underline"
+                                        download
+                                        to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                    >
+                                        Descárgalo
+                                    </Link>{" "}
+                                    en vez.
+                                </p>
+                            </big>
+                        </object>
+                    </MDBTabsPane>
+                    <MDBTabsPane show>
+                        <div className="d-flex justify-content-center font-size-lg">
+                            <Link
+                                className="btn btn-outline-secondary btn-small"
+                                type="button"
+                                target="#top"
+                                to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
+                                download
                             >
-                                <big>
-                                    <p>
-                                        No se puede mostrar el archivo PDF.{" "}
-                                        <Link
-                                            target="_blank"
-                                            className="text-decoration-underline"
-                                            download
-                                            to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-                                        >
-                                            Descárgalo
-                                        </Link>{" "}
-                                        en vez.
-                                    </p>
-                                </big>
-                            </object>
-                        </MDBTabsPane>
-                        <MDBTabsPane show={tabVisible === "hoja"}>
-                            <object
-                                data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-                                type="application/pdf"
-                                width="100%"
-                                height="500px"
-                            >
-                                <big>
-                                    <p>
-                                        No se puede mostrar el archivo PDF.{" "}
-                                        <Link
-                                            target="_blank"
-                                            className="text-decoration-underline"
-                                            download
-                                            to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-                                        >
-                                            Descárgalo
-                                        </Link>{" "}
-                                        en vez.
-                                    </p>
-                                </big>
-                            </object>
-                        </MDBTabsPane>
-                        <MDBTabsPane show={tabVisible === "planos"}>
-                            <object
-                                data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-                                type="application/pdf"
-                                width="100%"
-                                height="500px"
-                            >
-                                <big>
-                                    <p>
-                                        No se puede mostrar el archivo PDF.{" "}
-                                        <Link
-                                            target="_blank"
-                                            className="text-decoration-underline"
-                                            download
-                                            to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-                                        >
-                                            Descárgalo
-                                        </Link>{" "}
-                                        en vez.
-                                    </p>
-                                </big>
-                            </object>
-                        </MDBTabsPane>
-                        <MDBTabsPane show>
-                            <div className="d-flex justify-content-center font-size-lg">
-                                <Link
-                                    className="btn btn-outline-secondary btn-small"
-                                    type="button"
-                                    target="#top"
-                                    to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-                                    download
-                                >
-                                    Descargar
-                                </Link>
-                            </div>
-                        </MDBTabsPane>
-                    </MDBTabsContent>
+                                Descargar
+                            </Link>
+                        </div>
+                    </MDBTabsPane>
+                </MDBTabsContent>
             </section>
             <div className="skew-cc"></div>
             <section className="colour-block py-5  ">
                 <>
-                    <br/>
+                    <br />
                     <br></br>
                     <div>
-                        <h4 className="text-center my-1 display-6">Propiedades en el Área</h4>
+                        <h4 className="text-center my-1 display-6 pt-5    my-5">Propiedades en el Área</h4>
                     </div>
-                    <hr className="hr hr-blurry w-50 mx-auto"/>
+                    <hr className="hr hr-blurry w-50 mx-auto" />
 
                     <br></br>
                     {/*<MDBRow className="d-flex flex-row flex-wrap justify-content-between mt-3 mx-auto">*/}
@@ -453,7 +440,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                         {[...desarrollosArea.values()].map((desarrollo) => {
                             return (
                                 <MDBCol key={[...desarrollosArea.values()].indexOf(desarrollo)} xs={12} sm={12} md={6}
-                                        lg={4} xl={4}>
+                                    lg={4} xl={4}>
                                     <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                                         <div
                                             className="propiedades-img p-0 m-0"
@@ -490,13 +477,13 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             </section>
             <div className="skew-c"></div>
             <section className="white-block py-5  ">
-                <AreasComponent/>
+                <AreasComponent />
             </section>
             <div className="skew-cc"></div>
             <section className="colour-block py-5  ">
                 {innerWidth <= 768 && (
                     <MDBContainer>
-                        <ContactFormComponent projectName={titulo as string}/>
+                        <ContactFormComponent projectName={titulo as string} />
                     </MDBContainer>
                 )}
                 {innerWidth > 768 && (
@@ -504,7 +491,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                         fluid
                         className="d-flex justify-content-center w-100 p-0 m-0"
                     >
-                        <ContactFormComponent projectName={titulo as string}/>
+                        <ContactFormComponent projectName={titulo as string} />
                     </MDBContainer>
                 )}
             </section>

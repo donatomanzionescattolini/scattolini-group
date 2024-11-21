@@ -42,7 +42,7 @@ const SlideshowGallery = (props: PropsSlideshow) => {
                         }}
                     >
                         <Carousel.Caption>
-                            <h3 className="display-6 font-weight-bold">
+                            <h3 className="display-6 pt-5    my-5 font-weight-bold">
                                 {x.nombre
                                     .split("-")
                                     .map(
