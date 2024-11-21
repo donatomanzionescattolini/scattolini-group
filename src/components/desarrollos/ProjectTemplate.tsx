@@ -177,8 +177,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 {typeof video !== "string" && video ? (
                     video
                 ) : (
-                    <div className="video-container">
-                        <video  title={nombre + " video"} className="embed-responsive-item" src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}>
+                    <div className="embed-responsive">
+                        <video  className="embed-responsive-item" src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4?autoplay=1&controls=1`}>
                         </video>
                     </div>
                 )}

@@ -22,8 +22,8 @@ $black-90: color.scale($color, $lightness: 90%);
 
 #root {
   overflow-x: hidden !important;
-  max-width: 1500px !important;
-  margin: auto !important;
+  //max-width: 1500px !important;
+  //margin: auto !important;
 }
 
 
@@ -277,7 +277,7 @@ main>section.city-firstsection {
 }
 
 #root>main>section.city-firstsection.w-100.row>div.row.d-flex.align-items-center.justify-content-around>div.col-xs-12.col-sm-12.col-md-4.col-lg-4 {
-  padding: 0% important;
+  padding: 0% !important;
   justify-content: center;
 }
 
@@ -669,10 +669,11 @@ main {
   margin: 0;
 }
 
-body,
+
 html {
   margin: 0;
   padding: 0;
+  background: $background!important;
 }
 
 section {
@@ -959,6 +960,7 @@ div.react-pdf__Page .annotationLayer {
 #banner {
   width: 100%;
   background-position: center;
+  height:35vh!important;
 }
 
 #propiedades-en-area a:hover {
@@ -1023,7 +1025,7 @@ p {
   width: 100%;
   height: 100px;
   position: absolute;
-  max-width: 1500px !Important;
+  //max-width: 1500px !Important;
 
   left: auto;
   right: auto;
@@ -1039,7 +1041,7 @@ p {
 .skew-c {
   width: 100%;
   height: 100px;
-  max-width: 1500px !Important;
+  //max-width: 1500px !Important;
   position: absolute;
   margin-top: 0;
   padding-top: 0;
