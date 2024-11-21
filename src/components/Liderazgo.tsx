@@ -11,7 +11,7 @@ export default function Liderazgo() {
                 xl={6}
                 className="justify-content-center p-5 text-center"
             >
-                <img
+                <img className="img-fluid" 
                     src={"https://pagina-mama.s3.amazonaws.com/assets2/elda/elda.jpg"}
                     alt="Elda"
                     className="w-50 m-auto img-thumbnail"

@@ -11,7 +11,7 @@ export default function Equipo() {
         >
             <div className="page-header">
 
-                <h1 className="text-center mt-5 display-6 pt-5    my-5">Asociados</h1>
+                <h1 className="text-center mt-5 display-6 ">Asociados</h1>
                 <hr className="hr hr-blurry w-50 mx-auto mb-5"/>
             </div>
             <div className="row active-with-click">
@@ -27,7 +27,7 @@ export default function Equipo() {
                             </h2>
                             <div className="mc-content">
                                 <div className="img-container w-80 h-100 mx-auto p-n-5">
-                                    <img
+                                    <img className="img-fluid" 
 
 
                                         className="img-fluid object-fit-cover w-100 m-0 p-0  h-100"

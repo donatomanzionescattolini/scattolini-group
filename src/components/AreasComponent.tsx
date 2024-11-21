@@ -1,7 +1,7 @@
-import {MDBCol, MDBContainer, MDBRow} from "mdb-react-ui-kit";
+import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import React from "react";
 
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Areas from "../objects/areas/Areas.tsx";
 
 const AreasComponent = function (): React.JSX.Element {
@@ -29,18 +29,18 @@ const AreasComponent = function (): React.JSX.Element {
     // );
     return (
         <>
-            <br/>
+            <br />
             <br></br>
             <div>
-                <h3 className="text-center mb-1 display-6 pt-5    my-5">Otras Áreas</h3>
+                <h3 className="text-center mb-1 display-6">Otras Áreas</h3>
             </div>
-            <hr className="hr hr-blurry w-50 mx-auto"/>
+            <hr className="hr hr-blurry w-50 mx-auto" />
 
             <br></br>
             <MDBRow>
                 {Areas().map((area) => {
                     return (
-                        <MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
+                        <MDBCol key={Areas().indexOf(area)+1} xs={12} sm={12} md={6} lg={4} xl={4}>
                             <Link to={`/areas/${area.name}/`}>
                                 <div
                                     className="propiedades-img p-0 m-0 w-100"

@@ -43,7 +43,7 @@ export default function SlideshowGalleryDesarrollo2(props: Props) {
                         height={500}
                         srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).webp`}
                     />
-                    <img
+                    <img className="img-fluid" 
                         autoFocus
                         height={500}
                         src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).jpg`}

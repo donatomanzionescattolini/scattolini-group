@@ -167,7 +167,7 @@
 //                                 </p>
 //                             </>
 //                         ))}
-//                         <img src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/thumbnail.webp/`}
+//                         <img className="img-fluid"  src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/thumbnail.webp/`}
 //                              className={"w-100 float-md-end"}/>
 //                     </div>
 //                 </MDBContainer>

@@ -28,7 +28,12 @@ $black-90: color.scale($color, $lightness: 90%);
 
 
 h1,
-h2, p, h5, h6, h3, h4 {
+h2,
+p,
+h5,
+h6,
+h3,
+h4 {
   font-family: "the-seasons", sans-serif;
   font-weight: lighter;
   letter-spacing: calc(add(normal, normal));
@@ -37,7 +42,9 @@ h2, p, h5, h6, h3, h4 {
 }
 
 
-a, .card-link, .card-title {
+a,
+.card-link,
+.card-title {
   color: $lightblue !important;
 }
 
@@ -63,7 +70,7 @@ a, .card-link, .card-title {
   font-weight: 900 ;
 } */
 
-#divider > div {
+#divider>div {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -74,7 +81,7 @@ a, .card-link, .card-title {
   margin-block-start: 5rem;
 }
 
-Home > div.container-fluid.row.divider > div:nth-child(3) {
+Home>div.container-fluid.row.divider>div:nth-child(3) {
   background-position: 10% 29%;
 }
 
@@ -99,7 +106,8 @@ main {
 }
 
 
-#root > section > div > div > h3, #root > section:nth-child(5) > div > p {
+#root>section>div>div>h3,
+#root>section:nth-child(5)>div>p {
   box-sizing: inherit;
   letter-spacing: normal;
   text-transform: none;
@@ -121,7 +129,8 @@ main {
 .video-container {
   position: relative;
   width: 100%;
-  height: 500px; /* Adjust as needed */
+  height: 500px;
+  /* Adjust as needed */
   overflow: hidden;
 }
 
@@ -151,7 +160,8 @@ main {
   width: 100%;
   height: 100%;
   background-color: #2b2a2e;
-  opacity: 0.5; /* Adjust the opacity as needed (0.0 to 1.0) */
+  opacity: 0.5;
+  /* Adjust the opacity as needed (0.0 to 1.0) */
 }
 
 #buttoncard {
@@ -180,11 +190,12 @@ main {
 
 nav {
   background: $background;
-  color: #84705c; /* background: #1b3433  ;  color: $background  ;  color: #AC9474 ; */
+  color: #84705c;
+  /* background: #1b3433  ;  color: $background  ;  color: #AC9474 ; */
 }
 
-#navbarNavDropdown > ul > li a:hover,
-#navbarNavDropdown > ul > li:hover,
+#navbarNavDropdown>ul>li a:hover,
+#navbarNavDropdown>ul>li:hover,
 .dropdown-item:hover {
   //background: #1b3433!important;
   color: $brown !important;
@@ -247,7 +258,7 @@ section.Servicios p {
   background-position-x: center;
 }
 
-main > section.city-firstsection {
+main>section.city-firstsection {
   line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
@@ -262,14 +273,10 @@ main > section.city-firstsection {
   width: 100%;
   padding: 0;
   margin: 0;
-  
+
 }
 
-#root
-> main
-> section.city-firstsection.w-100.row
-> div.row.d-flex.align-items-center.justify-content-around
-> div.col-xs-12.col-sm-12.col-md-4.col-lg-4 {
+#root>main>section.city-firstsection.w-100.row>div.row.d-flex.align-items-center.justify-content-around>div.col-xs-12.col-sm-12.col-md-4.col-lg-4 {
   padding: 0% important;
   justify-content: center;
 }
@@ -334,7 +341,7 @@ main > section.city-firstsection {
   padding: 10px;
 }
 
-section.city-banner > div:nth-child(1) {
+section.city-banner>div:nth-child(1) {
   padding: 5rem;
   margin: 0;
 }
@@ -379,7 +386,7 @@ section.city-firstcarousel {
   padding: 0;
 }
 
-.divider-second > div {
+.divider-second>div {
   line-height: 1.5;
 
   -webkit-tap-highlight-color: transparent;
@@ -457,14 +464,17 @@ main {
 }
 
 @keyframes octocat-wave {
+
   0%,
   100% {
     transform: rotate(0);
   }
+
   20%,
   60% {
     transform: rotate(-25deg);
   }
+
   40%,
   80% {
     transform: rotate(10deg);
@@ -475,6 +485,7 @@ main {
   .github-corner:hover .octo-arm {
     animation: none;
   }
+
   .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
   }
@@ -519,8 +530,10 @@ hr {
       left: 50%;
       margin: 0 0 0 -3px;
       transform: rotate(45deg);
-      -ms-transform: rotate(45deg); /* IE 9 */
-      -webkit-transform: rotate(45deg); /* Opera, Chrome, and Safari */
+      -ms-transform: rotate(45deg);
+      /* IE 9 */
+      -webkit-transform: rotate(45deg);
+      /* Opera, Chrome, and Safari */
       transform: rotate(45deg);
 
     }
@@ -578,7 +591,8 @@ hr {
   width: 100%;
   height: 100%;
   background-color: #2b2a2e;
-  opacity: 0.5; /* Adjust the opacity as needed (0.0 to 1.0) */
+  opacity: 0.5;
+  /* Adjust the opacity as needed (0.0 to 1.0) */
 }
 
 .card {
@@ -600,8 +614,9 @@ hr {
   border: solid thin $brown;
   color: $brown;
 }
-section *.display-6 pt-5    my-5 {
-  margin-top:5rem!important;
+
+section *.display-6 pt-5 my-5 {
+  margin-top: 5rem !important;
 }
 
 .navbar-toggle {
@@ -692,7 +707,8 @@ nav ul ul {
 
 .navbar {
   background: $background;
-  color: #84705c; /* background: #1b3433  ;  color: $background  ;  color: #AC9474 ; */
+  color: #84705c;
+  /* background: #1b3433  ;  color: $background  ;  color: #AC9474 ; */
   display: flex !important;
   flex-direction: row !important;
   align-items: center;
@@ -709,7 +725,7 @@ nav ul ul {
   padding: 0;
 }
 
-.navbar-nav > * {
+.navbar-nav>* {
   margin-inline: 15px;
 }
 
@@ -723,7 +739,8 @@ nav ul ul {
     margin: 0;
     padding: 0;
   }
-  #root > div > main > section.city-firstcarousel {
+
+  #root>div>main>section.city-firstcarousel {
     display: none !important;
   }
 }
@@ -741,7 +758,7 @@ section.Servicios p {
 }
 
 @media screen and (min-width: 768px) {
-  main > section.city-firstsection {
+  main>section.city-firstsection {
     font-family: "Cormorant Garamond", serif;
     color: $brown;
 
@@ -761,10 +778,7 @@ section.Servicios p {
   max-width: 100% !important;
 }
 
-#root
-> main
-> section.city-firstsection.w-100.row
-> div.row.d-flex.align-items-center.justify-content-around {
+#root>main>section.city-firstsection.w-100.row>div.row.d-flex.align-items-center.justify-content-around {
   margin: 0;
 }
 
@@ -772,8 +786,8 @@ section.Servicios p {
   margin: 0% 10%;
   padding: 0;
   flex-grow: calc(30% - 100%);
-  text-indent: 2em;
-  text-align: justify;
+  text-indent: 1rem;
+  text-align: unset;
   line-height: 1.5;
 }
 
@@ -791,7 +805,7 @@ section.Servicios p {
 }
 
 iframe {
-  min-height:30rem;
+  min-height: 30rem;
 }
 
 .propiedades-img {
@@ -874,12 +888,7 @@ iframe {
   margin: auto;
 }
 
-#root
-> div
-> main
-> div
-> div.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xl-6.p-4
-> h4 {
+#root>div>main>div>div.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xl-6.p-4>h4 {
   margin-top: 10%;
 }
 
@@ -942,7 +951,7 @@ div.react-pdf__Page .annotationLayer {
   right: 30vw;
 } */
 
-#root > div > main > div.video-container > div.content.text-center.w-100 > a {
+#root>div>main>div.video-container>div.content.text-center.w-100>a {
   background-color: #2b2a2e;
   color: $background;
 }
@@ -992,19 +1001,19 @@ body {
 }
 
 p {
-  text-align: justify;
-  text-indent: 2rem;
-  font-weight: normal;
-  font-family: "tt-commons-pro", sans-serif;
-  font-weight: 200;
-  
+  text-align: unset;
+  text-indent: 1rem;
+  font-family: "tt-commons-pro-thin", sans-serif;
+
 }
 
-.nav-link, .dropdown-item, .navbar-toggler {
+.nav-link,
+.dropdown-item,
+.navbar-toggler {
   font-family: "tt-commons-pro", sans-serif;
   font-weight: 100 !important;
   font-style: normal;
-  
+
 }
 
 /*------------------*/
@@ -1018,12 +1027,10 @@ p {
 
   left: auto;
   right: auto;
-  background: linear-gradient(
-                  to right bottom,
-                  $secondBackground 49%,
-                  $background 50%
-  ),
-  linear-gradient(-50deg, $background 16px, $secondBackground 0);
+  background: linear-gradient(to right bottom,
+      $secondBackground 49%,
+      $background 50%),
+    linear-gradient(-50deg, $background 16px, $secondBackground 0);
 }
 
 /*-------------------------*/
@@ -1038,11 +1045,9 @@ p {
   padding-top: 0;
   left: auto;
   right: auto;
-  background: linear-gradient(
-                  to left bottom,
-                  $background 49%,
-                  $secondBackground 50%
-  );
+  background: linear-gradient(to left bottom,
+      $background 49%,
+      $secondBackground 50%);
 }
 
 iframe {
@@ -1054,12 +1059,10 @@ main {
 }
 
 .carousel-control-next-icon {
-  background-image: url("https://pagina-mama.s3.amazonaws.com/assets2/icons/next.png");
+  // background-image: url("https://pagina-mama.s3.amazonaws.com/assets2/icons/next.png");
 }
 
-.carousel-control-prev-icon {
-  background-image: url("https://pagina-mama.s3.amazonaws.com/assets2/icons/prev.png");
-}
+.carousel-control-prev-icon {}
 
 #accordion ul {
   text-align: left;
@@ -1073,19 +1076,20 @@ main {
 } */
 
 @media screen and (max-width: 768px) {
-  #asociados-row > div {
+  #asociados-row>div {
     width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
     margin-bottom: 5% !important;
   }
+
   #asociados-row {
     padding: 0 !important;
     margin: 0 !important;
   }
 }
 
-#root > nav {
+#root>nav {
   padding: 3%;
   display: flex;
   justify-content: space-evenly !important;
@@ -1107,11 +1111,11 @@ section.colour-block h4 {
 }
 
 dl {
-  text-align: justify;
+  text-align: unset;
 }
 
-#root > div > main > video,
-#root > div > main > iframe {
+#root>div>main>video,
+#root>div>main>iframe {
   width: 90vw;
 }
 
@@ -1142,6 +1146,7 @@ mdc-card {
     margin-inline: 25% !important;
     text-align: center !important;
   }
+
   p.text-muted {
     width: 100% !important;
     margin: auto !important;
@@ -1176,7 +1181,8 @@ video {
 
   z-index: 9999;
 
-  display: initial; /* Hide by default */
+  display: initial;
+  /* Hide by default */
 
   background-color: $background !important;
 }
@@ -1189,9 +1195,9 @@ video {
   position: relative !important;
 }
 
-#panel1a-header > p > button,
-#panel3a-header > p:nth-child(1) > button:nth-child(1),
-#panel2a-header > p:nth-child(1) > button:nth-child(1) {
+#panel1a-header>p>button,
+#panel3a-header>p:nth-child(1)>button:nth-child(1),
+#panel2a-header>p:nth-child(1)>button:nth-child(1) {
   background: $background !important;
 }
 
@@ -1209,30 +1215,36 @@ img {
   #domus header {
     height: 160px !important;
   }
+
   #domus #banner {
     background-size: 300% 125% !important;
     background-position: center !important;
   }
-  .e picture {
-    height: 160px !important;
-    align-items: flex-start !important;
-    margin-top: 0 !important;
+
+  .e img {
+    min-height: 350 !important;
+
+    max-width: 100vw !important;
   }
+
   #galeria-proyectos h3 {
     margin-top: 25% !important;
     margin-bottom: 2% !important;
   }
+
   #galeria-proyectos .container {
     height: 400px;
   }
-  #galeria-proyectos > div > div.e > div > a.carousel-control-next {
+
+  #galeria-proyectos>div>div.e>div>a.carousel-control-next {
     height: 100px;
     margin-top: 23px;
   }
-  #galeria-proyectos > div > div.e > div > a.carousel-control-next,
-  #galeria-proyectos > div > div.e > div .carousel-control-next-icon::after,
-  #galeria-proyectos > div > div.e > div > a.carousel-control-prev,
-  #galeria-proyectos > div > div.e > div .carousel-control-prev-icon::after {
+
+  #galeria-proyectos>div>div.e>div>a.carousel-control-next,
+  #galeria-proyectos>div>div.e>div .carousel-control-next-icon::after,
+  #galeria-proyectos>div>div.e>div>a.carousel-control-prev,
+  #galeria-proyectos>div>div.e>div .carousel-control-prev-icon::after {
     height: 50px;
     margin-top: 60px;
     width: 20px;
@@ -1245,7 +1257,7 @@ a {
   text-transform: capitalize !Important;
 }
 
-#servicios > div > div {
+#servicios>div>div {
   background: #ede3d6 !important;
   text-transform: capitalize !important;
 }
@@ -1253,14 +1265,18 @@ a {
 
 #hero-heading {
   font-variant: normal !important;
-  font-family: 'the-seasons', sans-serif /***** Section *****/
-  /***** End Section *****/
-;
+  font-family: 'the-seasons', sans-serif
+    /***** Section *****/
+    /***** End Section *****/
+  ;
   font-weight: bolder;
 }
 
 
-a:active, li:active, a:hover, li:hover {
+a:active,
+li:active,
+a:hover,
+li:hover {
   text-decoration: none !important;
   background-color: none !Important;
 }
@@ -1289,18 +1305,20 @@ a:active, li:active, a:hover, li:hover {
 }
 
 
-#root > div.container-fluid.m-0.p-0.overflow-scroll.horizontal-scrollable {
+#root>div.container-fluid.m-0.p-0.overflow-scroll.horizontal-scrollable {
   overflow: visible !important;
 }
 
 
-.nav-item, .dropdown-toggle, .nav-link {
+.nav-item,
+.dropdown-toggle,
+.nav-link {
   font-family: "the-seasons", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
-#root > section:nth-child(14) > div > div > div > a {
+#root>section:nth-child(14)>div>div>div>a {
   background-color: transparent;
 }
 
@@ -1313,15 +1331,12 @@ div {
   letter-spacing: calc(add(normal, normal));
 }
 
-//p {
+
 .city-firstcarousel {
   overflow-x: scroll !important;
 }
 
 
-html, body {
-  background-color: $darkblue !important;
-}
 
 //
 //body {
@@ -1330,21 +1345,72 @@ html, body {
 .bg-darkblue {
   background: $darkblue !Important;
 }
+
 .accordion {
-  background:transparent;
+  background: transparent;
 }
+
 .accordion-flush .accordion-button:focus {
-  background:$background !important;
-  color:$brown !Important;
+  background: $background !important;
+  color: $brown !Important;
 }
+
 button.accordion-button {
-  background:$secondBackground !important;
+  background: $secondBackground !important;
 
   font-family: "the-seasons", sans-serif;
-  font-size:inherit;
+  font-size: inherit;
 }
+
 .accordion-body * {
-  text-indent: 1rem!important;
+  text-indent: 1rem !important;
   list-style-position: inside;
-  margin-bottom:1rem!important;
+}
+
+@media screen and (max-width: 700px) {
+
+  .accordion-body *,
+  .accordion-body * * {
+    overflow: visible !important;
+  }
+
+  #accordion {
+    width: 100% !important;
+    padding: auto !important;
+    margin: auto !Important;
+  }
+
+}
+
+p,
+div {
+  font-size: 1rem;
+}
+
+dt {
+  margin-bottom: 1rem !important;
+}
+
+dd {
+  margin-bottom: 1.5rem !important;
+  overflow-y: visible !important;
+}
+
+.photo-card {
+  overflow: hidden !Important;
+  height: 20rem !important;
+  /* Set the desired height */
+}
+
+.gallery-image {
+  object-fit: cover !important;
+  /* Ensures the image scales without distortion */
+  width: 100% !important;
+  /* Full width of the container */
+  height: 100% !important;
+  /* Full height of the container */
+}
+
+SECTION {
+  MARGIN-TOP: 100PX;
 }

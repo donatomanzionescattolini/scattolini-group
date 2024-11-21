@@ -7,7 +7,7 @@ interface Props {
     numberOfImages: number;
 }
 
-export default function SlideshowGalleryDesarrollo(props: Props) {
+export default function SlideshowGalleryDesarrollo(props: Readonly<Props>) {
     const [name] = useState<string>(props.name);
 
     const returnEls: React.JSX.Element[] = [];
@@ -18,6 +18,7 @@ export default function SlideshowGalleryDesarrollo(props: Props) {
                 <Carousel.Item
                     key={j}
                     id={"" + j}
+                    
                     className=" d-flex flex-row justify-content-center fade animation-none"
                     style={{
                         width: "100%",
@@ -30,8 +31,7 @@ export default function SlideshowGalleryDesarrollo(props: Props) {
                     <picture>
                         <source
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).JPEG`}
-                            height={500}
-                            className={"w-100"}
+                            
                         />
                         <source
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).jpeg`}
@@ -41,14 +41,12 @@ export default function SlideshowGalleryDesarrollo(props: Props) {
                         <source
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).png`}
                             height={500}
-                            className={"w-100"}
                         />
                         <source
                             height={500}
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).webp`}
-                            className={"w-100"}
                         />
-                        <img
+                        <img className="img-fluid" 
                             autoFocus
                             height={500}
                             src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).jpg`}

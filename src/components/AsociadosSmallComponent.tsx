@@ -5,12 +5,10 @@ export default function AsociadosSmallComponent() {
     const nav = useNavigate();
     return (
         <>
-            {innerWidth <= 560 && <><br></br><br></br></>}
-            <br></br>
-            <h2 className="text-center mt-5">Nuestro Equipo</h2>
+            <h2 className="text-center">Nuestro Equipo</h2>
             <hr className="hr hr-blurry w-50 mx-auto"/>
             <div className="xcontainer d-flex justify-content-center">
-                <img
+                <img className="img-fluid" 
                     src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/asociados2.png"
                     alt="Equipo"
                     className="image-responsive object-fit-cover mx-auto justify-content-center"

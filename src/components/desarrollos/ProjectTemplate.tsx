@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import SlideshowGalleryDesarrollo from "./SlideshowGalleryDesarrollo";
-import "@material/banner/dist/mdc.banner.min.css";
 
 import * as React from "react";
 import { JSX, ReactNode, useLayoutEffect, useState } from "react";
@@ -85,7 +84,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 jumbotron
                 id={"banner"}
                 className="py-0 my-0 overflow-y-hidden   object-fit-cover"
-                style={{ height: "300px" }}
+                
             >
                 <header
                     className="mdc-banner d-flex row flex-nowrap   justify-content-center h-100 m-0 p-0 responsive overflow-hidden">
@@ -166,8 +165,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                     </MDBCol>
 
                     <MDBCol xs={12} sm={12} md={6} lg={6} xl={6} className={"p-md-5 p-sm-2"}>
-                        <img alt={area.name} src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${nombre}.webp`}
-                            className={"img-fluid "} />
+                        <img className="img-fluid img-thumbnail"  alt={area.name} src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${nombre}.webp`}
+                             />
                     </MDBCol>
                 </MDBRow>
 
@@ -177,9 +176,9 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 {typeof video !== "string" && video ? (
                     video
                 ) : (
-                    <div className="embed-responsive">
-                        <iframe width="100%" height="auto" title={nombre + " video"} className="embed-responsive-item" src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}>
-                        </iframe>
+                    <div className="video-container">
+                        <video  title={nombre + " video"} className="embed-responsive-item" src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}>
+                        </video>
                     </div>
                 )}
             </section >
@@ -189,7 +188,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                     <br></br>
                     <br />
                     <div>
-                        <h4 className="text-center display-6 pt-5    my-5 title">Características</h4>
+                        <h4 className="text-center display-6     my-5 title">Características</h4>
                     </div>
                     <hr className="hr hr-blurry w-50 mx-auto" />
 
@@ -236,7 +235,7 @@ className={"fs-5 w-75 m-auto"}
                     <br></br>
                     <br></br>
                     <div>
-                        <h4 className="text-center title display-6 pt-5    my-5">Galería Fotográfica</h4>
+                        <h4 className="text-center title display-6     my-5">Galería Fotográfica</h4>
                     </div>
                     <hr className="hr hr-blurry w-50 mx-auto" />
 
@@ -268,7 +267,7 @@ className={"fs-5 w-75 m-auto"}
                 <br></br>
                 <br></br>
                 <div>
-                    <h4 className="text-center mb-1 display-6 pt-5    my-5" >Documentos De Interés</h4>
+                    <h4 className="text-center mb-1 display-6     my-5" >Documentos De Interés</h4>
                 </div>
                 <hr className="hr hr-blurry w-50 mx-auto" />
 
@@ -301,7 +300,7 @@ className={"fs-5 w-75 m-auto"}
                     </MDBTabsItem>
                 </MDBTabs>
                 {/*{tabVisible === "none" &&*/}
-                {/*    (<><h1 className="display-6 pt-5    my-5 text-center"><small className={"text-muted "}>Aprenda mas sobre este maravilloso proyecto!</small></h1>*/}
+                {/*    (<><h1 className="display-6     my-5 text-center"><small className={"text-muted "}>Aprenda mas sobre este maravilloso proyecto!</small></h1>*/}
                 {/*    <br></br>*/}
                 {/*    <h1 className="display-3 text-center">Selecciona una de las fichas en la esquina izquierda de esta seccion </h1></>)*/}
                 {/*}*/}
@@ -416,7 +415,7 @@ className={"fs-5 w-75 m-auto"}
                     <br />
                     <br></br>
                     <div>
-                        <h4 className="text-center my-1 display-6 pt-5    my-5">Propiedades en el Área</h4>
+                        <h4 className="text-center my-1 display-6     my-5">Propiedades en el Área</h4>
                     </div>
                     <hr className="hr hr-blurry w-50 mx-auto" />
 

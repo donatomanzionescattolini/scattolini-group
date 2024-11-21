@@ -15,7 +15,7 @@ export default function ManzioneProperties() {
                 xl={7}
                 className="align-items-start p-5 text-center"
             >
-                <img
+                <img className="img-fluid" 
                     src={
                         "https://pagina-mama.s3.amazonaws.com/assets2/asociados/monica.jpg"
                     }
