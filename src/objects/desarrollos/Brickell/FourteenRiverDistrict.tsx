@@ -4,7 +4,7 @@ import Brickell from "../../areas/Brickell.tsx";
 export default function FourteenRiverDistrict() {
     const FourteenRiverDistrictObject = new Desarrollo();
 
-    FourteenRiverDistrictObject.nombre = "14-river-district";
+    FourteenRiverDistrictObject.name = "14-river-district";
     FourteenRiverDistrictObject.banner = true;
     FourteenRiverDistrictObject.area = Brickell();
 
@@ -97,7 +97,7 @@ export default function FourteenRiverDistrict() {
         "Ubicado en el borde del segundo distrito de salud pública más grande del país y a las puertas del río Miami y celebrando las tiendas, restaurantes y entretenimiento del centro de Miami, River District 14 establece un estándar más alto para lo que debería ser un vecindario.",
         "A pocos pasos de la orilla del río y a minutos de la Bahía de Biscayne en barco, río El Distrito 14 ofrece un estilo de vida completo con todas las comodidades necesarias en las cercanías, incluidos restaurantes, tiendas, parques y taxis acuáticos.",
     ];
-    FourteenRiverDistrictObject.titulo = "14 River District";
+    FourteenRiverDistrictObject.title = "14 River District";
     FourteenRiverDistrictObject.subtitulo = "";
     FourteenRiverDistrictObject.numberOfImages = 27;
     FourteenRiverDistrictObject.direccion = "1420 NW 14th Ave, Miami, FL 33125, Estados Unidos"

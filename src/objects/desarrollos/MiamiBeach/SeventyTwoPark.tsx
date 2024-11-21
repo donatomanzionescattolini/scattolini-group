@@ -5,7 +5,7 @@ export default function SeventyTwoPark() {
     const SeventyTwoParkObject = new Desarrollo();
 
 
-    SeventyTwoParkObject.nombre = "72-park";
+    SeventyTwoParkObject.name = "72-park";
     SeventyTwoParkObject.caracteristicas = {
         edificio: (
             <ul>
@@ -159,7 +159,7 @@ export default function SeventyTwoPark() {
     SeventyTwoParkObject.introduccion = [
         "Al vivir en 72 Park, se ofrece lo mejor de ambos mundos a los residentes: una comunidad tranquila y exclusiva con fácil acceso al furor de la ciudad. El edificio tiene un diseño arquitectónico impresionante, con curvas suaves en todas las esquinas, barandillas de vidrio y ventanas de vidrio del piso al techo. Las residencias de planta abierta fueron cuidadosamente diseñadas para brindar comodidad y estilo, y ofrecen techos altos, unidades amplias y luminosas, acabados interiores de grado de condominio, gabinetes italianos y electrodomésticos de bajo consumo. Los residentes disfrutan de cautivadoras comodidades al aire libre, en un espacio que supera los 30,000 pies cuadrados. Este espacio cuenta con una plataforma de observación, jardín al aire libre y piscina de entrenamiento. Su ubicación deseable en North Miami Beach está cerca de cafés en la acera, clubes de campo, Lincoln Road y Bal Harbour Shops, lo que ofrece algo diferente para hacer todos los días.",
     ];
-    SeventyTwoParkObject.titulo = "72 Park";
+    SeventyTwoParkObject.title = "72 Park";
     SeventyTwoParkObject.subtitulo =
         <span className="pb-0 mb-0">
           La vida en Miami Beach <em>redefinida</em>

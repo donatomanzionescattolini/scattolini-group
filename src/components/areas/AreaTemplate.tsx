@@ -111,16 +111,16 @@ export default function AreaTemplate(props: AreaProps) {
 
                         {[...areaDesarrollos.values()].map((desarrollo, index) => {
                             return (<MDBCol key={index + 1} xs={12} sm={12} md={6} lg={4} xl={4}>
-                                <Link to={`/desarrollos/${desarrollo.nombre}/`}>
+                                <Link to={`/desarrollos/${desarrollo.name}/`}>
                                     <div
                                         className="propiedades-img p-0 m-0"
                                         style={{
-                                            background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
+                                            background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.name}.webp')`,
                                             backgroundSize: "cover",
                                         }}
                                     ></div>
 
-                                    <h4 className="text-center card-title m-2 ">{desarrollo.nombre.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ")}</h4>
+                                    <h4 className="text-center card-title m-2 ">{desarrollo.name.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ")}</h4>
                                 </Link>
                             </MDBCol>)
                         })}

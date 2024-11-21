@@ -5,8 +5,8 @@ import SouthMiami from '../../areas/SouthMiami';
 export default function SomiWalk() {
     const SomiWalkObject = new Desarrollo();
     SomiWalkObject.area = SouthMiami();
-    SomiWalkObject.nombre = "somi-walk";
-    SomiWalkObject.titulo = "Somi Walk";
+    SomiWalkObject.name = "somi-walk";
+    SomiWalkObject.title = "Somi Walk";
     SomiWalkObject.caracteristicas = {
         amenidades: <>
             <ul>

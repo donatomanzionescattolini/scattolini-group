@@ -20,10 +20,11 @@ import { caracteristicas, ProjectParams, } from "../../models/desarrollos/Projec
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
+import Desarrollos, { DesarrollosPerArea, DessarrollosPerArea } from "./DesarrollosComponent.tsx";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
     const params = paramz.desarrollo;
-    const [nombre] = useState(params.nombre);
+    const [nombre] = useState(params.name);
     const [area] = useState(params.area);
     const [desarrollosArea] = useState(getDesarrollosForArea(area));
     const [numberOfImages] = useState(params.numberOfImages);
@@ -34,7 +35,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
     const [video] = useState<string | JSX.Element>(vid as JSX.Element);
 
     const [caract] = useState(params.caracteristicas as caracteristicas);
-    const [titulo] = useState(params.titulo);
+    const [titulo] = useState(params.title);
     const [banner] = useState(params.banner);
     const [subtitulo] = useState(params.subtitulo);
     const [introduccion] = useState(params.introduccion);
@@ -411,88 +412,21 @@ className={"fs-5 w-75 m-auto"}
             </section>
             <div className="skew-cc"></div>
             <section className="colour-block py-5  ">
-                <>
-                    <br />
-                    <br></br>
-                    <div>
-                        <h4 className="text-center my-1 display-6     my-5">Propiedades en el Área</h4>
-                    </div>
-                    <hr className="hr hr-blurry w-50 mx-auto" />
-
-                    <br></br>
-                    {/*<MDBRow className="d-flex flex-row flex-wrap justify-content-between mt-3 mx-auto">*/}
-
-                    {/*    {[...desarrollosArea].map((des) => {*/}
-                    {/*        return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>*/}
-                    {/*            <MDBCard>*/}
-                    {/*                <MDBCardHeader><MDBCardTitle>{des.titulo}</MDBCardTitle></MDBCardHeader>*/}
-                    {/*                <MDBCardSubTitle>{des.subtitulo}</MDBCardSubTitle>*/}
-                    {/*                <MDBCardImage className="img-thumbnail img-fluid"*/}
-                    {/*                              src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${des.nombre}.webp)`}></MDBCardImage>*/}
-
-                    {/*            </MDBCard>*/}
-                    {/*        </MDBCol>);*/}
-                    {/*    })}*/}
-
-                    {/*</MDBRow>*/}
-                    <MDBRow>
-                        {[...desarrollosArea.values()].map((desarrollo) => {
-                            return (
-                                <MDBCol key={[...desarrollosArea.values()].indexOf(desarrollo)} xs={12} sm={12} md={6}
-                                    lg={4} xl={4}>
-                                    <Link to={`/desarrollos/${desarrollo.nombre}/`}>
-                                        <div
-                                            className="propiedades-img p-0 m-0"
-                                            style={{
-                                                background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
-                                                backgroundSize: "cover",
-                                            }}
-                                        ></div>
-
-                                        <h4 className="text-center card-title m-2 " style={{
-                                            fontFamily: '"the-seasons", serif',
-                                            fontWeight: "200",
-                                            fontStyle: "normal"
-                                        }}>
-                                            {desarrollo.titulo ||
-                                                desarrollo.nombre
-                                                    .split("-")
-                                                    .map(
-                                                        (word) =>
-                                                            word.charAt(0).toUpperCase() + word.substring(1)
-                                                    )
-                                                    .join(" ")}
-                                        </h4>
-                                    </Link>
-                                </MDBCol>
-                            );
-                        })}
-                    </MDBRow>
-                </>
-                {/* <div> */}
-                {/* <h4 className="text-center">Otras Áreas</h4> */}
-                {/* </div> */}
-                <br></br>
+                <Desarrollos desarrollo={params} area={params.area}/>
             </section>
             <div className="skew-c"></div>
             <section className="white-block py-5  ">
-                <AreasComponent />
+                <AreasComponent currentArea={params.area} />
             </section>
             <div className="skew-cc"></div>
             <section className="colour-block py-5  ">
-                {innerWidth <= 768 && (
-                    <MDBContainer>
-                        <ContactFormComponent projectName={titulo as string} />
-                    </MDBContainer>
-                )}
-                {innerWidth > 768 && (
+                
                     <MDBContainer
-                        fluid
+                        
                         className="d-flex justify-content-center w-100 p-0 m-0"
                     >
                         <ContactFormComponent projectName={titulo as string} />
                     </MDBContainer>
-                )}
             </section>
             <div className="skew-c"></div>
         </>

@@ -6,8 +6,8 @@ export default function StRegis() {
 
 
     StRegisObject.numberOfImages = 52;
-    StRegisObject.nombre = "st-regis";
-    StRegisObject.titulo = "St. Regis® ";
+    StRegisObject.name = "st-regis";
+    StRegisObject.title = "St. Regis® ";
     StRegisObject.subtitulo = "Vivir exquisito es vivir extraordinario";
     StRegisObject.introduccion = [
         "Situado a lo largo de la hermosa costa de South  con exquisitas vistas frente a la bahía, The St. Regis Residences, Miami personifica la vida elegante. Refleja las sensibilidades de aquellos que son impulsados por el conocimiento, exigen excelencia, respetan la tradición y valoran la individualidad por encima de todo.",

@@ -3,8 +3,8 @@ import Homestead from "../../areas/Homestead.tsx";
 
 export default function SilverlandEstates() {
     const SilverlandEstates = new Desarrollo();
-    SilverlandEstates.nombre = "silverland-estates";
-    SilverlandEstates.titulo = "Silverland Estates";
+    SilverlandEstates.name = "silverland-estates";
+    SilverlandEstates.title = "Silverland Estates";
     SilverlandEstates.subtitulo = "";
     SilverlandEstates.caracteristicas = {edificio: <></>, residencias: <></>, amenidades: <></>};
 

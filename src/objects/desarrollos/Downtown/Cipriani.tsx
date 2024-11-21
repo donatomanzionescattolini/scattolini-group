@@ -7,8 +7,8 @@ export default function Cipriani() {
     CiprianiObject.banner = true;
     CiprianiObject.area = Downtown();
 
-    CiprianiObject.nombre = "cipriani";
-    CiprianiObject.titulo = "Cipriani Residences";
+    CiprianiObject.name = "cipriani";
+    CiprianiObject.title = "Cipriani Residences";
     CiprianiObject.subtitulo = "";
     CiprianiObject.numberOfImages = 14;
     CiprianiObject.introduccion = [

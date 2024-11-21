@@ -85,7 +85,7 @@ export default function TheElse() {
 
     TheElserObject.direccion = ""
 
-    TheElserObject.nombre = "the-elser";
+    TheElserObject.name = "the-elser";
     TheElserObject.introduccion = [
         "The Elser Hotel and Residences, comparte el mismo lugar bullicioso y las vistas Illuminosas de Biscayne Bay que se disfrutaron anteriormente a principios de 1900 en Elser Pier",
         "El legado y el asombroso éxito de este muelle, como una de las primeras atracciones populares en el corredor del centro, ayudaron a liderar la transformación en la próspera metrópolis frente a la bahía que conocemos hoy",
@@ -93,7 +93,7 @@ export default function TheElse() {
     ];
     TheElserObject.banner = true;
     TheElserObject.area = Downtown();
-    TheElserObject.titulo = "The Elser Residences";
+    TheElserObject.title = "The Elser Residences";
     TheElserObject.subtitulo = "Lugar bullicioso y vistas brillantes de la bahía de Biscayne";
     TheElserObject.numberOfImages = 44;
     TheElserObject.video =

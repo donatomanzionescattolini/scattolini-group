@@ -7,8 +7,8 @@ export default function FourteenTwentyEight() {
     FourteenTwentyEightObject.area = Brickell();
     FourteenTwentyEightObject.numberOfImages = 39;
 
-    FourteenTwentyEightObject.nombre = "1428-brickell";
-    FourteenTwentyEightObject.titulo = "The Residences at 1428 Brickell";
+    FourteenTwentyEightObject.name = "1428-brickell";
+    FourteenTwentyEightObject.title = "The Residences at 1428 Brickell";
     FourteenTwentyEightObject.subtitulo = "Tu vida. A tu manera.";
     FourteenTwentyEightObject.introduccion = [
         " Desde su concepción, The Residences at 1428 Brickell fue cuidadosamente planificada como una torre en la que todo concepto mereció una minuciosa valoración. La atención puesta en cada detalle es el resultado de una búsqueda escrupulosa e imaginativa para que las comodidades se conjuguen armónicamente con los espacios comunes y la privacidad de cada residente.",

@@ -3,7 +3,7 @@ import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
 
 export default function ShomaBay() {
     const ShomaBayObject = new Desarrollo();
-    ShomaBayObject.nombre = "shoma-bay";
+    ShomaBayObject.name = "shoma-bay";
 
     ShomaBayObject.direccion = "1850 John F Kennedy Causeway, North Bay Village, FL 33141";
     ShomaBayObject.caracteristicas = {
@@ -77,7 +77,7 @@ export default function ShomaBay() {
     ];
     ShomaBayObject.banner = true;
     ShomaBayObject.area = NorthBayVillage();
-    ShomaBayObject.titulo = "Shoma Bay";
+    ShomaBayObject.title = "Shoma Bay";
     ShomaBayObject.subtitulo = "";
     ShomaBayObject.numberOfImages = 16;
     ShomaBayObject.video =

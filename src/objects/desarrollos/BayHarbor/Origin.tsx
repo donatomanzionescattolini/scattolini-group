@@ -16,7 +16,7 @@ export default function Origin() {
             allowFullScreen
         ></iframe>;
     OriginObject.banner = true;
-    OriginObject.nombre = "origin";
+    OriginObject.name = "origin";
     OriginObject.caracteristicas = {
         edificio: (
             <>
@@ -132,7 +132,7 @@ export default function Origin() {
         "Este elegante edificio residencial boutique personifica lo último en estilo de vida de Miami, seductoras vistas y amplios planos de planta. A pocos pasos de las prístinas playas de Miami y de las mundialmente conocidas tiendas de Bal Harbour, ORIGIN es lo último en vida urbana isleña, a la vez que se encuentra a pocos pasos de todas las comodidades de la vida en la ciudad",
         "Artefacto decodifica un estilo de vida que goza de gran prestigio entre los grandes nombres de la arquitectura y la decoración, creando el epítome de la vida cálida y contemporánea.",
     ];
-    OriginObject.titulo = "Origin Residences";
+    OriginObject.title = "Origin Residences";
     OriginObject.subtitulo = "Sofisticada VidaResidences Isleña";
     OriginObject.numberOfImages = 52;
     OriginObject.area = BayHarbor();

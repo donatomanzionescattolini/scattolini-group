@@ -3,7 +3,7 @@ import Edgewater from "../../areas/Edgewater.tsx";
 
 export default function MissoniBaia() {
     const MissoniBaiaObject = new Desarrollo();
-    MissoniBaiaObject.nombre = "missoni-baia";
+    MissoniBaiaObject.name = "missoni-baia";
     MissoniBaiaObject.direccion = "700 NE 26th Ter, Miami, FL 33137"
     MissoniBaiaObject.caracteristicas = {
         edificio: (
@@ -259,7 +259,7 @@ export default function MissoniBaia() {
         "Las 249 residencias del condominio en Edgewater de Missoni Baia celebran el eterno encanto de la vida frente al agua con un estilo relajado y moderno. En el horizonte de Miami y sobre la costa de East Edgewater, se delinea una figura prominente: Missoni Baia; con una elevación de 57 pisos que abarcan una impresionante longitud de 200 pies a lo largo de Biscayne Bay.",
         "Con un diseño vanguardista y de alto rendimiento, realizado por la prestigiosa firma internacional, Asymptote Architecture, los nuevos y lujosos condominios en Edgewater de Missoni Baia capturan el espíritu innovador y soñador de Missoni. Missoni Baia es como ninguna otra torre residencial en Miami.",
     ];
-    MissoniBaiaObject.titulo = "Missoni Baia";
+    MissoniBaiaObject.title = "Missoni Baia";
     MissoniBaiaObject.subtitulo = "";
     MissoniBaiaObject.numberOfImages = 51;
     MissoniBaiaObject.banner = true;

@@ -3,8 +3,8 @@ import Homestead from "../../areas/Homestead";
 
 export default function OnGrandville() {
     const OnGrandville = new Desarrollo(Homestead());
-    OnGrandville.nombre = "on-grandville";
-    OnGrandville.titulo = "On Grandville";
+    OnGrandville.name = "on-grandville";
+    OnGrandville.title = "On Grandville";
     OnGrandville.numberOfImages = 0;
     OnGrandville.amenidades = [];
     OnGrandville.introduccion = [];

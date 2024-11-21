@@ -4,7 +4,7 @@ import SunnyIsles from "../../areas/SunnyIsles.tsx";
 export default function BentleyResidences() {
     const BentleyResidencesObject = new Desarrollo();
 
-    BentleyResidencesObject.nombre = "bentley-residences";
+    BentleyResidencesObject.name = "bentley-residences";
 
 
     BentleyResidencesObject.caracteristicas = {
@@ -71,7 +71,7 @@ export default function BentleyResidences() {
             allowFullScreen
         ></iframe>
     ;
-    BentleyResidencesObject.titulo = "Bentley Residences";
+    BentleyResidencesObject.title = "Bentley Residences";
     BentleyResidencesObject.subtitulo = "Espacio que puedes abrazar";
     BentleyResidencesObject.numberOfImages = 47;
     BentleyResidencesObject.banner = true;

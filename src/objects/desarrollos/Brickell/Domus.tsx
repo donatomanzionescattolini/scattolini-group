@@ -3,8 +3,8 @@ import Brickell from "../../areas/Brickell.tsx";
 
 export default function Domus() {
     const Domus = new Desarrollo();
-    Domus.nombre = "domus";
-    Domus.titulo = "Domus FLATS"
+    Domus.name = "domus";
+    Domus.title = "Domus FLATS"
     Domus.area = Brickell();
     Domus.caracteristicas = {
         edificio: (
@@ -74,7 +74,7 @@ export default function Domus() {
                 src="https://www.youtube.com/embed/M_9_sCBNLDQ?autoplay=1&controls=0"
                 frameBorder={0} allowFullScreen/>
     ;
-    Domus.titulo = "Domus FLATS";
+    Domus.title = "Domus FLATS";
     Domus.subtitulo = "";
     Domus.numberOfImages = 7;
     return Domus;

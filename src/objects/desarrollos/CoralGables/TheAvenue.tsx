@@ -3,7 +3,7 @@ import CoralGables from "../../areas/CoralGables.tsx";
 
 export default function TheAvenue() {
     const TheAvenueObject = new Desarrollo();
-    TheAvenueObject.nombre = "the-avenue";
+    TheAvenueObject.name = "the-avenue";
     TheAvenueObject.caracteristicas = {
         edificio: (
             <>
@@ -98,7 +98,7 @@ export default function TheAvenue() {
 
         'Todos los partidos. Todos los acabados. Cada mueble. The Avenue es lo que significa estar verdaderamente "listo para mudarse".',
     ];
-    TheAvenueObject.titulo = "The Avenue";
+    TheAvenueObject.title = "The Avenue";
     TheAvenueObject.subtitulo = "La esencia de la avenida Coral Gables";
     TheAvenueObject.numberOfImages = 27;
     TheAvenueObject.banner = true;

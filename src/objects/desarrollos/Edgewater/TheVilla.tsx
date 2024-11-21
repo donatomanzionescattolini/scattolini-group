@@ -5,8 +5,8 @@ export default function TheVilla() {
     const TheVillaObject = new Desarrollo();
 
 
-    TheVillaObject.nombre = "the-villa";
-    TheVillaObject.titulo = 'The Villa'
+    TheVillaObject.name = "the-villa";
+    TheVillaObject.title = 'The Villa'
     TheVillaObject.video =
         <iframe
             height="500"

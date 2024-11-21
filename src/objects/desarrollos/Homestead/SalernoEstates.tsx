@@ -3,8 +3,8 @@ import Homestead from "../../areas/Homestead.tsx";
 
 export default function SalernoEstates() {
     const SalernoEstates = new Desarrollo();
-    SalernoEstates.nombre = "salerno-estates";
-    SalernoEstates.titulo = "Salerno Estates";
+    SalernoEstates.name = "salerno-estates";
+    SalernoEstates.title = "Salerno Estates";
     SalernoEstates.subtitulo = "";
     SalernoEstates.area = Homestead();
     SalernoEstates.caracteristicas = {

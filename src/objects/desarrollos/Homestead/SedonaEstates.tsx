@@ -2,8 +2,8 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
 export default function SedonaEstates() {
     const SedonaEstates = {} as Desarrollo;
-    SedonaEstates.nombre = "sedona-estates";
-    SedonaEstates.titulo = "Sedona Estates";
+    SedonaEstates.name = "sedona-estates";
+    SedonaEstates.title = "Sedona Estates";
     SedonaEstates.subtitulo = "";
     SedonaEstates.caracteristicas = {edificio: <></>, residencias: <></>, amenidades: <></>};
 

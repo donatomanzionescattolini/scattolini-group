@@ -27,13 +27,13 @@ class Desarrollo {
 
     public numberOfFloors: number;
 
-    public nombre: string;
+    public name: string;
 
     public caracteristicas: caracteristicas | React.ReactNode;
 
     public introduccion: string[];
 
-    public titulo: string | JSX.Element;
+    public title: string | JSX.Element;
 
     public subtitulo: string | JSX.Element;
 

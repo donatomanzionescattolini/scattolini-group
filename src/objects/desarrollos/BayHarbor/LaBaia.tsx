@@ -3,7 +3,7 @@ import BayHarbor from "../../areas/BayHarbor.tsx";
 
 export default function LaBaia() {
     const LaBaiaObject = new Desarrollo();
-    LaBaiaObject.nombre = 'la-baia';
+    LaBaiaObject.name = 'la-baia';
     LaBaiaObject.caracteristicas = {
         edificio: <dl>
             <dt>Ubicación</dt>
@@ -89,7 +89,7 @@ export default function LaBaia() {
     };
     LaBaiaObject.introduccion = ["La Baia Bay North es un edificio íntimo de 8 pisos frente al mar. El equipo de Revuelta Architecture creó un estilo elegante y contemporáneo. Ofrece comodidades de lujo y excelentes vistas al mar. Las 57 residencias están disponibles en configuraciones de uno a cuatro dormitorios; Todas ellas permiten una gran cantidad de luz natural y enmarcan impresionantes vistas a todas las habitaciones. Además, La Baia North cuenta con una ubicación ideal que está conectada con tiendas, restaurantes y opciones de entretenimiento, campos de golf, yates y paseos en bote, aeropuertos cercanos y más.\n" +
     "\n"];
-    LaBaiaObject.titulo = "La Baia Norte";
+    LaBaiaObject.title = "La Baia Norte";
     LaBaiaObject.subtitulo = "";
     LaBaiaObject.numberOfImages = 66;
     LaBaiaObject.banner = true;

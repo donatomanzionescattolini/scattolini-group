@@ -7,8 +7,8 @@ export default function TheMandarinResidencesMiami() {
 
     const TheMandarinResidencesObject = new Desarrollo(Brickell());
 
-    TheMandarinResidencesObject.nombre = "the-mandarin-oriental-residences-miami";
-    TheMandarinResidencesObject.titulo = <div><h1 className="text-center display-5">The Residences<br>Mandarin Oriental<br>Miami</br></br></h1></div>;
+    TheMandarinResidencesObject.name = "the-mandarin-oriental-residences-miami";
+    TheMandarinResidencesObject.title = <div><h1 className="text-center display-5">The Residences<br>Mandarin Oriental<br>Miami</br></br></h1></div>;
 
     TheMandarinResidencesObject.amenidades =
         new Map();

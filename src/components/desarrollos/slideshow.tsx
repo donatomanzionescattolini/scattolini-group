@@ -40,12 +40,12 @@ const SlideshowGallery = (props: PropsSlideshow) => {
                         key={index}
                         id={`second-carousel-${index}`}
                         style={{
-                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject.name}/${x.nombre}.webp`,
+                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject.name}/${x.name}.webp`,
                         }}
                     >
                         <Carousel.Caption>
                             <h3 className="display-6 pt-5    my-5 font-weight-bold">
-                                {x.nombre
+                                {x.name
                                     .split("-")
                                     .map(
                                         (n) => String(n.charAt(0)).toUpperCase() + n.substring(1)

@@ -9,7 +9,7 @@ export default function CasaBella() {
     CasaBellaObject.banner = true;
     CasaBellaObject.area = Downtown();
 
-    CasaBellaObject.nombre = "casa-bella";
+    CasaBellaObject.name = "casa-bella";
     CasaBellaObject.caracteristicas = {
         edificio: (
             <ul>
@@ -97,7 +97,7 @@ export default function CasaBella() {
         "Vuelve a casa con la sofisticación y el lujo italianos ilimitados. Disfruta de impresionantes vistas dondequiera que mires. Rodéese de interiores elevados e inundados de luz, jardines llenos de jardines y comodidades abundantes e inigualables, que incluyen un salón junto a la piscina con una cafetería mediterránea y cócteles artesanales.",
         "CasaBellaObject Residences by B&B Italia ha colaborado con los artistas italianos más célebres para curar su hogar con obras maestras selectas de las colecciones de B&B Italia.",
     ];
-    CasaBellaObject.titulo = "Casa Bella Residences";
+    CasaBellaObject.title = "Casa Bella Residences";
     CasaBellaObject.direccion = "";
     CasaBellaObject.subtitulo = "Bienvenido a la cima de la sofisticada vida italiana";
     CasaBellaObject.numberOfImages = 16;

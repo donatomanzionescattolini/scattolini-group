@@ -5,7 +5,7 @@ import FtLauderdale from '../../areas/FtLauderdale';
 export default function NattivoFtLauderdale() {
     const NatiivoFtLauderdaleObject = new Desarrollo(FtLauderdale());
     NatiivoFtLauderdaleObject.area = FtLauderdale();
-    NatiivoFtLauderdaleObject.nombre = "natiivo-ft-lauderdale";
+    NatiivoFtLauderdaleObject.name = "natiivo-ft-lauderdale";
     NatiivoFtLauderdaleObject.caracteristicas = {
         edificio: <ul>
             <li>Pisos:48</li>
@@ -47,7 +47,7 @@ export default function NattivoFtLauderdale() {
             </ul>
         </>
     };
-    NatiivoFtLauderdaleObject.titulo = "Natiivo | Ft. Lauderdale";
+    NatiivoFtLauderdaleObject.title = "Natiivo | Ft. Lauderdale";
     NatiivoFtLauderdaleObject.subtitulo = "Un nuevo impulso. Una nueva era. Un nuevo Fort Lauderdale.";
     NatiivoFtLauderdaleObject.numberOfImages = 38;
     NatiivoFtLauderdaleObject.video =

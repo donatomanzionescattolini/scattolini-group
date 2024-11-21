@@ -8,8 +8,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 export default function _2200Brickell() {
     const _2200BrickellObject = new Desarrollo(Brickell());
-    _2200BrickellObject.nombre = "2200-brickell";
-    _2200BrickellObject.titulo = "2200 Brickell";
+    _2200BrickellObject.name = "2200-brickell";
+    _2200BrickellObject.title = "2200 Brickell";
     _2200BrickellObject.introduccion = ["2200 Brickell es un nuevo condominio de lujo en South Brickell, diseñado por Revuelta Architecture y con diseño interior de ODA New York. Estas lujosas residencias de 1 a 4 habitaciones ofrecen acabados espectaculares, electrodomésticos de alta calidad, ventanas de vidrio de piso a techo, estacionamiento asignado en espacios en el mismo piso y mucho más.... Los residentes en 2200 Brickell disfrutan de comodidades como una piscina estilo centro turístico con spa al aire libre y cabañas junto a la piscina, cancha de pickleball, cocina de verano, área de fitness al aire libre, área de juegos para niños, una pista para caminar de un cuarto de milla y más. Su conveniente ubicación está justo al otro lado de la calle de los espectaculares edificios residenciales frente al mar, como Skyline, Bristol Tower o Una Brickell Residences, por nombrar algunos. Esta excelente ubicación dará a sus residentes la posibilidad de ser parte de la zona más tranquila y menos congestionada del centro de Miami, con fácil acceso a las playas de Key Biscayne, Coconut Grove, el Distrito Financiero y la I-95, conectando rápidamente con toda la ciudad."];
     _2200BrickellObject.area = Brickell();
     _2200BrickellObject.caracteristicas = {

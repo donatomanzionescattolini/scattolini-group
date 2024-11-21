@@ -1,67 +1,41 @@
-import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
-import React from "react";
+import { MDBCard, MDBCardFooter, MDBCardImage, MDBCardLink, MDBCol, MDBContainer, MDBRow, MDBTypography } from "mdb-react-ui-kit";
+import Areas from "../objects/areas/Areas";
+import { useState } from "react";
+import { Area } from "../models/areas/Area";
 
-import { Link } from "react-router-dom";
-import Areas from "../objects/areas/Areas.tsx";
+interface PropsAreasComponent {
+    currentArea?: Area
+}
+export default function AreasComponent(props:PropsAreasComponent) {
+    let areas = Areas();
+    if (props.currentArea) {
+       areas= areas.filter(area => area.name !== props.currentArea!.name);
+    }
 
-const AreasComponent = function (): React.JSX.Element {
-    // const [returnColumns] = useState<JSX.Element[]>(
-    //     function () {
-    //         const temp: React.JSX.Element[] = new Array<React.JSX.Element>();
-    //
-    //         desarrolloMap.keys().forEach((areaObject): void => {
-    //             temp.push(
-    //                 <MDBCol className="col-3">
-    //                     <Card autoFocus className={" h-100 p-0 m-0"}>
-    //                         <Link to={`/areas/${areaObject.name}`}>
-    //                             <CardImg
-    //                                 className=""
-    //                                 src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject.name}/firstsection.webp`}
-    //                             />
-    //                         </Link>
-    //                     </Card>
-    //                 </MDBCol>
-    //             );
-    //         });
-    //
-    //         return temp;
-    //     }
-    // );
+
+
+
+
     return (
-        <>
-            <br />
-            <br></br>
-            <div>
-                <h3 className="text-center mb-1 display-6">Otras Áreas</h3>
-            </div>
-            <hr className="hr hr-blurry w-50 mx-auto" />
+        <MDBContainer className="">
+            <MDBTypography tag="h2" className="text-center mb-4">
+                {props.currentArea && "Otras"} Áreas
+            </MDBTypography>
 
-            <br></br>
             <MDBRow>
-                {Areas().map((area) => {
-                    return (
-                        <MDBCol key={Areas().indexOf(area)+1} xs={12} sm={12} md={6} lg={4} xl={4}>
-                            <Link to={`/areas/${area.name}/`}>
-                                <div
-                                    className="propiedades-img p-0 m-0 w-100"
-                                    style={{
-                                        background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/thumbnail.webp')`,
-                                        backgroundSize: "cover",
-                                    }}
-                                ></div>
-
-                                <h4 className="text-center card-title m-2 " style={{
-                                    fontFamily: '"the-seasons", serif',
-                                    fontWeight: "200",
-                                    fontStyle: "normal"
-                                }}>{area.titulo}</h4>
-                            </Link>
-                        </MDBCol>
-                    );
-                })}
+                {areas.map((area, index) => (
+                    <MDBCol md="4" key={index} className="mb-4">
+                        <MDBCard className="photo-card">
+                            <MDBCardImage src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/thumbnail.webp`} alt={area.name} position="top" className="gallery-image img-thumbnail" />
+                        </MDBCard>
+                        <MDBCardFooter className="pt-2">
+                            <MDBCardLink className="text-center" href={"/areas/" + area.name}>
+                                <MDBTypography tag={"h4"}>{area.titulo}</MDBTypography>
+                            </MDBCardLink>
+                        </MDBCardFooter>
+                    </MDBCol>
+                ))}
             </MDBRow>
-        </>
+        </MDBContainer>
     );
-};
-
-export default AreasComponent;
+}

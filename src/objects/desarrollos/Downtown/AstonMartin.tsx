@@ -8,7 +8,7 @@ export default function AstonMartin() {
     AstonMartinObject.banner = true;
     AstonMartinObject.area = Downtown();
 
-    AstonMartinObject.nombre = "aston-martin";
+    AstonMartinObject.name = "aston-martin";
     AstonMartinObject.video =
         <iframe
             width="100%"
@@ -194,7 +194,7 @@ export default function AstonMartin() {
         "Cada aspecto de las residencias Aston Martin en 300 Biscayne Boulevard Way ha sido cuidadosamente considerado para proporcionar el equilibrio perfecto entre la maximización del espacio, la luz y las vistas óptimas, y las necesidades del estilo de vida cosmopolita moderno de hoy.      ",
         "Situado en una de las últimas parcelas de la propiedad frente al mar de Miami en desarrollarse, Aston Martin Residences es una sinfonía de vidrio curvilíneo y acero, que se eleva 66 pisos hacia el cielo. "]
     ;
-    AstonMartinObject.titulo = "Aston Martin Residences";
+    AstonMartinObject.title = "Aston Martin Residences";
     AstonMartinObject.subtitulo = "";
     AstonMartinObject.numberOfImages = 29;
     return AstonMartinObject;

@@ -52,8 +52,8 @@ const Nav = () => {
 
         const filteredDesarrolloz = allDesarrollos.filter(
             (desarrollo) =>
-                desarrollo.nombre.toLowerCase().includes(event.target.value.toLowerCase()) ||
-                event.target.value.toLowerCase().includes(desarrollo.nombre.toLowerCase())
+                desarrollo.name.toLowerCase().includes(event.target.value.toLowerCase()) ||
+                event.target.value.toLowerCase().includes(desarrollo.name.toLowerCase())
         );
 
         setFilteredDesarrollos(filteredDesarrolloz);
@@ -184,8 +184,8 @@ const Nav = () => {
                                         {filteredDesarrollos.map((desarrollo) => {
                                             return (
                                                 <MDBDropdownItem link key={filteredDesarrollos.indexOf(desarrollo)}
-                                                                 href={"/desarrollos/" + desarrollo.nombre}>
-                                                    {desarrollo.titulo}
+                                                                 href={"/desarrollos/" + desarrollo.name}>
+                                                    {desarrollo.title}
                                                 </MDBDropdownItem>
                                             );
                                         })}

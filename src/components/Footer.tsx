@@ -44,10 +44,10 @@ export default function Footer() {
                                                             className="text-sm-center bg-transparent border-0 text-nowrap text-muted py-0 my-0">
                                                             <Link
                                                                 className={"bg-transparent"}
-                                                                to={`/desarrollos/${des.nombre}`}
+                                                                to={`/desarrollos/${des.name}`}
                                                             >
-                                                                {des.titulo ||
-                                                                    des.nombre
+                                                                {des.title ||
+                                                                    des.name
                                                                         .split("-")
                                                                         .map(
                                                                             (word) =>

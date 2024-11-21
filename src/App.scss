@@ -1411,6 +1411,6 @@ dd {
   /* Full height of the container */
 }
 
-SECTION {
+SECTION:not(:nth-of-type(1)) {
   MARGIN-TOP: 100PX;
 }

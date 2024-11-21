@@ -5,9 +5,9 @@ import Edgewater from '../../areas/Edgewater';
 export default function ElleResidences() {
     const ElleResidencesObject = new Desarrollo();
 
-    ElleResidencesObject.nombre = "elle-residences";
+    ElleResidencesObject.name = "elle-residences";
 
-    ElleResidencesObject.titulo = 'Elle Residences';
+    ElleResidencesObject.title = 'Elle Residences';
     ElleResidencesObject.area = Edgewater();
     ElleResidencesObject.direccion = "3618 NE 5th Ave, Miami, FL 33137, Estados Unidos";
 

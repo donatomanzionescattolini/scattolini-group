@@ -6,7 +6,7 @@ export default function TheWell() {
 
     TheWellObject.numberOfImages = 40;
     TheWellObject.banner = true;
-    TheWellObject.nombre = "the-well";
+    TheWellObject.name = "the-well";
     TheWellObject.caracteristicas = {
         edificio: (
             <>
@@ -158,7 +158,7 @@ export default function TheWell() {
     TheWellObject.introduccion = [
         "Escondido en Bay Harbor Islands y perfectamente alejado del ritmo apresurado de Miami, THE WELL Bay Harbor Islands es el primero de su tipo: un lugar donde puede vivir y jugar en completo bienestar. Inspiradas en la materialidad y la artesanía tradicionales, The Residences incluye 54 condominios hechos a medida y más de 22,000 pies cuadrados de comodidades, incluido un gimnasio y centro de bienestar de última generación. THE WELL Bay Harbor Islands está diseñado para poner el bienestar en el centro de su vida, creando el tiempo y el espacio para desconectarse, reducir el ritmo y reenfocarse en lo que más importa: su bienestar.",
     ];
-    TheWellObject.titulo = "The Well";
+    TheWellObject.title = "The Well";
     TheWellObject.subtitulo = "Bienvenido al Bienestar";
     TheWellObject.area = BayHarbor();
     return TheWellObject;

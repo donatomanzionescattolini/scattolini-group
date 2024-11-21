@@ -4,8 +4,8 @@ import Constructora from '../../../models/constructora/Constructora';
 
 export default function Jem() {
     const Jem = new Desarrollo();
-    Jem.nombre = "jem";
-    Jem.titulo = "The Jem Miami Private Residences";
+    Jem.name = "jem";
+    Jem.title = "The Jem Miami Private Residences";
     Jem.numberOfUnits = 259;
     Jem.typeOfUnits = "Studios";
     Jem.constructora = new Constructora("Naftali Group");

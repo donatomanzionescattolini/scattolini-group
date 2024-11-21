@@ -3,8 +3,8 @@ import FloridaCity from "../../areas/FloridaCity.tsx";
 
 export default function Oasis() {
     const OasisObject = new Desarrollo();
-    OasisObject.nombre = "oasis";
-    OasisObject.titulo = "Oasis";
+    OasisObject.name = "oasis";
+    OasisObject.title = "Oasis";
     OasisObject.subtitulo = "";
     OasisObject.caracteristicas = {
         edificio: <></>,

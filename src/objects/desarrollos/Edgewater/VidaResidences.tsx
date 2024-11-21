@@ -3,7 +3,7 @@ import Edgewater from "../../areas/Edgewater.tsx";
 
 export default function VidaResidences() {
     const Vida = new Desarrollo();
-    Vida.nombre = "vida";
+    Vida.name = "vida";
     Vida.direccion = "3050 Biscayne Blvd, Miami, FL 33137";
     Vida.caracteristicas = {
         edificio: (
@@ -71,7 +71,7 @@ export default function VidaResidences() {
         "Vida = Life",
         "VIDA Residences es un edificio innovador y contemporáneo de 9 pisos. Cuenta con un total de 121 residencias y cuenta con un gimnasio de última generación, terraza en la azotea con parrillas para barbacoa, espacios de coworking, spa, conserje las 24 horas y vistas a la Bahía de Biscayne. Las residencias en VIDA Edgewater ofrecen balcones espaciosos, cocina gourmet, electrodomésticos de estilo europeo, armarios empotrados y mucho más. El equipo de diseño que concibió VIDA es Kobi Karp Miami; y fue desarrollado por Urbana Holdings y Urbana Bueno, las mentes maestras detrás del Hotel Artmore, Sheraton Arlington y más. VIDA está ubicado en la vibrante zona de Edgewater, en el condado de Miami Dade, donde los nuevos rascacielos residenciales de súper lujo están transformando el horizonte de Miami y justo al lado del centro de la ciudad, Midtown, el Design District y Wynwood.",
     ];
-    Vida.titulo = "Vida Residences";
+    Vida.title = "Vida Residences";
     Vida.subtitulo = "Un tramo más allá de lo ordinario...";
     Vida.numberOfImages = 24;
     Vida.banner = true;

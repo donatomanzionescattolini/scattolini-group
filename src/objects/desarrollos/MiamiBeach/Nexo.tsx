@@ -3,8 +3,8 @@ import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
 export default function Nexo() {
     const NexoObject = new Desarrollo();
-    NexoObject.nombre = "nexo";
-    NexoObject.titulo = "Nexo";
+    NexoObject.name = "nexo";
+    NexoObject.title = "Nexo";
     NexoObject.subtitulo = "Bienvenido a la vida conectada.";
     NexoObject.banner = true;
     NexoObject.area = MiamiBeach();

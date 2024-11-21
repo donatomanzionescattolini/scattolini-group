@@ -3,8 +3,8 @@ import FloridaCity from "../../areas/FloridaCity.tsx";
 
 export default function ParkSquare() {
     const ParkSquareObject = new Desarrollo();
-    ParkSquareObject.nombre = "park-square";
-    ParkSquareObject.titulo = "Park Square";
+    ParkSquareObject.name = "park-square";
+    ParkSquareObject.title = "Park Square";
     ParkSquareObject.subtitulo = "";
     ParkSquareObject.caracteristicas = {
         edificio: <></>,

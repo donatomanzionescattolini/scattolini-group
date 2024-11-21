@@ -6,8 +6,8 @@ import AliadosComponent from "./components/AliadosComponent.tsx";
 import AsociadosSmallComponent from "./components/AsociadosSmallComponent.tsx";
 import Quotes from "./components/Quotes";
 import Servicios from "./components/Servicios";
-import AreasComponent from "./components/areas/AreasComponent.tsx";
-import Desarrollos from "./components/desarrollos/Desarrollos.tsx";
+import AreasComponent from "./components/AreasComponent.tsx";
+import Desarrollos from "./components/desarrollos/DesarrollosComponent.tsx";
 import Quote, {quotes} from "./models/Quote";
 
 export function Home() {
@@ -27,7 +27,7 @@ export function Home() {
         window.resizeTo(0, 0);
     });
     // State variable to store the visibility of the floating element
-    const [show, setShow] = useState(true);
+    // const [show, setShow] = useState(true);
 
     // Function to toggle the visibility of the floating element
 
@@ -69,7 +69,6 @@ export function Home() {
                     </div>
                 </div>
             </MDBContainer>
-            {width < 768 && <br></br>}
             <section className="white-block pb-0 mb-0 pt-5">
                 <AboutUs/>
             </section>

@@ -4,8 +4,8 @@ import Desarrollo from '../../models/desarrollos/Desarrollo';
 
 export default function TemplateAndMainFields() {
     const ProjectObject = new Desarrollo(Brickell());
-    ProjectObject.nombre = "2200-brickell";
-    ProjectObject.titulo = "2200 Brickell";
+    ProjectObject.name = "2200-brickell";
+    ProjectObject.title = "2200 Brickell";
     ProjectObject.introduccion = ["", ""];
     ProjectObject.area = Brickell();
     ProjectObject.caracteristicas = {

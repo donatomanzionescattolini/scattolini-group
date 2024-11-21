@@ -5,7 +5,7 @@ export default function WaldorfAstoria() {
     const WaldorfAstoriaObject = new Desarrollo();
 
 
-    WaldorfAstoriaObject.nombre = "waldorf-astoria";
+    WaldorfAstoriaObject.name = "waldorf-astoria";
     WaldorfAstoriaObject.banner = true;
     WaldorfAstoriaObject.area = Downtown();
     WaldorfAstoriaObject.video = (<iframe height={500} className=" h-300 m-auto autoplay"
@@ -117,7 +117,7 @@ export default function WaldorfAstoria() {
     WaldorfAstoriaObject.introduccion = [
         "Waldorf Astoria Miami presenta a la ciudad una de las marcas de hoteles de lujo más prestigiosas del mundo, propiedad de Hilton Hotels. La torre ofrece 100 pisos de residencias. Los arquitectos de la firma Sieger Suárez diseñaron el edificio para parecerse a una pila de cubos de vidrio apilados de manera desigual. Con 1,049 pies de altura, Waldorf Astoria Hotel and Residences Miami es la torre más alta de Miami y el primer rascacielos superalto de Miami. Las residencias tienen vistas espectaculares de la Bahía de Biscayne, el Puerto de Miami, Brickell Avenue, el centro de Miami, Key Biscayne y South Beach. La ubicación perfecta de Waldorf Astoria Miami permite a los residentes vivir a pocos minutos del nuevo Miami World Center, varias atracciones culturales, arte, turismo y moda.",
     ];
-    WaldorfAstoriaObject.titulo = "Waldorf Astoria";
+    WaldorfAstoriaObject.title = "Waldorf Astoria";
     WaldorfAstoriaObject.subtitulo = "";
     WaldorfAstoriaObject.numberOfImages = 51;
     return WaldorfAstoriaObject;
