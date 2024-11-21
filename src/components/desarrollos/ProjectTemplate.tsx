@@ -20,7 +20,7 @@ import { caracteristicas, ProjectParams, } from "../../models/desarrollos/Projec
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
-import Desarrollos, { DesarrollosPerArea, DessarrollosPerArea } from "./DesarrollosComponent.tsx";
+import Desarrollos from "./DesarrollosComponent.tsx";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
     const params = paramz.desarrollo;
@@ -111,7 +111,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                             backgroundSize: "cover",
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "center",
-
+                            height:"50rem"
                         }}
                     />
                         )}

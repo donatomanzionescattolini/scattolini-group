@@ -15,36 +15,37 @@ export default function Desarrollos(props:DesarrollosComponentProps) {
 
     let desarrollos = new Array<Desarrollo>();
 
-    let index = 1;
+    let index = 0;
     const desarrollosElementArray = new Array<React.JSX.Element>();
-    if (!props.area){ 
-            new Set(areas).forEach((area) =>{
-            desarrollos.push(...getDesarrollosForArea(area));
-            desarrollos.forEach(desarrollo=>{
-                desarrollosElementArray.push(<MDBCol md="4" key={index++} className="mb-4">
+    if (!props.area){
+       desarrollos= areas.flatMap(area=>[...getDesarrollosForArea(area)]);
+    desarrollos.forEach((d) =>{
+index = index+1;
+                desarrollosElementArray.push(<>{d.name && <MDBCol md="4" key={index} className="mb-4">
                     <MDBCard className="photo-card">
-                        <MDBCardImage src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.name}.webp`} alt={desarrollo.name} position="top" className="gallery-image img-thumbnail" />
+                        <MDBCardImage src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${d.area.name}/${d.name}.webp`} alt={d.name} position="top" className="gallery-image img-thumbnail" />
                     </MDBCard>
                     <MDBCardFooter className="pt-2">
-                        <MDBCardLink className="text-center" href={`/desarrollos/${desarrollo.name}`}>
-                            <MDBTypography tag={"h4"}>{desarrollo.title}</MDBTypography>
+                        <MDBCardLink className="text-center" href={`/desarrollos/${d.name}`}>
+                            <MDBTypography tag={"h4"}>{d.title}</MDBTypography>
                         </MDBCardLink>
                     </MDBCardFooter>
-                </MDBCol>);
+                </MDBCol>}</>);
 
-    });
 
     });
  } else {
-    desarrollos = [...getDesarrollosForArea(props.area!)];
-    desarrollos = desarrollos.filter(d=>props.desarrollo!.name==d.name);
+        desarrollos = [...getDesarrollosForArea(props.area!)];
+        desarrollos = desarrollos.filter(d => props.desarrollo!.name == d.name);
 
-        
+
         desarrollos.forEach((desarrollo: Desarrollo) => {
-            index=index+1;
+            index = index + 1;
             desarrollosElementArray.push(<MDBCol md="4" key={index} className="mb-4">
                 <MDBCard className="photo-card">
-                    <MDBCardImage src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${desarrollo.area.name}/${desarrollo.name}.webp`} alt={desarrollo.name} position="top" className="gallery-image img-thumbnail" />
+                    <MDBCardImage
+                        src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${desarrollo.area.name}/${desarrollo.name}.webp`}
+                        alt={desarrollo.name} position="top" className="gallery-image img-thumbnail"/>
                 </MDBCard>
                 <MDBCardFooter className="pt-2">
                     <MDBCardLink className="text-center" href={`/desarrollos/${desarrollo.name}`}>
@@ -54,6 +55,11 @@ export default function Desarrollos(props:DesarrollosComponentProps) {
             </MDBCol>);
         });
 
+
+        if (desarrollos.length <= 0) {
+            return;
+            ;
+        }
     }
     return (
         <MDBContainer className="">
