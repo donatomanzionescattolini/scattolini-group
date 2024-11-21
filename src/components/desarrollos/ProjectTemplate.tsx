@@ -232,9 +232,6 @@ className={"fs-5 w-75 m-auto"}
             </section>
             <div className="skew-cc"></div>
             <section className="colour-block py-5  " id="galeria-proyectos">
-                <MDBContainer>
-                    <br></br>
-                    <br></br>
                     <div>
                         <h4 className="text-center title display-6     my-5">Galería Fotográfica</h4>
                     </div>
@@ -250,7 +247,6 @@ className={"fs-5 w-75 m-auto"}
           name={nombre}
           numberOfImages={numberOfImages as number}
         /> */}
-                </MDBContainer>
             </section>
             <div className="skew-c"></div>
 

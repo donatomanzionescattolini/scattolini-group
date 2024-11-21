@@ -36,7 +36,6 @@ h3,
 h4 {
   font-family: "the-seasons", sans-serif;
   font-weight: lighter;
-  letter-spacing: calc(add(normal, normal));
   overflow: visible !important;
 
 }
@@ -50,7 +49,6 @@ a,
 
 .Servicios a {
   font-weight: bolder;
-  margin: top 5px;
 }
 
 #hero-subheading {
@@ -225,8 +223,8 @@ a:hover {
 
 .carouselExampleInterval img {
   width: 100%;
-  margin-left: 15%;
-  max-width: 40vw;
+  //margin-left: 15%;
+  //max-width: 40vw;
   height: auto;
   /* color: $brown ; */
   overflow: hidden;
@@ -236,9 +234,9 @@ h4 {
   text-decoration: none;
 }
 
-a {
-  color: $brown;
-}
+//a {
+//  color: $brown;
+//}
 
 section.Servicios p {
   font-weight: 100;
@@ -306,7 +304,7 @@ main>section.city-firstsection {
 }
 
 .city-firstcarousel img {
-  height: 250px;
+  height: 350px;
   max-height: 100%;
   width: auto;
   max-width: 100%;
@@ -358,13 +356,13 @@ section.city-firstcarousel {
 
   overflow-x: scroll !important;
   padding: 10px;
-  justify-content: baseline;
+  //justify-content: baseline;
 }
 
 .city-firstcarousel img {
   /* margin:10px; */
 
-  height: 250px;
+  height: 350px;
 }
 
 .divider-second {
@@ -580,7 +578,6 @@ hr {
   transform: translate(-50%, -50%);
   color: $background;
   font-weight: lighter;
-  letter-spacing: calc(add(normal, normal));
   font-family: "Montserrat";
 }
 
@@ -637,11 +634,11 @@ nav ul li {
   padding: 0;
 }
 
-a {
-  text-decoration: none;
-  background: $secondBackground;
-  color: $brown !important;
-}
+//a {
+//  text-decoration: none;
+//  background: $secondBackground;
+//  color: $brown !important;
+//}
 
 .navbar-brand {
   margin: 1.5rem;
@@ -653,7 +650,6 @@ a {
   width: 4em;
   max-width: 100%;
   height: auto;
-  height: inherit;
   padding: 0;
 }
 
@@ -773,8 +769,8 @@ section.Servicios p {
 
 .city-firstcarousel img {
   margin: 10px !important;
-  min-height: 200px !important;
-  max-height: 300px !important;
+  min-height: 300px !important;
+  max-height: 350px !important;
   width: auto !important;
   max-width: 100% !important;
 }
@@ -786,7 +782,7 @@ section.Servicios p {
 .city-firstsection p {
   margin: 0% 10%;
   padding: 0;
-  flex-grow: calc(30% - 100%);
+  flex-grow: calc(30%) - calc(100%);
   text-indent: 1rem;
   text-align: unset;
   line-height: 1.5;
@@ -811,10 +807,10 @@ iframe {
 
 .propiedades-img {
   max-width: 100%;
-  height: 300px !important;
+  height: 350px !important;
   background-size: cover;
   background-position: center;
-  padding: 10px;
+  //padding: 10px;
 }
 
 /* #second-carousel {
@@ -841,25 +837,25 @@ iframe {
 
 */
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  color: inherit;
-  background-color: inherit;
-  border: none;
-}
+//.carousel-control-prev:hover,
+//.carousel-control-next:hover {
+//  color: inherit;
+//  background-color: inherit;
+//  border: none;
+//}
 
-.carousel .btn {
-  border: none;
-  color: transparent;
-}
+//.carousel .btn {
+//  border: none;
+//  color: transparent;
+//}
 
-.carousel-control-prev-icon:after {
-  content: none;
-}
+//.carousel-control-prev-icon:after {
+//  content: none;
+//}
 
-.carousel-control-next-icon:after {
-  content: none;
-}
+//.carousel-control-next-icon:after {
+//  content: none;
+//}
 
 #quotes .blockquote {
   height: 100px;
@@ -1060,11 +1056,6 @@ main {
   padding: 5%;
 }
 
-.carousel-control-next-icon {
-  // background-image: url("https://pagina-mama.s3.amazonaws.com/assets2/icons/next.png");
-}
-
-.carousel-control-prev-icon {}
 
 #accordion ul {
   text-align: left;
@@ -1222,197 +1213,174 @@ img {
     background-size: 300% 125% !important;
     background-position: center !important;
   }
-
+}
   .e img {
-    min-height: 350 !important;
-
-    max-width: 100vw !important;
+    max-height: 350px !important;
+    height:auto!Important;
+    max-height: 100% !important;
   }
 
-  #galeria-proyectos h3 {
-    margin-top: 25% !important;
-    margin-bottom: 2% !important;
+
+  //.carousel-control
+  //}
+
+  a {
+    text-decoration: none !important;
+    text-transform: capitalize !Important;
   }
 
-  #galeria-proyectos .container {
-    height: 400px;
+  #servicios > div > div {
+    background: #ede3d6 !important;
+    text-transform: capitalize !important;
   }
 
-  #galeria-proyectos>div>div.e>div>a.carousel-control-next {
-    height: 100px;
-    margin-top: 23px;
-  }
 
-  #galeria-proyectos>div>div.e>div>a.carousel-control-next,
-  #galeria-proyectos>div>div.e>div .carousel-control-next-icon::after,
-  #galeria-proyectos>div>div.e>div>a.carousel-control-prev,
-  #galeria-proyectos>div>div.e>div .carousel-control-prev-icon::after {
-    height: 50px;
-    margin-top: 60px;
-    width: 20px;
-    margin-inline: auto;
-  }
-}
-
-a {
-  text-decoration: none !important;
-  text-transform: capitalize !Important;
-}
-
-#servicios>div>div {
-  background: #ede3d6 !important;
-  text-transform: capitalize !important;
-}
-
-
-#hero-heading {
-  font-variant: normal !important;
-  font-family: 'the-seasons', sans-serif
+  #hero-heading {
+    font-variant: normal !important;
+    font-family: 'the-seasons', sans-serif
     /***** Section *****/
     /***** End Section *****/
   ;
-  font-weight: bolder;
-}
+    font-weight: bolder;
+  }
 
 
-a:active,
-li:active,
-a:hover,
-li:hover {
-  text-decoration: none !important;
-  background-color: none !Important;
-}
+  a:active,
+  li:active,
+  a:hover,
+  li:hover {
+    text-decoration: none !important;
+  }
 
 
-.column {
-  width: 50% !Important;
-  float: left !Important;
-  padding: 10px !important;
-}
+  .column {
+    width: 50% !Important;
+    float: left !Important;
+    padding: 10px !important;
+  }
 
 
-.dropdown-menu-content {
-  column-count: 2 !important;
-  min-width: 15rem !important;
-  column-gap: 20px;
-  overflow-x: visible !important;
-}
+  .dropdown-menu-content {
+    column-count: 2 !important;
+    min-width: 15rem !important;
+    column-gap: 20px;
+    overflow-x: visible !important;
+  }
 
-.dropdown-menu {
-  margin-left: auto;
-  margin-right: auto;
+  .dropdown-menu {
+    margin-left: auto;
+    margin-right: auto;
 
-  overflow-x: visible !important;
-  min-width: fit-content !important;
-}
-
-
-#root>div.container-fluid.m-0.p-0.overflow-scroll.horizontal-scrollable {
-  overflow: visible !important;
-}
+    overflow-x: visible !important;
+    min-width: fit-content !important;
+  }
 
 
-.nav-item,
-.dropdown-toggle,
-.nav-link {
-  font-family: "the-seasons", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-#root>section:nth-child(14)>div>div>div>a {
-  background-color: transparent;
-}
-
-div {
-  font-family: "tt-commons-pro", sans-serif;
-  font-weight: lighter;
-  letter-spacing: calc(add(normal, normal));
-  letter-spacing: calc(add(normal, normal));
-
-  letter-spacing: calc(add(normal, normal));
-}
-
-
-.city-firstcarousel {
-  overflow-x: scroll !important;
-}
-
-
-
-//
-//body {
-//  background-color: $background !Important;
-//}
-.bg-darkblue {
-  background: $darkblue !Important;
-}
-
-.accordion {
-  background: transparent;
-}
-
-.accordion-flush .accordion-button:focus {
-  background: $background !important;
-  color: $brown !Important;
-}
-
-button.accordion-button {
-  background: $secondBackground !important;
-
-  font-family: "the-seasons", sans-serif;
-  font-size: inherit;
-}
-
-.accordion-body * {
-  text-indent: 1rem !important;
-  list-style-position: inside;
-}
-
-@media screen and (max-width: 700px) {
-
-  .accordion-body *,
-  .accordion-body * * {
+  #root > div.container-fluid.m-0.p-0.overflow-scroll.horizontal-scrollable {
     overflow: visible !important;
   }
 
-  #accordion {
-    width: 100% !important;
-    padding: auto !important;
-    margin: auto !Important;
+
+  .nav-item,
+  .dropdown-toggle,
+  .nav-link {
+    font-family: "the-seasons", sans-serif;
+    font-weight: 300;
+    font-style: normal;
   }
 
-}
+  #root > section:nth-child(14) > div > div > div > a {
+    background-color: transparent;
+  }
 
-p,
-div {
-  font-size: 1rem;
-}
+  div {
+    font-family: "tt-commons-pro", sans-serif;
+    font-weight: lighter;
 
-dt {
-  margin-bottom: 1rem !important;
-}
+  }
 
-dd {
-  margin-bottom: 1.5rem !important;
-  overflow-y: visible !important;
-}
 
-.photo-card {
-  overflow: hidden !Important;
-  height: 20rem !important;
-  /* Set the desired height */
-}
+  .city-firstcarousel {
+    overflow-x: scroll !important;
+  }
 
-.gallery-image {
-  object-fit: cover !important;
-  /* Ensures the image scales without distortion */
-  width: 100% !important;
-  /* Full width of the container */
-  height: 100% !important;
-  /* Full height of the container */
-}
 
-SECTION:not(:nth-of-type(1)) {
-  MARGIN-TOP: 100PX;
-}
+  //
+  //body {
+  //  background-color: $background !Important;
+  //}
+  .bg-darkblue {
+    background: $darkblue !Important;
+  }
+
+  .accordion {
+    background: transparent;
+  }
+
+  .accordion-flush .accordion-button:focus {
+    background: $background !important;
+    color: $brown !Important;
+  }
+
+  button.accordion-button {
+    background: $secondBackground !important;
+
+    font-family: "the-seasons", sans-serif;
+    font-size: inherit;
+  }
+
+  .accordion-body * {
+    text-indent: 1rem !important;
+    list-style-position: inside;
+  }
+
+  @media screen and (max-width: 700px) {
+    .accordion-body *,
+    .accordion-body * * {
+      overflow: visible !important;
+    }
+
+    #accordion {
+      width: 100% !important;
+      margin: auto !Important;
+    }
+
+  }
+
+
+  p,
+  div {
+    font-size: 1rem;
+  }
+
+  dt {
+    margin-bottom: 1rem !important;
+  }
+
+  dd {
+    margin-bottom: 1.5rem !important;
+    overflow-y: visible !important;
+  }
+
+  .photo-card {
+    overflow: hidden !Important;
+    height: 20rem !important;
+    /* Set the desired height */
+  }
+
+  .gallery-image {
+    object-fit: cover !important;
+    /* Ensures the image scales without distortion */
+    width: 100% !important;
+    /* Full width of the container */
+    height: 100% !important;
+    /* Full height of the container */
+  }
+
+  SECTION:not(:nth-of-type(1)) {
+    MARGIN-TOP: 100PX;
+  }
+
+  img {
+    overflow: hidden !important;
+  }
