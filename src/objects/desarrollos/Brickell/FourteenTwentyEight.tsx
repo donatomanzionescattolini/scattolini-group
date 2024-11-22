@@ -1,21 +1,21 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
 export default function FourteenTwentyEight() {
-    const FourteenTwentyEightObject = new Desarrollo();
+    const FourteenTwentyEightObject = new Project();
     FourteenTwentyEightObject.banner = true;
     FourteenTwentyEightObject.area = Brickell();
     FourteenTwentyEightObject.numberOfImages = 39;
 
     FourteenTwentyEightObject.name = "1428-brickell";
     FourteenTwentyEightObject.title = "The Residences at 1428 Brickell";
-    FourteenTwentyEightObject.subtitulo = "Tu vida. A tu manera.";
-    FourteenTwentyEightObject.introduccion = [
+    FourteenTwentyEightObject.subtitle = "Tu vida. A tu manera.";
+    FourteenTwentyEightObject.introduction = [
         " Desde su concepción, The Residences at 1428 Brickell fue cuidadosamente planificada como una torre en la que todo concepto mereció una minuciosa valoración. La atención puesta en cada detalle es el resultado de una búsqueda escrupulosa e imaginativa para que las comodidades se conjuguen armónicamente con los espacios comunes y la privacidad de cada residente.",
         " El diseño audaz y la comodidad sin límites reinan The Residences  at 1428 Brickell. Aquí, los residentes pueden disfrutar al máximo  de sus hogares, ya que cada detalle ha sido pensado para  promover su bienestar. Cada residencia maximiza la luz y el espacio, dos características  clave en una torre residencial urbana. Todas las residencias tienen  fachadas de vidrio, y terrazas que integran el interior y el exterior  con vistas a la bahía de Biscayne y al océano Atlántico. De día, el  sol brilla sobre las azules aguas del mar y por la noche las luces  de la ciudad brillan a la distancia",
     ];
-    FourteenTwentyEightObject.caracteristicas = {
-        edificio: (
+    FourteenTwentyEightObject.traits = {
+        building: (
             <ul>
                 <li>Rascacielos de 70 pisos que hará historia en el perfil</li>
                 <li>urbano de Miami</li>
@@ -76,7 +76,7 @@ export default function FourteenTwentyEight() {
                 </li>
             </ul>
         ),
-        amenidades: (
+        amenities: (
             <ul>
                 <li>Conserje de bienestar, a un paso o mensaje de texto</li>
                 <li>Servicio de aparcacoches y seguridad las 24 horas</li>

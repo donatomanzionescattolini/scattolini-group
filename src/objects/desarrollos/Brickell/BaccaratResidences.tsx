@@ -1,11 +1,11 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 
 import Brickell from "../../areas/Brickell.tsx";
 
 export default function BaccaratResidences() {
 
 
-    const baccaratResidencesObject = Object.getPrototypeOf(Desarrollo);
+    const baccaratResidencesObject = Object.getPrototypeOf(Project);
     baccaratResidencesObject.banner = true;
     baccaratResidencesObject.area = Brickell();
 

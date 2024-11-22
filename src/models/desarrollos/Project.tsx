@@ -14,7 +14,7 @@ class Constructora {
     }
 }
 
-class Desarrollo {
+class Project {
     [x: string]: {
         añoDeConstrucciónOFinalización: any;
         constructora: any;
@@ -29,15 +29,15 @@ class Desarrollo {
 
     public name: string;
 
-    public caracteristicas: caracteristicas | React.ReactNode;
+    public traits: caracteristicas | React.ReactNode;
 
-    public introduccion: string[];
+    public introduction: string[];
 
     public title: string | JSX.Element;
 
-    public subtitulo: string | JSX.Element;
+    public subtitle: string | JSX.Element;
 
-    public amenidades?: string[] | Map<string, string[]>;
+    public amenities?: string[] | Map<string, string[]>;
     public banner?: boolean;
     video?: ReactNode;
 
@@ -54,7 +54,7 @@ class Desarrollo {
         numberOfBathrooms: number | string | { start: number; end: number };
         numberOfRooms: number | { start: number; end: number } | string;
     };
-    direccion: string;
+    address: string;
     añoDeConstrucciónOFinalización: number;
     piesCuadrados: number | { start: number; end: number } | string;
     ubicación: string | ReactNode;
@@ -73,11 +73,11 @@ class Desarrollo {
     displayAmenidades() {
         let el: ReactNode = <></>;
         const els: ReactNode[] = [];
-        if (this.amenidades instanceof Array) {
-            this.amenidades.forEach((a) => els.push(<li>{a}</li>));
+        if (this.amenities instanceof Array) {
+            this.amenities.forEach((a) => els.push(<li>{a}</li>));
             el = <ul>{els}</ul>;
-        } else if (this.amenidades instanceof Map) {
-            this.amenidades.forEach((am: string[], type: string) => {
+        } else if (this.amenities instanceof Map) {
+            this.amenities.forEach((am: string[], type: string) => {
                 const amenidadesItem = am.map((a) => <li>{a}</li>);
                 els.push(
                     <>
@@ -178,10 +178,10 @@ class Desarrollo {
     createCaracteristicas(): React.ReactNode | caracteristicas {
         return {
             residencias: <>{this.displayCaracteristicasResidencias()}</>,
-            edificio: <>{this.displayCaracteristicasEdificio()}</>,
-            amenidades: <>{this.displayAmenidades()}</>,
+            building: <>{this.displayCaracteristicasEdificio()}</>,
+            amenities: <>{this.displayAmenidades()}</>,
         };
     }
 }
 
-export default Desarrollo;
+export default Project;

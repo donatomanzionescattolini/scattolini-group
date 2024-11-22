@@ -18,7 +18,7 @@ import {
 
 import Areas from "../objects/areas/Areas.tsx";
 import {getDesarrollosForArea} from "../objects/desarrollos/Desarrollos.ts";
-import Desarrollo from "../models/desarrollos/Desarrollo.tsx";
+import Project from "../models/desarrollos/Project.tsx";
 import {Area} from "../models/areas/Area.tsx";
 
 const Nav = () => {
@@ -31,7 +31,7 @@ const Nav = () => {
     const [areas] = useState(Areas());
     const [filteredAreas, setFilteredAreas] = useState<Array<Area>>(areas);
 
-    const [allDesarrollos] = useState<Desarrollo[]>(
+    const [allDesarrollos] = useState<Project[]>(
         Areas()
             .map((area) => [...getDesarrollosForArea(area)])
             .reduce((prev, cur) => [...prev, ...cur])
@@ -39,7 +39,7 @@ const Nav = () => {
 
 
     const [filteredDesarrollos, setFilteredDesarrollos] =
-        useState<Desarrollo[]>(allDesarrollos);
+        useState<Project[]>(allDesarrollos);
 
 
     const [searchQueryDesarrollo, setSearchQueryDesarrollo] = useState("");

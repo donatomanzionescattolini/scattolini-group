@@ -1,8 +1,8 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
 export default function WaldorfAstoria() {
-    const WaldorfAstoriaObject = new Desarrollo();
+    const WaldorfAstoriaObject = new Project();
 
 
     WaldorfAstoriaObject.name = "waldorf-astoria";
@@ -13,8 +13,8 @@ export default function WaldorfAstoria() {
                                           title="YouTube video player"
                                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                           allowFullScreen></iframe>);
-    WaldorfAstoriaObject.caracteristicas = {
-        edificio: (
+    WaldorfAstoriaObject.traits = {
+        building: (
             <ul>
                 <li>
                     Diseñado conceptualmente por el arquitecto de renombre mundial
@@ -112,13 +112,13 @@ export default function WaldorfAstoria() {
                 </li>
             </ul>
         ),
-        amenidades: undefined,
+        amenities: undefined,
     };
-    WaldorfAstoriaObject.introduccion = [
+    WaldorfAstoriaObject.introduction = [
         "Waldorf Astoria Miami presenta a la ciudad una de las marcas de hoteles de lujo más prestigiosas del mundo, propiedad de Hilton Hotels. La torre ofrece 100 pisos de residencias. Los arquitectos de la firma Sieger Suárez diseñaron el edificio para parecerse a una pila de cubos de vidrio apilados de manera desigual. Con 1,049 pies de altura, Waldorf Astoria Hotel and Residences Miami es la torre más alta de Miami y el primer rascacielos superalto de Miami. Las residencias tienen vistas espectaculares de la Bahía de Biscayne, el Puerto de Miami, Brickell Avenue, el centro de Miami, Key Biscayne y South Beach. La ubicación perfecta de Waldorf Astoria Miami permite a los residentes vivir a pocos minutos del nuevo Miami World Center, varias atracciones culturales, arte, turismo y moda.",
     ];
     WaldorfAstoriaObject.title = "Waldorf Astoria";
-    WaldorfAstoriaObject.subtitulo = "";
+    WaldorfAstoriaObject.subtitle = "";
     WaldorfAstoriaObject.numberOfImages = 51;
     return WaldorfAstoriaObject;
 }

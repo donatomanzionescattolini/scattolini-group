@@ -1,11 +1,11 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import CoralGables from "../../areas/CoralGables.tsx";
 
 export default function TheAvenue() {
-    const TheAvenueObject = new Desarrollo();
+    const TheAvenueObject = new Project();
     TheAvenueObject.name = "the-avenue";
-    TheAvenueObject.caracteristicas = {
-        edificio: (
+    TheAvenueObject.traits = {
+        building: (
             <>
                 <dl>
                     <dt>Ubicación</dt>
@@ -62,7 +62,7 @@ export default function TheAvenue() {
                 </ul>
             </>
         ),
-        amenidades: (
+        amenities: (
             <>
                 <ul>
                     <li>
@@ -91,7 +91,7 @@ export default function TheAvenue() {
             </>
         ),
     };
-    TheAvenueObject.introduccion = [
+    TheAvenueObject.introduction = [
         "Creado por el estudio de arquitectura líder Bermello Ajamil & Partners, The Avenue cobra vida con un diseño inspirado en el clasicismo mediterráneo. Descubra un edificio esculpido y atemporal que encajará perfectamente en The City Beautiful mientras se destaca como una dirección emblemática",
 
         "Cada residencia se completa con acabados de buen gusto y muebles y decoración seleccionados por expertos de Adriana Hoyos Design Studio. Después de redefinir el lujo tropical durante casi tres décadas, el equipo ahora dejará su huella en la mejor dirección de Coral Gables",
@@ -99,7 +99,7 @@ export default function TheAvenue() {
         'Todos los partidos. Todos los acabados. Cada mueble. The Avenue es lo que significa estar verdaderamente "listo para mudarse".',
     ];
     TheAvenueObject.title = "The Avenue";
-    TheAvenueObject.subtitulo = "La esencia de la avenida Coral Gables";
+    TheAvenueObject.subtitle = "La esencia de la avenida Coral Gables";
     TheAvenueObject.numberOfImages = 27;
     TheAvenueObject.banner = true;
     TheAvenueObject.area = CoralGables();

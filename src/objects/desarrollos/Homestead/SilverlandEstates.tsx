@@ -1,14 +1,14 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Homestead from "../../areas/Homestead.tsx";
 
 export default function SilverlandEstates() {
-    const SilverlandEstates = new Desarrollo();
+    const SilverlandEstates = new Project();
     SilverlandEstates.name = "silverland-estates";
     SilverlandEstates.title = "Silverland Estates";
-    SilverlandEstates.subtitulo = "";
-    SilverlandEstates.caracteristicas = {edificio: <></>, residencias: <></>, amenidades: <></>};
+    SilverlandEstates.subtitle = "";
+    SilverlandEstates.traits = {building: <></>, residencias: <></>, amenities: <></>};
 
-    SilverlandEstates.introduccion = [];
+    SilverlandEstates.introduction = [];
     SilverlandEstates.area = Homestead();
 
     return SilverlandEstates;

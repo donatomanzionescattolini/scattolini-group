@@ -1,13 +1,13 @@
 import React from 'react'
-import Desarrollo from '../../../models/desarrollos/Desarrollo';
+import Project from '../../../models/desarrollos/Project.tsx';
 import FtLauderdale from '../../areas/FtLauderdale';
 
 export default function NattivoFtLauderdale() {
-    const NatiivoFtLauderdaleObject = new Desarrollo(FtLauderdale());
+    const NatiivoFtLauderdaleObject = new Project(FtLauderdale());
     NatiivoFtLauderdaleObject.area = FtLauderdale();
     NatiivoFtLauderdaleObject.name = "natiivo-ft-lauderdale";
-    NatiivoFtLauderdaleObject.caracteristicas = {
-        edificio: <ul>
+    NatiivoFtLauderdaleObject.traits = {
+        building: <ul>
             <li>Pisos:48</li>
             384 residencias llave en mano
             <li>Residencias: 384</li>
@@ -32,7 +32,7 @@ export default function NattivoFtLauderdale() {
                 <li>Tarifas Preferenciales y Reservaciones Prioritarias</li>
             </ul>
         </>,
-        amenidades: <>
+        amenities: <>
             <ul>
 
                 <li>Piscina en la azotea con impresionantes vistas</li>
@@ -48,18 +48,18 @@ export default function NattivoFtLauderdale() {
         </>
     };
     NatiivoFtLauderdaleObject.title = "Natiivo | Ft. Lauderdale";
-    NatiivoFtLauderdaleObject.subtitulo = "Un nuevo impulso. Una nueva era. Un nuevo Fort Lauderdale.";
+    NatiivoFtLauderdaleObject.subtitle = "Un nuevo impulso. Una nueva era. Un nuevo Fort Lauderdale.";
     NatiivoFtLauderdaleObject.numberOfImages = 38;
     NatiivoFtLauderdaleObject.video =
         <iframe width="1080" height="608" src="https://www.youtube.com/embed/xQe3MFkbhUc?autoplay=1"
                 title="Natiivo Fort Lauderdale - First Turnkey, Residential &amp; Hospitality Property in Fort Lauderdale, FL"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-sharel"
                 referrerPolicy="strict-origin-when-cross-origin" allowFullScreen autoFocus></iframe>
-    NatiivoFtLauderdaleObject.direccion = "";
+    NatiivoFtLauderdaleObject.address = "";
     NatiivoFtLauderdaleObject.añoDeConstrucciónOFinalización = 2022;
     NatiivoFtLauderdaleObject.banner = true;
 
-    NatiivoFtLauderdaleObject.introduccion = ["Natiivo Fort Lauderdale es la primera propiedad residencial y hotelera llave en mano en Fort Lauderdale. Diseñado, construido y con licencia para alquileres a corto plazo, Natiivo ofrece una casa compartida oportunidad que permite a los residentes una forma inteligente de poseer. Una icónica torre de 40 pisos en el centro de la ciudad epicentro, Natiivo ofrecerá un estilo de vida flexible de espacios de diseño, comodidades sin precedentes y la muy lo mejor de Fort Lauderdale."]
+    NatiivoFtLauderdaleObject.introduction = ["Natiivo Fort Lauderdale es la primera propiedad residencial y hotelera llave en mano en Fort Lauderdale. Diseñado, construido y con licencia para alquileres a corto plazo, Natiivo ofrece una casa compartida oportunidad que permite a los residentes una forma inteligente de poseer. Una icónica torre de 40 pisos en el centro de la ciudad epicentro, Natiivo ofrecerá un estilo de vida flexible de espacios de diseño, comodidades sin precedentes y la muy lo mejor de Fort Lauderdale."]
     return NatiivoFtLauderdaleObject
 
         ;

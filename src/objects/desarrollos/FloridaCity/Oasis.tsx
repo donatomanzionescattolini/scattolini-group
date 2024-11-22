@@ -1,18 +1,18 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import FloridaCity from "../../areas/FloridaCity.tsx";
 
 export default function Oasis() {
-    const OasisObject = new Desarrollo();
+    const OasisObject = new Project();
     OasisObject.name = "oasis";
     OasisObject.title = "Oasis";
-    OasisObject.subtitulo = "";
-    OasisObject.caracteristicas = {
-        edificio: <></>,
+    OasisObject.subtitle = "";
+    OasisObject.traits = {
+        building: <></>,
         residencias: <></>,
-        amenidades: <></>,
+        amenities: <></>,
     };
 
-    OasisObject.introduccion = [];
+    OasisObject.introduction = [];
     OasisObject.area = FloridaCity();
 
     return OasisObject;

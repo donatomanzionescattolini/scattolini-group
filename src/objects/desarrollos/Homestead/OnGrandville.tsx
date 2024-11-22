@@ -1,13 +1,13 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Homestead from "../../areas/Homestead";
 
 export default function OnGrandville() {
-    const OnGrandville = new Desarrollo(Homestead());
+    const OnGrandville = new Project(Homestead());
     OnGrandville.name = "on-grandville";
     OnGrandville.title = "On Grandville";
     OnGrandville.numberOfImages = 0;
-    OnGrandville.amenidades = [];
-    OnGrandville.introduccion = [];
+    OnGrandville.amenities = [];
+    OnGrandville.introduction = [];
     OnGrandville.residencias = [];
     OnGrandville.edificio = {
         añoDeConstrucciónOFinalización: 0,
@@ -22,13 +22,13 @@ export default function OnGrandville() {
     };
     OnGrandville.añoDeConstrucciónOFinalización = 0;
     OnGrandville.constructora = "Onx";
-    OnGrandville.introduccion = [
+    OnGrandville.introduction = [
         "On Grandville es una vibrante comunidad de 165 casas adosadas recientemente construidas. Estas casas se han diseñado maravillosamente y están totalmente hormigonadas. Cada vivienda viene equipada con 4 dormitorios, 3 baños completos, moderna cocina abierta, comedor y sala para invitados, electrodomésticos energéticamente eficientes, balcón, una moderna terraza en la azotea y acceso a espacios comunitarios. Las casas Onx se construyen utilizando características de diseño X+ Construction™ como ventanas y puertas a prueba de huracanes, encimeras de cuarzo y suelos de baldosas de porcelana. La ubicación privilegiada de On Grandville, junto a la US1, facilita el acceso a la autopista Florida Turnpike, a las tiendas y proporcionando rutas directas a las actividades de conveniencia de los alrededores. Estas rutas principales ofrecen acceso directo a los Cayos de Florida, al centro de Dadeland y a las famosas playas y atracciones de Miami",
     ];
     OnGrandville.ubicación = "14505 SW 260th St. Homestead, FL 33032";
     OnGrandville.area = Homestead();
 
-    OnGrandville.caracteristicas = [];
+    OnGrandville.traits = [];
 
     OnGrandville.numberOfBathrooms = 3;
     OnGrandville.numberOfParkingSpots = 2;
@@ -83,8 +83,8 @@ export default function OnGrandville() {
         "Ventanas y Puertas a Prueba de Huracanes",
     ]);
 
-    OnGrandville.caracteristicas = OnGrandville.createCaracteristicas();
-    OnGrandville.amenidades = [
+    OnGrandville.traits = OnGrandville.createCaracteristicas();
+    OnGrandville.amenities = [
         "Patios de juegos",
         "Área de Barbacoas",
         "Parque de Perros",
@@ -135,6 +135,6 @@ export default function OnGrandville() {
     //   "Cámaras de seguridad exteriores",
     //   "Cortinas para ventanas",
     // ];
-    OnGrandville.caracteristicas = OnGrandville.createCaracteristicas();
+    OnGrandville.traits = OnGrandville.createCaracteristicas();
     return OnGrandville;
 }

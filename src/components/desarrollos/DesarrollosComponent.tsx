@@ -2,18 +2,18 @@ import { MDBCard, MDBCardFooter, MDBCardImage, MDBCardLink, MDBCol, MDBContainer
 import Areas from "../../objects/areas/Areas.tsx";
 import { useState } from "react";
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
-import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../models/desarrollos/Project.tsx";
 import { Area } from "../../models/areas/Area.tsx";
 
 interface DesarrollosComponentProps {
     area?:Area,
-    desarrollo?: Desarrollo
+    desarrollo?: Project
 }
 export default function Desarrollos(props:DesarrollosComponentProps) {
 
     const [areas] = useState(Areas());
 
-    let desarrollos = new Array<Desarrollo>();
+    let desarrollos = new Array<Project>();
 
     let index = 0;
     const desarrollosElementArray = new Array<React.JSX.Element>();
@@ -39,7 +39,7 @@ index = index+1;
         desarrollos = desarrollos.filter(d => props.desarrollo!.name == d.name);
 
 
-        desarrollos.forEach((desarrollo: Desarrollo) => {
+        desarrollos.forEach((desarrollo: Project) => {
             index = index + 1;
             desarrollosElementArray.push(<MDBCol md="4" key={index} className="mb-4">
                 <MDBCard className="photo-card">

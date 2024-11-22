@@ -1,13 +1,13 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 
 export default function TerraSol() {
-    const TerraSolObject = new Desarrollo();
+    const TerraSolObject = new Project();
     TerraSolObject.name = "terra-sol";
     TerraSolObject.title = "Terra Sol";
-    TerraSolObject.subtitulo = "";
-    TerraSolObject.caracteristicas = {edificio: <></>, residencias: <></>, amenidades: <></>};
+    TerraSolObject.subtitle = "";
+    TerraSolObject.traits = {building: <></>, residencias: <></>, amenities: <></>};
 
-    TerraSolObject.introduccion = [];
+    TerraSolObject.introduction = [];
 
 
     return TerraSolObject;

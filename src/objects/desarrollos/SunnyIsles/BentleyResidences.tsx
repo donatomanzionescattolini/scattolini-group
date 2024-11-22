@@ -1,14 +1,14 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
 
 export default function BentleyResidences() {
-    const BentleyResidencesObject = new Desarrollo();
+    const BentleyResidencesObject = new Project();
 
     BentleyResidencesObject.name = "bentley-residences";
 
 
-    BentleyResidencesObject.caracteristicas = {
-        edificio: (
+    BentleyResidencesObject.traits = {
+        building: (
             <>
                 <dl>
                     <dt>Pisos</dt>
@@ -43,7 +43,7 @@ export default function BentleyResidences() {
                 </ul>
             </>
         ),
-        amenidades: (
+        amenities: (
             <>
                 <ul>
                     <li>Gimnasio de última generación</li>
@@ -58,7 +58,7 @@ export default function BentleyResidences() {
             </>
         ),
     };
-    BentleyResidencesObject.introduccion = [
+    BentleyResidencesObject.introduction = [
         "Bentley Residences se eleva 60 pisos con un diseño arquitectónico inigualable que incorpora una pared plateada reflectante artística. Las residencias varían en tamaño de 3,500 a 9,000 pies cuadrados, y todas cuentan con vista al mar. La propiedad es la torre residencial más alta en una playa de Estados Unidos. Las comodidades incluyen un cine, restaurante, bar, gimnasio, piscina, spa, salón de cigarros, cabañas y jardines. La torre ha sido diseñada de acuerdo con la certificación del Florida Green Building Council (FLGC) y otras regulaciones ambientales, lo que garantiza la protección del medio ambiente local y minimiza el impacto en la vida silvestre local. La ubicación de Bentley Residences Miami en la pintoresca Collins Avenue ofrece proximidad a la hermosa playa y al Océano Atlántico",
     ];
     BentleyResidencesObject.video =
@@ -72,7 +72,7 @@ export default function BentleyResidences() {
         ></iframe>
     ;
     BentleyResidencesObject.title = "Bentley Residences";
-    BentleyResidencesObject.subtitulo = "Espacio que puedes abrazar";
+    BentleyResidencesObject.subtitle = "Espacio que puedes abrazar";
     BentleyResidencesObject.numberOfImages = 47;
     BentleyResidencesObject.banner = true;
     BentleyResidencesObject.area = SunnyIsles();

@@ -1,11 +1,11 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import BayHarbor from "../../areas/BayHarbor.tsx";
 
 export default function LaBaia() {
-    const LaBaiaObject = new Desarrollo();
+    const LaBaiaObject = new Project();
     LaBaiaObject.name = 'la-baia';
-    LaBaiaObject.caracteristicas = {
-        edificio: <dl>
+    LaBaiaObject.traits = {
+        building: <dl>
             <dt>Ubicación</dt>
             <dd>9481 East Bay Harbor Dr, Islas de Bay Harbor, FL 33154, Estados Unidos
             </dd>
@@ -48,7 +48,7 @@ export default function LaBaia() {
                 <li>Suelo de piedra de mármol natural en baño principal</li>
                 <li>Ducha con mampara de vidrio con dos cabezales de ducha tipo lluvia</li>
             </ul>
-        </>, amenidades: <>
+        </>, amenities: <>
             <ul>
                 <li>20,000 pies cuadrados de comodidades estilo centro turístico; incluyendo más de 8,500 pies cuadrados
                     de
@@ -87,10 +87,10 @@ export default function LaBaia() {
             </ul>
         </>
     };
-    LaBaiaObject.introduccion = ["La Baia Bay North es un edificio íntimo de 8 pisos frente al mar. El equipo de Revuelta Architecture creó un estilo elegante y contemporáneo. Ofrece comodidades de lujo y excelentes vistas al mar. Las 57 residencias están disponibles en configuraciones de uno a cuatro dormitorios; Todas ellas permiten una gran cantidad de luz natural y enmarcan impresionantes vistas a todas las habitaciones. Además, La Baia North cuenta con una ubicación ideal que está conectada con tiendas, restaurantes y opciones de entretenimiento, campos de golf, yates y paseos en bote, aeropuertos cercanos y más.\n" +
+    LaBaiaObject.introduction = ["La Baia Bay North es un edificio íntimo de 8 pisos frente al mar. El equipo de Revuelta Architecture creó un estilo elegante y contemporáneo. Ofrece comodidades de lujo y excelentes vistas al mar. Las 57 residencias están disponibles en configuraciones de uno a cuatro dormitorios; Todas ellas permiten una gran cantidad de luz natural y enmarcan impresionantes vistas a todas las habitaciones. Además, La Baia North cuenta con una ubicación ideal que está conectada con tiendas, restaurantes y opciones de entretenimiento, campos de golf, yates y paseos en bote, aeropuertos cercanos y más.\n" +
     "\n"];
     LaBaiaObject.title = "La Baia Norte";
-    LaBaiaObject.subtitulo = "";
+    LaBaiaObject.subtitle = "";
     LaBaiaObject.numberOfImages = 66;
     LaBaiaObject.banner = true;
     LaBaiaObject.area = BayHarbor();

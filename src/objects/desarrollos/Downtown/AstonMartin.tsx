@@ -1,10 +1,10 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
 export default function AstonMartin() {
 
 
-    const AstonMartinObject = new Desarrollo();
+    const AstonMartinObject = new Project();
     AstonMartinObject.banner = true;
     AstonMartinObject.area = Downtown();
 
@@ -18,9 +18,9 @@ export default function AstonMartin() {
             style={{opacity: 1, margin: "auto"}}
         ></iframe>;
 
-    AstonMartinObject.direccion = "300 Biscayne Boulevard Way";
-    AstonMartinObject.caracteristicas = {
-        edificio: (
+    AstonMartinObject.address = "300 Biscayne Boulevard Way";
+    AstonMartinObject.traits = {
+        building: (
             <ul className="list-unstyled">
                 <li>
                     <dt>Ubicación:</dt> 300 Biscayne Boulevard Way
@@ -101,7 +101,7 @@ export default function AstonMartin() {
                 </li>
             </ul>
         ),
-        amenidades: (
+        amenities: (
             <ul className="list-unstyled">
                 <li>
                     <h5>Amenidades y Servicios Generales</h5>
@@ -189,13 +189,13 @@ export default function AstonMartin() {
             </ul>
         )
     };
-    AstonMartinObject.introduccion = [
+    AstonMartinObject.introduction = [
         "Durante más de un siglo, el AstonMartinObject.nombre Aston Martin ha sido sinónimo de excelencia en el campo del diseño de automóviles y es una de las marcas más emblemáticas y reconocibles del mundo.  Para su visión de las Residencias Aston Martin en el centro de Miami, Florida, Aston Martin combina una estética de diseño brillante con una ubicación ideal para crear la dirección más llamativa y codiciada de Miami.",
         "Cada aspecto de las residencias Aston Martin en 300 Biscayne Boulevard Way ha sido cuidadosamente considerado para proporcionar el equilibrio perfecto entre la maximización del espacio, la luz y las vistas óptimas, y las necesidades del estilo de vida cosmopolita moderno de hoy.      ",
         "Situado en una de las últimas parcelas de la propiedad frente al mar de Miami en desarrollarse, Aston Martin Residences es una sinfonía de vidrio curvilíneo y acero, que se eleva 66 pisos hacia el cielo. "]
     ;
     AstonMartinObject.title = "Aston Martin Residences";
-    AstonMartinObject.subtitulo = "";
+    AstonMartinObject.subtitle = "";
     AstonMartinObject.numberOfImages = 29;
     return AstonMartinObject;
 }

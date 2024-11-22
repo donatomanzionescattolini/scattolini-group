@@ -1,17 +1,17 @@
 import React from "react";
 
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
 export default function CasaBella() {
-    const CasaBellaObject: Desarrollo = new Desarrollo();
+    const CasaBellaObject: Project = new Project();
 
     CasaBellaObject.banner = true;
     CasaBellaObject.area = Downtown();
 
     CasaBellaObject.name = "casa-bella";
-    CasaBellaObject.caracteristicas = {
-        edificio: (
+    CasaBellaObject.traits = {
+        building: (
             <ul>
                 <li>Número de pisos:</li>
                 <li>Número de unidades: 306</li>
@@ -64,7 +64,7 @@ export default function CasaBella() {
                 </li>
             </ul>
         ),
-        amenidades: (
+        amenities: (
             <ul>
                 <li>Salón para adultos</li>
                 <li>Sala de juegos</li>
@@ -93,13 +93,13 @@ export default function CasaBella() {
             </ul>
         )
     };
-    CasaBellaObject.introduccion = [
+    CasaBellaObject.introduction = [
         "Vuelve a casa con la sofisticación y el lujo italianos ilimitados. Disfruta de impresionantes vistas dondequiera que mires. Rodéese de interiores elevados e inundados de luz, jardines llenos de jardines y comodidades abundantes e inigualables, que incluyen un salón junto a la piscina con una cafetería mediterránea y cócteles artesanales.",
         "CasaBellaObject Residences by B&B Italia ha colaborado con los artistas italianos más célebres para curar su hogar con obras maestras selectas de las colecciones de B&B Italia.",
     ];
     CasaBellaObject.title = "Casa Bella Residences";
-    CasaBellaObject.direccion = "";
-    CasaBellaObject.subtitulo = "Bienvenido a la cima de la sofisticada vida italiana";
+    CasaBellaObject.address = "";
+    CasaBellaObject.subtitle = "Bienvenido a la cima de la sofisticada vida italiana";
     CasaBellaObject.numberOfImages = 16;
 
     return CasaBellaObject;

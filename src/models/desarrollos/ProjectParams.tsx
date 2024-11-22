@@ -1,12 +1,12 @@
-import Desarrollo from "./Desarrollo.tsx";
+import Project from "./Project.tsx";
 
 export interface caracteristicas {
-    edificio: React.ReactNode;
+    building: React.ReactNode;
     residencias: React.ReactNode;
-    amenidades: React.ReactNode;
+    amenities: React.ReactNode;
 }
 
 export interface ProjectParams {
-    desarrollo: Desarrollo;
+    desarrollo: Project;
 
 }

@@ -34,15 +34,15 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         : `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`;
     const [video] = useState<string | JSX.Element>(vid as JSX.Element);
 
-    const [caract] = useState(params.caracteristicas as caracteristicas);
+    const [caract] = useState(params.traits as caracteristicas);
     const [titulo] = useState(params.title);
     const [banner] = useState(params.banner);
-    const [subtitulo] = useState(params.subtitulo);
-    const [introduccion] = useState(params.introduccion);
+    const [subtitulo] = useState(params.subtitle);
+    const [introduccion] = useState(params.introduction);
     const [CaracteristicasAmenidades] = useState(
-        () => caract.amenidades
+        () => caract.amenities
     );
-    const [CaracteristicasEdificio] = useState(() => caract.edificio);
+    const [CaracteristicasEdificio] = useState(() => caract.building);
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
     const [CaracteristicasResidencias] = useState(() => caract.residencias);
     const [pdfUrl] = useState(

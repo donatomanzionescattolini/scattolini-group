@@ -1,24 +1,24 @@
 import React from 'react'
 import Brickell from '../areas/Brickell';
-import Desarrollo from '../../models/desarrollos/Desarrollo';
+import Project from '../../models/desarrollos/Project.tsx';
 
 export default function TemplateAndMainFields() {
-    const ProjectObject = new Desarrollo(Brickell());
+    const ProjectObject = new Project(Brickell());
     ProjectObject.name = "2200-brickell";
     ProjectObject.title = "2200 Brickell";
-    ProjectObject.introduccion = ["", ""];
+    ProjectObject.introduction = ["", ""];
     ProjectObject.area = Brickell();
-    ProjectObject.caracteristicas = {
-        edificio: <></>,
+    ProjectObject.traits = {
+        building: <></>,
         residencias: <></>,
-        amenidades: <></>,
+        amenities: <></>,
     }
     ProjectObject.numberOfImages = 0;
-    ProjectObject.direccion = "";
+    ProjectObject.address = "";
     ProjectObject.numberOfUnits = 0;
     ProjectObject.typeOfUnits = "";
     ProjectObject.numberOfFloors = 0;
-    ProjectObject.subtitulo = "";
+    ProjectObject.subtitle = "";
     ProjectObject.banner = true;
     return ProjectObject;
 }

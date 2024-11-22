@@ -1,22 +1,22 @@
 import React from 'react'
-import Desarrollo from '../../../models/desarrollos/Desarrollo';
+import Project from '../../../models/desarrollos/Project.tsx';
 import Edgewater from '../../areas/Edgewater';
 
 export default function ElleResidences() {
-    const ElleResidencesObject = new Desarrollo();
+    const ElleResidencesObject = new Project();
 
     ElleResidencesObject.name = "elle-residences";
 
     ElleResidencesObject.title = 'Elle Residences';
     ElleResidencesObject.area = Edgewater();
-    ElleResidencesObject.direccion = "3618 NE 5th Ave, Miami, FL 33137, Estados Unidos";
+    ElleResidencesObject.address = "3618 NE 5th Ave, Miami, FL 33137, Estados Unidos";
 
-    ElleResidencesObject.amenidades = [];
-    ElleResidencesObject.introduccion = ["Viva en la pasarela de los distritos de diseño, moda y cultura de Miami en ELLE Residences, inspirada por 80 años de moda y decoración que marcan tendencia: totalmente terminado, perfectamente amueblado y listo para vivir.", "Elle Residences Miami es una colección de 180 residencias elegantes sin restricciones de alquiler. Su diseño interior presenta un guiño a las raíces parisinas de la revista. Un diseño exclusivo de Behar Font & Partners e interiores refinados de The One Atelier se unen para ofrecer una exquisita colección de viviendas en el área de Edgewater. Las comodidades están ubicadas en dos niveles exclusivos e incluyen: un gimnasio de última generación, césped para ejercicios al aire libre, jardín de meditación, spa, piscina en la azotea, salón exclusivo para residentes y más. Edgewater es un vecindario popular para quienes se dedican a las artes o buscan restaurantes de vanguardia en Miami."];
+    ElleResidencesObject.amenities = [];
+    ElleResidencesObject.introduction = ["Viva en la pasarela de los distritos de diseño, moda y cultura de Miami en ELLE Residences, inspirada por 80 años de moda y decoración que marcan tendencia: totalmente terminado, perfectamente amueblado y listo para vivir.", "Elle Residences Miami es una colección de 180 residencias elegantes sin restricciones de alquiler. Su diseño interior presenta un guiño a las raíces parisinas de la revista. Un diseño exclusivo de Behar Font & Partners e interiores refinados de The One Atelier se unen para ofrecer una exquisita colección de viviendas en el área de Edgewater. Las comodidades están ubicadas en dos niveles exclusivos e incluyen: un gimnasio de última generación, césped para ejercicios al aire libre, jardín de meditación, spa, piscina en la azotea, salón exclusivo para residentes y más. Edgewater es un vecindario popular para quienes se dedican a las artes o buscan restaurantes de vanguardia en Miami."];
     ElleResidencesObject.banner = true;
     ElleResidencesObject.numberOfImages = 24;
-    ElleResidencesObject.subtitulo = "El Nuevo Hogar Del Alto Estilo";
-    ElleResidencesObject.caracteristicas = {
+    ElleResidencesObject.subtitle = "El Nuevo Hogar Del Alto Estilo";
+    ElleResidencesObject.traits = {
         residencias: <><p>Adquiera su propio piso en el corazón de Miami.
             Inspiradas por las páginas de ELLE Decor, las residencias combinan el estilo moderno de mediados de siglo y
             el estilo francés contemporáneo con un toque de lujo tropical, para darle un nuevo giro a la vida en el sur
@@ -38,14 +38,14 @@ export default function ElleResidences() {
                 </li>
             </ul>
         </>,
-        edificio:
+        building:
             <ul>
                 <li>25 Pisos</li>
                 <li>180 Residencias de 1 a 2 dormitorios</li>
                 <li>Ubicación: 3618 NE 5th Ave, Miami, FL 33137, Estados Unidos</li>
             </ul>
         ,
-        amenidades:
+        amenities:
             <><p>Descubra una colección de comodidades de estilo de vida diseñadas para una vida elegante y sin
                 esfuerzo. No es solo un apartamento tipo piso. ELLE es su salón, cafetería, club de piscina, área de
                 juegos y mucho más.</p>

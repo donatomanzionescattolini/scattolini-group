@@ -3,7 +3,7 @@ import { MDBCarousel, MDBCarouselItem, MDBCol, MDBContainer, MDBRow } from "mdb-
 import React, { useLayoutEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../models/desarrollos/Project.tsx";
 import { Area } from "../../models/areas/Area.tsx";
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
 
@@ -19,7 +19,7 @@ export default function AreaTemplate(props: AreaProps) {
     const titulo = area.titulo;
     const images = [];
 
-    const [areaDesarrollos] = useState<Set<Desarrollo>>(getDesarrollosForArea(area));
+    const [areaDesarrollos] = useState<Set<Project>>(getDesarrollosForArea(area));
     for (let i = 1; i <= area.numberOfImages; i++) {
         images.push(<Image
             rounded

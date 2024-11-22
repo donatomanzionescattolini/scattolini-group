@@ -1,16 +1,16 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
 export default function W11() {
-    const W11Object = new Desarrollo();
+    const W11Object = new Project();
     W11Object.banner = true;
     W11Object.area = Downtown();
 
     W11Object.name = "w11";
     W11Object.numberOfImages = 12;
     W11Object.title = "West Eleventh Residences";
-    W11Object.subtitulo = "Lleva la vida a una nueva dirección nunca antes imaginada";
-    W11Object.introduccion = [
+    W11Object.subtitle = "Lleva la vida a una nueva dirección nunca antes imaginada";
+    W11Object.introduction = [
         "La vida moderna está en perpetuo movimiento. Siempre estamos encendidos la mudanza. Las residencias en West Eleventh fueron creadas con esa noción en mente. Una experiencia con verdadera flexibilidad de vida para dueños",
 
         "West Eleventh Residences ofrece las primeras residencias de condominios de lujo administradas de manera centralizada que brindan a los propietarios la opción de hospedar 365 días en Airbnb.",
@@ -19,9 +19,9 @@ export default function W11() {
         "oportunidad de ser anfitrión exclusivo en Airbnb.",
         "Todas las comodidades fueron consideradas en West Eleventh, desde las infinitas indulgencias disponibles en el entretenimiento experiencial de tres niveles y el salón culinario hasta un nivel de comodidades vibrante con una piscina estilo centro turístico con áreas de salón privadas. Todo esto, anclado por una presencia callejera que emana naturalmente la energía del emocionante vecindario circundante del edificio.  ",
     ];
-    W11Object.caracteristicas = {
-        amenidades: <></>,
-        edificio: (
+    W11Object.traits = {
+        amenities: <></>,
+        building: (
             <>
                 <ul>
                     <li>44 Historias / 659 residencias de estudios y 1 dormitorio</li>

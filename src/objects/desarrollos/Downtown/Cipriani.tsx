@@ -1,23 +1,23 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
 export default function Cipriani() {
-    const CiprianiObject = new Desarrollo();
+    const CiprianiObject = new Project();
 
     CiprianiObject.banner = true;
     CiprianiObject.area = Downtown();
 
     CiprianiObject.name = "cipriani";
     CiprianiObject.title = "Cipriani Residences";
-    CiprianiObject.subtitulo = "";
+    CiprianiObject.subtitle = "";
     CiprianiObject.numberOfImages = 14;
-    CiprianiObject.introduccion = [
+    CiprianiObject.introduction = [
         "\n" +
         "Brillantemente diseñadas por Arquitectonica y 1508 London, estas elegantes casas ofrecen verdadera comodidad y privacidad, inspiradas en su ubicación y el estilo atemporal de Cipriani. Los espacios interiores y exteriores abrazan el paisaje bañado por el sol, mientras que la estética náutica de la marca informa sutilmente la fachada curva.\n",
         "Vivir en Cipriani Residences Miami es disfrutar de esos estándares de servicio exclusivos establecidos por primera vez en Harry's Bar en 1931 y perfeccionados a lo largo de cuatro generaciones. Se satisfacen los gustos individuales y se anticipan las necesidades con una comprensión intuitiva de cuándo y dónde se requiere su atención.",
     ];
-    CiprianiObject.caracteristicas = {
-        edificio: (
+    CiprianiObject.traits = {
+        building: (
             <div>
                 <p>
                     Una adición distintiva al horizonte de Brickell, la torre de
@@ -96,7 +96,7 @@ export default function Cipriani() {
             </div>
         ),
 
-        amenidades: (
+        amenities: (
             <ul>
                 <li>
                     Entrada privada exclusiva con exuberantes jardines y elegante

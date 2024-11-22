@@ -1,17 +1,17 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import FloridaCity from "../../areas/FloridaCity.tsx";
 
 export default function ParcVillas() {
-    const ParcVillasObject = new Desarrollo();
+    const ParcVillasObject = new Project();
     ParcVillasObject.name = "parc-villas";
     ParcVillasObject.title = "Parc Villas";
-    ParcVillasObject.subtitulo = "";
-    ParcVillasObject.caracteristicas = {
-        edificio: <></>,
+    ParcVillasObject.subtitle = "";
+    ParcVillasObject.traits = {
+        building: <></>,
         residencias: <></>,
-        amenidades: <></>,
+        amenities: <></>,
     };
-    ParcVillasObject.introduccion = [];
+    ParcVillasObject.introduction = [];
     ParcVillasObject.area = FloridaCity();
     return ParcVillasObject;
 }

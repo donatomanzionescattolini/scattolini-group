@@ -1,13 +1,13 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
 
 export default function ShomaBay() {
-    const ShomaBayObject = new Desarrollo();
+    const ShomaBayObject = new Project();
     ShomaBayObject.name = "shoma-bay";
 
-    ShomaBayObject.direccion = "1850 John F Kennedy Causeway, North Bay Village, FL 33141";
-    ShomaBayObject.caracteristicas = {
-        edificio: (
+    ShomaBayObject.address = "1850 John F Kennedy Causeway, North Bay Village, FL 33141";
+    ShomaBayObject.traits = {
+        building: (
             <ul>
                 <li>Número de pisos: 24</li>
                 <li>Número de unidades: 333</li>
@@ -51,7 +51,7 @@ export default function ShomaBay() {
                 </li>
             </ul>
         ),
-        amenidades: (
+        amenities: (
             <ul>
                 <li>Jardin Zen</li>
                 <li>Bodega para Vinos</li>
@@ -71,14 +71,14 @@ export default function ShomaBay() {
             </ul>
         ),
     };
-    ShomaBayObject.introduccion = [
+    ShomaBayObject.introduction = [
         "Escondido en North Bay Village y perfectamente alejado del ritmo apresurado de Miami, Shoma Bay es el primero de su tipo, un lugar donde puedes vivir y jugar con lujo. Un lugar diseñado para aquellos que anhelan integrar su vida, trabajo, bienestar y estilo de vida de juego.",
         "Cada accesorio es intencional, cada detalle está meticulosamente atendido, los espacios de vida muestran lo último en sofisticación contemporánea al tiempo que reflejan las raíces clásicas de la histórica ciudad de Nueva York. ",
     ];
     ShomaBayObject.banner = true;
     ShomaBayObject.area = NorthBayVillage();
     ShomaBayObject.title = "Shoma Bay";
-    ShomaBayObject.subtitulo = "";
+    ShomaBayObject.subtitle = "";
     ShomaBayObject.numberOfImages = 16;
     ShomaBayObject.video =
         <div className="d-flex flex-row p-0 m-0 h-100 embed-responsive justify-content-center">

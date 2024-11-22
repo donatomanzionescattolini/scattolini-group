@@ -1,15 +1,15 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo";
+import Project from "../../../models/desarrollos/Project.tsx";
 import DaniaBeach from "../../areas/DaniaBeach";
 
 
 export default function Atlantica() {
 
 
-    const AtlanticaObject = new Desarrollo();
+    const AtlanticaObject = new Project();
     AtlanticaObject.area = DaniaBeach();
     AtlanticaObject.banner = true;
-    AtlanticaObject.caracteristicas = {
-        edificio: <dl>
+    AtlanticaObject.traits = {
+        building: <dl>
             <dt>Dirección</dt>
             <dd>
                 <address>624 NE 2nd St, Dania Beach, Florida 33304</address>
@@ -50,7 +50,7 @@ export default function Atlantica() {
             <li>Ventiladores de techo.</li>
             <li>Lavadora y secadora en la unidad</li>
         </ul>,
-        amenidades: <>
+        amenities: <>
             <p>Descubre amenidades únicas, diseñadas cuidadosamente para mejorar tu estilo de vida costero mientras
                 agregan conveniencia a tu rutina diaria.</p>
             <ul>
@@ -69,8 +69,8 @@ export default function Atlantica() {
 
     AtlanticaObject.name = "atlantica";
     AtlanticaObject.title = "Atlantica at Dania Beach"
-    AtlanticaObject.introduccion = ["Condominios listos para mudarse ahora en venta a unos cuantos pasos de la playa", "Presentamos Atlantica Dania Beach: condominios listos para mudarse ubicados a solo minutos de la playa. Experimenta una vida contemporánea con acabados de diseñador, espacios abiertos y diseños únicos adaptados para cualquier estilo de vida. Disfruta de una variedad de exclusivas comodidades y aprovecha los destinos populares que están a la vuelta de la esquina, incluyendo el centro de Fort Lauderdale y el renombrado Hard RockHotel. Emprende tu próxima aventura en Atlantica Dania Beach."];
-    AtlanticaObject.subtitulo = "Una Nueva Aventura Te Espera";
+    AtlanticaObject.introduction = ["Condominios listos para mudarse ahora en venta a unos cuantos pasos de la playa", "Presentamos Atlantica Dania Beach: condominios listos para mudarse ubicados a solo minutos de la playa. Experimenta una vida contemporánea con acabados de diseñador, espacios abiertos y diseños únicos adaptados para cualquier estilo de vida. Disfruta de una variedad de exclusivas comodidades y aprovecha los destinos populares que están a la vuelta de la esquina, incluyendo el centro de Fort Lauderdale y el renombrado Hard RockHotel. Emprende tu próxima aventura en Atlantica Dania Beach."];
+    AtlanticaObject.subtitle = "Una Nueva Aventura Te Espera";
     AtlanticaObject.numberOfImages = 38;
 
     return AtlanticaObject;

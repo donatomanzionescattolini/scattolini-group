@@ -1,14 +1,14 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
 export default function Ora() {
-    const OraObject = new Desarrollo();
+    const OraObject = new Project();
     OraObject.banner = true;
     OraObject.area = Brickell();
 
     OraObject.name = "ora";
-    OraObject.caracteristicas = {
-        edificio: (
+    OraObject.traits = {
+        building: (
             <ul>
                 <li>
                     76 pisos que se elevan a más de 900 pies sobre el centro de
@@ -86,7 +86,7 @@ export default function Ora() {
                 <li>Lavadora y secadora en cada residencia</li>
             </ul>
         ),
-        amenidades: (
+        amenities: (
             <ul>
                 EL SALÓN SOCIAL
                 <br></br>
@@ -153,7 +153,7 @@ export default function Ora() {
             </ul>
         ),
     };
-    OraObject.introduccion = [
+    OraObject.introduction = [
         "Presentamos ORA by Casa Tua, un nuevo destino realmente único al que llamar hogar. ORA ofrece residencias de propiedad flexible a corto, mediano y largo plazo, perfectamente ubicadas en Brickell, el Distrito Financiero de Miami. Con residencias cuidadosamente curadas, restaurantes de primer nivel y hermosas áreas sociales dedicadas al arte y la cultura lideradas por la icónica marca Casa Tua, ORA se convertirá en el epicentro de la ciudad.      ",
     ];
     OraObject.title =
@@ -164,7 +164,7 @@ export default function Ora() {
           </span>
         </>;
 
-    OraObject.subtitulo = "Residencias con Alma en el Corazón de Miami";
+    OraObject.subtitle = "Residencias con Alma en el Corazón de Miami";
     OraObject.numberOfImages = 14;
     OraObject.video =
         <iframe

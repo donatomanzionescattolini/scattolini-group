@@ -1,13 +1,13 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 
 export default function SedonaEstates() {
-    const SedonaEstates = {} as Desarrollo;
+    const SedonaEstates = {} as Project;
     SedonaEstates.name = "sedona-estates";
     SedonaEstates.title = "Sedona Estates";
-    SedonaEstates.subtitulo = "";
-    SedonaEstates.caracteristicas = {edificio: <></>, residencias: <></>, amenidades: <></>};
+    SedonaEstates.subtitle = "";
+    SedonaEstates.traits = {building: <></>, residencias: <></>, amenities: <></>};
 
-    SedonaEstates.introduccion = [];
+    SedonaEstates.introduction = [];
 
 
     return SedonaEstates;

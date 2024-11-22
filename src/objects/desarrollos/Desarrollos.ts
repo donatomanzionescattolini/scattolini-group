@@ -54,7 +54,7 @@ import Pinecrest from "../areas/Pinecrest.tsx";
 import SunnyIsles from "../areas/SunnyIsles.tsx";
 import CoralGables from "../areas/CoralGables.tsx";
 import {Area} from "../../models/areas/Area.tsx";
-import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../models/desarrollos/Project.tsx";
 import OnGrandville from "./Homestead/OnGrandville.tsx";
 import FloridaCity from "../areas/FloridaCity.tsx";
 import Jem from "./Downtown/Jem.tsx";
@@ -76,7 +76,7 @@ import Palma from "./MiamiBeach/Palma.tsx";
 
 interface DesarrolloArea {
     area: Area;
-    des: Set<Desarrollo>;
+    des: Set<Project>;
 }
 
 export const desarrollos: DesarrolloArea[] =
@@ -196,7 +196,7 @@ desarrollos.forEach((entry) => {
     return entry;
 });
 
-export function getDesarrollosForArea(area: Area): Set<Desarrollo> {
+export function getDesarrollosForArea(area: Area): Set<Project> {
     return desarrollos.filter((entry) =>
         entry.area.name.toLowerCase().trim().includes(area.name.trim().toLowerCase())
     )[0].des;

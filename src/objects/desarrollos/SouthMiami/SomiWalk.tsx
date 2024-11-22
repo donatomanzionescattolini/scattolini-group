@@ -1,14 +1,14 @@
 import React from 'react'
-import Desarrollo from '../../../models/desarrollos/Desarrollo'
+import Project from '../../../models/desarrollos/Project.tsx'
 import SouthMiami from '../../areas/SouthMiami';
 
 export default function SomiWalk() {
-    const SomiWalkObject = new Desarrollo();
+    const SomiWalkObject = new Project();
     SomiWalkObject.area = SouthMiami();
     SomiWalkObject.name = "somi-walk";
     SomiWalkObject.title = "Somi Walk";
-    SomiWalkObject.caracteristicas = {
-        amenidades: <>
+    SomiWalkObject.traits = {
+        amenities: <>
             <ul>
                 <li>Piscina estilo resort con cabañas</li>
                 <li>Centro de negocios con espacios de</li>
@@ -23,7 +23,7 @@ export default function SomiWalk() {
                 <li>interrupciones.</li>
             </ul>
         </>,
-        edificio: <>
+        building: <>
             <ul>
                 <li>Pisos: 15</li>
                 <li>Residencias: 291</li>
@@ -57,8 +57,8 @@ export default function SomiWalk() {
     };
     SomiWalkObject.numberOfImages = 10;
     SomiWalkObject.banner = true;
-    SomiWalkObject.subtitulo = "El Estilo de Vida Encaminable";
-    SomiWalkObject.introduccion = ["Experimente el codiciado estilo de vida transitable en Somi Walk, ubicado a solo dos cuadras de la Universidad de Miami y Coral Gables. En esta zona de altos ingresos, Fresh Market y Whole Foods son los elementos básicos del vecindario, lo que refleja la afluencia de la comunidad. La próxima remodelación de Sunset Place agregará aún más opciones de restaurantes y tiendas cercanas. Con la casa nueva de menor precio en South Miami a partir de $3.5 millones, Somi Walk está ubicada en un destino privilegiado de rápido crecimiento, que atrae a las mejores empresas por su ubicación y calidad de vida inmejorables.", ""]
+    SomiWalkObject.subtitle = "El Estilo de Vida Encaminable";
+    SomiWalkObject.introduction = ["Experimente el codiciado estilo de vida transitable en Somi Walk, ubicado a solo dos cuadras de la Universidad de Miami y Coral Gables. En esta zona de altos ingresos, Fresh Market y Whole Foods son los elementos básicos del vecindario, lo que refleja la afluencia de la comunidad. La próxima remodelación de Sunset Place agregará aún más opciones de restaurantes y tiendas cercanas. Con la casa nueva de menor precio en South Miami a partir de $3.5 millones, Somi Walk está ubicada en un destino privilegiado de rápido crecimiento, que atrae a las mejores empresas por su ubicación y calidad de vida inmejorables.", ""]
     SomiWalkObject.ubicación = "7090 SW 59TH PLACE, SOUTH MIAMI FL"
     return SomiWalkObject;
 }

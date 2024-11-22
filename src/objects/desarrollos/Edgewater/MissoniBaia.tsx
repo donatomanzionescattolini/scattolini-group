@@ -1,12 +1,12 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
 export default function MissoniBaia() {
-    const MissoniBaiaObject = new Desarrollo();
+    const MissoniBaiaObject = new Project();
     MissoniBaiaObject.name = "missoni-baia";
-    MissoniBaiaObject.direccion = "700 NE 26th Ter, Miami, FL 33137"
-    MissoniBaiaObject.caracteristicas = {
-        edificio: (
+    MissoniBaiaObject.address = "700 NE 26th Ter, Miami, FL 33137"
+    MissoniBaiaObject.traits = {
+        building: (
             <>
                 <ul>
                     <li>Pisos: 57</li>
@@ -59,7 +59,7 @@ export default function MissoniBaia() {
                 </ul>
             </>
         ),
-        amenidades: (
+        amenities: (
             <>
                 <ul>
                     <strong>Amenidades Dignas de un Resort de Lujo</strong>
@@ -255,12 +255,12 @@ export default function MissoniBaia() {
             </>
         ),
     };
-    MissoniBaiaObject.introduccion = [
+    MissoniBaiaObject.introduction = [
         "Las 249 residencias del condominio en Edgewater de Missoni Baia celebran el eterno encanto de la vida frente al agua con un estilo relajado y moderno. En el horizonte de Miami y sobre la costa de East Edgewater, se delinea una figura prominente: Missoni Baia; con una elevación de 57 pisos que abarcan una impresionante longitud de 200 pies a lo largo de Biscayne Bay.",
         "Con un diseño vanguardista y de alto rendimiento, realizado por la prestigiosa firma internacional, Asymptote Architecture, los nuevos y lujosos condominios en Edgewater de Missoni Baia capturan el espíritu innovador y soñador de Missoni. Missoni Baia es como ninguna otra torre residencial en Miami.",
     ];
     MissoniBaiaObject.title = "Missoni Baia";
-    MissoniBaiaObject.subtitulo = "";
+    MissoniBaiaObject.subtitle = "";
     MissoniBaiaObject.numberOfImages = 51;
     MissoniBaiaObject.banner = true;
     MissoniBaiaObject.area = Edgewater();

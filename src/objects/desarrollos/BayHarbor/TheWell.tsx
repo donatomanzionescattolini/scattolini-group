@@ -1,14 +1,14 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import BayHarbor from "../../areas/BayHarbor.tsx";
 
 export default function TheWell() {
-    const TheWellObject = new Desarrollo();
+    const TheWellObject = new Project();
 
     TheWellObject.numberOfImages = 40;
     TheWellObject.banner = true;
     TheWellObject.name = "the-well";
-    TheWellObject.caracteristicas = {
-        edificio: (
+    TheWellObject.traits = {
+        building: (
             <>
                 <ul>
                     <li>
@@ -95,7 +95,7 @@ export default function TheWell() {
                 </ul>
             </>
         ),
-        amenidades: (
+        amenities: (
             <>
                 <ul>
                     <li>Conserje de bienestar, a un paso o mensaje de texto</li>
@@ -155,11 +155,11 @@ export default function TheWell() {
         ),
     };
 
-    TheWellObject.introduccion = [
+    TheWellObject.introduction = [
         "Escondido en Bay Harbor Islands y perfectamente alejado del ritmo apresurado de Miami, THE WELL Bay Harbor Islands es el primero de su tipo: un lugar donde puede vivir y jugar en completo bienestar. Inspiradas en la materialidad y la artesanía tradicionales, The Residences incluye 54 condominios hechos a medida y más de 22,000 pies cuadrados de comodidades, incluido un gimnasio y centro de bienestar de última generación. THE WELL Bay Harbor Islands está diseñado para poner el bienestar en el centro de su vida, creando el tiempo y el espacio para desconectarse, reducir el ritmo y reenfocarse en lo que más importa: su bienestar.",
     ];
     TheWellObject.title = "The Well";
-    TheWellObject.subtitulo = "Bienvenido al Bienestar";
+    TheWellObject.subtitle = "Bienvenido al Bienestar";
     TheWellObject.area = BayHarbor();
     return TheWellObject;
 }

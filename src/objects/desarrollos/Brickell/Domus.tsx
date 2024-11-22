@@ -1,13 +1,13 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
 export default function Domus() {
-    const Domus = new Desarrollo();
+    const Domus = new Project();
     Domus.name = "domus";
     Domus.title = "Domus FLATS"
     Domus.area = Brickell();
-    Domus.caracteristicas = {
-        edificio: (
+    Domus.traits = {
+        building: (
             <ul>
                 <li>Vestíbulo</li>
                 <li>Mini Mercado</li>
@@ -35,7 +35,7 @@ export default function Domus() {
                 <li>Centro de llamadas 24/7</li>
             </ul>
         ),
-        amenidades: (
+        amenities: (
             <>
                 <p>
                     Domus Brickell ofrece un espacio ideal para socializar y
@@ -65,7 +65,7 @@ export default function Domus() {
         ),
     };
 
-    Domus.introduccion = [
+    Domus.introduction = [
         "Bienvenido a Domus, una colección de FLATS (Apartamentos Flexibles para Estancias Temporales) diseñada para adaptarse a tu vida: las comodidades del hogar con el servicio, la seguridad y la consistencia de un hotel en un entorno local, divertido y totalmente conectado. Domus ofrece todos los elementos esenciales con excelente gusto y todas las comodidades que importan. Ubicado en el corazón de Domus Brickell Park, encontrará Peacock Room: un espacio de reunión colectivo y alegre con un ambiente que atrae naturalmente a una multitud y se nutre de la energía del vecindario siempre activo de Brickell.",
     ];
     Domus.banner = true;
@@ -75,7 +75,7 @@ export default function Domus() {
                 frameBorder={0} allowFullScreen/>
     ;
     Domus.title = "Domus FLATS";
-    Domus.subtitulo = "";
+    Domus.subtitle = "";
     Domus.numberOfImages = 7;
     return Domus;
 }

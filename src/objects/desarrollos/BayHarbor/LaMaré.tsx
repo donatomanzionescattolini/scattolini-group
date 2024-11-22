@@ -1,13 +1,13 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import BayHarbor from "../../areas/BayHarbor.tsx";
 
 export default function LaMaré() {
-    const LaMaréObject = new Desarrollo(BayHarbor());
+    const LaMaréObject = new Project(BayHarbor());
 
     LaMaréObject.name = "la-maré";
 
-    LaMaréObject.caracteristicas = {
-        edificio: (
+    LaMaréObject.traits = {
+        building: (
             <>
                 <dl>
                     <dt>Ubicación</dt>
@@ -57,7 +57,7 @@ export default function LaMaré() {
                 </ul>
             </>
         ),
-        amenidades: (
+        amenities: (
             <dl>
                 <dt>Colección Regency</dt>
                 <dd>
@@ -103,11 +103,11 @@ export default function LaMaré() {
             </dl>
         ),
     };
-    LaMaréObject.introduccion = [
+    LaMaréObject.introduction = [
         "La Maré se compone de dos exquisitas torres que ofrecen una experiencia de vida extraordinaria. El Regency Collection es un moderno edificio de cristal definido por su sorprendente belleza, sostenibilidad y refinada sensación de comodidad, con un interior en el que destaca una paleta suave y natural. La Signature Collection, por su parte, es una estructura contemporánea de impresionante diseño con interiores armoniosos.Aquí, la exclusividad es la norma, ya que cada unidad cuenta con ventanas envolventes de suelo a techo que brindan una vista clara de su impresionante estética náutica.Con componentes aerodinámicos, elementos tropicales y el generoso uso de piedra color arena, travertino y maderas aclaradas, los residentes disfrutan de privacidad y se ven envueltos en una atmósfera estilo resort",
     ];
     LaMaréObject.title = "La Maré";
-    LaMaréObject.subtitulo = <p>Bay Harbor Islands<br/><small><em>Espacio y comodidad reinventados</em></small></p>;
+    LaMaréObject.subtitle = <p>Bay Harbor Islands<br/><small><em>Espacio y comodidad reinventados</em></small></p>;
     LaMaréObject.numberOfImages = 24;
     LaMaréObject.banner = true;
 

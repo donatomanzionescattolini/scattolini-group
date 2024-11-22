@@ -1,15 +1,15 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
 export default function FourteenRiverDistrict() {
-    const FourteenRiverDistrictObject = new Desarrollo();
+    const FourteenRiverDistrictObject = new Project();
 
     FourteenRiverDistrictObject.name = "14-river-district";
     FourteenRiverDistrictObject.banner = true;
     FourteenRiverDistrictObject.area = Brickell();
 
-    FourteenRiverDistrictObject.caracteristicas = {
-        edificio: (
+    FourteenRiverDistrictObject.traits = {
+        building: (
             <ul>
                 <li>Piscina estilo resort y cabañas</li>
                 <li>Amplios centros de coworking</li>
@@ -51,7 +51,7 @@ export default function FourteenRiverDistrict() {
                 <li>Paquete de muebles disponible</li>
             </ul>
         ),
-        amenidades: (
+        amenities: (
             <ul>
                 <li>
                     Los espacios comunes de River District 14 están bellamente
@@ -93,13 +93,13 @@ export default function FourteenRiverDistrict() {
             </ul>
         ),
     };
-    FourteenRiverDistrictObject.introduccion = [
+    FourteenRiverDistrictObject.introduction = [
         "Ubicado en el borde del segundo distrito de salud pública más grande del país y a las puertas del río Miami y celebrando las tiendas, restaurantes y entretenimiento del centro de Miami, River District 14 establece un estándar más alto para lo que debería ser un vecindario.",
         "A pocos pasos de la orilla del río y a minutos de la Bahía de Biscayne en barco, río El Distrito 14 ofrece un estilo de vida completo con todas las comodidades necesarias en las cercanías, incluidos restaurantes, tiendas, parques y taxis acuáticos.",
     ];
     FourteenRiverDistrictObject.title = "14 River District";
-    FourteenRiverDistrictObject.subtitulo = "";
+    FourteenRiverDistrictObject.subtitle = "";
     FourteenRiverDistrictObject.numberOfImages = 27;
-    FourteenRiverDistrictObject.direccion = "1420 NW 14th Ave, Miami, FL 33125, Estados Unidos"
+    FourteenRiverDistrictObject.address = "1420 NW 14th Ave, Miami, FL 33125, Estados Unidos"
     return FourteenRiverDistrictObject;
 }

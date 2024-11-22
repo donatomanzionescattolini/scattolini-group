@@ -1,17 +1,17 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo";
+import Project from "../../../models/desarrollos/Project.tsx";
 import MiamiBeach from "../../areas/MiamiBeach";
 
 export default function Palma() {
-    const PalmaObject = new Desarrollo();
+    const PalmaObject = new Project();
     PalmaObject.banner = true;
     PalmaObject.name = "palma";
     PalmaObject.title = "Palma | Miami Beach Residences";
     PalmaObject.numberOfImages = 15;
-    PalmaObject.introduccion = ["Palma Residences Miami Beach es una espectacular torre de condominios en el área de North Beach. Este edificio de 13 pisos ofrece 126 apartamentos de lujo con balcones, que varían de 468 pies cuadrados para un apartamento de una habitación a 1,086 pies cuadrados para una unidad de dos habitaciones. Las comodidades de superlujo incluyen una terraza con una plataforma de piscina ajardinada, asientos, cabañas y un bar; 40 espacios de estacionamiento para vehículos y 140 espacios para bicicletas; y 7,000 pies cuadrados de espacio comercial."];
-    PalmaObject.subtitulo = "Una Experiencia Mediterránea que Comienza en Miami Beach";
+    PalmaObject.introduction = ["Palma Residences Miami Beach es una espectacular torre de condominios en el área de North Beach. Este edificio de 13 pisos ofrece 126 apartamentos de lujo con balcones, que varían de 468 pies cuadrados para un apartamento de una habitación a 1,086 pies cuadrados para una unidad de dos habitaciones. Las comodidades de superlujo incluyen una terraza con una plataforma de piscina ajardinada, asientos, cabañas y un bar; 40 espacios de estacionamiento para vehículos y 140 espacios para bicicletas; y 7,000 pies cuadrados de espacio comercial."];
+    PalmaObject.subtitle = "Una Experiencia Mediterránea que Comienza en Miami Beach";
     PalmaObject.area = MiamiBeach();
-    PalmaObject.caracteristicas = {
-        edificio: <ul>
+    PalmaObject.traits = {
+        building: <ul>
             <li>Edificio emblemático de 14 pisos diseñado por Built Form</li>
             <li>Ubicación privilegiada en Miami Beach, a solo unos pasos de la playa</li>
             <li>Edificio ecológico de vanguardia con tecnología SMART y certificación LEED Gold</li>
@@ -43,7 +43,7 @@ export default function Palma() {
                     ducha de vidrio Accesorios y complementos de estilo europeo premium
                 </li>
             </ul>,
-        amenidades: <>
+        amenities: <>
             <ul>
                 <li>Recepción</li>
                 <li>Vestíbulo de doble altura con ventanas de piso a techo</li>

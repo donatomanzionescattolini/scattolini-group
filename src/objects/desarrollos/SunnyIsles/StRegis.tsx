@@ -1,23 +1,23 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
 
 export default function StRegis() {
-    const StRegisObject = new Desarrollo();
+    const StRegisObject = new Project();
 
 
     StRegisObject.numberOfImages = 52;
     StRegisObject.name = "st-regis";
     StRegisObject.title = "St. Regis® ";
-    StRegisObject.subtitulo = "Vivir exquisito es vivir extraordinario";
-    StRegisObject.introduccion = [
+    StRegisObject.subtitle = "Vivir exquisito es vivir extraordinario";
+    StRegisObject.introduction = [
         "Situado a lo largo de la hermosa costa de South  con exquisitas vistas frente a la bahía, The St. Regis Residences, Miami personifica la vida elegante. Refleja las sensibilidades de aquellos que son impulsados por el conocimiento, exigen excelencia, respetan la tradición y valoran la individualidad por encima de todo.",
         "The St. Regis Residences, Miami representa un futuro impulsado por un pasado histórico. Un lugar donde las nuevas generaciones crearán una vida de momentos legendarios, en hogares únicos para personas que perciben sus legados personales innatamente entrelazados con la rica herencia de Miami.",
         "Desarrollado por Grupo Relacionado e Integra Investments, St. Regis Residences ofrece un diseño majestuoso de Robert AM Stern Architects que presenta interiores exclusivos de Rockwell Group y paisajismo de Enzo Enea Group.",
     ];
     StRegisObject.banner = true;
     StRegisObject.area = SunnyIsles();
-    StRegisObject.caracteristicas = {
-        edificio: (
+    StRegisObject.traits = {
+        building: (
             <p>
                 St. Regis® se encuentra dentro de una red de conexiones de
                 transporte cercanas, lo que brinda fácil acceso al Aeropuerto
@@ -96,7 +96,7 @@ export default function StRegis() {
             </div>
         ),
 
-        amenidades: (
+        amenities: (
             <ul className="list-group list-group-light">
                 <li className="list-group-item">
                     Puerta cochera con una instalación de arte encargada y una fuente

@@ -1,12 +1,12 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import CoconutGrove from "../../areas/CoconutGrove.tsx";
 
 export default function Vita() {
-    const VitaObject = new Desarrollo();
+    const VitaObject = new Project();
 
 
     VitaObject.name = "vita-grove";
-    VitaObject.caracteristicas = {
+    VitaObject.traits = {
         residencias: (
             <ul>
                 <li>Ascensor privado</li>
@@ -78,7 +78,7 @@ export default function Vita() {
                 <li>Enrutador/punto(s) de acceso Wi-Fi 6</li>
             </ul>
         ),
-        edificio: (
+        building: (
             <ul>
                 <li>
                     La privacidad y la exclusividad se ven reforzadas por la entrada
@@ -151,7 +151,7 @@ export default function Vita() {
                 <li>Una aplicación digital de conserjería</li>
             </ul>
         ),
-        amenidades: (
+        amenities: (
             <>
                 <p>
                     Los residentes de Vita disfrutan de acceso a una colección extensa
@@ -268,7 +268,7 @@ export default function Vita() {
             </>
         ),
     };
-    VitaObject.introduccion = [
+    VitaObject.introduction = [
         "Vita at Grove Isle es un edificio de 7 pisos frente al mar, con amplios balcones. El edificio fue diseñado por la firma de renombre mundial CallisonRTKL: un impresionante condominio curvilíneo envuelve el extremo norte de la isla, junto a la Bahía de Biscayne. Cuando se trata de relajación y entretenimiento, hay muchas comodidades disponibles, que incluyen un salón para residentes, piscina y jacuzzi frente a la bahía, cabañas y más. Las 65 residencias frente al mar ofrecen vistas supremas de la Bahía de Biscayne y un diseño interior moderno, así como accesorios y electrodomésticos finos. La colección de penthouses de dos niveles en Vita cuenta con 14 unidades exageradas, todas ellas con espectaculares terrazas en la azotea con piscinas privadas e impresionantes vistas de la Bahía de Biscayne, Key Biscayne, Coconut Grove y el centro de Miami. Vita at Grove Isle se destaca por su entorno familiar seguro, con algo para que todos disfruten. Su conveniente ubicación está a solo unos pasos de tiendas y restaurantes. La flora y fauna de Coconut Grove define la experiencia con cientos de años de crecimiento y esplendor natural.",
     ];
     VitaObject.title = "Vita at Grove Isle";

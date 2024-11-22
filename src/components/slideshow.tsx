@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Carousel} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Areas from "../objects/areas/Areas.tsx";
-import Desarrollo from "../models/desarrollos/Desarrollo.tsx";
+import Project from "../models/desarrollos/Project.tsx";
 import {MDBCarousel, MDBContainer} from "mdb-react-ui-kit";
 import {getDesarrollosForArea} from "../objects/desarrollos/Desarrollos.ts";
 import {Area} from "../models/areas/Area.tsx";
@@ -25,14 +25,14 @@ const SlideshowGallery = (props: PropsSlideshow) => {
         if (areaObjects[index]) return setIndex(selectedIndex);
         else return setIndex(0);
     };
-    const [areaDesarrollos, setAreaDesarrollos] = useState<Set<Desarrollo>>(
+    const [areaDesarrollos, setAreaDesarrollos] = useState<Set<Project>>(
         new Set()
     );
     const [returnEls] = useState(() => {
         const temp: React.JSX.Element[] = new Array<React.JSX.Element>();
         areaObjects.forEach((areaObject: Area) => {
             setAreaDesarrollos(getDesarrollosForArea(areaObject));
-            [...areaDesarrollos].map((x: Desarrollo, index: number) => {
+            [...areaDesarrollos].map((x: Project, index: number) => {
                 temp.push(
                     <Carousel.Item
                         key={index}

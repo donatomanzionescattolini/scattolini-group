@@ -1,11 +1,11 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
 export default function Lofty() {
-    const Lofty = new Desarrollo();
+    const Lofty = new Project();
     Lofty.name = "lofty";
     Lofty.title = "Lofty";
-    Lofty.caracteristicas = {
+    Lofty.traits = {
         residencias: (
             <ul>
                 <br></br>
@@ -90,7 +90,7 @@ export default function Lofty() {
                 </li>
             </ul>
         ),
-        edificio: (
+        building: (
             <>
                 <ul>
                     <li>Alquileres a corto plazo permitidos por derecho</li>
@@ -128,7 +128,7 @@ export default function Lofty() {
                 </ul>
             </>
         ),
-        amenidades: (
+        amenities: (
             <>
                 <ul>
                     <li>Piscina exótica del resort con cabañas junto a la piscina</li>
@@ -145,12 +145,12 @@ export default function Lofty() {
             </>
         ),
     };
-    Lofty.introduccion = [
+    Lofty.introduction = [
         "Lofty Residences es un elegante condominio de 43 pisos que presenta un nuevo estándar de vida cosmopolita en Brickell. Esta nueva torre residencial cuenta con interiores y vistas espectaculares, con el valor añadido de permitir a los propietarios hacer alquileres a corto plazo. Fue diseñado por la firma de fama mundial, Arquitectonica. La ubicación perfecta de Lofty Residences Brickell permite a los residentes vivir a solo minutos de distancia de varias atracciones culturales, artes, restaurantes, tiendas de lujo, parques y mucho más.",
     ];
 
     Lofty.title = "Lofty Residences Brickell";
-    Lofty.subtitulo = "Un Nuevo Estándar de VidaResidences Cosmopolita en Brickell";
+    Lofty.subtitle = "Un Nuevo Estándar de VidaResidences Cosmopolita en Brickell";
 
 
     Lofty.numberOfImages = 55;

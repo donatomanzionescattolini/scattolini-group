@@ -1,15 +1,15 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Pinecrest from "../../areas/Pinecrest.tsx";
 
 export default function Centris() {
-    const CentrisObject = new Desarrollo();
+    const CentrisObject = new Project();
     CentrisObject.banner = true;
     CentrisObject.area = Pinecrest();
 
     CentrisObject.name = "centris";
 
-    CentrisObject.caracteristicas = {
-        edificio: (
+    CentrisObject.traits = {
+        building: (
             <>
                 <dl>
                     <dt>Dirección</dt>
@@ -21,7 +21,7 @@ export default function Centris() {
                 </dl>
             </>
         ),
-        amenidades: (
+        amenities: (
             <>
                 <dl>
                     <dt>Lote de niños</dt>
@@ -113,11 +113,11 @@ export default function Centris() {
         ),
     };
 
-    CentrisObject.introduccion = [
+    CentrisObject.introduction = [
         "Presentamos CentrisObject, una comunidad de casas adosadas y propiedades de lujo nuevas a la venta en Miami, FL. CentrisObject está idealmente ubicado en SW 120th Street y 82nd Avenue, cerca de Pinecrest y The Falls, con fácil acceso a las playas y al centro de Miami. En CentrisObject, los residentes disfrutarán de entrada con acceso controlado para vehículos, un pabellón con piscina, área de juegos infantiles y un parque en el corazón de la comunidad, y cada casa está equipada con accesorios y acabados de lujo, todo sin costo adicional.",
     ];
     CentrisObject.title = "Centris";
-    CentrisObject.subtitulo = "";
+    CentrisObject.subtitle = "";
     CentrisObject.numberOfImages = 36;
     return CentrisObject;
 }

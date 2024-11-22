@@ -1,8 +1,8 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Project from "../../../models/desarrollos/Project.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
 export default function TheVilla() {
-    const TheVillaObject = new Desarrollo();
+    const TheVillaObject = new Project();
 
 
     TheVillaObject.name = "the-villa";
@@ -18,8 +18,8 @@ export default function TheVilla() {
             style={{marginLeft: "auto", marginRight: "auto"}}
         ></iframe>
     ;
-    TheVillaObject.caracteristicas = {
-        amenidades: (
+    TheVillaObject.traits = {
+        amenities: (
             <ul>
                 <li>
                     Experiencia de spa inspirada en los spas termales italianos que
@@ -65,7 +65,7 @@ export default function TheVilla() {
                 </li>
             </ul>
         ),
-        edificio: (
+        building: (
             <ul>
                 <li>Pisos: 55</li>
                 <li>Número de unidades: residencias de 3, 4 y 5 dormitorios</li>
@@ -234,11 +234,11 @@ export default function TheVilla() {
             </>
         ),
     };
-    TheVillaObject.introduccion = [
+    TheVillaObject.introduction = [
         "Las vibrantes vistas a la bahía y la ciudad, combinadas con 55 pisos de espacios indulgentes, definen este exclusivo desarrollo de condominio, compuesto por un total de 70 unidades que van desde 2,939 a 6,143 pies cuadrados. Con opciones de tres a cinco amplias habitaciones, cada detalle arquitectónico y de diseño se adapta de forma única para crear un entorno lujoso y sin fisuras para los residentes. El renombrado equipo MFG se dedica a proporcionar un estilo de vida de alto nivel, anticipándose y respondiendo a cada necesidad con una filosofía de opulencia sin límites. Prepárese para sumergirse en una experiencia de primer nivel completamente incomparable.",
     ];
 
-    TheVillaObject.subtitulo =
+    TheVillaObject.subtitle =
         <p className="text-lowercase w-50 mx-auto">
             <span className="text-capitalize">¡El</span> rascacielos residencial
             más sorprendente de" "; <span className="text-capitalize">Edgewater, Miami </span>finalmente
