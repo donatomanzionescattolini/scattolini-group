@@ -45,7 +45,7 @@ export default function SeventyTwoPark() {
                 </li>
             </ul>
         ),
-        residencias: (
+        residences: (
             <ul>
                 <li>Diseños modernos y abiertos de 470 a 1,177 pies cuadrados</li>
                 <li>

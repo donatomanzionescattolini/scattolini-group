@@ -23,7 +23,7 @@ export default function Jem() {
     Jem.banner = true;
     Jem.traits = {
         amenities: Jem.displayAmenidades(),
-        residencias: Jem.displayCaracteristicasResidencias(),
+        residences: Jem.displayCaracteristicasResidencias(),
         building: Jem.displayCaracteristicasEdificio()
     };
     Jem.numberOfImages = 12;

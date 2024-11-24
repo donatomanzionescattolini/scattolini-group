@@ -6,7 +6,7 @@ import {send} from "@emailjs/browser";
 import {Alert, AlertHeading} from "react-bootstrap";
 
 interface ContactFormProps {
-    projectName: string;
+    projectName: String;
 }
 
 export default function ContactFormComponent(props: ContactFormProps) {

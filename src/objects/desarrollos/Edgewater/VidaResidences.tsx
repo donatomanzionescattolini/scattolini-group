@@ -30,7 +30,7 @@ export default function VidaResidences() {
                 </ul>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <ul>
                     <li>

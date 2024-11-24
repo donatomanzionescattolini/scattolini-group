@@ -5,7 +5,7 @@ import BentleyResidences from "../../../objects/desarrollos/SunnyIsles/BentleyRe
 export default function BentleyResidencesProject() {
     return (
         <ProjectTemplate
-            desarrollo={BentleyResidences()}
+            project={BentleyResidences()}
         />
     );
 }

@@ -16,7 +16,7 @@ export default function MissoniBaia() {
                 </ul>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <ul>
                     <li>

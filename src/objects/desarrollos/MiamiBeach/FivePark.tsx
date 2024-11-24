@@ -97,7 +97,7 @@ export default function FivePark() {
                 </ul>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <ul>
                     <li>Ascensor privado</li>

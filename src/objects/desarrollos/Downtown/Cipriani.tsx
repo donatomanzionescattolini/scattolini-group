@@ -45,7 +45,7 @@ export default function Cipriani() {
                 </ul>
             </div>
         ),
-        residencias: (
+        residences: (
             <div>
                 <ul>
                     <li>Amplias salas de estar con alturas de techo de 10 pies</li>

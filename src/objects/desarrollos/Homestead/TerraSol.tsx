@@ -5,7 +5,7 @@ export default function TerraSol() {
     TerraSolObject.name = "terra-sol";
     TerraSolObject.title = "Terra Sol";
     TerraSolObject.subtitle = "";
-    TerraSolObject.traits = {building: <></>, residencias: <></>, amenities: <></>};
+    TerraSolObject.traits = {building: <></>, residences: <></>, amenities: <></>};
 
     TerraSolObject.introduction = [];
 

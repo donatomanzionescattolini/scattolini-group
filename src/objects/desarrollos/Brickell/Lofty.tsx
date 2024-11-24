@@ -6,7 +6,7 @@ export default function Lofty() {
     Lofty.name = "lofty";
     Lofty.title = "Lofty";
     Lofty.traits = {
-        residencias: (
+        residences: (
             <ul>
                 <br></br>
                 <strong>Las Residencias</strong>

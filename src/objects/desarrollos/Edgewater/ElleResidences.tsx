@@ -17,7 +17,7 @@ export default function ElleResidences() {
     ElleResidencesObject.numberOfImages = 24;
     ElleResidencesObject.subtitle = "El Nuevo Hogar Del Alto Estilo";
     ElleResidencesObject.traits = {
-        residencias: <><p>Adquiera su propio piso en el corazón de Miami.
+        residences: <><p>Adquiera su propio piso en el corazón de Miami.
             Inspiradas por las páginas de ELLE Decor, las residencias combinan el estilo moderno de mediados de siglo y
             el estilo francés contemporáneo con un toque de lujo tropical, para darle un nuevo giro a la vida en el sur
             de Florida.</p>

@@ -3,5 +3,5 @@ import ProjectTemplate from "../ProjectTemplate";
 
 export default function NomadResidencesComponent() {
 
-    return <ProjectTemplate desarrollo={NomadResidences()}/>
+    return <ProjectTemplate project={NomadResidences()}/>
 }

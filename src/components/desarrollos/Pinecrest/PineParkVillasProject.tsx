@@ -5,7 +5,7 @@ import PineParkVillasObject from "../../../objects/desarrollos/Pinecrest/PinePar
 export default function PineParkVillasProject() {
     return (
         <ProjectTemplate
-            desarrollo={PineParkVillasObject()}
+            project={PineParkVillasObject()}
         />
     );
 }

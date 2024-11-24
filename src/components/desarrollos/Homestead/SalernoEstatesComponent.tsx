@@ -3,5 +3,5 @@ import SalernoEstates from "../../../objects/desarrollos/Homestead/SalernoEstate
 import ProjectTemplate from "../ProjectTemplate";
 
 export default function SalernoEstatesComponent() {
-    return <ProjectTemplate desarrollo={SalernoEstates()}/>;
+    return <ProjectTemplate project={SalernoEstates()}/>;
 }

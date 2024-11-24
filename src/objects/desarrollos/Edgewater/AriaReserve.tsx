@@ -16,7 +16,7 @@ export default function AriaReserve() {
                 </ul>
             </>
         ),
-        residencias: (
+        residences: (
             <ul>
                 <strong>Todas las Residencias</strong>
                 <br/>

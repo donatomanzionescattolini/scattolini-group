@@ -8,7 +8,7 @@ export default function ParcVillas() {
     ParcVillasObject.subtitle = "";
     ParcVillasObject.traits = {
         building: <></>,
-        residencias: <></>,
+        residences: <></>,
         amenities: <></>,
     };
     ParcVillasObject.introduction = [];

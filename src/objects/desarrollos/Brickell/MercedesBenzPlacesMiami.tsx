@@ -15,7 +15,7 @@ export default function MercedesBenzPlacesMiami() {
                 <li>Ubicación: 1133 SW 2nd Ave, Miami, FL 3313</li>
             </ul>
         </>,
-        residencias: <>
+        residences: <>
             <ul>
                 <dt><big>Interiores</big></dt>
                 <li> Ventanas de piso a techo de hasta 10'</li>

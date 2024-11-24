@@ -40,7 +40,7 @@ export default function LaMaré() {
                 </ul>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <ul>
                     <li>Elegantes y grandes alturas de techo de 9'2" a 10'2" en residencias selectas</li>

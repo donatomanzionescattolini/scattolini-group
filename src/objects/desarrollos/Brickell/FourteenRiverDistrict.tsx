@@ -26,7 +26,7 @@ export default function FourteenRiverDistrict() {
                 <li>Una plaza de aparcamiento incluida</li>
             </ul>
         ),
-        residencias: (
+        residences: (
             <ul>
                 <li>Cocinas gourmet con gabinetes personalizados</li>
                 <li>

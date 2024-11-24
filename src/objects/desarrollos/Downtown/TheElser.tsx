@@ -21,7 +21,7 @@ export default function TheElse() {
                     </li>
                 </ul>
             ),
-        residencias:
+        residences:
             (
                 <ul>
                     <li>Todas las ventanas se abren a balcones con vistas altísimas</li>

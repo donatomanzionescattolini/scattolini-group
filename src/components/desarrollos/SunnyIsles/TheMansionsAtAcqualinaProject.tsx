@@ -5,7 +5,7 @@ import TheMansionsAtAcqualina from "../../../objects/desarrollos/SunnyIsles/TheM
 export default function TheMansionsAtAcqualinaProject() {
     return (
         <ProjectTemplate
-            desarrollo={TheMansionsAtAcqualina()}/>
+            project={TheMansionsAtAcqualina()}/>
 
     );
 }

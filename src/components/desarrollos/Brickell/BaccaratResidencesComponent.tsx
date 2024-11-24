@@ -7,7 +7,7 @@ import BaccaratResidences from "../../../objects/desarrollos/Brickell/BaccaratRe
 export default function BaccaratResidencesComponent() {
 
     return (
-        <ProjectTemplate desarrollo={BaccaratResidences()}/>);
+        <ProjectTemplate project={BaccaratResidences()}/>);
 }
 
 

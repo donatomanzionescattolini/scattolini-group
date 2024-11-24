@@ -4,6 +4,6 @@ import SomiWalk from '../../../objects/desarrollos/SouthMiami/SomiWalk'
 
 export default function SomiWalkComponent() {
     return (
-        <ProjectTemplate desarrollo={SomiWalk()}/>
+        <ProjectTemplate project={SomiWalk()}/>
     )
 }

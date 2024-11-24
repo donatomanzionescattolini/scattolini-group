@@ -10,7 +10,7 @@ export default function TemplateAndMainFields() {
     ProjectObject.area = Brickell();
     ProjectObject.traits = {
         building: <></>,
-        residencias: <></>,
+        residences: <></>,
         amenities: <></>,
     }
     ProjectObject.numberOfImages = 0;

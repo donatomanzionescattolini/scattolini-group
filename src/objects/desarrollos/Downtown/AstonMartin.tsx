@@ -52,7 +52,7 @@ export default function AstonMartin() {
                 </li>
             </ul>
         ),
-        residencias: (
+        residences: (
             <ul className="list-unstyled">
                 <li>
                     <h5>Tamaños</h5>

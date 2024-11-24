@@ -8,7 +8,7 @@ export default function ParkSquare() {
     ParkSquareObject.subtitle = "";
     ParkSquareObject.traits = {
         building: <></>,
-        residencias: <></>,
+        residences: <></>,
         amenities: <></>,
     };
 

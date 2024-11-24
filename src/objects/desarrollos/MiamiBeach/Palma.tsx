@@ -17,7 +17,7 @@ export default function Palma() {
             <li>Edificio ecológico de vanguardia con tecnología SMART y certificación LEED Gold</li>
             <li>Locales comerciales al nivel de planta baja</li>
         </ul>,
-        residencias:
+        residences:
             <ul>
                 <li>Residencias de lujo en la playa con diseños modernos y abiertos Todas las residencias están
                     completamente terminadas y amobladas por

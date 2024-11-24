@@ -6,7 +6,7 @@ export default function SeventyTwoParkProject() {
     return (
         <ProjectTemplate
 
-            desarrollo={SeventyTwoPark()}
+            project={SeventyTwoPark()}
         />
     );
 }

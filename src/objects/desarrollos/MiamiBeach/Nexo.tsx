@@ -18,10 +18,10 @@ export default function Nexo() {
     NexoObject.amenities = ["Quince pisos con 254 residencias listas para mudarse", "Experiencia de entrega y llegada a Porte Cochère", "Salón de dos pisos en el vestíbulo de llegadas con recepción y conserje", "Centro tecnológico de última generación de dos pisos con cafetería, espacios de coworking y centro de negocios", "WiFi en todas las zonas comunes", "Zona de estar al aire libre con sombrillas", "Parque infantil y plaza", "Almacenamiento de bicicletas", "Vestuario inteligente de autoservicio para entregas", "Estaciones de carga para coches eléctricos", "Dos entradas cerradas con servicio de aparcacoches disponibles para los huéspedes", "Se admiten mascotas", "Salón social multiusos y espacio privado para eventos con cocina dedicada", "Gimnasio interior y exterior con estudio de yoga y entrenador virtual", "Vestuarios para él y para ella", "Piscina estilo centro turístico con solárium, dos spas y tumbonas cubiertas", "Bar terraza al aire libre", "Cocinas de verano con barbacoa y zona de estar", "Cubierta de observatorio al aire libre con vistas de 360º"];
     NexoObject.traits = {
         building: NexoObject.displayCaracteristicasEdificio(),
-        residencias: NexoObject.displayCaracteristicasResidencias(),
+        residences: NexoObject.displayCaracteristicasResidencias(),
         amenities: NexoObject.displayAmenidades()
     };
-    ;
+
     NexoObject.banner = true;
     NexoObject.video = <iframe width="500" height="300" className="object-fit-cover"
                                src="https://www.youtube.com/embed/E9S3zVDO1vs?autoplay=1"

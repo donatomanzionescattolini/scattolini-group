@@ -1,12 +1,12 @@
 import Project from "./Project.tsx";
 
-export interface caracteristicas {
-    building: React.ReactNode;
-    residencias: React.ReactNode;
-    amenities: React.ReactNode;
+export interface traits {
+    building: React.JSX.Element | Element | "" |  Array<String>;
+    residences: React.JSX.Element | Element | "" |  Array<String>;
+    amenities: React.JSX.Element | Element | "" |  Array<String>;
 }
 
 export interface ProjectParams {
-    desarrollo: Project;
+    project: Project;
 
 }

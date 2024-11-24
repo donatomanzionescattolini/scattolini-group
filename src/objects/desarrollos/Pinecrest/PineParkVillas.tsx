@@ -33,7 +33,7 @@ export default function PineParkVillas() {
                 </dl>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <p>
                     Entregados completamente terminados y listos para mudarse, los

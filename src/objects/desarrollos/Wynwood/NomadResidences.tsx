@@ -25,7 +25,7 @@ export default function NomadResidences() {
             </dl>
         </>,
 
-        residencias: <>
+        residences: <>
             <ul>
                 <li>Totalmente amueblado y creativamente seleccionado por NoMad y la galardonada DesignAgency</li>
                 <li>Puertas correderas de vidrio de piso a techo</li>

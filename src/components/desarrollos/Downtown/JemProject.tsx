@@ -7,6 +7,6 @@ export default function JemProject() {
         ul.classList.add("list")
     })
     return (
-        <ProjectTemplate desarrollo={Jem()}/>
+        <ProjectTemplate project={Jem()}/>
     )
 }

@@ -38,7 +38,7 @@ export default function Atlantica() {
                 </ul>
             </dd>
         </dl>,
-        residencias: <ul>
+        residences: <ul>
             <li>Cocinas elegantes, completas con encimeras de</li>
             <li>granito.</li>
             <li>Suelos de baldosas de porcelana lujosos.</li>

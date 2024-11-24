@@ -27,7 +27,7 @@ export default function TheAvenue() {
                 </dl>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <ul>
                     <li>

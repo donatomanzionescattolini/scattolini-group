@@ -3,7 +3,7 @@ import EditionResidences from "../../../objects/desarrollos/Edgewater/EditionRes
 
 export function TheEditionResidencesProject() {
     return (
-        <ProjectTemplate desarrollo={EditionResidences()}
+        <ProjectTemplate project={EditionResidences()}
         />
     );
 }

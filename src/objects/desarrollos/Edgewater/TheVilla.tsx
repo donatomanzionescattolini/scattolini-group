@@ -152,7 +152,7 @@ export default function TheVilla() {
                 </li>
             </ul>
         ),
-        residencias: (
+        residences: (
             <>
                 <ul>
                     <li>

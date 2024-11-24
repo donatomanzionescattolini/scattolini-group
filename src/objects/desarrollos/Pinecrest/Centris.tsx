@@ -49,7 +49,7 @@ export default function Centris() {
                 </dl>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <dl>
                     <dt>COLECCIÓN DIAMOND (viviendas unifamiliares)</dt>

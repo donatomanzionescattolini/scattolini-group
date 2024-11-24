@@ -73,6 +73,7 @@ import Hollywood from "../areas/Hollywood.tsx";
 import DaniaBeach from "../areas/DaniaBeach.tsx";
 import Atlantica from "./DaniaBeach/Atlantica.tsx";
 import Palma from "./MiamiBeach/Palma.tsx";
+import CoveResidences from "./Edgewater/CoveResidences.tsx";
 
 interface DesarrolloArea {
     area: Area;
@@ -150,7 +151,8 @@ desarrollos.push({
         EditionResidences(),
         TheVilla(),
         VidaResidences(),
-        ElleResidences()
+        ElleResidences(),
+        CoveResidences
     ]),
 });
 

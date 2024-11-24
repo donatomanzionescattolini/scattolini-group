@@ -13,7 +13,7 @@ export default function LaBaia() {
             <dd>8</dd>
             <dt>Número de Residencias</dt>
             <dd>57</dd>
-        </dl>, residencias: <>
+        </dl>, residences: <>
             <ul>
                 <li>Techos de 9' en residencias</li>
                 <li>Techos de 10' en Penthouses Superiores</li>

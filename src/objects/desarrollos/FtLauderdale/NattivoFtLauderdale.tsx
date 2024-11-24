@@ -18,7 +18,7 @@ export default function NattivoFtLauderdale() {
                 Fort Lauderdale, Florida 33311
             </li>
         </ul>,
-        residencias: <>
+        residences: <>
             <ul>
                 <li>Natiivo Fort Lauderdale 10th Level Fit Inspiración Escalada</li>
                 <li>Servicio de limpieza, servicio de toallas y lavandería, entrega de comestibles, servicios de

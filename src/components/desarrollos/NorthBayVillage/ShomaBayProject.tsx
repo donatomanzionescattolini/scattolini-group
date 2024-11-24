@@ -6,5 +6,5 @@ export default function ShomaBayProject() {
     return (
         <ProjectTemplate
 
-            desarrollo={ShomaBay()}/>);
+            project={ShomaBay()}/>);
 }

@@ -24,7 +24,7 @@ export default function BentleyResidences() {
                 </dl>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <ul>
                     <li>200 Amplias residencias</li>

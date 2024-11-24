@@ -6,7 +6,7 @@ export default function MissoniBaiaProject() {
     return (
         <ProjectTemplate
 
-            desarrollo={MissoniBaia()}
+            project={MissoniBaia()}
         />
     );
 }

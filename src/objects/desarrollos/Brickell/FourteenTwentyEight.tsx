@@ -43,7 +43,7 @@ export default function FourteenTwentyEight() {
                 <li>Estaciones de carga para vehículos eléctricos</li>
             </ul>
         ),
-        residencias: (
+        residences: (
             <ul>
                 <li>
                     &nbsp;Cada residencia está orientada hacia la bahía de Biscayne y

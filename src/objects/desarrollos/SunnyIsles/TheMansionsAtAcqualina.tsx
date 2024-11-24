@@ -51,7 +51,7 @@ export default function TheMansionsAtAcqualina() {
                 </ul>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <ul>
                     <li>Jacuzzi privado en la terraza</li>

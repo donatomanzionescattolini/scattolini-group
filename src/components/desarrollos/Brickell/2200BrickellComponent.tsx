@@ -4,6 +4,6 @@ import _2200Brickell from '../../../objects/desarrollos/Brickell/2200Brickell'
 
 export default function _2200BrickellComponent() {
     return (
-        <ProjectTemplate desarrollo={_2200Brickell()}/>
+        <ProjectTemplate project={_2200Brickell()}/>
     )
 }

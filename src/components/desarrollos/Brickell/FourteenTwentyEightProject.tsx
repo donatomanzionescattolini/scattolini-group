@@ -5,5 +5,5 @@ import FourteenTwentyEight from "../../../objects/desarrollos/Brickell/FourteenT
 export function FourteenTwentyEightProject() {
     return (
         <ProjectTemplate
-            desarrollo={FourteenTwentyEight()}/>);
+            project={FourteenTwentyEight()}/>);
 }

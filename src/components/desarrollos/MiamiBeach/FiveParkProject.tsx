@@ -6,6 +6,6 @@ export default function FiveParkProject() {
     return (
         <ProjectTemplate
 
-            desarrollo={FivePark()}/>
+            project={FivePark()}/>
     );
 }

@@ -4,6 +4,6 @@ import Oasis from '../../../objects/desarrollos/FloridaCity/Oasis'
 
 export default function OasisComponent() {
     return (
-        <><ProjectTemplate desarrollo={Oasis()}/></>
+        <><ProjectTemplate project={Oasis()}/></>
     )
 }

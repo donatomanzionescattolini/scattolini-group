@@ -1,8 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import SlideshowGalleryDesarrollo from "./SlideshowGalleryDesarrollo";
-
 import * as React from "react";
-import { JSX, ReactNode, useLayoutEffect, useState } from "react";
+import {JSX, ReactNode, useLayoutEffect, useState} from "react";
 import {
     MDBAccordion,
     MDBAccordionItem,
@@ -15,26 +14,28 @@ import {
     MDBTabsLink,
     MDBTabsPane,
 } from "mdb-react-ui-kit";
-import { Link } from "react-router-dom";
-import { caracteristicas, ProjectParams, } from "../../models/desarrollos/ProjectParams.tsx";
+import {Link} from "react-router-dom";
+import {ProjectParams, traits,} from "../../models/desarrollos/ProjectParams.tsx";
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
-import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
 import Desarrollos from "./DesarrollosComponent.tsx";
-
 export default function ProjectTemplate(paramz: ProjectParams) {
-    const params = paramz.desarrollo;
+    const params = paramz.project;
     const [nombre] = useState(params.name);
     const [area] = useState(params.area);
-    const [desarrollosArea] = useState(getDesarrollosForArea(area));
     const [numberOfImages] = useState(params.numberOfImages);
     const [tabVisible, setTabVisible] = useState("brochure");
-    const vid: string | ReactNode = params.video
+    const vid: String | Element | (() => String | Element) | ReactNode = params.video
         ? params.video
         : `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`;
-    const [video] = useState<string | JSX.Element>(vid as JSX.Element);
-
-    const [caract] = useState(params.traits as caracteristicas);
+    const [video] = useState< ReactNode>(vid && (typeof vid === "string") ? <video className="w-100" autoPlay loop >
+        <source
+            src={vid as string}
+            type="video/mp4"
+            allowFullScreen={true}
+        />
+    </video> as ReactNode:vid as ReactNode);
+    const [caract] = useState(params.traits as traits);
     const [titulo] = useState(params.title);
     const [banner] = useState(params.banner);
     const [subtitulo] = useState(params.subtitle);
@@ -44,7 +45,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
     );
     const [CaracteristicasEdificio] = useState(() => caract.building);
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-    const [CaracteristicasResidencias] = useState(() => caract.residencias);
+    const [CaracteristicasResidencias] = useState(() => caract.residences);
     const [pdfUrl] = useState(
         `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`
     );
@@ -54,15 +55,13 @@ export default function ProjectTemplate(paramz: ProjectParams) {
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
-    function openTab(docType: string) {
+    function openTab(docType: String) {
         switch (docType) {
             case "brochure":
                 tabVisible === "brochure"
                     ? setTabVisible("none")
                     : setTabVisible("brochure");
                 break;
-
             case "hoja":
                 tabVisible === "hoja" ? setTabVisible("none") : setTabVisible("hoja");
                 break;
@@ -76,7 +75,6 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 break;
         }
     }
-
     return (
         <>
             <a id="top"></a>
@@ -85,7 +83,6 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 jumbotron
                 id={"banner"}
                 className="py-0 my-0 overflow-y-hidden   object-fit-cover"
-                
             >
                 <header
                     className="mdc-banner d-flex row flex-nowrap   justify-content-center h-100 m-0 p-0 responsive overflow-hidden">
@@ -99,22 +96,21 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                                 backgroundSize: "250%",
                                 backgroundRepeat: "no-repeat",
                                 backgroundPosition: "center",
-
                             }}
                         />
                     )) || (banner && <div
-                        id="banner"
-                        className="p-0 m-0 well"
-                        autoFocus
-                        style={{
-                            backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
-                            backgroundSize: "cover",
-                            backgroundRepeat: "no-repeat",
-                            backgroundPosition: "center",
-                            height:"50rem"
-                        }}
-                    />
-                        )}
+                            id="banner"
+                            className="p-0 m-0 well"
+                            autoFocus
+                            style={{
+                                backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition: "center",
+                                height: "50rem"
+                            }}
+                        />
+                    )}
                     {!banner && (
                         <>
                             <div
@@ -152,78 +148,66 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             </MDBContainer>
             <div className="skew-c"></div>
             <section className="white-block py-5  mt-5">
-
-                <MDBContainer fluid className="container-fluid text-center "><h1 className="display-4">{titulo}</h1>                 <hr className="hr hr-blurry w-50 mx-auto" />
+                <MDBContainer fluid className="container-fluid text-center "><h1 className="display-4">{titulo}</h1>
+                    <hr className="hr hr-blurry w-50 mx-auto"/>
                     <h5
-                        className="subtitle text-lead w-75 mx-auto my-0 py-0  fs-4"><i>{subtitulo}</i></h5></MDBContainer>
-
+                        className="subtitle text-lead w-75 mx-auto my-0 py-0  fs-4"><i>{subtitulo}</i></h5>
+                </MDBContainer>
                 <MDBRow className={"row w-75 mx-auto mt-5 bg-transparent py-5"}>
                     <MDBCol xs={12} sm={12} md={6} lg={6} xl={6}
-                        className={"align-content-center justify-content-center"}>
-                        {(introduccion as Array<string>).map((par: string) =>
+                            className={"align-content-center justify-content-center"}>
+                        {(introduccion as Array<String>).map((par: String) =>
                             <p className={""}>{par}</p>)
                         }
                     </MDBCol>
-
                     <MDBCol xs={12} sm={12} md={6} lg={6} xl={6} className={"p-md-5 p-sm-2"}>
-                        <img className="img-fluid img-thumbnail"  alt={area.name} src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${nombre}.webp`}
-                             />
+                        <img className="img-fluid img-thumbnail" alt={area ? area.name : "no photo"}
+                             src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area ? area.name : ""}/${nombre}.webp`}
+                        />
                     </MDBCol>
                 </MDBRow>
-
             </section>
             <div className="skew-cc"></div>
             <section className="colour-block p-auto">
-                {typeof video !== "string" && video ? (
-                    video
-                ) : (
-                    <div className="embed-responsive">
-                        <video  className="embed-responsive-item" src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4?autoplay=1&controls=1`}>
-                        </video>
-                    </div>
-                )}
-            </section >
+                {video as ReactNode}
+            </section>
             <div className="skew-c"></div>
             <section className="white-block py-5  ">
                 <MDBContainer fluid small responsive centered>
                     <br></br>
-                    <br />
+                    <br/>
                     <div>
                         <h4 className="text-center display-6     my-5 title">Características</h4>
                     </div>
-                    <hr className="hr hr-blurry w-50 mx-auto" />
-
+                    <hr className="hr hr-blurry w-50 mx-auto"/>
                     <MDBAccordion id="accordion" className="m-5 w-fit-content " flush>
                         <MDBAccordionItem
                             collapseId={1}
-                            headerClassName="fs-5" 
+                            headerClassName="fs-5"
                             headerTitle="Edificio"
-
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                             className={"fs-5 w-75 m-auto"}
                         >
-                            {CaracteristicasEdificio}
+                            {CaracteristicasEdificio as ReactNode}
                         </MDBAccordionItem>
-
                         <MDBAccordionItem
                             collapseId={2}
-                            headerClassName="fs-5" 
+                            headerClassName="fs-5"
                             headerTitle="Residencias"
                             aria-controls="panel2a-content"
                             id="panel2a-header"
-className={"fs-5 w-75 m-auto"}
+                            className={"fs-5 w-75 m-auto"}
                         >
-                            {CaracteristicasResidencias}
+                            {CaracteristicasResidencias as ReactNode}
                         </MDBAccordionItem>
-
                         <MDBAccordionItem
                             collapseId={3}
-                            headerClassName="fs-5"     
+                            headerClassName="fs-5"
                             headerTitle="Amenidades"
                             aria-controls="panel3a-content"
                             id="panel3a-header"
-className={"fs-5 w-75 m-auto"}
+                            className={"fs-5 w-75 m-auto"}
                         >
                             {CaracteristicasAmenidades as JSX.Element}
                         </MDBAccordionItem>
@@ -232,24 +216,21 @@ className={"fs-5 w-75 m-auto"}
             </section>
             <div className="skew-cc"></div>
             <section className="colour-block py-5  " id="galeria-proyectos">
-                    <div>
-                        <h4 className="text-center title display-6     my-5">Galería Fotográfica</h4>
-                    </div>
-                    <hr className="hr hr-blurry w-50 mx-auto" />
-
-                    <br></br>
-
-                    <SlideshowGalleryDesarrollo
-                        name={nombre}
-                        numberOfImages={numberOfImages as number}
-                    />
-                    {/* <SlideshowGalleryDesarrollo2
+                <div>
+                    <h4 className="text-center title display-6     my-5">Galería Fotográfica</h4>
+                </div>
+                <hr className="hr hr-blurry w-50 mx-auto"/>
+                <br></br>
+                <SlideshowGalleryDesarrollo
+                    name={nombre ? "nombre" : ""}
+                    numberOfImages={numberOfImages as number}
+                />
+                {/* <SlideshowGalleryDesarrollo2
           name={nombre}
           numberOfImages={numberOfImages as number}
         /> */}
             </section>
             <div className="skew-c"></div>
-
             {/* <MDBContainer>
         <iframe
           width="450"
@@ -264,14 +245,13 @@ className={"fs-5 w-75 m-auto"}
                 <br></br>
                 <br></br>
                 <div>
-                    <h4 className="text-center mb-1 display-6     my-5" >Documentos De Interés</h4>
+                    <h4 className="text-center mb-1 display-6     my-5">Documentos De Interés</h4>
                 </div>
-                <hr className="hr hr-blurry w-50 mx-auto" />
-
+                <hr className="hr hr-blurry w-50 mx-auto"/>
                 <br></br>
                 <MDBTabs fill>
                     <MDBTabsItem className={" "}
-                        title="Brochure"
+                                 title="Brochure"
                     >
                         <MDBTabsLink className="fs-5" onClick={() => openTab("brochure")} href="#docs">
                             {" "}
@@ -279,18 +259,18 @@ className={"fs-5 w-75 m-auto"}
                         </MDBTabsLink>
                     </MDBTabsItem>
                     <MDBTabsItem className={""}>
-                        <MDBTabsLink className="fs-5" 
-                            onClick={() => openTab("hoja")}
-                            href="#docs"
+                        <MDBTabsLink className="fs-5"
+                                     onClick={() => openTab("hoja")}
+                                     href="#docs"
                         >
                             Hoja Informativa
                         </MDBTabsLink>
                     </MDBTabsItem>
                     <MDBTabsItem className={""}>
-                        <MDBTabsLink className="fs-5" 
-                            aria-keyshortcuts=""
-                            href="#docs"
-                            onClick={() => openTab("planos")}
+                        <MDBTabsLink className="fs-5"
+                                     aria-keyshortcuts=""
+                                     href="#docs"
+                                     onClick={() => openTab("planos")}
                         >
                             Planos
                         </MDBTabsLink>
@@ -308,10 +288,8 @@ className={"fs-5 w-75 m-auto"}
               height={"100%"}
               //   {/* const file =
               //   fs.readFileSync(path.resolve("public/assets/Bonus_1.pdf")).toString("base64"); */}
-
                 {/* <PDFV
               //     url={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-
         {/* <embed
               //     src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
               //     width="800px"
@@ -412,17 +390,15 @@ className={"fs-5 w-75 m-auto"}
             </section>
             <div className="skew-c"></div>
             <section className="white-block py-5  ">
-                <AreasComponent currentArea={params.area} />
+                <AreasComponent currentArea={params.area}/>
             </section>
             <div className="skew-cc"></div>
             <section className="colour-block py-5  ">
-                
-                    <MDBContainer
-                        
-                        className="d-flex justify-content-center w-100 p-0 m-0"
-                    >
-                        <ContactFormComponent projectName={titulo as string} />
-                    </MDBContainer>
+                <MDBContainer
+                    className="d-flex justify-content-center w-100 p-0 m-0"
+                >
+                    <ContactFormComponent projectName={titulo as String}/>
+                </MDBContainer>
             </section>
             <div className="skew-c"></div>
         </>

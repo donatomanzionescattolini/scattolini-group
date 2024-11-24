@@ -19,7 +19,7 @@ export default function CasaBella() {
                 <li>Habitaciones por unidad: 1-5 dormitorios</li>
             </ul>
         ),
-        residencias: (
+        residences: (
             <ul>
                 <li>
                     Todas las residencias cuentan con dos ascensores privados y

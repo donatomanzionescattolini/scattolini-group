@@ -4,5 +4,5 @@ import lofty from "../../../objects/desarrollos/Brickell/Lofty.tsx";
 
 
 export default function LoftyProject() {
-    return (<ProjectTemplate desarrollo={lofty()}/>);
+    return (<ProjectTemplate project={lofty()}/>);
 }

@@ -27,7 +27,7 @@ export default function StRegis() {
                 renombre mundial.
             </p>
         ),
-        residencias: (
+        residences: (
             <div>
                 <p>
                     Una sola torre de 48 pisos que alberga 150 residencias, incluidos

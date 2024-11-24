@@ -58,7 +58,7 @@ export default function Origin() {
                 </ul>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <ul>
                     <li>

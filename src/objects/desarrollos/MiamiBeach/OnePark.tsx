@@ -33,7 +33,7 @@ export default function OnePark() {
                 </ul>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <ul className="list">
                     <li>Acceso en ascensor de alta velocidad a residencias</li>

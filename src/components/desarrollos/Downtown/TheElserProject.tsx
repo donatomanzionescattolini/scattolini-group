@@ -5,5 +5,5 @@ import TheElserObject from "../../../objects/desarrollos/Downtown/TheElser.tsx";
 export default function TheElserProject() {
     return (
         <ProjectTemplate
-            desarrollo={TheElserObject()}/>);
+            project={TheElserObject()}/>);
 }

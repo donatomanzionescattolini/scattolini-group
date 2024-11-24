@@ -30,7 +30,7 @@ export default function ShomaBay() {
                 <li>Sky Lounge con bar, juego y película</li>
             </ul>
         ),
-        residencias: (
+        residences: (
             <ul>
                 <li>Amplios planos de planta</li>
                 <li>Termostatos digitales programables</li>

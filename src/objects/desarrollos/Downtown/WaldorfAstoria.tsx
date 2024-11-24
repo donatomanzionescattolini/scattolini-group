@@ -52,7 +52,7 @@ export default function WaldorfAstoria() {
                 <li>Sala de entretenimiento</li>
             </ul>
         ),
-        residencias: (
+        residences: (
             <ul>
                 <li>Totalmente terminado y amueblado Jr. Suite</li>
                 <li>

@@ -14,7 +14,7 @@ export default function EditionResidences() {
             totales Año de construcción: 2015
           </pre>
         ),
-        residencias: (
+        residences: (
             <ul>
                 <li>Director exclusivo de residencias</li>
                 <li>Entrada privada exclusiva para residencias</li>

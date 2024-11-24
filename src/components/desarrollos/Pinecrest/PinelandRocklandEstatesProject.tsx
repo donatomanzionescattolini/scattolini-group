@@ -6,7 +6,7 @@ export default function PinelandRocklandEstatesProject() {
     return (
         <ProjectTemplate
 
-            desarrollo={PineRocklandEstates()}
+            project={PineRocklandEstates()}
         />
     );
 }

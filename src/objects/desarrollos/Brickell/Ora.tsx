@@ -52,7 +52,7 @@ export default function Ora() {
                 </li>
             </ul>
         ),
-        residencias: (
+        residences: (
             <ul>
                 <li>Estudio a residencias de cuatro dormitorios</li>
                 <li>

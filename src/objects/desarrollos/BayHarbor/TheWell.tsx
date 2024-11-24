@@ -29,7 +29,7 @@ export default function TheWell() {
                 </ul>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <ul>
                     <li>

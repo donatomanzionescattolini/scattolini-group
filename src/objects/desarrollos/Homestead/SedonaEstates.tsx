@@ -5,7 +5,7 @@ export default function SedonaEstates() {
     SedonaEstates.name = "sedona-estates";
     SedonaEstates.title = "Sedona Estates";
     SedonaEstates.subtitle = "";
-    SedonaEstates.traits = {building: <></>, residencias: <></>, amenities: <></>};
+    SedonaEstates.traits = {building: <></>, residences: <></>, amenities: <></>};
 
     SedonaEstates.introduction = [];
 

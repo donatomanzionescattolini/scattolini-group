@@ -20,7 +20,7 @@ export default function _2200Brickell() {
                 <dt>Ubicación:</dt><dd>2200 Brickell Avenue, Miami, FL 33129</dd>
             </dl>
         ,
-        residencias: <dl>
+        residences: <dl>
             <dt> Un Santuario Urbano</dt><dd>Creadas por amantes de la vida en la ciudad que encuentran una gran
                 inspiración en la naturaleza, estas residencias únicas logran un equilibrio perfecto con un enfoque de lo
                 mejor de ambos mundos que ofrece una serenidad suntuosa en medio de la vibrante vida de la ciudad.</dd><dt>Un

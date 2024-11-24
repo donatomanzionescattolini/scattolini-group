@@ -6,7 +6,7 @@ export default function PineRocklandEstates() {
     PinelandRocklandEstatesObject.name = "pine-rockland-estates";
     PinelandRocklandEstatesObject.traits = {
         building: <></>,
-        residencias: <></>,
+        residences: <></>,
         amenities: <></>,
     };
 

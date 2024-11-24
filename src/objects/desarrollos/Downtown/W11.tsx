@@ -55,7 +55,7 @@ export default function W11() {
                 </ul>
             </>
         ),
-        residencias: (
+        residences: (
             <>
                 <ul>
                     <li>

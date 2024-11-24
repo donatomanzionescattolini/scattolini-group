@@ -6,7 +6,7 @@ export default function WaldorfAstoriaProject() {
     return (
         <ProjectTemplate
 
-            desarrollo={WaldorfAstoria()}
+            project={WaldorfAstoria()}
         />
     );
 }

@@ -5,5 +5,5 @@ export default function AstonMartinProject() {
     return (
         <ProjectTemplate
 
-            desarrollo={AstonMartin()}/>);
+            project={AstonMartin()}/>);
 }

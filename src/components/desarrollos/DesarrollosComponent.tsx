@@ -13,7 +13,7 @@ export default function Desarrollos(props:DesarrollosComponentProps) {
 
     const [areas] = useState(Areas());
 
-    let desarrollos = new Array<Project>();
+    let desarrollos:Project[];
 
     let index = 0;
     const desarrollosElementArray = new Array<React.JSX.Element>();
@@ -23,7 +23,7 @@ export default function Desarrollos(props:DesarrollosComponentProps) {
 index = index+1;
                 desarrollosElementArray.push(<>{d.name && <MDBCol md="4" key={index} className="mb-4">
                     <MDBCard className="photo-card">
-                        <MDBCardImage src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${d.area.name}/${d.name}.webp`} alt={d.name} position="top" className="gallery-image img-thumbnail" />
+                        <MDBCardImage src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${(d.area?d.area.name:"")}/${d.name}.webp`} alt={d.name} position="top" className="gallery-image img-thumbnail" />
                     </MDBCard>
                     <MDBCardFooter className="pt-2">
                         <MDBCardLink className="text-center" href={`/desarrollos/${d.name}`}>
@@ -44,7 +44,7 @@ index = index+1;
             desarrollosElementArray.push(<MDBCol md="4" key={index} className="mb-4">
                 <MDBCard className="photo-card">
                     <MDBCardImage
-                        src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${desarrollo.area.name}/${desarrollo.name}.webp`}
+                        src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${(desarrollo.area ? desarrollo.area.name:"")}/${desarrollo.name}.webp`}
                         alt={desarrollo.name} position="top" className="gallery-image img-thumbnail"/>
                 </MDBCard>
                 <MDBCardFooter className="pt-2">
@@ -58,7 +58,7 @@ index = index+1;
 
         if (desarrollos.length <= 0) {
             return;
-            ;
+
         }
     }
     return (

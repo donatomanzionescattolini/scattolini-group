@@ -7,7 +7,7 @@ export default function Vita() {
 
     VitaObject.name = "vita-grove";
     VitaObject.traits = {
-        residencias: (
+        residences: (
             <ul>
                 <li>Ascensor privado</li>
                 <li>

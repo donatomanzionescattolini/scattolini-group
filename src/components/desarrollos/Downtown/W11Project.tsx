@@ -6,5 +6,5 @@ import ProjectTemplate from "../ProjectTemplate.tsx";
 import W11 from "../../../objects/desarrollos/Downtown/W11.tsx";
 
 export function W11Project(): JSX.Element {
-    return (<ProjectTemplate desarrollo={W11()}/>);
+    return (<ProjectTemplate project={W11()}/>);
 }

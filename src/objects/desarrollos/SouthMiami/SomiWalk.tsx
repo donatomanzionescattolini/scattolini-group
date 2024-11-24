@@ -33,7 +33,7 @@ export default function SomiWalk() {
                 </li>
             </ul>
         </>,
-        residencias: <>
+        residences: <>
             <ul>
                 <li>Entregadas llave en mano</li>
                 <li>Cocinas gourmet con gabinetes personalizados</li>

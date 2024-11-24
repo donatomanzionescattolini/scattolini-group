@@ -4,6 +4,6 @@ import NatiivoFtLauderdale from '../../../objects/desarrollos/FtLauderdale/Natti
 
 export default function NatiivoFtLauderdaleProject() {
     return (
-        <ProjectTemplate desarrollo={NatiivoFtLauderdale()}/>
+        <ProjectTemplate project={NatiivoFtLauderdale()}/>
     )
 }

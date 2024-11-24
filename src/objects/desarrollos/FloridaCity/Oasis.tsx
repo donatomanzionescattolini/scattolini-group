@@ -8,7 +8,7 @@ export default function Oasis() {
     OasisObject.subtitle = "";
     OasisObject.traits = {
         building: <></>,
-        residencias: <></>,
+        residences: <></>,
         amenities: <></>,
     };
 

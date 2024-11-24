@@ -4,7 +4,7 @@ import VidaResidences from "../../../objects/desarrollos/Edgewater/VidaResidence
 
 export default function VidaProject() {
     return (
-        <ProjectTemplate desarrollo={VidaResidences()}
+        <ProjectTemplate project={VidaResidences()}
         />
     );
 }

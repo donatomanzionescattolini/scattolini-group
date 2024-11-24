@@ -5,5 +5,5 @@ import FourteenRiverDistrict from "../../../objects/desarrollos/Brickell/Fourtee
 export default function FourteenRiverDistrictProject() {
     return (
         <ProjectTemplate
-            desarrollo={FourteenRiverDistrict()}/>);
+            project={FourteenRiverDistrict()}/>);
 }

@@ -6,5 +6,5 @@ export default function TheAvenueProject() {
     return (
         <ProjectTemplate
 
-            desarrollo={TheAvenue()}/>);
+            project={TheAvenue()}/>);
 }

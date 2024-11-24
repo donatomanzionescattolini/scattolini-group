@@ -4,6 +4,6 @@ import AriaReserve from "../../../objects/desarrollos/Edgewater/AriaReserve.tsx"
 export default function AriaReserveProject() {
     return (
         <ProjectTemplate
-            desarrollo={AriaReserve()}/>
+            project={AriaReserve()}/>
     );
 }

@@ -4,6 +4,6 @@ import ElleResidences from '../../../objects/desarrollos/Edgewater/ElleResidence
 
 export default function ElleResidencesProject() {
     return (
-        <ProjectTemplate desarrollo={ElleResidences()}/>
+        <ProjectTemplate project={ElleResidences()}/>
     )
 }

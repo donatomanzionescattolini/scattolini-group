@@ -11,7 +11,7 @@ export default function Ella() {
     EllaObject.ubicación = "6940 Abbot Avenue, Miami Beach, FL 33141";
 
     EllaObject.name = "ella";
-    EllaObject.traits = {building: <></>, residencias: <></>, amenities: <></>};
+    EllaObject.traits = {building: <></>, residences: <></>, amenities: <></>};
     EllaObject.introduction = [];
     EllaObject.title = "Ella Miami Beach";
     EllaObject.introduction = ["Ella, un tributo a la espléndida historia de Miami Beach, combina la elegancia vintage con líneas contemporáneas, creando una atmósfera conmovedora que captura el espíritu de Miami Beach.", "Meticulosamente diseñada, Ella ofrece experiencias de vida excepcionales, cumpliendo con los más altos estándares de sofisticación contemporánea.", "Ella establece un nuevo estándar para los desarrollos residenciales de Miami con alquileres a corto plazo. La reconocida firma Arquitectonica, desarrolló una estética atrevida y moderna. Su diseño moderno y eficiente se puede experimentar en todas las comodidades y residencias El edificio ofrece 95 residencias con alquileres a corto plazo que van desde suites de 1 dormitorio hasta 2 dormitorios, con vistas al mar y a la bahía, junto con acabados interiores de lujo."];
@@ -19,7 +19,7 @@ export default function Ella() {
     EllaObject.residencias = ["Vistas al mar / bahía", "Proximidad a la playa", "Aproximadamente 9' + alturas de techo", "Lavadora/secadora en el apartamento", "Terrazas con outlets", "Muelle de carga para facilitar las mudanzas", "Se permiten alquileres a corto plazo", "Cocinas ItalKraft", "Paquete de electrodomésticos listo para paneles: Paquete de electrodomésticos Jennair, estufa de inducción de 30\", refrigeradores de 24 a 36\", lavaplatos, horno/microondas", "Isla de cocina en residencias selectas", "Garajes para electrodomésticos en residencias selectas", "Armarios de diseño", "Encimeras de piedra", "Herrajes y accesorios de fontanería de Hansgrohe", "Inodoro y lavabo Laufen", "Residencias totalmente amuebladas disponibles en Interiors by Steven G para su compra"];
     EllaObject.traits = {
         building: EllaObject.displayCaracteristicasEdificio(),
-        residencias: EllaObject.displayCaracteristicasResidencias(),
+        residences: EllaObject.displayCaracteristicasResidencias(),
         amenities: EllaObject.displayAmenidades()
     };
 

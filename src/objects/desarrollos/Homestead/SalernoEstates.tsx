@@ -9,7 +9,7 @@ export default function SalernoEstates() {
     SalernoEstates.area = Homestead();
     SalernoEstates.traits = {
         building: <></>,
-        residencias: <></>,
+        residences: <></>,
         amenities: <></>,
     };
 

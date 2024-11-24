@@ -5,7 +5,7 @@ export default function DomusProject() {
     return (
         <div id="domus">
             {" "}
-            <ProjectTemplate desarrollo={Domus()}/>
+            <ProjectTemplate project={Domus()}/>
         </div>
     );
 }

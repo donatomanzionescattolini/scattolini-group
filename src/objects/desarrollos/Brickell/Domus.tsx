@@ -26,7 +26,7 @@ export default function Domus() {
                 <li>Bar de vinos y cervezas</li>
             </ul>
         ),
-        residencias: (
+        residences: (
             <ul>
                 <li>Residencias 100% amuebladas</li>
                 <li>72 estacionamientos comunes</li>

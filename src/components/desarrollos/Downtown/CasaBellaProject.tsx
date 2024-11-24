@@ -5,5 +5,5 @@ import ProjectTemplate from "../ProjectTemplate.tsx";
 export default function CasaBellaProject() {
     return (
         <ProjectTemplate
-            desarrollo={CasaBella()}/>);
+            project={CasaBella()}/>);
 }
