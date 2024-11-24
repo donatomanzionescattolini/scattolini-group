@@ -15,37 +15,38 @@ import {
     MDBTabsPane,
 } from "mdb-react-ui-kit";
 import {Link} from "react-router-dom";
-import {ProjectParams, traits,} from "../../models/desarrollos/ProjectParams.tsx";
+import {ProjectParams,} from "../../models/desarrollos/ProjectParams.tsx";
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
 import Desarrollos from "./DesarrollosComponent.tsx";
-export default function ProjectTemplate(paramz: ProjectParams) {
+export default function ProjectTemplate(paramz: Readonly<ProjectParams>) {
     const params = paramz.project;
     const [nombre] = useState(params.name);
     const [area] = useState(params.area);
     const [numberOfImages] = useState(params.numberOfImages);
     const [tabVisible, setTabVisible] = useState("brochure");
-    const vid: String | Element | (() => String | Element) | ReactNode = params.video
+    const vid: string | Element | (() => string | Element) | ReactNode = params.video
         ? params.video
         : `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`;
-    const [video] = useState< ReactNode>(vid && (typeof vid === "string") ? <video className="w-100" autoPlay loop >
-        <source
-            src={vid as string}
-            type="video/mp4"
-            allowFullScreen={true}
-        />
-    </video> as ReactNode:vid as ReactNode);
-    const [caract] = useState(params.traits as traits);
+    const [video] = useState< ReactNode>(vid && (typeof vid === "string") ? <MDBContainer>
+    <div className="ratio ratio-16x9">
+      <iframe
+        src={vid}
+        title="Vimeo video"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </MDBContainer> as ReactNode:vid as ReactNode);
     const [titulo] = useState(params.title);
     const [banner] = useState(params.banner);
     const [subtitulo] = useState(params.subtitle);
     const [introduccion] = useState(params.introduction);
     const [CaracteristicasAmenidades] = useState(
-        () => caract.amenities
+       params.displayAmenities()
     );
-    const [CaracteristicasEdificio] = useState(() => caract.building);
+    const [CaracteristicasEdificio] = useState(params.displayCaracteristicasEdificio());
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-    const [CaracteristicasResidencias] = useState(() => caract.residences);
+    const [CaracteristicasResidencias] = useState(params.displayCaracteristicasResidencias());
     const [pdfUrl] = useState(
         `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`
     );
@@ -55,7 +56,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    function openTab(docType: String) {
+    function openTab(docType: string) {
         switch (docType) {
             case "brochure":
                 tabVisible === "brochure"
@@ -156,8 +157,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 <MDBRow className={"row w-75 mx-auto mt-5 bg-transparent py-5"}>
                     <MDBCol xs={12} sm={12} md={6} lg={6} xl={6}
                             className={"align-content-center justify-content-center"}>
-                        {(introduccion as Array<String>).map((par: String) =>
-                            <p className={""}>{par}</p>)
+                        {(introduccion as Array<string>).map((par: string) =>
+                            <p key={introduccion!.indexOf(par)+1}>{par}</p>)
                         }
                     </MDBCol>
                     <MDBCol xs={12} sm={12} md={6} lg={6} xl={6} className={"p-md-5 p-sm-2"}>
@@ -169,7 +170,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             </section>
             <div className="skew-cc"></div>
             <section className="colour-block p-auto">
-                {video as ReactNode}
+                {video }
             </section>
             <div className="skew-c"></div>
             <section className="white-block py-5  ">
@@ -217,30 +218,16 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             <div className="skew-cc"></div>
             <section className="colour-block py-5  " id="galeria-proyectos">
                 <div>
-                    <h4 className="text-center title display-6     my-5">Galería Fotográfica</h4>
+                    <h4 className="text-center title display-6 my-5">Galería Fotográfica</h4>
                 </div>
                 <hr className="hr hr-blurry w-50 mx-auto"/>
                 <br></br>
                 <SlideshowGalleryDesarrollo
-                    name={nombre ? "nombre" : ""}
+                    name={nombre ? nombre : ""}
                     numberOfImages={numberOfImages as number}
                 />
-                {/* <SlideshowGalleryDesarrollo2
-          name={nombre}
-          numberOfImages={numberOfImages as number}
-        /> */}
             </section>
             <div className="skew-c"></div>
-            {/* <MDBContainer>
-        <iframe
-          width="450"
-          height="250"
-          style={{ border: 0 }}
-          referrerPolicy="no-referrer-when-downgrade"
-          src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyCuQ4dtFPvp6nmhSUmAB4HNk6NzAjTvxWo&q=${direccion}`}
-          allowFullScreen
-        ></iframe> */}
-            {/* </div> */}
             <section className="white-block py-5  embed-responsive">
                 <br></br>
                 <br></br>
@@ -276,29 +263,6 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                         </MDBTabsLink>
                     </MDBTabsItem>
                 </MDBTabs>
-                {/*{tabVisible === "none" &&*/}
-                {/*    (<><h1 className="display-6     my-5 text-center"><small className={"text-muted "}>Aprenda mas sobre este maravilloso proyecto!</small></h1>*/}
-                {/*    <br></br>*/}
-                {/*    <h1 className="display-3 text-center">Selecciona una de las fichas en la esquina izquierda de esta seccion </h1></>)*/}
-                {/*}*/}
-                {/* {(tabVisible === "brochure" ||
-            tabVisible === "hoja" ||
-            tabVisible === "planos") && (
-            <object
-              height={"100%"}
-              //   {/* const file =
-              //   fs.readFileSync(path.resolve("public/assets/Bonus_1.pdf")).toString("base64"); */}
-                {/* <PDFV
-              //     url={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-        {/* <embed
-              //     src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-              //     width="800px"
-              //     height="2100px" */}
-                {/* //   /> */}
-                {/* // </object> */}
-                {/* data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-              style={{ width: "100%", height: 500 }}
-            > */}
                 <MDBTabsContent>
                     <MDBTabsPane show={tabVisible === "brochure"}>
                         <object
@@ -397,7 +361,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 <MDBContainer
                     className="d-flex justify-content-center w-100 p-0 m-0"
                 >
-                    <ContactFormComponent projectName={titulo as String}/>
+                    <ContactFormComponent projectName={titulo as string}/>
                 </MDBContainer>
             </section>
             <div className="skew-c"></div>

@@ -8,7 +8,7 @@ export default function OnGrandville() {
     OnGrandville.numberOfImages = 0;
     OnGrandville.amenities = [];
     OnGrandville.introduction = [];
-    OnGrandville.residencias = [];
+    OnGrandville.residences = [];
     OnGrandville.edificio = {
         añoDeConstrucciónOFinalización: 0,
         piesCuadrados: 0,
@@ -39,27 +39,27 @@ export default function OnGrandville() {
     OnGrandville.numberOfModels = 3;
     OnGrandville.banner = true;
     OnGrandville.numberOfImages = 7;
-    OnGrandville.residencias = new Map();
-    OnGrandville.residencias.set("Estructura", [
+    OnGrandville.residences = new Map();
+    OnGrandville.residences.set("Estructura", [
         "Construcción de Hormigón",
         "Ventanas a Prueba de Golpes",
         "Paredes con Acabado Texturizado",
         "Paredes con Acabado Liso",
     ]);
 
-    OnGrandville.residencias.set("Tecnología", [
+    OnGrandville.residences.set("Tecnología", [
         "Pre-Cableado de Fibra Óptica de Alta Velocidad de Internet",
         "Timbre",
         "Smart Entry Lock",
         "Exterior Security Cameras",
     ]);
-    OnGrandville.residencias.set("Miscellaneous", [
+    OnGrandville.residences.set("Miscellaneous", [
         "Persianas para Ventanas",
         "Pasamanos de Escalera Blanco o Negro Mate",
         "Estantes de Malla en Vestidor",
         "Armario en Closet Vestidor",
     ]);
-    OnGrandville.residencias.set("Interiores", [
+    OnGrandville.residences.set("Interiores", [
         "Encimeras de Cuarzo ",
         "Moderna Cocina Abierta",
         "Electrodomésticos de Acero Inoxidable",
@@ -70,14 +70,14 @@ export default function OnGrandville() {
         "Vestidor en Dormitorio Principal",
         "Calentador de Agua Eléctrico sin Tanque",
     ]);
-    OnGrandville.residencias.set("Baño", [
+    OnGrandville.residences.set("Baño", [
         "Espejo Completo",
         "Gabinetes de Tocador Modernos",
         "Encimeras de Cuarzo",
         "Azulejos de Suelo a Techo en la Ducha",
         "Panel de Ducha de Cristal",
     ]);
-    OnGrandville.residencias.set("Exterior", [
+    OnGrandville.residences.set("Exterior", [
         "Terraza en la Azotea",
         "Puerto de Carga para Vehículos Eléctricos",
         "Ventanas y Puertas a Prueba de Huracanes",

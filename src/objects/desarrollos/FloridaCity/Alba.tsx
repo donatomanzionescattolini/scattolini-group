@@ -43,7 +43,7 @@ export default function Alba() {
         "Parque (acceso al Onx Community Park y a sus servicios)",
     ]);
     AlbaObject.amenities = amenidades;
-    AlbaObject.residencias = [
+    AlbaObject.residences = [
         "Lavadora y secadora compactas",
         " Encimeras de Cuarzo",
         " Dormitorio y Baño Independientes para Invitados",

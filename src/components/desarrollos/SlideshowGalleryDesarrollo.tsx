@@ -17,8 +17,6 @@ const SlideshowGalleryDesarrollo = (props:PropsSlideshow) => {
                 className="w-75 mx-auto d-block h-75 my-auto img-fluid img-thumbnail"
                 itemId={index+1}
                 src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${props.name}/image-gallery/image (${index+1}).jpg`}/>
-
-                // alt={props.name+" image #"+(index+1)}
             )}
                 </>{/*<h5>Third Slide Title</h5>*/}
                 {/*<p>Third slide description goes here.</p>*/}
