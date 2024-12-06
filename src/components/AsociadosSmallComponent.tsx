@@ -15,8 +15,8 @@ export default function AsociadosSmallComponent() {
                     style={{maxWidth: "100%!important"}}
                 />
                 <div className="middle">
-                    <p
-                        onClick={() => nav("/asociados")} className="text">Ver Más</p>
+                    <button className={"btn "} id={"asociados-link"}
+                        onClick={() => nav("/asociados")}>Ver Más</button>
                 </div>
             </div>
         </>

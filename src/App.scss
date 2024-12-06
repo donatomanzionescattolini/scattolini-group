@@ -1384,3 +1384,23 @@ img {
   img {
     overflow: hidden !important;
   }
+
+  #navbarCenteredExample .nav-link, .dropdown a {
+    color: $brown !important;
+  }
+
+  #asociados-link {
+    background-color:$background !important;
+    visibility: visible !important;
+
+  }
+
+
+  #root, .skew-c, .skew-cc {
+    max-width:1500px!important;
+    margin-inline:auto!important;
+  }
+
+  Footer a {
+    color: $brown !important;
+  }
