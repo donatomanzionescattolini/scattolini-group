@@ -8,8 +8,7 @@ import Contacto from "./components/ContactoComponent.tsx";
 import "mdb-ui-kit/css/mdb.min.css";
 import "mdb-ui-kit/js/mdb.min.js";
 import "material-components-web/dist/material-components-web.js";
-import Desarrollos from "./components/desarrollos/DesarrollosComponent.tsx";
-import Equipo from "./components/AsociadosComponent.tsx";
+    import Equipo from "./components/AsociadosComponent.tsx";
 import ManzioneProperties from "./components/aliados/ManzioneProperties";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -21,6 +20,7 @@ import Liderazgo from "./components/Liderazgo.tsx";
 import {FloatingWhatsApp} from "react-floating-whatsapp";
 import AreasRoutes from "./routes/AreasRoutes.tsx";
 import DesarrollosRoutes from "./routes/DesarrollosRoutes.tsx";
+import Desarrollos from "./components/projects/DesarrollosComponent.tsx";
 
 export default function App() {
 
