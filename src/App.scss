@@ -1,4 +1,5 @@
 @use "sass:color";
+
 $color: #000;
 @import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap');
 $darkblue: #0e2d2f;
@@ -68,7 +69,7 @@ a,
   font-weight: 900 ;
 } */
 
-#divider>div {
+#divider > div {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -79,7 +80,7 @@ a,
   margin-block-start: 5rem;
 }
 
-Home>div.container-fluid.row.divider>div:nth-child(3) {
+Home > div.container-fluid.row.divider > div:nth-child(3) {
   background-position: 10% 29%;
 }
 
@@ -104,8 +105,8 @@ main {
 }
 
 
-#root>section>div>div>h3,
-#root>section:nth-child(5)>div>p {
+#root > section > div > div > h3,
+#root > section:nth-child(5) > div > p {
   box-sizing: inherit;
   letter-spacing: normal;
   text-transform: none;
@@ -192,8 +193,8 @@ nav {
   /* background: #1b3433  ;  color: $background  ;  color: #AC9474 ; */
 }
 
-#navbarNavDropdown>ul>li a:hover,
-#navbarNavDropdown>ul>li:hover,
+#navbarNavDropdown > ul > li a:hover,
+#navbarNavDropdown > ul > li:hover,
 .dropdown-item:hover {
   //background: #1b3433!important;
   color: $brown !important;
@@ -256,7 +257,7 @@ section.Servicios p {
   background-position-x: center;
 }
 
-main>section.city-firstsection {
+main > section.city-firstsection {
   line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
@@ -274,7 +275,7 @@ main>section.city-firstsection {
 
 }
 
-#root>main>section.city-firstsection.w-100.row>div.row.d-flex.align-items-center.justify-content-around>div.col-xs-12.col-sm-12.col-md-4.col-lg-4 {
+#root > main > section.city-firstsection.w-100.row > div.row.d-flex.align-items-center.justify-content-around > div.col-xs-12.col-sm-12.col-md-4.col-lg-4 {
   padding: 0% !important;
   justify-content: center;
 }
@@ -339,7 +340,7 @@ main>section.city-firstsection {
   padding: 10px;
 }
 
-section.city-banner>div:nth-child(1) {
+section.city-banner > div:nth-child(1) {
   padding: 5rem;
   margin: 0;
 }
@@ -384,7 +385,7 @@ section.city-firstcarousel {
   padding: 0;
 }
 
-.divider-second>div {
+.divider-second > div {
   line-height: 1.5;
 
   -webkit-tap-highlight-color: transparent;
@@ -669,7 +670,7 @@ main {
 html {
   margin: 0;
   padding: 0;
-  background: $background!important;
+  background: $background !important;
 }
 
 section {
@@ -722,7 +723,7 @@ nav ul ul {
   padding: 0;
 }
 
-.navbar-nav>* {
+.navbar-nav > * {
   margin-inline: 15px;
 }
 
@@ -737,7 +738,7 @@ nav ul ul {
     padding: 0;
   }
 
-  #root>div>main>section.city-firstcarousel {
+  #root > div > main > section.city-firstcarousel {
     display: none !important;
   }
 }
@@ -755,7 +756,7 @@ section.Servicios p {
 }
 
 @media screen and (min-width: 768px) {
-  main>section.city-firstsection {
+  main > section.city-firstsection {
     font-family: "Cormorant Garamond", serif;
     color: $brown;
 
@@ -775,7 +776,7 @@ section.Servicios p {
   max-width: 100% !important;
 }
 
-#root>main>section.city-firstsection.w-100.row>div.row.d-flex.align-items-center.justify-content-around {
+#root > main > section.city-firstsection.w-100.row > div.row.d-flex.align-items-center.justify-content-around {
   margin: 0;
 }
 
@@ -885,7 +886,7 @@ iframe {
   margin: auto;
 }
 
-#root>div>main>div>div.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xl-6.p-4>h4 {
+#root > div > main > div > div.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xl-6.p-4 > h4 {
   margin-top: 10%;
 }
 
@@ -948,7 +949,7 @@ div.react-pdf__Page .annotationLayer {
   right: 30vw;
 } */
 
-#root>div>main>div.video-container>div.content.text-center.w-100>a {
+#root > div > main > div.video-container > div.content.text-center.w-100 > a {
   background-color: #2b2a2e;
   color: $background;
 }
@@ -956,7 +957,7 @@ div.react-pdf__Page .annotationLayer {
 #banner {
   width: 100%;
   background-position: center;
-  height:35vh!important;
+  height: 35vh !important;
 }
 
 #propiedades-en-area a:hover {
@@ -1026,9 +1027,9 @@ p {
   left: auto;
   right: auto;
   background: linear-gradient(to right bottom,
-      $secondBackground 49%,
-      $background 50%),
-    linear-gradient(-50deg, $background 16px, $secondBackground 0);
+          $secondBackground 49%,
+          $background 50%),
+  linear-gradient(-50deg, $background 16px, $secondBackground 0);
 }
 
 /*-------------------------*/
@@ -1044,8 +1045,8 @@ p {
   left: auto;
   right: auto;
   background: linear-gradient(to left bottom,
-      $background 49%,
-      $secondBackground 50%);
+          $background 49%,
+          $secondBackground 50%);
 }
 
 iframe {
@@ -1069,7 +1070,7 @@ main {
 } */
 
 @media screen and (max-width: 768px) {
-  #asociados-row>div {
+  #asociados-row > div {
     width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -1082,7 +1083,7 @@ main {
   }
 }
 
-#root>nav {
+#root > nav {
   padding: 3%;
   display: flex;
   justify-content: space-evenly !important;
@@ -1107,8 +1108,8 @@ dl {
   text-align: unset;
 }
 
-#root>div>main>video,
-#root>div>main>iframe {
+#root > div > main > video,
+#root > div > main > iframe {
   width: 90vw;
 }
 
@@ -1188,9 +1189,9 @@ video {
   position: relative !important;
 }
 
-#panel1a-header>p>button,
-#panel3a-header>p:nth-child(1)>button:nth-child(1),
-#panel2a-header>p:nth-child(1)>button:nth-child(1) {
+#panel1a-header > p > button,
+#panel3a-header > p:nth-child(1) > button:nth-child(1),
+#panel2a-header > p:nth-child(1) > button:nth-child(1) {
   background: $background !important;
 }
 
@@ -1214,193 +1215,194 @@ img {
     background-position: center !important;
   }
 }
-  .e img {
-    max-height: 350px !important;
-    height:auto!Important;
-    max-height: 100% !important;
-  }
+
+.e img {
+  max-height: 350px !important;
+  height: auto !Important;
+  max-height: 100% !important;
+}
 
 
-  //.carousel-control
-  //}
+//.carousel-control
+//}
 
-  a {
-    text-decoration: none !important;
-    text-transform: capitalize !Important;
-  }
+a {
+  text-decoration: none !important;
+  text-transform: capitalize !Important;
+}
 
-  #servicios > div > div {
-    background: #ede3d6 !important;
-    text-transform: capitalize !important;
-  }
-
-
-  #hero-heading {
-    font-variant: normal !important;
-    font-family: 'the-seasons', sans-serif
-    /***** Section *****/
-    /***** End Section *****/
-  ;
-    font-weight: bolder;
-  }
+#servicios > div > div {
+  background: #ede3d6 !important;
+  text-transform: capitalize !important;
+}
 
 
-  a:active,
-  li:active,
-  a:hover,
-  li:hover {
-    text-decoration: none !important;
-  }
+#hero-heading {
+  font-variant: normal !important;
+  font-family: 'the-seasons', sans-serif
+  /***** Section *****/
+  /***** End Section *****/
+;
+  font-weight: bolder;
+}
 
 
-  .column {
-    width: 50% !Important;
-    float: left !Important;
-    padding: 10px !important;
-  }
+a:active,
+li:active,
+a:hover,
+li:hover {
+  text-decoration: none !important;
+}
 
 
-  .dropdown-menu-content {
-    column-count: 2 !important;
-    min-width: 15rem !important;
-    column-gap: 20px;
-    overflow-x: visible !important;
-  }
-
-  .dropdown-menu {
-    margin-left: auto;
-    margin-right: auto;
-
-    overflow-x: visible !important;
-    min-width: fit-content !important;
-  }
+.column {
+  width: 50% !Important;
+  float: left !Important;
+  padding: 10px !important;
+}
 
 
-  #root > div.container-fluid.m-0.p-0.overflow-scroll.horizontal-scrollable {
+.dropdown-menu-content {
+  column-count: 2 !important;
+  min-width: 15rem !important;
+  column-gap: 20px;
+  overflow-x: visible !important;
+}
+
+.dropdown-menu {
+  margin-left: auto;
+  margin-right: auto;
+
+  overflow-x: visible !important;
+  min-width: fit-content !important;
+}
+
+
+#root > div.container-fluid.m-0.p-0.overflow-scroll.horizontal-scrollable {
+  overflow: visible !important;
+}
+
+
+.nav-item,
+.dropdown-toggle,
+.nav-link {
+  font-family: "the-seasons", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#root > section:nth-child(14) > div > div > div > a {
+  background-color: transparent;
+}
+
+div {
+  font-family: "tt-commons-pro", sans-serif;
+  font-weight: lighter;
+
+}
+
+
+.city-firstcarousel {
+  overflow-x: scroll !important;
+}
+
+
+//
+//body {
+//  background-color: $background !Important;
+//}
+.bg-darkblue {
+  background: $darkblue !Important;
+}
+
+.accordion {
+  background: transparent;
+}
+
+.accordion-flush .accordion-button:focus {
+  background: $background !important;
+  color: $brown !Important;
+}
+
+button.accordion-button {
+  background: $secondBackground !important;
+
+  font-family: "the-seasons", sans-serif;
+  font-size: inherit;
+}
+
+.accordion-body * {
+  text-indent: 1rem !important;
+  list-style-position: inside;
+}
+
+@media screen and (max-width: 700px) {
+  .accordion-body *,
+  .accordion-body * * {
     overflow: visible !important;
   }
 
-
-  .nav-item,
-  .dropdown-toggle,
-  .nav-link {
-    font-family: "the-seasons", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-
-  #root > section:nth-child(14) > div > div > div > a {
-    background-color: transparent;
-  }
-
-  div {
-    font-family: "tt-commons-pro", sans-serif;
-    font-weight: lighter;
-
-  }
-
-
-  .city-firstcarousel {
-    overflow-x: scroll !important;
-  }
-
-
-  //
-  //body {
-  //  background-color: $background !Important;
-  //}
-  .bg-darkblue {
-    background: $darkblue !Important;
-  }
-
-  .accordion {
-    background: transparent;
-  }
-
-  .accordion-flush .accordion-button:focus {
-    background: $background !important;
-    color: $brown !Important;
-  }
-
-  button.accordion-button {
-    background: $secondBackground !important;
-
-    font-family: "the-seasons", sans-serif;
-    font-size: inherit;
-  }
-
-  .accordion-body * {
-    text-indent: 1rem !important;
-    list-style-position: inside;
-  }
-
-  @media screen and (max-width: 700px) {
-    .accordion-body *,
-    .accordion-body * * {
-      overflow: visible !important;
-    }
-
-    #accordion {
-      width: 100% !important;
-      margin: auto !Important;
-    }
-
-  }
-
-
-  p,
-  div {
-    font-size: 1rem;
-  }
-
-  dt {
-    margin-bottom: 1rem !important;
-  }
-
-  dd {
-    margin-bottom: 1.5rem !important;
-    overflow-y: visible !important;
-  }
-
-  .photo-card {
-    overflow: hidden !Important;
-    height: 20rem !important;
-    /* Set the desired height */
-  }
-
-  .gallery-image {
-    object-fit: cover !important;
-    /* Ensures the image scales without distortion */
+  #accordion {
     width: 100% !important;
-    /* Full width of the container */
-    height: 100% !important;
-    /* Full height of the container */
+    margin: auto !Important;
   }
 
-  SECTION:not(:nth-of-type(1)) {
-    MARGIN-TOP: 100PX;
-  }
-
-  img {
-    overflow: hidden !important;
-  }
-
-  #navbarCenteredExample .nav-link, .dropdown a {
-    color: $brown !important;
-  }
-
-  #asociados-link {
-    background-color:$background !important;
-    visibility: visible !important;
-
-  }
+}
 
 
-  #root, .skew-c, .skew-cc {
-    max-width:1500px!important;
-    margin-inline:auto!important;
-  }
+p,
+div {
+  font-size: 1rem;
+}
 
-  Footer a {
-    color: $brown !important;
-  }
+dt {
+  margin-bottom: 1rem !important;
+}
+
+dd {
+  margin-bottom: 1.5rem !important;
+  overflow-y: visible !important;
+}
+
+.photo-card {
+  overflow: hidden !Important;
+  height: 20rem !important;
+  /* Set the desired height */
+}
+
+.gallery-image {
+  object-fit: cover !important;
+  /* Ensures the image scales without distortion */
+  width: 100% !important;
+  /* Full width of the container */
+  height: 100% !important;
+  /* Full height of the container */
+}
+
+SECTION:not(:nth-of-type(1)) {
+  MARGIN-TOP: 100PX;
+}
+
+img {
+  overflow: hidden !important;
+}
+
+#navbarCenteredExample .nav-link, .dropdown a {
+  color: $brown !important;
+}
+
+#asociados-link {
+  background-color: $background !important;
+  visibility: visible !important;
+
+}
+
+
+#root, .skew-c, .skew-cc {
+  max-width: 1500px !important;
+  margin-inline: auto !important;
+}
+
+Footer a {
+  color: $brown !important;
+}

@@ -89,9 +89,9 @@ export default function StRegis() {
                     </li>
                     <li className="list-group-item"> Suites principales y baño</li>
                 </ul>
-                <img className="img-fluid" 
-                    alt={"price list"}
-                    src={"https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/st-regis/pricelist.jpg"}
+                <img className="img-fluid"
+                     alt={"price list"}
+                     src={"https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/st-regis/pricelist.jpg"}
                 />
             </div>
         ),

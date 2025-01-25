@@ -1,11 +1,11 @@
-import { Carousel, Image } from "react-bootstrap";
-import { MDBCarousel, MDBCarouselItem, MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
-import React, { useLayoutEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import {Carousel, Image} from "react-bootstrap";
+import {MDBCol, MDBContainer, MDBRow} from "mdb-react-ui-kit";
+import React, {useLayoutEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
 import Project from "../../models/desarrollos/Project.tsx";
-import { Area } from "../../models/areas/Area.tsx";
-import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
+import {Area} from "../../models/areas/Area.tsx";
+import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
 
 interface AreaProps {
     area: Area;
@@ -16,7 +16,7 @@ export default function AreaTemplate(props: AreaProps) {
     const [area] = useState(props.area);
 
     const nombre = area.name;
-    const titulo = area.titulo;
+    const titulo = area.title;
     const images = [];
 
     const [areaDesarrollos] = useState<Set<Project>>(getDesarrollosForArea(area));
@@ -47,7 +47,7 @@ export default function AreaTemplate(props: AreaProps) {
                 }}
             >
                 <div className={"mask  w-100 h-100 justify-content-center align-content-center "}
-                    style={{ backgroundColor: "rgba(0,0,0,0.2)" }}>
+                     style={{backgroundColor: "rgba(0,0,0,0.2)"}}>
 
                 </div>
 
@@ -63,10 +63,11 @@ export default function AreaTemplate(props: AreaProps) {
                 <MDBRow className="ps-lg-5 ps-xl-5 ps-md-0 px-sm-1 px-xs-1 align-items-center overflow-visible ">
 
                     <MDBCol xs={12} sm={12} md={6} lg={8} xl={8}
-                        className=" d-flex flex-column justify-content-center align-items-center overflow-visible ">
+                            className=" d-flex flex-column justify-content-center align-items-center overflow-visible ">
 
                         <p className="px-5 mt-5">{area.descripcion.map((paragraph: string) => {
-                            return (<p key={area.descripcion.indexOf(paragraph)} className={"text-indent"}>{paragraph}<br /><br /></p>)
+                            return (<p key={area.descripcion.indexOf(paragraph)}
+                                       className={"text-indent"}>{paragraph}<br/><br/></p>)
                         })}
                         </p>
 
@@ -76,14 +77,15 @@ export default function AreaTemplate(props: AreaProps) {
 
                             src={firstImage}
                             className="  img-fluid img-thumbnail flex-shrink-1"
-                            alt={area.name} />
+                            alt={area.name}/>
 
                     </MDBCol>
                 </MDBRow>
 
 
                 {innerWidth < 610 ? (
-                    <div className={"d-flex flex-column align-content-center align-items-center  justify-content-evenly my-5"}>
+                    <div
+                        className={"d-flex flex-column align-content-center align-items-center  justify-content-evenly my-5"}>
                         <h2 className="text-center display-6 pt-5    my-5 my-5">Galería</h2>
                         <Carousel className={"bg-transparent"}>
                             {images.map((image, index) => (
@@ -106,7 +108,6 @@ export default function AreaTemplate(props: AreaProps) {
                 <section className="colour-block py-5 ">
                     <h2 className="text-center display-6     my-5 my-5">Propiedades en el Área</h2>
                     <MDBRow>
-
 
 
                         {[...areaDesarrollos.values()].map((desarrollo, index) => {

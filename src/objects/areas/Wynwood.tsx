@@ -3,7 +3,7 @@ import {Area} from "../../models/areas/Area";
 export default function Wynwood() {
 
     const WynwoodObject = new Area("wynwood");
-    WynwoodObject.titulo = "Wynwood";
+    WynwoodObject.title = "Wynwood";
     WynwoodObject.name = "wynwood";
     WynwoodObject.numberOfImages = 21;
     WynwoodObject.slogan = "Wynwood empieza aquí.";

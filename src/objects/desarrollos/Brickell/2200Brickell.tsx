@@ -2,7 +2,7 @@ import React from 'react'
 import Project from '../../../models/desarrollos/Project.tsx'
 import Brickell from '../../areas/Brickell'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import { capitalizeFirstLetter } from '../../../Utilities';
+import {capitalizeFirstLetter} from '../../../Utilities';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -15,20 +15,33 @@ export default function _2200Brickell() {
     _2200BrickellObject.traits = {
         building:
             <dl>
-                <dt>Pisos:</dt><dd>5</dd>
-                <dt>Residencias:</dt><dd>105</dd>
-                <dt>Ubicación:</dt><dd>2200 Brickell Avenue, Miami, FL 33129</dd>
+                <dt>Pisos:</dt>
+                <dd>5</dd>
+                <dt>Residencias:</dt>
+                <dd>105</dd>
+                <dt>Ubicación:</dt>
+                <dd>2200 Brickell Avenue, Miami, FL 33129</dd>
             </dl>
         ,
         residences: <dl>
-            <dt> Un Santuario Urbano</dt><dd>Creadas por amantes de la vida en la ciudad que encuentran una gran
-                inspiración en la naturaleza, estas residencias únicas logran un equilibrio perfecto con un enfoque de lo
-                mejor de ambos mundos que ofrece una serenidad suntuosa en medio de la vibrante vida de la ciudad.</dd><dt>Un
-                    Equilibrio Perfecto</dt><dd>Un espacio armonioso donde la exuberante vegetación coexiste con la sofisticación
-                        urbana, 2200 BRICKELL fue cuidadosamente diseñado para poner a los residentes en primer lugar y ofrecer una
-                        vida urbana enérgica junto con la apreciación de un retiro tranquilo.</dd><dt>Vida Elevada de Brickell</dt>
+            <dt> Un Santuario Urbano</dt>
+            <dd>Creadas por amantes de la vida en la ciudad que encuentran una gran
+                inspiración en la naturaleza, estas residencias únicas logran un equilibrio perfecto con un enfoque de
+                lo
+                mejor de ambos mundos que ofrece una serenidad suntuosa en medio de la vibrante vida de la ciudad.
+            </dd>
+            <dt>Un
+                Equilibrio Perfecto
+            </dt>
+            <dd>Un espacio armonioso donde la exuberante vegetación coexiste con la sofisticación
+                urbana, 2200 BRICKELL fue cuidadosamente diseñado para poner a los residentes en primer lugar y ofrecer
+                una
+                vida urbana enérgica junto con la apreciación de un retiro tranquilo.
+            </dd>
+            <dt>Vida Elevada de Brickell</dt>
             <dd>Las residencias están meticulosamente diseñadas por el galardonado equipo de ODA New York, y cuentan con
-                ventanas de piso a techo, exuberantes balcones privados y cocinas y baños ricamente decorados.</dd>
+                ventanas de piso a techo, exuberantes balcones privados y cocinas y baños ricamente decorados.
+            </dd>
             <dt>Interiores Residenciales</dt>
             <dd>
                 <ul>
@@ -44,7 +57,8 @@ export default function _2200Brickell() {
                     <li>Cocinas a medida diseñadas por ODA New York</li>
                     <li>Enfriadores de vino en unidades selectas</li>
 
-                    <li>Electrodomésticos innovadores de Thermador y Bosch (o similares) con refrigerador, congelador, placa de
+                    <li>Electrodomésticos innovadores de Thermador y Bosch (o similares) con refrigerador, congelador,
+                        placa de
                         cocción y horno de convección y microondas incorporados
                     </li>
                     <li>Baños primarios de lujo con tocadores dobles, piedra
@@ -56,62 +70,76 @@ export default function _2200Brickell() {
                 </ul>
             </dd>
         </dl>, amenities:
-            <dl style={{ textAlign: "justify"}}><dt>Brindemos Por Una Vida Bien Vivida</dt>
+            <dl style={{textAlign: "justify"}}>
+                <dt>Brindemos Por Una Vida Bien Vivida</dt>
                 <dd>Desde sus inicios, 2200 BRICKELL fue diseñado para brindar a los residentes una experiencia de vida
-                    más reflexiva e intencional que mejoraría su salud, felicidad y bienestar.</dd><dd><dt>El hogar es donde está la armonía</dt><br></br>Adoptando un enfoque
-                        holístico para vivir bien, 2200 BRICKELL complementa la naturaleza armoniosa de nuestras residencias
-                        con una variedad de espacios y comodidades, fácil acceso durante todo el año al aire libre de Miami,
-                        lo mejor que Brickell tiene para ofrecer y espacios habitables que realmente están destinados a ser
-                        vividos.</dd><dd><dt>Cuidadosamente Elaborado</dt><br></br>Desde espacios
-                            compartidos de última generación hasta innovadoras características privadas, estas comodidades
-                            cuidadosamente diseñadas evolucionan lo que significa vivir bien en Brickell.</dd>
+                    más reflexiva e intencional que mejoraría su salud, felicidad y bienestar.
+                </dd>
+                <dd>
+                    <dt>El hogar es donde está la armonía</dt>
+                    <br></br>Adoptando un enfoque
+                    holístico para vivir bien, 2200 BRICKELL complementa la naturaleza armoniosa de nuestras residencias
+                    con una variedad de espacios y comodidades, fácil acceso durante todo el año al aire libre de Miami,
+                    lo mejor que Brickell tiene para ofrecer y espacios habitables que realmente están destinados a ser
+                    vividos.
+                </dd>
+                <dd>
+                    <dt>Cuidadosamente Elaborado</dt>
+                    <br></br>Desde espacios
+                    compartidos de última generación hasta innovadoras características privadas, estas comodidades
+                    cuidadosamente diseñadas evolucionan lo que significa vivir bien en Brickell.
+                </dd>
                 <dt>Amenidades</dt>
-                <dd><ul>
-                    <li>Porte-cochère cubierto</li>
-                    <li>Servicio de aparcacoches en el hotel</li>
-                    <li>Vestíbulo de doble altura, atendido las 24 horas</li>
-                    <li>Estacionamiento sobre el suelo en todos los niveles con acceso directo a las residencias</li>
-                    <li>Carga de vehículos eléctricos</li>
-                    <li>Almacenamiento automatizado de paquetes Luxer One con tecnología digital sin contacto
-                        Sistema de entrega de paquetes con cámara frigorífica
-                    </li>
-                    <li>Salón para residentes y espacio de entretenimiento</li>
-                    <li>Suites dedicadas al trabajo desde casa con sala de conferencias</li>
-                    <li>por Homage Fitness</li>
-                    <li>Sala de juegos infantil personalizada diseñada por Silver Hill Arts</li>
-                    <li>Sala de ciclismo y taller y almacenamiento de bicicletas</li>
-                    <li>Designación WELL Building Standard<sup>TM</sup> con un reflexivo
-                        y espacios intencionales que mejoren la salud y el bienestar humano
-                    </li>
-                    <li>Salón de bienestar con sala de tratamiento y sauna</li>
-                </ul></dd>
+                <dd>
+                    <ul>
+                        <li>Porte-cochère cubierto</li>
+                        <li>Servicio de aparcacoches en el hotel</li>
+                        <li>Vestíbulo de doble altura, atendido las 24 horas</li>
+                        <li>Estacionamiento sobre el suelo en todos los niveles con acceso directo a las residencias
+                        </li>
+                        <li>Carga de vehículos eléctricos</li>
+                        <li>Almacenamiento automatizado de paquetes Luxer One con tecnología digital sin contacto
+                            Sistema de entrega de paquetes con cámara frigorífica
+                        </li>
+                        <li>Salón para residentes y espacio de entretenimiento</li>
+                        <li>Suites dedicadas al trabajo desde casa con sala de conferencias</li>
+                        <li>por Homage Fitness</li>
+                        <li>Sala de juegos infantil personalizada diseñada por Silver Hill Arts</li>
+                        <li>Sala de ciclismo y taller y almacenamiento de bicicletas</li>
+                        <li>Designación WELL Building Standard<sup>TM</sup> con un reflexivo
+                            y espacios intencionales que mejoren la salud y el bienestar humano
+                        </li>
+                        <li>Salón de bienestar con sala de tratamiento y sauna</li>
+                    </ul>
+                </dd>
                 <dt>Azotea</dt>
                 <dd>Abarcando cerca de un acre de pies cuadrados bañados por el sol, el exuberante paisaje de la azotea
                     de 2200 Brickell es una experiencia exquisitamente elevada. Igualmente idílico y vigorizante, aquí
                     encontrará una gran variedad de características y comodidades de lujo que realmente llevan la
-                    satisfacción cotidiana, la serenidad y tomar el sol a nuevas alturas.</dd>
+                    satisfacción cotidiana, la serenidad y tomar el sol a nuevas alturas.
+                </dd>
                 <ul>
-                <li> Piscina con asientos del resort</li>
-                {["FITNESS AL AIRE LIBRE / YOGA",
-                    "PISTA PARA CAMINAR DE 1/4 DE MILLA",
-                    "COCINAS DE VERANO CON ZONA DE ESTAR",
-                    "Balneario",
-                    "SALA DE ESTAR AL AIRE LIBRE",
-                    "CANCHA DE PICKLEBALL",
-                    "ZONA DE JUEGOS INFANTILES",
-                    "RETIRO EN EL JARDÍN"].map(line => {
+                    <li> Piscina con asientos del resort</li>
+                    {["FITNESS AL AIRE LIBRE / YOGA",
+                        "PISTA PARA CAMINAR DE 1/4 DE MILLA",
+                        "COCINAS DE VERANO CON ZONA DE ESTAR",
+                        "Balneario",
+                        "SALA DE ESTAR AL AIRE LIBRE",
+                        "CANCHA DE PICKLEBALL",
+                        "ZONA DE JUEGOS INFANTILES",
+                        "RETIRO EN EL JARDÍN"].map(line => {
 
                         return <li className="text-capitalize">{line.toLowerCase().trim()}</li>
                     })}
-                    </ul>
+                </ul>
             </dl>
     };
     _2200BrickellObject.numberOfImages = 41;
     _2200BrickellObject.address = "2200 Brickell Avenue, Miami, FL 33129";
-    _2200BrickellObject.numberOfRooms = { start: 1, end: 4 };
+    _2200BrickellObject.numberOfRooms = {start: 1, end: 4};
     _2200BrickellObject.numberOfUnits = 105;
     _2200BrickellObject.typeOfUnits = "Residencias";
-    _2200BrickellObject.añoDeConstrucciónOFinalización = 2025;
+    _2200BrickellObject.yearOfCompletion = 2025;
     _2200BrickellObject.numberOfFloors = 5;
     _2200BrickellObject.subtitle = capitalizeFirstLetter("DONDE TANTO LOS HABITANTES DE LA CIUDAD COMO LOS AMANTES DE LA NATURALEZA SE SIENTEN COMO EN CASA".toLowerCase());
     _2200BrickellObject.banner = true;

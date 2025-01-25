@@ -27,7 +27,7 @@ export default function Footer() {
 
                                 return (
                                     <MDBCol className="mb-2 mb-md-0 mx-auto my-5 ">
-                                        <h5 className="text-center">{area.titulo}</h5>
+                                        <h5 className="text-center">{area.title}</h5>
                                         <small className={"w-75 mx-auto list-unstyled"}>
                                             <li className={"mdc-list-divider mb-3"}></li>
                                         </small>

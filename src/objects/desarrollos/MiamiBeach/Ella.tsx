@@ -1,14 +1,14 @@
-import Constructora from "../../../models/constructora/Constructora.tsx";
+import Developer from "../../../models/constructora/Constructora.tsx";
 import Project from "../../../models/desarrollos/Project.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
 export default function Ella() {
-    const EllaObject = new Project();
-    EllaObject.añoDeConstrucciónOFinalización = 2026;
+    const EllaObject = new Project(MiamiBeach());
+    EllaObject.yearOfCompletion = 2026;
     EllaObject.numberOfRooms = {start: 1, end: 2};
     EllaObject.numberOfUnits = 95;
     EllaObject.typeOfUnits = "Apartamentos";
-    EllaObject.ubicación = "6940 Abbot Avenue, Miami Beach, FL 33141";
+    EllaObject.address = "6940 Abbot Avenue, Miami Beach, FL 33141";
 
     EllaObject.name = "ella";
     EllaObject.traits = {building: <></>, residences: <></>, amenities: <></>};
@@ -25,13 +25,13 @@ export default function Ella() {
 
     EllaObject.banner = true;
     EllaObject.area = MiamiBeach();
-    EllaObject.constructora = new Constructora("Constellation");
+    EllaObject.developer = new Developer("Constellation");
     EllaObject.subtitle = "Un Tributo Al Glamuroso Pasado De Miami Beach";
     EllaObject.numberOfImages = 21;
     EllaObject.video = <iframe width="555" height="500" className="object-fit-cover"
                                src="https://www.youtube.com/embed/mIbAaxXmKTI?autoplay=1"
                                title="Ella Miami Beach - Airbnb boutique"
                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                               allowFullScreen></iframe>;
+                               allowFullScreen></iframe> as unknown as Element;
     return EllaObject;
 }

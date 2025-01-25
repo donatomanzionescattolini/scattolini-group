@@ -1,7 +1,6 @@
 import {
     MDBCard,
     MDBCardBody,
-    MDBCardGroup,
     MDBCardHeader,
     MDBCardLink,
     MDBCardText,
@@ -14,14 +13,14 @@ export default function Servicios() {
     return (
         <>
             <h2 className="text-center">Servicios</h2>
-            <hr className="hr hr-blurry w-50 mx-auto" />
+            <hr className="hr hr-blurry w-50 mx-auto"/>
 
-            <br />
+            <br/>
 
             <MDBRow className=" d-flex flex-row flex-wrap justify-content-between text-center text-capitalize g-5">
                 <MDBCol md={6}>
                     <MDBCard className="w-100">
-                        <MDBCardHeader background="light" >
+                        <MDBCardHeader background="light">
 
                             <MDBCardTitle className="p-2 pb-0 mb-0">
                                 <h4 className="">Asesoramiento Inmobiliario</h4>
@@ -32,7 +31,7 @@ export default function Servicios() {
                                 Ofrecemos asesoramiento experto en todas las áreas del mercado
                                 inmobiliario
                             </MDBCardText>
-                            <br />
+                            <br/>
                             <MDBCardLink
                                 href="/contacto"
                                 className="btn btn-outline-secondary btn-outline-secondary"
@@ -44,7 +43,7 @@ export default function Servicios() {
                     </MDBCard>
                 </MDBCol>
                 <MDBCol md={6}><MDBCard className="w-100">
-                    <MDBCardHeader background="light" >
+                    <MDBCardHeader background="light">
 
                         <MDBCardTitle className="p-2 pb-0 mb-0">
                             <h4>Aministración de Propiedades</h4>
@@ -54,7 +53,7 @@ export default function Servicios() {
                         <MDBCardText>
                             Ofrecemos servicios completos de administración de propiedades
                         </MDBCardText>
-                        <br />
+                        <br/>
                         <MDBCardLink
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
@@ -65,7 +64,7 @@ export default function Servicios() {
                 </MDBCard>
                 </MDBCol>
                 <MDBCol md={6}><MDBCard className="w-100">
-                    <MDBCardHeader background="light" >
+                    <MDBCardHeader background="light">
 
                         <MDBCardTitle className="p-2 pb-0 mb-0"><h4>Venta de Propiedades</h4></MDBCardTitle>
                     </MDBCardHeader>
@@ -75,7 +74,7 @@ export default function Servicios() {
                             confiabilidad, para ayudarlo a encontrar la propiedad de sus
                             sueños
                         </MDBCardText>
-                        <br />
+                        <br/>
                         <MDBCardLink
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
@@ -88,7 +87,7 @@ export default function Servicios() {
                 <MDBCol md={6}>
 
                     <MDBCard className="w-100">
-                        <MDBCardHeader background="light" >
+                        <MDBCardHeader background="light">
 
                             <MDBCardTitle className="p-2 pb-0 mb-0"><h4>Compra de Propiedades</h4></MDBCardTitle>
                         </MDBCardHeader>
@@ -97,7 +96,7 @@ export default function Servicios() {
                                 Ayudamos a nuestros clientes a encontrar la propiedad perfecta
                                 para sus necesidades y presupuesto
                             </MDBCardText>
-                            <br />
+                            <br/>
                             <MDBCardLink
                                 href="/contacto"
                                 className="btn btn-outline-secondary btn-outline-secondary"

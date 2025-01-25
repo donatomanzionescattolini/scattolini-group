@@ -20,11 +20,11 @@ export default function Alba() {
     AlbaObject.piesCuadrados = 2281;
     AlbaObject.numberOfModels = 5;
     AlbaObject.typeOfUnits = "viviendas unifamiliares";
-    AlbaObject.constructora = "Onx Homes";
-    AlbaObject.ubicación = (
+    AlbaObject.developer = "Onx Homes";
+    AlbaObject.address = (
         <address>1100 W Palm Drive Florida City; FL 33034</address>
     );
-    AlbaObject.añoDeConstrucciónOFinalización = 2023;
+    AlbaObject.yearOfCompletion = 2023;
     AlbaObject.numberOfRooms = 5;
 
     const amenidades = new Map();

@@ -1,6 +1,6 @@
-import { traits } from "./ProjectParams.tsx";
-import React, { JSX, ReactNode } from "react";
-import { Area } from "../areas/Area.tsx";
+import {traits} from "./ProjectParams.tsx";
+import React, {JSX, ReactNode} from "react";
+import {Area} from "../areas/Area.tsx";
 
 class Constructora {
     name: string;
@@ -29,7 +29,7 @@ export default class Project {
     subtitle?: string | JSX.Element;
     amenities?: string[] | Map<string, string[]>;
     banner?: boolean;
-    video?: HTMLVideoElement | HTMLIFrameElement;
+    video?: Element;
     residences?: string[] | Map<string, string[]>;
 
     numberOfImages?: number;
@@ -39,7 +39,7 @@ export default class Project {
     numberOfUnits?: number;
     typeOfUnits?: string;
     numberOfModels?: string | number;
-    constructora?: string | Constructora;
+    developer?: string | Constructora;
     numberOfBathrooms?: number | string | ProjectRangeVal;
     numberOfRooms?: number | { start?: number; end?: number } | string;
     numberOfParkingSpots?: number | { start?: number; end?: number } | string;
@@ -88,7 +88,7 @@ export default class Project {
         if (numberOfUnits !== undefined) this.numberOfUnits = numberOfUnits;
         if (typeOfUnits !== undefined) this.typeOfUnits = typeOfUnits;
         if (numberOfModels !== undefined) this.numberOfModels = numberOfModels;
-        if (constructora !== undefined) this.constructora = constructora;
+        if (constructora !== undefined) this.developer = constructora;
         if (numberOfBathrooms !== undefined) this.numberOfBathrooms = numberOfBathrooms;
         if (numberOfRooms !== undefined) this.numberOfRooms = numberOfRooms;
         if (numberOfParkingSpots !== undefined) this.numberOfParkingSpots = numberOfParkingSpots;
@@ -112,15 +112,15 @@ export default class Project {
                 return (
                     <dl>
                         {[...this.amenities!.keys()].map((k: string) => <>
-                            <dt>{k}</dt>
-                            <dd>
-                                <ul>
-                                    {(this.amenities! as Map<string, string[]>).get(String(k))!.map((r) => (
-                                        <li>{r}</li>
-                                    ))}
-                                </ul>
-                            </dd>
-                        </>
+                                <dt>{k}</dt>
+                                <dd>
+                                    <ul>
+                                        {(this.amenities! as Map<string, string[]>).get(String(k))!.map((r) => (
+                                            <li>{r}</li>
+                                        ))}
+                                    </ul>
+                                </dd>
+                            </>
                         )}
                     </dl>
                 );
@@ -191,11 +191,29 @@ export default class Project {
         //     </>}
         // </dl>
         // );
-        return <dl>{this.address ? (<><dt>Dirección</dt><dd>{this.address}</dd></>) : <></>}{this.typeOfUnits && <><dt>Tipo de Residencias</dt><dd>{this.typeOfUnits}</dd></>}
-            {this.numberOfFloors ? <><dt>Pisos</dt><dd>{this.numberOfFloors}</dd></> : <></>}
-            {this.numberOfRooms ? <><dt>Habitaciones</dt><dd>{typeof this.numberOfRooms === "string" ? this.numberOfRooms :
-                (this.numberOfRooms as { start?: number; end?: number })["start"] + " a " + (this.numberOfRooms as { start?: number; end?: number }).end}</dd></>:<></>}
-            {this.area && <><dt>Área</dt><dd>{this.area.name}</dd></>}
+        return <dl>{this.address ? (<>
+            <dt>Dirección</dt>
+            <dd>{this.address}</dd>
+        </>) : <></>}{this.typeOfUnits && <>
+            <dt>Tipo de Residencias</dt>
+            <dd>{this.typeOfUnits}</dd>
+        </>}
+            {this.numberOfFloors ? <>
+                <dt>Pisos</dt>
+                <dd>{this.numberOfFloors}</dd>
+            </> : <></>}
+            {this.numberOfRooms ? <>
+                <dt>Habitaciones</dt>
+                <dd>{typeof this.numberOfRooms === "string" ? this.numberOfRooms :
+                    (this.numberOfRooms as { start?: number; end?: number })["start"] + " a " + (this.numberOfRooms as {
+                        start?: number;
+                        end?: number
+                    }).end}</dd>
+            </> : <></>}
+            {this.area && <>
+                <dt>Área</dt>
+                <dd>{this.area.name}</dd>
+            </>}
 
         </dl>
     }
@@ -217,15 +235,15 @@ export default class Project {
                 return (
                     <dl>
                         {[...this.residences!.keys()].map((k: string) => <>
-                            <dt>{k}</dt>
-                            <dd>
-                                <ul>
-                                    {(this.residences! as Map<string, string[]>).get(String(k))!.map((r) => (
-                                        <li>{r}</li>
-                                    ))}
-                                </ul>
-                            </dd>
-                        </>
+                                <dt>{k}</dt>
+                                <dd>
+                                    <ul>
+                                        {(this.residences! as Map<string, string[]>).get(String(k))!.map((r) => (
+                                            <li>{r}</li>
+                                        ))}
+                                    </ul>
+                                </dd>
+                            </>
                         )}
                     </dl>
                 );

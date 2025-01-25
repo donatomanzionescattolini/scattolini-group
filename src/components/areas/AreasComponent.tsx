@@ -29,7 +29,7 @@ function AreasComponent() {
                                     fontFamily: '"the-seasons", serif',
                                     fontWeight: "200",
                                     fontStyle: "normal"
-                                }}>{area.titulo}</h4>
+                                }}>{area.title}</h4>
                             </Link>
                         </div>
                     </MDBCol>

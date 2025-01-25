@@ -1,6 +1,6 @@
-import { MDBCarousel, MDBCarouselItem, } from "mdb-react-ui-kit";
+import {MDBCarousel, MDBCarouselItem,} from "mdb-react-ui-kit";
 
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
 interface Props {
     name: string;
@@ -21,12 +21,12 @@ export default function SlideshowGalleryDesarrollo2(props: Readonly<Props>) {
                     key={j}
                     className=" d-block"
                     itemId={j} src={
-                        "https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/" +
-                        name +
-                        "/image-gallery/image (" +
-                        j +
-                        ").jpg"
-                    }
+                    "https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/" +
+                    name +
+                    "/image-gallery/image (" +
+                    j +
+                    ").jpg"
+                }
 
                     srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).*`}
                     alt=""

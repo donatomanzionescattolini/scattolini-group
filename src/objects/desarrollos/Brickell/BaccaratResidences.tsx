@@ -196,7 +196,7 @@ export default function BaccaratResidences() {
         "Iluminada por el brillo infinito del sol, esta torre elevada se mantendrá radiante en el paseo marítimo donde el río se encuentra con la bahía, en el corazón de las brillantes luces de la ciudad. Combinando la vitalidad brillante y el dinamismo magnético de Brickel con un diseño iluminado y un servicio ingenioso, los residentes pueden esperar un estilo de vida infundido con delicias inesperadas y brillantez inspirada",
         "Penthouse residences disponibles para vista previa exclusiva.",
     ]
-    baccaratResidencesObject.titulo = "Baccarat Residences";
+    baccaratResidencesObject.title = "Baccarat Residences";
     baccaratResidencesObject.subtitulo =
         <p className="text-cursive p-0 m-0">
             <em>Donde la vida brilla para siempre</em>

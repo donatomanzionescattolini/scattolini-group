@@ -68,8 +68,8 @@ const Nav = () => {
 
         const filteredAreaz = areas.filter(
             (area) =>
-                area.titulo.toLowerCase().includes(event.target.value.toLowerCase()) ||
-                event.target.value.toLowerCase().includes(area.titulo.toLowerCase())
+                area.title.toLowerCase().includes(event.target.value.toLowerCase()) ||
+                event.target.value.toLowerCase().includes(area.title.toLowerCase())
         );
 
         setFilteredAreas(filteredAreaz);
@@ -91,10 +91,10 @@ const Nav = () => {
 
                     {innerWidth < 768 && (
                         <div className="d-flex flex-column align-items-center justify-content-center">
-                            <img className="img-fluid" 
-                                width={"40%"}
-                                src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
-                                alt="logo"
+                            <img className="img-fluid"
+                                 width={"40%"}
+                                 src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
+                                 alt="logo"
                             />
 
                             <MDBIcon icon="caret-down"></MDBIcon>
@@ -122,10 +122,10 @@ const Nav = () => {
                         {innerWidth > 650 && (
                             <MDBNavbarItem>
                                 <MDBNavbarBrand href="/">
-                                    <img className="img-fluid" 
-                                        width={300}
-                                        src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
-                                        alt="logo"
+                                    <img className="img-fluid"
+                                         width={300}
+                                         src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
+                                         alt="logo"
                                     />
                                 </MDBNavbarBrand>
                             </MDBNavbarItem>
@@ -152,7 +152,7 @@ const Nav = () => {
                                                 return (
                                                     <MDBDropdownItem key={filteredAreas.indexOf(area)} link
                                                                      href={"/areas/" + area.name}>
-                                                        {area.titulo}
+                                                        {area.title}
                                                     </MDBDropdownItem>
                                                 );
                                             })}

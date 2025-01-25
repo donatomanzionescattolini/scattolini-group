@@ -1,6 +1,6 @@
 import React from "react";
 import {Route} from "react-router-dom";
-import AtlanticaComponent from "../../components/desarrollos/DaniaBeach/AtlanticaComponent";
+import AtlanticaComponent from "../../components/projects/DaniaBeach/AtlanticaComponent.tsx";
 
 
 export default function DaniaBeachRoutes() {

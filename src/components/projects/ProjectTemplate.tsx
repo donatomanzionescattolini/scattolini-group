@@ -19,6 +19,7 @@ import {ProjectParams,} from "../../models/desarrollos/ProjectParams.tsx";
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
 import Desarrollos from "./DesarrollosComponent.tsx";
+
 export default function ProjectTemplate(paramz: Readonly<ProjectParams>) {
     const params = paramz.project;
     const [nombre] = useState(params.name);
@@ -28,21 +29,21 @@ export default function ProjectTemplate(paramz: Readonly<ProjectParams>) {
     const vid: string | Element | (() => string | Element) | ReactNode = params.video
         ? params.video
         : `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`;
-    const [video] = useState< ReactNode>(vid && (typeof vid === "string") ? <MDBContainer>
-    <div className="ratio ratio-16x9">
-      <iframe
-        src={vid}
-        title="Vimeo video"
-        allowFullScreen
-      ></iframe>
-    </div>
-  </MDBContainer> as ReactNode:vid as ReactNode);
+    const [video] = useState<ReactNode>(vid && (typeof vid === "string") ? <MDBContainer>
+        <div className="ratio ratio-16x9">
+            <iframe
+                src={vid}
+                title="Vimeo video"
+                allowFullScreen
+            ></iframe>
+        </div>
+    </MDBContainer> as ReactNode : vid as ReactNode);
     const [titulo] = useState(params.title);
     const [banner] = useState(params.banner);
     const [subtitulo] = useState(params.subtitle);
     const [introduccion] = useState(params.introduction);
     const [CaracteristicasAmenidades] = useState(
-       params.displayAmenities()
+        params.displayAmenities()
     );
     const [CaracteristicasEdificio] = useState(params.displayCaracteristicasEdificio());
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
@@ -56,6 +57,7 @@ export default function ProjectTemplate(paramz: Readonly<ProjectParams>) {
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     function openTab(docType: string) {
         switch (docType) {
             case "brochure":
@@ -76,6 +78,7 @@ export default function ProjectTemplate(paramz: Readonly<ProjectParams>) {
                 break;
         }
     }
+
     return (
         <>
             <a id="top"></a>
@@ -158,7 +161,7 @@ export default function ProjectTemplate(paramz: Readonly<ProjectParams>) {
                     <MDBCol xs={12} sm={12} md={6} lg={6} xl={6}
                             className={"align-content-center justify-content-center"}>
                         {(introduccion as Array<string>).map((par: string) =>
-                            <p key={introduccion!.indexOf(par)+1}>{par}</p>)
+                            <p key={introduccion!.indexOf(par) + 1}>{par}</p>)
                         }
                     </MDBCol>
                     <MDBCol xs={12} sm={12} md={6} lg={6} xl={6} className={"p-md-5 p-sm-2"}>
@@ -170,7 +173,7 @@ export default function ProjectTemplate(paramz: Readonly<ProjectParams>) {
             </section>
             <div className="skew-cc"></div>
             <section className="colour-block p-auto">
-                {video }
+                {video}
             </section>
             <div className="skew-c"></div>
             <section className="white-block py-5  ">

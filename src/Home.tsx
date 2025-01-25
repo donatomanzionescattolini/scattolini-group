@@ -7,8 +7,8 @@ import AsociadosSmallComponent from "./components/AsociadosSmallComponent.tsx";
 import Quotes from "./components/Quotes";
 import Servicios from "./components/Servicios";
 import AreasComponent from "./components/AreasComponent.tsx";
-import Desarrollos from "./components/desarrollos/DesarrollosComponent.tsx";
 import Quote, {quotes} from "./models/Quote";
+import Desarrollos from "./components/projects/DesarrollosComponent.tsx";
 
 export function Home() {
     const [width, setWidth] = React.useState(window.innerWidth);

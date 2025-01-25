@@ -11,7 +11,7 @@ export default function PineRocklandEstates() {
     };
 
     PinelandRocklandEstatesObject.edificio = {
-        añoDeConstrucciónOFinalización: 0,
+        yearOfCompletion: 0,
         constructora: undefined,
         numberOfBathrooms: undefined,
         numberOfModels: undefined,

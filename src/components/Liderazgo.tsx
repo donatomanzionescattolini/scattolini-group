@@ -11,10 +11,10 @@ export default function Liderazgo() {
                 xl={6}
                 className="justify-content-center p-5 text-center"
             >
-                <img className="img-fluid" 
-                    src={"https://pagina-mama.s3.amazonaws.com/assets2/elda/elda.jpg"}
-                    alt="Elda"
-                    className="w-50 m-auto img-thumbnail"
+                <img className="img-fluid"
+                     src={"https://pagina-mama.s3.amazonaws.com/assets2/elda/elda.jpg"}
+                     alt="Elda"
+                     className="w-50 m-auto img-thumbnail"
                 />
             </MDBCol>
             <MDBCol xs={12} sm={12} md={4} lg={4} xl={4} className="px-auto py-5">

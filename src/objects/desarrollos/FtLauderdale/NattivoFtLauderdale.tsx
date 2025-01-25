@@ -56,7 +56,7 @@ export default function NattivoFtLauderdale() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-sharel"
                 referrerPolicy="strict-origin-when-cross-origin" allowFullScreen autoFocus></iframe>
     NatiivoFtLauderdaleObject.address = "";
-    NatiivoFtLauderdaleObject.añoDeConstrucciónOFinalización = 2022;
+    NatiivoFtLauderdaleObject.yearOfCompletion = 2022;
     NatiivoFtLauderdaleObject.banner = true;
 
     NatiivoFtLauderdaleObject.introduction = ["Natiivo Fort Lauderdale es la primera propiedad residencial y hotelera llave en mano en Fort Lauderdale. Diseñado, construido y con licencia para alquileres a corto plazo, Natiivo ofrece una casa compartida oportunidad que permite a los residentes una forma inteligente de poseer. Una icónica torre de 40 pisos en el centro de la ciudad epicentro, Natiivo ofrecerá un estilo de vida flexible de espacios de diseño, comodidades sin precedentes y la muy lo mejor de Fort Lauderdale."]

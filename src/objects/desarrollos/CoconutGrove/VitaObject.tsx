@@ -178,69 +178,68 @@ export default function Vita() {
                         Un restaurante y bar de alta gama que sirve almuerzos, cenas y
                         cócteles.
                     </li>
-                    
+
                     <li>
                         <strong>Fitness y Bienestar</strong><br/>
                         El gimnasio y centro de bienestar incluye un gimnasio de última
                         generación, una sala de estudio dedicada y un spa.
                     </li>
-                    
+
                     <li>
                         <strong>Deportivo</strong><br/>
                         Canchas de tenis iluminadas para juegos nocturnos, canchas de
                         pickleball y pádel.
                     </li>
-                    
+
                     <li>
                         <strong>Niños</strong><br/>
                         Patio de recreo
                     </li>
-                    
+
                     <li>
                         <strong>Piscina</strong><br/>
                         Una piscina privada frente a la bahía solo para residentes, un
                         bar junto a la piscina y un salón.
                     </li>
-                    
+
                     <li>
                         <strong>Acceso VIP</strong><br/>
                         Membresía de la casa al Vita en Grove Isle Club.
                     </li>
-                    
+
                     <li>
                         <strong>Navegación</strong><br/>
                         Puerto deportivo con muelles para barcos.
                     </li>
-                    
+
                     <li>Vistas panorámicas de la Bahía de Biscayne</li>
-                    
+
                     <li>
                         <strong>Aparcacoches</strong><br/>
                         El servicio de aparcacoches de Vita las 24 horas está siempre
                         disponible para ayudar a los residentes y sus invitados en la
                         entrada cubierta con dosel de cristal
                     </li>
-                    
+
                     <li>
                         <strong>Garaje Cerrado</strong><br/>
                         Garajes privados individuales cerrados con capacidad para cuatro
                         vehículos.
                     </li>
-                    
+
                     <li>
                         <strong>Conserje</strong>
 
-                        
 
                         <li>Disponible para ayudar con una amplia gama de arreglos.</li>
                     </li>
-                    
+
                     <li>
                         <strong>Vita Linc</strong><br/>
                         Una aplicación de conserjería digital para registrar a los
                         huéspedes y proporcionarles una llave electrónica.
                     </li>
-                    
+
                     <li>
                         <strong>Vestíbulos Privados</strong>
                         <br/>
@@ -251,19 +250,19 @@ export default function Vita() {
                     <li>
                         <strong>Aparcacoches</strong>
                     </li>
-                    
+
 
                     <li>
                         Servicio de aparcacoches las 24 horas para los residentes y sus
                         invitados.
                     </li>
-                    
+
                     <li>
                         <strong>WIFI</strong>
                         <br/>
                         Wi-Fi en todos los espacios compartidos interiores y exteriores.
                     </li>
-                    
+
                 </ul>
             </>
         ),

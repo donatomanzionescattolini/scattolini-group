@@ -27,16 +27,16 @@ export default function Equipo() {
                             </h2>
                             <div className="mc-content">
                                 <div className="img-container w-80 h-100 mx-auto p-n-5">
-                                    <img className="img-fluid" 
+                                    <img className="img-fluid"
 
 
-                                        className="img-fluid object-fit-cover w-100 m-0 p-0  h-100"
-                                        src={`https://pagina-mama.s3.amazonaws.com/assets2/asociados/${asociado.firstName
-                                            .split(" ")
-                                            .join("-")
-                                            .toLowerCase()}-transparent-bg.png`}
+                                         className="img-fluid object-fit-cover w-100 m-0 p-0  h-100"
+                                         src={`https://pagina-mama.s3.amazonaws.com/assets2/asociados/${asociado.firstName
+                                             .split(" ")
+                                             .join("-")
+                                             .toLowerCase()}-transparent-bg.png`}
 
-                                        alt={asociado.firstName + " " + asociado.lastName}
+                                         alt={asociado.firstName + " " + asociado.lastName}
                                     />
                                 </div>
                             </div>

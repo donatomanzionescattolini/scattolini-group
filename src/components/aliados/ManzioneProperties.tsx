@@ -15,12 +15,12 @@ export default function ManzioneProperties() {
                 xl={7}
                 className="align-items-start p-5 text-center"
             >
-                <img className="img-fluid" 
-                    src={
-                        "https://pagina-mama.s3.amazonaws.com/assets2/asociados/monica.jpg"
-                    }
-                    alt="Elda"
-                    className="w-50 m-auto img-thumbnail"
+                <img className="img-fluid"
+                     src={
+                         "https://pagina-mama.s3.amazonaws.com/assets2/asociados/monica.jpg"
+                     }
+                     alt="Elda"
+                     className="w-50 m-auto img-thumbnail"
                 />
             </MDBCol>
             <MDBCol

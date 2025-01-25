@@ -10,7 +10,7 @@ export default function OnGrandville() {
     OnGrandville.introduction = [];
     OnGrandville.residences = [];
     OnGrandville.edificio = {
-        añoDeConstrucciónOFinalización: 0,
+        yearOfCompletion: 0,
         piesCuadrados: 0,
         ubicación: "14505 SW 260TH ST HOMESTEAD, FL 33032",
         numberOfUnits: 0,
@@ -20,12 +20,12 @@ export default function OnGrandville() {
         numberOfBathrooms: 0,
         numberOfRooms: 0,
     };
-    OnGrandville.añoDeConstrucciónOFinalización = 0;
-    OnGrandville.constructora = "Onx";
+    OnGrandville.yearOfCompletion = 0;
+    OnGrandville.developer = "Onx";
     OnGrandville.introduction = [
         "On Grandville es una vibrante comunidad de 165 casas adosadas recientemente construidas. Estas casas se han diseñado maravillosamente y están totalmente hormigonadas. Cada vivienda viene equipada con 4 dormitorios, 3 baños completos, moderna cocina abierta, comedor y sala para invitados, electrodomésticos energéticamente eficientes, balcón, una moderna terraza en la azotea y acceso a espacios comunitarios. Las casas Onx se construyen utilizando características de diseño X+ Construction™ como ventanas y puertas a prueba de huracanes, encimeras de cuarzo y suelos de baldosas de porcelana. La ubicación privilegiada de On Grandville, junto a la US1, facilita el acceso a la autopista Florida Turnpike, a las tiendas y proporcionando rutas directas a las actividades de conveniencia de los alrededores. Estas rutas principales ofrecen acceso directo a los Cayos de Florida, al centro de Dadeland y a las famosas playas y atracciones de Miami",
     ];
-    OnGrandville.ubicación = "14505 SW 260th St. Homestead, FL 33032";
+    OnGrandville.address = "14505 SW 260th St. Homestead, FL 33032";
     OnGrandville.area = Homestead();
 
     OnGrandville.traits = [];

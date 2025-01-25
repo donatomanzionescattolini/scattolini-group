@@ -8,7 +8,7 @@ import Contacto from "./components/ContactoComponent.tsx";
 import "mdb-ui-kit/css/mdb.min.css";
 import "mdb-ui-kit/js/mdb.min.js";
 import "material-components-web/dist/material-components-web.js";
-    import Equipo from "./components/AsociadosComponent.tsx";
+import Equipo from "./components/AsociadosComponent.tsx";
 import ManzioneProperties from "./components/aliados/ManzioneProperties";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
