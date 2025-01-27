@@ -1,6 +1,6 @@
 import React from "react";
 
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
 export default function CasaBella() {
@@ -9,7 +9,7 @@ export default function CasaBella() {
     CasaBellaObject.banner = true;
     CasaBellaObject.area = Downtown();
 
-    CasaBellaObject.name = "casa-bella";
+    CasaBellaObject.nameForProjectFolders = "casa-bella";
     CasaBellaObject.traits = {
         building: (
             <ul>
@@ -97,7 +97,7 @@ export default function CasaBella() {
         "Vuelve a casa con la sofisticación y el lujo italianos ilimitados. Disfruta de impresionantes vistas dondequiera que mires. Rodéese de interiores elevados e inundados de luz, jardines llenos de jardines y comodidades abundantes e inigualables, que incluyen un salón junto a la piscina con una cafetería mediterránea y cócteles artesanales.",
         "CasaBellaObject Residences by B&B Italia ha colaborado con los artistas italianos más célebres para curar su hogar con obras maestras selectas de las colecciones de B&B Italia.",
     ];
-    CasaBellaObject.title = "Casa Bella Residences";
+    CasaBellaObject.officialName = "Casa Bella Residences";
     CasaBellaObject.address = "";
     CasaBellaObject.subtitle = "Bienvenido a la cima de la sofisticada vida italiana";
     CasaBellaObject.numberOfImages = 16;

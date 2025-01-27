@@ -1,4 +1,4 @@
-import Project from "./Project.tsx";
+import Project from "./NewDevelopment.tsx";
 
 export interface traits {
     building: React.JSX.Element | Element | "" | Array<String>;

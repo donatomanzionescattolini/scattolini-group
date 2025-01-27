@@ -54,8 +54,7 @@ import Pinecrest from "../areas/Pinecrest.tsx";
 import SunnyIsles from "../areas/SunnyIsles.tsx";
 import CoralGables from "../areas/CoralGables.tsx";
 import {Area} from "../../models/areas/Area.tsx";
-import Project from "../../models/desarrollos/Project.tsx";
-import OnGrandville from "./Homestead/OnGrandville.tsx";
+import Project from "../../models/desarrollos/NewDevelopment.tsx";
 import FloridaCity from "../areas/FloridaCity.tsx";
 import Jem from "./Downtown/Jem.tsx";
 import ElleResidences from "./Edgewater/ElleResidences.tsx";
@@ -74,6 +73,7 @@ import DaniaBeach from "../areas/DaniaBeach.tsx";
 import Atlantica from "./DaniaBeach/Atlantica.tsx";
 import Palma from "./MiamiBeach/Palma.tsx";
 import CoveResidences from "./Edgewater/CoveResidences.tsx";
+import OnGrandville from "../../models/desarrollos/PropertyDeveloper.tsx";
 
 interface DesarrolloArea {
     area: Area;
@@ -190,7 +190,7 @@ desarrollos.forEach((entry) => {
     entry.des = new Set(
         [...entry.des].map((desar) => {
             desar.area = desarrollos.find(
-                (a) => a.area.name === entry.area.name
+                (a) => a.area.nameForProjectFolders === entry.area.nameForProjectFolders
             ).area;
             return desar;
         })
@@ -200,6 +200,6 @@ desarrollos.forEach((entry) => {
 
 export function getDesarrollosForArea(area: Area): Set<Project> {
     return desarrollos.filter((entry) =>
-        entry.area.name.toLowerCase().trim().includes(area.name.trim().toLowerCase())
+        entry.area.nameForProjectFolders.toLowerCase().trim().includes(area.nameForProjectFolders.trim().toLowerCase())
     )[0].des;
 }

@@ -1,12 +1,12 @@
 import React from 'react'
-import Project from '../../../models/desarrollos/Project.tsx'
+import Project from '../../../models/desarrollos/NewDevelopment.tsx'
 import SouthMiami from '../../areas/SouthMiami';
 
 export default function SomiWalk() {
     const SomiWalkObject = new Project();
     SomiWalkObject.area = SouthMiami();
-    SomiWalkObject.name = "somi-walk";
-    SomiWalkObject.title = "Somi Walk";
+    SomiWalkObject.nameForProjectFolders = "somi-walk";
+    SomiWalkObject.officialName = "Somi Walk";
     SomiWalkObject.traits = {
         amenities: <>
             <ul>
@@ -58,7 +58,7 @@ export default function SomiWalk() {
     SomiWalkObject.numberOfImages = 10;
     SomiWalkObject.banner = true;
     SomiWalkObject.subtitle = "El Estilo de Vida Encaminable";
-    SomiWalkObject.introduction = ["Experimente el codiciado estilo de vida transitable en Somi Walk, ubicado a solo dos cuadras de la Universidad de Miami y Coral Gables. En esta zona de altos ingresos, Fresh Market y Whole Foods son los elementos básicos del vecindario, lo que refleja la afluencia de la comunidad. La próxima remodelación de Sunset Place agregará aún más opciones de restaurantes y tiendas cercanas. Con la casa nueva de menor precio en South Miami a partir de $3.5 millones, Somi Walk está ubicada en un destino privilegiado de rápido crecimiento, que atrae a las mejores empresas por su ubicación y calidad de vida inmejorables.", ""]
+    SomiWalkObject.introduction = ["Experimente el codiciado estilo de vida transitable en Somi Walk, ubicado a solo dos cuadras de la Universidad de Miami y Coral Gables. En esta zona de altos ingresos, Fresh Market y Whole Foods son los elementos básicos del vecindario, lo que refleja la afluencia de la comunidad. La próxima remodelación de Sunset Place agregará aún más opciones de restaurantes y tiendas cercanas. Con la casa nueva de menor precio en South Miami a partir de $3.5 millones, Somi Walk está ubicada en un destino privilegiado de rápido crecimiento, que atrae a las mejores empresas por su address y calidad de vida inmejorables.", ""]
     SomiWalkObject.address = "7090 SW 59TH PLACE, SOUTH MIAMI FL"
     return SomiWalkObject;
 }

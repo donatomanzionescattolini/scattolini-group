@@ -1,11 +1,11 @@
 import React from 'react'
-import Project from '../../../models/desarrollos/Project.tsx';
+import Project from '../../../models/desarrollos/NewDevelopment.tsx';
 import FtLauderdale from '../../areas/FtLauderdale';
 
 export default function NattivoFtLauderdale() {
     const NatiivoFtLauderdaleObject = new Project(FtLauderdale());
     NatiivoFtLauderdaleObject.area = FtLauderdale();
-    NatiivoFtLauderdaleObject.name = "natiivo-ft-lauderdale";
+    NatiivoFtLauderdaleObject.nameForProjectFolders = "natiivo-ft-lauderdale";
     NatiivoFtLauderdaleObject.traits = {
         building: <ul>
             <li>Pisos:48</li>
@@ -47,7 +47,7 @@ export default function NattivoFtLauderdale() {
             </ul>
         </>
     };
-    NatiivoFtLauderdaleObject.title = "Natiivo | Ft. Lauderdale";
+    NatiivoFtLauderdaleObject.officialName = "Natiivo | Ft. Lauderdale";
     NatiivoFtLauderdaleObject.subtitle = "Un nuevo impulso. Una nueva era. Un nuevo Fort Lauderdale.";
     NatiivoFtLauderdaleObject.numberOfImages = 38;
     NatiivoFtLauderdaleObject.video =

@@ -1665,13 +1665,13 @@ var _gsScope =
                             var b,
                                 c = this.LabelsArray,
                                 d = c.length;
-                            for (b = 0; d > b; b++) if (c[b].time > a) return c[b].name;
+                            for (b = 0; d > b; b++) if (c[b].time > a) return c[b].nameForProjectFolders;
                             return null;
                         }),
                         (k.getLabelBefore = function (a) {
                             null == a && (a = this._time);
                             for (var b = this.LabelsArray, c = b.length; --c > -1;)
-                                if (b[c].time < a) return b[c].name;
+                                if (b[c].time < a) return b[c].nameForProjectFolders;
                             return null;
                         }),
                         (k.LabelsArray = function  {

@@ -1,4 +1,4 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
 export default function EditionResidences() {
@@ -6,7 +6,7 @@ export default function EditionResidences() {
     TheEditionResidencesObject.banner = true;
     TheEditionResidencesObject.area = Edgewater();
 
-    TheEditionResidencesObject.name = "edition-residences";
+    TheEditionResidencesObject.nameForProjectFolders = "edition-residences";
     TheEditionResidencesObject.traits = {
         building: (
             <pre>
@@ -95,7 +95,7 @@ export default function EditionResidences() {
         "Veintiséis residencias únicas de 1 a 4 dormitorios diseñadas por John Pawson que varían en tamaño desde 909 SF hasta 4597 SF.Dos Penthouses con piscina, salón interior / exterior y cocina exterior.Residencias Beach House y Bay House con cocina al aire libre, sala de estar y piscina profunda.",
         'Para una transición perfecta hacia un hogar confortable, Schrager presenta el concepto de "Prêt-à-Porter residencial", que ofrece residencias en perfectas condiciones para entrar a vivir. Se encuentran disponibles paquetes de muebles personalizados diseñados exclusivamente por John Pawson y el equipo de diseño de Ian Schrager con todo lo que uno necesita en un hogar, incluida ropa de cama, platos y utensilios de cocina, todos preseleccionados, desempacados y guardados antes de su llegada. Schrager continúa superando las expectativas al reconocer lo que los residentes quieren y necesitan antes de que ellos mismos se den cuenta: una casa sin trabajo, ideal para vivir en un centro turístico.',
     ];
-    TheEditionResidencesObject.title = "Edition Residences";
+    TheEditionResidencesObject.officialName = "Edition Residences";
     TheEditionResidencesObject.subtitle = "Un desarrollo exclusivo en Miami Beach";
     TheEditionResidencesObject.numberOfImages = 29;
     return TheEditionResidencesObject;

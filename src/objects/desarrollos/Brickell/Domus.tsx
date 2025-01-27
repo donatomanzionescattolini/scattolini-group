@@ -1,10 +1,10 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
 export default function Domus() {
     const Domus = new Project();
-    Domus.name = "domus";
-    Domus.title = "Domus FLATS"
+    Domus.nameForProjectFolders = "domus";
+    Domus.officialName = "Domus FLATS"
     Domus.area = Brickell();
     Domus.traits = {
         building: (
@@ -74,7 +74,7 @@ export default function Domus() {
                 src="https://www.youtube.com/embed/M_9_sCBNLDQ?autoplay=1&controls=0"
                 frameBorder={0} allowFullScreen/>
     ;
-    Domus.title = "Domus FLATS";
+    Domus.officialName = "Domus FLATS";
     Domus.subtitle = "";
     Domus.numberOfImages = 7;
     return Domus;

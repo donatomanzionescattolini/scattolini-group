@@ -48,7 +48,7 @@ export default function ContactFormComponent(props: ContactFormProps) {
     };
 
     const handleChange = (e: { target: { name: any; value: any } }) => {
-        setToSend({...toSend, [e.target.name]: e.target.value});
+        setToSend({...toSend, [e.target.nameForProjectFolders]: e.target.value});
     };
 
     function setFormNull() {

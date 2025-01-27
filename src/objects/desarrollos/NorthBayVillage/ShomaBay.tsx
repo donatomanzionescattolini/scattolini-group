@@ -1,9 +1,9 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
 
 export default function ShomaBay() {
     const ShomaBayObject = new Project();
-    ShomaBayObject.name = "shoma-bay";
+    ShomaBayObject.nameForProjectFolders = "shoma-bay";
 
     ShomaBayObject.address = "1850 John F Kennedy Causeway, North Bay Village, FL 33141";
     ShomaBayObject.traits = {
@@ -77,7 +77,7 @@ export default function ShomaBay() {
     ];
     ShomaBayObject.banner = true;
     ShomaBayObject.area = NorthBayVillage();
-    ShomaBayObject.title = "Shoma Bay";
+    ShomaBayObject.officialName = "Shoma Bay";
     ShomaBayObject.subtitle = "";
     ShomaBayObject.numberOfImages = 16;
     ShomaBayObject.video =

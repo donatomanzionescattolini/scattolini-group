@@ -1,4 +1,4 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
 
 export default function StRegis() {
@@ -6,8 +6,8 @@ export default function StRegis() {
 
 
     StRegisObject.numberOfImages = 52;
-    StRegisObject.name = "st-regis";
-    StRegisObject.title = "St. Regis® ";
+    StRegisObject.nameForProjectFolders = "st-regis";
+    StRegisObject.officialName = "St. Regis® ";
     StRegisObject.subtitle = "Vivir exquisito es vivir extraordinario";
     StRegisObject.introduction = [
         "Situado a lo largo de la hermosa costa de South  con exquisitas vistas frente a la bahía, The St. Regis Residences, Miami personifica la vida elegante. Refleja las sensibilidades de aquellos que son impulsados por el conocimiento, exigen excelencia, respetan la tradición y valoran la individualidad por encima de todo.",

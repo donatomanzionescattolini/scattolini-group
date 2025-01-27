@@ -1,6 +1,6 @@
 import React from "react";
 import {Route} from "react-router-dom";
-import NomadResidencesComponent from "../../components/desarrollos/Wynwood/NomadResidencesComponent";
+import NomadResidencesComponent from "../../components/projects/Wynwood/NomadResidencesComponent.tsx";
 
 const fragment = (
     <React.Fragment>

@@ -1,11 +1,11 @@
-import Project from '../../../models/desarrollos/Project.tsx';
+import Project from '../../../models/desarrollos/NewDevelopment.tsx';
 import Downtown from '../../areas/Downtown';
 import Constructora from '../../../models/constructora/Constructora';
 
 export default function Jem() {
     const Jem = new Project();
-    Jem.name = "jem";
-    Jem.title = "The Jem Miami Private Residences";
+    Jem.nameForProjectFolders = "jem";
+    Jem.officialName = "The Jem Miami Private Residences";
     Jem.numberOfUnits = 259;
     Jem.typeOfUnits = "Studios";
     Jem.developer = new Constructora("Naftali Group");

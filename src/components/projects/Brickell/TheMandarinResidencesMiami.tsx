@@ -1,4 +1,4 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Brickell from "../../../objects/areas/Brickell";
 
 
@@ -6,8 +6,8 @@ export default function TheMandarinResidencesMiami() {
 
     const TheMandarinResidencesObject = new Project(Brickell());
 
-    TheMandarinResidencesObject.name = "the-mandarin-oriental-residences-miami";
-    TheMandarinResidencesObject.title =
+    TheMandarinResidencesObject.nameForProjectFolders = "the-mandarin-oriental-residences-miami";
+    TheMandarinResidencesObject.officialName =
         <div><h1 className="text-center display-5">The Residences<br>Mandarin Oriental<br>Miami</br></br></h1></div>;
 
     TheMandarinResidencesObject.amenities =

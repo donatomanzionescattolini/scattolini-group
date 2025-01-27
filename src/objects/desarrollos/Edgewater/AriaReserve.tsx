@@ -1,10 +1,10 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
 export default function AriaReserve() {
 
     const AriaReserveObject = new Project();
-    AriaReserveObject.name = "aria-reserve";
+    AriaReserveObject.nameForProjectFolders = "aria-reserve";
     AriaReserveObject.traits = {
         building: (
             <>
@@ -148,7 +148,7 @@ export default function AriaReserve() {
         "Aria Reserve es un nuevo proyecto residencial de torres gemelas en la increíble zona de Edgewater, Miami. Con vista a la Bahía de Biscayne, las torres ofrecerán comodidades incomparables para sus residentes, junto con residencias cuidadosamente diseñadas en configuraciones de una a cuatro habitaciones. Cada una de las dos torres de Aria Reserve Miami contará con 62 pisos y un total de 800 residencias",
         "El famoso estudio de arquitectura Arquitectonica, creó un patrón de ondas icónico y minimalista a través de los balcones de las torres. Todas las residencias tienen ventanas de piso a techo y balcones espaciosos. Al estar ubicado en la zona de Edgewater en Miami, las vistas desde los pisos superiores del complejo son de las mejores de esta ciudad. Aria Reserve Miami estará frente a la Bahía de Biscayne, a 5 minutos del centro de Miami y Brickell, y a 15 minutos del Aeropuerto Internacional de Miami y las playas"
     ];
-    AriaReserveObject.title = " Aria Reserve";
+    AriaReserveObject.officialName = " Aria Reserve";
     AriaReserveObject.address = "708 NE 24th St, Miami, FL 33137"
 //   video={
 //     <iframe

@@ -1,12 +1,12 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
 export default function TheVilla() {
     const TheVillaObject = new Project();
 
 
-    TheVillaObject.name = "the-villa";
-    TheVillaObject.title = 'The Villa'
+    TheVillaObject.nameForProjectFolders = "the-villa";
+    TheVillaObject.officialName = 'The Villa'
     TheVillaObject.video =
         <iframe
             height="500"

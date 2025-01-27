@@ -11,7 +11,7 @@ import {
 import Areas from "../../objects/areas/Areas.tsx";
 import {useState} from "react";
 import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
-import Project from "../../models/desarrollos/Project.tsx";
+import Project from "../../models/desarrollos/NewDevelopment.tsx";
 import {Area} from "../../models/areas/Area.tsx";
 
 interface DesarrollosComponentProps {
@@ -31,15 +31,15 @@ export default function Desarrollos(props: DesarrollosComponentProps) {
         desarrollos = areas.flatMap(area => [...getDesarrollosForArea(area)]);
         desarrollos.forEach((d) => {
             index = index + 1;
-            desarrollosElementArray.push(<>{d.name && <MDBCol md="4" key={index} className="mb-4">
+            desarrollosElementArray.push(<>{d.nameForProjectFolders && <MDBCol md="4" key={index} className="mb-4">
                 <MDBCard className="photo-card">
                     <MDBCardImage
-                        src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${(d.area ? d.area.name : "")}/${d.name}.webp`}
-                        alt={d.name} position="top" className="gallery-image img-thumbnail"/>
+                        src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${(d.area ? d.area.nameForProjectFolders : "")}/${d.nameForProjectFolders}.webp`}
+                        alt={d.nameForProjectFolders} position="top" className="gallery-image img-thumbnail"/>
                 </MDBCard>
                 <MDBCardFooter className="pt-2">
-                    <MDBCardLink className="text-center" href={`/desarrollos/${d.name}`}>
-                        <MDBTypography tag={"h4"}>{d.title}</MDBTypography>
+                    <MDBCardLink className="text-center" href={`/desarrollos/${d.nameForProjectFolders}`}>
+                        <MDBTypography tag={"h4"}>{d.officialName}</MDBTypography>
                     </MDBCardLink>
                 </MDBCardFooter>
             </MDBCol>}</>);
@@ -48,7 +48,7 @@ export default function Desarrollos(props: DesarrollosComponentProps) {
         });
     } else {
         desarrollos = [...getDesarrollosForArea(props.area!)];
-        desarrollos = desarrollos.filter(d => props.desarrollo!.name == d.name);
+        desarrollos = desarrollos.filter(d => props.desarrollo!.nameForProjectFolders == d.nameForProjectFolders);
 
 
         desarrollos.forEach((desarrollo: Project) => {
@@ -56,12 +56,12 @@ export default function Desarrollos(props: DesarrollosComponentProps) {
             desarrollosElementArray.push(<MDBCol md="4" key={index} className="mb-4">
                 <MDBCard className="photo-card">
                     <MDBCardImage
-                        src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${(desarrollo.area ? desarrollo.area.name : "")}/${desarrollo.name}.webp`}
-                        alt={desarrollo.name} position="top" className="gallery-image img-thumbnail"/>
+                        src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${(desarrollo.area ? desarrollo.area.nameForProjectFolders : "")}/${desarrollo.nameForProjectFolders}.webp`}
+                        alt={desarrollo.nameForProjectFolders} position="top" className="gallery-image img-thumbnail"/>
                 </MDBCard>
                 <MDBCardFooter className="pt-2">
-                    <MDBCardLink className="text-center" href={`/desarrollos/${desarrollo.name}`}>
-                        <MDBTypography tag={"h4"}>{desarrollo.title}</MDBTypography>
+                    <MDBCardLink className="text-center" href={`/desarrollos/${desarrollo.nameForProjectFolders}`}>
+                        <MDBTypography tag={"h4"}>{desarrollo.officialName}</MDBTypography>
                     </MDBCardLink>
                 </MDBCardFooter>
             </MDBCol>);
@@ -76,7 +76,7 @@ export default function Desarrollos(props: DesarrollosComponentProps) {
     return (
         <MDBContainer className="">
             <MDBTypography tag="h2" className="text-center mb-4">
-                {props.area ? "Proyectos en " + props.area.title : "Proyectos"}
+                {props.area ? "Proyectos en " + props.area.officialName : "Proyectos"}
             </MDBTypography>
 
 

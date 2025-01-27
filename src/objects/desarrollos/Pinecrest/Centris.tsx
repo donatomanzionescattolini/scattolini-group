@@ -1,4 +1,4 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Pinecrest from "../../areas/Pinecrest.tsx";
 
 export default function Centris() {
@@ -6,7 +6,7 @@ export default function Centris() {
     CentrisObject.banner = true;
     CentrisObject.area = Pinecrest();
 
-    CentrisObject.name = "centris";
+    CentrisObject.nameForProjectFolders = "centris";
 
     CentrisObject.traits = {
         building: (
@@ -60,7 +60,7 @@ export default function Centris() {
                         próximamente llegará a Miami, FL. En el centro de Centris hay
                         una piscina comunitaria rodeada por un pabellón, un parque y un
                         área de juegos infantiles para uso residencial. Con una
-                        ubicación ideal, los propietarios están a solo minutos de
+                        address ideal, los propietarios están a solo minutos de
                         Kendall, Pinecrest y The Falls. Todos ellos albergan las mejores
                         tiendas, restaurantes, entretenimiento y recreación de Florida.
                     </p>
@@ -92,7 +92,7 @@ export default function Centris() {
                             elegir entre tres diseños de planos de planta espaciosos. En
                             el centro de Centris hay una piscina comunitaria rodeada por
                             una glorieta, un parque y un área de juegos infantiles para
-                            uso residencial. Con una ubicación ideal, esta comunidad está
+                            uso residencial. Con una address ideal, esta comunidad está
                             a solo minutos de Dadeland Mall y The Falls para brindar a los
                             residentes lo mejor en tiendas, restaurantes y
                             entretenimiento.
@@ -116,7 +116,7 @@ export default function Centris() {
     CentrisObject.introduction = [
         "Presentamos CentrisObject, una comunidad de casas adosadas y propiedades de lujo nuevas a la venta en Miami, FL. CentrisObject está idealmente ubicado en SW 120th Street y 82nd Avenue, cerca de Pinecrest y The Falls, con fácil acceso a las playas y al centro de Miami. En CentrisObject, los residentes disfrutarán de entrada con acceso controlado para vehículos, un pabellón con piscina, área de juegos infantiles y un parque en el corazón de la comunidad, y cada casa está equipada con accesorios y acabados de lujo, todo sin costo adicional.",
     ];
-    CentrisObject.title = "Centris";
+    CentrisObject.officialName = "Centris";
     CentrisObject.subtitle = "";
     CentrisObject.numberOfImages = 36;
     return CentrisObject;

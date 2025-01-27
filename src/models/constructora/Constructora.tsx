@@ -3,7 +3,7 @@ export default class Constructora {
     public descripción: string;
 
     constructor(name?: string, descripción?: string) {
-        this.name = name;
+        this.nameForProjectFolders = name;
         this.descripción = descripción;
     }
 }

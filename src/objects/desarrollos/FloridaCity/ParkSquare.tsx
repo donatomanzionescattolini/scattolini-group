@@ -1,10 +1,10 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import FloridaCity from "../../areas/FloridaCity.tsx";
 
 export default function ParkSquare() {
     const ParkSquareObject = new Project();
-    ParkSquareObject.name = "park-square";
-    ParkSquareObject.title = "Park Square";
+    ParkSquareObject.nameForProjectFolders = "park-square";
+    ParkSquareObject.officialName = "Park Square";
     ParkSquareObject.subtitle = "";
     ParkSquareObject.traits = {
         building: <></>,

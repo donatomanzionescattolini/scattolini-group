@@ -1,4 +1,4 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
 export default function Ora() {
@@ -6,7 +6,7 @@ export default function Ora() {
     OraObject.banner = true;
     OraObject.area = Brickell();
 
-    OraObject.name = "ora";
+    OraObject.nameForProjectFolders = "ora";
     OraObject.traits = {
         building: (
             <ul>
@@ -156,7 +156,7 @@ export default function Ora() {
     OraObject.introduction = [
         "Presentamos ORA by Casa Tua, un nuevo destino realmente único al que llamar hogar. ORA ofrece residencias de propiedad flexible a corto, mediano y largo plazo, perfectamente ubicadas en Brickell, el Distrito Financiero de Miami. Con residencias cuidadosamente curadas, restaurantes de primer nivel y hermosas áreas sociales dedicadas al arte y la cultura lideradas por la icónica marca Casa Tua, ORA se convertirá en el epicentro de la ciudad.      ",
     ];
-    OraObject.title =
+    OraObject.officialName =
         <>
             Ora
             <span className="m-0" style={{fontSize: "12px!important"}}>

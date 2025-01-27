@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Carousel} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Areas from "../objects/areas/Areas.tsx";
-import Project from "../models/desarrollos/Project.tsx";
+import Project from "../models/desarrollos/NewDevelopment.tsx";
 import {MDBCarousel, MDBContainer} from "mdb-react-ui-kit";
 import {getDesarrollosForArea} from "../objects/desarrollos/Desarrollos.ts";
 import {Area} from "../models/areas/Area.tsx";
@@ -38,12 +38,12 @@ const SlideshowGallery = (props: PropsSlideshow) => {
                         key={index}
                         id={`second-carousel-${index}`}
                         style={{
-                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject}/${x.name}.webp`,
+                            backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject}/${x.nameForProjectFolders}.webp`,
                         }}
                     >
                         <Carousel.Caption>
                             <h3 className="display-6 pt-5    my-5 font-weight-bold">
-                                {x.name
+                                {x.nameForProjectFolders
                                     .split("-")
                                     .map(
                                         (n) => String(n.charAt(0)).toUpperCase() + n.substring(1)
@@ -51,7 +51,7 @@ const SlideshowGallery = (props: PropsSlideshow) => {
                                     .join(" ")}
                             </h3>
                             <p className="lead font-weight-bold text-white">
-                                {areaObject.name
+                                {areaObject.nameForProjectFolders
                                     .split("-")
                                     .map((n) => n.charAt(0).toUpperCase() + n.substring(1))
                                     .join(" ")}

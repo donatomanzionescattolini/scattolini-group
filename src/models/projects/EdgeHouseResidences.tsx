@@ -1,12 +1,12 @@
-import Project from "./Project.tsx";
+import Project from "./NewDevelopment.tsx";
 import Edgewater from "../../objects/areas/Edgewater.tsx";
 
 
 export default function EdgeHouseResidencesProject(): Project {
     const EdgeHouse: Project = new Project(Edgewater());
 
-    EdgeHouse.title = "Edge House Miami Residences";
-    EdgeHouse.name = "edge-house-residences";
+    EdgeHouse.officialName = "Edge House Miami Residences";
+    EdgeHouse.nameForProjectFolders = "edge-house-residences";
 
 
     EdgeHouse.subtitle = "";

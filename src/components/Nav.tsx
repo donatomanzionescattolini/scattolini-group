@@ -18,7 +18,7 @@ import {
 
 import Areas from "../objects/areas/Areas.tsx";
 import {getDesarrollosForArea} from "../objects/desarrollos/Desarrollos.ts";
-import Project from "../models/desarrollos/Project.tsx";
+import Project from "../models/desarrollos/NewDevelopment.tsx";
 import {Area} from "../models/areas/Area.tsx";
 
 const Nav = () => {
@@ -52,8 +52,8 @@ const Nav = () => {
 
         const filteredDesarrolloz = allDesarrollos.filter(
             (desarrollo) =>
-                desarrollo.name.toLowerCase().includes(event.target.value.toLowerCase()) ||
-                event.target.value.toLowerCase().includes(desarrollo.name.toLowerCase())
+                desarrollo.nameForProjectFolders.toLowerCase().includes(event.target.value.toLowerCase()) ||
+                event.target.value.toLowerCase().includes(desarrollo.nameForProjectFolders.toLowerCase())
         );
 
         setFilteredDesarrollos(filteredDesarrolloz);
@@ -68,8 +68,8 @@ const Nav = () => {
 
         const filteredAreaz = areas.filter(
             (area) =>
-                area.title.toLowerCase().includes(event.target.value.toLowerCase()) ||
-                event.target.value.toLowerCase().includes(area.title.toLowerCase())
+                area.officialName.toLowerCase().includes(event.target.value.toLowerCase()) ||
+                event.target.value.toLowerCase().includes(area.officialName.toLowerCase())
         );
 
         setFilteredAreas(filteredAreaz);
@@ -151,8 +151,8 @@ const Nav = () => {
                                             {filteredAreas.map((area) => {
                                                 return (
                                                     <MDBDropdownItem key={filteredAreas.indexOf(area)} link
-                                                                     href={"/areas/" + area.name}>
-                                                        {area.title}
+                                                                     href={"/areas/" + area.nameForProjectFolders}>
+                                                        {area.officialName}
                                                     </MDBDropdownItem>
                                                 );
                                             })}
@@ -184,8 +184,8 @@ const Nav = () => {
                                         {filteredDesarrollos.map((desarrollo) => {
                                             return (
                                                 <MDBDropdownItem link key={filteredDesarrollos.indexOf(desarrollo)}
-                                                                 href={"/desarrollos/" + desarrollo.name}>
-                                                    {desarrollo.title}
+                                                                 href={"/desarrollos/" + desarrollo.nameForProjectFolders}>
+                                                    {desarrollo.officialName}
                                                 </MDBDropdownItem>
                                             );
                                         })}

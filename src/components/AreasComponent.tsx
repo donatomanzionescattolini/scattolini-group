@@ -18,7 +18,7 @@ interface PropsAreasComponent {
 export default function AreasComponent(props: PropsAreasComponent) {
     let areas = Areas();
     if (props.currentArea) {
-        areas = areas.filter(area => area.name !== props.currentArea!.name);
+        areas = areas.filter(area => area.nameForProjectFolders !== props.currentArea!.nameForProjectFolders);
     }
 
 
@@ -33,12 +33,12 @@ export default function AreasComponent(props: PropsAreasComponent) {
                     <MDBCol md="4" key={index} className="mb-4">
                         <MDBCard className="photo-card">
                             <MDBCardImage
-                                src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/thumbnail.webp`}
-                                alt={area.name} position="top" className="gallery-image img-thumbnail"/>
+                                src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.nameForProjectFolders}/thumbnail.webp`}
+                                alt={area.nameForProjectFolders} position="top" className="gallery-image img-thumbnail"/>
                         </MDBCard>
                         <MDBCardFooter className="pt-2">
-                            <MDBCardLink className="text-center" href={"/areas/" + area.name}>
-                                <MDBTypography tag={"h4"}>{area.title}</MDBTypography>
+                            <MDBCardLink className="text-center" href={"/areas/" + area.nameForProjectFolders}>
+                                <MDBTypography tag={"h4"}>{area.officialName}</MDBTypography>
                             </MDBCardLink>
                         </MDBCardFooter>
                     </MDBCol>

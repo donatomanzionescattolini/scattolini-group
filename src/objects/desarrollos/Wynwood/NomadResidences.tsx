@@ -1,11 +1,11 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Wynwood from "../../areas/Wynwood";
 
 export default function NomadResidences() {
 
     const NomadResidencesObject = new Project(Wynwood());
-    NomadResidencesObject.name = "nomad-residences";
-    NomadResidencesObject.title = "Nomad Residences";
+    NomadResidencesObject.nameForProjectFolders = "nomad-residences";
+    NomadResidencesObject.officialName = "Nomad Residences";
     NomadResidencesObject.subtitle = "Carácter individual, un mundo de confort";
     NomadResidencesObject.introduction = ["El Nomad Wynwood Residences cuenta con 329 residencias de lujo. Las unidades varían en tamaño desde 478 pies cuadrados hasta 911 pies cuadrados. Fue desarrollado por Related Group, el prestigioso desarrollador detrás de Icon Brickell, SLS Lux, Brickell Heights, Hyde Beach, Baccarat Residences y muchos otros edificios de ultra lujo en el sur de Florida. Diseñado por Arquitectonica y con un elegante diseño interior de Design Agency. Este condominio residencial ubicado en el centro se encuentra en la vibrante área de Wynwood de Miami, Florida. Algunas de las atracciones más importantes son las paredes de Wynwood, las galerías de arte, la alta cocina, las tiendas y los lugares culturales que brindarán a los residentes una experiencia de vida como en ningún otro lugar del sur de la Florida."];
     NomadResidencesObject.banner = true;

@@ -16,11 +16,11 @@ function AreasComponent() {
                 {areas.map((area) => (
                     <MDBCol key={areas.indexOf(area)} xs={12} sm={12} md={6} lg={4} xl={4}>
                         <div className="thumbnail">
-                            <Link to={`/areas/${area.name}/`}>
+                            <Link to={`/areas/${area.nameForProjectFolders}/`}>
                                 <div
                                     className="propiedades-img m-0 p-0"
                                     style={{
-                                        background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/thumbnail.webp')`,
+                                        background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.nameForProjectFolders}/thumbnail.webp')`,
                                         backgroundSize: "cover",
                                         backgroundPosition: "50% 15%",
                                     }}
@@ -29,7 +29,7 @@ function AreasComponent() {
                                     fontFamily: '"the-seasons", serif',
                                     fontWeight: "200",
                                     fontStyle: "normal"
-                                }}>{area.title}</h4>
+                                }}>{area.officialName}</h4>
                             </Link>
                         </div>
                     </MDBCol>

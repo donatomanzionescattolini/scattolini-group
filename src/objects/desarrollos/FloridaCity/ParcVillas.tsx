@@ -1,10 +1,10 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import FloridaCity from "../../areas/FloridaCity.tsx";
 
 export default function ParcVillas() {
     const ParcVillasObject = new Project();
-    ParcVillasObject.name = "parc-villas";
-    ParcVillasObject.title = "Parc Villas";
+    ParcVillasObject.nameForProjectFolders = "parc-villas";
+    ParcVillasObject.officialName = "Parc Villas";
     ParcVillasObject.subtitle = "";
     ParcVillasObject.traits = {
         building: <></>,

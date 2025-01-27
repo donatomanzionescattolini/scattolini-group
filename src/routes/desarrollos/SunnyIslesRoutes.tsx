@@ -1,8 +1,8 @@
 import React from "react";
 import {Route} from "react-router-dom";
-import BentleyResidencesProject from "../../components/desarrollos/SunnyIsles/BentleyResidencesProject";
-import {StRegisProject} from "../../components/desarrollos/SunnyIsles/StRegisProject";
-import TheMansionsAtAcqualinaProject from "../../components/desarrollos/SunnyIsles/TheMansionsAtAcqualinaProject";
+import BentleyResidencesProject from "../../components/projects/SunnyIsles/BentleyResidencesProject.tsx";
+import TheMansionsAtAcqualinaProject from "../../components/projects/SunnyIsles/TheMansionsAtAcqualinaProject.tsx";
+import {StRegisProject} from "../../components/projects/SunnyIsles/StRegisProject.tsx";
 
 const fragment = (
     <React.Fragment>

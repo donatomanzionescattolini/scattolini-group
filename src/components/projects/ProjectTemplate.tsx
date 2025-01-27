@@ -22,7 +22,7 @@ import Desarrollos from "./DesarrollosComponent.tsx";
 
 export default function ProjectTemplate(paramz: Readonly<ProjectParams>) {
     const params = paramz.project;
-    const [nombre] = useState(params.name);
+    const [nombre] = useState(params.nameForProjectFolders);
     const [area] = useState(params.area);
     const [numberOfImages] = useState(params.numberOfImages);
     const [tabVisible, setTabVisible] = useState("brochure");
@@ -38,7 +38,7 @@ export default function ProjectTemplate(paramz: Readonly<ProjectParams>) {
             ></iframe>
         </div>
     </MDBContainer> as ReactNode : vid as ReactNode);
-    const [titulo] = useState(params.title);
+    const [titulo] = useState(params.officialName);
     const [banner] = useState(params.banner);
     const [subtitulo] = useState(params.subtitle);
     const [introduccion] = useState(params.introduction);
@@ -165,8 +165,8 @@ export default function ProjectTemplate(paramz: Readonly<ProjectParams>) {
                         }
                     </MDBCol>
                     <MDBCol xs={12} sm={12} md={6} lg={6} xl={6} className={"p-md-5 p-sm-2"}>
-                        <img className="img-fluid img-thumbnail" alt={area ? area.name : "no photo"}
-                             src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area ? area.name : ""}/${nombre}.webp`}
+                        <img className="img-fluid img-thumbnail" alt={area ? area.nameForProjectFolders : "no photo"}
+                             src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area ? area.nameForProjectFolders : ""}/${nombre}.webp`}
                         />
                     </MDBCol>
                 </MDBRow>

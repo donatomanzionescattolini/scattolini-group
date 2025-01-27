@@ -1,9 +1,9 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
 export default function FivePark() {
     const FiveParkObject = new Project();
-    FiveParkObject.name = "five-park";
+    FiveParkObject.nameForProjectFolders = "five-park";
 
     FiveParkObject.address = "500 Alton Rd, Miami Beach, FL 33139, Estados Unidos";
     FiveParkObject.traits = {
@@ -148,7 +148,7 @@ export default function FivePark() {
         "Residencias con vista a la bahía yel mar en la torre más innovadora de miami",
         "Un flamante torre residencial llega a Miami Beach con vistas incomparables en todas las direcciones.Amenidades excepcionales a lo largo de 50.000 pies cuadrados (4645 metros cuadrados) con serviciospropios de bienestar, club de playa privado y parque con un terreno de tres acres (más de una hectárea) frente a la puerta de su casa. Una creación verdaderamente impresionante de las mentes de diseño más visionarias del mundo",
     ];
-    FiveParkObject.title = "Five Park";
+    FiveParkObject.officialName = "Five Park";
     FiveParkObject.subtitle = "VidaResidences a un Nivel Superior";
     FiveParkObject.numberOfImages = 45;
     FiveParkObject.banner = true;

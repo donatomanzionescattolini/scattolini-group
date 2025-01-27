@@ -1,9 +1,9 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import CoralGables from "../../areas/CoralGables.tsx";
 
 export default function TheAvenue() {
     const TheAvenueObject = new Project();
-    TheAvenueObject.name = "the-avenue";
+    TheAvenueObject.nameForProjectFolders = "the-avenue";
     TheAvenueObject.traits = {
         building: (
             <>
@@ -98,7 +98,7 @@ export default function TheAvenue() {
 
         'Todos los partidos. Todos los acabados. Cada mueble. The Avenue es lo que significa estar verdaderamente "listo para mudarse".',
     ];
-    TheAvenueObject.title = "The Avenue";
+    TheAvenueObject.officialName = "The Avenue";
     TheAvenueObject.subtitle = "La esencia de la avenida Coral Gables";
     TheAvenueObject.numberOfImages = 27;
     TheAvenueObject.banner = true;

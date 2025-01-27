@@ -1,4 +1,4 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
 export default function W11() {
@@ -6,9 +6,9 @@ export default function W11() {
     W11Object.banner = true;
     W11Object.area = Downtown();
 
-    W11Object.name = "w11";
+    W11Object.nameForProjectFolders = "w11";
     W11Object.numberOfImages = 12;
-    W11Object.title = "West Eleventh Residences";
+    W11Object.officialName = "West Eleventh Residences";
     W11Object.subtitle = "Lleva la vida a una nueva dirección nunca antes imaginada";
     W11Object.introduction = [
         "La vida moderna está en perpetuo movimiento. Siempre estamos encendidos la mudanza. Las residencias en West Eleventh fueron creadas con esa noción en mente. Una experiencia con verdadera flexibilidad de vida para dueños",

@@ -1,4 +1,4 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
 export default function AstonMartin() {
@@ -8,7 +8,7 @@ export default function AstonMartin() {
     AstonMartinObject.banner = true;
     AstonMartinObject.area = Downtown();
 
-    AstonMartinObject.name = "aston-martin";
+    AstonMartinObject.nameForProjectFolders = "aston-martin";
     AstonMartinObject.video =
         <iframe
             width="100%"
@@ -194,11 +194,11 @@ export default function AstonMartin() {
         )
     };
     AstonMartinObject.introduction = [
-        "Durante más de un siglo, el AstonMartinObject.nombre Aston Martin ha sido sinónimo de excelencia en el campo del diseño de automóviles y es una de las marcas más emblemáticas y reconocibles del mundo.  Para su visión de las Residencias Aston Martin en el centro de Miami, Florida, Aston Martin combina una estética de diseño brillante con una ubicación ideal para crear la dirección más llamativa y codiciada de Miami.",
+        "Durante más de un siglo, el AstonMartinObject.nombre Aston Martin ha sido sinónimo de excelencia en el campo del diseño de automóviles y es una de las marcas más emblemáticas y reconocibles del mundo.  Para su visión de las Residencias Aston Martin en el centro de Miami, Florida, Aston Martin combina una estética de diseño brillante con una address ideal para crear la dirección más llamativa y codiciada de Miami.",
         "Cada aspecto de las residencias Aston Martin en 300 Biscayne Boulevard Way ha sido cuidadosamente considerado para proporcionar el equilibrio perfecto entre la maximización del espacio, la luz y las vistas óptimas, y las necesidades del estilo de vida cosmopolita moderno de hoy.      ",
         "Situado en una de las últimas parcelas de la propiedad frente al mar de Miami en desarrollarse, Aston Martin Residences es una sinfonía de vidrio curvilíneo y acero, que se eleva 66 pisos hacia el cielo. "]
     ;
-    AstonMartinObject.title = "Aston Martin Residences";
+    AstonMartinObject.officialName = "Aston Martin Residences";
     AstonMartinObject.subtitle = "";
     AstonMartinObject.numberOfImages = 29;
     return AstonMartinObject;

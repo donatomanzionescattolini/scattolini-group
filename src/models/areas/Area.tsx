@@ -1,16 +1,16 @@
 import {ReactNode} from "react";
 
 export class Area {
-    public name: string;
-    public titulo: string;
-    public slogan: string;
-    public descripcion: Array<string>;
+    public slogan: string = "";
+    public description: string = "";
 
-    public numberOfImages: number;
+    public numberOfImages: number=0;
     public video?: ReactNode;
+    private nameForProjectFolders: string;
+    officialName:string = "";
 
-    constructor(name: string) {
-        this.name = name;
+    constructor(nameForProjectFolders?: string) {
+        this.nameForProjectFolders =nameForProjectFolders as string;
     }
 }
 

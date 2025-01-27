@@ -1,8 +1,8 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 
 export default function PineParkVillas() {
     const PineParkVillasObject = new Project();
-    PineParkVillasObject.name = "pine-park-villas";
+    PineParkVillasObject.nameForProjectFolders = "pine-park-villas";
     PineParkVillasObject.traits = {
         building: (
             <>
@@ -83,9 +83,9 @@ export default function PineParkVillas() {
     };
     PineParkVillasObject.introduction = [
         "Pine Park Villas está estableciendo el nuevo estándar de vida en casas adosadas de lujo en uno de los vecindarios más atractivos del sur de Florida. Pinecrest, un pueblo suburbano ideal, cuenta con proximidad y fácil acceso a la Bahía de Biscayne, extraordinarios parques públicos, excelentes tiendas y algunas de las mejores escuelas públicas y privadas del sureste.",
-        "The Village of Pinecrest fue reconocido como uno de los diez mejores lugares de Florida por su calidad de vida en general por el South Florida Business Journal. Pine Park Villas ofrece una ubicación ideal en Pinecrest con fácil acceso al centro de Miami, Coral Gables y el aeropuerto internacional de Miami.      ",
+        "The Village of Pinecrest fue reconocido como uno de los diez mejores lugares de Florida por su calidad de vida en general por el South Florida Business Journal. Pine Park Villas ofrece una address ideal en Pinecrest con fácil acceso al centro de Miami, Coral Gables y el aeropuerto internacional de Miami.      ",
     ];
-    PineParkVillasObject.title = "Pine Park Villas";
+    PineParkVillasObject.officialName = "Pine Park Villas";
     PineParkVillasObject.subtitle = "Estilo de vida redefinido";
     PineParkVillasObject.numberOfImages = 33;
 //   video={

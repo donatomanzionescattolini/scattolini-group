@@ -1,4 +1,4 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
 
 export default function TheMansionsAtAcqualina() {
@@ -15,7 +15,7 @@ export default function TheMansionsAtAcqualina() {
         ></iframe>
     ;
 
-    TheMansionsAtAcqualinaObject.name = "the-mansions-at-acqualina";
+    TheMansionsAtAcqualinaObject.nameForProjectFolders = "the-mansions-at-acqualina";
     TheMansionsAtAcqualinaObject.traits = {
         building: (
             <>
@@ -81,7 +81,7 @@ export default function TheMansionsAtAcqualina() {
         "Ubicado en su propia mansión en el cielo, se calma con los suaves vientos alisios mientras las olas barren la orilla de su prístina playa de arena blanca. Y, mientras contempla el espectacular amanecer desde su terraza privada, se da cuenta de lo que pocos sabrán: esto es lo que es vivir el mejor estilo de vida del mundo, en la mejor residencia del mundo",
         "La grandeza en el arte, la arquitectura y el estilo de vida es nuestro compromiso en Acqualina Resort and Spa on the Beach. Las mansiones de Acqualina llevan esto a un nivel aún más elevado. Aquí descubrirá residencias lujosamente decoradas en un edificio icónico exquisitamente alto. Las comodidades incomparables y los servicios de clase mundial incluyen una terraza de piscina con un diseño elegante y rica en comodidades, impresionantes espacios públicos, once santuarios privados al aire libre para propietarios de viviendas y trece áreas de servicios interiores excepcionales. Todas sus necesidades están cubiertas en un entorno idílico que equilibra la belleza de la naturaleza con la ciudad más dinámica del mundo.",
     ];
-    TheMansionsAtAcqualinaObject.title = "The Mansions at Acqualina";
+    TheMansionsAtAcqualinaObject.officialName = "The Mansions at Acqualina";
     TheMansionsAtAcqualinaObject.subtitle = "Descubre la vida en condominio en Sunny Isles Beach";
     TheMansionsAtAcqualinaObject.numberOfImages = 24;
     TheMansionsAtAcqualinaObject.banner = true;

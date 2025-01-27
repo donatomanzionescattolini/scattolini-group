@@ -3,7 +3,7 @@ import {MDBCol, MDBContainer, MDBRow} from "mdb-react-ui-kit";
 import React, {useLayoutEffect, useState} from "react";
 import {Link} from "react-router-dom";
 
-import Project from "../../models/desarrollos/Project.tsx";
+import Project from "../../models/desarrollos/NewDevelopment.tsx";
 import {Area} from "../../models/areas/Area.tsx";
 import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos.ts";
 
@@ -15,8 +15,8 @@ interface AreaProps {
 export default function AreaTemplate(props: AreaProps) {
     const [area] = useState(props.area);
 
-    const nombre = area.name;
-    const titulo = area.title;
+    const nombre = area.nameForProjectFolders;
+    const titulo = area.officialName;
     const images = [];
 
     const [areaDesarrollos] = useState<Set<Project>>(getDesarrollosForArea(area));
@@ -77,7 +77,7 @@ export default function AreaTemplate(props: AreaProps) {
 
                             src={firstImage}
                             className="  img-fluid img-thumbnail flex-shrink-1"
-                            alt={area.name}/>
+                            alt={area.nameForProjectFolders}/>
 
                     </MDBCol>
                 </MDBRow>
@@ -112,16 +112,16 @@ export default function AreaTemplate(props: AreaProps) {
 
                         {[...areaDesarrollos.values()].map((desarrollo, index) => {
                             return (<MDBCol key={index + 1} xs={12} sm={12} md={6} lg={4} xl={4}>
-                                <Link to={`/desarrollos/${desarrollo.name}/`}>
+                                <Link to={`/desarrollos/${desarrollo.nameForProjectFolders}/`}>
                                     <div
                                         className="propiedades-img p-0 m-0"
                                         style={{
-                                            background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.name}.webp')`,
+                                            background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.nameForProjectFolders}/${desarrollo.nameForProjectFolders}.webp')`,
                                             backgroundSize: "cover",
                                         }}
                                     ></div>
 
-                                    <h4 className="text-center card-title m-2 ">{desarrollo.name.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ")}</h4>
+                                    <h4 className="text-center card-title m-2 ">{desarrollo.nameForProjectFolders.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" ")}</h4>
                                 </Link>
                             </MDBCol>)
                         })}

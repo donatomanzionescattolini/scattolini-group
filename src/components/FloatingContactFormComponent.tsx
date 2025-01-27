@@ -46,7 +46,7 @@ export default function FloatingContactFormComponent() {
     };
 
     const handleChange = ((e: { target: { name: string; value: string; }; }) => {
-        setToSend({...toSend, [e.target.name]: e.target.value});
+        setToSend({...toSend, [e.target.nameForProjectFolders]: e.target.value});
     });
 
     function setFormNull() {

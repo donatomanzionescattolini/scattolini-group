@@ -27,7 +27,7 @@ export default function Footer() {
 
                                 return (
                                     <MDBCol className="mb-2 mb-md-0 mx-auto my-5 ">
-                                        <h5 className="text-center">{area.title}</h5>
+                                        <h5 className="text-center">{area.officialName}</h5>
                                         <small className={"w-75 mx-auto list-unstyled"}>
                                             <li className={"mdc-list-divider mb-3"}></li>
                                         </small>
@@ -44,10 +44,10 @@ export default function Footer() {
                                                             className="text-sm-center bg-transparent border-0 text-nowrap text-muted py-0 my-0">
                                                             <Link
                                                                 className={"bg-transparent"}
-                                                                to={`/desarrollos/${des.name}`}
+                                                                to={`/desarrollos/${des.nameForProjectFolders}`}
                                                             >
-                                                                {des.title ||
-                                                                    des.name
+                                                                {des.officialName ||
+                                                                    des.nameForProjectFolders
                                                                         .split("-")
                                                                         .map(
                                                                             (word) =>

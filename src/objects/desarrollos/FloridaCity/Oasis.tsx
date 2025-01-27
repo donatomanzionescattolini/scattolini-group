@@ -1,10 +1,10 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import FloridaCity from "../../areas/FloridaCity.tsx";
 
 export default function Oasis() {
     const OasisObject = new Project();
-    OasisObject.name = "oasis";
-    OasisObject.title = "Oasis";
+    OasisObject.nameForProjectFolders = "oasis";
+    OasisObject.officialName = "Oasis";
     OasisObject.subtitle = "";
     OasisObject.traits = {
         building: <></>,

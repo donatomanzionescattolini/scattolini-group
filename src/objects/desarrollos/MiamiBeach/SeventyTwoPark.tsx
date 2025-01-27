@@ -1,11 +1,11 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
 export default function SeventyTwoPark() {
     const SeventyTwoParkObject = new Project();
 
 
-    SeventyTwoParkObject.name = "72-park";
+    SeventyTwoParkObject.nameForProjectFolders = "72-park";
     SeventyTwoParkObject.traits = {
         building: (
             <ul>
@@ -157,9 +157,9 @@ export default function SeventyTwoPark() {
         ),
     };
     SeventyTwoParkObject.introduction = [
-        "Al vivir en 72 Park, se ofrece lo mejor de ambos mundos a los residentes: una comunidad tranquila y exclusiva con fácil acceso al furor de la ciudad. El edificio tiene un diseño arquitectónico impresionante, con curvas suaves en todas las esquinas, barandillas de vidrio y ventanas de vidrio del piso al techo. Las residencias de planta abierta fueron cuidadosamente diseñadas para brindar comodidad y estilo, y ofrecen techos altos, unidades amplias y luminosas, acabados interiores de grado de condominio, gabinetes italianos y electrodomésticos de bajo consumo. Los residentes disfrutan de cautivadoras comodidades al aire libre, en un espacio que supera los 30,000 pies cuadrados. Este espacio cuenta con una plataforma de observación, jardín al aire libre y piscina de entrenamiento. Su ubicación deseable en North Miami Beach está cerca de cafés en la acera, clubes de campo, Lincoln Road y Bal Harbour Shops, lo que ofrece algo diferente para hacer todos los días.",
+        "Al vivir en 72 Park, se ofrece lo mejor de ambos mundos a los residentes: una comunidad tranquila y exclusiva con fácil acceso al furor de la ciudad. El edificio tiene un diseño arquitectónico impresionante, con curvas suaves en todas las esquinas, barandillas de vidrio y ventanas de vidrio del piso al techo. Las residencias de planta abierta fueron cuidadosamente diseñadas para brindar comodidad y estilo, y ofrecen techos altos, unidades amplias y luminosas, acabados interiores de grado de condominio, gabinetes italianos y electrodomésticos de bajo consumo. Los residentes disfrutan de cautivadoras comodidades al aire libre, en un espacio que supera los 30,000 pies cuadrados. Este espacio cuenta con una plataforma de observación, jardín al aire libre y piscina de entrenamiento. Su address deseable en North Miami Beach está cerca de cafés en la acera, clubes de campo, Lincoln Road y Bal Harbour Shops, lo que ofrece algo diferente para hacer todos los días.",
     ];
-    SeventyTwoParkObject.title = "72 Park";
+    SeventyTwoParkObject.officialName = "72 Park";
     SeventyTwoParkObject.subtitle =
         <span className="pb-0 mb-0">
           La vida en Miami Beach <em>redefinida</em>

@@ -1,10 +1,10 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Homestead from "../../areas/Homestead.tsx";
 
 export default function SalernoEstates() {
     const SalernoEstates = new Project();
-    SalernoEstates.name = "salerno-estates";
-    SalernoEstates.title = "Salerno Estates";
+    SalernoEstates.nameForProjectFolders = "salerno-estates";
+    SalernoEstates.officialName = "Salerno Estates";
     SalernoEstates.subtitle = "";
     SalernoEstates.area = Homestead();
     SalernoEstates.traits = {

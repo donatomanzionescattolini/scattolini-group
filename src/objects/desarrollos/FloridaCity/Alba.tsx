@@ -1,18 +1,18 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import FloridaCity from "../../areas/FloridaCity.tsx";
 
 export default function Alba() {
     const AlbaObject = new Project();
     AlbaObject.numberOfImages = 7;
     AlbaObject.banner = true;
-    AlbaObject.name = "alba";
+    AlbaObject.nameForProjectFolders = "alba";
 
     AlbaObject.introduction = [
         "Descubra On Alba, una subdivisión acogedora y familiar que ofrece 137 viviendas unifamiliares nuevas dentro de la vibrante comunidad de Onx. Las casas Onx están cuidadosamente diseñadas con una variedad de fachadas y opciones interiores, lo que le permite adaptar la casa de sus sueños a sus preferencias. Cada residencia cuenta con 5 dormitorios, de 3 a 4,5 baños, una cocina abierta contemporánea y una sala de estar equipada con electrodomésticos de bajo consumo, y acceso exclusivo a las comodidades del Onx Community Park.",
 
         "En Onx Homes, nos enorgullecemos de nuestro estándar, que incluye características de construcción X+ de™ vanguardia, cimientos completamente de concreto, ventanas y puertas a prueba de impactos de huracanes, elegantes encimeras de cuarzo, electrodomésticos de bajo consumo y lujosos pisos de baldosas de porcelana. Nuestro compromiso con estos elementos garantiza que su hogar no solo sea hermoso, sino que también esté construido para resistir los elementos.",
     ];
-    AlbaObject.title = "On Alba";
+    AlbaObject.officialName = "On Alba";
     AlbaObject.subtitle = "Una nueva era de hogares y vecindarios";
 
     AlbaObject.numberOfBathrooms = {start: 3, end: 4.5};

@@ -1,12 +1,12 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Edgewater from "../../../objects/areas/Edgewater.tsx";
 
 
 const CoveResidences = new Project(Edgewater());
 
 
-CoveResidences.name = "cove-residences";
-CoveResidences.title = "Cove Residences";
+CoveResidences.nameForProjectFolders = "cove-residences";
+CoveResidences.officialName = "Cove Residences";
 CoveResidences.address = <address>456 NE 29th St, Miami, FL 33137, USA</address>;
 CoveResidences.numberOfImages = 21;
 CoveResidences.numberOfUnits = 134;
@@ -38,7 +38,7 @@ CoveResidences.traits = {
         </>}
         {CoveResidences.area && <>
             <dt>Área</dt>
-            <dd>{CoveResidences.area.name}</dd>
+            <dd>{CoveResidences.area.nameForProjectFolders}</dd>
         </>}
 
     </dl>

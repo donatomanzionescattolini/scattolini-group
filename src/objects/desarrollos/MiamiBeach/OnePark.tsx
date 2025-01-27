@@ -1,9 +1,9 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
 export default function OnePark() {
     const OneParkObject = new Project();
-    OneParkObject.name = "one-park";
+    OneParkObject.nameForProjectFolders = "one-park";
 
     OneParkObject.traits = {
         building: (
@@ -148,9 +148,9 @@ export default function OnePark() {
         ),
     };
     OneParkObject.introduction = [
-        "One Park Tower by Turnberry es un moderno condominio residencial, que cuenta con 303 residencias de lujo en configuraciones de 1, 2 y 3 dormitorios. Una de sus principales características es su programa de alquiler flexible, que permite una estancia mínima de 30 días 12 veces al año. El diseño minimalista de Arquitectonica en esta torre de 31 pisos permite que entre mucha luz natural en todas las residencias y áticos. El aclamado estudio Meyer Davis trabajó en el diseño interior de One Park Tower; y el hermoso diseño paisajístico es obra maestra de Enzo Enea. Cada residencia tiene su propia filosofía de diseño, manteniendo un enfoque de diseño muy minimalista y un ambiente relajante como en cualquier otro lugar del sur de Florida. Este edificio está ubicado en SoLé Mia, una comunidad planificada ubicada en North Miami, Florida, que cuenta con una laguna privada y una playa privada. La mejor característica de One Park Tower es la ubicación: el condominio está a pocos minutos de Bay Harbor Islands y Sunny Isles Beach.      ",
+        "One Park Tower by Turnberry es un moderno condominio residencial, que cuenta con 303 residencias de lujo en configuraciones de 1, 2 y 3 dormitorios. Una de sus principales características es su programa de alquiler flexible, que permite una estancia mínima de 30 días 12 veces al año. El diseño minimalista de Arquitectonica en esta torre de 31 pisos permite que entre mucha luz natural en todas las residencias y áticos. El aclamado estudio Meyer Davis trabajó en el diseño interior de One Park Tower; y el hermoso diseño paisajístico es obra maestra de Enzo Enea. Cada residencia tiene su propia filosofía de diseño, manteniendo un enfoque de diseño muy minimalista y un ambiente relajante como en cualquier otro lugar del sur de Florida. Este edificio está ubicado en SoLé Mia, una comunidad planificada ubicada en North Miami, Florida, que cuenta con una laguna privada y una playa privada. La mejor característica de One Park Tower es la address: el condominio está a pocos minutos de Bay Harbor Islands y Sunny Isles Beach.      ",
     ];
-    OneParkObject.title = "One Park";
+    OneParkObject.officialName = "One Park";
     OneParkObject.subtitle = <em>by Turnberry</em>;
     OneParkObject.numberOfImages = 27;
     OneParkObject.banner = true;

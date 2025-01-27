@@ -1,11 +1,11 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import MiamiBeach from "../../areas/MiamiBeach";
 
 export default function Palma() {
     const PalmaObject = new Project();
     PalmaObject.banner = true;
-    PalmaObject.name = "palma";
-    PalmaObject.title = "Palma | Miami Beach Residences";
+    PalmaObject.nameForProjectFolders = "palma";
+    PalmaObject.officialName = "Palma | Miami Beach Residences";
     PalmaObject.numberOfImages = 15;
     PalmaObject.introduction = ["Palma Residences Miami Beach es una espectacular torre de condominios en el área de North Beach. Este edificio de 13 pisos ofrece 126 apartamentos de lujo con balcones, que varían de 468 pies cuadrados para un apartamento de una habitación a 1,086 pies cuadrados para una unidad de dos habitaciones. Las comodidades de superlujo incluyen una terraza con una plataforma de piscina ajardinada, asientos, cabañas y un bar; 40 espacios de estacionamiento para vehículos y 140 espacios para bicicletas; y 7,000 pies cuadrados de espacio comercial."];
     PalmaObject.subtitle = "Una Experiencia Mediterránea que Comienza en Miami Beach";

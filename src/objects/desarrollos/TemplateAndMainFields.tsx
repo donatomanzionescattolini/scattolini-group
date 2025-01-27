@@ -1,11 +1,11 @@
 import React from 'react'
 import Brickell from '../areas/Brickell';
-import Project from '../../models/desarrollos/Project.tsx';
+import Project from '../../models/desarrollos/NewDevelopment.tsx';
 
 export default function TemplateAndMainFields() {
     const ProjectObject = new Project(Brickell());
-    ProjectObject.name = "2200-brickell";
-    ProjectObject.title = "2200 Brickell";
+    ProjectObject.nameForProjectFolders = "2200-brickell";
+    ProjectObject.officialName = "2200 Brickell";
     ProjectObject.introduction = ["", ""];
     ProjectObject.area = Brickell();
     ProjectObject.traits = {

@@ -1,4 +1,4 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import DaniaBeach from "../../areas/DaniaBeach";
 
 
@@ -67,8 +67,8 @@ export default function Atlantica() {
     };
 
 
-    AtlanticaObject.name = "atlantica";
-    AtlanticaObject.title = "Atlantica at Dania Beach"
+    AtlanticaObject.nameForProjectFolders = "atlantica";
+    AtlanticaObject.officialName = "Atlantica at Dania Beach"
     AtlanticaObject.introduction = ["Condominios listos para mudarse ahora en venta a unos cuantos pasos de la playa", "Presentamos Atlantica Dania Beach: condominios listos para mudarse ubicados a solo minutos de la playa. Experimenta una vida contemporánea con acabados de diseñador, espacios abiertos y diseños únicos adaptados para cualquier estilo de vida. Disfruta de una variedad de exclusivas comodidades y aprovecha los destinos populares que están a la vuelta de la esquina, incluyendo el centro de Fort Lauderdale y el renombrado Hard RockHotel. Emprende tu próxima aventura en Atlantica Dania Beach."];
     AtlanticaObject.subtitle = "Una Nueva Aventura Te Espera";
     AtlanticaObject.numberOfImages = 38;

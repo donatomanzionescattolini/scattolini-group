@@ -1,4 +1,4 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
 export default function FourteenTwentyEight() {
@@ -7,8 +7,8 @@ export default function FourteenTwentyEight() {
     FourteenTwentyEightObject.area = Brickell();
     FourteenTwentyEightObject.numberOfImages = 39;
 
-    FourteenTwentyEightObject.name = "1428-brickell";
-    FourteenTwentyEightObject.title = "The Residences at 1428 Brickell";
+    FourteenTwentyEightObject.nameForProjectFolders = "1428-brickell";
+    FourteenTwentyEightObject.officialName = "The Residences at 1428 Brickell";
     FourteenTwentyEightObject.subtitle = "Tu vida. A tu manera.";
     FourteenTwentyEightObject.introduction = [
         " Desde su concepción, The Residences at 1428 Brickell fue cuidadosamente planificada como una torre en la que todo concepto mereció una minuciosa valoración. La atención puesta en cada detalle es el resultado de una búsqueda escrupulosa e imaginativa para que las comodidades se conjuguen armónicamente con los espacios comunes y la privacidad de cada residente.",

@@ -1,13 +1,13 @@
 import React from 'react'
-import Project from '../../../models/desarrollos/Project.tsx';
+import Project from '../../../models/desarrollos/NewDevelopment.tsx';
 import Edgewater from '../../areas/Edgewater';
 
 export default function ElleResidences() {
     const ElleResidencesObject = new Project();
 
-    ElleResidencesObject.name = "elle-residences";
+    ElleResidencesObject.nameForProjectFolders = "elle-residences";
 
-    ElleResidencesObject.title = 'Elle Residences';
+    ElleResidencesObject.officialName = 'Elle Residences';
     ElleResidencesObject.area = Edgewater();
     ElleResidencesObject.address = "3618 NE 5th Ave, Miami, FL 33137, Estados Unidos";
 

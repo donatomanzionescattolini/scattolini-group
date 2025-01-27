@@ -1,9 +1,9 @@
-import Project from "../../../models/desarrollos/Project.tsx";
+import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 
 export default function TerraSol() {
     const TerraSolObject = new Project();
-    TerraSolObject.name = "terra-sol";
-    TerraSolObject.title = "Terra Sol";
+    TerraSolObject.nameForProjectFolders = "terra-sol";
+    TerraSolObject.officialName = "Terra Sol";
     TerraSolObject.subtitle = "";
     TerraSolObject.traits = {building: <></>, residences: <></>, amenities: <></>};
 

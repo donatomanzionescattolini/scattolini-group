@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function SlideshowGalleryDesarrollo2(props: Readonly<Props>) {
-    const [name] = useState<string>(props.name);
+    const [name] = useState<string>(props.nameForProjectFolders);
     const [numberOfImages] = useState<number>(props.numberOfImages);
     // function images() {
     const [returnEls, setReturnEls] = useState<React.JSX.Element[]>([]);
