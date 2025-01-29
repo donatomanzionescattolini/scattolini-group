@@ -1,17 +1,16 @@
 import Project from "./NewDevelopment.tsx";
-import Homestead from "../../objects/areas/Homestead.tsx";
-import Building from "./Building.tsx";
 
 
 export class PropertyDeveloper {
-    private name:string;
-    constructor(name?:string) {
+    private name: string;
+
+    constructor(name?: string) {
         this.name = name ? name : "UNKNOWN";
     }
 
 
-
 }
+
 export default function OnGrandville() {
     const OnGrandville = new Project();
 

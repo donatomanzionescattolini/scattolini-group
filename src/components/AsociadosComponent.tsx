@@ -1,7 +1,7 @@
 import "material-components-web/dist/material-components-web.css";
 import "./Asociados.scss";
 import "mdb-ui-kit/css/mdb.min.css";
-import Asociados from "../objects/asociados/Asociados";
+import Asociados from "../objects/associates/Asociados";
 
 export default function Equipo() {
     return (

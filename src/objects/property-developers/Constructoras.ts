@@ -1,4 +1,4 @@
-import Constructora from "../../models/constructora/Constructora.tsx";
+import Constructora from "../../models/property-developers/Constructora.tsx";
 
 const Onx = new Constructora("Onx Homes", " Logotipo de Onx Homes\n" +
     "\n" +

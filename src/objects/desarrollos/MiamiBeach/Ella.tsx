@@ -1,4 +1,4 @@
-import Developer from "../../../models/constructora/Constructora.tsx";
+import Developer from "../../../models/property-developers/Constructora.tsx";
 import Project from "../../../models/desarrollos/NewDevelopment.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 

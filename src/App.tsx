@@ -41,7 +41,7 @@ export default function App() {
 
                     {DesarrollosRoutes()}
 
-                    <Route element={<Equipo/>} path={"/asociados"}/>
+                    <Route element={<Equipo/>} path={"/associates"}/>
 
                     <Route element={<ManzioneProperties/>} path={"/manzione-properties"}/>
                     {AreasRoutes()}

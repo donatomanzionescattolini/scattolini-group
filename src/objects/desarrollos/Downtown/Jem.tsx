@@ -1,6 +1,6 @@
 import Project from '../../../models/desarrollos/NewDevelopment.tsx';
 import Downtown from '../../areas/Downtown';
-import Constructora from '../../../models/constructora/Constructora';
+import Constructora from '../../../models/property-developers/Constructora';
 
 export default function Jem() {
     const Jem = new Project();

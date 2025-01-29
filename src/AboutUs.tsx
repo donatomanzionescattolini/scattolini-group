@@ -1,6 +1,6 @@
-import { innerWidth } from "typescript/lib/lib.dom";
-
 export function AboutUs() {
+
+    const innerWidth = window.innerWidth;
     return (
         <>
             <h2

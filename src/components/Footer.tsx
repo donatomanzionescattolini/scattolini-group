@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom";
 import Areas from "../objects/areas/Areas.tsx";
-import {getDesarrollosForArea} from "../objects/desarrollos/Desarrollos.ts";
 import {MDBCol, MDBContainer, MDBFooter, MDBListGroup, MDBListGroupItem, MDBRow,} from "mdb-react-ui-kit";
 import React from "react";
 

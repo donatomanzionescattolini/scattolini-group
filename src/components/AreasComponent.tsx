@@ -34,7 +34,8 @@ export default function AreasComponent(props: PropsAreasComponent) {
                         <MDBCard className="photo-card">
                             <MDBCardImage
                                 src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.nameForProjectFolders}/thumbnail.webp`}
-                                alt={area.nameForProjectFolders} position="top" className="gallery-image img-thumbnail"/>
+                                alt={area.nameForProjectFolders} position="top"
+                                className="gallery-image img-thumbnail"/>
                         </MDBCard>
                         <MDBCardFooter className="pt-2">
                             <MDBCardLink className="text-center" href={"/areas/" + area.nameForProjectFolders}>

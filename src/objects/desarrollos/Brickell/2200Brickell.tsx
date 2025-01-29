@@ -1,17 +1,16 @@
 import React from 'react'
-import Project from '../../../models/desarrollos/NewDevelopment.tsx'
 import Brickell from '../../areas/Brickell'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import {capitalizeFirstLetter} from '../../../Utilities';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap/dist/css/bootstrap.css';
-import Building from "../../../models/desarrollos/Building.tsx";
-import NewDevelopment from "../../../models/desarrollos/NewDevelopment.tsx";
+import NewDevelopment from "../../../models/projects/NewDevelopment.tsx";
+import Building from "../../../models/projects/Building.tsx";
 
 export default function _2200Brickell() {
     const _2200BrickellObject = new NewDevelopment();
     let building = new Building(Brickell());
-    building.address ="2200 Brickell Avenue, Miami, FL 33129";
+    building.address = "2200 Brickell Avenue, Miami, FL 33129";
     _2200BrickellObject.officialName = "2200 Brickell";
     _2200BrickellObject.summary = ["2200 Brickell es un nuevo condominio de lujo en South Brickell, diseñado por Revuelta Architecture y con diseño interior de ODA New York. Estas lujosas residencias de 1 a 4 habitaciones ofrecen acabados espectaculares, electrodomésticos de alta calidad, ventanas de vidrio de piso a techo, estacionamiento asignado en espacios en el mismo piso y mucho más.... Los residentes en 2200 Brickell disfrutan de comodidades como una piscina estilo centro turístico con spa al aire libre y cabañas junto a la piscina, cancha de pickleball, cocina de verano, área de fitness al aire libre, área de juegos para niños, una pista para caminar de un cuarto de milla y más. Su conveniente address está justo al otro lado de la calle de los espectaculares edificios residenciales frente al mar, como Skyline, Bristol Tower o Una Brickell Residences, por nombrar algunos. Esta excelente address dará a sus residentes la posibilidad de ser parte de la zona más tranquila y menos congestionada del centro de Miami, con fácil acceso a las playas de Key Biscayne, Coconut Grove, el Distrito Financiero y la I-95, conectando rápidamente con toda la ciudad."].join("\n");
 
@@ -139,8 +138,6 @@ export default function _2200Brickell() {
             </dl>
     };
     _2200BrickellObject.numberOfImages = 41;
-    _2200BrickellObject.address = "2200 Brickell Avenue, Miami, FL 33129";
-    _2200BrickellObject.numberOfRooms = {start: 1, end: 4};
     _2200BrickellObject.numberOfUnits = 105;
     _2200BrickellObject.typeOfUnits = "Residencias";
     _2200BrickellObject.yearOfCompletion = 2025;
