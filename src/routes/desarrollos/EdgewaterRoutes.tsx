@@ -19,6 +19,8 @@ export default function EdgewaterRoutes() {
                 element={<ElleResidencesProject/>}
                 path="/desarrollos/elle-residences"
             />
+
+
             <Route
                 element={<MissoniBaiaProject/>}
                 path={"/desarrollos/missoni-baia"}
