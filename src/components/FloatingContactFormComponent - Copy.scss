@@ -1,0 +1,52 @@
+$darkblue: #0E2D2F;
+$lightblue: #1F595A;
+$brown: #8A6944;
+$lightbrown: #EDE3D6;
+$background: #f2f2ed;
+;
+$secondBackground: rgb(251, 251, 251);
+$white: #fff;
+$black: #000;
+
+$black-10: darken(#fff, 10%);
+$black-20: darken(#fff, 20%);
+$black-30: darken(#fff, 30%);
+$black-40: darken(#fff, 40%);
+$black-50: darken(#fff, 50%);
+$black-60: darken(#fff, 60%);
+$black-70: darken(#fff, 70%);
+$black-80: darken(#fff, 80%);
+$black-90: darken(#fff, 90%);
+#floatingContact .formInput {
+  background-blend-mode: screen !important;
+}
+
+#floatingContact {
+  padding: 5px 10px !important;
+  width: 25vw !important;
+  color: #8A6944 !important;
+
+
+  width: 90% !important;
+  margin: auto !Important;
+}
+
+#float-container {
+  background: $background;
+}
+
+button {
+  color: #8A6944 !important;
+  background: #ede3d6 !important;
+}
+
+@media screen and (max-width: 760px) {
+  .floating-element {
+    width: 84vw !important;
+    left: 8vw !important;
+    right: 8vw !important;
+    height: auto;
+    top: 3vh;
+    bottom: auto;
+  }
+}

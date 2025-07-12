@@ -177,7 +177,7 @@ const Nav = () => {
                     </MDBInputGroup>
                     {filteredDesarrollos.map((desarrollo) => {
                       return (
-                        <MDBDropdownItem key={filteredDesarrollos.indexOf(desarrollo)}link href={"/areas/" + desarrollo.nombre}>
+                        <MDBDropdownItem key={filteredDesarrollos.indexOf(desarrollo)}link href={"/desarrollos/" + desarrollo.nombre}>
                           {desarrollo.titulo}
                         </MDBDropdownItem>
                       );

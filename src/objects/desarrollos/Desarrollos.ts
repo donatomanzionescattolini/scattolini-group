@@ -74,6 +74,7 @@ import Hollywood from "../areas/Hollywood.tsx";
 import DaniaBeach from "../areas/DaniaBeach.tsx";
 import Atlantica from "./DaniaBeach/Atlantica.tsx";
 import Palma from "./MiamiBeach/Palma.tsx";
+import CoraMerrickPark from "./CoralGables/CoraMerrickPark.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -190,7 +191,7 @@ desarrolloMap.push({
     OnGrandville(),
   ]),
 });
-desarrolloMap.push({ area: CoralGables(), des: new Set([TheAvenue()]) });
+desarrolloMap.push({ area: CoralGables(), des: new Set([TheAvenue(), CoraMerrickPark]) });
 desarrolloMap.map((entry) => {
   entry.des = new Set(
     [...entry.des].map((desar) => {
