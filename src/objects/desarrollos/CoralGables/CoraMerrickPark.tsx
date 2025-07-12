@@ -103,4 +103,5 @@ CoraMerrickPark.numberOfFloors = 12;
 CoraMerrickPark.numberOfUnits = 74;
 CoraMerrickPark.añoDeConstrucciónOFinalización = 2028;
 CoraMerrickPark.numberOfRooms = "1 a 3";
+CoraMerrickPark.subtitulo=<p>Estilo Boutique<br/>de lujo y serenidad</p>;
 export default CoraMerrickPark;
