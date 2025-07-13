@@ -95,7 +95,7 @@ Baños principales para mejorar el bienestar</li>
       </ul>
     </>
 };
-CoraMerrickPark.numberOfImages = 19;
+CoraMerrickPark.numberOfImages = 45;
 CoraMerrickPark.introduccion = [
   "Cora Merrick Park es un condominio residencial de lujo. Su fachada presenta acentos clásicos de bronce, estuco texturizado y piedra oolita combinados con elegantes columnas tradicionales. Cora ofrece solo 12 pisos con 74 residencias súper exclusivas de 1 a 3 recámaras, con acabados espectaculares y apartamentos totalmente amueblados diseñados por el famoso Robot Urbano. Las comodidades de primera línea proporcionarán una piscina, gimnasio, sauna, sala club, centro de negocios, áreas sociales y mucho más. Los residentes de Cora están perfectamente conectados con las tiendas en Merrick Park, restaurantes al aire libre y opciones de bienestar.",
 ];

@@ -75,6 +75,7 @@ import DaniaBeach from "../areas/DaniaBeach.tsx";
 import Atlantica from "./DaniaBeach/Atlantica.tsx";
 import Palma from "./MiamiBeach/Palma.tsx";
 import CoraMerrickPark from "./CoralGables/CoraMerrickPark.tsx";
+import PompanoBeach from "../areas/PompanoBeach.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -86,6 +87,12 @@ export const desarrolloMap: desarrolloMapItem[] =
 desarrolloMap.push({
   area: Wynwood(),
   des: new Set([NomadResidences()])
+})
+
+
+desarrolloMap.push({
+  area: PompanoBeach,
+  des: new Set([])
 })
 
 desarrolloMap.push({

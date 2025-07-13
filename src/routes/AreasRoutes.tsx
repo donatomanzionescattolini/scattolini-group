@@ -23,6 +23,7 @@ import PembrokePinesComponent from "../components/areas/PembrokePinesComponent";
 import Hollywood from "../objects/areas/Hollywood";
 import HollyWoodComponent from "../components/areas/HollywoodComponent";
 import DaniaBeachComponent from "../components/areas/DaniaBeachComponent";
+import PompanoBeachComponent from "../components/areas/PompanoBeachComponent";
 
 export default function AreasRoutes() {
   return (
@@ -54,6 +55,7 @@ export default function AreasRoutes() {
         element={<FloridaCityComponent />}
         path="/areas/florida-city"
       ></Route>
+      <Route element={<PompanoBeachComponent/>} path={"/areas/pompano-beach"} />
       <Route element={<AventuraComponent />} path="/areas/aventura" />
       <Route element={<PembrokePinesComponent />} path="/areas/pembroke-pines" />
       <Route element={<WynwoodCoponent />} path="/areas/wynwood" />
