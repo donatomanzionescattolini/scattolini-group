@@ -16,6 +16,7 @@ import FtLauderdaleRoutes from "./desarrollos/FtLauderdaleRoutes";
 import WynwoodRoutes from "./desarrollos/WynwoodRoutes";
 import AventuraRoutes from "./desarrollos/AventuraRoutes";
 import DaniaBeachRoutes from "./desarrollos/DaniaBeachRoutes";
+import PompanoBeachRoutes from "./desarrollos/PompanoBeachRoutes";
 
 export default function DesarrollosRoutes() {
   
@@ -39,6 +40,7 @@ export default function DesarrollosRoutes() {
       {WynwoodRoutes()}
       {AventuraRoutes()}
       {DaniaBeachRoutes()}
+      {PompanoBeachRoutes()}
     </React.Fragment>
   );
 }

@@ -76,6 +76,7 @@ import Atlantica from "./DaniaBeach/Atlantica.tsx";
 import Palma from "./MiamiBeach/Palma.tsx";
 import CoraMerrickPark from "./CoralGables/CoraMerrickPark.tsx";
 import PompanoBeach from "../areas/PompanoBeach.tsx";
+import WPompanoBeach from "./PompanoBeach/WPompanoBeach.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -92,7 +93,7 @@ desarrolloMap.push({
 
 desarrolloMap.push({
   area: PompanoBeach,
-  des: new Set([])
+  des: new Set([WPompanoBeach])
 })
 
 desarrolloMap.push({

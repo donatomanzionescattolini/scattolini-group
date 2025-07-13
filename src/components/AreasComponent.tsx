@@ -4,31 +4,9 @@ import React, { useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import Areas from "../objects/areas/Areas.tsx";
 import { desarrolloMap } from "../objects/desarrollos/Desarrollos.ts";
-import { Area } from "../models/areas/Area.tsx";
 
 const AreasComponent = function (): React.JSX.Element {
-  // const [returnColumns] = useState<JSX.Element[]>(
-  //     function () {
-  //         const temp: React.JSX.Element[] = new Array<React.JSX.Element>();
-  //
-  //         desarrolloMap.keys().forEach((areaObject): void => {
-  //             temp.push(
-  //                 <MDBCol className="col-3">
-  //                     <Card autoFocus className={" h-100 p-0 m-0"}>
-  //                         <Link to={`/areas/${areaObject.name}`}>
-  //                             <CardImg
-  //                                 className=""
-  //                                 src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject.name}/firstsection.webp`}
-  //                             />
-  //                         </Link>
-  //                     </Card>
-  //                 </MDBCol>
-  //             );
-  //         });
-  //
-  //         return temp;
-  //     }
-  // );
+ 
   return (
     <MDBContainer>
       <br />
