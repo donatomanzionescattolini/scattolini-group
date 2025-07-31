@@ -12,6 +12,10 @@ interface AreaProps {
 }
 
 export default function AreaTemplate(props: AreaProps) {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
    const [area] = useState(props.area);
 
     const nombre = area.name;

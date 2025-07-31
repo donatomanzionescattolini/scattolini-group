@@ -21,9 +21,12 @@ import Liderazgo from "./components/Liderazgo.tsx";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import AreasRoutes from "./routes/AreasRoutes.tsx";
 import DesarrollosRoutes from "./routes/DesarrollosRoutes.tsx";
+import { useLayoutEffect } from "react";
 
 export default function App() {
-
+  useLayoutEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <BrowserRouter>
       <Nav />
