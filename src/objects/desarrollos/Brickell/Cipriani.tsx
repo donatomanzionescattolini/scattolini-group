@@ -1,11 +1,11 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import Downtown from "../../areas/Downtown.tsx";
+import Brickell from "../../areas/Brickell.tsx";
 
 export default function Cipriani() {
     const CiprianiObject = new Desarrollo();
 
     CiprianiObject.banner = true;
-    CiprianiObject.area = Downtown();
+    CiprianiObject.area = Brickell();
 
     CiprianiObject.nombre = "cipriani";
     CiprianiObject.titulo = "Cipriani Residences";

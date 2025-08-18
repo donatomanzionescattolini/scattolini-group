@@ -4,14 +4,12 @@ import AstonMartinProject from "../../components/desarrollos/Downtown/AstonMarti
 import CasaBellaProject from "../../components/desarrollos/Downtown/CasaBellaProject";
 import WaldorfAstoriaProject from "../../components/desarrollos/Downtown/WaldorfAstoriaProject";
 import { W11Project } from "../../components/desarrollos/Downtown/W11Project";
-import { CiprianiProjec } from "../../components/desarrollos/Downtown/CiprianiProject";
 import TheElserProject from "../../components/desarrollos/Downtown/TheElserProject";
 import JemProject from "../../components/desarrollos/Downtown/JemProject";
 
-export default function () {
+export default function DowntownRoutes() {
   return (
     <React.Fragment>
-      {" "}
       <Route
         element={<AstonMartinProject />}
         path={"/desarrollos/aston-martin"}
@@ -23,7 +21,6 @@ export default function () {
         element={<WaldorfAstoriaProject />}
         path={"/desarrollos/waldorf-astoria"}
       />
-      <Route path="/desarrollos/cipriani" element={<CiprianiProjec />} />
       <Route path="/desarrollos/jem" element={<JemProject/>} />
     </React.Fragment>
   );

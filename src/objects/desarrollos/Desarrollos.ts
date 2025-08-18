@@ -36,7 +36,7 @@ import Vita from "./CoconutGrove/VitaObject.tsx";
 import TheAvenue from "./CoralGables/TheAvenue.tsx";
 import AstonMartin from "./Downtown/AstonMartin.tsx";
 import CasaBella from "./Downtown/CasaBella.tsx";
-import Cipriani from "./Downtown/Cipriani.tsx";
+import Cipriani from "./Brickell/Cipriani.tsx";
 import TheElser from "./Downtown/TheElser.tsx";
 import W11 from "./Downtown/W11.tsx";
 import WaldorfAstoria from "./Downtown/WaldorfAstoria.tsx";
@@ -61,9 +61,7 @@ import FloridaCity from "../areas/FloridaCity.tsx";
 import Jem from "./Downtown/Jem.tsx";
 import ElleResidences from "./Edgewater/ElleResidences.tsx";
 import SouthMiami from "../areas/SouthMiami.tsx";
-import SomiWalk from "./SouthMiami/SomiWalk.tsx";
 import FtLauderdale from "../areas/FtLauderdale.tsx";
-import NatiivoFtLauderdale from "./FtLauderdale/NattivoFtLauderdale.tsx";
 import MercedesBenzPlacesMiami from "./Brickell/MercedesBenzPlacesMiami.tsx";
 import _2200Brickell from "./Brickell/2200Brickell.tsx";
 import Wynwood from "../areas/Wynwood.tsx";
@@ -72,7 +70,6 @@ import Aventura from "../areas/Aventura.tsx";
 import PembrokePines from "../areas/PembrokePines.tsx";
 import Hollywood from "../areas/Hollywood.tsx";
 import DaniaBeach from "../areas/DaniaBeach.tsx";
-import Atlantica from "./DaniaBeach/Atlantica.tsx";
 import Palma from "./MiamiBeach/Palma.tsx";
 import CoraMerrickPark from "./CoralGables/CoraMerrickPark.tsx";
 import PompanoBeach from "../areas/PompanoBeach.tsx";
@@ -111,7 +108,7 @@ desarrolloMap.push({
 
 desarrolloMap.push({
   area: DaniaBeach(),
-  des: new Set([Atlantica()])
+  des: new Set([])
 
 })
 
@@ -129,6 +126,7 @@ desarrolloMap.push({
     FourteenTwentyEight(),
     Lofty(),
     Ora(),
+    Cipriani(),
     MercedesBenzPlacesMiami(),
     _2200Brickell()
   ]),
@@ -145,7 +143,6 @@ desarrolloMap.push({
   des: new Set([
     AstonMartin(),
     CasaBella(),
-    Cipriani(),
     TheElser(),
     W11(),
     WaldorfAstoria(),
@@ -155,7 +152,6 @@ desarrolloMap.push({
 desarrolloMap.push({
   area: SouthMiami(),
   des: new Set([
-    SomiWalk(),
   ]),
 });
 desarrolloMap.push({
@@ -188,7 +184,7 @@ desarrolloMap.push({
   area: FloridaCity(),
   des: new Set([Alba(), Oasis(), ParcVillas(), ParkSquare()]),
 });
-desarrolloMap.push({ area: FtLauderdale(), des: new Set([NatiivoFtLauderdale()]) });
+desarrolloMap.push({ area: FtLauderdale(), des: new Set([]) });
 desarrolloMap.push({
   area: Homestead(),
   des: new Set([

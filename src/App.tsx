@@ -5,8 +5,6 @@ import AreasComponent from "./components/AreasComponent.tsx";
 import "material-components-web/dist/material-components-web.css";
 import { Home } from "./Home";
 import Contacto from "./components/ContactoComponent.tsx";
-import "mdb-ui-kit/css/mdb.min.css";
-import "mdb-ui-kit/js/mdb.min.js";
 import "material-components-web/dist/material-components-web.js";
 import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
 import Equipo from "./components/AsociadosComponent.tsx";
