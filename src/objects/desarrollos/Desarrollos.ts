@@ -74,6 +74,7 @@ import Palma from "./MiamiBeach/Palma.tsx";
 import CoraMerrickPark from "./CoralGables/CoraMerrickPark.tsx";
 import PompanoBeach from "../areas/PompanoBeach.tsx";
 import WPompanoBeach from "./PompanoBeach/WPompanoBeach.tsx";
+import DomusBrickellCenter from "./Brickell/DomusBrickellCenter.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -121,6 +122,7 @@ desarrolloMap.push({
   area: Brickell(),
   des: new Set([
     BaccaratResidences(),
+    DomusBrickellCenter,
     Domus(),
     FourteenRiverDistrict(),
     FourteenTwentyEight(),
