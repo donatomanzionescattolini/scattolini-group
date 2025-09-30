@@ -54,7 +54,6 @@ import Pinecrest from "../areas/Pinecrest.tsx";
 import SunnyIsles from "../areas/SunnyIsles.tsx";
 import CoralGables from "../areas/CoralGables.tsx";
 import { Area } from "../../models/areas/Area.tsx";
-import Areas from "../areas/Areas.tsx";
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import OnGrandville from "./Homestead/OnGrandville.tsx";
 import FloridaCity from "../areas/FloridaCity.tsx";
@@ -75,6 +74,7 @@ import CoraMerrickPark from "./CoralGables/CoraMerrickPark.tsx";
 import PompanoBeach from "../areas/PompanoBeach.tsx";
 import WPompanoBeach from "./PompanoBeach/WPompanoBeach.tsx";
 import DomusBrickellCenter from "./Brickell/DomusBrickellCenter.tsx";
+import IconBeachResidences from "./Hollywood/IconBeachResidences.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -94,10 +94,7 @@ desarrolloMap.push({
   des: new Set([WPompanoBeach])
 })
 
-desarrolloMap.push({
-  area: Hollywood(),
-  des: new Set([])
-})
+
 desarrolloMap.push({ area: PembrokePines(), des: new Set([]) })
 desarrolloMap.push({
   area: Aventura(),
@@ -116,7 +113,7 @@ desarrolloMap.push({
 
 desarrolloMap.push({
   area: Hollywood(),
-  des: new Set()
+  des: new Set([IconBeachResidences])
 })
 desarrolloMap.push({
   area: Brickell(),
