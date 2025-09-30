@@ -6,7 +6,7 @@ IconBeachResidences.titulo = "Icon Beach Residences";
 IconBeachResidences.nombre = "icon-beach-residences";
 
 IconBeachResidences.introduccion = [
-  "EXTERIORRepresentación conceptual del artistaBienvenidos a Icon Beach Residences, un conjunto de residencias que incluyen desde una hasta tres habitaciones y representan un exquisito e innovador estilo de vida frente al mar, con impresionantes vistas al agua, amplios balcones, acceso a una marina y a una gama de servicios pensados para que la vida en casa sea más cómoda y placentera.",
+  "Bienvenidos a Icon Beach Residences, un conjunto de residencias que incluyen desde una hasta tres habitaciones y representan un exquisito e innovador estilo de vida frente al mar, con impresionantes vistas al agua, amplios balcones, acceso a una marina y a una gama de servicios pensados para que la vida en casa sea más cómoda y placentera.",
   "Situadas en un tranquilo enclave de la maravillosa y soleada costa de Hollywood, Icon Beach Residences reflejan una visión sofisticada e innovadora de la vida frente al mar, con extraordinarias vistas al océano Atlántico y a los canales de Hollywood Beach. Con una ubicación perfecta, entre la energía cosmopolita de Miami y la serena elegancia de Fort Lauderdale, las residencias ofrecen acceso a una marina y a un club de playa con todos los servicios, además de vistas a los paisajes marinos más espectaculares de Hollywood.",
 ];
 IconBeachResidences.area = Hollywood();
