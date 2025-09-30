@@ -90,20 +90,9 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         className=""
         style={{ height: "300px" }}
       >
-        <header className="mdc-banner d-flex row flex-nowrap overflow-none  justify-content-center h-100 m-0 p-0 responsive">
-          {banner && (
-            <div
-              id="banner"
-              className="p-0 m-0 well"
-              autoFocus
-              style={{
-                backgroundImage: `url("https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg")`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPositionX: "center",
-              }}
-            />
-          )}
+       <header className="h-auto m-0 p-0 responsive w-100 overflow-visible">
+          {banner && <img src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg`} width="100%" height="auto"/>}
+          
           {!banner && (
             <>
               <div
