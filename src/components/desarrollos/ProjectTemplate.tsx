@@ -88,7 +88,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         jumbotron
         id={"banner"}
         className=""
-        style={{ height: "300px" }}
+        style={{ height: "fit-content" }}
       >
        <header className="h-auto m-0 p-0 responsive w-100 overflow-visible">
           {banner && <img src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg`} width="100%" height="auto"/>}
