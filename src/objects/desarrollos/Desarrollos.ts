@@ -75,6 +75,7 @@ import PompanoBeach from "../areas/PompanoBeach.tsx";
 import WPompanoBeach from "./PompanoBeach/WPompanoBeach.tsx";
 import DomusBrickellCenter from "./Brickell/DomusBrickellCenter.tsx";
 import IconBeachResidences from "./Hollywood/IconBeachResidences.tsx";
+import DolceAndGabbanaResidences from "./Brickell/888BrickellDolceAndGabbanaResidences.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -127,7 +128,8 @@ desarrolloMap.push({
     Ora(),
     Cipriani(),
     MercedesBenzPlacesMiami(),
-    _2200Brickell()
+    _2200Brickell(),
+    DolceAndGabbanaResidences
   ]),
 });
 
