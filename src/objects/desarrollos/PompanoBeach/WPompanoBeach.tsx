@@ -26,7 +26,7 @@ WPompanoBeach.caracteristicas = {
     <dt>Año de finalización</dt>
     <dd>{WPompanoBeach.añoDeConstrucciónOFinalización}</dd>
     <dt>Habitaciones</dt>
-    <dd>{WPompanoBeach.numberOfRooms as string}</dd>
+    <dd>{WPompanoBeach.numberOfRooms}</dd>
   </dl>
   </>,
   residencias: (
@@ -64,7 +64,6 @@ WPompanoBeach.caracteristicas = {
     </>
   ),
   amenidades: (
-    <>
       <ul>
         <br />
         <dl>
@@ -112,7 +111,6 @@ WPompanoBeach.caracteristicas = {
         <li>Gran sala con almacenamiento individual de vinos</li>
         <li>Sala inteligente de paquetes y correo</li>
       </ul>
-    </>
   ),
 };
 WPompanoBeach.introduccion = [

@@ -76,6 +76,7 @@ import WPompanoBeach from "./PompanoBeach/WPompanoBeach.tsx";
 import DomusBrickellCenter from "./Brickell/DomusBrickellCenter.tsx";
 import IconBeachResidences from "./Hollywood/IconBeachResidences.tsx";
 import DolceAndGabbanaResidences from "./Brickell/888BrickellDolceAndGabbanaResidences.tsx";
+import EnvyResidence from "./PompanoBeach/EnvyResidence.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -92,7 +93,7 @@ desarrolloMap.push({
 
 desarrolloMap.push({
   area: PompanoBeach,
-  des: new Set([WPompanoBeach])
+  des: new Set([WPompanoBeach, EnvyResidence])
 })
 
 
