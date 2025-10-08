@@ -77,6 +77,7 @@ import DomusBrickellCenter from "./Brickell/DomusBrickellCenter.tsx";
 import IconBeachResidences from "./Hollywood/IconBeachResidences.tsx";
 import DolceAndGabbanaResidences from "./Brickell/888BrickellDolceAndGabbanaResidences.tsx";
 import EnvyResidence from "./PompanoBeach/EnvyResidence.tsx";
+import EdgeHouseResidences from "./Edgewater/EdgeHouseResidences.tsx";
 
 interface desarrolloMapItem {
   area: Area;
@@ -164,7 +165,8 @@ desarrolloMap.push({
     EditionResidences(),
     TheVilla(),
     VidaResidences(),
-    ElleResidences()
+    ElleResidences(),
+    EdgeHouseResidences
   ]),
 });
 
