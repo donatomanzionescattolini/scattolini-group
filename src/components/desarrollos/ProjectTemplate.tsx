@@ -478,6 +478,9 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">
+        <h2>Contáctanos Hoy</h2>
+        <br />
+        <br />
         {innerWidth <= 768 && (
           <MDBContainer>
             <ContactFormComponent projectName={titulo as string} />

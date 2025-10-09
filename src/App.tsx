@@ -20,6 +20,8 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 import AreasRoutes from "./routes/AreasRoutes.tsx";
 import DesarrollosRoutes from "./routes/DesarrollosRoutes.tsx";
 import { useLayoutEffect } from "react";
+import ContactFormComponent from "./components/ContactFormComponent.tsx";
+import ContactoComponent from "./components/ContactoComponent.tsx";
 
 export default function App() {
   useLayoutEffect(() => {
@@ -35,7 +37,7 @@ export default function App() {
         <Route element={<Home />} path="/" />
         <Route element={<AliadosComponent />} path="/aliados" />
         <Route element={<Liderazgo />} path="/liderazgo" />
-        <Route element={<Contacto />} path="/contacto" />
+        <Route element={<ContactoComponent />} path="/contacto" />
         <Route element={<DesarrollosTodos />} path={"/desarrollos"} />
         <Route element={<AreasComponent />} path="/areas" />
 
