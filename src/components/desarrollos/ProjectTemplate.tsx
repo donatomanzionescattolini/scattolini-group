@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SlideshowGalleryDesarrollo from "./SlideshowGalleryDesarrollo";
 import "@material/banner/dist/mdc.banner.min.css";
 
-import * as React from "react";
 import { JSX, ReactNode, useLayoutEffect, useState } from "react";
 import {
   MDBAccordion,
@@ -42,9 +41,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   const [banner] = useState(params.banner);
   const [subtitulo] = useState(params.subtitulo);
   const [introduccion] = useState(params.introduccion);
-  const [CaracteristicasAmenidades] = useState(
-    () => caract.amenidades
-  );
+  const [CaracteristicasAmenidades] = useState(() => caract.amenidades);
   const [CaracteristicasEdificio] = useState(() => caract.edificio);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   const [CaracteristicasResidencias] = useState(() => caract.residencias);
@@ -82,17 +79,23 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
   return (
     <>
-      <a id="top"></a>
-      <MDBContainer
-        fluid
-        jumbotron
-        id={"banner"}
-        className=""
-        style={{ height: "fit-content" }}
-      >
-       <header className="h-auto m-0 p-0 responsive w-100 overflow-visible">
-          {banner && <img src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg`} width="100%" height="auto"/>}
-          
+      <a id="top" href="#top">
+        <MDBContainer
+          fluid
+          jumbotron
+          id={"banner"}
+          className=""
+          style={{ height: "fit-content" }}
+        >
+          {banner && (
+            <img
+              src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg`}
+              width="100%"
+              height="auto"
+              alt={`Banner del proyecto ${titulo || nombre}`}
+            />
+          )}
+
           {!banner && (
             <>
               <div
@@ -126,8 +129,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               />
             </>
           )}
-        </header>
-      </MDBContainer>
+        </MDBContainer>
+      </a>
       <div className="skew-c"></div>
 
       <section className="colour-block">

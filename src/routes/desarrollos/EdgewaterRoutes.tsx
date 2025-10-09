@@ -5,7 +5,6 @@ import { TheEditionResidencesProject } from "../../components/desarrollos/Edgewa
 import VidaProject from "../../components/desarrollos/Edgewater/VidaProject";
 import AriaReserveProject from "../../components/desarrollos/Edgewater/AriaReserveProject";
 import MissoniBaiaProject from "../../components/desarrollos/Edgewater/MissoniBaiaProject";
-import ElleResidences from "../../objects/desarrollos/Edgewater/ElleResidences";
 import ElleResidencesProject from "../../components/desarrollos/Edgewater/ElleResidencesProject";
 import EdgeHouseProject from "../../components/desarrollos/Edgewater/EdgeHouseProject";
 
@@ -29,7 +28,10 @@ export default function EdgewaterRoutes() {
         element={<TheEditionResidencesProject />}
         path={"/desarrollos/edition-residences"}
       />
-      <Route element={<EdgeHouseProject />} path={"/desarrollos/edge-house-residences"} />
+      <Route
+        element={<EdgeHouseProject />}
+        path={"/desarrollos/edge-house-residences"}
+      />
       <Route element={<VidaProject />} path={"/desarrollos/vida"} />
     </React.Fragment>
   );
