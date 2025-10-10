@@ -78,6 +78,7 @@ import IconBeachResidences from "./Hollywood/IconBeachResidences.tsx";
 import DolceAndGabbanaResidences from "./Brickell/888BrickellDolceAndGabbanaResidences.tsx";
 import EnvyResidence from "./PompanoBeach/EnvyResidence.tsx";
 import EdgeHouseResidences from "./Edgewater/EdgeHouseResidences.tsx";
+import MidtownMiami from "../areas/MidtownMiami.tsx";
 
 interface DesarrolloMapItem {
   area: Area;
@@ -202,6 +203,8 @@ desarrolloMap.push({
   area: CoralGables(),
   des: new Set([TheAvenue(), CoraMerrickPark]),
 });
+
+desarrolloMap.push({area: MidtownMiami,des:new Set([])});
 desarrolloMap.forEach((entry) => {
   entry.des = new Set(
     [...entry.des].map((desar) => {
