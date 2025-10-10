@@ -53,28 +53,34 @@ export default function AreaTemplate(props: AreaProps) {
         <hr className="hr hr-blurry w-50 mx-auto" />
       </div>
       <MDBRow className="px-4">
-        <MDBCol md={1} sm={1}  className=""></MDBCol>
-        <MDBCol md={5} sm={10} className="py-5 px-3 d-flex flex-column justify-content-center align-items-start">
+        <MDBCol md={1} sm={1} className=""></MDBCol>
+        <MDBCol
+          md={5}
+          sm={10}
+          className="py-5 px-3 d-flex flex-column justify-content-center align-items-start"
+        >
           {area.descripcion.map((paragraph: string) => {
             return (
               <p
                 className={"text-muted mx-3"}
-                key={area.descripcion.indexOf(paragraph) + 1} style={{textIndent: "1.5em"}}
+                key={area.descripcion.indexOf(paragraph) + 1}
+                style={{ textIndent: "1.5em" }}
               >
-                  {paragraph}
-                  <br />
-                  <br />
+                {paragraph}
+                <br />
+                <br />
               </p>
             );
           })}
         </MDBCol>
-        <MDBCol md={5} sm={10}className="d-flex justify-content-center align-items-center">
-          <img
-            src={firstImage}
-            alt="BrickellComponent City Center"
-          />
+        <MDBCol
+          md={5}
+          sm={10}
+          className="d-flex justify-content-center align-items-center"
+        >
+          <img src={firstImage} alt={`Photo ${titulo} Introductory Section`} />
         </MDBCol>
-          <MDBCol className="" md={1} sm={1}></MDBCol>
+        <MDBCol className="" md={1} sm={1}></MDBCol>
       </MDBRow>
       <div className="city-firstcarousel">{images.map((image) => image)}</div>
       {/* <DividerFirstComponent /> */}
@@ -93,7 +99,11 @@ export default function AreaTemplate(props: AreaProps) {
                   <div
                     className="propiedades-img p-0 m-0"
                     style={{
-                      background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
+                      background:
+                        `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`
+                          .split("")
+                          .filter((x) => x == " ")
+                          .join(""),
                       backgroundSize: "cover",
                     }}
                   ></div>
