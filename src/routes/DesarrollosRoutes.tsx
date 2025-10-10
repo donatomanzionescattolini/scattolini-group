@@ -18,6 +18,7 @@ import AventuraRoutes from "./desarrollos/AventuraRoutes";
 import DaniaBeachRoutes from "./desarrollos/DaniaBeachRoutes";
 import PompanoBeachRoutes from "./desarrollos/PompanoBeachRoutes";
 import HollywoodRoutes from "./desarrollos/HollywoodRoutes";
+import MidtownMiamiRoutes from "./desarrollos/MidtownMiamiRoutes";
 
 export default function DesarrollosRoutes() {
   
@@ -39,6 +40,7 @@ export default function DesarrollosRoutes() {
       {SouthMiamiRoutes()}
       {FtLauderdaleRoutes()}
       {WynwoodRoutes()}
+      {MidtownMiamiRoutes()}
       {AventuraRoutes()}
       {DaniaBeachRoutes()}
       {PompanoBeachRoutes()}

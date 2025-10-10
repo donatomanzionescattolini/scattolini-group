@@ -21,6 +21,7 @@ import PembrokePinesComponent from "../components/areas/PembrokePinesComponent";
 import HollyWoodComponent from "../components/areas/HollywoodComponent";
 import DaniaBeachComponent from "../components/areas/DaniaBeachComponent";
 import PompanoBeachComponent from "../components/areas/PompanoBeachComponent";
+import MidtownMiamiProject from "../components/areas/MidtownMiamiProject";
 
 export default function AreasRoutes() {
   return (
@@ -47,18 +48,28 @@ export default function AreasRoutes() {
         element={<MiamiBeachComponent />}
         path="/areas/miami-beach"
       ></Route>
-      <Route element={<FtLauderdaleComponent />} path={"/areas/ft-lauderdale"} />
+      <Route
+        element={<FtLauderdaleComponent />}
+        path={"/areas/ft-lauderdale"}
+      />
       <Route
         element={<FloridaCityComponent />}
         path="/areas/florida-city"
       ></Route>
-      <Route element={<PompanoBeachComponent/>} path={"/areas/pompano-beach"} />
+      <Route
+        element={<PompanoBeachComponent />}
+        path={"/areas/pompano-beach"}
+      />
       <Route element={<AventuraComponent />} path="/areas/aventura" />
-      <Route element={<PembrokePinesComponent />} path="/areas/pembroke-pines" />
+      <Route
+        element={<PembrokePinesComponent />}
+        path="/areas/pembroke-pines"
+      />
       <Route element={<WynwoodCoponent />} path="/areas/wynwood" />
       <Route element={<AventuraComponent />} path="/areas/aventura" />
       <Route element={<HollyWoodComponent />} path="/areas/hollywood" />
       <Route element={<DaniaBeachComponent />} path="/areas/dania-beach" />
+      <Route element={<MidtownMiamiProject />} path="/areas/midtown-miami" />
     </React.Fragment>
   );
 }
