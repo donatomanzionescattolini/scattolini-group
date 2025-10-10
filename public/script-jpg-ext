@@ -1,0 +1,6 @@
+cd /path/to/your/images
+i=1
+for file in carousel-\(*\).webp; do
+  mv "$file" "carousel-$i.webp"
+  ((i++))
+done

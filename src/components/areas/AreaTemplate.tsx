@@ -94,7 +94,14 @@ export default function AreaTemplate(props: AreaProps) {
         <MDBRow>
           {[...areaDesarrollos.values()].map((desarrollo) => {
             return (
-              <MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
+              <MDBCol
+                key={[...areaDesarrollos].indexOf(desarrollo) + 1}
+                xs={12}
+                sm={12}
+                md={6}
+                lg={4}
+                xl={4}
+              >
                 <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                   <div
                     className="propiedades-img p-0 m-0"
