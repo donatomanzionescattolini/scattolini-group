@@ -1,15 +1,15 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import MidtownMiami from "../../areas/MidtownMiami";
 
-const JeanGeorgesTropicResidences = new Desarrollo(MidtownMiami);
-JeanGeorgesTropicResidences.nombre = "jean-georges-tropic-residences";
-JeanGeorgesTropicResidences.titulo = "Jean-Georges Tropic Residences";
-JeanGeorgesTropicResidences.area = MidtownMiami;
-JeanGeorgesTropicResidences.introduccion = ["Descubre Jean-Georges Tropic Residences, una joya arquitectónica en el corazón de Midtown Miami. Este exclusivo desarrollo residencial redefine el lujo contemporáneo con su diseño elegante y sofisticado, inspirado en la visión del renombrado chef Jean-Georges Vongerichten. Cada detalle ha sido cuidadosamente pensado para ofrecer un estilo de vida excepcional, desde sus amplias residencias con vistas panorámicas hasta sus amenidades de primer nivel que incluyen un gimnasio de última generación, piscina infinita y espacios sociales diseñados para la comodidad y el entretenimiento.","Ubicado estratégicamente en una de las zonas más vibrantes de Miami, Jean-Georges Tropic Residences ofrece acceso inmediato a una variedad de restaurantes, tiendas y opciones culturales. Vive la experiencia de Midtown Miami con su ambiente dinámico y cosmopolita, todo mientras disfrutas de la tranquilidad y privacidad que este desarrollo exclusivo proporciona. Jean-Georges Tropic Residences es más que un hogar; es un estilo de vida donde el lujo, la comodidad y la ubicación se unen para crear una experiencia residencial inigualable."];
-JeanGeorgesTropicResidences.slogan = "Luxury Living Redefined";
-JeanGeorgesTropicResidences.numberOfImages = 27;
-JeanGeorgesTropicResidences.direccion = "350 NE 24th St, Miami, FL 33137";
-JeanGeorgesTropicResidences.caracteristicas = {
+const JeanGeorgesMiamiTropicResidences = new Desarrollo(MidtownMiami);
+JeanGeorgesMiamiTropicResidences.nombre = "jean-georges-miami-tropic-residences";
+JeanGeorgesMiamiTropicResidences.titulo = "Jean-Georges Tropic Residences";
+JeanGeorgesMiamiTropicResidences.area = MidtownMiami;
+JeanGeorgesMiamiTropicResidences.introduccion = ["Descubre Jean-Georges Tropic Residences, una joya arquitectónica en el corazón de Midtown Miami. Este exclusivo desarrollo residencial redefine el lujo contemporáneo con su diseño elegante y sofisticado, inspirado en la visión del renombrado chef Jean-Georges Vongerichten. Cada detalle ha sido cuidadosamente pensado para ofrecer un estilo de vida excepcional, desde sus amplias residencias con vistas panorámicas hasta sus amenidades de primer nivel que incluyen un gimnasio de última generación, piscina infinita y espacios sociales diseñados para la comodidad y el entretenimiento.","Ubicado estratégicamente en una de las zonas más vibrantes de Miami, Jean-Georges Tropic Residences ofrece acceso inmediato a una variedad de restaurantes, tiendas y opciones culturales. Vive la experiencia de Midtown Miami con su ambiente dinámico y cosmopolita, todo mientras disfrutas de la tranquilidad y privacidad que este desarrollo exclusivo proporciona. Jean-Georges Tropic Residences es más que un hogar; es un estilo de vida donde el lujo, la comodidad y la ubicación se unen para crear una experiencia residencial inigualable."];
+JeanGeorgesMiamiTropicResidences.slogan = "Luxury Living Redefined";
+JeanGeorgesMiamiTropicResidences.numberOfImages = 27;
+JeanGeorgesMiamiTropicResidences.direccion = "350 NE 24th St, Miami, FL 33137";
+JeanGeorgesMiamiTropicResidences.caracteristicas = {
     edificio: (
         <>
             <dl>
@@ -62,10 +62,10 @@ JeanGeorgesTropicResidences.caracteristicas = {
     ),
 };
 
-JeanGeorgesTropicResidences.banner = true;
+JeanGeorgesMiamiTropicResidences.banner = true;
 
 
 
 
 
-export default JeanGeorgesTropicResidences;
+export default JeanGeorgesMiamiTropicResidences;

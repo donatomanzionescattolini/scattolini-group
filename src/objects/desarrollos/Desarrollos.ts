@@ -81,7 +81,7 @@ import EdgeHouseResidences from "./Edgewater/EdgeHouseResidences.tsx";
 import MidtownMiami from "../areas/MidtownMiami.tsx";
 import MidtownParkResidences from "./MidtownMiami/MidtownParkResidences.tsx";
 import TheStandardResidences from "./MidtownMiami/TheStandardResidences.tsx";
-import JeanGeorgesTropicResidences from "./MidtownMiami/JeanGeorgesTropicResidences.tsx";
+import JeanGeorgesMiamiTropicResidences from "./MidtownMiami/JeanGeorgesTropicResidences.tsx";
 
 interface DesarrolloMapItem {
   area: Area;
@@ -207,7 +207,7 @@ desarrolloMap.push({
   des: new Set([TheAvenue(), CoraMerrickPark]),
 });
 
-desarrolloMap.push({area: MidtownMiami,des:new Set([MidtownParkResidences,TheStandardResidences,JeanGeorgesTropicResidences])});
+desarrolloMap.push({area: MidtownMiami,des:new Set([MidtownParkResidences,TheStandardResidences,JeanGeorgesMiamiTropicResidences])});
 desarrolloMap.forEach((entry) => {
   entry.des = new Set(
     [...entry.des].map((desar) => {
