@@ -103,7 +103,7 @@ TheStandardResidences.caracteristicas = {
     </>
   ),
 };
-TheStandardResidences.slogan = "";
+TheStandardResidences.slogan = "Un estándar superior";
 TheStandardResidences.banner = true;
 
 export default TheStandardResidences;
