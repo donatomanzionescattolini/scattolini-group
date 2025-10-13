@@ -81,7 +81,7 @@ import EdgeHouseResidences from "./Edgewater/EdgeHouseResidences.tsx";
 import MidtownMiami from "../areas/MidtownMiami.tsx";
 import MidtownParkResidences from "./MidtownMiami/MidtownParkResidences.tsx";
 import TheStandardResidences from "./MidtownMiami/TheStandardResidences.tsx";
-import JeanGeorgesMiamiTropicResidences from "./MidtownMiami/JeanGeorgesTropicResidences.tsx";
+import JeanGeorgesMiamiTropicResidences from "./MidtownMiami/JeanGeorgesMiamiTropicResidences.tsx";
 
 interface DesarrolloMapItem {
   area: Area;
