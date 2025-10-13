@@ -15,6 +15,7 @@ JeanGeorgesMiamiTropicResidences.introduccion = [
   "Descubre Jean-Georges Tropic Residences, una joya arquitectónica en el corazón de Midtown Miami. Este exclusivo desarrollo residencial redefine el lujo contemporáneo con su diseño elegante y sofisticado, inspirado en la visión del renombrado chef Jean-Georges Vongerichten. Cada detalle ha sido cuidadosamente pensado para ofrecer un estilo de vida excepcional, desde sus amplias residencias con vistas panorámicas hasta sus amenidades de primer nivel que incluyen un gimnasio de última generación, piscina infinita y espacios sociales diseñados para la comodidad y el entretenimiento.",
   "Ubicado estratégicamente en una de las zonas más vibrantes de Miami, Jean-Georges Tropic Residences ofrece acceso inmediato a una variedad de restaurantes, tiendas y opciones culturales. Vive la experiencia de Midtown Miami con su ambiente dinámico y cosmopolita, todo mientras disfrutas de la tranquilidad y privacidad que este desarrollo exclusivo proporciona. Jean-Georges Tropic Residences es más que un hogar; es un estilo de vida donde el lujo, la comodidad y la ubicación se unen para crear una experiencia residencial inigualable.",
 ];
+JeanGeorgesMiamiTropicResidences.numberOfImages  = 30;
 JeanGeorgesMiamiTropicResidences.caracteristicas = {
   edificio: (
     <>
