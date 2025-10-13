@@ -72,7 +72,7 @@ export default function BentleyResidences() {
         ></iframe>
     ;
     BentleyResidencesObject.titulo = "Bentley Residences";
-    BentleyResidencesObject.subtitulo = "Espacio que puedes abrazar";
+    BentleyResidencesObject.slogan = "Espacio que puedes abrazar";
     BentleyResidencesObject.numberOfImages = 47;
     BentleyResidencesObject.banner = true;
     BentleyResidencesObject.area = SunnyIsles();

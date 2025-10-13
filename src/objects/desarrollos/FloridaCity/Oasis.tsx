@@ -5,7 +5,7 @@ export default function Oasis() {
   const OasisObject = new Desarrollo();
   OasisObject.nombre = "oasis";
   OasisObject.titulo = "Oasis";
-  OasisObject.subtitulo = "";
+  OasisObject.slogan = "";
   OasisObject.caracteristicas = {
     edificio: <></>,
     residencias: <></>,

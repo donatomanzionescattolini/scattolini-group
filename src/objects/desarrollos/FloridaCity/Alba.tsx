@@ -14,7 +14,7 @@ export default function Alba() {
     "En Onx Homes, nos enorgullecemos de nuestro estándar, que incluye características de construcción X+ de™ vanguardia, cimientos completamente de concreto, ventanas y puertas a prueba de impactos de huracanes, elegantes encimeras de cuarzo, electrodomésticos de bajo consumo y lujosos pisos de baldosas de porcelana. Nuestro compromiso con estos elementos garantiza que su hogar no solo sea hermoso, sino que también esté construido para resistir los elementos.",
   ];
   AlbaObject.titulo = "On Alba";
-  AlbaObject.subtitulo = "Una nueva era de hogares y vecindarios";
+  AlbaObject.slogan = "Una nueva era de hogares y vecindarios";
 
   AlbaObject.numberOfBathrooms = { start: 3, end: 4.5 };
   AlbaObject.numberOfUnits = 137;

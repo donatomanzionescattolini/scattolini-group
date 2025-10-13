@@ -160,7 +160,7 @@ export default function AriaReserve() {
 //       allowFullScreen
 //     ></iframe>
 //   }
-    AriaReserveObject.subtitulo = " ";
+    AriaReserveObject.slogan = " ";
     AriaReserveObject.numberOfImages = 59;
     AriaReserveObject.banner = true;
     AriaReserveObject.area = Edgewater();

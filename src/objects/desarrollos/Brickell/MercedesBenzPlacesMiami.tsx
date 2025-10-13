@@ -6,7 +6,7 @@ export default function MercedesBenzPlacesMiami() {
   const MercedesBenzPlacesObject = new Desarrollo(Brickell());
   MercedesBenzPlacesObject.area = Brickell();
   MercedesBenzPlacesObject.titulo = "Mercedes-Benz Places Miami";
-  MercedesBenzPlacesObject.subtitulo = "Miami, Living, Elevated";
+  MercedesBenzPlacesObject.slogan = "Miami, Living, Elevated";
   MercedesBenzPlacesObject.caracteristicas = {
     edificio: <><ul><li>Pisos: 64</li><li>Residencias: 791</li><li>Ubicación: 1133 SW 2nd Ave, Miami, FL 3313</li></ul></>,
     residencias: <><ul>

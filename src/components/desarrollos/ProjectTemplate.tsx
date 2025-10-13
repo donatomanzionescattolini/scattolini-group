@@ -39,7 +39,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   const [caract] = useState(params.caracteristicas as caracteristicas);
   const [titulo] = useState(params.titulo);
   const [banner] = useState(params.banner);
-  const [subtitulo] = useState(params.subtitulo);
+  const [subtitulo] = useState(params.slogan);
   const [introduccion] = useState(params.introduccion);
   const [CaracteristicasAmenidades] = useState(() => caract.amenidades);
   const [CaracteristicasEdificio] = useState(() => caract.edificio);

@@ -78,7 +78,7 @@ export default function ShomaBay() {
     ShomaBayObject.banner = true;
     ShomaBayObject.area = NorthBayVillage();
     ShomaBayObject.titulo = "Shoma Bay";
-    ShomaBayObject.subtitulo = "";
+    ShomaBayObject.slogan = "";
     ShomaBayObject.numberOfImages = 16;
     ShomaBayObject.video =
         <div className="d-flex flex-row p-0 m-0 h-100 embed-responsive justify-content-center">

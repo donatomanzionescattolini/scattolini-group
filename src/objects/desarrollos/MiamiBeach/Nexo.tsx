@@ -5,7 +5,7 @@ export default function Nexo() {
     const NexoObject = new Desarrollo();
     NexoObject.nombre = "nexo";
     NexoObject.titulo = "Nexo";
-    NexoObject.subtitulo = "Bienvenido a la vida conectada.";
+    NexoObject.slogan = "Bienvenido a la vida conectada.";
     NexoObject.banner = true;
     NexoObject.area = MiamiBeach();
     NexoObject.añoDeConstrucciónOFinalización=2025;

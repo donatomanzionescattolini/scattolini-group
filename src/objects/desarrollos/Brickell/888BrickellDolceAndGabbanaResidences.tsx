@@ -3,7 +3,7 @@ import Brickell from "../../areas/Brickell";
 
 const DolceAndGabbanaResidences = new Desarrollo(Brickell());
 DolceAndGabbanaResidences.titulo = "888 Brickell Dolce & Gabbana Residences";
-DolceAndGabbanaResidences.subtitulo = "Para Los Nuevos Románticos";
+DolceAndGabbanaResidences.slogan = "Para Los Nuevos Románticos";
 DolceAndGabbanaResidences.nombre = "888-brickell-dolce-and-gabbana-residences";
 
 DolceAndGabbanaResidences.introduccion = [

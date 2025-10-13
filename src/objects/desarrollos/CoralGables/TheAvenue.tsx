@@ -99,7 +99,7 @@ export default function TheAvenue() {
         'Todos los partidos. Todos los acabados. Cada mueble. The Avenue es lo que significa estar verdaderamente "listo para mudarse".',
     ];
     TheAvenueObject.titulo = "The Avenue";
-    TheAvenueObject.subtitulo = "La esencia de la avenida Coral Gables";
+    TheAvenueObject.slogan = "La esencia de la avenida Coral Gables";
     TheAvenueObject.numberOfImages = 27;
     TheAvenueObject.banner = true;
     TheAvenueObject.area = CoralGables();

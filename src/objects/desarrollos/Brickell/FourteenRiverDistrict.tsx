@@ -98,7 +98,7 @@ export default function FourteenRiverDistrict() {
         "A pocos pasos de la orilla del río y a minutos de la Bahía de Biscayne en barco, río El Distrito 14 ofrece un estilo de vida completo con todas las comodidades necesarias en las cercanías, incluidos restaurantes, tiendas, parques y taxis acuáticos.",
     ];
     FourteenRiverDistrictObject.titulo = "14 River District";
-    FourteenRiverDistrictObject.subtitulo = "";
+    FourteenRiverDistrictObject.slogan = "";
     FourteenRiverDistrictObject.numberOfImages = 27;
     FourteenRiverDistrictObject.direccion = "1420 NW 14th Ave, Miami, FL 33125, Estados Unidos"
     return FourteenRiverDistrictObject;

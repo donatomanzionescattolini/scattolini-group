@@ -9,7 +9,7 @@ export default function Cipriani() {
 
     CiprianiObject.nombre = "cipriani";
     CiprianiObject.titulo = "Cipriani Residences";
-    CiprianiObject.subtitulo = "";
+    CiprianiObject.slogan = "";
     CiprianiObject.numberOfImages = 14;
     CiprianiObject.introduccion = [
         "\n" +

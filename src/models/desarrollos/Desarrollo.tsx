@@ -28,7 +28,7 @@ class Desarrollo {
 
   public titulo: string | JSX.Element;
 
-  public subtitulo: string | JSX.Element;
+  public slogan: string | JSX.Element;
 
   public amenidades?: string[] | Map<string, string[]>;
   public banner?: boolean;

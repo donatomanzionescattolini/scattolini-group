@@ -13,7 +13,7 @@ export default function Jem() {
     Jem.numberOfRooms = {start:1,end:4};
     Jem.añoDeConstrucciónOFinalización = 2027;
  
-    Jem.subtitulo = "La Joya de Miami";
+    Jem.slogan = "La Joya de Miami";
     Jem.introduccion = ["Concebido como una audaz declaración arquitectónica que redefine el horizonte, JEM ofrece una experiencia de vida singular—donde cada detalle es cuidadosamente diseñado y ejecutado impecablemente por Naftali Group. Desde la llegada a través del bucólico ‘porte-cochère’ privado hasta la icónica piscina infinita en el exclusivo JEM Club, la colección de residencias privadas tiene en cuenta cada matiz de un estilo de vida global contemporáneo dentro del próximo vecindario ‘it’ de Miami."];
     Jem.area = Downtown();
     Jem.ubicación = '110 NE 10th St, Miami, FL 33132';

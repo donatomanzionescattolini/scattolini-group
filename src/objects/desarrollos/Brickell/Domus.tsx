@@ -75,7 +75,7 @@ export default function Domus() {
                 frameBorder={0} allowFullScreen/>
     ;
     Domus.titulo = "Domus FLATS";
-    Domus.subtitulo = "";
+    Domus.slogan = "";
     Domus.numberOfImages = 7;
     return Domus;
 }

@@ -195,7 +195,7 @@ export default function AstonMartin() {
         "Situado en una de las últimas parcelas de la propiedad frente al mar de Miami en desarrollarse, Aston Martin Residences es una sinfonía de vidrio curvilíneo y acero, que se eleva 66 pisos hacia el cielo. "]
     ;
     AstonMartinObject.titulo = "Aston Martin Residences";
-    AstonMartinObject.subtitulo = "";
+    AstonMartinObject.slogan = "";
     AstonMartinObject.numberOfImages = 29;
     return AstonMartinObject;
 }

@@ -260,7 +260,7 @@ export default function MissoniBaia() {
         "Con un diseño vanguardista y de alto rendimiento, realizado por la prestigiosa firma internacional, Asymptote Architecture, los nuevos y lujosos condominios en Edgewater de Missoni Baia capturan el espíritu innovador y soñador de Missoni. Missoni Baia es como ninguna otra torre residencial en Miami.",
     ];
     MissoniBaiaObject.titulo = "Missoni Baia";
-    MissoniBaiaObject.subtitulo = "";
+    MissoniBaiaObject.slogan = "";
     MissoniBaiaObject.numberOfImages = 51;
     MissoniBaiaObject.banner = true;
     MissoniBaiaObject.area = Edgewater();

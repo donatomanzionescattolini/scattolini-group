@@ -5,7 +5,7 @@ export default function ParkSquare() {
   const ParkSquareObject = new Desarrollo();
   ParkSquareObject.nombre = "park-square";
   ParkSquareObject.titulo = "Park Square";
-  ParkSquareObject.subtitulo = "";
+  ParkSquareObject.slogan = "";
   ParkSquareObject.caracteristicas = {
     edificio: <></>,
     residencias: <></>,

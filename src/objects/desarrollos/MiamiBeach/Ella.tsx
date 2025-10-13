@@ -22,7 +22,7 @@ export default function Ella() {
     EllaObject.banner = true;
     EllaObject.area = MiamiBeach();
     EllaObject.constructora=new Constructora("Constellation");
-    EllaObject.subtitulo="Un Tributo Al Glamuroso Pasado De Miami Beach";
+    EllaObject.slogan="Un Tributo Al Glamuroso Pasado De Miami Beach";
     EllaObject.numberOfImages = 21;
     EllaObject.video = <iframe width="555" height="500" className="object-fit-cover" src="https://www.youtube.com/embed/mIbAaxXmKTI?autoplay=1"  title="Ella Miami Beach - Airbnb boutique"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>;
     return EllaObject;

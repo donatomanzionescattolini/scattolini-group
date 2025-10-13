@@ -5,7 +5,7 @@ export default function ParcVillas() {
   const ParcVillasObject = new Desarrollo();
   ParcVillasObject.nombre = "parc-villas";
   ParcVillasObject.titulo = "Parc Villas";
-  ParcVillasObject.subtitulo = "";
+  ParcVillasObject.slogan = "";
   ParcVillasObject.caracteristicas = {
     edificio: <></>,
     residencias: <></>,

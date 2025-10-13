@@ -9,7 +9,7 @@ export default function W11() {
     W11Object.nombre = "w11";
     W11Object.numberOfImages = 12;
     W11Object.titulo = "West Eleventh Residences";
-    W11Object.subtitulo = "Lleva la vida a una nueva dirección nunca antes imaginada";
+    W11Object.slogan = "Lleva la vida a una nueva dirección nunca antes imaginada";
     W11Object.introduccion = [
         "La vida moderna está en perpetuo movimiento. Siempre estamos encendidos la mudanza. Las residencias en West Eleventh fueron creadas con esa noción en mente. Una experiencia con verdadera flexibilidad de vida para dueños",
 

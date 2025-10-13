@@ -164,7 +164,7 @@ export default function Ora() {
           </span>
         </>;
 
-    OraObject.subtitulo = "Residencias con Alma en el Corazón de Miami";
+    OraObject.slogan = "Residencias con Alma en el Corazón de Miami";
     OraObject.numberOfImages = 14;
     OraObject.video =
         <iframe

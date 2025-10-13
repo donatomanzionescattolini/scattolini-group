@@ -117,7 +117,7 @@ export default function Centris() {
         "Presentamos CentrisObject, una comunidad de casas adosadas y propiedades de lujo nuevas a la venta en Miami, FL. CentrisObject está idealmente ubicado en SW 120th Street y 82nd Avenue, cerca de Pinecrest y The Falls, con fácil acceso a las playas y al centro de Miami. En CentrisObject, los residentes disfrutarán de entrada con acceso controlado para vehículos, un pabellón con piscina, área de juegos infantiles y un parque en el corazón de la comunidad, y cada casa está equipada con accesorios y acabados de lujo, todo sin costo adicional.",
     ];
     CentrisObject.titulo = "Centris";
-    CentrisObject.subtitulo = "";
+    CentrisObject.slogan = "";
     CentrisObject.numberOfImages = 36;
     return CentrisObject;
 }

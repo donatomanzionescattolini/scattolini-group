@@ -96,7 +96,7 @@ export default function EditionResidences() {
         'Para una transición perfecta hacia un hogar confortable, Schrager presenta el concepto de "Prêt-à-Porter residencial", que ofrece residencias en perfectas condiciones para entrar a vivir. Se encuentran disponibles paquetes de muebles personalizados diseñados exclusivamente por John Pawson y el equipo de diseño de Ian Schrager con todo lo que uno necesita en un hogar, incluida ropa de cama, platos y utensilios de cocina, todos preseleccionados, desempacados y guardados antes de su llegada. Schrager continúa superando las expectativas al reconocer lo que los residentes quieren y necesitan antes de que ellos mismos se den cuenta: una casa sin trabajo, ideal para vivir en un centro turístico.',
     ];
     TheEditionResidencesObject.titulo = "Edition Residences";
-    TheEditionResidencesObject.subtitulo = "Un desarrollo exclusivo en Miami Beach";
+    TheEditionResidencesObject.slogan = "Un desarrollo exclusivo en Miami Beach";
     TheEditionResidencesObject.numberOfImages = 29;
     return TheEditionResidencesObject;
 }

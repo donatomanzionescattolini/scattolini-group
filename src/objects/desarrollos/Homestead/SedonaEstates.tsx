@@ -4,7 +4,7 @@ export default function SedonaEstates() {
     const SedonaEstates = {} as Desarrollo;
     SedonaEstates.nombre = "sedona-estates";
     SedonaEstates.titulo = "Sedona Estates";
-    SedonaEstates.subtitulo = "";
+    SedonaEstates.slogan = "";
     SedonaEstates.caracteristicas = {edificio: <></>, residencias: <></>, amenidades: <></>};
 
     SedonaEstates.introduccion = [];

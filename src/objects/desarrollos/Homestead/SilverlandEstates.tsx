@@ -5,7 +5,7 @@ export default function SilverlandEstates() {
     const SilverlandEstates = new Desarrollo();
     SilverlandEstates.nombre = "silverland-estates";
     SilverlandEstates.titulo = "Silverland Estates";
-    SilverlandEstates.subtitulo = "";
+    SilverlandEstates.slogan = "";
     SilverlandEstates.caracteristicas = {edificio: <></>, residencias: <></>, amenidades: <></>};
 
     SilverlandEstates.introduccion = [];

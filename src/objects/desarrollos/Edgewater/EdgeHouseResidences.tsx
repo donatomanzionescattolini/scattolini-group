@@ -9,7 +9,7 @@ EdgeHouseResidences.introduccion = [
   "Cada residencia dentro de Edge House Miami está meticulosamente diseñada con atención al detalle, con pisos terminados, cocinas gourmet con electrodomésticos de estilo europeo y balcones que ofrecen impresionantes vistas del paisaje urbano. Con su combinación de diseño moderno, comodidades incomparables y ubicación privilegiada, Edge House Miami personifica el pináculo de la vida de lujo urbano en la dinámica ciudad de Miami. Barrio de Edgewater.",
 ];
 EdgeHouseResidences.banner = true;
-EdgeHouseResidences.subtitulo = "Tuyo Para Disfrutar, Tuyo Para Compartir";
+EdgeHouseResidences.slogan = "Tuyo Para Disfrutar, Tuyo Para Compartir";
 EdgeHouseResidences.numberOfImages = 44;
 EdgeHouseResidences.direccion = "1825 NE 4TH Avenue, Miami, FL 33132";
 EdgeHouseResidences.numberOfFloors = 57;

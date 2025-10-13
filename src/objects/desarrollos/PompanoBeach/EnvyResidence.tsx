@@ -10,7 +10,7 @@ EnvyResidence.numberOfImages = 72;
 EnvyResidence.introduccion = [
   "Envy Residences combina la vibra moderno y ubicación estratégica. Construido en 2021, ofrece 214 unidades desde estudios hasta apartamentos de 3 habitaciones. Disfruta de amenidades de primera clase, como piscina estilo resort, gimnasio con pared de escalar, mini golf y áreas sociales. A solo 1.8 millas de la playa y con restricciones de alquiler flexibles, Envy es perfecto para vivir o invertir.",
 ];
-EnvyResidence.subtitulo = "Vive más allá de lo ordinario.";
+EnvyResidence.slogan = "Vive más allá de lo ordinario.";
 EnvyResidence.direccion = "475 SE 1st St, Pompano Beach, FL 33060";
 EnvyResidence.ubicación = "475 SE 1st St, Pompano Beach, FL 33060";
 EnvyResidence.caracteristicas = {

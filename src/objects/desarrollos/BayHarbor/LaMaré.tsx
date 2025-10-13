@@ -84,7 +84,7 @@ export default function LaMaré() {
         "La Maré se compone de dos exquisitas torres que ofrecen una experiencia de vida extraordinaria. El Regency Collection es un moderno edificio de cristal definido por su sorprendente belleza, sostenibilidad y refinada sensación de comodidad, con un interior en el que destaca una paleta suave y natural. La Signature Collection, por su parte, es una estructura contemporánea de impresionante diseño con interiores armoniosos.Aquí, la exclusividad es la norma, ya que cada unidad cuenta con ventanas envolventes de suelo a techo que brindan una vista clara de su impresionante estética náutica.Con componentes aerodinámicos, elementos tropicales y el generoso uso de piedra color arena, travertino y maderas aclaradas, los residentes disfrutan de privacidad y se ven envueltos en una atmósfera estilo resort",
     ];
     LaMaréObject.titulo = "La Maré";
-    LaMaréObject.subtitulo = <p>Bay Harbor Islands<br/><small><em>Espacio y comodidad reinventados</em></small></p>;
+    LaMaréObject.slogan = <p>Bay Harbor Islands<br/><small><em>Espacio y comodidad reinventados</em></small></p>;
     LaMaréObject.numberOfImages = 24;
     LaMaréObject.banner = true;
 

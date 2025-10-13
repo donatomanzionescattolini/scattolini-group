@@ -94,7 +94,7 @@ export default function TheElse() {
     TheElserObject.banner = true;
     TheElserObject.area = Downtown();
     TheElserObject.titulo = "The Elser Residences";
-    TheElserObject.subtitulo = "Lugar bullicioso y vistas brillantes de la bahía de Biscayne";
+    TheElserObject.slogan = "Lugar bullicioso y vistas brillantes de la bahía de Biscayne";
     TheElserObject.numberOfImages = 44;
     TheElserObject.video =
         <iframe

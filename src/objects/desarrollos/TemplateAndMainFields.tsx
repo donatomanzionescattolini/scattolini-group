@@ -20,7 +20,7 @@ export default function TemplateAndMainFields() {
     ProjectObject.numberOfUnits = 0;
     ProjectObject.typeOfUnits = "";
     ProjectObject.numberOfFloors = 0;
-    ProjectObject.subtitulo="";
+    ProjectObject.slogan="";
     ProjectObject.banner = true;
   return ProjectObject;
 }

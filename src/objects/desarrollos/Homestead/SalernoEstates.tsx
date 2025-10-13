@@ -5,7 +5,7 @@ export default function SalernoEstates() {
   const SalernoEstates = new Desarrollo();
   SalernoEstates.nombre = "salerno-estates";
   SalernoEstates.titulo = "Salerno Estates";
-  SalernoEstates.subtitulo = "";
+  SalernoEstates.slogan = "";
   SalernoEstates.area = Homestead();
   SalernoEstates.caracteristicas = {
     edificio: <></>,

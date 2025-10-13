@@ -99,7 +99,7 @@ export default function CasaBella() {
     ];
     CasaBellaObject.titulo = "Casa Bella Residences";
     CasaBellaObject.direccion = "";
-    CasaBellaObject.subtitulo = "Bienvenido a la cima de la sofisticada vida italiana";
+    CasaBellaObject.slogan = "Bienvenido a la cima de la sofisticada vida italiana";
     CasaBellaObject.numberOfImages = 16;
 
     return CasaBellaObject;
