@@ -5,7 +5,7 @@ const MidtownParkResidences = new Desarrollo(MidtownMiami);
 MidtownParkResidences.titulo = "Midtown Park Residences";
 MidtownParkResidences.nombre = "midtown-park-residences";
 MidtownParkResidences.introduccion = [""];
-MidtownParkResidences.slogan = "Vive en el Corazón de Midtown Miami";
-MidtownParkResidences.numberOfImages = 20;
+MidtownParkResidences.slogan = "El mejor lugar para estar es ahora es el mejor lugar para vivir";
+MidtownParkResidences.numberOfImages = 25;
 
 export default MidtownParkResidences;
