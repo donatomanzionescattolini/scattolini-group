@@ -4,7 +4,7 @@ import MidtownMiami from "../../areas/MidtownMiami";
 const TheStandardResidences = new Desarrollo(MidtownMiami);
 TheStandardResidences.area = MidtownMiami;
 TheStandardResidences.titulo = "The Standard Residences";
-TheStandardResidences.nombre = "thestandardresidences";
+TheStandardResidences.nombre = "the-standard-residences";
 TheStandardResidences.introduccion = [
   "The Standard Residences cuenta con 12 pisos, con 228 residencias que van desde estudios hasta configuraciones de 2 dormitorios. Este es el primer proyecto residencial de la famosa marca de hoteles, The Standard. Todas las ubicaciones tienen que ver con el ambiente y la experiencia... Disfruta del ambiente y la cultura únicos de la marca como nunca antes. Las comodidades incluyen Internet de alta velocidad, amplio vestíbulo, spa para mascotas, terraza en la azotea con piscina y cabañas, sala de proyección privada, piso social, gimnasio, espacios de trabajo conjunto y más. Las residencias estándar Midtown Miami están a pasos de todo; Midtown es el vecindario más amigable para los peatones de Miami, conectado con el Design District en el norte y Wynwood en el sur. Este increíble condominio no solo fue diseñado por la galardonada firma Arquitectonica, sino que también ofrece increíbles vistas de la ciudad.",
 ];
