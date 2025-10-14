@@ -91,7 +91,7 @@ export default function ContactFormComponent() {
   return (
     <>
       <div className="d-flex flex-row justify-content-center ">
-        <form onSubmit={onSubmit} action="#top" className=" flex-column  ">
+        <form onSubmit={onSubmit} action="#top" className=" flex-column  my-5">
           <MDBInput
             id="form4Example1"
             wrapperClass="mb-4"
