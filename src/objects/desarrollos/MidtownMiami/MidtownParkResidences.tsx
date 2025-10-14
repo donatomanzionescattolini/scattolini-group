@@ -29,16 +29,6 @@ MidtownParkResidences.caracteristicas = {
         <dd>{MidtownParkResidences.numberOfUnits}</dd>
         <dt>Tipo de unidades</dt>
         <dd>{MidtownParkResidences.typeOfUnits}</dd>
-        <dt>Numero de cuartos</dt>
-
-        <dd>
-          {typeof MidtownParkResidences.numberOfRooms === "number" ||
-          typeof MidtownParkResidences.numberOfRooms === "string"
-            ? MidtownParkResidences.numberOfRooms
-            : MidtownParkResidences.numberOfRooms["start"] +
-              " a " +
-              MidtownParkResidences.numberOfRooms["end"]}
-        </dd>
       </dl>
     </>
   ),
