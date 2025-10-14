@@ -483,7 +483,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         <br />
         {innerWidth <= 768 && (
           <MDBContainer>
-            <ContactFormComponent projectName={titulo as string} />
+            <ContactFormComponent />
           </MDBContainer>
         )}
         {innerWidth > 768 && (
@@ -491,7 +491,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             fluid
             className="d-flex justify-content-center w-100 p-0 m-0"
           >
-            <ContactFormComponent projectName={titulo as string} />
+            <ContactFormComponent  />
           </MDBContainer>
         )}
       </section>

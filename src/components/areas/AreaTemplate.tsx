@@ -1,6 +1,6 @@
 import { Image } from "react-bootstrap";
-import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
-import React, { useLayoutEffect, useState } from "react";
+import { MDBCol, MDBRow } from "mdb-react-ui-kit";
+import { useLayoutEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
@@ -15,7 +15,6 @@ export default function AreaTemplate(props: AreaProps) {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   const [area] = useState(props.area);
 
   const nombre = area.name;
