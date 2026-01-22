@@ -9,6 +9,7 @@ import FourteenRiverDistrictProject from "../../components/desarrollos/Brickell/
 import EllaProject from "../../components/desarrollos/MiamiBeach/EllaProject";
 import NexoProject from "../../components/desarrollos/MiamiBeach/NexoProject";
 import PalmaProject from "../../components/desarrollos/MiamiBeach/PalmaProject.tsx";
+import TheWilliamProject from "../../components/desarrollos/MiamiBeach/TheWilliamProject.tsx";
 
 export default function MiamiBeachRoutes() {
   return (
@@ -20,6 +21,7 @@ export default function MiamiBeachRoutes() {
         path={"/desarrollos/72-park"}
       />
       <Route element={<OneParkProject />} path={"/desarrollos/one-park"} />
+        <Route element={TheWilliamProject()} path={"/desarrollos/the-william"}/>
       <Route
         element={<FourteenRiverDistrictProject />}
         path={"/desarrollos/14-river-district"}
