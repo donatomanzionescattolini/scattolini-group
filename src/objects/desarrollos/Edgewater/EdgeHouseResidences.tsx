@@ -14,7 +14,7 @@ EdgeHouseResidences.numberOfImages = 44;
 EdgeHouseResidences.direccion = "1825 NE 4TH Avenue, Miami, FL 33132";
 EdgeHouseResidences.numberOfFloors = 57;
 EdgeHouseResidences.numberOfRooms = "Estudios y 1, 2 y 3 dormitorios";
-EdgeHouseResidences.añoDeConstrucciónOFinalización = 2028;
+EdgeHouseResidences.estimatedCompletionYear = 2028;
 EdgeHouseResidences.numberOfUnits = 592;
 EdgeHouseResidences.area = Edgewater();
 EdgeHouseResidences.caracteristicas = {
@@ -30,7 +30,7 @@ EdgeHouseResidences.caracteristicas = {
         <dt>Número de cuartos</dt>
         <dd>{EdgeHouseResidences.numberOfRooms}</dd>
         <dt>Año de Apertura</dt>
-        <dd>{EdgeHouseResidences.añoDeConstrucciónOFinalización}</dd>
+        <dd>{EdgeHouseResidences.estimatedCompletionYear}</dd>
         <dt>Tipo de Unidad</dt>
         <dd>Condominios</dd>
         <dt>Constructora</dt>

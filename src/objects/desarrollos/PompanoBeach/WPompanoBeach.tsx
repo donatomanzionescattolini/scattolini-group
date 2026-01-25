@@ -2,7 +2,7 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import PompanoBeach from "../../areas/PompanoBeach";
 
 const WPompanoBeach = new Desarrollo(PompanoBeach);
-WPompanoBeach.añoDeConstrucciónOFinalización = 2029;
+WPompanoBeach.estimatedCompletionYear = 2029;
 WPompanoBeach.numberOfFloors = 29;
 WPompanoBeach.numberOfUnits = 74;
 WPompanoBeach.numberOfImages = 18;
@@ -24,7 +24,7 @@ WPompanoBeach.caracteristicas = {
     <dt>Número de pisos</dt>
     <dd>{WPompanoBeach.numberOfFloors}</dd>
     <dt>Año de finalización</dt>
-    <dd>{WPompanoBeach.añoDeConstrucciónOFinalización}</dd>
+    <dd>{WPompanoBeach.estimatedCompletionYear}</dd>
     <dt>Habitaciones</dt>
     <dd>{WPompanoBeach.numberOfRooms}</dd>
   </dl>

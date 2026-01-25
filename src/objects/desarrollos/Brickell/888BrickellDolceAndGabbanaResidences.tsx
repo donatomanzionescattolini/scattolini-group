@@ -11,7 +11,7 @@ DolceAndGabbanaResidences.introduccion = [
 ];
 DolceAndGabbanaResidences.area = Brickell();
 DolceAndGabbanaResidences.banner = true;
-DolceAndGabbanaResidences.añoDeConstrucciónOFinalización = 2028;
+DolceAndGabbanaResidences.estimatedCompletionYear = 2028;
 DolceAndGabbanaResidences.numberOfImages = 21;
 DolceAndGabbanaResidences.numberOfFloors = 90;
 DolceAndGabbanaResidences.numberOfUnits = 259;
@@ -122,7 +122,7 @@ DolceAndGabbanaResidences.caracteristicas = {
         <dt>Número de Unidades</dt>
         <dd>{DolceAndGabbanaResidences.numberOfUnits}</dd>
         <dt>Año de Construcción o Finalización</dt>
-        <dd>{DolceAndGabbanaResidences.añoDeConstrucciónOFinalización}</dd>
+        <dd>{DolceAndGabbanaResidences.estimatedCompletionYear}</dd>
         <dt>Número de Habitaciones</dt>
         <dd>{DolceAndGabbanaResidences.numberOfRooms.start} a {DolceAndGabbanaResidences.numberOfRooms.end}</dd>
       </dl>

@@ -4,7 +4,7 @@ import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
 export default function Ella() {
     const EllaObject = new Desarrollo();
-    EllaObject.añoDeConstrucciónOFinalización=2026;
+    EllaObject.estimatedCompletionYear=2026;
     EllaObject.numberOfRooms={start:1,end:2};
     EllaObject.numberOfUnits=95;
     EllaObject.typeOfUnits="Apartamentos";

@@ -22,7 +22,7 @@ MidtownParkResidences.caracteristicas = {
         <dt>Ubicación</dt>
         <dd>{MidtownParkResidences.ubicación}</dd>
         <dt>Año de apertura</dt>
-        <dd>{MidtownParkResidences.añoDeConstrucciónOFinalización}</dd>
+        <dd>{MidtownParkResidences.estimatedCompletionYear}</dd>
         <dt>Numero de pisos</dt>
         <dd>{MidtownParkResidences.numberOfFloors}</dd>
         <dt>Numero de unidades</dt>

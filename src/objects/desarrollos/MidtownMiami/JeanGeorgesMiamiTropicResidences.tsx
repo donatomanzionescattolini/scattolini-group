@@ -5,7 +5,7 @@ const JeanGeorgesMiamiTropicResidences = new Desarrollo(MidtownMiami);
 JeanGeorgesMiamiTropicResidences.nombre =
   "jean-georges-miami-tropic-residences";
 JeanGeorgesMiamiTropicResidences.titulo = "Jean-Georges Miami Tropic Residences";
-JeanGeorgesMiamiTropicResidences.añoDeConstrucciónOFinalización = 2028;
+JeanGeorgesMiamiTropicResidences.estimatedCompletionYear = 2028;
 JeanGeorgesMiamiTropicResidences.numberOfFloors=49;
 JeanGeorgesMiamiTropicResidences.numberOfUnits =    329;
 JeanGeorgesMiamiTropicResidences.numberOfRooms= {start:1, end:4};
@@ -21,7 +21,7 @@ JeanGeorgesMiamiTropicResidences.caracteristicas = {
     <>
       <dl>
         <dt>Año de apertura</dt>
-        <dd>{JeanGeorgesMiamiTropicResidences.añoDeConstrucciónOFinalización}</dd>
+        <dd>{JeanGeorgesMiamiTropicResidences.estimatedCompletionYear}</dd>
         <dt>Número de pisos</dt>
         <dd>{JeanGeorgesMiamiTropicResidences.numberOfFloors}</dd>
         <dt>Número de unidades</dt>

@@ -73,7 +73,7 @@ EnvyResidence.caracteristicas = {
     </>
   ),
 };
-EnvyResidence.añoDeConstrucciónOFinalización = 2025;
+EnvyResidence.estimatedCompletionYear = 2025;
 EnvyResidence.numberOfUnits = 213;
 EnvyResidence.numberOfFloors = 11;
 EnvyResidence.typeOfUnits = [

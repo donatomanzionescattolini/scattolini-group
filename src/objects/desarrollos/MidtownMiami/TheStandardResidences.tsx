@@ -15,13 +15,13 @@ TheStandardResidences.typeOfUnits =
 TheStandardResidences.numberOfUnits = 228;
 TheStandardResidences.numberOfFloors = 12;
 TheStandardResidences.ubicación = "3100 NE 1st Avenue, Miami, FL 33137";
-TheStandardResidences.añoDeConstrucciónOFinalización = 2025;
+TheStandardResidences.estimatedCompletionYear = 2025;
 TheStandardResidences.caracteristicas = {
   edificio: (
     <>
       <dl>
         <dt>Año de apertura</dt>
-        <dd>{TheStandardResidences.añoDeConstrucciónOFinalización}</dd>
+        <dd>{TheStandardResidences.estimatedCompletionYear}</dd>
         <dt>Número de pisos</dt>
         <dd>{TheStandardResidences.numberOfFloors}</dd>
         <dt>Número de unidades</dt>

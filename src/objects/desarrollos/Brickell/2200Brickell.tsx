@@ -75,7 +75,7 @@ export default function _2200Brickell() {
   _2200BrickellObject.numberOfRooms = { start: 1, end: 4 };
   _2200BrickellObject.numberOfUnits = 105;
   _2200BrickellObject.typeOfUnits = "Residencias";
-  _2200BrickellObject.añoDeConstrucciónOFinalización = 2025;
+  _2200BrickellObject.estimatedCompletionYear = 2025;
   _2200BrickellObject.numberOfFloors = 5;
   let subtitulo = "DONDE TANTO LOS HABITANTES DE LA CIUDAD COMO LOS AMANTES DE LA NATURALEZA SE SIENTEN COMO EN CASA";
   _2200BrickellObject.slogan = capitalizeFirstLetter("DONDE TANTO LOS HABITANTES DE LA CIUDAD COMO LOS AMANTES DE LA NATURALEZA SE SIENTEN COMO EN CASA".toLowerCase());

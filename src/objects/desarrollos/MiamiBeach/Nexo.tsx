@@ -8,7 +8,7 @@ export default function Nexo() {
     NexoObject.slogan = "Bienvenido a la vida conectada.";
     NexoObject.banner = true;
     NexoObject.area = MiamiBeach();
-    NexoObject.añoDeConstrucciónOFinalización=2025;
+    NexoObject.estimatedCompletionYear=2025;
     NexoObject.numberOfUnits=254;
     NexoObject.typeOfUnits="Residencias de Estudios";
     NexoObject.numberOfRooms={start: 1, end: 4};

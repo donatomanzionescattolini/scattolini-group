@@ -11,7 +11,7 @@ TheWilliam.slogan =
         Tu Alcance</div>;
 TheWilliam.introduccion = ["The William es una elegante residencia de 26 pisos, ubicada en uno de los distritos mejor conectados de la ciudad. Con una ubicación ideal cerca de tiendas y restaurantes de primer nivel, playas vírgenes del Atlántico, canales, centros comerciales, aeropuertos, estadios deportivos y eventos culturales, ofrece un estilo de vida de comodidad y prestigio. Cada casa ofrece cautivadoras vistas del amanecer y el atardecer, mientras que sus comodidades cuidadosamente diseñadas brindan espacios para el disfrute y la conexión familiar. A solo minutos de la impresionante costa de Sunny Isles, esta ubicación representa la vida moderna en un entorno privilegiado."];
 
-TheWilliam.añoDeConstrucciónOFinalización = 2029;
+TheWilliam.estimatedCompletionYear = 2029;
 TheWilliam.banner = true;
 TheWilliam.numberOfImages = 19;
 
@@ -25,6 +25,8 @@ TheWilliam.caracteristicas = {
     edificio: <>
         <dl>
             <dt>Dirección</dt>
+            <dd>{TheWilliam.direccion}</dd>
+            <dt>A</dt>
             <dd>{TheWilliam.direccion}</dd>
             <dt>Número De Pisos</dt>
             <dd>{TheWilliam.numberOfFloors}</dd>

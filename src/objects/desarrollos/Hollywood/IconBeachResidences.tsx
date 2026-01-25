@@ -11,7 +11,7 @@ IconBeachResidences.introduccion = [
 ];
 IconBeachResidences.area = Hollywood();
 IconBeachResidences.banner = true;
-IconBeachResidences.añoDeConstrucciónOFinalización = 2027;
+IconBeachResidences.estimatedCompletionYear = 2027;
 IconBeachResidences.numberOfImages = 40;
 IconBeachResidences.numberOfFloors = 37;
 IconBeachResidences.numberOfUnits = 350;
@@ -100,7 +100,7 @@ IconBeachResidences.caracteristicas = {
     <dt>Número de Pisos</dt><dd>{IconBeachResidences.numberOfFloors}</dd>
     <dt>Número de Unidades</dt><dd>{IconBeachResidences.numberOfUnits}</dd>
     <dt>Tipo de Unidades</dt><dd>{IconBeachResidences.typeOfUnits}</dd>
-    <dt>Año de Construcción o Finalización</dt><dd>{IconBeachResidences.añoDeConstrucciónOFinalización }</dd>
+    <dt>Año de Construcción o Finalización</dt><dd>{IconBeachResidences.estimatedCompletionYear }</dd>
     <dt>Número de Habitaciones</dt><dd>1 a 3</dd>
     </dl></>,
 };

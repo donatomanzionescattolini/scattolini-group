@@ -25,7 +25,7 @@ export default function Alba() {
   AlbaObject.ubicación = (
     <address>1100 W Palm Drive Florida City; FL 33034</address>
   );
-  AlbaObject.añoDeConstrucciónOFinalización = 2023;
+  AlbaObject.estimatedCompletionYear = 2023;
   AlbaObject.numberOfRooms = 5;
 
   const amenidades = new Map();

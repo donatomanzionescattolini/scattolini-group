@@ -111,6 +111,6 @@ DomusBrickellCenter.caracteristicas = {
 
 DomusBrickellCenter.ubicación = "1034 SW 2nd Ave, Miami FL 33130";
 DomusBrickellCenter.banner = true;
-DomusBrickellCenter.añoDeConstrucciónOFinalización = 2027;
+DomusBrickellCenter.estimatedCompletionYear = 2027;
 
 export default DomusBrickellCenter;

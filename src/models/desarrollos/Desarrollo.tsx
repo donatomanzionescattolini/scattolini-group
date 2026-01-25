@@ -48,7 +48,7 @@ class Desarrollo {
     numberOfRooms: number | { start: number; end: number } | string;
   };
   direccion: string;
-  añoDeConstrucciónOFinalización: number;
+  estimatedCompletionYear: number;
   piesCuadrados: number | { start: number; end: number } | string;
   ubicación: string | ReactNode;
   numberOfUnits: number;
@@ -97,7 +97,7 @@ class Desarrollo {
         {this.constructora &&<>   <dt>Constructora</dt>
        <dd>{this.constructora.toString()}</dd></>}
         <dt>Año de Construcción</dt>
-        <dd>{this.añoDeConstrucciónOFinalización}</dd>
+        <dd>{this.estimatedCompletionYear}</dd>
         {this.piesCuadrados &&  <><dt>Tamaño de viviendas en pies cuadrados</dt>
         <dd>{this.piesCuadrados as string}</dd></>}
         {this.numberOfModels && <><dt>Modelos</dt>
