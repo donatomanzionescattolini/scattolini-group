@@ -3,7 +3,7 @@ import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
 const SeventyTwoCarlyle = new Desarrollo(MiamiBeach());
 
-SeventyTwoCarlyle.nombre = "seventy-two-carlyle";
+SeventyTwoCarlyle.nombre = "72-carlyle";
 SeventyTwoCarlyle.titulo = "72 Carlyle - Miami Beach Residences";
 
 SeventyTwoCarlyle.slogan = "La Riviera Italiana en Miami Beach";

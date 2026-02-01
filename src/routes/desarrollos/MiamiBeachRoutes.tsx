@@ -10,6 +10,8 @@ import EllaProject from "../../components/desarrollos/MiamiBeach/EllaProject";
 import NexoProject from "../../components/desarrollos/MiamiBeach/NexoProject";
 import PalmaProject from "../../components/desarrollos/MiamiBeach/PalmaProject.tsx";
 import TheWilliamProject from "../../components/desarrollos/MiamiBeach/TheWilliamProject.tsx";
+import SeventyTwoCarlyle from "../../objects/desarrollos/MiamiBeach/72Carlyle.tsx";
+import SeventyTwoCarlyleProject from "../../components/desarrollos/MiamiBeach/SeventyTwoCarlyleProject.tsx";
 
 export default function MiamiBeachRoutes() {
   return (
@@ -22,6 +24,7 @@ export default function MiamiBeachRoutes() {
       />
       <Route element={<OneParkProject />} path={"/desarrollos/one-park"} />
         <Route element={TheWilliamProject()} path={"/desarrollos/the-william"}/>
+        <Route element={SeventyTwoCarlyleProject()} path={"/desarrollos/72-carlyle"}/>
       <Route
         element={<FourteenRiverDistrictProject />}
         path={"/desarrollos/14-river-district"}

@@ -83,6 +83,7 @@ import MidtownParkResidences from "./MidtownMiami/MidtownParkResidences.tsx";
 import TheStandardResidences from "./MidtownMiami/TheStandardResidences.tsx";
 import JeanGeorgesMiamiTropicResidences from "./MidtownMiami/JeanGeorgesMiamiTropicResidences.tsx";
 import TheWilliam from "./MiamiBeach/TheWilliam.tsx";
+import SeventyTwoCarlyle from "./MiamiBeach/72Carlyle.tsx";
 
 interface DesarrolloMapItem {
   area: Area;
@@ -176,7 +177,8 @@ desarrolloMap.push({
     OnePark(),
     SeventyTwoPark(),
     Palma(),
-      TheWilliam
+      TheWilliam,
+      SeventyTwoCarlyle
   ]),
 });
 desarrolloMap.push({ area: NorthBayVillage(), des: new Set([ShomaBay()]) });
