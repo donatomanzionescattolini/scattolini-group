@@ -89,12 +89,10 @@ export default function ContactFormComponent() {
   // }
 
   return (
-    <MDBContainer className="d-flex flex-row justify-content-center my-5">
+    <MDBContainer className="d-flex flex-row justify-content-center">
 
       <MDBContainer className="d-flex flex-column justify-content-center my-5 p-5 shadow-1 rounded-3" style={{ maxWidth: "800px" }}>
-          <h2 className={"display-4"}>Contáctanos Hoy</h2>
-          <br />
-          <br />
+
           <form onSubmit={onSubmit} action="#top" className=" flex-column  my-2">
           <MDBInput
             id="form4Example1"

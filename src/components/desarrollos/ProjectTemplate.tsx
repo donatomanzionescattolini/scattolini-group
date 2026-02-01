@@ -23,6 +23,7 @@ import {
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
+import * as React from "react";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
   const params = paramz.desarrollo;
@@ -478,7 +479,9 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">
-
+          <h2 className={""}>Contáctanos Hoy</h2>
+          <br />
+          <br />
         {innerWidth <= 768 && (
           <MDBContainer>
 
