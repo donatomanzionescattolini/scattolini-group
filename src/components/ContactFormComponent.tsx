@@ -89,7 +89,6 @@ export default function ContactFormComponent() {
   // }
 
   return (
-    <MDBContainer className="d-flex flex-row justify-content-center">
 
       <MDBContainer className="d-flex flex-column justify-content-center p-5 shadow-1 rounded-3" style={{ maxWidth: "700px" }}>
 
@@ -176,7 +175,6 @@ export default function ContactFormComponent() {
           </Alert>
         )}
       </footer>
-    </MDBContainer>
     </MDBContainer>
   );
 }
