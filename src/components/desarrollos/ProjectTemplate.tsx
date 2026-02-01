@@ -480,8 +480,6 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       <div className="skew-cc"></div>
       <section className="white-block">
           <h2 className={""}>Contáctanos Hoy</h2>
-          <br />
-          <br />
         {innerWidth <= 768 && (
           <MDBContainer>
 
