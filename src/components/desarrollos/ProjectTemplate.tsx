@@ -478,11 +478,10 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">
-        <h2>Contáctanos Hoy</h2>
-        <br />
-        <br />
+
         {innerWidth <= 768 && (
           <MDBContainer>
+
             <ContactFormComponent />
           </MDBContainer>
         )}
@@ -491,6 +490,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             fluid
             className="d-flex justify-content-center w-100 p-0 m-0"
           >
+
             <ContactFormComponent  />
           </MDBContainer>
         )}

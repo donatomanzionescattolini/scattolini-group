@@ -1,4 +1,4 @@
-import { MDBInput, MDBTextArea } from "mdb-react-ui-kit";
+import {MDBContainer, MDBInput, MDBTextArea} from "mdb-react-ui-kit";
 import * as React from "react";
 import { useState } from "react";
 import { send } from "@emailjs/browser";
@@ -89,9 +89,13 @@ export default function ContactFormComponent() {
   // }
 
   return (
-    <>
-      <div className="d-flex flex-row justify-content-center ">
-        <form onSubmit={onSubmit} action="#top" className=" flex-column  my-2">
+    <MDBContainer className="d-flex flex-row justify-content-center my-5">
+
+      <MDBContainer className="d-flex flex-column justify-content-center my-5 p-5 shadow-1 rounded-3" style={{ maxWidth: "800px" }}>
+          <h2 className={"display-sm-4 display-md-2"}>Contáctanos Hoy</h2>
+          <br />
+          <br />
+          <form onSubmit={onSubmit} action="#top" className=" flex-column  my-2">
           <MDBInput
             id="form4Example1"
             wrapperClass="mb-4"
@@ -145,7 +149,7 @@ export default function ContactFormComponent() {
             Enviar
           </button>
         </form>
-      </div>
+
       <footer id="top">
         {successAlert && (
           <Alert
@@ -174,6 +178,7 @@ export default function ContactFormComponent() {
           </Alert>
         )}
       </footer>
-    </>
+    </MDBContainer>
+    </MDBContainer>
   );
 }
