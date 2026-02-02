@@ -84,6 +84,7 @@ import TheStandardResidences from "./MidtownMiami/TheStandardResidences.tsx";
 import JeanGeorgesMiamiTropicResidences from "./MidtownMiami/JeanGeorgesMiamiTropicResidences.tsx";
 import TheWilliam from "./MiamiBeach/TheWilliam.tsx";
 import SeventyTwoCarlyle from "./MiamiBeach/72Carlyle.tsx";
+import TulaResidences from "./NorthBayVillage/TulaResidences.tsx";
 
 interface DesarrolloMapItem {
   area: Area;
@@ -102,6 +103,7 @@ desarrolloMap.push({
   des: new Set([WPompanoBeach, EnvyResidence]),
 });
 
+desarrolloMap.push({area:NorthBayVillage(),des: new Set([])});
 desarrolloMap.push({ area: PembrokePines(), des: new Set([]) });
 desarrolloMap.push({
   area: Aventura(),
@@ -167,7 +169,10 @@ desarrolloMap.push({
     EdgeHouseResidences,
   ]),
 });
-
+desarrolloMap.push({
+    area: NorthBayVillage(),
+    des:new Set([TulaResidences])
+})
 desarrolloMap.push({
   area: MiamiBeach(),
   des: new Set([
