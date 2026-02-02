@@ -7,8 +7,8 @@ export default function NorthBayVillageRoutes() {
   return (
     <React.Fragment>
       {" "}
-      <Route element={<ShomaBayProject />} path={"/desarrollos/shoma-bay"} />
-        <Route element={<TulaResidencesProject/>} path={"/desarrollos/tula-residences"} />
+        <Route element={<ShomaBayProject ></ShomaBayProject>} path={"/desarrollos/shoma-bay"} />
+        <Route element={<TulaResidencesProject></TulaResidencesProject>} path={"/desarrollos/tula-residences"} />
     </React.Fragment>
   );
 }
