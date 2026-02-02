@@ -5,7 +5,13 @@ const ViceroyBrickell = new Desarrollo(Brickell());
 
 ViceroyBrickell.nombre = "viceroy-brickell";
 ViceroyBrickell.titulo = "Viceroy Brickell";
-ViceroyBrickell.introduccion = [""];
+ViceroyBrickell.introduccion = ["Viceroy Residences Brickell es una nueva torre de condominios de lujo en construcción en una de las ubicaciones más espectaculares de Miami: la fantástica zona de Brickell. Esta torre de 45 pisos forma parte de un complejo de lujo de tres torres en el terreno actual de 444 Brickell, donde se ubicará el edificio de condominios Baccarat. Este desarrollo está a cargo de Related Group, quizás la empresa de desarrollo residencial más prestigiosa de Miami y Florida, con décadas de experiencia en el mercado inmobiliario de lujo."];
+ViceroyBrickell.direccion = "77 SE 5th St, Miami, FL 33131, EE. UU.";
+ViceroyBrickell.estimatedCompletionYear = 2026;
+ViceroyBrickell.numberOfFloors = 45;
+ViceroyBrickell.numberOfUnits = 498;
+ViceroyBrickell.typeOfUnits = "Condominioss de lujo";
+ViceroyBrickell.numberOfRooms = "Estudios, 1 y 2 dormitorios";
 ViceroyBrickell.banner = true;
 ViceroyBrickell.numberOfImages = 35;
 ViceroyBrickell.caracteristicas = {
@@ -21,8 +27,8 @@ ViceroyBrickell.caracteristicas = {
             <dd>{ViceroyBrickell.numberOfUnits}</dd>
             <dt>Tipo De Unidades</dt>
             <dd>{ViceroyBrickell.typeOfUnits}</dd>
-            <dt>Número de baños</dt>
-            <dd>{ViceroyBrickell.numberOfBathrooms as string}</dd>
+            <dt>Número de cuartos</dt>
+            <dd>{ViceroyBrickell.numberOfRooms as string}</dd>
         </dl>
     ),
     residencias: <>
