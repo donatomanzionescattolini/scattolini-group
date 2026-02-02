@@ -1,8 +1,9 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
+import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
 
 
-const TulaResidences = new Desarrollo(MiamiBeach());
+const TulaResidences = new Desarrollo(NorthBayVillage());
 TulaResidences.nombre = "tula-residences";
 TulaResidences.titulo="Tula Residences";
 TulaResidences.banner = true;
