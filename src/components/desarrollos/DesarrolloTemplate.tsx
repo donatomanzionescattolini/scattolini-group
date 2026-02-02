@@ -23,7 +23,7 @@ import {
 } from "../../models/desarrollos/ProjectParams.tsx";
 import ContactFormComponent from "../forms/ContactFormComponent.tsx";
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
-import AreasComponent from "../main components/AreasComponent.tsx";
+import AreasComponent from "../AreasComponent.tsx";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
   const params = paramz.desarrollo;
