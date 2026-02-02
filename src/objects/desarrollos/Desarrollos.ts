@@ -171,7 +171,7 @@ desarrolloMap.push({
 });
 desarrolloMap.push({
     area: NorthBayVillage(),
-    des:new Set([TulaResidences])
+    des:new Set([TulaResidences,ShomaBay()])
 })
 desarrolloMap.push({
   area: MiamiBeach(),
