@@ -7,7 +7,7 @@ ViceroyBrickell.nombre = "viceroy-brickell";
 ViceroyBrickell.titulo = "Viceroy Brickell";
 ViceroyBrickell.introduccion = [""];
 ViceroyBrickell.banner = true;
-
+ViceroyBrickell.numberOfImages = 35;
 ViceroyBrickell.caracteristicas = {
     edificio: (
         <dl>
