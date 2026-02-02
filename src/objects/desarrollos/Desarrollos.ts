@@ -103,7 +103,6 @@ desarrolloMap.push({
   des: new Set([WPompanoBeach, EnvyResidence]),
 });
 
-desarrolloMap.push({area:NorthBayVillage(),des: new Set([])});
 desarrolloMap.push({ area: PembrokePines(), des: new Set([]) });
 desarrolloMap.push({
   area: Aventura(),
@@ -172,7 +171,7 @@ desarrolloMap.push({
 desarrolloMap.push({
     area: NorthBayVillage(),
     des:new Set([TulaResidences,ShomaBay()])
-})
+});
 desarrolloMap.push({
   area: MiamiBeach(),
   des: new Set([
@@ -186,7 +185,7 @@ desarrolloMap.push({
       SeventyTwoCarlyle
   ]),
 });
-desarrolloMap.push({ area: NorthBayVillage(), des: new Set([ShomaBay()]) });
+
 desarrolloMap.push({
   area: Pinecrest(),
   des: new Set([Centris(), PineRocklandEstates(), PineParkVillas()]),
