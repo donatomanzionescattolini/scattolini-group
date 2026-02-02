@@ -11,6 +11,7 @@ import { CiprianiProjec } from "../../components/desarrollos/Brickell/CiprianiPr
 import DomusBrickellCenterComponent from "../../components/desarrollos/Brickell/DomusBrickellCenterComponent";
 import DolceAndGabbanaResidences from "../../objects/desarrollos/Brickell/888BrickellDolceAndGabbanaResidences";
 import BrickellDolceAndGabbanaResidencesProject from "../../components/desarrollos/Brickell/888BrickellDolceAndGabbanaResidencesProject";
+import ViceroyBrickellProject from "../../components/desarrollos/Brickell/ViceroyBrickellProject.tsx";
 export default function BrickellRoutes() {
   return (
     <React.Fragment>
@@ -30,6 +31,7 @@ export default function BrickellRoutes() {
       <Route element={<_2200BrickellComponent/>} path="/desarrollos/2200-brickell" />
       <Route element={<CiprianiProjec/>} path="/desarrollos/cipriani" />
       <Route element={<BrickellDolceAndGabbanaResidencesProject/>} path="/desarrollos/888-brickell-dolce-and-gabbana-residences" />
+        <Route element={<ViceroyBrickellProject></ViceroyBrickellProject>} path={"/desarrollos/viceroy-brickell"}/>
     </React.Fragment>
   );
 }

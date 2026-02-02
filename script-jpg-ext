@@ -1,1 +1,1 @@
- for f in *; do mv -- "$f" "${f%.*}.webp"; done
+ for f in *; do mv -- "$f" "${f%.*}.jpg"; done

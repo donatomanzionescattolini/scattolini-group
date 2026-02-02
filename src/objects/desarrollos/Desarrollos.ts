@@ -85,6 +85,7 @@ import JeanGeorgesMiamiTropicResidences from "./MidtownMiami/JeanGeorgesMiamiTro
 import TheWilliam from "./MiamiBeach/TheWilliam.tsx";
 import SeventyTwoCarlyle from "./MiamiBeach/72Carlyle.tsx";
 import TulaResidences from "./NorthBayVillage/TulaResidences.tsx";
+import ViceroyBrickell from "./Brickell/ViceroyBrickell.tsx";
 
 interface DesarrolloMapItem {
   area: Area;
@@ -132,6 +133,7 @@ desarrolloMap.push({
     MercedesBenzPlacesMiami(),
     _2200Brickell(),
     DolceAndGabbanaResidences,
+      ViceroyBrickell
   ]),
 });
 
