@@ -12,7 +12,7 @@ GaiaResidences.numberOfImages = 17;
 
 GaiaResidences.direccion = '401 N Federal Hwy, Hollywood, FL 33020, Estados Unidos.';
 GaiaResidences.estimatedCompletionYear = 2027;
-GaiaResidences.numberOfFloors = 18;
+GaiaResidences.numberOfFloors = 21;
 GaiaResidences.numberOfUnits = 238;
 GaiaResidences.typeOfUnits = 'Condominios';
 GaiaResidences.numberOfRooms = '1, 2 y 3 habitaciones';
