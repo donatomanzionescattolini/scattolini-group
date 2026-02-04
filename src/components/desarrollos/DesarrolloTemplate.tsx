@@ -21,9 +21,10 @@ import {
   caracteristicas,
   ProjectParams,
 } from "../../models/desarrollos/ProjectParams.tsx";
-import ContactFormComponent from "../forms/ContactFormComponent.tsx";
+
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
 import AreasComponent from "../AreasComponent.tsx";
+import ContactFormComponent from "../ContactFormComponent.tsx";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
   const params = paramz.desarrollo;
@@ -488,7 +489,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       <section className="white-block">
         {innerWidth <= 768 && (
           <MDBContainer>
-            <ContactFormComponent projectName={titulo as string} />
+            <ContactFormComponent />
           </MDBContainer>
         )}
         {innerWidth > 768 && (
@@ -496,7 +497,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             fluid
             className="d-flex justify-content-center w-100 p-0 m-0"
           >
-            <ContactFormComponent projectName={titulo as string} />
+            <ContactFormComponent/>
           </MDBContainer>
         )}
       </section>
