@@ -87,6 +87,7 @@ import SeventyTwoCarlyle from "./MiamiBeach/72Carlyle.tsx";
 import TulaResidences from "./NorthBayVillage/TulaResidences.tsx";
 import ViceroyBrickell from "./Brickell/ViceroyBrickell.tsx";
 import SevenParkResidences from "./Hollywood/SevenParkResidences.tsx";
+import GaiaResidences from "./Hollywood/GaiaResidences.tsx";
 
 interface DesarrolloMapItem {
   area: Area;
@@ -118,7 +119,7 @@ desarrolloMap.push({
 
 desarrolloMap.push({
   area: Hollywood(),
-  des: new Set([IconBeachResidences,SevenParkResidences]),
+  des: new Set([IconBeachResidences,SevenParkResidences, GaiaResidences]),
 });
 desarrolloMap.push({
   area: Brickell(),
