@@ -88,6 +88,7 @@ import TulaResidences from "./NorthBayVillage/TulaResidences.tsx";
 import ViceroyBrickell from "./Brickell/ViceroyBrickell.tsx";
 import SevenParkResidences from "./Hollywood/SevenParkResidences.tsx";
 import GaiaResidences from "./Hollywood/GaiaResidences.tsx";
+import FaenaResidences from "./MiamiBeach/FaenaResidences.tsx";
 
 interface DesarrolloMapItem {
   area: Area;
@@ -186,7 +187,8 @@ desarrolloMap.push({
     SeventyTwoPark(),
     Palma(),
       TheWilliam,
-      SeventyTwoCarlyle
+      SeventyTwoCarlyle,
+      FaenaResidences
   ]),
 });
 
