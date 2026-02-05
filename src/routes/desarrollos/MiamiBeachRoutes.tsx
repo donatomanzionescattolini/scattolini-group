@@ -12,12 +12,14 @@ import PalmaProject from "../../components/desarrollos/MiamiBeach/PalmaProject.t
 import TheWilliamProject from "../../components/desarrollos/MiamiBeach/TheWilliamProject.tsx";
 import SeventyTwoCarlyle from "../../objects/desarrollos/MiamiBeach/72Carlyle.tsx";
 import SeventyTwoCarlyleProject from "../../components/desarrollos/MiamiBeach/SeventyTwoCarlyleProject.tsx";
+import FaenaResidencesProject from "../../components/desarrollos/MiamiBeach/FaenaResidencesProject.tsx";
 
 export default function MiamiBeachRoutes() {
   return (
     <React.Fragment>
       {" "}
       <Route element={<FiveParkProject />} path={"/desarrollos/five-park"} />
+        <Route element ={<FaenaResidencesProject></FaenaResidencesProject>} path={"/desarrollos/faena-residences"}/>
       <Route
         element={<SeventyTwoParkProject />}
         path={"/desarrollos/72-park"}
