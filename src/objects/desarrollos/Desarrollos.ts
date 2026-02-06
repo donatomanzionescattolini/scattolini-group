@@ -32,7 +32,7 @@ import FourteenRiverDistrict from "./Brickell/FourteenRiverDistrict.tsx";
 import FourteenTwentyEight from "./Brickell/FourteenTwentyEight.tsx";
 import Lofty from "./Brickell/Lofty.tsx";
 import Ora from "./Brickell/Ora.tsx";
-import Vita from "./CoconutGrove/VitaObject.tsx";
+import Vita from "./CoconutGrove/Vita.tsx";
 import TheAvenue from "./CoralGables/TheAvenue.tsx";
 import AstonMartin from "./Downtown/AstonMartin.tsx";
 import CasaBella from "./Downtown/CasaBella.tsx";
