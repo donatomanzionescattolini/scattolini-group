@@ -1,20 +1,21 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import CoconutGrove from "../../areas/CoconutGrove.tsx";
 
-const TheWell = new Desarrollo(CoconutGrove());
-TheWell.nombre = "the-well";
-TheWell.titulo = "The Well | Coconut Grove";
-TheWell.banner = true;
-TheWell.slogan = "Wellness tiene una nueva dirección en Miami";
-TheWell.introduccion = ["THE WELL Coconut Grove es tu santuario de bienestar holístico. Aquí, el bienestar es la esencia de tu vida, ofreciéndote tiempo y espacio para relajarte, recargar energías y reconectar con lo que realmente importa: tu bienestar. Ubicado en el frondoso y arbolado vecindario de Coconut Grove, THE WELL está diseñado para apoyar tu estilo de vida equilibrado, permitiéndote vivir, trabajar y disfrutar en armonía con tu salud. Las residencias, que se integran a la perfección con el entorno, incluyen 194 casas únicas, desde cuatro casas adosadas hasta nueve lofts en planta baja, todas con amplios balcones privados, interiores abiertos y luminosos, y detalles personalizados que potencian la vitalidad, aumentan la energía y te ayudan a sentirte en tu mejor momento.\n" +
+const TheWellCoconutGrove = new Desarrollo(CoconutGrove());
+TheWellCoconutGrove.nombre = "the-well-coconut-grove";
+TheWellCoconutGrove.titulo = "The Well | Coconut Grove";
+TheWellCoconutGrove.banner = true;
+TheWellCoconutGrove.slogan =
+    <i><h6 className={"text-muted"}>El bienestar vive aquí</h6></i>;
+TheWellCoconutGrove.introduccion = ["THE WELL Coconut Grove es tu santuario de bienestar holístico. Aquí, el bienestar es la esencia de tu vida, ofreciéndote tiempo y espacio para relajarte, recargar energías y reconectar con lo que realmente importa: tu bienestar. Ubicado en el frondoso y arbolado vecindario de Coconut Grove, THE WELL está diseñado para apoyar tu estilo de vida equilibrado, permitiéndote vivir, trabajar y disfrutar en armonía con tu salud. Las residencias, que se integran a la perfección con el entorno, incluyen 194 casas únicas, desde cuatro casas adosadas hasta nueve lofts en planta baja, todas con amplios balcones privados, interiores abiertos y luminosos, y detalles personalizados que potencian la vitalidad, aumentan la energía y te ayudan a sentirte en tu mejor momento.\n" +
 "\n"];
-TheWell.numberOfImages = 0;
-TheWell.numberOfUnits = 194;
-TheWell.numberOfFloors = 8;
-TheWell.typeOfUnits = "";
-TheWell.estimatedCompletionYear = 0;
-TheWell.direccion = "2855 Tigertail Avenue, Coconut Grove, Florida 33133";
-TheWell.caracteristicas = {
+TheWellCoconutGrove.numberOfImages = 49;
+TheWellCoconutGrove.numberOfUnits = 194;
+TheWellCoconutGrove.numberOfFloors = 8;
+TheWellCoconutGrove.typeOfUnits = "";
+TheWellCoconutGrove.estimatedCompletionYear = 2028;
+TheWellCoconutGrove.direccion = "2855 Tigertail Avenue, Coconut Grove, Florida 33133";
+TheWellCoconutGrove.caracteristicas = {
     amenidades: (
         <>
             <ul>
@@ -53,15 +54,13 @@ TheWell.caracteristicas = {
     ),
     edificio: <dl>
         <dt>Dirección</dt>
-        <dd>{TheWell.direccion}</dd>
+        <dd>{TheWellCoconutGrove.direccion}</dd>
         <dt>Año De Construcción O Finalización</dt>
-        <dd>{TheWell.estimatedCompletionYear}</dd>
+        <dd>{TheWellCoconutGrove.estimatedCompletionYear}</dd>
         <dt>Número De Pisos</dt>
-        <dd>{TheWell.numberOfFloors}</dd>
+        <dd>{TheWellCoconutGrove.numberOfFloors}</dd>
         <dt>Número de Unidades</dt>
-        <dd>{TheWell.numberOfUnits}</dd>
-        <dt>Tipo De Unidades</dt>
-        <dd>{TheWell.typeOfUnits}</dd>
+        <dd>{TheWellCoconutGrove.numberOfUnits}</dd>
     </dl>,
     residencias:
         <dl>
@@ -103,4 +102,4 @@ TheWell.caracteristicas = {
         </dl>
 };
 
-export default TheWell;
+export default TheWellCoconutGrove;

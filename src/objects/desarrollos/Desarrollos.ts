@@ -89,6 +89,7 @@ import ViceroyBrickell from "./Brickell/ViceroyBrickell.tsx";
 import SevenParkResidences from "./Hollywood/SevenParkResidences.tsx";
 import GaiaResidences from "./Hollywood/GaiaResidences.tsx";
 import FaenaResidences from "./MiamiBeach/FaenaResidences.tsx";
+import TheWellCoconutGrove from "./CoconutGrove/TheWellCoconutGrove.tsx";
 
 interface DesarrolloMapItem {
   area: Area;
@@ -144,7 +145,7 @@ desarrolloMap.push({
   area: BayHarbor(),
   des: new Set([LaMaré(), LaBaia(), Origin(), TheWell()]),
 });
-desarrolloMap.push({ area: CoconutGrove(), des: new Set([Vita()]) });
+desarrolloMap.push({ area: CoconutGrove(), des: new Set([Vita(),TheWellCoconutGrove]) });
 desarrolloMap.push({ area: Doral(), des: new Set([]) });
 desarrolloMap.push({
   area: Downtown(),
