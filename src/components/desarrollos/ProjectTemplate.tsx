@@ -171,19 +171,17 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             height="500"
             controls
             autoPlay
-            autoFocus={true}
-            className={
-              "mx-auto my-0 p-0 d-flex flex-row justify-content-center"
-            }
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="mx-auto my-0 p-0 d-flex flex-row justify-content-center"
           >
-            {video}
             <source
-              width={700}
-              height={500}
               src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}
               type="video/mp4"
-              className="d-flex flex-row justify-content-center align-items-center"
             />
+            Your browser does not support the video tag.
           </video>
         )}
       </section>

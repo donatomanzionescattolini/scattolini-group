@@ -48,11 +48,16 @@ export function Home() {
       {/* )} */}
       <MDBContainer fluid jumbotron>
         <div className="video-container">
-          <video autoPlay loop muted playsInline className={" m-0 p-0"}>
+          <video autoPlay loop muted playsInline className={" m-0 p-0"} preload="auto">
             <source
               src="https://pagina-mama.s3.amazonaws.com/assets2/video-homepage.mp4"
               type="video/mp4"
             />
+            <source
+              src="https://pagina-mama.s3.amazonaws.com/assets2/video-homepage.mp4"
+              type="video/webm"
+            />
+            Your browser does not support the video tag.
           </video>
           <div className="overlay"></div>
 

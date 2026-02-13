@@ -91,14 +91,14 @@ const Nav = () => {
             {innerWidth < 650 && (
               <div>
                 <img
-                  width={"40%"}
+                  width="40%"
                   src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
                   alt="logo"
                 />
               </div>
             )}
             <div>
-              <MDBIcon icon="caret-down"></MDBIcon>
+              <MDBIcon icon="caret-down" />
             </div>
           </div>
         </MDBNavbarToggler>
@@ -132,26 +132,21 @@ const Nav = () => {
               <MDBDropdown>
                 <MDBDropdownToggle tag="a">Áreas</MDBDropdownToggle>
                 <MDBDropdownMenu className="responsive column">
-                  <>
-                    <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
-                      <input
-                        className="form-control"
-                        placeholder="Buscar"
-                        aria-label="Buscar"
-                        type="Search"
-                        value={searchQueryArea}
-                        onChange={handleSearchArea}
-                      />
-                      {/* <MDBBtn outline>Buscar</MDBBtn> */}
-                    </MDBInputGroup>
-                    {filteredAreas.map((area) => {
-                      return (
-                        <MDBDropdownItem link href={"/areas/" + area.name} key={filteredAreas.indexOf(area)}>
-                          {area.titulo}
-                        </MDBDropdownItem>
-                      );
-                    })}
-                  </>
+                  <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
+                    <input
+                      className="form-control"
+                      placeholder="Buscar"
+                      aria-label="Buscar"
+                      type="Search"
+                      value={searchQueryArea}
+                      onChange={handleSearchArea}
+                    />
+                  </MDBInputGroup>
+                  {filteredAreas.map((area) => (
+                    <MDBDropdownItem link href={"/areas/" + area.name} key={area.name}>
+                      {area.titulo}
+                    </MDBDropdownItem>
+                  ))}
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
@@ -163,26 +158,21 @@ const Nav = () => {
               <MDBDropdown>
                 <MDBDropdownToggle tag="a">Desarrollos</MDBDropdownToggle>
                 <MDBDropdownMenu className="responsive column">
-                  <>
-                    <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
-                      <input
-                        className="form-control"
-                        placeholder="Buscar"
-                        aria-label="Buscar"
-                        type="Search"
-                        value={searchQueryDesarrollo}
-                        onChange={handleSearchDesarrollo}
-                      />
-                      {/* <MDBBtn outline>Buscar</MDBBtn> */}
-                    </MDBInputGroup>
-                    {filteredDesarrollos.map((desarrollo) => {
-                      return (
-                        <MDBDropdownItem key={filteredDesarrollos.indexOf(desarrollo)}link href={"/desarrollos/" + desarrollo.nombre}>
-                          {desarrollo.titulo}
-                        </MDBDropdownItem>
-                      );
-                    })}
-                  </>
+                  <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
+                    <input
+                      className="form-control"
+                      placeholder="Buscar"
+                      aria-label="Buscar"
+                      type="Search"
+                      value={searchQueryDesarrollo}
+                      onChange={handleSearchDesarrollo}
+                    />
+                  </MDBInputGroup>
+                  {filteredDesarrollos.map((desarrollo) => (
+                    <MDBDropdownItem key={desarrollo.nombre} link href={"/desarrollos/" + desarrollo.nombre}>
+                      {desarrollo.titulo}
+                    </MDBDropdownItem>
+                  ))}
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
