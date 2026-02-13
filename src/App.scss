@@ -199,13 +199,20 @@ nav {
 }
 
 .dropdown-menu {
-  min-width: min-content !important;
+  min-width: 300px !important;
+  max-width: 400px !important;
   background-color: var(--color-background);
   color: #84705c;
   list-style-type: none;
-  padding: 8px 16px;
+  padding: 12px;
   margin: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.dropdown-menu .form-control {
+  width: 100%;
+  margin-bottom: 0.5rem;
 }
 
 #navbarNavDropdown > ul > li a:hover,
@@ -528,6 +535,10 @@ video {
 
   h2 {
     font-size: clamp(2rem, 8vw, 4rem);
+  }
+
+  #banner {
+    min-height: 600px !important;
   }
 
   .navbar-nav {
