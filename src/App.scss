@@ -537,8 +537,9 @@ video {
     font-size: clamp(2rem, 8vw, 4rem);
   }
 
-  #banner {
-    min-height: 600px !important;
+  #banner img {
+    min-height: 600px;
+    object-fit: cover;
   }
 
   .navbar-nav {
