@@ -27,28 +27,23 @@ export default function SlideshowGalleryDesarrollo(props: Props) {
                         paddingInline: "auto",
                     }}
                 >
-                    <picture>
+                    <picture style={{ width: '100%', height: '500px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <source
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).JPEG`}
-                            height={500}
                         />
                         <source
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).jpeg`}
-                            height={500}
                         />
                         <source
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).png`}
-                            height={500}
                         />
                         <source
-                            height={500}
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).webp`}
                         />
                         <img
-                            autoFocus
-                            height={500}
+                            style={{ maxWidth: '100%', maxHeight: '500px', width: 'auto', height: 'auto', objectFit: 'contain' }}
                             src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).jpg`}
-                            alt=""
+                            alt={`Gallery image ${j}`}
                         />
                     </picture>
                 </Carousel.Item>

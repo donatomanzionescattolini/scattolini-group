@@ -328,7 +328,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           <MDBTabsContent>
             <MDBTabsPane show={tabVisible === "brochure"}>
               <object
-                data={innerWidth > 768 ? pdfUrl : ""}
+                data={pdfUrl}
                 type="application/pdf"
                 width="100%"
                 height="500px"
