@@ -1,6 +1,7 @@
 import { Image } from "react-bootstrap";
 import { MDBCol, MDBRow } from "mdb-react-ui-kit";
 import { useLayoutEffect, useState } from "react";
+import { useTranslation } from "../../i18n.tsx";
 import { Link } from "react-router-dom";
 
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
@@ -12,13 +13,20 @@ interface AreaProps {
 }
 
 export default function AreaTemplate(props: AreaProps) {
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const { t, lang } = useTranslation();
   const [area] = useState(props.area);
 
+  const getLocalized = (field: any) => {
+    if (field && typeof field === 'object' && ('en' in field || 'es' in field)) {
+      return field[lang] || field['es'];
+    }
+    return field;
+  };
+
   const nombre = area.name;
-  const titulo = area.titulo;
+  const titulo = getLocalized(area.titulo);
+  const slogan = getLocalized(area.slogan);
+  const descripcion = getLocalized(area.descripcion);
   const images = [];
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -48,7 +56,7 @@ export default function AreaTemplate(props: AreaProps) {
         <h1 className="text-white">{titulo}</h1>
       </div>
       <div className="container-fluid text-center">
-        <h2 className="text-center mt-5">{area.slogan}</h2>
+        <h2 className="text-center mt-5">{slogan}</h2>
         <hr className="hr hr-blurry w-50 mx-auto" />
       </div>
       <MDBRow className="px-4">
@@ -58,11 +66,11 @@ export default function AreaTemplate(props: AreaProps) {
           sm={10}
           className="py-5 px-3 d-flex flex-column justify-content-center align-items-start"
         >
-          {area.descripcion.map((paragraph: string) => {
+          {descripcion.map((paragraph: string) => {
             return (
               <p
                 className={"text-muted mx-3"}
-                key={area.descripcion.indexOf(paragraph) + 1}
+                key={descripcion.indexOf(paragraph) + 1}
                 style={{ textIndent: "1.5em" }}
               >
                 {paragraph}
@@ -86,7 +94,7 @@ export default function AreaTemplate(props: AreaProps) {
       <div className="propiedades">
         {areaDesarrollos.size > 0 && (
           <div>
-            <h3 className="text-center">Propiedades en el Área</h3>
+            <h3 className="text-center">{t("pages.project.propertiesInArea")}</h3>
           </div>
         )}
         <br></br>
@@ -108,13 +116,14 @@ export default function AreaTemplate(props: AreaProps) {
                   ></div>
 
                   <h4 className="text-center card-title m-2 ">
-                    {desarrollo.nombre
-                      .split("-")
-                      .map(
-                        (word) =>
-                          word.charAt(0).toUpperCase() + word.substring(1)
-                      )
-                      .join(" ")}
+                    {getLocalized(desarrollo.titulo) ||
+                      desarrollo.nombre
+                        .split("-")
+                        .map(
+                          (word) =>
+                            word.charAt(0).toUpperCase() + word.substring(1)
+                        )
+                        .join(" ")}
                   </h4>
                 </Link>
               </MDBCol>

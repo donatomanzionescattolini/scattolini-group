@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { useTranslation } from "../i18n.tsx";
 import {
   MDBCollapse,
   MDBContainer,
@@ -15,12 +16,13 @@ import {
   MDBNavbarNav,
   MDBNavbarToggler,
 } from "mdb-react-ui-kit";
-import Areas from "../objects/areas/Areas.tsx";
-import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos.ts";
-import Desarrollo from "../models/desarrollos/Desarrollo.tsx";
-import { Area } from "../models/areas/Area.tsx";
+import Areas from "../objects/areas/Areas";
+import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos";
+import Desarrollo from "../models/desarrollos/Desarrollo";
+import { Area } from "../models/areas/Area";
 
 const Nav = () => {
+  const { t, lang, setLang } = useTranslation();
   const [showNavCentred, setShowNavCentred] = useState(false);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
 
@@ -39,7 +41,6 @@ const Nav = () => {
   const [filteredDesarrollos, setFilteredDesarrollos] =
     useState<Desarrollo[]>(allDesarrollos);
 
-
   const [searchQueryDesarrollo, setSearchQueryDesarrollo] = useState("");
   const handleSearchDesarrollo = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQueryDesarrollo(event.target.value);
@@ -48,11 +49,12 @@ const Nav = () => {
       return;
     }
 
-    const filteredDesarrolloz = allDesarrollos.filter(
-      (desarrollo) =>
-        desarrollo.nombre.toLowerCase().includes(event.target.value.toLowerCase()) ||
-        event.target.value.toLowerCase().includes(desarrollo.nombre.toLowerCase())
-    );
+    const q = event.target.value.toLowerCase();
+    const filteredDesarrolloz = allDesarrollos.filter((desarrollo) => {
+      const name = (desarrollo.nombre || "").toLowerCase();
+      const title = (getLocalized(desarrollo.titulo) || name).toLowerCase();
+      return name.includes(q) || q.includes(name) || title.includes(q) || q.includes(title);
+    });
 
     setFilteredDesarrollos(filteredDesarrolloz);
   };
@@ -64,17 +66,25 @@ const Nav = () => {
       return;
     }
 
-    const filteredAreaz = allAreas.filter(
-      (area) =>
-        area.titulo.toLowerCase().includes(event.target.value.toLowerCase()) ||
-        event.target.value.toLowerCase().includes(area.titulo.toLowerCase())
-    );
+    const filteredAreaz = allAreas.filter((area) => {
+      const title = (getLocalized(area.titulo) || "").toLowerCase();
+      const q = event.target.value.toLowerCase();
+      return title.includes(q) || q.includes(title);
+    });
 
     setFilteredAreas(filteredAreaz);
   };
 
+  // language switcher handler
+  const switchLang = (l: "es" | "en") => {
+    setLang(l);
+  };
 
-
+  const getLocalized = (field: any) => {
+    if (!field) return "";
+    if (typeof field === "object") return field[lang] || field.es || Object.values(field)[0] || "";
+    return field;
+  };
 
   return (
     <MDBNavbar expand="lg" light bgColor="light">
@@ -106,16 +116,22 @@ const Nav = () => {
         <MDBCollapse navbar show={showNavCentred} id="navbarCenteredExample">
           <MDBNavbarNav fullWidth={true} className="mb-2 mb-lg-0">
             <MDBNavbarItem>
+              <div className="d-flex align-items-center ms-3">
+                <button className={`btn btn-sm ${lang === 'es' ? 'btn-primary' : 'btn-outline-primary'} me-1`} onClick={() => switchLang('es')} aria-label="Switch to Spanish">ES</button>
+                <button className={`btn btn-sm ${lang === 'en' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => switchLang('en')} aria-label="Switch to English">EN</button>
+              </div>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
               <MDBNavbarLink aria-current="page" href="/">
-                Inicio
+                {t('nav.inicio')}
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href="/liderazgo/">Liderazgo</MDBNavbarLink>
+              <MDBNavbarLink href="/liderazgo/">{t('nav.liderazgo')}</MDBNavbarLink>
             </MDBNavbarItem>
 
             <MDBNavbarItem>
-              <MDBNavbarLink href="/asociados/">Asociados</MDBNavbarLink>
+              <MDBNavbarLink href="/asociados/">{t('nav.asociados')}</MDBNavbarLink>
             </MDBNavbarItem>
             {innerWidth > 650 && (
               <MDBNavbarItem>
@@ -130,49 +146,53 @@ const Nav = () => {
             )}
             <MDBNavbarItem>
               <MDBDropdown>
-                <MDBDropdownToggle tag="a">Áreas</MDBDropdownToggle>
+                <MDBDropdownToggle tag="a">{t('nav.areas')}</MDBDropdownToggle>
                 <MDBDropdownMenu className="responsive column">
                   <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
                     <input
                       className="form-control"
-                      placeholder="Buscar"
-                      aria-label="Buscar"
+                      placeholder={t('nav.search')}
+                      aria-label={t('nav.search')}
                       type="Search"
                       value={searchQueryArea}
                       onChange={handleSearchArea}
                     />
                   </MDBInputGroup>
-                  {filteredAreas.map((area) => (
-                    <MDBDropdownItem link href={"/areas/" + area.name} key={area.name}>
-                      {area.titulo}
-                    </MDBDropdownItem>
-                  ))}
+                  <>
+                    {filteredAreas.map((area) => (
+                      <MDBDropdownItem key={area.name} link href={"/areas/" + area.name}>
+                        {getLocalized(area.titulo)}
+                      </MDBDropdownItem>
+                    ))}
+                  </>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
 
             <MDBNavbarItem>
-              <MDBNavbarLink href="/contacto/">Contacto</MDBNavbarLink>
+              <MDBNavbarLink href="/contacto/">{t('nav.contact')}</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBDropdown>
-                <MDBDropdownToggle tag="a">Desarrollos</MDBDropdownToggle>
+                <MDBDropdownToggle tag="a">{t('nav.desarrollos')}</MDBDropdownToggle>
                 <MDBDropdownMenu className="responsive column">
                   <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
                     <input
                       className="form-control"
-                      placeholder="Buscar"
-                      aria-label="Buscar"
+                      placeholder={t('nav.search')}
+                      aria-label={t('nav.search')}
                       type="Search"
                       value={searchQueryDesarrollo}
                       onChange={handleSearchDesarrollo}
                     />
                   </MDBInputGroup>
-                  {filteredDesarrollos.map((desarrollo) => (
-                    <MDBDropdownItem key={desarrollo.nombre} link href={"/desarrollos/" + desarrollo.nombre}>
-                      {desarrollo.titulo}
-                    </MDBDropdownItem>
-                  ))}
+                  <>
+                    {filteredDesarrollos.map((desarrollo, idx) => (
+                      <MDBDropdownItem key={desarrollo.nombre ?? idx} link href={'/desarrollos/' + (desarrollo.nombre ?? idx)}>
+                        {getLocalized(desarrollo.titulo) || desarrollo.nombre}
+                      </MDBDropdownItem>
+                    ))}
+                  </>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>

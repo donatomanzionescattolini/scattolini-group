@@ -1,47 +1,50 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import PompanoBeach from "../../areas/PompanoBeach";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-const EnvyResidence = new Desarrollo(PompanoBeach);
+export default function EnvyResidence(lang: "en" | "es" = "es") {
+  const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("envyResidence", lang);
+  const envyResidenceObject = new Desarrollo(PompanoBeach());
 
-EnvyResidence.nombre = "envy-residence";
-EnvyResidence.titulo = "ENVY Pompano Beach";
-EnvyResidence.banner = true;
-EnvyResidence.numberOfImages = 72;
-EnvyResidence.introduccion = [
-  "Envy Residences combina la vibra moderno y ubicación estratégica. Construido en 2021, ofrece 214 unidades desde estudios hasta apartamentos de 3 habitaciones. Disfruta de amenidades de primera clase, como piscina estilo resort, gimnasio con pared de escalar, mini golf y áreas sociales. A solo 1.8 millas de la playa y con restricciones de alquiler flexibles, Envy es perfecto para vivir o invertir.",
-];
-EnvyResidence.slogan = "Vive más allá de lo ordinario.";
-EnvyResidence.direccion = "475 SE 1st St, Pompano Beach, FL 33060";
-EnvyResidence.ubicación = "475 SE 1st St, Pompano Beach, FL 33060";
-EnvyResidence.caracteristicas = {
+  envyResidenceObject.nombre = "envy-residence";
+  envyResidenceObject.titulo = getLocalizedField("titulo", "ENVY Pompano Beach");
+  envyResidenceObject.subtitulo = getLocalizedField("subtitulo", "Vive más allá de lo ordinario");
+  envyResidenceObject.banner = true;
+  envyResidenceObject.numberOfImages = 72;
+  envyResidenceObject.introduccion = getLocalizedArray("introduccion", [
+    "Envy Residences combina la vibra moderno y ubicación estratégica. Construido en 2021, ofrece 214 unidades desde estudios hasta apartamentos de 3 habitaciones. Disfruta de amenidades de primera clase, como piscina estilo resort, gimnasio con pared de escalar, mini golf y áreas sociales. A solo 1.8 millas de la playa y con restricciones de alquiler flexibles, Envy es perfecto para vivir o invertir.",
+  ]);
+  envyResidenceObject.slogan = getLocalizedField("slogan", "Vive más allá de lo ordinario.");
+  envyResidenceObject.direccion = getLocalizedField("direccion", "475 SE 1st St, Pompano Beach, FL 33060");
+  envyResidenceObject.ubicación = getLocalizedField("ubicacion", "475 SE 1st St, Pompano Beach, FL 33060");
+envyResidenceObject.caracteristicas = {
   edificio: (
     <>
       <dl>
-        <dt>Ubicación</dt>
-        <dd>475 SE 1st St, Pompano Beach, FL 33060</dd>
+        <dt>{getLocalizedField("caracteristicas.edificio.ubicacion", "Ubicación")}</dt>
+        <dd>{getLocalizedField("direccion", "475 SE 1st St, Pompano Beach, FL 33060")}</dd>
 
-        <dt>Número de Unidades</dt>
-        <dd>213 Residencias</dd>
-        <dt>Pisos</dt>
-        <dd>Dos torres de 11 pisos cada una</dd>
-        <dt>Tipo de Residencia</dt>
+        <dt>{getLocalizedField("caracteristicas.edificio.unidades", "Número de Unidades")}</dt>
+        <dd>{getLocalizedField("caracteristicas.edificio.unidadesCount", "213 Residencias")}</dd>
+        <dt>{getLocalizedField("caracteristicas.edificio.pisos", "Pisos")}</dt>
+        <dd>{getLocalizedField("caracteristicas.edificio.pisosCount", "Dos torres de 11 pisos cada una")}</dd>
+        <dt>{getLocalizedField("caracteristicas.edificio.tipoResidencia", "Tipo de Residencia")}</dt>
         <dd>
-          Amplios planos de planta que incluyen estudios y residencias de 1, 2 y
-          3 habitaciones
+          {getLocalizedField("caracteristicas.edificio.tipoResidenciaDesc", "Amplios planos de planta que incluyen estudios y residencias de 1, 2 y 3 habitaciones")}
         </dd>
-        <dt>Año de Apertura</dt>
-        <dd>2025</dd>
+        <dt>{getLocalizedField("caracteristicas.edificio.apertura", "Año de Apertura")}</dt>
+        <dd>{getLocalizedField("caracteristicas.edificio.aperturaYear", "2025")}</dd>
       </dl>
     </>
   ),
   residencias: (
     <>
       <ul>
-        <li>Diseños de concepto abierto con ventanas de piso a techo.</li>
-        <li>Cocinas de diseño con electrodomésticos premium.</li>
-        <li>Baños inspirados en el spa con elegantes acabados.</li>
+        <li>{getLocalizedField("caracteristicas.residencias.disenos", "Diseños de concepto abierto con ventanas de piso a techo.")}</li>
+        <li>{getLocalizedField("caracteristicas.residencias.cocinas", "Cocinas de diseño con electrodomésticos premium.")}</li>
+        <li>{getLocalizedField("caracteristicas.residencias.banos", "Baños inspirados en el spa con elegantes acabados.")}</li>
         <li>
-          Balcones privados con impresionantes vistas de la playa de Pompano.
+          {getLocalizedField("caracteristicas.residencias.balcones", "Balcones privados con impresionantes vistas de la playa de Pompano.")}
         </li>
       </ul>
     </>
@@ -50,37 +53,34 @@ EnvyResidence.caracteristicas = {
     <>
       <ul>
         <li>
-          Centro de bienestar: un gimnasio de última generación y espacio de
-          yoga.
+          {getLocalizedField("caracteristicas.amenidades.bienestar", "Centro de bienestar: un gimnasio de última generación y espacio de yoga.")}
         </li>
         <li>
-          Piscina estilo resort: una cubierta de piscina hermosamente ajardinada
-          para la máxima relajación.
+          {getLocalizedField("caracteristicas.amenidades.piscina", "Piscina estilo resort: una cubierta de piscina hermosamente ajardinada para la máxima relajación.")}
         </li>
         <li>
-          Sofisticado salón y sala de entretenimiento: un área común elegante
-          para socializar.
+          {getLocalizedField("caracteristicas.amenidades.salon", "Sofisticado salón y sala de entretenimiento: un área común elegante para socializar.")}
         </li>
         <li>
-          Ventajas para mascotas: un área de mascotas designada para sus amigos
-          peludos.
+          {getLocalizedField("caracteristicas.amenidades.mascotas", "Ventajas para mascotas: un área de mascotas designada para sus amigos peludos.")}
         </li>
         <li>
-          Parque infantil: un espacio divertido y seguro para que los niños
-          jueguen.
+          {getLocalizedField("caracteristicas.amenidades.parque", "Parque infantil: un espacio divertido y seguro para que los niños jueguen.")}
         </li>
       </ul>
     </>
   ),
 };
-EnvyResidence.estimatedCompletionYear = 2025;
-EnvyResidence.numberOfUnits = 213;
-EnvyResidence.numberOfFloors = 11;
-EnvyResidence.typeOfUnits = [
-  "Estudios",
-  "1 Habitación",
-  "2 Habitaciones",
-  "3 Habitaciones",
+envyResidenceObject.estimatedCompletionYear = 2025;
+envyResidenceObject.numberOfUnits = 213;
+envyResidenceObject.numberOfFloors = 11;
+envyResidenceObject.typeOfUnits = [
+  getLocalizedField("tipos.estudio", "Estudios"),
+  getLocalizedField("tipos.habitacion1", "1 Habitación"),
+  getLocalizedField("tipos.habitacion2", "2 Habitaciones"),
+  getLocalizedField("tipos.habitacion3", "3 Habitaciones"),
 ].join(", ");
-EnvyResidence.numberOfRooms = {start:1,end: 3}  ;
-export default EnvyResidence;
+envyResidenceObject.numberOfRooms = {start:1,end: 3}  ;
+
+return envyResidenceObject;
+}

@@ -4,10 +4,12 @@ import {useState} from "react";
 import {send} from "@emailjs/browser";
 
 import {Alert, AlertHeading} from "react-bootstrap";
+import { useTranslation } from "../i18n.tsx";
 
 import "./FloatingContactFormComponent.scss"
 
 export default function FloatingContactFormComponent() {
+    const { t } = useTranslation();
     const [reply_to] = useState("office@scattolinigroup.com");
     const [successAlert, setSuccessAlert] = useState(false);
     const [failureAlert, setFailureAlert] = useState(false);
@@ -82,17 +84,16 @@ export default function FloatingContactFormComponent() {
         <>
             {successAlert && (
                 <Alert variant="success" dismissible onClose={handleCloseAlertSuccess}>
-                    <AlertHeading>Mensaje enviado</AlertHeading>
-                    <p>¡Mensaje enviado con éxito!</p>
+                    <AlertHeading>{t("pages.contacto.alerts.successTitle")}</AlertHeading>
+                    <p>{t("pages.contacto.alerts.successMessage")}</p>
                 </Alert>
             )}
             {failureAlert && (
                 <Alert variant="danger" dismissible onClose={handleCloseAlertFailure}>
-                    <AlertHeading>Mensaje enviado</AlertHeading>
+                    <AlertHeading>{t("pages.contacto.alerts.failureTitle")}</AlertHeading>
                     <p>
-                        Hubo un problema enviando el correo. Por favor intente de nuevo o
-                        envíenos un correo desde su propio servicio a{" "}
-                        <a href="mailto:info@scattolinigroup.com">este correo</a>
+                        {t("pages.contacto.alerts.failureMessage")}{" "}
+                        <a href="mailto:info@scattolinigroup.com">{t("pages.contacto.form.emailLink")}</a>
                     </p>
                 </Alert>
             )}
@@ -101,13 +102,13 @@ export default function FloatingContactFormComponent() {
                   action="#top"
                   className="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5 p-2 m-2"
             >
-                <h2>Contáctanos Hoy</h2>
+                <h2>{t("hero.cta")}</h2>
                 <br/>
                 <br/>
                 <MDBInput
                     className="formInput"
                     wrapperClass="mb-4"
-                    label="Nombre"
+                    label={t("pages.contacto.form.name")}
                     name="from_name"
                     value={toSend.from_name}
                     required
@@ -118,7 +119,7 @@ export default function FloatingContactFormComponent() {
                     className="formInput"
                     required
                     wrapperClass="mb-4"
-                    label="Correo electrónico"
+                    label={t("pages.contacto.form.email")}
                     name="client_email"
                     formNoValidate={false}
                     onChange={handleChange}
@@ -129,7 +130,7 @@ export default function FloatingContactFormComponent() {
                     className="formInput"
                     required
                     wrapperClass="mb-4"
-                    label="Número de Teléfono"
+                    label={t("pages.contacto.form.phone")}
                     name="phone"
                     value={toSend.phone}
                     formNoValidate={false}
@@ -141,7 +142,7 @@ export default function FloatingContactFormComponent() {
                     wrapperClass="mb-4"
                     required
                     rows={4}
-                    label="Mensaje"
+                    label={t("pages.contacto.form.message")}
                     value={toSend.message}
                     name="message"
                     onChange={handleChange}
@@ -154,7 +155,7 @@ export default function FloatingContactFormComponent() {
         defaultChecked
       /> */}
                 <button className="mb-4 btn btn-sm " formAction="#top" type="submit">
-                    Enviar
+                    {t("pages.contacto.form.sendButton")}
                 </button>
             </form>
         </>

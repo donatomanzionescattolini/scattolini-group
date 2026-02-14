@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Home",
+    "areas": "Areas",
+    "desarrollos": "Developments",
+    "contact": "Contact",
+    "leadership": "Leadership",
+    "partners": "Partners"
+  },
+  "hero": {
+    "title": "SCATTOLINI GROUP",
+    "subtitle": "Real Estate Agency",
+    "contact_cta": "Contact Us"
+  },
+  "areas": {
+    "title": "Areas"
+  },
+  "project": {
+    "features": "Features",
+    "gallery": "Photo Gallery",
+    "documents": "Documents",
+    "download": "Download",
+    "properties_in_area": "Properties in the Area"
+  },
+  "footer": {
+    "copyright": "© {year} Scattolini Group"
+  },
+  "docs": {
+    "brochure": "Brochure",
+    "hoja": "Fact Sheet",
+    "planos": "Plans"
+  }
+}

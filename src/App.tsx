@@ -23,7 +23,10 @@ import { useLayoutEffect } from "react";
 import ContactFormComponent from "./components/ContactFormComponent.tsx";
 import ContactoComponent from "./components/ContactoComponent.tsx";
 
+import { useTranslation } from "./i18n.tsx";
+
 export default function App() {
+  const { t } = useTranslation();
   useLayoutEffect(() => {
       window.scrollTo(0, 0);
     }, []);
@@ -51,12 +54,10 @@ export default function App() {
       <FloatingWhatsApp
         
         phoneNumber={"13056139338"}
-        chatMessage={"¿Cómo te puedo ayudar hoy?"}
-        statusMessage={"Respuestas dentro de las primeras 24 horas"}
+        chatMessage={t("whatsapp.status")}
+        statusMessage={t("whatsapp.status")}
         avatar="https://pagina-mama.s3.amazonaws.com/assets2/asociados/elda-whatsapp.png"
-        placeholder={
-          "Quisiera programar una llamada telefónica o una reunión con un agente para aprender más sobre el mercado inmobiliario en el Sur de la Florida y analizar las opciones disponibles para mí "
-        }
+        placeholder={t("whatsapp.placeholder")}
         accountName={"Scattolini Group"}
         notificationSound
         className={"floating-whatsapp"}

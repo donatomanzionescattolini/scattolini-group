@@ -3,6 +3,7 @@ import SlideshowGalleryDesarrollo from "./SlideshowGalleryDesarrollo";
 import "@material/banner/dist/mdc.banner.min.css";
 
 import { JSX, ReactNode, useLayoutEffect, useState } from "react";
+import { useTranslation } from "../../i18n.tsx";
 import {
   MDBAccordion,
   MDBAccordionItem,
@@ -26,6 +27,7 @@ import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts"
 import * as React from "react";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
+  const { t, lang } = useTranslation();
   const params = paramz.desarrollo;
   const [nombre] = useState(params.nombre);
   const [area] = useState(params.area);
@@ -38,9 +40,17 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   const [video] = useState<string | JSX.Element>(vid as JSX.Element);
 
   const [caract] = useState(params.caracteristicas as caracteristicas);
-  const [titulo] = useState(params.titulo);
   const [banner] = useState(params.banner);
-  const [subtitulo] = useState(params.slogan);
+  // compute localized values for titulo and subtitulo to avoid passing Record types into JSX
+  const getLocalized = (field: any) => {
+    if (!field) return "";
+    if (typeof field === "object") {
+      return field[lang] || field["es"] || Object.values(field)[0] || "";
+    }
+    return field;
+  };
+  const localizedTitulo: string = String(getLocalized(params.titulo));
+  const localizedSubtitulo: string = String(getLocalized(params.slogan));
   const [introduccion] = useState(params.introduccion);
   const [CaracteristicasAmenidades] = useState(() => caract.amenidades);
   const [CaracteristicasEdificio] = useState(() => caract.edificio);
@@ -83,9 +93,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       <a id="top" href="#top">
         <MDBContainer
           fluid
-          jumbotron
           id={"banner"}
-          className=""
+          className={"jumbotron"}
           style={{ height: "fit-content" }}
         >
           {banner && (
@@ -93,7 +102,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg`}
               width="100%"
               height="auto"
-              alt={`Banner del proyecto ${titulo || nombre}`}
+              alt={`Banner del proyecto ${localizedTitulo || nombre}`}
             />
           )}
 
@@ -144,20 +153,17 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             </div>
           )}
           <h2 className=" text-center animate-charcter" style={{}}>
-            {titulo}
+            {localizedTitulo}
           </h2>
 
           <hr className="hr hr-blurry w-50 mx-auto" />
-          {<h4 className="mt-0 text-center">{subtitulo}</h4>}
+          {<h4 className="mt-0 text-center">{localizedSubtitulo}</h4>}
           <div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3    text-justify responsive">
-            <p className=" mx-lg-5 mx-xl-5 mx-md-1 mx-sm-1 mx-xs-1 px-5 font-16 text-center">
-              {(introduccion as Array<string>).map((par: string) => (
-                <>
-                  {par}
-                  <br></br>
-                </>
+            <div className=" mx-lg-5 mx-xl-5 mx-md-1 mx-sm-1 mx-xs-1 px-5 font-16 text-center">
+              {(introduccion as Array<string>).map((par: string, idx: number) => (
+                <p key={`intro-${idx}`}>{par}</p>
               ))}
-            </p>
+            </div>
           </div>
         </MDBContainer>
       </section>
@@ -187,85 +193,10 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       </section>
       <div className="skew-c"></div>
       <section className="colour-block">
-        <MDBContainer small responsive centered>
+        <MDBContainer className="embed-responsive small responsive centered">
           <br></br>
           <div>
-            <h3 className="text-center">Características</h3>
-          </div>
-          <hr className="hr hr-blurry w-50 mx-auto" />
-
-          <MDBAccordion id="accordion" className="m-5 w-fit-content">
-            <MDBAccordionItem
-              collapseId={1}
-              headerTitle="Edificio"
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-              className={"text-align-center"}
-            >
-              {CaracteristicasEdificio}
-            </MDBAccordionItem>
-
-            <MDBAccordionItem
-              collapseId={2}
-              headerTitle="Residencias"
-              aria-controls="panel2a-content"
-              id="panel2a-header"
-              className={"text-center"}
-            >
-              {CaracteristicasResidencias}
-            </MDBAccordionItem>
-
-            <MDBAccordionItem
-              collapseId={3}
-              headerTitle="Amenidades"
-              aria-controls="panel3a-content"
-              id="panel3a-header"
-              className={"text-center"}
-            >
-              {CaracteristicasAmenidades as JSX.Element}
-            </MDBAccordionItem>
-          </MDBAccordion>
-        </MDBContainer>
-      </section>
-      <div className="skew-cc"></div>
-      <section className="white-block" id="galeria-proyectos">
-        <MDBContainer>
-          <br></br>
-
-          <div>
-            <h3 className="text-center">Galería Fotográfica</h3>
-          </div>
-          <hr className="hr hr-blurry w-50 mx-auto" />
-
-          <br></br>
-
-          <SlideshowGalleryDesarrollo
-            name={nombre}
-            numberOfImages={numberOfImages as number}
-          />
-          {/* <SlideshowGalleryDesarrollo2
-          name={nombre}
-          numberOfImages={numberOfImages as number}
-        /> */}
-        </MDBContainer>
-      </section>
-      <div className="skew-c"></div>
-
-      {/* <MDBContainer>
-        <iframe
-          width="450"
-          height="250"
-          style={{ border: 0 }}
-          referrerPolicy="no-referrer-when-downgrade"
-          src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyCuQ4dtFPvp6nmhSUmAB4HNk6NzAjTvxWo&q=${direccion}`}
-          allowFullScreen
-        ></iframe> */}
-      {/* </div> */}
-      <section className="colour-block">
-        <MDBContainer className="embed-responsive">
-          <br></br>
-          <div>
-            <h3 className="text-center">Documentos De Interés</h3>
+            <h3 className="text-center">{t("pages.project.pdfUI.documentsTitle")}</h3>
           </div>
           <hr className="hr hr-blurry w-50 mx-auto" />
 
@@ -273,11 +204,11 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           <MDBTabs>
             <MDBTabsItem
               style={{ color: "#2b2a2e!important" }}
-              title="Brochure"
+              title={t("pages.project.pdf.brochure")}
             >
               <MDBTabsLink onClick={() => openTab("brochure")} href="#docs">
                 {" "}
-                Brochure
+                {t("pages.project.pdf.brochure")}
               </MDBTabsLink>
             </MDBTabsItem>
             <MDBTabsItem>
@@ -286,7 +217,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 onClick={() => openTab("hoja")}
                 href="#docs"
               >
-                Hoja Informativa
+                {t("pages.project.pdf.hoja")}
               </MDBTabsLink>
             </MDBTabsItem>
             <MDBTabsItem>
@@ -296,7 +227,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 href="#docs"
                 onClick={() => openTab("planos")}
               >
-                Planos
+                {t("pages.project.pdf.planos")}
               </MDBTabsLink>
             </MDBTabsItem>
           </MDBTabs>
@@ -335,16 +266,16 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               >
                 <big>
                   <p>
-                    No se puede mostrar el archivo PDF.{" "}
+                    {t("pages.project.pdfUI.cantDisplay")}{" "}
                     <Link
                       target="_blank"
                       className="text-decoration-underline"
                       download
                       to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                     >
-                      Descárgalo
+                      {t("pages.project.pdfUI.download")}
                     </Link>{" "}
-                    en vez.
+                    {t("pages.project.pdfUI.instead")}
                   </p>
                 </big>
               </object>
@@ -358,16 +289,16 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               >
                 <big>
                   <p>
-                    No se puede mostrar el archivo PDF.{" "}
+                    {t("pages.project.pdfUI.cantDisplay")}{" "}
                     <Link
                       target="_blank"
                       className="text-decoration-underline"
                       download
                       to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                     >
-                      Descárgalo
+                      {t("pages.project.pdfUI.download")}
                     </Link>{" "}
-                    en vez.
+                    {t("pages.project.pdfUI.instead")}
                   </p>
                 </big>
               </object>
@@ -381,16 +312,16 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               >
                 <big>
                   <p>
-                    No se puede mostrar el archivo PDF.{" "}
+                    {t("pages.project.pdfUI.cantDisplay")}{" "}
                     <Link
                       target="_blank"
                       className="text-decoration-underline"
                       download
                       to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                     >
-                      Descárgalo
+                      {t("pages.project.pdfUI.download")}
                     </Link>{" "}
-                    en vez.
+                    {t("pages.project.pdfUI.instead")}
                   </p>
                 </big>
               </object>
@@ -404,7 +335,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                   to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                   download
                 >
-                  Descargar
+                  {t("pages.project.pdfUI.downloadBtn")}
                 </Link>
               </div>
             </MDBTabsPane>
@@ -417,7 +348,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           <br />
           <br></br>
           <div>
-            <h3 className="text-center mb-1">Propiedades en el Área</h3>
+            <h3 className="text-center mb-1">{t("pages.project.propertiesInArea")}</h3>
           </div>
           <hr className="hr hr-blurry w-50 mx-auto" />
 
@@ -438,9 +369,9 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
           {/*</MDBRow>*/}
           <MDBRow>
-            {[...desarrollosArea.values()].map((desarrollo) => {
+            {[...desarrollosArea.values()].map((desarrollo, idx) => {
               return (
-                <MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
+                <MDBCol key={desarrollo.nombre ?? idx} xs={12} sm={12} md={6} lg={4} xl={4}>
                   <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                     <div
                       className="propiedades-img p-0 m-0"
@@ -451,14 +382,9 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                     ></div>
 
                     <h4 className="text-center card-title m-2 ">
-                      {desarrollo.titulo ||
-                        desarrollo.nombre
-                          .split("-")
-                          .map(
-                            (word) =>
-                              word.charAt(0).toUpperCase() + word.substring(1)
-                          )
-                          .join(" ")}
+                      {getLocalized(desarrollo.titulo) || (desarrollo.nombre || "").split("-").map((word, idx) => (
+                        <span key={`word-${idx}`}>{word.charAt(0).toUpperCase() + word.substring(1)} </span>
+                      ))}
                     </h4>
                   </Link>
                 </MDBCol>
@@ -477,7 +403,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">
-          <h2 className={""}>Contáctanos Hoy</h2>
+          <h2 className={""}>{t("pages.project.contactUsToday")}</h2>
         {innerWidth <= 768 && (
           <MDBContainer>
 

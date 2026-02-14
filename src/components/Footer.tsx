@@ -1,90 +1,49 @@
-import { Link } from "react-router-dom";
-import Areas from "../objects/areas/Areas.tsx";
-import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos.ts";
-import {
-  MDBBtn,
-  MDBCol,
-  MDBContainer,
-  MDBFooter,
-  MDBIcon,
-  MDBListGroup,
-  MDBListGroupItem,
-  MDBRow,
-} from "mdb-react-ui-kit";
 import React from "react";
+import { MDBFooter } from "mdb-react-ui-kit";
+import Areas from "../objects/areas/Areas";
+import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos";
+import { useTranslation } from "../i18n.tsx";
 
 export default function Footer() {
+  const { t, lang } = useTranslation();
+  const areas = Areas();
+  const getLocalized = (field: any, l = lang) => {
+    if (!field) return "";
+    if (typeof field === "object")
+      return (
+        field[l] ||
+        field.es ||
+        Object.values(field)[0] ||
+        ""
+      );
+    return field;
+  };
+
   return (
-    <>
-      <div className="skew-c"></div>
-      <MDBFooter
-        style={{ background: "rgb(251, 251, 251)" }}
-        className="text-center w-100 pt-2 my-5 mb-0 pb-0 mx-auto px-auto pt-5"
-      >
-        <MDBContainer
-          fluid
-          className=" px-auto py-2 mt-3 mx-auto my-0 bg-transparent"
-        >
-          <MDBRow
-            className={
-              "d-flex flex-row flex-sm-wrap overflow-x-scroll mx-auto flex-fill justify-content-around bg-transparent"
-            }
-          >
-
-            {Areas().map((area) => {
-              if(getDesarrollosForArea(area) && [...getDesarrollosForArea(area)].length > 0) {
-
-              return (
-                <MDBCol className="mb-2 mb-md-0 mx-auto my-5 ">
-                  <h5 className="text-center">{area.titulo}</h5>
-                  <small className={"w-75 mx-auto list-unstyled"}>
-                    <li className={"mdc-list-divider mb-3"}></li>
-                  </small>
-                  <small>
-                    <MDBListGroup
-                      small
-                      horizontalSize={"100"}
-                      className={" mb-0 mx-0 px-0 list-unstyled"}
-                    >
-
-                      {[...getDesarrollosForArea(area)].map((des) => {
-                        return (
-                          <MDBListGroupItem className="text-sm-center bg-transparent border-0 text-nowrap text-muted py-0 my-0">
-                            <Link
-                              className={"bg-transparent"}
-                              to={`/desarrollos/${des.nombre}`}
-                            >
-                              {des.titulo ||
-                                des.nombre
-                                  .split("-")
-                                  .map(
-                                    (word) =>
-                                      word.charAt(0).toUpperCase() +
-                                      word.substring(1)
-                                  )
-                                  .join(" ")}
-                            </Link>
-                          </MDBListGroupItem>
-                        );
-                      })}
-                    </MDBListGroup>
-                  </small>
-                </MDBCol>
-              );
-              }
-            })}
-          </MDBRow>
-
-          <br />
-
-          <section
-            className="d-flex flex-row justify-content-center"
-            style={{ background: "#f2f2ed" }}
-          >
-            © 2023 Copyright Scattolini Group
-          </section>
-        </MDBContainer>
-      </MDBFooter>
-    </>
+    <MDBFooter className="font-small bg-light pt-4">
+      <div className="container text-center text-md-left">
+        <div className="row">
+          {areas.map((area) => (
+            <div key={area.name} className="col-md-3 mb-md-0 mb-3">
+              <h5 className="text-uppercase">{getLocalized(area.titulo)}</h5>
+              <ul className="list-unstyled">
+                {[...getDesarrollosForArea(area)].map((des) => (
+                  <li key={des.nombre ?? des.titulo ?? Math.random()}>
+                    <a href={`/desarrollos/${des.nombre}/`}>
+                      {typeof des.titulo === "object"
+                        ? getLocalized(des.titulo)
+                        : des.titulo || des.nombre}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="text-center py-3">
+        © {new Date().getFullYear()} Scattolini Group
+      </div>
+    </MDBFooter>
   );
 }

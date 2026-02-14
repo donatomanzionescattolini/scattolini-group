@@ -1,12 +1,14 @@
 import {Link} from "react-router-dom";
 import {MDBCardLink, MDBCol, MDBRow,} from "mdb-react-ui-kit";
+import { useTranslation } from "../i18n.tsx";
 
 export default function AliadosComponent() {
+    const { t } = useTranslation();
     return (
         <>
        {innerWidth <= 560 && <><br></br><br></br></>}
         <br></br>
-            <h2 className="text-center mt-5 display-6">Aliados</h2>
+            <h2 className="text-center mt-5 display-6">{t("nav.aliados")}</h2>
             <hr className="hr hr-blurry w-50 mx-auto"/>
             <MDBRow
                 style={{width: "60vw", marginInline: "auto"}}

@@ -1,81 +1,89 @@
 import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Areas from "../objects/areas/Areas.tsx";
-import Desarrollo from "../models/desarrollos/Desarrollo.tsx";
-import { MDBCarousel, MDBContainer } from "mdb-react-ui-kit";
-import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos.ts";
-import { Area } from "../models/areas/Area.tsx";
-
-export interface GalleryImage {
-  src: string;
-  alt: string;
-}
+import Areas from "../objects/areas/Areas";
+import Desarrollo from "../models/desarrollos/Desarrollo";
+import { MDBContainer } from "mdb-react-ui-kit";
+import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos";
+import { Area } from "../models/areas/Area";
+import { useTranslation } from "../i18n.tsx";
 
 interface PropsSlideshow {
-  areas: string[];
+  areas?: string[];
 }
 
 const SlideshowGallery = (props: PropsSlideshow) => {
+  const { lang } = useTranslation();
   const [index, setIndex] = useState(0);
-  const [areaObjects] = useState<Area[]>(
-    (props.areas ? props.areas : Areas()) as Area[]
-  );
+  const areaObjects: Area[] = (props.areas ? props.areas : Areas()) as any;
+
   const handleSelect = (selectedIndex: number) => {
-    if (areaObjects[index]) return setIndex(selectedIndex);
-    else return setIndex(0);
+    setIndex(selectedIndex ?? 0);
   };
-  const [areaDesarrollos, setAreaDesarrollos] = useState<Set<Desarrollo>>(
-    new Set()
-  );
-  const [returnEls] = useState(() => {
-    const temp: React.JSX.Element[] = new Array<React.JSX.Element>();
-    areaObjects.forEach((areaObject: Area) => {
-      setAreaDesarrollos(getDesarrollosForArea(areaObject));
-      [...areaDesarrollos].map((x: Desarrollo, index: number) => {
-        temp.push(
-          <Carousel.Item
-            key={index}
-            id={`second-carousel-${index}`}
+
+  const getLocalized = (field: any) => {
+    if (!field) return "";
+    if (typeof field === "object") return field[lang] || field.es || Object.values(field)[0] || "";
+    return field;
+  };
+
+  // Build carousel items synchronously from available areas and desarrollos
+  const items: React.ReactNode[] = [];
+  areaObjects.forEach((areaObject: Area) => {
+    const desSet = getDesarrollosForArea(areaObject) ?? new Set<Desarrollo>();
+    [...desSet].forEach((x: Desarrollo, idx: number) => {
+      const title = getLocalized(x.titulo) ||
+        (x.nombre || "")
+          .split("-")
+          .map(
+            (n) => n.charAt(0).toUpperCase() + n.substring(1)
+          )
+          .join(" ");
+      const areaName = areaObject?.name || "";
+      const imgUrl = `https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaName}/${x.nombre}.webp`;
+      items.push(
+        <Carousel.Item
+          key={`${areaName}-${x.nombre ?? idx}`}
+          id={`carousel-${areaName}-${idx}`}
+        >
+          <div
             style={{
-              backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaObject}/${x.nombre}.webp`,
+              width: "100%",
+              height: "400px",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundImage: `url('${imgUrl}')`,
             }}
-          >
-            <Carousel.Caption>
-              <h3 className="display-6 font-weight-bold">
-                {x.nombre
-                  .split("-")
-                  .map(
-                    (n) => String(n.charAt(0)).toUpperCase() + n.substring(1)
-                  )
-                  .join(" ")}
-              </h3>
-              <p className="lead font-weight-bold text-white">
-                {areaObject.name
-                  .split("-")
-                  .map((n) => n.charAt(0).toUpperCase() + n.substring(1))
-                  .join(" ")}
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        );
-      });
+          />
+          <Carousel.Caption>
+            <h3 className="display-6 font-weight-bold">{title}</h3>
+            <p className="lead font-weight-bold text-white">
+              {getLocalized(areaObject?.titulo) || (areaName || "")
+                .split("-")
+                .map((n) => n.charAt(0).toUpperCase() + n.substring(1))
+                .join(" ")}
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      );
     });
-    return temp;
   });
+
+  if (items.length === 0) {
+    return null;
+  }
 
   return (
     <MDBContainer fluid>
-      <MDBCarousel
-        indicators
+      <Carousel
+        activeIndex={index}
         onSelect={handleSelect}
         controls
-        autoFocus
-        slide={false}
-        fade
+        indicators
+        interval={5000}
       >
-        {...returnEls}
-      </MDBCarousel>
+        {items}
+      </Carousel>
     </MDBContainer>
   );
 };

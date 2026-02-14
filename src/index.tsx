@@ -3,13 +3,16 @@ import "./index.css";
 
 import App from "./App";
 import React from "react";
+import { TranslationProvider } from "./i18n.tsx";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
 );
 root.render(
     <React.StrictMode>
-        <App/>
+        <TranslationProvider>
+            <App/>
+        </TranslationProvider>
     </React.StrictMode>
 );
 

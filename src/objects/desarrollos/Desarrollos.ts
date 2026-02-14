@@ -104,9 +104,8 @@ desarrolloMap.push({
 });
 
 desarrolloMap.push({
-  area: PompanoBeach,
-  des: new Set([WPompanoBeach, EnvyResidence]),
-});
+  area: PompanoBeach(),
+  des: new Set([WPompanoBeach, EnvyResidence("es")]),});
 
 desarrolloMap.push({ area: PembrokePines(), des: new Set([]) });
 desarrolloMap.push({
@@ -121,13 +120,13 @@ desarrolloMap.push({
 
 desarrolloMap.push({
   area: Hollywood(),
-  des: new Set([IconBeachResidences,SevenParkResidences, GaiaResidences]),
+  des: new Set([IconBeachResidences, SevenParkResidences, GaiaResidences]),
 });
 desarrolloMap.push({
   area: Brickell(),
   des: new Set([
     BaccaratResidences(),
-    DomusBrickellCenter,
+    DomusBrickellCenter("es"),
     Domus(),
     FourteenRiverDistrict(),
     FourteenTwentyEight(),
@@ -135,9 +134,9 @@ desarrolloMap.push({
     Ora(),
     Cipriani(),
     MercedesBenzPlacesMiami(),
-    _2200Brickell(),
+    _2200Brickell,
     DolceAndGabbanaResidences,
-      ViceroyBrickell
+    ViceroyBrickell
   ]),
 });
 
@@ -145,7 +144,7 @@ desarrolloMap.push({
   area: BayHarbor(),
   des: new Set([LaMaré(), LaBaia(), Origin(), TheWell()]),
 });
-desarrolloMap.push({ area: CoconutGrove(), des: new Set([Vita(),TheWellCoconutGrove]) });
+desarrolloMap.push({ area: CoconutGrove(), des: new Set([Vita(), TheWellCoconutGrove]), });
 desarrolloMap.push({ area: Doral(), des: new Set([]) });
 desarrolloMap.push({
   area: Downtown(),
@@ -176,7 +175,7 @@ desarrolloMap.push({
 });
 desarrolloMap.push({
     area: NorthBayVillage(),
-    des:new Set([TulaResidences,ShomaBay()])
+    des:new Set([TulaResidences, ShomaBay()])
 });
 desarrolloMap.push({
   area: MiamiBeach(),
@@ -188,8 +187,8 @@ desarrolloMap.push({
     SeventyTwoPark(),
     Palma(),
       TheWilliam,
-      SeventyTwoCarlyle,
-      FaenaResidences
+    SeventyTwoCarlyle,
+    FaenaResidences
   ]),
 });
 
@@ -222,7 +221,7 @@ desarrolloMap.push({
   des: new Set([TheAvenue(), CoraMerrickPark]),
 });
 
-desarrolloMap.push({area: MidtownMiami,des:new Set([MidtownParkResidences,TheStandardResidences,JeanGeorgesMiamiTropicResidences])});
+desarrolloMap.push({area: MidtownMiami(),des:new Set([MidtownParkResidences,TheStandardResidences,JeanGeorgesMiamiTropicResidences])});
 desarrolloMap.forEach((entry) => {
   entry.des = new Set(
     [...entry.des].map((desar) => {
@@ -236,10 +235,16 @@ desarrolloMap.forEach((entry) => {
 });
 
 export function getDesarrollosForArea(area: Area): Set<Desarrollo> {
-  return desarrolloMap.filter((entry) =>
+  const filtered = desarrolloMap.filter((entry) =>
     entry.area.name
       .toLowerCase()
       .trim()
       .includes(area.name.trim().toLowerCase())
-  )[0].des;
+  );
+  
+  if (filtered.length === 0) {
+    return new Set<Desarrollo>();
+  }
+  
+  return filtered[0].des;
 }

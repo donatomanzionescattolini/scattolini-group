@@ -1,5 +1,4 @@
 import { AboutUs } from "./AboutUs";
-
 import { MDBBtn, MDBContainer } from "mdb-react-ui-kit";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import AliadosComponent from "./components/AliadosComponent.tsx";
@@ -10,8 +9,10 @@ import AreasComponent from "./components/areas/AreasComponent.tsx";
 import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
 import Quote, { quotes } from "./models/Quote";
 import FloatingContactFormComponent from "./components/FloatingContactFormComponent.tsx";
+import { useTranslation } from "./i18n.tsx";
 
 export function Home() {
+  const { t } = useTranslation();
   const [width, setWidth] = React.useState(window.innerWidth);
 
   useEffect(() => {
@@ -46,7 +47,7 @@ export function Home() {
           {/* <FloatingContactFormComponent /> */}
         {/* </div> */}
       {/* )} */}
-      <MDBContainer fluid jumbotron>
+      <MDBContainer fluid className="jumbotron">
         <div className="video-container">
           <video autoPlay loop muted playsInline className={" m-0 p-0"} preload="auto">
             <source
@@ -62,15 +63,13 @@ export function Home() {
           <div className="overlay"></div>
 
           <div className="content text-center ">
-            <h1 className="display-2" id="hero-heading">SCATTOLINI GROUP</h1>
-            <p className="lead" id="hero-subheading">
-              Agencia Inmobiliaria
-            </p>
+            <h1 className="display-2" id="hero-heading">{t("hero.title")}</h1>
+            <p className="lead" id="hero-subheading">{t("hero.subtitle")}</p>
             <a
               className="btn btn-large btn-outline-secondary mt-3"
               href="mailto:elda.scattolini@scattolinigroup.com"
             >
-              Contáctanos Hoy
+              {t("hero.cta")}
             </a>
           </div>
         </div>
@@ -122,3 +121,6 @@ export function Home() {
     </>
   );
 }
+
+export default Home;
+

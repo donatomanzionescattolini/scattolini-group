@@ -4,12 +4,14 @@ import { useState } from "react";
 import { send } from "@emailjs/browser";
 
 import { Alert, AlertHeading } from "react-bootstrap";
+import { useTranslation } from "../i18n.tsx";
 
 interface ContactFormProps {
   projectName: string;
 }
 
 export default function ContactFormComponent() {
+  const { t } = useTranslation();
   const [reply_to, setReplyTo] = useState("");
   const [successAlert, setSuccessAlert] = useState(false);
   const [failureAlert, setFailureAlert] = useState(false);
@@ -99,8 +101,8 @@ export default function ContactFormComponent() {
                   dismissible
                   onClose={handleCloseAlertSuccess}
               >
-                  <AlertHeading>Mensaje enviado</AlertHeading>
-                  <p>¡Mensaje enviado con éxito!</p>
+                  <AlertHeading>{t("pages.contacto.alerts.successTitle")}</AlertHeading>
+                  <p>{t("pages.contacto.alerts.successMessage")}</p>
               </Alert>
           )}
           {failureAlert && (
@@ -110,11 +112,10 @@ export default function ContactFormComponent() {
                   dismissible
                   onClose={handleCloseAlertFailure}
               >
-                  <AlertHeading>Mensaje enviado</AlertHeading>
+                  <AlertHeading>{t("pages.contacto.alerts.failureTitle")}</AlertHeading>
                   <p>
-                      Hubo un problema enviando el correo. Por favor intente de nuevo o
-                      envíenos un correo desde su propio servicio a{" "}
-                      <a href="mailto:info@scattolinigroup.com">este correo</a>
+                      {t("pages.contacto.alerts.failureMessage")}{" "}
+                      <a href="mailto:info@scattolinigroup.com">{t("pages.contacto.form.emailLink")}</a>
                   </p>
               </Alert>
           )}
@@ -122,7 +123,7 @@ export default function ContactFormComponent() {
           <MDBInput
             id="form4Example1"
             wrapperClass="mb-4"
-            label="Nombre"
+            label={t("pages.contacto.form.name")}
             name="from_name"
             value={toSend.from_name}
             required
@@ -132,7 +133,7 @@ export default function ContactFormComponent() {
             type="email"
             id="form4Example2"
             wrapperClass="mb-4"
-            label="Correo electrónico"
+            label={t("pages.contacto.form.email")}
             name="client_email"
             formNoValidate={false}
             onChange={handleChange}
@@ -144,7 +145,7 @@ export default function ContactFormComponent() {
             required
             id="form-Example3"
             wrapperClass="mb-4"
-            label="Número de Teléfono"
+            label={t("pages.contacto.form.phone")}
             name="phone"
             value={toSend.phone}
             formNoValidate={false}
@@ -156,7 +157,7 @@ export default function ContactFormComponent() {
             id="form-example4"
             wrapperClass="mb-4"
             rows={4}
-            label="Mensaje"
+            label={t("pages.contacto.form.message")}
             value={toSend.message}
             name="message"
             onChange={handleChange}
@@ -169,7 +170,7 @@ export default function ContactFormComponent() {
         defaultChecked
       /> */}
           <button className="mb-4 btn btn-sm " formAction="#top" type="submit">
-            Enviar
+            {t("pages.contacto.form.sendButton")}
           </button>
         </form>
 

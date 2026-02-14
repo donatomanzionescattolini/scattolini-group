@@ -1,168 +1,161 @@
-import { caracteristicas } from "./ProjectParams.tsx";
-import React, { ReactNode } from "react";
-import { Area } from "../areas/Area.tsx";
-
-class Constructora {
-  public name: string;
-
-  constructor(name?: string) {
-    this.name = name;
-  }
-
-  toString() {
-    return this.name! || "";
-  }
-}
+import React from "react";
+import { getDesarrolloData } from "../../i18n";
 
 class Desarrollo {
-  [x: string]: { añoDeConstrucciónOFinalización: any; constructora: any; numberOfRooms: any; typeOfUnits: any; ubicación: any; };
-  public area: Area;
+  // permissive dynamic container used across many object files
+  [key: string]: any;
 
-  public numberOfFloors: number;
-
-  public nombre: string;
-
-  public caracteristicas: caracteristicas | React.ReactNode;
-
-  public introduccion: string[];
-
-  public titulo: string | JSX.Element;
-
-  public slogan: string | JSX.Element;
-
-  public amenidades?: string[] | Map<string, string[]>;
-  public banner?: boolean;
-  video?: ReactNode;
-
-  residencias?: string[] | Map<String, string[]>;
-  numberOfImages?: number;
-  edificio: {
-    añoDeConstrucciónOFinalización: number;
-    piesCuadrados: number | number[];
-    ubicación: string | ReactNode;
-    numberOfUnits: number;
-    typeOfUnits: string;
-    numberOfModels: string | number;
-    constructora: string | Constructora;
-    numberOfBathrooms: number | string | { start: number; end: number };
-    numberOfRooms: number | { start: number; end: number } | string;
-  };
-  direccion: string;
-  estimatedCompletionYear: number;
-  piesCuadrados: number | { start: number; end: number } | string;
-  ubicación: string | ReactNode;
-  numberOfUnits: number;
-  typeOfUnits: string;
-  numberOfModels: string | number;
-  constructora: string | Constructora;
-  numberOfBathrooms: number | string | { start: number; end: number };
-  numberOfRooms: number | { start: number; end: number } | string;
-  numberOfParkingSpots: number | { start: number; end: number } | string;
-  constructor(area?: Area) {
-    this.area = area;
+  constructor(area?: any) {
+    if (area) this.area = area;
   }
 
-  displayAmenidades() {
-    let el: ReactNode = <></>;
-    const els: ReactNode[] = [];
-    if (this.amenidades instanceof Array) {
-      this.amenidades.forEach((a) => els.push(<li>{a}</li>));
-      el = <ul>{els}</ul>;
-    } else if (this.amenidades instanceof Map) {
-      this.amenidades.forEach((am: string[], type: string) => {
-        const amenidadesItem = am.map((a) => <li>{a}</li>);
-        els.push(
-          <>
-            <dt>{type}</dt>
-            <dd>
-              <ul>{amenidadesItem}</ul>
-            </dd>
-          </>
-        );
-      });
-      el = <dl>{els}</dl>;
+  getLocalizedContent(lang: "es" | "en"): any {
+    const desarrolloKey = this.nombre?.replace(/[-\s]/g, "").toLowerCase();
+    const localizedData = getDesarrolloData(desarrolloKey, lang);
+    
+    if (localizedData) {
+      return {
+        ...this,
+        titulo: localizedData.titulo || this.titulo,
+        subtitulo: localizedData.subtitulo ? 
+          <p className="text-cursive p-0 m-0"><em>{localizedData.subtitulo}</em></p> : 
+          this.subtitulo,
+        introduccion: localizedData.introduccion || this.introduccion,
+      };
     }
-    return el;
+    
+    return this;
   }
 
-  numberOfUnitsDisplay() {
-    return this.numberOfUnits + " " + this.typeOfUnits;
-  }
-
-  displayCaracteristicasEdificio() {
-    return (
-      <dl>
-        <dt>Ubicación</dt>
-        <dd>{this.ubicación}</dd>
-        {this.constructora &&<>   <dt>Constructora</dt>
-       <dd>{this.constructora.toString()}</dd></>}
-        <dt>Año de Construcción</dt>
-        <dd>{this.estimatedCompletionYear}</dd>
-        {this.piesCuadrados &&  <><dt>Tamaño de viviendas en pies cuadrados</dt>
-        <dd>{this.piesCuadrados as string}</dd></>}
-        {this.numberOfModels && <><dt>Modelos</dt>
-        <dd>{this.numberOfModels}</dd></>}
-        <dt>Número de viviendas</dt>
-        <dd>{this.numberOfUnits}</dd>
-        <dt>Tipo de viviendas</dt>
-        <dd>{this.typeOfUnits}</dd>
-        <dt>Número de cuartos</dt>
-        <dd>
-          {typeof this.numberOfRooms === "number" ||
-          typeof this.numberOfRooms === "string"
-            ? this.numberOfRooms
-            : this.numberOfRooms["start"] + " a " + this.numberOfRooms["end"]}
-        </dd>
-        <dt>Número de baños</dt>
-     {this.numberOfBathrooms && <>   <dd>
-          {((typeof this.numberOfBathrooms === "string" ||
-            typeof this.numberOfBathrooms === "number") &&
-            this.numberOfBathrooms) ||
-            this.numberOfBathrooms["start"] +
-              " a " +
-              this.numberOfBathrooms["end"]}
-        </dd>
-     </>}
-      </dl>
-    );
-  }
-  displayCaracteristicasResidencias() {
-    if (this.residencias instanceof Array) {
+  displayAmenidades(): React.ReactNode {
+    const amenidades = this.amenidades;
+    if (!amenidades) return null;
+    if (Array.isArray(amenidades)) {
       return (
         <ul>
-          {this.residencias.map((r) => (
-            <>
-              <li>{r}</li>
-            </>
+          {amenidades.map((a: any, i: number) => (
+            <li key={`${a}-${i}`}>{a}</li>
           ))}
         </ul>
       );
-    } else {
+    }
+    if (amenidades instanceof Map) {
+      const els: React.ReactNode[] = [];
+      let idx = 0;
+      amenidades.forEach((list: any[], type: string) => {
+        els.push(
+          <React.Fragment key={`amen-${idx}-${type}`}>
+            <dt>{type}</dt>
+            <dd>
+              <ul>
+                {list.map((a: any, i: number) => (
+                  <li key={`${type}-${i}-${a}`}>{a}</li>
+                ))}
+              </ul>
+            </dd>
+          </React.Fragment>
+        );
+        idx++;
+      });
+      return <dl>{els}</dl>;
+    }
+    if (typeof amenidades === "object") {
+      const first = Object.values(amenidades)[0] || [];
+      if (Array.isArray(first)) {
+        return (
+          <ul>
+            {first.map((a: any, i: number) => (
+              <li key={`${a}-${i}`}>{a}</li>
+            ))}
+          </ul>
+        );
+      }
+      return null;
+    }
+    return null;
+  }
+
+  displayCaracteristicasResidencias(): React.ReactNode {
+    const residencias = this.residencias;
+    if (!residencias) return null;
+    if (Array.isArray(residencias)) {
+      return (
+        <ul>
+          {residencias.map((r: any, i: number) => (
+            <li key={`${r}-${i}`}>{r}</li>
+          ))}
+        </ul>
+      );
+    }
+    if (residencias instanceof Map) {
+      let idx = 0;
       return (
         <dl>
-          {[...this.residencias.keys()].map((k: string) => (
-            <>
-              <dt>{k}</dt>
-              <dd>
-                <ul>
-                  {(this.residencias as Map<string, string[]>)
-                    .get(k)
-                    .map((r) => (
-                      <li>{r}</li>
+          {[...residencias.keys()].map((k: string) => {
+            const list = residencias.get(k) || [];
+            const key = `res-${idx}-${k}`;
+            idx++;
+            return (
+              <React.Fragment key={key}>
+                <dt>{k}</dt>
+                <dd>
+                  <ul>
+                    {list.map((r: any, i: number) => (
+                      <li key={`${k}-${i}-${r}`}>{r}</li>
                     ))}
-                </ul>
-              </dd>
-            </>
-          ))}
+                  </ul>
+                </dd>
+              </React.Fragment>
+            );
+          })}
         </dl>
       );
     }
+    if (typeof residencias === "object") {
+      const first = Object.values(residencias)[0] || [];
+      if (Array.isArray(first)) {
+        return (
+          <ul>
+            {first.map((r: any, i: number) => (
+              <li key={`${r}-${i}`}>{r}</li>
+            ))}
+          </ul>
+        );
+      }
+      return null;
+    }
+    return null;
   }
-  createCaracteristicas(): React.ReactNode | caracteristicas {
+
+  displayCaracteristicasEdificio(): React.ReactNode {
+    const ubicacion = this.ubicación ?? this.ubicacion;
+    return (
+      <dl>
+        <dt>Ubicación</dt>
+        <dd>{ubicacion}</dd>
+        {this.constructora && (
+          <>
+            <dt>Constructora</dt>
+            <dd>{typeof this.constructora === "string" ? this.constructora : String(this.constructora)}</dd>
+          </>
+        )}
+        <dt>Año de Construcción</dt>
+        <dd>{this.estimatedCompletionYear}</dd>
+        {this.piesCuadrados && (
+          <>
+            <dt>Tamaño de viviendas en pies cuadrados</dt>
+            <dd>{String(this.piesCuadrados)}</dd>
+          </>
+        )}
+      </dl>
+    );
+  }
+
+  createCaracteristicas(): any {
     return {
-      residencias: <>{this.displayCaracteristicasResidencias()}</>,
-      edificio: <>{this.displayCaracteristicasEdificio()}</>,
-      amenidades: <>{this.displayAmenidades()}</>,
+      residencias: this.displayCaracteristicasResidencias(),
+      edificio: this.displayCaracteristicasEdificio(),
+      amenidades: this.displayAmenidades(),
     };
   }
 }

@@ -7,13 +7,15 @@ import {
     MDBCardText,
     MDBCardTitle,
 } from "mdb-react-ui-kit";
+import { useTranslation } from "../i18n.tsx";
 
 export default function Servicios() {
+    const { t } = useTranslation();
     return (
         <>
        {innerWidth <= 560 && <><br></br><br></br></>}
         <br></br>
-            <h2 className="text-center mt-5">Servicios</h2>
+            <h2 className="text-center mt-5">{t("pages.services.title")}</h2>
             <hr className="hr hr-blurry w-50 mx-auto"/>
 
             <br/>
@@ -22,13 +24,12 @@ export default function Servicios() {
                 <MDBCard className="m-xs-0 m-sm-0 m-md-2 m-lg-2 m-xl-2">
                     <MDBCardHeader>
                         <MDBCardTitle>
-                            <h4>Asesoramiento Inmobiliario</h4>
+                            <h4>{t("pages.services.advisory")}</h4>
                         </MDBCardTitle>
                     </MDBCardHeader>
                     <MDBCardBody>
                         <MDBCardText className="text-center">
-                            Ofrecemos asesoramiento experto en todas las áreas del mercado
-                            inmobiliario
+                            {t("pages.services.advisoryDesc")}
                         </MDBCardText>
                         <br/>
                         <MDBCardLink
@@ -36,7 +37,7 @@ export default function Servicios() {
                             className="btn btn-outline-secondary btn-outline-secondary"
                             
                         >
-                            Obtener más información
+                            {t("pages.services.moreInfo")}
                         </MDBCardLink>
                     </MDBCardBody>
                 </MDBCard>
@@ -44,19 +45,19 @@ export default function Servicios() {
                 <MDBCard className="m-2">
                     <MDBCardHeader>
                         <MDBCardTitle>
-                            <h4>Aministración de Propiedades</h4>
+                            <h4>{t("pages.services.propertyManagement")}</h4>
                         </MDBCardTitle>
                     </MDBCardHeader>
                     <MDBCardBody>
                         <MDBCardText>
-                            Ofrecemos servicios completos de administración de propiedades
+                            {t("pages.services.propertyManagementDesc")}
                         </MDBCardText>
                         <br/>
                         <MDBCardLink
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
                         >
-                            Obtener más información
+                            {t("pages.services.moreInfo")}
                         </MDBCardLink>
                     </MDBCardBody>
                 </MDBCard>
@@ -64,39 +65,36 @@ export default function Servicios() {
             <MDBCardGroup className="text-center">
                 <MDBCard className="m-2">
                     <MDBCardHeader>
-                        <MDBCardTitle>Venta de Propiedades</MDBCardTitle>
+                        <MDBCardTitle>{t("pages.services.sales")}</MDBCardTitle>
                     </MDBCardHeader>
                     <MDBCardBody>
                         <MDBCardText>
-                            Ofrecemos servicios de venta de inmuebles de alta calidad y
-                            confiabilidad, para ayudarlo a encontrar la propiedad de sus
-                            sueños
+                            {t("pages.services.salesDesc")}
                         </MDBCardText>
                         <br/>
                         <MDBCardLink
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
                         >
-                            Obtener más información
+                            {t("pages.services.moreInfo")}
                         </MDBCardLink>
                     </MDBCardBody>
                 </MDBCard>
 
                 <MDBCard className="m-2">
                     <MDBCardHeader>
-                        <MDBCardTitle>Compra de Propiedades</MDBCardTitle>
+                        <MDBCardTitle>{t("pages.services.purchase")}</MDBCardTitle>
                     </MDBCardHeader>
                     <MDBCardBody>
                         <MDBCardText>
-                            Ayudamos a nuestros clientes a encontrar la propiedad perfecta
-                            para sus necesidades y presupuesto
+                            {t("pages.services.purchaseDesc")}
                         </MDBCardText>
                         <br/>
                         <MDBCardLink
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
                         >
-                            Obtener más información
+                            {t("pages.services.moreInfo")}
                         </MDBCardLink>
                     </MDBCardBody>
                 </MDBCard>
