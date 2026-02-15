@@ -1674,7 +1674,7 @@ var _gsScope =
                                 if (b[c].time < a) return b[c].name;
                             return null;
                         }),
-                        (k.LabelsArray = function  {
+                        (k.LabelsArray = function () {
                             var a,
                                 b = [],
                                 c = 0;
@@ -2434,7 +2434,7 @@ var _gsScope =
                         "undefined" != typeof window
                             ? window
                             : P.defaultView || {
-                            ComputedStyle: function  {
+                            ComputedStyle: function () {
                             }
                         },
                     aa = function (a) {
