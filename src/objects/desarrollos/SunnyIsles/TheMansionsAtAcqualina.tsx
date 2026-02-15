@@ -1,7 +1,9 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function TheMansionsAtAcqualina() {
+export default function TheMansionsAtAcqualina(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("the-mansions-at-acqualina", lang);
     const TheMansionsAtAcqualinaObject = new Desarrollo();
 
     TheMansionsAtAcqualinaObject.video =
@@ -15,7 +17,7 @@ export default function TheMansionsAtAcqualina() {
         ></iframe>
     ;
 
-    TheMansionsAtAcqualinaObject.nombre = "the-mansions-at-acqualina";
+    TheMansionsAtAcqualinaObject.nombre = getLocalizedField("nombre", "the-mansions-at-acqualina");
     TheMansionsAtAcqualinaObject.caracteristicas = {
         edificio: (
             <>
@@ -77,14 +79,13 @@ export default function TheMansionsAtAcqualina() {
             </>
         ),
     };
-    TheMansionsAtAcqualinaObject.introduccion = [
-        "Ubicado en su propia mansión en el cielo, se calma con los suaves vientos alisios mientras las olas barren la orilla de su prístina playa de arena blanca. Y, mientras contempla el espectacular amanecer desde su terraza privada, se da cuenta de lo que pocos sabrán: esto es lo que es vivir el mejor estilo de vida del mundo, en la mejor residencia del mundo",
-        "La grandeza en el arte, la arquitectura y el estilo de vida es nuestro compromiso en Acqualina Resort and Spa on the Beach. Las mansiones de Acqualina llevan esto a un nivel aún más elevado. Aquí descubrirá residencias lujosamente decoradas en un edificio icónico exquisitamente alto. Las comodidades incomparables y los servicios de clase mundial incluyen una terraza de piscina con un diseño elegante y rica en comodidades, impresionantes espacios públicos, once santuarios privados al aire libre para propietarios de viviendas y trece áreas de servicios interiores excepcionales. Todas sus necesidades están cubiertas en un entorno idílico que equilibra la belleza de la naturaleza con la ciudad más dinámica del mundo.",
-    ];
-    TheMansionsAtAcqualinaObject.titulo = "The Mansions at Acqualina";
-    TheMansionsAtAcqualinaObject.slogan = "Descubre la vida en condominio en Sunny Isles Beach";
-    TheMansionsAtAcqualinaObject.numberOfImages = 24;
-    TheMansionsAtAcqualinaObject.banner = true;
+    TheMansionsAtAcqualinaObject.introduccion = getLocalizedArray("introduccion", [
+        getLocalizedField("introduccion.0", "Ubicado en su propia mansión en el cielo, se calma con los suaves vientos alisios mientras las olas barren la orilla de su prístina playa de arena blanca."),
+    ]);
+    TheMansionsAtAcqualinaObject.titulo = getLocalizedField("titulo", "The Mansions at Acqualina");
+    TheMansionsAtAcqualinaObject.slogan = getLocalizedField("slogan", "Descubre la vida en condominio en Sunny Isles Beach");
+    TheMansionsAtAcqualinaObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "24"), 10) || 24;
+    TheMansionsAtAcqualinaObject.banner = getLocalizedField("banner", "true") === "true";
     TheMansionsAtAcqualinaObject.area = SunnyIsles();
     return TheMansionsAtAcqualinaObject;
 }

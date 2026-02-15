@@ -2,14 +2,16 @@ import React from "react";
 
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function CasaBella() {
+export default function CasaBella(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("casa-bella", lang);
     const CasaBellaObject: Desarrollo = new Desarrollo();
 
-    CasaBellaObject.banner = true;
+    CasaBellaObject.banner = getLocalizedField("banner", "true") === "true";
     CasaBellaObject.area = Downtown();
 
-    CasaBellaObject.nombre = "casa-bella";
+    CasaBellaObject.nombre = getLocalizedField("nombre", "casa-bella");
     CasaBellaObject.caracteristicas = {
         edificio: (
             <ul>
@@ -93,14 +95,13 @@ export default function CasaBella() {
             </ul>
         )
     };
-    CasaBellaObject.introduccion = [
-        "Vuelve a casa con la sofisticación y el lujo italianos ilimitados. Disfruta de impresionantes vistas dondequiera que mires. Rodéese de interiores elevados e inundados de luz, jardines llenos de jardines y comodidades abundantes e inigualables, que incluyen un salón junto a la piscina con una cafetería mediterránea y cócteles artesanales.",
-        "CasaBellaObject Residences by B&B Italia ha colaborado con los artistas italianos más célebres para curar su hogar con obras maestras selectas de las colecciones de B&B Italia.",
-    ];
-    CasaBellaObject.titulo = "Casa Bella Residences";
-    CasaBellaObject.direccion = "";
-    CasaBellaObject.slogan = "Bienvenido a la cima de la sofisticada vida italiana";
-    CasaBellaObject.numberOfImages = 16;
+    CasaBellaObject.introduccion = getLocalizedArray("introduccion", [
+        getLocalizedField("introduccion.0", "Vuelve a casa con la sofisticación y el lujo italianos ilimitados. Disfruta de impresionantes vistas dondequiera que mires."),
+    ]);
+    CasaBellaObject.titulo = getLocalizedField("titulo", "Casa Bella Residences");
+    CasaBellaObject.direccion = getLocalizedField("direccion", "");
+    CasaBellaObject.slogan = getLocalizedField("slogan", "Bienvenido a la cima de la sofisticada vida italiana");
+    CasaBellaObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "16"), 10) || 16;
 
     return CasaBellaObject;
 }

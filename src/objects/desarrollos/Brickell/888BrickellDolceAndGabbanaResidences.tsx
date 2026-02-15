@@ -1,25 +1,29 @@
+import React from "react";
 import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import Brickell from "../../areas/Brickell";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-const DolceAndGabbanaResidences = new Desarrollo(Brickell());
-DolceAndGabbanaResidences.titulo = "888 Brickell Dolce & Gabbana Residences";
-DolceAndGabbanaResidences.slogan = "Para Los Nuevos Románticos";
-DolceAndGabbanaResidences.nombre = "888-brickell-dolce-and-gabbana-residences";
+export default function DolceAndGabbanaResidences(lang: "en" | "es" = "es") {
+  const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("888-brickell-dolce-and-gabbana-residences", lang);
+  const DolceAndGabbanaResidences = new Desarrollo(Brickell());
+  DolceAndGabbanaResidences.titulo = getLocalizedField("titulo", "888 Brickell Dolce & Gabbana Residences");
+  DolceAndGabbanaResidences.slogan = getLocalizedField("slogan", "Para Los Nuevos Románticos");
+  DolceAndGabbanaResidences.nombre = getLocalizedField("nombre", "888-brickell-dolce-and-gabbana-residences");
 
-DolceAndGabbanaResidences.introduccion = [
-  "Adéntrate en la cima del lujo italiano con 888 Brickell by Dolce & Gabbana, la primera torre residencial y hotelera con marca propia en Miami que redefine la elegancia y la sofisticación. Elevándose 1,049 pies sobre el vibrante horizonte de Brickell, esta obra maestra de 90 pisos fusiona la icónica artesanía de Dolce & Gabbana con un diseño arquitectónico contemporáneo, ofreciendo 259 residencias exquisitamente diseñadas y una experiencia hotelera de lujo sin igual. Cada detalle, desde la impresionante corona de hoja de oro hasta la fachada de travertino romano, estuco marfil y acero negro mate, refleja la dedicación de la marca al arte y al estilo.",
-];
-DolceAndGabbanaResidences.area = Brickell();
-DolceAndGabbanaResidences.banner = true;
-DolceAndGabbanaResidences.estimatedCompletionYear = 2028;
-DolceAndGabbanaResidences.numberOfImages = 21;
-DolceAndGabbanaResidences.numberOfFloors = 90;
-DolceAndGabbanaResidences.numberOfUnits = 259;
-DolceAndGabbanaResidences.direccion = "888 Brickell Ave, Miami, FL 33131, USA";
-DolceAndGabbanaResidences.ubicación = "888 Brickell Ave, Miami, FL 33131, USA";
-DolceAndGabbanaResidences.numberOfRooms = { start: 1, end: 4 };
+  DolceAndGabbanaResidences.introduccion = getLocalizedArray("introduccion", [
+    "Adéntrate en la cima del lujo italiano con 888 Brickell by Dolce & Gabbana..."
+  ]);
+  DolceAndGabbanaResidences.area = Brickell();
+  DolceAndGabbanaResidences.banner = getLocalizedField("banner", "true") === "true";
+  DolceAndGabbanaResidences.estimatedCompletionYear = parseInt(getLocalizedField("estimatedCompletionYear", "2028"), 10) || 2028;
+  DolceAndGabbanaResidences.numberOfImages = parseInt(getLocalizedField("numberOfImages", "21"), 10) || 21;
+  DolceAndGabbanaResidences.numberOfFloors = parseInt(getLocalizedField("numberOfFloors", "90"), 10) || 90;
+  DolceAndGabbanaResidences.numberOfUnits = parseInt(getLocalizedField("numberOfUnits", "259"), 10) || 259;
+  DolceAndGabbanaResidences.direccion = getLocalizedField("direccion", "888 Brickell Ave, Miami, FL 33131, USA");
+  DolceAndGabbanaResidences.ubicación = getLocalizedField("ubicacion", DolceAndGabbanaResidences.direccion);
+  DolceAndGabbanaResidences.numberOfRooms = { start: parseInt(getLocalizedField("numberOfRooms.start", "1"), 10) || 1, end: parseInt(getLocalizedField("numberOfRooms.end", "4"), 10) || 4 };
 
-DolceAndGabbanaResidences.caracteristicas = {
+  DolceAndGabbanaResidences.caracteristicas = {
   amenidades: (
     <>
       <ul>
@@ -129,4 +133,5 @@ DolceAndGabbanaResidences.caracteristicas = {
     </>
   ),
 };
-export default DolceAndGabbanaResidences;
+  return DolceAndGabbanaResidences;
+}

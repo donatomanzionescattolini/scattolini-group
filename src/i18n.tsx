@@ -1,3 +1,6 @@
+
+
+
 import React, {createContext, ReactNode, useContext, useEffect, useMemo, useState} from "react";
 
 type Lang = "es" | "en";
@@ -349,6 +352,240 @@ const translations: Record<Lang, any> = {
                     },
                 },
             },
+            "viceroy-brickell": {
+                titulo: "Viceroy Brickell",
+                introduccion: [
+                    "Viceroy Residences Brickell is a luxury tower in Brickell with impressive views and premium amenities."
+                ],
+                direccion: "77 SE 5th St, Miami, FL 33131, USA",
+                banner: "true",
+                numberOfImages: "35",
+                caracteristicas: {
+                    edificio: {
+                        direccionLabel: "Address",
+                        añoLabel: "Year of Construction / Completion",
+                        pisosLabel: "Number of Floors",
+                        unidadesLabel: "Number of Units",
+                        tipoLabel: "Type of Units",
+                        cuartosLabel: "Number of Rooms",
+                    },
+                    residencias: {
+                        p1: "Collection of tower residences topped by penthouses.",
+                        p2: "Floor plans offering studios and 1–3 bedroom residences."
+                    },
+                    amenidades: {
+                        p1: "Prime location at One Brickell with direct access to the riverwalk.",
+                        p2: "Resort-style terrace and wellness facilities."
+                    }
+                }
+            },
+            cipriani: {
+                titulo: "Cipriani Residences",
+                introduccion: ["Brilliantly designed by Arquitectonica and 1508 London, these elegant residences offer Cipriani-level service and luxury."],
+                banner: "true",
+                numberOfImages: "14",
+                caracteristicas: {
+                    edificio: {
+                        p1: "A distinctive addition to the Brickell skyline.",
+                        li1: "An elegant 80-story tower with cascading curved glass facade",
+                        li2: "A collection of residences including exceptional penthouses",
+                        li3: "Dining services exclusively for Cipriani residents",
+                        li4: "Panoramic views of Biscayne Bay and Brickell skyline",
+                    },
+                    residencias: {
+                        li1: "Spacious living rooms with 10-foot ceilings",
+                        li2: "Floor-to-ceiling sliding glass doors",
+                        li3: "Terrace access from living room and master bedroom",
+                        li4: "Elegant walk-in closets in each master bedroom"
+                    },
+                    amenidades: {
+                        li1: "Private porte cochere with lush gardens",
+                        li2: "Impressive lobby and high-speed elevators",
+                        li3: "Private dining experiences by Cipriani"
+                    }
+                }
+            },
+            lofty: {
+                titulo: "Lofty Residences Brickell",
+                introduccion: ["Lofty Residences is a 43-story condominium setting a new standard of cosmopolitan living in Brickell."],
+                slogan: "A New Standard of Cosmopolitan Living in Brickell",
+                banner: "true",
+                numberOfImages: "55",
+                caracteristicas: {
+                    residencias: {
+                        title: "The Residences",
+                        li1: "Urban luxury residences with modern open layouts from 485SF — 930 SF",
+                        li2: "Fully finished and specially furnished residences",
+                        li3: "Panoramic views of the Miami River and skyline"
+                    },
+                    edificio: {
+                        li1: "Short-term rentals permitted by right",
+                        li2: "Two-story lobby with floor-to-ceiling windows",
+                        li3: "24/7 valet service"
+                    },
+                    amenidades: {
+                        li1: "Resort-style pool with cabanas",
+                        li2: "Pool terrace grill and bar",
+                        li3: "Coworking lounge"
+                    }
+                }
+            },
+            "1428-brickell": {
+                titulo: "The Residences at 1428 Brickell",
+                introduccion: ["The Residences at 1428 Brickell was carefully planned to deliver amenities and privacy to every resident."],
+                slogan: "Your life. Your way.",
+                banner: "true",
+                numberOfImages: "39"
+            },
+            "14-river-district": {
+                titulo: "14 River District",
+                introduccion: ["River District 14 offers a complete waterfront lifestyle along the Miami River and Biscayne Bay."],
+                direccion: "1420 NW 14th Ave, Miami, FL 33125, USA",
+                numberOfImages: "27",
+                banner: "true"
+            },
+            "888-brickell-dolce-and-gabbana-residences": {
+                titulo: "888 Brickell Dolce & Gabbana Residences",
+                introduccion: ["888 Brickell by Dolce & Gabbana redefines Italian luxury with branded residences and hotel in Miami."],
+                banner: "true",
+                numberOfImages: "21",
+                numberOfFloors: "90",
+                numberOfUnits: "259",
+                direccion: "888 Brickell Ave, Miami, FL 33131, USA"
+            },
+            "mercedes-benz-places-miami": {
+                titulo: "Mercedes-Benz Places Miami",
+                introduccion: ["Mercedes-Benz Places Miami offers design-forward residences with integrated technology and premium amenities."],
+                slogan: "Miami, Living, Elevated",
+                nombre: "mercedes-benz-places-miami",
+                banner: "true",
+                numberOfImages: "17"
+            },
+            ora: {
+                titulo: "Ora by Casa Tua",
+                introduccion: ["ORA by Casa Tua delivers flexible ownership residences in Brickell with Italian design and hospitality-led services."],
+                slogan: "Residences with Soul in the Heart of Miami",
+                banner: "true",
+                numberOfImages: "14",
+                video: "https://player.vimeo.com/video/806352821?autoplay=true"
+            },
+            "viceroy-brickell": {
+                titulo: "Viceroy Brickell",
+                introduccion: [
+                    "Viceroy Residences Brickell es una torre de lujo ubicada en Brickell, con impresionantes vistas y amenidades premium."
+                ],
+                direccion: "77 SE 5th St, Miami, FL 33131",
+                banner: "true",
+                numberOfImages: "35",
+                caracteristicas: {
+                    edificio: {
+                        direccionLabel: "Dirección",
+                        añoLabel: "Año De Construcción O Finalización",
+                        pisosLabel: "Número De Pisos",
+                        unidadesLabel: "Número de Unidades",
+                        tipoLabel: "Tipo De Unidades",
+                        cuartosLabel: "Número de cuartos",
+                    },
+                    residencias: {
+                        p1: "Colección de residencias de torre con penthouses.",
+                        p2: "Planos de planta con estudios y residencias de 1–3 habitaciones."
+                    },
+                    amenidades: {
+                        p1: "Ubicación privilegiada en One Brickell con acceso al riverwalk.",
+                        p2: "Terraza estilo resort y servicios de bienestar."
+                    }
+                }
+            },
+            cipriani: {
+                titulo: "Cipriani Residences",
+                introduccion: ["Brillantemente diseñadas por Arquitectonica y 1508 London, estas elegantes residencias ofrecen lujo y servicio Cipriani."],
+                banner: "true",
+                numberOfImages: "14",
+                caracteristicas: {
+                    edificio: {
+                        p1: "Una adición distintiva al horizonte de Brickell.",
+                        li1: "Una elegante torre de 80 pisos con una fachada curva de vidrio en cascada",
+                        li2: "Colección de residencias incluidas áticos excepcionales",
+                        li3: "Servicios de comedor solo para residentes de Cipriani",
+                        li4: "Vistas panorámicas a la bahía y skyline",
+                    },
+                    residencias: {
+                        li1: "Amplias salas de estar con alturas de techo de 10 pies",
+                        li2: "Puertas y ventanas corredizas de vidrio de piso a techo",
+                        li3: "Acceso a terraza desde sala y dormitorio principal",
+                        li4: "Elegantes vestidores en cada dormitorio principal"
+                    },
+                    amenidades: {
+                        li1: "Entrada privada con jardines",
+                        li2: "Vestíbulo y ascensores de alta velocidad",
+                        li3: "Experiencias gastronómicas privadas Cipriani"
+                    }
+                }
+            },
+            lofty: {
+                titulo: "Lofty Residences Brickell",
+                introduccion: ["Lofty Residences es un condominio de 43 pisos que presenta un nuevo estándar de vida cosmopolita en Brickell."],
+                slogan: "Un Nuevo Estándar de Vida Cosmopolita en Brickell",
+                banner: "true",
+                numberOfImages: "55",
+                caracteristicas: {
+                    residencias: {
+                        title: "Las Residencias",
+                        li1: "Residencias urbanas de lujo con diseños abiertos modernos desde 485SF — 930 SF",
+                        li2: "Residencias entregadas completamente terminadas y amuebladas",
+                        li3: "Vistas panorámicas del río Miami"
+                    },
+                    edificio: {
+                        li1: "Alquileres a corto plazo permitidos",
+                        li2: "Vestíbulo de 2 pisos",
+                        li3: "Servicio de aparcacoches 24/7"
+                    },
+                    amenidades: {
+                        li1: "Piscina exótica del resort con cabañas",
+                        li2: "Bar y parrilla en la terraza de la piscina",
+                        li3: "Sala de coworking"
+                    }
+                }
+            },
+            "1428-brickell": {
+                titulo: "The Residences at 1428 Brickell",
+                introduccion: ["The Residences at 1428 Brickell fue cuidadosamente planificada para ofrecer comodidades y privacidad a cada residente."],
+                slogan: "Tu vida. A tu manera.",
+                banner: "true",
+                numberOfImages: "39"
+            },
+            "14-river-district": {
+                titulo: "14 River District",
+                introduccion: ["River District 14 ofrece un estilo de vida completo junto al río Miami y la bahía de Biscayne."],
+                direccion: "1420 NW 14th Ave, Miami, FL 33125",
+                numberOfImages: "27",
+                banner: "true"
+            },
+            "888-brickell-dolce-and-gabbana-residences": {
+                titulo: "888 Brickell Dolce & Gabbana Residences",
+                introduccion: ["888 Brickell by Dolce & Gabbana redefine la elegancia con residencias y hotel de marca en Miami."],
+                banner: "true",
+                numberOfImages: "21",
+                numberOfFloors: "90",
+                numberOfUnits: "259",
+                direccion: "888 Brickell Ave, Miami, FL 33131"
+            },
+            "mercedes-benz-places-miami": {
+                titulo: "Mercedes-Benz Places Miami",
+                introduccion: ["Mercedes-Benz Places Miami ofrece residencias de lujo con diseño y tecnología de primer nivel."],
+                slogan: "Miami, Living, Elevated",
+                nombre: "mercedes-benz-places-miami",
+                banner: "true",
+                numberOfImages: "17"
+            },
+            ora: {
+                titulo: "Ora by Casa Tua",
+                introduccion: ["ORA by Casa Tua ofrece residencias de propiedad flexible en Brickell con diseño italiano y servicios de hospitalidad."],
+                slogan: "Residencias con Alma en el Corazón de Miami",
+                banner: "true",
+                numberOfImages: "14",
+                video: "https://player.vimeo.com/video/806352821?autoplay=true"
+            },
         },
         footer: {
             contact: "Contáctanos",
@@ -618,18 +855,18 @@ const translations: Record<Lang, any> = {
             },
             astonMartin: {
                 titulo: "Aston Martin Residences",
-                subtitulo: "Lujo automotriz redefinido",
+                subtitulo: "Automotive Luxury Redefined",
                 introduccion: [
-                    "Aston Martin Residences trae la legendaria artesanía de Aston Martin al corazón de Miami.",
-                    "391 residencias de lujo con impresionantes vistas a la bahía y a la ciudad.",
-                    "Experimente el epítome del lujo urbano con comodidades de clase mundial y un diseño sofisticado.",
+                    "Aston Martin Residences brings the legendary craftsmanship of Aston Martin to the heart of Miami.",
+                    "391 luxury residences with stunning views of the bay and city.",
+                    "Experience the epitome of urban luxury with world-class amenities and sophisticated design.",
                 ],
                 direccion: "300 Biscayne Boulevard Way",
                 caracteristicas: {
                     edificio: {
                         ubicacion: "300 Biscayne Boulevard Way",
-                        residencias: "391 Residencias en Condominio",
-                        diseno: "Diseñado por Aston Martin",
+                        residencias: "391 Residences in Condominium",
+                        diseno: "Designed by Aston Martin",
                     },
                 },
             },
@@ -708,7 +945,7 @@ const translations: Record<Lang, any> = {
 interface I18nContextValue {
     lang: Lang;
     setLang: (l: Lang) => void;
-    t: (path: string, fallback?: string) => string;
+    t: (path: string, fallback?: string | null) => string | string[] | null;
 }
 
 const I18nContext = createContext<I18nContextValue | undefined>(undefined);
@@ -744,7 +981,7 @@ export function TranslationProvider({children, defaultLang = "es" as Lang}: {
     }, [lang]);
 
     const t = useMemo(() => {
-        return (path: string, fallback?: string | null) => {
+        return (path: string, fallback?: string | null): string | string[] | null => {
             const keys = path.split(".");
             let cur: any = translations[lang];
             for (const k of keys) {
@@ -759,12 +996,13 @@ export function TranslationProvider({children, defaultLang = "es" as Lang}: {
         };
     }, [lang]);
 
-    const value = useMemo(() => ({lang, setLang: setLangState, t}), [lang, setLangState, t]);
+    const setLang = (l: Lang) => setLangState(l);
+    const value = useMemo(() => ({lang, setLang, t}), [lang, t]);
 
     return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
 
-export function getTranslation(path: string, lang: Lang, fallback?: string | null) {
+export function getTranslation(path: string, lang: Lang, fallback?: string | null): string | string[] | null {
     const keys = path.split(".");
     let cur: any = translations[lang];
     for (const k of keys) {

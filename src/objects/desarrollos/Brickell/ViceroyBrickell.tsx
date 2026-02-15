@@ -1,122 +1,58 @@
+import React from "react";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-const ViceroyBrickell = new Desarrollo(Brickell());
+export default function ViceroyBrickell(lang: "en" | "es" = "es") {
+  const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("viceroy-brickell", lang);
+  const Viceroy = new Desarrollo(Brickell());
+  Viceroy.nombre = "viceroy-brickell";
+  Viceroy.titulo = getLocalizedField("titulo", "Viceroy Brickell");
+  Viceroy.introduccion = getLocalizedArray(
+    "introduccion",
+    [
+      "Viceroy Residences Brickell es una nueva torre de condominios de lujo en construcción en una de las ubicaciones más espectaculares de Miami: Brickell."
+    ]
+  );
+  Viceroy.direccion = getLocalizedField("direccion", "77 SE 5th St, Miami, FL 33131, USA");
+  Viceroy.estimatedCompletionYear = parseInt(getLocalizedField("estimatedCompletionYear", "2026"), 10) || 2026;
+  Viceroy.numberOfFloors = parseInt(getLocalizedField("numberOfFloors", "45"), 10) || 45;
+  Viceroy.numberOfUnits = parseInt(getLocalizedField("numberOfUnits", "498"), 10) || 498;
+  Viceroy.typeOfUnits = getLocalizedField("typeOfUnits", "Luxury Condominiums");
+  Viceroy.numberOfRooms = getLocalizedField("numberOfRooms", "Studios, 1 & 2 Bedrooms");
+  Viceroy.banner = getLocalizedField("banner", "true") === "true";
+  Viceroy.numberOfImages = parseInt(getLocalizedField("numberOfImages", "35"), 10) || 35;
 
-ViceroyBrickell.nombre = "viceroy-brickell";
-ViceroyBrickell.titulo = "Viceroy Brickell";
-ViceroyBrickell.introduccion = ["Viceroy Residences Brickell es una nueva torre de condominios de lujo en construcción en una de las ubicaciones más espectaculares de Miami: la fantástica zona de Brickell. Esta torre de 45 pisos forma parte de un complejo de lujo de tres torres en el terreno actual de 444 Brickell, donde se ubicará el edificio de condominios Baccarat. Este desarrollo está a cargo de Related Group, quizás la empresa de desarrollo residencial más prestigiosa de Miami y Florida, con décadas de experiencia en el mercado inmobiliario de lujo."];
-ViceroyBrickell.direccion = "77 SE 5th St, Miami, FL 33131, EE. UU.";
-ViceroyBrickell.estimatedCompletionYear = 2026;
-ViceroyBrickell.numberOfFloors = 45;
-ViceroyBrickell.numberOfUnits = 498;
-ViceroyBrickell.typeOfUnits = "Condominioss de lujo";
-ViceroyBrickell.numberOfRooms = "Estudios, 1 y 2 dormitorios";
-ViceroyBrickell.banner = true;
-ViceroyBrickell.numberOfImages = 35;
-ViceroyBrickell.caracteristicas = {
+  Viceroy.caracteristicas = {
     edificio: (
-        <dl>
-            <dt>Dirección</dt>
-            <dd>{ViceroyBrickell.direccion}</dd>
-            <dt>Año De Construcción O Finalización</dt>
-            <dd>{ViceroyBrickell.estimatedCompletionYear}</dd>
-            <dt>Número De Pisos</dt>
-            <dd>{ViceroyBrickell.numberOfFloors}</dd>
-            <dt>Número de Unidades</dt>
-            <dd>{ViceroyBrickell.numberOfUnits}</dd>
-            <dt>Tipo De Unidades</dt>
-            <dd>{ViceroyBrickell.typeOfUnits}</dd>
-            <dt>Número de cuartos</dt>
-            <dd>{ViceroyBrickell.numberOfRooms as string}</dd>
-        </dl>
+      <dl>
+        <dt>{getLocalizedField("caracteristicas.edificio.direccionLabel", "Dirección")}</dt>
+        <dd>{Viceroy.direccion}</dd>
+        <dt>{getLocalizedField("caracteristicas.edificio.añoLabel", "Año De Construcción O Finalización")}</dt>
+        <dd>{Viceroy.estimatedCompletionYear}</dd>
+        <dt>{getLocalizedField("caracteristicas.edificio.pisosLabel", "Número De Pisos")}</dt>
+        <dd>{Viceroy.numberOfFloors}</dd>
+        <dt>{getLocalizedField("caracteristicas.edificio.unidadesLabel", "Número de Unidades")}</dt>
+        <dd>{Viceroy.numberOfUnits}</dd>
+        <dt>{getLocalizedField("caracteristicas.edificio.tipoLabel", "Tipo De Unidades")}</dt>
+        <dd>{Viceroy.typeOfUnits}</dd>
+        <dt>{getLocalizedField("caracteristicas.edificio.cuartosLabel", "Número de cuartos")}</dt>
+        <dd>{Viceroy.numberOfRooms as string}</dd>
+      </dl>
     ),
     residencias: <>
-        <ul>
-            <li>Colección de 442 residencias de torre, rematadas por dos niveles de penthouses</li>
-            <li>y ancladas por 56 apartamentos urbanos con vista de primera fila al vibrante estilo de vida urbano de
-                Brickell.
-            </li>
-            <li>Planos de planta de concepto abierto con estudios, residencias de uno y dos dormitorios, y tres
-                dormitorios en los niveles de penthouse.
-            </li>
-            <li>Ventanas y puertas corredizas de piso a techo tintadas, energéticamente eficientes y resistentes a
-                impactos que dominan el deslumbrante paisaje urbano, el río Miami y la bahía de Biscayne.
-            </li>
-            <li>Pisos de porcelanato travertino importado en todas las residencias, incluyendo baños y balcones.</li>
-            <li>Balcones con barandillas de vidrio en cada unidad, accesibles desde la sala de estar y los
-                dormitorios.
-            </li>
-            <li>Alturas de techo de 9 pies en las residencias de torre, 13 y 19 pies en los apartamentos urbanos, y 11
-                pies en el nivel superior de penthouse.
-            </li>
-            <li>Sistema de puerta de entrada inteligente sin llave para facilitar el acceso a través de una aplicación
-                inteligente.
-            </li>
-            <li>Cocinas diseñadas por Meyer Davis Studio con gabinetes italianos con electrodomésticos empotrados en
-                paneles, encimeras de cuarzo importado y protección contra salpicaduras de porcelana completa con
-                iluminación bajo el mostrador y detalles de tiradores de latón.
-            </li>
-            <li>Paquete de electrodomésticos Bosch y Fisher & Paykel que incluye refrigerador/congelador y lavavajillas
-                empotrados en gabinetes, placas de cocción eléctricas integradas y hornos rápidos, y lavadoras y
-                secadoras GE y Blomberg.
-            </li>
-            <li>Baños con duchas de vidrio sin marco, grifos Brizo con acabado dorado de lujo y gabinetes italianos,
-                todos seleccionados por Meyer Davis Studio.
-            </li>
-            <li>Tecnología avanzada de "edificio inteligente" precableado para internet de alta velocidad Wi-Fi,
-                datos/voz y video satelital por cable.
-            </li>
-            <li>Closets vestidores en la mayoría de las residencias.</li>
-            <li>Sistema de protección contra incendios con rociadores.</li>
-            <li>Sistemas de aire acondicionado central y calefacción de alta eficiencia.</li>
-        </ul>
+      <ul>
+        <li>{getLocalizedField("caracteristicas.residencias.p1", "Collection of tower residences topped by two levels of penthouses.")}</li>
+        <li>{getLocalizedField("caracteristicas.residencias.p2", "Floor plans offer studios, 1–3 bedroom residences and penthouses.")}</li>
+      </ul>
     </>,
     amenidades: <>
-        <ul>
-            <li>Ubicación privilegiada en One Brickell en la entrada de Brickell Avenue y el río Miami con acceso
-                directo al paseo marítimo del río.
-            </li>
-            <li>Impresionante torre de vidrio de 45 pisos con balcones de barandilla de vidrio ondulante y vistas
-                panorámicas de la bahía de Biscayne, el río Miami y el horizonte de la ciudad.
-            </li>
-            <li>Acogedora marquesina que conduce a un impresionante vestíbulo totalmente de vidrio con personal las 24
-                horas del día, los 7 días de la semana.
-            </li>
-            <li>Centro de fitness y bienestar de clase mundial con saunas, salas de tratamiento personalizadas y cine
-                cardiovascular con vista al dinámico horizonte de la ciudad.
-            </li>
-            <li>Estudio simulador multideportivo con golf, fútbol, baloncesto y carreras de F1.</li>
-            <li>Impresionante vestíbulo de techo alto con elegante área de descanso para residentes e invitados.</li>
-            <li>Sala de proyección con equipos de audio y video de última generación.</li>
-            <li>Instalación permanente de colección de arte de calidad museística curada en todos los espacios públicos
-                del edificio.
-            </li>
-            <li>Mercado gourmet virtual.</li>
-            <li>Centro de negocios que incluye sala de conferencias y espacios de trabajo privados.</li>
-            <li>Comedor privado servido desde las instalaciones de catering en el lugar.</li>
-            <li>Bar de vestíbulo de servicio completo administrado por el personal de alimentos y bebidas de Viceroy
-                Hotels & Resorts.
-            </li>
-            <li>Salas de club para residentes con bar, billares, humidores e instalaciones multimedia en el nivel 14.
-            </li>
-            <li>Bodega y sala de degustación de vinos.</li>
-            <li>Seis ascensores de alta velocidad activados por llave.</li>
-            <li>Servicio de valet, conserje y seguridad las 24 horas.</li>
-            <li>Estaciones de carga para vehículos eléctricos.</li>
-            <li>Estacionamiento para bicicletas.</li>
-            <li>Terraza de servicios estilo resort en el piso 14, con piscina climatizada, jacuzzi al aire libre y
-                cabañas junto a la piscina.
-            </li>
-            <li>Cafetería con servicio completo y áreas de descanso al aire libre rodeadas de exuberante vegetación.
-            </li>
-            <li>Cocina de verano y comedor cubierto al aire libre.</li>
-            <li>Cancha de bochas.</li>
-            <li>Comunidad que admite mascotas con senderos ajardinados.</li>
-            <li>Membresía gratuita al club de playa privado Grand Bay Club en la cercana playa de Key Biscayne.
-            </li>
-        </ul>
+      <ul>
+        <li>{getLocalizedField("caracteristicas.amenidades.p1", "Prime location at One Brickell with direct access to the riverwalk.")}</li>
+        <li>{getLocalizedField("caracteristicas.amenidades.p2", "Resort-style terrace and world-class wellness facilities.")}</li>
+      </ul>
     </>
-};
+  };
 
-export default ViceroyBrickell;
+  return Viceroy;
+}

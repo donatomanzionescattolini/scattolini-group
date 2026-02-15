@@ -1,12 +1,14 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function EditionResidences() {
+export default function EditionResidences(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("edition-residences", lang);
     const TheEditionResidencesObject = new Desarrollo();
-    TheEditionResidencesObject.banner = true;
+    TheEditionResidencesObject.banner = getLocalizedField("banner", "true") === "true";
     TheEditionResidencesObject.area = Edgewater();
 
-    TheEditionResidencesObject.nombre = "edition-residences";
+    TheEditionResidencesObject.nombre = getLocalizedField("nombre", "edition-residences");
     TheEditionResidencesObject.caracteristicas = {
         edificio: (
             <pre>
@@ -89,14 +91,11 @@ export default function EditionResidences() {
             </ul>
         ),
     };
-    TheEditionResidencesObject.introduccion = [
-        "Edition Residences, Miami Edgewater es una celebración del mejor estilo de vida moderno de Miami, uno que solo Edition puede ofrecer.",
-
-        "Veintiséis residencias únicas de 1 a 4 dormitorios diseñadas por John Pawson que varían en tamaño desde 909 SF hasta 4597 SF.Dos Penthouses con piscina, salón interior / exterior y cocina exterior.Residencias Beach House y Bay House con cocina al aire libre, sala de estar y piscina profunda.",
-        'Para una transición perfecta hacia un hogar confortable, Schrager presenta el concepto de "Prêt-à-Porter residencial", que ofrece residencias en perfectas condiciones para entrar a vivir. Se encuentran disponibles paquetes de muebles personalizados diseñados exclusivamente por John Pawson y el equipo de diseño de Ian Schrager con todo lo que uno necesita en un hogar, incluida ropa de cama, platos y utensilios de cocina, todos preseleccionados, desempacados y guardados antes de su llegada. Schrager continúa superando las expectativas al reconocer lo que los residentes quieren y necesitan antes de que ellos mismos se den cuenta: una casa sin trabajo, ideal para vivir en un centro turístico.',
-    ];
-    TheEditionResidencesObject.titulo = "Edition Residences";
-    TheEditionResidencesObject.slogan = "Un desarrollo exclusivo en Miami Beach";
-    TheEditionResidencesObject.numberOfImages = 29;
+    TheEditionResidencesObject.introduccion = getLocalizedArray("introduccion", [
+        getLocalizedField("introduccion.0", "Edition Residences, Miami Edgewater es una celebración del mejor estilo de vida moderno de Miami, uno que solo Edition puede ofrecer."),
+    ]);
+    TheEditionResidencesObject.titulo = getLocalizedField("titulo", "Edition Residences");
+    TheEditionResidencesObject.slogan = getLocalizedField("slogan", "Un desarrollo exclusivo en Miami Beach");
+    TheEditionResidencesObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "29"), 10) || 29;
     return TheEditionResidencesObject;
 }

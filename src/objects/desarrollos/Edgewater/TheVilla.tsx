@@ -1,12 +1,14 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function TheVilla() {
+export default function TheVilla(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("the-villa", lang);
     const TheVillaObject = new Desarrollo();
 
 
-    TheVillaObject.nombre = "the-villa";
-    TheVillaObject.titulo = 'The Villa'
+    TheVillaObject.nombre = getLocalizedField("nombre", "the-villa");
+    TheVillaObject.titulo = getLocalizedField("titulo", "The Villa");
     TheVillaObject.video =
         <iframe
             height="500"

@@ -1,10 +1,12 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function MissoniBaia() {
+export default function MissoniBaia(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("missoni-baia", lang);
     const MissoniBaiaObject = new Desarrollo();
-    MissoniBaiaObject.nombre = "missoni-baia";
-    MissoniBaiaObject.direccion = "700 NE 26th Ter, Miami, FL 33137"
+    MissoniBaiaObject.nombre = getLocalizedField("nombre", "missoni-baia");
+    MissoniBaiaObject.direccion = getLocalizedField("direccion", "700 NE 26th Ter, Miami, FL 33137")
     MissoniBaiaObject.caracteristicas = {
         edificio: (
             <>
@@ -255,14 +257,13 @@ export default function MissoniBaia() {
             </>
         ),
     };
-    MissoniBaiaObject.introduccion = [
-        "Las 249 residencias del condominio en Edgewater de Missoni Baia celebran el eterno encanto de la vida frente al agua con un estilo relajado y moderno. En el horizonte de Miami y sobre la costa de East Edgewater, se delinea una figura prominente: Missoni Baia; con una elevación de 57 pisos que abarcan una impresionante longitud de 200 pies a lo largo de Biscayne Bay.",
-        "Con un diseño vanguardista y de alto rendimiento, realizado por la prestigiosa firma internacional, Asymptote Architecture, los nuevos y lujosos condominios en Edgewater de Missoni Baia capturan el espíritu innovador y soñador de Missoni. Missoni Baia es como ninguna otra torre residencial en Miami.",
-    ];
-    MissoniBaiaObject.titulo = "Missoni Baia";
-    MissoniBaiaObject.slogan = "";
-    MissoniBaiaObject.numberOfImages = 51;
-    MissoniBaiaObject.banner = true;
+    MissoniBaiaObject.introduccion = getLocalizedArray("introduccion", [
+        getLocalizedField("introduccion.0", "Las 249 residencias del condominio en Edgewater de Missoni Baia celebran el eterno encanto de la vida frente al agua con un estilo relajado y moderno."),
+    ]);
+    MissoniBaiaObject.titulo = getLocalizedField("titulo", "Missoni Baia");
+    MissoniBaiaObject.slogan = getLocalizedField("slogan", "");
+    MissoniBaiaObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "51"), 10) || 51;
+    MissoniBaiaObject.banner = getLocalizedField("banner", "true") === "true";
     MissoniBaiaObject.area = Edgewater();
     return MissoniBaiaObject;
 }

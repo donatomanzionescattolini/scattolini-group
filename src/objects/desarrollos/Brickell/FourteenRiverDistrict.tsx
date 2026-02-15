@@ -1,12 +1,16 @@
+import React from "react";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function FourteenRiverDistrict() {
-    const FourteenRiverDistrictObject = new Desarrollo();
+export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("14-river-district", lang);
+    const FourteenRiverDistrictObject = new Desarrollo(Brickell());
 
     FourteenRiverDistrictObject.nombre = "14-river-district";
-    FourteenRiverDistrictObject.banner = true;
+    FourteenRiverDistrictObject.banner = getLocalizedField("banner", "true") === "true";
     FourteenRiverDistrictObject.area = Brickell();
+    FourteenRiverDistrictObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "27"), 10) || 27;
 
     FourteenRiverDistrictObject.caracteristicas = {
         edificio: (
@@ -93,13 +97,11 @@ export default function FourteenRiverDistrict() {
             </ul>
         ),
     };
-    FourteenRiverDistrictObject.introduccion = [
-        "Ubicado en el borde del segundo distrito de salud pública más grande del país y a las puertas del río Miami y celebrando las tiendas, restaurantes y entretenimiento del centro de Miami, River District 14 establece un estándar más alto para lo que debería ser un vecindario.",
-        "A pocos pasos de la orilla del río y a minutos de la Bahía de Biscayne en barco, río El Distrito 14 ofrece un estilo de vida completo con todas las comodidades necesarias en las cercanías, incluidos restaurantes, tiendas, parques y taxis acuáticos.",
-    ];
-    FourteenRiverDistrictObject.titulo = "14 River District";
-    FourteenRiverDistrictObject.slogan = "";
-    FourteenRiverDistrictObject.numberOfImages = 27;
-    FourteenRiverDistrictObject.direccion = "1420 NW 14th Ave, Miami, FL 33125, Estados Unidos"
+    FourteenRiverDistrictObject.introduccion = getLocalizedArray("introduccion", [
+        "Ubicado en el borde del segundo distrito de salud pública más grande del país y a las puertas del río Miami..."
+    ]);
+    FourteenRiverDistrictObject.titulo = getLocalizedField("titulo", "14 River District");
+    FourteenRiverDistrictObject.slogan = getLocalizedField("slogan", "");
+    FourteenRiverDistrictObject.direccion = getLocalizedField("direccion", "1420 NW 14th Ave, Miami, FL 33125, USA");
     return FourteenRiverDistrictObject;
 }

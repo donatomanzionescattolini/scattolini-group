@@ -2,10 +2,12 @@ import React from 'react'
 import Desarrollo from '../../../models/desarrollos/Desarrollo';
 import Downtown from '../../areas/Downtown';
 import Constructora from '../../../models/constructora/Constructora';
+import { getDesarrolloI18n } from '../useDesarrolloI18n';
 
-export default function Jem() {
-   const Jem = new Desarrollo();
-   Jem.nombre = "jem"; 
+export default function Jem(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("jem", lang);
+    const Jem = new Desarrollo();
+    Jem.nombre = getLocalizedField("nombre", "jem"); 
     Jem.titulo = "The Jem Miami Private Residences";
     Jem.numberOfUnits = 259;
     Jem.typeOfUnits = "Studios";

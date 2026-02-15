@@ -110,16 +110,16 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
       <section className="colour-block">
         <MDBContainer>
-          <h3 className="text-center">Características</h3>
+          <h3 className="text-center">{t("pages.project.caracteristicas")}</h3>
           <hr className="hr hr-blurry w-50 mx-auto" />
           <MDBAccordion>
-            <MDBAccordionItem collapseId={1} headerTitle="Edificio">
+            <MDBAccordionItem collapseId={1} headerTitle={t("pages.project.edificio")}>
               {caract?.edificio}
             </MDBAccordionItem>
-            <MDBAccordionItem collapseId={2} headerTitle="Residencias">
+            <MDBAccordionItem collapseId={2} headerTitle={t("pages.project.residencias")}>
               {caract?.residencias}
             </MDBAccordionItem>
-            <MDBAccordionItem collapseId={3} headerTitle="Amenidades">
+            <MDBAccordionItem collapseId={3} headerTitle={t("pages.project.amenidades")}>
               {caract?.amenidades}
             </MDBAccordionItem>
           </MDBAccordion>
@@ -128,14 +128,14 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
       <section className="white-block" id="galeria-proyectos">
         <MDBContainer>
-          <h3 className="text-center">Galería Fotográfica</h3>
+          <h3 className="text-center">{t("pages.project.galeria")}</h3>
           <SlideshowGalleryDesarrollo name={nombre} numberOfImages={numberOfImages as number} />
         </MDBContainer>
       </section>
 
       <section className="white-block">
         <MDBContainer>
-          <h3 className="text-center mb-1">Propiedades en el Área</h3>
+          <h3 className="text-center mb-1">{t("pages.project.propertiesInArea")}</h3>
           <hr className="hr hr-blurry w-50 mx-auto" />
           <MDBRow>
             {[...((paramz.desarrollo.area?.desarrollos) || [])].map((des: any, idx: number) => (
@@ -163,7 +163,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
       <section className="white-block">
         <MDBContainer>
-          <h2>Contáctanos Hoy</h2>
+          <h2>{t("pages.project.contactUsToday")}</h2>
           <ContactFormComponent />
         </MDBContainer>
       </section>

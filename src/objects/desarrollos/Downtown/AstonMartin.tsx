@@ -1,8 +1,9 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function AstonMartin() {
-
+export default function AstonMartin(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("astonMartin", lang);
 
     const AstonMartinObject = new Desarrollo();
     AstonMartinObject.banner = true;
@@ -18,7 +19,7 @@ export default function AstonMartin() {
             style={{opacity: 1, margin: "auto"}}
         ></iframe>;
 
-    AstonMartinObject.direccion = "300 Biscayne Boulevard Way";
+    AstonMartinObject.direccion = getLocalizedField("direccion", "300 Biscayne Boulevard Way");
     AstonMartinObject.caracteristicas = {
         edificio: (
             <ul className="list-unstyled">
@@ -189,13 +190,11 @@ export default function AstonMartin() {
             </ul>
         )
     };
-    AstonMartinObject.introduccion = [
-        "Durante más de un siglo, el AstonMartinObject.nombre Aston Martin ha sido sinónimo de excelencia en el campo del diseño de automóviles y es una de las marcas más emblemáticas y reconocibles del mundo.  Para su visión de las Residencias Aston Martin en el centro de Miami, Florida, Aston Martin combina una estética de diseño brillante con una ubicación ideal para crear la dirección más llamativa y codiciada de Miami.",
-        "Cada aspecto de las residencias Aston Martin en 300 Biscayne Boulevard Way ha sido cuidadosamente considerado para proporcionar el equilibrio perfecto entre la maximización del espacio, la luz y las vistas óptimas, y las necesidades del estilo de vida cosmopolita moderno de hoy.      ",
-        "Situado en una de las últimas parcelas de la propiedad frente al mar de Miami en desarrollarse, Aston Martin Residences es una sinfonía de vidrio curvilíneo y acero, que se eleva 66 pisos hacia el cielo. "]
-    ;
-    AstonMartinObject.titulo = "Aston Martin Residences";
-    AstonMartinObject.slogan = "";
+    AstonMartinObject.introduccion = getLocalizedArray("introduccion", [
+        getLocalizedField("introduccion.0", "Aston Martin Residences brings the legendary craftsmanship of Aston Martin to the heart of Miami."),
+    ]);
+    AstonMartinObject.titulo = getLocalizedField("titulo", "Aston Martin Residences");
+    AstonMartinObject.slogan = getLocalizedField("slogan", "");
     AstonMartinObject.numberOfImages = 29;
     return AstonMartinObject;
 }

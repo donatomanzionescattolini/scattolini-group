@@ -1,12 +1,14 @@
 import React from 'react'
 import Desarrollo from '../../../models/desarrollos/Desarrollo'
 import Brickell from '../../areas/Brickell'
+import { getDesarrolloI18n } from '../useDesarrolloI18n'
 
-export default function MercedesBenzPlacesMiami() {
+export default function MercedesBenzPlacesMiami(lang: "en" | "es" = "es") {
+  const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n('mercedes-benz-places-miami', lang)
   const MercedesBenzPlacesObject = new Desarrollo(Brickell());
   MercedesBenzPlacesObject.area = Brickell();
-  MercedesBenzPlacesObject.titulo = "Mercedes-Benz Places Miami";
-  MercedesBenzPlacesObject.slogan = "Miami, Living, Elevated";
+  MercedesBenzPlacesObject.titulo = getLocalizedField('titulo', 'Mercedes-Benz Places Miami');
+  MercedesBenzPlacesObject.slogan = getLocalizedField('slogan', 'Miami, Living, Elevated');
   MercedesBenzPlacesObject.caracteristicas = {
     edificio: <><ul><li>Pisos: 64</li><li>Residencias: 791</li><li>Ubicación: 1133 SW 2nd Ave, Miami, FL 3313</li></ul></>,
     residencias: <><ul>
@@ -57,10 +59,12 @@ export default function MercedesBenzPlacesMiami() {
 
 
   
-  MercedesBenzPlacesObject.introduccion = ["Sumérgete en el estilo de vida elevado que es la esencia de cada residencia en Mercedes-Benz Places Miami. Aquí, la belleza no solo se ve, se experimenta, transformando cada aspecto de la vida en un viaje emocional sumamente deseable. Diseñadas por los reconocidos expertos en interiores de Woods Bagot, estas residencias redefinen la vida en Miami y ofrecen una combinación perfecta de innovación, exclusividad y sostenibilidad.","Espacios habitables incomparables : cada residencia, desde un estudio hasta tres habitaciones, lo invita a un mundo de lujo moderno, donde los diseños meticulosamente concebidos se combinan con una artesanía incomparable. Las áreas de estar están adornadas con ventanales de piso a techo de 10 pies que no solo dejan entrar la luz natural, sino que también enmarcan el impresionante horizonte de Miami, convirtiendo cada vista en una obra maestra.","Terrazas amplias : ampliando el espacio habitable, las terrazas de 5 pies de profundidad ofrecen un refugio privado al aire libre donde la belleza del paisaje de Miami se fusiona con la comodidad de su hogar, perfecto para el entretenimiento o la contemplación tranquila.","Artesanía superior : los pisos de madera diseñados se distribuyen por cada residencia, brindando una base cálida y acogedora que complementa los elegantes accesorios cromados personalizados y la tecnología integrada en el hogar, estableciendo un nuevo estándar para el lujo residencial.","Amenidades de última generación : la practicidad se combina con el lujo con la inclusión de una lavadora y secadora Miele en cada residencia, lo que garantiza que la comodidad nunca se vea comprometida.","En Mercedes-Benz Places Miami, vivir no se trata solo del espacio que habitas, sino de la calidad de vida que ofrece. Cada residencia es un lienzo para la innovación, diseñada para elevar la experiencia de vida en Miami a niveles sin precedentes de lujo y modernidad."];
-  MercedesBenzPlacesObject.nombre = "mercedes-benz-places-miami";
-  MercedesBenzPlacesObject.banner = true;
-  MercedesBenzPlacesObject.numberOfImages = 17;
+  MercedesBenzPlacesObject.introduccion = getLocalizedArray('introduccion', [
+    'Sumérgete en el estilo de vida elevado que es la esencia de cada residencia en Mercedes-Benz Places Miami.'
+  ])
+  MercedesBenzPlacesObject.nombre = getLocalizedField('nombre', 'mercedes-benz-places-miami')
+  MercedesBenzPlacesObject.banner = getLocalizedField('banner', 'true') === 'true'
+  MercedesBenzPlacesObject.numberOfImages = parseInt(getLocalizedField('numberOfImages', '17'), 10) || 17
 
   return MercedesBenzPlacesObject;
 

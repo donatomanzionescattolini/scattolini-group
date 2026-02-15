@@ -6,7 +6,7 @@ export function StRegisProject() {
     return (
         <ProjectTemplate
             //   banner
-            desarrollo={StRegis()}
+            desarrollo={StRegis("en")}
         />
     );
 }

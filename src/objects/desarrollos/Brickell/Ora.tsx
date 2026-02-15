@@ -1,12 +1,15 @@
+import React from "react";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function Ora() {
-    const OraObject = new Desarrollo();
-    OraObject.banner = true;
+export default function Ora(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("ora", lang);
+    const OraObject = new Desarrollo(Brickell());
+    OraObject.banner = getLocalizedField("banner", "true") === "true";
     OraObject.area = Brickell();
 
-    OraObject.nombre = "ora";
+    OraObject.nombre = getLocalizedField("nombre", "ora");
     OraObject.caracteristicas = {
         edificio: (
             <ul>
@@ -153,28 +156,23 @@ export default function Ora() {
             </ul>
         ),
     };
-    OraObject.introduccion = [
-        "Presentamos ORA by Casa Tua, un nuevo destino realmente único al que llamar hogar. ORA ofrece residencias de propiedad flexible a corto, mediano y largo plazo, perfectamente ubicadas en Brickell, el Distrito Financiero de Miami. Con residencias cuidadosamente curadas, restaurantes de primer nivel y hermosas áreas sociales dedicadas al arte y la cultura lideradas por la icónica marca Casa Tua, ORA se convertirá en el epicentro de la ciudad.      ",
-    ];
-    OraObject.titulo =
-        <>
-            Ora 
-            <span className="m-0" style={{fontSize: "12px!important"}}>
-            <i> by</i> Casa Tua
-          </span>
-        </>;
+    OraObject.introduccion = getLocalizedArray("introduccion", [
+        "Presentamos ORA by Casa Tua, un nuevo destino realmente único al que llamar hogar."
+    ]);
+    OraObject.titulo = getLocalizedField("titulo", "Ora by Casa Tua");
 
-    OraObject.slogan = "Residencias con Alma en el Corazón de Miami";
-    OraObject.numberOfImages = 14;
-    OraObject.video =
+    OraObject.slogan = getLocalizedField("slogan", "Residencias con Alma en el Corazón de Miami");
+    OraObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "14"), 10) || 14;
+    OraObject.video = (
         <iframe
             className="embed-responsive  d-flex flex-row justify-content-center"
             width={700}
             height={500}
-            src="https://player.vimeo.com/video/806352821?autoplay=true"
+            src={getLocalizedField("video", "https://player.vimeo.com/video/806352821?autoplay=true")}
             allowFullScreen
             autoFocus
             data-ready="true"
-        ></iframe>;
+        ></iframe>
+    );
     return OraObject;
 }

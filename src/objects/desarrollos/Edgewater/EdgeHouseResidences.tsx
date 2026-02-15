@@ -1,23 +1,25 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import Edgewater from "../../areas/Edgewater";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-const EdgeHouseResidences = new Desarrollo(Edgewater());
-EdgeHouseResidences.nombre = "edge-house-residences";
-EdgeHouseResidences.titulo = "Edge House Residences";
-EdgeHouseResidences.introduccion = [
-  "Edge House Residencias, una torre de 60 pisos de lujo e innovación en El barrio Edgewater de Miami. Desarrollado por Grupo T&C, dirigido por el visionario William Ticona y diseñado arquitectónicamente por Kobi Karp, este imponente hito redefine la vida urbana con su elegante silueta de 60 pisos. Ofreciendo 592 unidades de condominio, incluidos estudios, hasta espaciosas residencias de dos dormitorios, Edge House Miami presenta una oportunidad incomparable para alquileres a corto plazo, atendiendo al estilo de vida dinámico de los residentes cosmopolitas de Miami.",
-  "Cada residencia dentro de Edge House Miami está meticulosamente diseñada con atención al detalle, con pisos terminados, cocinas gourmet con electrodomésticos de estilo europeo y balcones que ofrecen impresionantes vistas del paisaje urbano. Con su combinación de diseño moderno, comodidades incomparables y ubicación privilegiada, Edge House Miami personifica el pináculo de la vida de lujo urbano en la dinámica ciudad de Miami. Barrio de Edgewater.",
-];
-EdgeHouseResidences.banner = true;
-EdgeHouseResidences.slogan = "Tuyo Para Disfrutar, Tuyo Para Compartir";
-EdgeHouseResidences.numberOfImages = 44;
-EdgeHouseResidences.direccion = "1825 NE 4TH Avenue, Miami, FL 33132";
-EdgeHouseResidences.numberOfFloors = 57;
-EdgeHouseResidences.numberOfRooms = "Estudios y 1, 2 y 3 dormitorios";
-EdgeHouseResidences.estimatedCompletionYear = 2028;
-EdgeHouseResidences.numberOfUnits = 592;
-EdgeHouseResidences.area = Edgewater();
-EdgeHouseResidences.caracteristicas = {
+export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
+  const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("edge-house-residences", lang);
+  const EdgeHouseResidences = new Desarrollo(Edgewater());
+  EdgeHouseResidences.nombre = getLocalizedField("nombre", "edge-house-residences");
+  EdgeHouseResidences.titulo = getLocalizedField("titulo", "Edge House Residences");
+  EdgeHouseResidences.introduccion = getLocalizedArray("introduccion", [
+    getLocalizedField("introduccion.0", "Edge House Residencias, una torre de 60 pisos de lujo e innovación en El barrio Edgewater de Miami."),
+  ]);
+  EdgeHouseResidences.banner = getLocalizedField("banner", "true") === "true";
+  EdgeHouseResidences.slogan = getLocalizedField("slogan", "Tuyo Para Disfrutar, Tuyo Para Compartir");
+  EdgeHouseResidences.numberOfImages = parseInt(getLocalizedField("numberOfImages", "44"), 10) || 44;
+  EdgeHouseResidences.direccion = getLocalizedField("direccion", "1825 NE 4TH Avenue, Miami, FL 33132");
+  EdgeHouseResidences.numberOfFloors = parseInt(getLocalizedField("numberOfFloors", "57"), 10) || 57;
+  EdgeHouseResidences.numberOfRooms = getLocalizedField("numberOfRooms", "Estudios y 1, 2 y 3 dormitorios");
+  EdgeHouseResidences.estimatedCompletionYear = parseInt(getLocalizedField("estimatedCompletionYear", "2028"), 10) || 2028;
+  EdgeHouseResidences.numberOfUnits = parseInt(getLocalizedField("numberOfUnits", "592"), 10) || 592;
+  EdgeHouseResidences.area = Edgewater();
+  EdgeHouseResidences.caracteristicas = {
   edificio: (
     <>
       <dl>
@@ -100,6 +102,6 @@ EdgeHouseResidences.caracteristicas = {
     </>
   ),
 };
+return EdgeHouseResidences;
+}
 
-
-export default EdgeHouseResidences;

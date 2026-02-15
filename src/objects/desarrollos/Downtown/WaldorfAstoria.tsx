@@ -1,12 +1,14 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function WaldorfAstoria() {
+export default function WaldorfAstoria(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("waldorf-astoria", lang);
     const WaldorfAstoriaObject = new Desarrollo();
 
 
-    WaldorfAstoriaObject.nombre = "waldorf-astoria";
-    WaldorfAstoriaObject.banner = true;
+    WaldorfAstoriaObject.nombre = getLocalizedField("nombre", "waldorf-astoria");
+    WaldorfAstoriaObject.banner = getLocalizedField("banner", "true") === "true";
     WaldorfAstoriaObject.area = Downtown();
     WaldorfAstoriaObject.video = (<iframe height={500} className=" h-300 m-auto autoplay"
                                           src="https://www.youtube.com/embed/ECvGpRYiy3k?si=ntjyJcGsf3V18EYm?autoplay=1"

@@ -1,11 +1,14 @@
+import React, { _jsx as _jsx } from "react";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function ShomaBay() {
+export default function ShomaBay(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("shoma-bay", lang);
     const ShomaBayObject = new Desarrollo();
-    ShomaBayObject.nombre = "shoma-bay";
+    ShomaBayObject.nombre = getLocalizedField("nombre", "shoma-bay");
 
-    ShomaBayObject.direccion = "1850 John F Kennedy Causeway, North Bay Village, FL 33141";
+    ShomaBayObject.direccion = getLocalizedField("direccion", "1850 John F Kennedy Causeway, North Bay Village, FL 33141");
     ShomaBayObject.caracteristicas = {
         edificio: (
             <ul>
@@ -71,15 +74,14 @@ export default function ShomaBay() {
             </ul>
         ),
     };
-    ShomaBayObject.introduccion = [
-        "Escondido en North Bay Village y perfectamente alejado del ritmo apresurado de Miami, Shoma Bay es el primero de su tipo, un lugar donde puedes vivir y jugar con lujo. Un lugar diseñado para aquellos que anhelan integrar su vida, trabajo, bienestar y estilo de vida de juego.",
-        "Cada accesorio es intencional, cada detalle está meticulosamente atendido, los espacios de vida muestran lo último en sofisticación contemporánea al tiempo que reflejan las raíces clásicas de la histórica ciudad de Nueva York. ",
-    ];
-    ShomaBayObject.banner = true;
+    ShomaBayObject.introduccion = getLocalizedArray("introduccion", [
+        getLocalizedField("introduccion.0", "Escondido en North Bay Village y perfectamente alejado del ritmo apresurado de Miami, Shoma Bay es el primero de su tipo, un lugar donde puedes vivir y jugar con lujo."),
+    ]);
+    ShomaBayObject.banner = getLocalizedField("banner", "true") === "true";
     ShomaBayObject.area = NorthBayVillage();
-    ShomaBayObject.titulo = "Shoma Bay";
-    ShomaBayObject.slogan = "";
-    ShomaBayObject.numberOfImages = 16;
+    ShomaBayObject.titulo = getLocalizedField("titulo", "Shoma Bay");
+    ShomaBayObject.slogan = getLocalizedField("slogan", "");
+    ShomaBayObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "16"), 10) || 16;
     ShomaBayObject.video =
         <div className="d-flex flex-row p-0 m-0 h-100 embed-responsive justify-content-center">
             <iframe

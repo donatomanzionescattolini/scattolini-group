@@ -1,19 +1,22 @@
+import React from "react";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function FourteenTwentyEight() {
-    const FourteenTwentyEightObject = new Desarrollo();
-    FourteenTwentyEightObject.banner = true;
+export default function FourteenTwentyEight(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("1428-brickell", lang);
+    const FourteenTwentyEightObject = new Desarrollo(Brickell());
+    FourteenTwentyEightObject.banner = getLocalizedField("banner", "true") === "true";
     FourteenTwentyEightObject.area = Brickell();
-    FourteenTwentyEightObject.numberOfImages = 39;
+    FourteenTwentyEightObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "39"), 10) || 39;
 
     FourteenTwentyEightObject.nombre = "1428-brickell";
-    FourteenTwentyEightObject.titulo = "The Residences at 1428 Brickell";
-    FourteenTwentyEightObject.slogan = "Tu vida. A tu manera.";
-    FourteenTwentyEightObject.introduccion = [
-        " Desde su concepción, The Residences at 1428 Brickell fue cuidadosamente planificada como una torre en la que todo concepto mereció una minuciosa valoración. La atención puesta en cada detalle es el resultado de una búsqueda escrupulosa e imaginativa para que las comodidades se conjuguen armónicamente con los espacios comunes y la privacidad de cada residente.",
-        " El diseño audaz y la comodidad sin límites reinan The Residences  at 1428 Brickell. Aquí, los residentes pueden disfrutar al máximo  de sus hogares, ya que cada detalle ha sido pensado para  promover su bienestar. Cada residencia maximiza la luz y el espacio, dos características  clave en una torre residencial urbana. Todas las residencias tienen  fachadas de vidrio, y terrazas que integran el interior y el exterior  con vistas a la bahía de Biscayne y al océano Atlántico. De día, el  sol brilla sobre las azules aguas del mar y por la noche las luces  de la ciudad brillan a la distancia",
-    ];
+    FourteenTwentyEightObject.titulo = getLocalizedField("titulo", "The Residences at 1428 Brickell");
+    FourteenTwentyEightObject.slogan = getLocalizedField("slogan", "Tu vida. A tu manera.");
+    FourteenTwentyEightObject.introduccion = getLocalizedArray("introduccion", [
+        "Desde su concepción, The Residences at 1428 Brickell fue cuidadosamente planificada como una torre en la que todo concepto mereció una minuciosa valoración."
+    ]);
+
     FourteenTwentyEightObject.caracteristicas = {
         edificio: (
             <ul>

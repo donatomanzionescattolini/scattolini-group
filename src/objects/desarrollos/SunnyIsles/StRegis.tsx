@@ -1,19 +1,20 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function StRegis() {
+export default function StRegis(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("st-regis", lang);
     const StRegisObject = new Desarrollo();
 
-
-    StRegisObject.numberOfImages = 52;
-    StRegisObject.nombre = "st-regis";
-    StRegisObject.titulo = "St. Regis® ";
-    StRegisObject.slogan = "Vivir exquisito es vivir extraordinario";
-    StRegisObject.introduccion = [
+    StRegisObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "52"), 10) || 52;
+    StRegisObject.nombre = getLocalizedField("nombre", "st-regis");
+    StRegisObject.titulo = getLocalizedField("titulo", "St. Regis® ");
+    StRegisObject.slogan = getLocalizedField("slogan", "Vivir exquisito es vivir extraordinario");
+    StRegisObject.introduccion = getLocalizedArray("introduccion", [
         "Situado a lo largo de la hermosa costa de South  con exquisitas vistas frente a la bahía, The St. Regis Residences, Miami personifica la vida elegante. Refleja las sensibilidades de aquellos que son impulsados por el conocimiento, exigen excelencia, respetan la tradición y valoran la individualidad por encima de todo.",
         "The St. Regis Residences, Miami representa un futuro impulsado por un pasado histórico. Un lugar donde las nuevas generaciones crearán una vida de momentos legendarios, en hogares únicos para personas que perciben sus legados personales innatamente entrelazados con la rica herencia de Miami.",
         "Desarrollado por Grupo Relacionado e Integra Investments, St. Regis Residences ofrece un diseño majestuoso de Robert AM Stern Architects que presenta interiores exclusivos de Rockwell Group y paisajismo de Enzo Enea Group.",
-    ];
+    ]);
     StRegisObject.banner = true;
     StRegisObject.area = SunnyIsles();
     StRegisObject.caracteristicas = {

@@ -1,9 +1,10 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
 import Brickell from "../../areas/Brickell.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function BaccaratResidences() {
-
+export default function BaccaratResidences(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("baccarat", lang);
 
     const baccaratResidencesObject = Object.getPrototypeOf(Desarrollo);
     baccaratResidencesObject.banner = true;
@@ -183,16 +184,15 @@ export default function BaccaratResidences() {
             </ul>
         ),
     };
-    baccaratResidencesObject.introduccion = [
-        "Baccarat presenta con orgullo su primera colección de residencias al mercado de Miami.",
-        "Iluminada por el brillo infinito del sol, esta torre elevada se mantendrá radiante en el paseo marítimo donde el río se encuentra con la bahía, en el corazón de las brillantes luces de la ciudad. Combinando la vitalidad brillante y el dinamismo magnético de Brickel con un diseño iluminado y un servicio ingenioso, los residentes pueden esperar un estilo de vida infundido con delicias inesperadas y brillantez inspirada",
-        "Penthouse residences disponibles para vista previa exclusiva.",
-    ]
-    baccaratResidencesObject.titulo = "Baccarat Residences";
-    baccaratResidencesObject.subtitulo =
+    baccaratResidencesObject.introduccion = getLocalizedArray("introduccion", [
+        getLocalizedField("introduccion.0", "Baccarat proudly presents its first collection of residences to the Miami market."),
+    ]);
+    baccaratResidencesObject.titulo = getLocalizedField("titulo", "Baccarat Residences");
+    baccaratResidencesObject.subtitulo = (
         <p className="text-cursive p-0 m-0">
-            <em>Donde la vida brilla para siempre</em>
-        </p>;
+            <em>{getLocalizedField("subtitulo", "Where life shines forever")}</em>
+        </p>
+    );
     baccaratResidencesObject.numberOfImages = 79;
 
     return baccaratResidencesObject;

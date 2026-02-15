@@ -1,9 +1,12 @@
+import React from "react";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import CoralGables from "../../areas/CoralGables.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function TheAvenue() {
+export default function TheAvenue(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("the-avenue", lang);
     const TheAvenueObject = new Desarrollo();
-    TheAvenueObject.nombre = "the-avenue";
+    TheAvenueObject.nombre = getLocalizedField("nombre", "the-avenue");
     TheAvenueObject.caracteristicas = {
         edificio: (
             <>
@@ -91,17 +94,17 @@ export default function TheAvenue() {
             </>
         ),
     };
-    TheAvenueObject.introduccion = [
+    TheAvenueObject.introduccion = getLocalizedArray("introduccion", [
         "Creado por el estudio de arquitectura líder Bermello Ajamil & Partners, The Avenue cobra vida con un diseño inspirado en el clasicismo mediterráneo. Descubra un edificio esculpido y atemporal que encajará perfectamente en The City Beautiful mientras se destaca como una dirección emblemática",
 
         "Cada residencia se completa con acabados de buen gusto y muebles y decoración seleccionados por expertos de Adriana Hoyos Design Studio. Después de redefinir el lujo tropical durante casi tres décadas, el equipo ahora dejará su huella en la mejor dirección de Coral Gables",
 
         'Todos los partidos. Todos los acabados. Cada mueble. The Avenue es lo que significa estar verdaderamente "listo para mudarse".',
-    ];
-    TheAvenueObject.titulo = "The Avenue";
-    TheAvenueObject.slogan = "La esencia de la avenida Coral Gables";
-    TheAvenueObject.numberOfImages = 27;
-    TheAvenueObject.banner = true;
+    ]);
+    TheAvenueObject.titulo = getLocalizedField("titulo", "The Avenue");
+    TheAvenueObject.slogan = getLocalizedField("slogan", "La esencia de la avenida Coral Gables");
+    TheAvenueObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "27"), 10) || 27;
+    TheAvenueObject.banner = getLocalizedField("banner", "true") === "true";
     TheAvenueObject.area = CoralGables();
 
     return TheAvenueObject;

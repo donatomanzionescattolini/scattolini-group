@@ -1,11 +1,12 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function BentleyResidences() {
+export default function BentleyResidences(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("bentley-residences", lang);
     const BentleyResidencesObject = new Desarrollo();
 
     BentleyResidencesObject.nombre = "bentley-residences";
-
 
     BentleyResidencesObject.caracteristicas = {
         edificio: (
@@ -58,10 +59,13 @@ export default function BentleyResidences() {
             </>
         ),
     };
-    BentleyResidencesObject.introduccion = [
-        "Bentley Residences se eleva 60 pisos con un diseño arquitectónico inigualable que incorpora una pared plateada reflectante artística. Las residencias varían en tamaño de 3,500 a 9,000 pies cuadrados, y todas cuentan con vista al mar. La propiedad es la torre residencial más alta en una playa de Estados Unidos. Las comodidades incluyen un cine, restaurante, bar, gimnasio, piscina, spa, salón de cigarros, cabañas y jardines. La torre ha sido diseñada de acuerdo con la certificación del Florida Green Building Council (FLGC) y otras regulaciones ambientales, lo que garantiza la protección del medio ambiente local y minimiza el impacto en la vida silvestre local. La ubicación de Bentley Residences Miami en la pintoresca Collins Avenue ofrece proximidad a la hermosa playa y al Océano Atlántico",
-    ];
-    BentleyResidencesObject.video =
+    BentleyResidencesObject.introduccion = getLocalizedArray("introduccion", [
+        getLocalizedField(
+            "introduccion.0",
+            "Bentley Residences rises 60 floors with unmatched architectural design and reflective silver facade. Residences range from 3,500 to 9,000 sqft, all with ocean views. Amenities include cinema, restaurant, bar, gym, pool, spa, cigar lounge, cabanas and gardens."
+        ),
+    ]);
+    BentleyResidencesObject.video = (
         <iframe
             width="1280"
             height="720"
@@ -70,12 +74,22 @@ export default function BentleyResidences() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
         ></iframe>
-    ;
-    BentleyResidencesObject.titulo = "Bentley Residences";
-    BentleyResidencesObject.slogan = "Espacio que puedes abrazar";
+    );
+    BentleyResidencesObject.titulo = getLocalizedField("titulo", "Bentley Residences");
+    BentleyResidencesObject.slogan = getLocalizedField("slogan", "Space you can embrace");
     BentleyResidencesObject.numberOfImages = 47;
     BentleyResidencesObject.banner = true;
     BentleyResidencesObject.area = SunnyIsles();
-    BentleyResidencesObject.video = <iframe width="1600" height="900" src="https://www.youtube.com/embed/RmtuXP6nIiI?list=TLGGweicZODCOb8xMTEyMjAyMw&autoplay=1&controls=0" title="Bentley Residences Miami - Residences" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>;
+    BentleyResidencesObject.video = (
+        <iframe
+            width="1600"
+            height="900"
+            src="https://www.youtube.com/embed/RmtuXP6nIiI?list=TLGGweicZODCOb8xMTEyMjAyMw&autoplay=1&controls=0"
+            title="Bentley Residences Miami - Residences"
+            frameBorder={0}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+        ></iframe>
+    );
     return BentleyResidencesObject;
 }

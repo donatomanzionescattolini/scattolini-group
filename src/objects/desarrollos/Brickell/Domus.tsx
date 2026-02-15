@@ -1,10 +1,13 @@
+import React from "react";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
-export default function Domus() {
-    const Domus = new Desarrollo();
+export default function Domus(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("domus", lang);
+    const Domus = new Desarrollo(Brickell());
     Domus.nombre = "domus";
-    Domus.titulo = "Domus FLATS"
+    Domus.titulo = getLocalizedField("titulo", "Domus FLATS");
     Domus.area = Brickell();
     Domus.caracteristicas = {
         edificio: (
@@ -65,17 +68,17 @@ export default function Domus() {
         ),
     };
 
-    Domus.introduccion = [
-        "Bienvenido a Domus, una colección de FLATS (Apartamentos Flexibles para Estancias Temporales) diseñada para adaptarse a tu vida: las comodidades del hogar con el servicio, la seguridad y la consistencia de un hotel en un entorno local, divertido y totalmente conectado. Domus ofrece todos los elementos esenciales con excelente gusto y todas las comodidades que importan. Ubicado en el corazón de Domus Brickell Park, encontrará Peacock Room: un espacio de reunión colectivo y alegre con un ambiente que atrae naturalmente a una multitud y se nutre de la energía del vecindario siempre activo de Brickell.",
-    ];
-    Domus.banner = true;
-    Domus.video =
+    Domus.introduccion = getLocalizedArray("introduccion", [
+        "Bienvenido a Domus, una colección de FLATS (Apartamentos Flexibles para Estancias Temporales) diseñada para adaptarse a tu vida."
+    ]);
+    Domus.banner = getLocalizedField("banner", "true") === "true";
+    Domus.video = (
         <iframe id="ytplayer" width="720" height="405"
-                src="https://www.youtube.com/embed/M_9_sCBNLDQ?autoplay=1&controls=0"
+                src={getLocalizedField("video", "https://www.youtube.com/embed/M_9_sCBNLDQ?autoplay=1&controls=0")}
                 frameBorder={0} allowFullScreen/>
-    ;
-    Domus.titulo = "Domus FLATS";
-    Domus.slogan = "";
-    Domus.numberOfImages = 7;
+    );
+    Domus.titulo = getLocalizedField("titulo", "Domus FLATS");
+    Domus.slogan = getLocalizedField("slogan", "");
+    Domus.numberOfImages = parseInt(getLocalizedField("numberOfImages", "7"), 10) || 7;
     return Domus;
 }
