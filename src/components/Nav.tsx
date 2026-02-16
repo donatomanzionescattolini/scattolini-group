@@ -113,7 +113,7 @@ const Nav = () => {
           </div>
         </MDBNavbarToggler>
 
-        <MDBCollapse navbar show={showNavCentred} id="navbarCenteredExample">
+        <MDBCollapse navbar open={showNavCentred} id="navbarCenteredExample">
           <MDBNavbarNav fullWidth={true} className="mb-2 mb-lg-0">
             <MDBNavbarItem>
               <div className="d-flex align-items-center ms-3">
@@ -151,8 +151,8 @@ const Nav = () => {
                   <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
                     <input
                       className="form-control"
-                      placeholder={t('nav.search')}
-                      aria-label={t('nav.search')}
+                      placeholder={t('nav.search') as string}
+                      aria-label={t('nav.search') as string}
                       type="Search"
                       value={searchQueryArea}
                       onChange={handleSearchArea}
@@ -179,8 +179,8 @@ const Nav = () => {
                   <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
                     <input
                       className="form-control"
-                      placeholder={t('nav.search')}
-                      aria-label={t('nav.search')}
+                      placeholder={t('nav.search') as string}
+                      aria-label={t('nav.search') as string}
                       type="Search"
                       value={searchQueryDesarrollo}
                       onChange={handleSearchDesarrollo}

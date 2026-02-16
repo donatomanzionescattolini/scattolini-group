@@ -54,10 +54,10 @@ export default function App() {
       <FloatingWhatsApp
         
         phoneNumber={"13056139338"}
-        chatMessage={t("whatsapp.status")}
-        statusMessage={t("whatsapp.status")}
+        chatMessage={t("whatsapp.status") as string}
+        statusMessage={t("whatsapp.status") as string}
         avatar="https://pagina-mama.s3.amazonaws.com/assets2/asociados/elda-whatsapp.png"
-        placeholder={t("whatsapp.placeholder")}
+        placeholder={t("whatsapp.placeholder") as string}
         accountName={"Scattolini Group"}
         notificationSound
         className={"floating-whatsapp"}

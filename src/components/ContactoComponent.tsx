@@ -37,7 +37,7 @@ export default function Page() {
               <b> {t("contacto.horasOficina", "Horas de Oficina")}</b>
               <br></br>
               <br></br>
-              {t("contacto.horasTexto", "Lunes a viernes: 9am - 5pm\nSábado: Con cita\nDomingo: Cerrado").split('\n').map((line, index) => (
+              {(t("contacto.horasTexto", "Lunes a viernes: 9am - 5pm\nSábado: Con cita\nDomingo: Cerrado") as string).split('\n').map((line, index) => (
                 <span key={index}>
                   {line}
                   {index < 2 && <br></br>}

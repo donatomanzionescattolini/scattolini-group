@@ -170,7 +170,7 @@ desarrolloMap.push({
     TheVilla(),
     VidaResidences(),
     ElleResidences(),
-    EdgeHouseResidences,
+    EdgeHouseResidences(),
   ]),
 });
 desarrolloMap.push({

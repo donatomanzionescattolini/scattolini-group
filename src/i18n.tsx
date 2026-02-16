@@ -355,123 +355,6 @@ const translations: Record<Lang, any> = {
             "viceroy-brickell": {
                 titulo: "Viceroy Brickell",
                 introduccion: [
-                    "Viceroy Residences Brickell is a luxury tower in Brickell with impressive views and premium amenities."
-                ],
-                direccion: "77 SE 5th St, Miami, FL 33131, USA",
-                banner: "true",
-                numberOfImages: "35",
-                caracteristicas: {
-                    edificio: {
-                        direccionLabel: "Address",
-                        añoLabel: "Year of Construction / Completion",
-                        pisosLabel: "Number of Floors",
-                        unidadesLabel: "Number of Units",
-                        tipoLabel: "Type of Units",
-                        cuartosLabel: "Number of Rooms",
-                    },
-                    residencias: {
-                        p1: "Collection of tower residences topped by penthouses.",
-                        p2: "Floor plans offering studios and 1–3 bedroom residences."
-                    },
-                    amenidades: {
-                        p1: "Prime location at One Brickell with direct access to the riverwalk.",
-                        p2: "Resort-style terrace and wellness facilities."
-                    }
-                }
-            },
-            cipriani: {
-                titulo: "Cipriani Residences",
-                introduccion: ["Brilliantly designed by Arquitectonica and 1508 London, these elegant residences offer Cipriani-level service and luxury."],
-                banner: "true",
-                numberOfImages: "14",
-                caracteristicas: {
-                    edificio: {
-                        p1: "A distinctive addition to the Brickell skyline.",
-                        li1: "An elegant 80-story tower with cascading curved glass facade",
-                        li2: "A collection of residences including exceptional penthouses",
-                        li3: "Dining services exclusively for Cipriani residents",
-                        li4: "Panoramic views of Biscayne Bay and Brickell skyline",
-                    },
-                    residencias: {
-                        li1: "Spacious living rooms with 10-foot ceilings",
-                        li2: "Floor-to-ceiling sliding glass doors",
-                        li3: "Terrace access from living room and master bedroom",
-                        li4: "Elegant walk-in closets in each master bedroom"
-                    },
-                    amenidades: {
-                        li1: "Private porte cochere with lush gardens",
-                        li2: "Impressive lobby and high-speed elevators",
-                        li3: "Private dining experiences by Cipriani"
-                    }
-                }
-            },
-            lofty: {
-                titulo: "Lofty Residences Brickell",
-                introduccion: ["Lofty Residences is a 43-story condominium setting a new standard of cosmopolitan living in Brickell."],
-                slogan: "A New Standard of Cosmopolitan Living in Brickell",
-                banner: "true",
-                numberOfImages: "55",
-                caracteristicas: {
-                    residencias: {
-                        title: "The Residences",
-                        li1: "Urban luxury residences with modern open layouts from 485SF — 930 SF",
-                        li2: "Fully finished and specially furnished residences",
-                        li3: "Panoramic views of the Miami River and skyline"
-                    },
-                    edificio: {
-                        li1: "Short-term rentals permitted by right",
-                        li2: "Two-story lobby with floor-to-ceiling windows",
-                        li3: "24/7 valet service"
-                    },
-                    amenidades: {
-                        li1: "Resort-style pool with cabanas",
-                        li2: "Pool terrace grill and bar",
-                        li3: "Coworking lounge"
-                    }
-                }
-            },
-            "1428-brickell": {
-                titulo: "The Residences at 1428 Brickell",
-                introduccion: ["The Residences at 1428 Brickell was carefully planned to deliver amenities and privacy to every resident."],
-                slogan: "Your life. Your way.",
-                banner: "true",
-                numberOfImages: "39"
-            },
-            "14-river-district": {
-                titulo: "14 River District",
-                introduccion: ["River District 14 offers a complete waterfront lifestyle along the Miami River and Biscayne Bay."],
-                direccion: "1420 NW 14th Ave, Miami, FL 33125, USA",
-                numberOfImages: "27",
-                banner: "true"
-            },
-            "888-brickell-dolce-and-gabbana-residences": {
-                titulo: "888 Brickell Dolce & Gabbana Residences",
-                introduccion: ["888 Brickell by Dolce & Gabbana redefines Italian luxury with branded residences and hotel in Miami."],
-                banner: "true",
-                numberOfImages: "21",
-                numberOfFloors: "90",
-                numberOfUnits: "259",
-                direccion: "888 Brickell Ave, Miami, FL 33131, USA"
-            },
-            "mercedes-benz-places-miami": {
-                titulo: "Mercedes-Benz Places Miami",
-                introduccion: ["Mercedes-Benz Places Miami offers design-forward residences with integrated technology and premium amenities."],
-                slogan: "Miami, Living, Elevated",
-                nombre: "mercedes-benz-places-miami",
-                banner: "true",
-                numberOfImages: "17"
-            },
-            ora: {
-                titulo: "Ora by Casa Tua",
-                introduccion: ["ORA by Casa Tua delivers flexible ownership residences in Brickell with Italian design and hospitality-led services."],
-                slogan: "Residences with Soul in the Heart of Miami",
-                banner: "true",
-                numberOfImages: "14",
-                video: "https://player.vimeo.com/video/806352821?autoplay=true"
-            },
-            "viceroy-brickell": {
-                titulo: "Viceroy Brickell",
-                introduccion: [
                     "Viceroy Residences Brickell es una torre de lujo ubicada en Brickell, con impresionantes vistas y amenidades premium."
                 ],
                 direccion: "77 SE 5th St, Miami, FL 33131",
@@ -585,6 +468,38 @@ const translations: Record<Lang, any> = {
                 banner: "true",
                 numberOfImages: "14",
                 video: "https://player.vimeo.com/video/806352821?autoplay=true"
+            },
+            "nomad-residences": {
+                titulo: "Nomad Residences",
+                slogan: "Carácter individual, un mundo de confort",
+                introduccion: ["El Nomad Wynwood Residences cuenta con 329 residencias de lujo. Las unidades varían en tamaño desde 478 pies cuadrados hasta 911 pies cuadrados. Fue desarrollado por Related Group, el prestigioso desarrollador detrás de Icon Brickell, SLS Lux, Brickell Heights, Hyde Beach, Baccarat Residences y muchos otros edificios de ultra lujo en el sur de Florida. Diseñado por Arquitectonica y con un elegante diseño interior de Design Agency. Este condominio residencial ubicado en el centro se encuentra en la vibrante área de Wynwood de Miami, Florida. Algunas de las atracciones más importantes son las paredes de Wynwood, las galerías de arte, la alta cocina, las tiendas y los lugares culturales que brindarán a los residentes una experiencia de vida como en ningún otro lugar del sur de la Florida."],
+                ubicacion: "280 NW 27th Street, Miami, FL 33127",
+                numberOfImages: "20"
+            },
+            origin: {
+                titulo: "Origin Bay Harbor Islands",
+                slogan: "Vida Sofisticada Frente al Mar",
+                introduccion: ["Origin es un desarrollo de lujo frente al agua en Bay Harbor Islands con vistas espectaculares de la Bahía de Biscayne."],
+                numberOfImages: "30"
+            },
+            "la-maré": {
+                titulo: "La Maré Bay Harbor",
+                slogan: "Elegancia Moderna en la Bahía",
+                introduccion: ["La Maré ofrece residencias de lujo con diseño contemporáneo en Bay Harbor Islands."],
+                ubicacion: "9927 E Bay Harbor Dr, Islas Bay Harbor, FL 33154, Estados Unidos",
+                numberOfImages: "25"
+            },
+            "the-well": {
+                titulo: "The Well Bay Harbor",
+                slogan: "Bienestar y Lujo en Bay Harbor",
+                introduccion: ["The Well combina vida de lujo con enfoque en bienestar en Bay Harbor Islands."],
+                numberOfImages: "20"
+            },
+            vita: {
+                titulo: "Vita Coconut Grove",
+                slogan: "Vida Vibrante en el Grove",
+                introduccion: ["Vita ofrece residencias modernas en el corazón de Coconut Grove."],
+                numberOfImages: "15"
             },
         },
         footer: {
@@ -933,6 +848,38 @@ const translations: Record<Lang, any> = {
                         aire: "Filtered air conditioning in all common areas",
                     },
                 },
+            },
+            "nomad-residences": {
+                titulo: "Nomad Residences",
+                slogan: "Individual Character, A World of Comfort",
+                introduccion: ["Nomad Wynwood Residences features 329 luxury residences. Units range in size from 478 square feet to 911 square feet. Developed by Related Group, the prestigious developer behind Icon Brickell, SLS Lux, Brickell Heights, Hyde Beach, Baccarat Residences, and many other ultra-luxury buildings in South Florida. Designed by Arquitectonica with elegant interior design by Design Agency. This centrally-located residential condominium is in Miami's vibrant Wynwood area, Florida. Some of the highlights include the Wynwood Walls, art galleries, fine dining, shops, and cultural venues that will provide residents with a living experience like nowhere else in South Florida."],
+                ubicacion: "280 NW 27th Street, Miami, FL 33127",
+                numberOfImages: "20"
+            },
+            origin: {
+                titulo: "Origin Bay Harbor Islands",
+                slogan: "Sophisticated Waterfront Living",
+                introduccion: ["Origin is a luxury waterfront development in Bay Harbor Islands with spectacular views of Biscayne Bay."],
+                numberOfImages: "30"
+            },
+            "la-maré": {
+                titulo: "La Maré Bay Harbor",
+                slogan: "Modern Elegance on the Bay",
+                introduccion: ["La Maré offers luxury residences with contemporary design in Bay Harbor Islands."],
+                ubicacion: "9927 E Bay Harbor Dr, Bay Harbor Islands, FL 33154, United States",
+                numberOfImages: "25"
+            },
+            "the-well": {
+                titulo: "The Well Bay Harbor",
+                slogan: "Wellness and Luxury in Bay Harbor",
+                introduccion: ["The Well combines luxury living with a wellness-focused lifestyle in Bay Harbor Islands."],
+                numberOfImages: "20"
+            },
+            vita: {
+                titulo: "Vita Coconut Grove",
+                slogan: "Vibrant Living in the Grove",
+                introduccion: ["Vita offers modern residences in the heart of Coconut Grove."],
+                numberOfImages: "15"
             },
         },
         footer: {
