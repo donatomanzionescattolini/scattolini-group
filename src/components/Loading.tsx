@@ -1,9 +1,9 @@
-import {MDBSpinner} from "mdb-react-ui-kit";
+import { Spinner } from "react-bootstrap";
 
 export default function Loading() {
     return (
-        <MDBSpinner role="status">
+        <Spinner animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
-        </MDBSpinner>
+        </Spinner>
     );
 }

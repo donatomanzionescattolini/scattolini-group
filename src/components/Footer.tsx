@@ -1,5 +1,4 @@
 import React from "react";
-import { MDBFooter } from "mdb-react-ui-kit";
 import Areas from "../objects/areas/Areas";
 import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos";
 import { useTranslation } from "../i18n.tsx";
@@ -20,7 +19,7 @@ export default function Footer() {
   };
 
   return (
-    <MDBFooter className="font-small bg-light pt-4">
+    <footer className="font-small bg-light pt-4">
       <div className="container text-center text-md-left">
         <div className="row">
           {areas.map((area) => (
@@ -44,6 +43,6 @@ export default function Footer() {
       <div className="text-center py-3">
         © {new Date().getFullYear()} Scattolini Group
       </div>
-    </MDBFooter>
+    </footer>
   );
 }

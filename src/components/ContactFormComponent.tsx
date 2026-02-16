@@ -1,9 +1,8 @@
-import {MDBContainer, MDBInput, MDBTextArea} from "mdb-react-ui-kit";
 import * as React from "react";
 import { useState } from "react";
 import { send } from "@emailjs/browser";
 
-import { Alert, AlertHeading } from "react-bootstrap";
+import { Alert, AlertHeading, Container, Form } from "react-bootstrap";
 import { useTranslation } from "../i18n.tsx";
 
 interface ContactFormProps {
@@ -93,7 +92,7 @@ export default function ContactFormComponent() {
 
   return (
 
-      <MDBContainer className="d-flex flex-column justify-content-center p-5 shadow-1 rounded-3" style={{ maxWidth: "700px" }}>
+      <Container className="d-flex flex-column justify-content-center p-5 shadow-1 rounded-3" style={{ maxWidth: "700px" }}>
           {successAlert && (
               <Alert
                   className="w-50  bottom-0 right-50 left-50 mx-auto"
@@ -119,51 +118,50 @@ export default function ContactFormComponent() {
                   </p>
               </Alert>
           )}
-          <form onSubmit={onSubmit} action="#top" className=" flex-column  my-2">
-          <MDBInput
-            id="form4Example1"
-            wrapperClass="mb-4"
-            label={t("pages.contacto.form.name")}
-            name="from_name"
-            value={toSend.from_name}
-            required
-            onChange={handleChange}
-          />
-          <MDBInput
-            type="email"
-            id="form4Example2"
-            wrapperClass="mb-4"
-            label={t("pages.contacto.form.email")}
-            name="client_email"
-            formNoValidate={false}
-            onChange={handleChange}
-            value={toSend.client_email}
-            required
-          />
-          <MDBInput
-            type="phone"
-            required
-            id="form-Example3"
-            wrapperClass="mb-4"
-            label={t("pages.contacto.form.phone")}
-            name="phone"
-            value={toSend.phone}
-            formNoValidate={false}
-            onChange={handleChange}
-          />
+          <Form onSubmit={onSubmit} action="#top" className=" flex-column  my-2">
+          <Form.Group className="mb-4" controlId="form4Example1">
+            <Form.Label>{t("pages.contacto.form.name")}</Form.Label>
+            <Form.Control
+              name="from_name"
+              value={toSend.from_name}
+              required
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group className="mb-4" controlId="form4Example2">
+            <Form.Label>{t("pages.contacto.form.email")}</Form.Label>
+            <Form.Control
+              type="email"
+              name="client_email"
+              onChange={handleChange}
+              value={toSend.client_email}
+              required
+            />
+          </Form.Group>
+          <Form.Group className="mb-4" controlId="form-Example3">
+            <Form.Label>{t("pages.contacto.form.phone")}</Form.Label>
+            <Form.Control
+              type="phone"
+              required
+              name="phone"
+              value={toSend.phone}
+              onChange={handleChange}
+            />
+          </Form.Group>
 
-          <MDBTextArea
-            required
-            id="form-example4"
-            wrapperClass="mb-4"
-            rows={4}
-            label={t("pages.contacto.form.message")}
-            value={toSend.message}
-            name="message"
-            onChange={handleChange}
-          />
+          <Form.Group className="mb-4" controlId="form-example4">
+            <Form.Label>{t("pages.contacto.form.message")}</Form.Label>
+            <Form.Control
+              as="textarea"
+              required
+              rows={4}
+              value={toSend.message}
+              name="message"
+              onChange={handleChange}
+            />
+          </Form.Group>
 
-          {/* <MDBCheckbox
+          {/* Checkbox placeholder
         wrapperClass="d-flex justify-content-center mb-4"
         id="form4Example4"
         label="Mándame una copia del mensaje"
@@ -172,11 +170,11 @@ export default function ContactFormComponent() {
           <button className="mb-4 btn btn-sm " formAction="#top" type="submit">
             {t("pages.contacto.form.sendButton")}
           </button>
-        </form>
+        </Form>
 
       <footer id="top">
 
       </footer>
-    </MDBContainer>
+    </Container>
   );
 }

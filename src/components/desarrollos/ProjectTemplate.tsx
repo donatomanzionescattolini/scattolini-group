@@ -1,21 +1,16 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import SlideshowGalleryDesarrollo from "./SlideshowGalleryDesarrollo";
-import "@material/banner/dist/mdc.banner.min.css";
 
 import { JSX, ReactNode, useLayoutEffect, useState } from "react";
 import { useTranslation } from "../../i18n.tsx";
 import {
-  MDBAccordion,
-  MDBAccordionItem,
-  MDBCol,
-  MDBContainer,
-  MDBRow,
-  MDBTabs,
-  MDBTabsContent,
-  MDBTabsItem,
-  MDBTabsLink,
-  MDBTabsPane,
-} from "mdb-react-ui-kit";
+  Accordion,
+  Col,
+  Container,
+  Row,
+  Tab,
+  Tabs,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {
   caracteristicas,
@@ -28,7 +23,10 @@ import * as React from "react";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
   const { t, lang } = useTranslation();
-  const params = paramz.desarrollo;
+  const params =
+    typeof (paramz.desarrollo as any)?.getLocalizedContent === "function"
+      ? (paramz.desarrollo as any).getLocalizedContent(lang)
+      : paramz.desarrollo;
   const [nombre] = useState(params.nombre);
   const [area] = useState(params.area);
   const [desarrollosArea] = useState(getDesarrollosForArea(area));
@@ -91,7 +89,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   return (
     <>
       <a id="top" href="#top">
-        <MDBContainer
+        <Container
           fluid
           id={"banner"}
           className={"jumbotron"}
@@ -139,12 +137,12 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               />
             </>
           )}
-        </MDBContainer>
+        </Container>
       </a>
       <div className="skew-c"></div>
 
       <section className="colour-block">
-        <MDBContainer>
+        <Container>
           {innerWidth < 768 && (
             <div>
               <br />
@@ -165,7 +163,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               ))}
             </div>
           </div>
-        </MDBContainer>
+        </Container>
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">
@@ -193,7 +191,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       </section>
       <div className="skew-c"></div>
       <section className="colour-block">
-        <MDBContainer className="embed-responsive small responsive centered">
+        <Container className="embed-responsive small responsive centered">
           <br></br>
           <div>
             <h3 className="text-center">{t("pages.project.pdfUI.documentsTitle")}</h3>
@@ -201,36 +199,16 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           <hr className="hr hr-blurry w-50 mx-auto" />
 
           <br></br>
-          <MDBTabs>
-            <MDBTabsItem
-              style={{ color: "#2b2a2e!important" }}
-              title={t("pages.project.pdf.brochure")}
-            >
-              <MDBTabsLink onClick={() => openTab("brochure")} href="#docs">
-                {" "}
-                {t("pages.project.pdf.brochure")}
-              </MDBTabsLink>
-            </MDBTabsItem>
-            <MDBTabsItem>
-              <MDBTabsLink
-                style={{ color: "#2b2a2e!important" }}
-                onClick={() => openTab("hoja")}
-                href="#docs"
-              >
-                {t("pages.project.pdf.hoja")}
-              </MDBTabsLink>
-            </MDBTabsItem>
-            <MDBTabsItem>
-              <MDBTabsLink
-                style={{ color: "#2b2a2e!important" }}
-                aria-keyshortcuts=""
-                href="#docs"
-                onClick={() => openTab("planos")}
-              >
-                {t("pages.project.pdf.planos")}
-              </MDBTabsLink>
-            </MDBTabsItem>
-          </MDBTabs>
+          <Tabs
+            id="docs"
+            activeKey={tabVisible === "none" ? undefined : tabVisible}
+            onSelect={(key) => key && openTab(key)}
+            className="mb-3"
+          >
+            <Tab eventKey="brochure" title={t("pages.project.pdf.brochure")}></Tab>
+            <Tab eventKey="hoja" title={t("pages.project.pdf.hoja")}></Tab>
+            <Tab eventKey="planos" title={t("pages.project.pdf.planos")}></Tab>
+          </Tabs>
           {/*{tabVisible === "none" &&*/}
           {/*    (<><h1 className="display-6 text-center"><small className={"text-muted "}>Aprenda mas sobre este maravilloso proyecto!</small></h1>*/}
           {/*    <br></br>*/}
@@ -256,8 +234,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           {/* data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
               style={{ width: "100%", height: 500 }}
             > */}
-          <MDBTabsContent>
-            <MDBTabsPane show={tabVisible === "brochure"}>
+          {tabVisible === "brochure" && (
               <object
                 data={pdfUrl}
                 type="application/pdf"
@@ -279,8 +256,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                   </p>
                 </big>
               </object>
-            </MDBTabsPane>
-            <MDBTabsPane show={tabVisible === "hoja"}>
+          )}
+          {tabVisible === "hoja" && (
               <object
                 data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                 type="application/pdf"
@@ -302,8 +279,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                   </p>
                 </big>
               </object>
-            </MDBTabsPane>
-            <MDBTabsPane show={tabVisible === "planos"}>
+          )}
+          {tabVisible === "planos" && (
               <object
                 data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
                 type="application/pdf"
@@ -325,8 +302,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                   </p>
                 </big>
               </object>
-            </MDBTabsPane>
-            <MDBTabsPane show>
+          )}
+          <div>
               <div className="d-flex justify-content-center font-size-lg">
                 <Link
                   className="btn btn-outline-secondary btn-small"
@@ -338,13 +315,12 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                   {t("pages.project.pdfUI.downloadBtn")}
                 </Link>
               </div>
-            </MDBTabsPane>
-          </MDBTabsContent>
-        </MDBContainer>
+          </div>
+        </Container>
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">
-        <MDBContainer>
+        <Container>
           <br />
           <br></br>
           <div>
@@ -353,45 +329,35 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           <hr className="hr hr-blurry w-50 mx-auto" />
 
           <br></br>
-          {/*<MDBRow className="d-flex flex-row flex-wrap justify-content-between mt-3 mx-auto">*/}
-
-          {/*    {[...desarrollosArea].map((des) => {*/}
-          {/*        return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>*/}
-          {/*            <MDBCard>*/}
-          {/*                <MDBCardHeader><MDBCardTitle>{des.titulo}</MDBCardTitle></MDBCardHeader>*/}
-          {/*                <MDBCardSubTitle>{des.subtitulo}</MDBCardSubTitle>*/}
-          {/*                <MDBCardImage className="img-thumbnail img-fluid"*/}
-          {/*                              src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${des.nombre}.webp)`}></MDBCardImage>*/}
-
-          {/*            </MDBCard>*/}
-          {/*        </MDBCol>);*/}
-          {/*    })}*/}
-
-          {/*</MDBRow>*/}
-          <MDBRow>
+          {/* Legacy alternative card layout intentionally removed */}
+          <Row>
             {[...desarrollosArea.values()].map((desarrollo, idx) => {
+              const localizedDesarrollo =
+                typeof (desarrollo as any)?.getLocalizedContent === "function"
+                  ? (desarrollo as any).getLocalizedContent(lang)
+                  : desarrollo;
               return (
-                <MDBCol key={desarrollo.nombre ?? idx} xs={12} sm={12} md={6} lg={4} xl={4}>
-                  <Link to={`/desarrollos/${desarrollo.nombre}/`}>
+                <Col key={localizedDesarrollo.nombre ?? idx} xs={12} sm={12} md={6} lg={4} xl={4}>
+                  <Link to={`/desarrollos/${localizedDesarrollo.nombre}/`}>
                     <div
                       className="propiedades-img p-0 m-0"
                       style={{
-                        background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
+                        background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${localizedDesarrollo.nombre}.webp')`,
                         backgroundSize: "cover",
                       }}
                     ></div>
 
                     <h4 className="text-center card-title m-2 ">
-                      {getLocalized(desarrollo.titulo) || (desarrollo.nombre || "").split("-").map((word, idx) => (
+                      {getLocalized(localizedDesarrollo.titulo) || (localizedDesarrollo.nombre || "").split("-").map((word, idx) => (
                         <span key={`word-${idx}`}>{word.charAt(0).toUpperCase() + word.substring(1)} </span>
                       ))}
                     </h4>
                   </Link>
-                </MDBCol>
+                </Col>
               );
             })}
-          </MDBRow>
-        </MDBContainer>
+          </Row>
+        </Container>
         {/* <div> */}
         {/* <h3 className="text-center">Otras Áreas</h3> */}
         {/* </div> */}
@@ -405,19 +371,19 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       <section className="white-block">
           <h2 className={""}>{t("pages.project.contactUsToday")}</h2>
         {innerWidth <= 768 && (
-          <MDBContainer>
+          <Container>
 
             <ContactFormComponent />
-          </MDBContainer>
+          </Container>
         )}
         {innerWidth > 768 && (
-          <MDBContainer
+          <Container
             fluid
             className="d-flex justify-content-center w-100 p-0 m-0"
           >
 
             <ContactFormComponent  />
-          </MDBContainer>
+          </Container>
         )}
       </section>
       <div className="skew-c"></div>

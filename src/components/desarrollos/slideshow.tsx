@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Areas from "../../objects/areas/Areas.tsx";
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
-import { MDBCarousel, MDBContainer } from "mdb-react-ui-kit";
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
 import { Area } from "../../models/areas/Area.tsx";
 
@@ -67,18 +66,18 @@ const SlideshowGallery = (props: PropsSlideshow) => {
   });
 
   return (
-    <MDBContainer fluid>
-      <MDBCarousel
-        indicators
+    <Container fluid>
+      <Carousel
+        activeIndex={index}
         onSelect={handleSelect}
         controls
-        autoFocus
-        slide={false}
+        indicators
         fade
+        interval={null}
       >
-        {...returnEls}
-      </MDBCarousel>
-    </MDBContainer>
+        {returnEls}
+      </Carousel>
+    </Container>
   );
 };
 

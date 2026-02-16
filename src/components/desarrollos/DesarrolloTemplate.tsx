@@ -1,21 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import SlideshowGalleryDesarrollo from "./SlideshowGalleryDesarrollo.tsx";
-import "@material/banner/dist/mdc.banner.min.css";
 
 import React, { ReactNode, useLayoutEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBAccordion,
-  MDBAccordionItem,
-  MDBTabs,
-  MDBTabsItem,
-  MDBTabsLink,
-  MDBTabsContent,
-  MDBTabsPane,
-} from "mdb-react-ui-kit";
+  Accordion,
+  Col,
+  Container,
+  Row,
+} from "react-bootstrap";
 import ContactFormComponent from "../ContactFormComponent.tsx";
 import { caracteristicas, ProjectParams } from "../../models/desarrollos/ProjectParams.tsx";
 import { useTranslation } from "../../i18n.tsx";
@@ -23,7 +16,10 @@ import AreasComponent from "../AreasComponent.tsx";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
   const { t, lang } = useTranslation();
-  const params = paramz.desarrollo;
+  const params =
+    typeof (paramz.desarrollo as any)?.getLocalizedContent === "function"
+      ? (paramz.desarrollo as any).getLocalizedContent(lang)
+      : paramz.desarrollo;
   const [nombre] = useState(params.nombre);
   const [area] = useState(params.area);
   const [numberOfImages] = useState(params.numberOfImages);
@@ -54,7 +50,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   return (
     <>
       <a id="top" href="#top">
-        <MDBContainer className="banner-container" style={{ height: "fit-content" }}>
+        <Container className="banner-container" style={{ height: "fit-content" }}>
           {banner && (
             <img
               src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg`}
@@ -63,11 +59,11 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               alt={`Banner ${titulo || nombre}`}
             />
           )}
-        </MDBContainer>
+        </Container>
       </a>
 
       <section className="colour-block">
-        <MDBContainer>
+        <Container>
           <h2 className="text-center">{titulo}</h2>
           <hr className="hr hr-blurry w-50 mx-auto" />
           <h4 className="mt-0 text-center">{subtitulo}</h4>
@@ -79,11 +75,11 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               ))}
             </div>
           </div>
-        </MDBContainer>
+        </Container>
       </section>
 
       <section className="white-block">
-        <MDBContainer>
+        <Container>
           {video ? (
             video
           ) : (
@@ -105,67 +101,75 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               Your browser does not support the video tag.
             </video>
           )}
-        </MDBContainer>
+        </Container>
       </section>
 
       <section className="colour-block">
-        <MDBContainer>
+        <Container>
           <h3 className="text-center">{t("pages.project.caracteristicas")}</h3>
           <hr className="hr hr-blurry w-50 mx-auto" />
-          <MDBAccordion>
-            <MDBAccordionItem collapseId={1} headerTitle={t("pages.project.edificio")}>
-              {caract?.edificio}
-            </MDBAccordionItem>
-            <MDBAccordionItem collapseId={2} headerTitle={t("pages.project.residencias")}>
-              {caract?.residencias}
-            </MDBAccordionItem>
-            <MDBAccordionItem collapseId={3} headerTitle={t("pages.project.amenidades")}>
-              {caract?.amenidades}
-            </MDBAccordionItem>
-          </MDBAccordion>
-        </MDBContainer>
+          <Accordion>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>{t("pages.project.edificio")}</Accordion.Header>
+              <Accordion.Body>{caract?.edificio}</Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>{t("pages.project.residencias")}</Accordion.Header>
+              <Accordion.Body>{caract?.residencias}</Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="2">
+              <Accordion.Header>{t("pages.project.amenidades")}</Accordion.Header>
+              <Accordion.Body>{caract?.amenidades}</Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </Container>
       </section>
 
       <section className="white-block" id="galeria-proyectos">
-        <MDBContainer>
+        <Container>
           <h3 className="text-center">{t("pages.project.galeria")}</h3>
           <SlideshowGalleryDesarrollo name={nombre} numberOfImages={numberOfImages as number} />
-        </MDBContainer>
+        </Container>
       </section>
 
       <section className="white-block">
-        <MDBContainer>
+        <Container>
           <h3 className="text-center mb-1">{t("pages.project.propertiesInArea")}</h3>
           <hr className="hr hr-blurry w-50 mx-auto" />
-          <MDBRow>
-            {[...((paramz.desarrollo.area?.desarrollos) || [])].map((des: any, idx: number) => (
-              <MDBCol key={des.nombre ?? idx} xs={12} sm={12} md={6} lg={4} xl={4}>
-                <Link to={`/desarrollos/${des.nombre}/`}>
+          <Row>
+            {[...((paramz.desarrollo.area?.desarrollos) || [])].map((des: any, idx: number) => {
+              const localizedDes =
+                typeof des?.getLocalizedContent === "function"
+                  ? des.getLocalizedContent(lang)
+                  : des;
+              return (
+              <Col key={localizedDes.nombre ?? idx} xs={12} sm={12} md={6} lg={4} xl={4}>
+                <Link to={`/desarrollos/${localizedDes.nombre}/`}>
                   <div
                     className="propiedades-img p-0 m-0"
                     style={{
-                      background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area?.name}/${des.nombre}.webp')`,
+                      background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area?.name}/${localizedDes.nombre}.webp')`,
                       backgroundSize: "cover",
                     }}
                   ></div>
                   <h4 className="text-center card-title m-2">
-                    {String(getLocalized(des.titulo) || des.nombre)
+                    {String(getLocalized(localizedDes.titulo) || localizedDes.nombre)
                       .split("-")
                       .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
                       .join(" ")}
                   </h4>
                 </Link>
-              </MDBCol>
-            ))}
-          </MDBRow>
-        </MDBContainer>
+              </Col>
+            )})}
+          </Row>
+        </Container>
       </section>
 
       <section className="white-block">
-        <MDBContainer>
+        <Container>
           <h2>{t("pages.project.contactUsToday")}</h2>
           <ContactFormComponent />
-        </MDBContainer>
+        </Container>
       </section>
     </>
   );

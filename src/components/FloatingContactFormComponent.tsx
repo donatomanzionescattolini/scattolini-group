@@ -1,9 +1,8 @@
-import {MDBInput, MDBTextArea,} from "mdb-react-ui-kit";
 import * as React from "react";
 import {useState} from "react";
 import {send} from "@emailjs/browser";
 
-import {Alert, AlertHeading} from "react-bootstrap";
+import {Alert, AlertHeading, Form} from "react-bootstrap";
 import { useTranslation } from "../i18n.tsx";
 
 import "./FloatingContactFormComponent.scss"
@@ -105,50 +104,53 @@ export default function FloatingContactFormComponent() {
                 <h2>{t("hero.cta")}</h2>
                 <br/>
                 <br/>
-                <MDBInput
-                    className="formInput"
-                    wrapperClass="mb-4"
-                    label={t("pages.contacto.form.name")}
-                    name="from_name"
-                    value={toSend.from_name}
-                    required
-                    onChange={handleChange}
-                />
-                <MDBInput
-                    type="email"
-                    className="formInput"
-                    required
-                    wrapperClass="mb-4"
-                    label={t("pages.contacto.form.email")}
-                    name="client_email"
-                    formNoValidate={false}
-                    onChange={handleChange}
-                    value={toSend.client_email}
-                />
-                <MDBInput
-                    type="phone"
-                    className="formInput"
-                    required
-                    wrapperClass="mb-4"
-                    label={t("pages.contacto.form.phone")}
-                    name="phone"
-                    value={toSend.phone}
-                    formNoValidate={false}
-                    onChange={handleChange}
-                />
+                <Form.Group className="mb-4" controlId="floating-name">
+                    <Form.Label>{t("pages.contacto.form.name")}</Form.Label>
+                    <Form.Control
+                        className="formInput"
+                        name="from_name"
+                        value={toSend.from_name}
+                        required
+                        onChange={handleChange}
+                    />
+                </Form.Group>
+                <Form.Group className="mb-4" controlId="floating-email">
+                    <Form.Label>{t("pages.contacto.form.email")}</Form.Label>
+                    <Form.Control
+                        type="email"
+                        className="formInput"
+                        required
+                        name="client_email"
+                        onChange={handleChange}
+                        value={toSend.client_email}
+                    />
+                </Form.Group>
+                <Form.Group className="mb-4" controlId="floating-phone">
+                    <Form.Label>{t("pages.contacto.form.phone")}</Form.Label>
+                    <Form.Control
+                        type="phone"
+                        className="formInput"
+                        required
+                        name="phone"
+                        value={toSend.phone}
+                        onChange={handleChange}
+                    />
+                </Form.Group>
 
-                <MDBTextArea
-                    className="formInput"
-                    wrapperClass="mb-4"
-                    required
-                    rows={4}
-                    label={t("pages.contacto.form.message")}
-                    value={toSend.message}
-                    name="message"
-                    onChange={handleChange}
-                />
+                <Form.Group className="mb-4" controlId="floating-message">
+                    <Form.Label>{t("pages.contacto.form.message")}</Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        className="formInput"
+                        required
+                        rows={4}
+                        value={toSend.message}
+                        name="message"
+                        onChange={handleChange}
+                    />
+                </Form.Group>
 
-                {/* <MDBCheckbox
+                                {/* Checkbox placeholder
         wrapperClass="d-flex justify-content-center mb-4"
         className="formInput"
         label="Mándame una copia del mensaje"

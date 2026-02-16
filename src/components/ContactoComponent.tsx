@@ -1,5 +1,5 @@
-import { MDBBtn, MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import { useState } from "react";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import ContactFormComponent from "./ContactFormComponent";
 import { useTranslation } from "../i18n.tsx";
 
@@ -16,9 +16,9 @@ export default function Page() {
   }
 
   return (
-    <MDBContainer fluid className="p-0 m-0">
-      <MDBRow>
-        <MDBCol
+    <Container fluid className="p-0 m-0">
+      <Row>
+        <Col
           md={6}
           className=" p-0 pw-5 d-flex flex-row justify-content-center"
         >
@@ -46,9 +46,9 @@ export default function Page() {
               <br></br>
             </div>
           </div>
-        </MDBCol>
+        </Col>
 
-        <MDBCol md={6}>
+        <Col md={6}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.434979553679!2d-80.40457942587769!3d25.789220007469854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9bef22d2a8b8d%3A0xeb3e2fa5183c827!2s12750%20NW%2017th%20St%2C%20Miami%2C%20FL%2033182!5e0!3m2!1sen!2sus!4v1691887259163!5m2!1sen!2sus"
             style={{ border: "0" }}
@@ -57,27 +57,25 @@ export default function Page() {
             referrerPolicy="no-referrer-when-downgrade"
             className=" h-100 align-items-center my-auto"
           ></iframe>
-        </MDBCol>
-        <MDBRow className="w-100 p-0 m-0">
-             <MDBCol></MDBCol>
-          <MDBCol className="text-center">
-            <MDBBtn
+        </Col>
+        <Row className="w-100 p-0 m-0">
+             <Col></Col>
+          <Col className="text-center">
+            <Button
               type="button"
               className="my-5 py-2 btn btn-xl"
               style={{ backgroundColor: "#82725650", color: "#1b3433" }}
-              block
               onClick={openContact}
             >
               {(show && t("contacto.cerrarFormulario", "Cerrar Formulario de Contacto")) || t("contacto.enviarCorreo", "Enviar un correo")}
-            </MDBBtn>
-          </MDBCol>
-          <MDBCol></MDBCol>
-        </MDBRow>
+            </Button>
+          </Col>
+          <Col></Col>
+        </Row>
         {/* <FloatingWhatsApp accountName='Scattolini Group' phoneNumber="+13056139338"></FloatingWhatsApp> */}
-      </MDBRow>
-      )){" "}
+      </Row>
       {show && (
-        <MDBRow
+        <Row
           id="contact-form"
           className="my-5 d-flex justify-content-center"
         >
@@ -85,8 +83,8 @@ export default function Page() {
           <br />
           <br />
           <ContactFormComponent />
-        </MDBRow>
+        </Row>
       )}
-    </MDBContainer>
+    </Container>
   );
 }

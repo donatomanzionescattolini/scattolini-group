@@ -1,9 +1,9 @@
-import { MDBCol, MDBRow } from "mdb-react-ui-kit";
+import { Col, Row } from "react-bootstrap";
 
 export default function Liderazgo() {
   return (
-    <MDBRow className="row  p-0 m-auto">
-      <MDBCol
+    <Row className="row  p-0 m-auto">
+      <Col
         xs={12}
         sm={12}
         md={6}
@@ -16,8 +16,8 @@ export default function Liderazgo() {
           alt="Elda"
           className="w-50 m-auto img-thumbnail"
         />
-      </MDBCol>
-      <MDBCol xs={12} sm={12} md={4} lg={4} xl={4} className="px-auto py-5">
+      </Col>
+      <Col xs={12} sm={12} md={4} lg={4} xl={4} className="px-auto py-5">
         <h4 className="text-center mt-5">
           Equipo de expertos, Servicio Personalizado
         </h4>
@@ -38,10 +38,10 @@ export default function Liderazgo() {
           mejor precio y cerrar el trato de manera eficiente y sin
           contratiempos.
         </p>
-      </MDBCol>
-      <MDBCol xs={12} sm={12} md={2} lg={2} xl={2}>
+      </Col>
+      <Col xs={12} sm={12} md={2} lg={2} xl={2}>
         <br></br>
-      </MDBCol>
-    </MDBRow>
+      </Col>
+    </Row>
   );
 }

@@ -1,5 +1,5 @@
-import { MDBRow, MDBCol } from "mdb-react-ui-kit";
 import { useLayoutEffect } from "react";
+import { Col, Row } from "react-bootstrap";
 import { useTranslation } from "../../i18n.tsx";
 
 export default function ManzioneProperties() {
@@ -8,8 +8,8 @@ export default function ManzioneProperties() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <MDBRow className=" p-5 m-0">
-      <MDBCol
+    <Row className=" p-5 m-0">
+      <Col
         xs={12}
         sm={12}
         md={7}
@@ -24,8 +24,8 @@ export default function ManzioneProperties() {
           alt="Elda"
           className="w-50 m-auto img-thumbnail"
         />
-      </MDBCol>
-      <MDBCol
+      </Col>
+      <Col
         xs={12}
         sm={12}
         md={3}
@@ -41,7 +41,7 @@ export default function ManzioneProperties() {
         <p className=" mx-0 my-0" style={{ textIndent: 50 }}>
           {t("manzione.descripcion", "En nuestra empresa, nos especializamos en la administración de propiedades. Nos aseguramos de que cada propiedad esté bien cuidada y mantenida, y nos encargamos de todos los detalles para que nuestros clientes puedan disfrutar de la tranquilidad de saber que su propiedad está en buenas manos.")}
         </p>
-      </MDBCol>
-    </MDBRow>
+      </Col>
+    </Row>
   );
 }

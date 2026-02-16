@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {MDBCardLink, MDBCol, MDBRow,} from "mdb-react-ui-kit";
+import { Col, Row } from "react-bootstrap";
 import { useTranslation } from "../i18n.tsx";
 
 export default function AliadosComponent() {
@@ -10,11 +10,11 @@ export default function AliadosComponent() {
         <br></br>
             <h2 className="text-center mt-5 display-6">{t("nav.aliados")}</h2>
             <hr className="hr hr-blurry w-50 mx-auto"/>
-            <MDBRow
+            <Row
                 style={{width: "60vw", marginInline: "auto"}}
                 className="p-5 d-flex flex-row flex-nowrap justify-content-center align-items-center"
             >
-                <MDBCol xs={12} sm={12} md={12} lg={4} xl={4}>
+                <Col xs={12} sm={12} md={12} lg={4} xl={4}>
                     <Link to="#">
                         <img
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/hue-house.png"
@@ -22,8 +22,8 @@ export default function AliadosComponent() {
                             width="100%"
                         />
                     </Link>
-                </MDBCol>
-                <MDBCol xs={12} sm={12} md={12} lg={4} xl={4}>
+                </Col>
+                <Col xs={12} sm={12} md={12} lg={4} xl={4}>
                     {" "}
                     <Link to="https://www.manzionesdesign.com//">
                         <img
@@ -32,17 +32,17 @@ export default function AliadosComponent() {
                             width="100%"
                         />
                     </Link>
-                </MDBCol>
-                <MDBCol xs={12} sm={12} md={12} lg={4} xl={4}>
-                    <MDBCardLink href="/manzione-properties/">
+                </Col>
+                <Col xs={12} sm={12} md={12} lg={4} xl={4}>
+                    <a href="/manzione-properties/">
                         <img
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/manzioneproperties.webp"
                             alt="Manzione Properties"
                             width="100%"
                         />
-                    </MDBCardLink>
-                </MDBCol>
-            </MDBRow>
+                    </a>
+                </Col>
+            </Row>
         </>
     );
 }

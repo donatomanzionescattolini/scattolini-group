@@ -1,9 +1,9 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import Areas from "../../objects/areas/Areas";
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos";
 import { Link } from "react-router-dom";
 import { useTranslation } from "../../i18n.tsx";
+import { Col, Container, Row } from "react-bootstrap";
 
 export default function DesarrollosComponent() {
   const { t } = useTranslation();
@@ -11,7 +11,7 @@ export default function DesarrollosComponent() {
   const areas = Areas();
 
   return (
-    <MDBContainer>
+    <Container>
       <br />
       <div>
         <h3 className="text-center mb-1">{t("pages.desarrollos.title")}</h3>
@@ -23,9 +23,9 @@ export default function DesarrollosComponent() {
         return (
           <div key={area.name} className="mb-5">
             <h4 className="text-center">{area.name}</h4>
-            <MDBRow>
+            <Row>
               {[...desarr].map((desarrollo: any, idx: number) => (
-                <MDBCol key={desarrollo.nombre ?? `${area.name}-${idx}`} xs={12} sm={12} md={6} lg={4} xl={4}>
+                <Col key={desarrollo.nombre ?? `${area.name}-${idx}`} xs={12} sm={12} md={6} lg={4} xl={4}>
                   <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                     <div
                       className="propiedades-img p-0 m-0"
@@ -36,12 +36,12 @@ export default function DesarrollosComponent() {
                     ></div>
                     <h5 className="text-center mt-2">{desarrollo.nombre}</h5>
                   </Link>
-                </MDBCol>
+                </Col>
               ))}
-            </MDBRow>
+            </Row>
           </div>
         );
       })}
-    </MDBContainer>
+    </Container>
   );
 }

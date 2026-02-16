@@ -1,5 +1,4 @@
-import { Image } from "react-bootstrap";
-import { MDBCol, MDBRow } from "mdb-react-ui-kit";
+import { Col, Image, Row } from "react-bootstrap";
 import { useLayoutEffect, useState } from "react";
 import { useTranslation } from "../../i18n.tsx";
 import { Link } from "react-router-dom";
@@ -59,9 +58,9 @@ export default function AreaTemplate(props: AreaProps) {
         <h2 className="text-center mt-5">{slogan}</h2>
         <hr className="hr hr-blurry w-50 mx-auto" />
       </div>
-      <MDBRow className="px-4">
-        <MDBCol md={1} sm={1} className=""></MDBCol>
-        <MDBCol
+      <Row className="px-4">
+        <Col md={1} sm={1} className=""></Col>
+        <Col
           md={5}
           sm={10}
           className="py-5 px-3 d-flex flex-column justify-content-center align-items-start"
@@ -79,16 +78,16 @@ export default function AreaTemplate(props: AreaProps) {
               </p>
             );
           })}
-        </MDBCol>
-        <MDBCol
+        </Col>
+        <Col
           md={5}
           sm={10}
           className="d-flex justify-content-center align-items-center"
         >
           <img src={firstImage} alt={`Photo ${titulo} Introductory Section`} />
-        </MDBCol>
-        <MDBCol className="" md={1} sm={1}></MDBCol>
-      </MDBRow>
+        </Col>
+        <Col className="" md={1} sm={1}></Col>
+      </Row>
       <div className="city-firstcarousel">{images.map((image) => image)}</div>
       {/* <DividerFirstComponent /> */}
       <div className="propiedades">
@@ -98,10 +97,10 @@ export default function AreaTemplate(props: AreaProps) {
           </div>
         )}
         <br></br>
-        <MDBRow>
+        <Row>
           {[...areaDesarrollos.values()].map((desarrollo) => {
             return (
-              <MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
+              <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                 <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                   <div
                     className="propiedades-img p-0 m-0"
@@ -126,10 +125,10 @@ export default function AreaTemplate(props: AreaProps) {
                         .join(" ")}
                   </h4>
                 </Link>
-              </MDBCol>
+              </Col>
             );
           })}
-        </MDBRow>
+        </Row>
       </div>
       <div className="container-fluid m-0 p-0 overflow-scroll horizontal-scrollable"></div>
     </>

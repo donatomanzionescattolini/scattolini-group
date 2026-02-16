@@ -9,11 +9,10 @@ import "material-components-web/dist/material-components-web.js";
 import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
 import Equipo from "./components/AsociadosComponent.tsx";
 import ManzioneProperties from "./components/aliados/ManzioneProperties";
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
-import Nav from "./components/Nav";
+import NavNav from "./components/NavNav.tsx";
 import AliadosComponent from "./components/AliadosComponent.tsx";
 import Liderazgo from "./components/Liderazgo.tsx";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
@@ -32,7 +31,7 @@ export default function App() {
     }, []);
   return (
     <BrowserRouter>
-      <Nav />
+      <NavNav />
       
 
       <Routes>

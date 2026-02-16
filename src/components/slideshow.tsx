@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Areas from "../objects/areas/Areas";
 import Desarrollo from "../models/desarrollos/Desarrollo";
-import { MDBContainer } from "mdb-react-ui-kit";
 import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos";
 import { Area } from "../models/areas/Area";
 import { useTranslation } from "../i18n.tsx";
@@ -74,7 +73,7 @@ const SlideshowGallery = (props: PropsSlideshow) => {
   }
 
   return (
-    <MDBContainer fluid>
+    <Container fluid>
       <Carousel
         activeIndex={index}
         onSelect={handleSelect}
@@ -84,7 +83,7 @@ const SlideshowGallery = (props: PropsSlideshow) => {
       >
         {items}
       </Carousel>
-    </MDBContainer>
+    </Container>
   );
 };
 

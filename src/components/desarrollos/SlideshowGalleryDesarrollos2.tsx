@@ -1,4 +1,4 @@
-import {MDBCarousel, MDBCarouselItem,} from "mdb-react-ui-kit";
+import { Carousel } from "react-bootstrap";
 
 import {useState} from "react";
 
@@ -14,18 +14,7 @@ export default function SlideshowGalleryDesarrollo2(props: Props) {
     const returnEls: React.JSX.Element[] = [];
     for (let j = 1; j <= props.numberOfImages; j++) {
         returnEls.push(
-            <MDBCarouselItem
-                className=" d-block"
-                itemId={1}
-                src={
-                    "https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/" +
-                    name +
-                    "/image-gallery/image (" +
-                    j +
-                    ").jpg"
-                }
-                alt=""
-            >
+            <Carousel.Item className=" d-block" key={`slide-${j}`}>
                 <picture>
                     <source
                         srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).JPEG`}
@@ -50,11 +39,11 @@ export default function SlideshowGalleryDesarrollo2(props: Props) {
                         alt=""
                     />
                 </picture>
-            </MDBCarouselItem>
+            </Carousel.Item>
         );
     }
     // return returnEls;
     // }
 
-    return <MDBCarousel showIndicators showControls fade></MDBCarousel>;
+    return <Carousel indicators controls fade>{returnEls}</Carousel>;
 }

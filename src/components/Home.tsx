@@ -1,5 +1,5 @@
 
-import { MDBContainer } from "mdb-react-ui-kit";
+import { Container } from "react-bootstrap";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { AboutUs } from "../AboutUs";
 import Quote, { quotes } from "../models/Quote";
@@ -37,13 +37,13 @@ export function Home() {
           className={"floating-element object-fit-cover"}
           style={{ background: "rgb(255,255,255,0.0)" }}
         >
-          <MDBBtn className="close-button" onClick={toggleShow} type={"button"}>
+          <button className="close-button" onClick={toggleShow} type={"button"}>
             Close
-          </MDBBtn>
+          </button>
           {/* <FloatingContactFormComponent /> */}
         {/* </div> */}
       {/* )} */}
-      <MDBContainer fluid jumbotron>
+      <Container fluid className="jumbotron">
         <div className="video-container">
           <video autoPlay loop muted playsInline className={" m-0 p-0"}>
             <source
@@ -66,7 +66,7 @@ export function Home() {
             </a>
           </div>
         </div>
-      </MDBContainer>
+      </Container>
       {width < 768 && <br></br>}
       <section className="white-block pb-0 mb-0 pt-5">
         <AboutUs />
@@ -82,30 +82,30 @@ export function Home() {
 
       <div className="skew-cc"></div>
       <section className="white-block">
-        <MDBContainer>
+        <Container>
           <AsociadosSmallComponent />
-        </MDBContainer>
+        </Container>
       </section>
       <div className="skew-c"></div>
       {/* <DividerSecondComponent /> */}
       <br />
       <section className="colour-block">
-        <MDBContainer>
+        <Container>
           <Servicios />
-        </MDBContainer>
+        </Container>
         <br />
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">
-        <MDBContainer>
+        <Container>
           <DesarrollosTodos />
-        </MDBContainer>
+        </Container>
       </section>
       <div className="skew-c"></div>
       <section className="colour-block">
-        <MDBContainer>
+        <Container>
           <AliadosComponent />
-        </MDBContainer>
+        </Container>
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">

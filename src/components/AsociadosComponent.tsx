@@ -1,6 +1,4 @@
-import "material-components-web/dist/material-components-web.css";
 import "./Asociados.scss";
-import "mdb-ui-kit/css/mdb.min.css";
 import { Link } from "react-router-dom";
 import Asociados from "../objects/asociados/Asociados";
 
