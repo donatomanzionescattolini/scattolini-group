@@ -1,78 +1,65 @@
 import React, {useState} from "react";
 import {
-    MDBBtn,
-    MDBCollapse,
-    MDBContainer,
-    MDBDropdown,
-    MDBDropdownItem,
-    MDBDropdownMenu,
-    MDBDropdownToggle,
-    MDBIcon,
-    MDBNavbar,
-    MDBNavbarBrand,
-    MDBNavbarItem,
-    MDBNavbarLink,
-    MDBNavbarNav,
-    MDBNavbarToggler,
-} from "mdb-react-ui-kit";
+    Button,
+    Container,
+    Nav,
+    Navbar,
+    NavDropdown,
+} from "react-bootstrap";
 
 export default function NavComponent() {
     const [showBasic, setShowBasic] = useState(true);
 
     return (
-        <MDBNavbar expand="lg" light bgColor="light">
-            <MDBContainer fluid>
-                <MDBNavbarBrand href="/">Brand</MDBNavbarBrand>
+        <Navbar expand="lg" bg="light" expanded={showBasic}>
+            <Container fluid>
+                <Navbar.Brand href="/">Brand</Navbar.Brand>
 
-                <MDBNavbarToggler
+                <Navbar.Toggle
                     aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
                     aria-label="Toggle navigation"
                     onClick={() => setShowBasic(!showBasic)}
                 >
-                    <MDBIcon icon="bars" fas/>
-                </MDBNavbarToggler>
+                    <i className="fas fa-bars" />
+                </Navbar.Toggle>
 
-                <MDBCollapse navbar show={showBasic}>
-                    <MDBNavbarNav>
-                        <MDBNavbarItem>
-                            <MDBNavbarLink active aria-current="page" href="#">
+                <Navbar.Collapse id="navbarSupportedContent">
+                    <Nav>
+                        <Nav.Item>
+                            <Nav.Link active aria-current="page" href="#">
                                 Home
-                            </MDBNavbarLink>
-                        </MDBNavbarItem>
-                        <MDBNavbarItem>
-                            <MDBNavbarLink href="/">Link</MDBNavbarLink>
-                        </MDBNavbarItem>
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="/">Link</Nav.Link>
+                        </Nav.Item>
 
-                        <MDBNavbarItem>
-                            <MDBDropdown>
-                                <MDBDropdownToggle tag="a">Dropdown</MDBDropdownToggle>
-                                <MDBDropdownMenu>
-                                    <MDBDropdownItem link>Action</MDBDropdownItem>
-                                    <MDBDropdownItem link>Another action</MDBDropdownItem>
-                                    <MDBDropdownItem link>Something else here</MDBDropdownItem>
-                                </MDBDropdownMenu>
-                            </MDBDropdown>
-                        </MDBNavbarItem>
+                        <Nav.Item>
+                            <NavDropdown title="Dropdown">
+                                <NavDropdown.Item>Action</NavDropdown.Item>
+                                <NavDropdown.Item>Another action</NavDropdown.Item>
+                                <NavDropdown.Item>Something else here</NavDropdown.Item>
+                            </NavDropdown>
+                        </Nav.Item>
 
-                        <MDBNavbarItem>
-                            <MDBNavbarLink
+                        <Nav.Item>
+                            <Nav.Link
                                 disabled
                                 href="/"
                                 tabIndex={-1}
                                 aria-disabled="true"
                             >
                                 Disabled
-                            </MDBNavbarLink>
-                        </MDBNavbarItem>
-                    </MDBNavbarNav>
+                            </Nav.Link>
+                        </Nav.Item>
+                    </Nav>
 
                     <form>
                         <input type="search" placeholder="Type query" aria-label="Search"/>
-                        <MDBBtn color="primary">Search</MDBBtn>
+                        <Button variant="primary">Search</Button>
                     </form>
-                </MDBCollapse>
-            </MDBContainer>
-        </MDBNavbar>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 }

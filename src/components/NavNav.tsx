@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useTranslation } from "../i18n.tsx";
 import { Container, Nav as BootstrapNav, Navbar, NavDropdown } from "react-bootstrap";
-import Areas from "../objects/areas/Areas";
-import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos";
-import Desarrollo from "../models/desarrollos/Desarrollo";
-import { Area } from "../models/areas/Area";
+import Areas from "../objects/areas/Areas.tsx";
+import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos.ts";
+import Desarrollo from "../models/desarrollos/Desarrollo.tsx";
+import { Area } from "../models/areas/Area.tsx";
 
-const Nav = () => {
+const NavNav = () => {
   const { t, lang, setLang } = useTranslation();
   const [showNavCentred, setShowNavCentred] = useState(false);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
@@ -63,6 +63,11 @@ const Nav = () => {
   // language switcher handler
   const switchLang = (l: "es" | "en") => {
     setLang(l);
+  };
+
+  const tText = (key: string) => {
+    const value = t(key);
+    return Array.isArray(value) ? value.join(" ") : value;
   };
 
   const getLocalized = (field: any) => {
@@ -132,8 +137,8 @@ const Nav = () => {
                   <div className="d-flex w-75 ms-4 my-3">
                     <input
                       className="form-control"
-                      placeholder={String(t('nav.search'))}
-                      aria-label={String(t('nav.search'))}
+                      placeholder={tText('nav.search')}
+                      aria-label={tText('nav.search')}
                       type="Search"
                       value={searchQueryArea}
                       onChange={handleSearchArea}
@@ -157,8 +162,8 @@ const Nav = () => {
                   <div className="d-flex w-75 ms-4 my-3">
                     <input
                       className="form-control"
-                      placeholder={String(t('nav.search'))}
-                      aria-label={String(t('nav.search'))}
+                      placeholder={tText('nav.search')}
+                      aria-label={tText('nav.search')}
                       type="Search"
                       value={searchQueryDesarrollo}
                       onChange={handleSearchDesarrollo}
@@ -180,4 +185,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default NavNav;

@@ -9,22 +9,90 @@ class Desarrollo {
     if (area) this.area = area;
   }
 
-  getLocalizedContent(lang: "es" | "en"): any {
-    const desarrolloKey = this.nombre?.replace(/[-\s]/g, "").toLowerCase();
-    const localizedData = getDesarrolloData(desarrolloKey, lang);
-    
-    if (localizedData) {
-      return {
-        ...this,
-        titulo: localizedData.titulo || this.titulo,
-        subtitulo: localizedData.subtitulo ? 
-          <p className="text-cursive p-0 m-0"><em>{localizedData.subtitulo}</em></p> : 
-          this.subtitulo,
-        introduccion: localizedData.introduccion || this.introduccion,
-      };
+  private toCamelCaseKey(value: string): string {
+    return value
+      .split("-")
+      .map((part, index) =>
+        index === 0
+          ? part
+          : part.charAt(0).toUpperCase() + part.slice(1)
+      )
+      .join("");
+  }
+
+  private resolveDesarrolloKeyCandidates(): string[] {
+    const rawName = String(this.nombre || "").trim();
+    if (!rawName) return [];
+
+    const normalized = rawName.toLowerCase();
+    const compact = normalized.replace(/[-\s]/g, "");
+    const camel = this.toCamelCaseKey(normalized);
+
+    return Array.from(new Set([rawName, normalized, compact, camel]));
+  }
+
+  private mergeLocalizedValue(baseValue: any, localizedValue: any): any {
+    if (localizedValue === undefined || localizedValue === null) {
+      return baseValue;
     }
-    
-    return this;
+
+    if (Array.isArray(localizedValue)) {
+      return localizedValue;
+    }
+
+    if (
+      typeof localizedValue === "object" &&
+      !React.isValidElement(localizedValue) &&
+      localizedValue !== null
+    ) {
+      const merged = {
+        ...(typeof baseValue === "object" && baseValue !== null ? baseValue : {}),
+        ...localizedValue,
+      };
+      return merged;
+    }
+
+    return localizedValue;
+  }
+
+  getLocalizedContent(lang: "es" | "en"): any {
+    const keys = this.resolveDesarrolloKeyCandidates();
+    const localizedData = keys
+      .map((k) => getDesarrolloData(k, lang))
+      .find((entry) => entry !== null);
+
+    const baseCopy: any = { ...this };
+
+    for (const [field, value] of Object.entries(baseCopy)) {
+      if (
+        value &&
+        typeof value === "object" &&
+        !Array.isArray(value) &&
+        !React.isValidElement(value) &&
+        ("es" in value || "en" in value)
+      ) {
+        baseCopy[field] = value[lang] || value.es || value.en || "";
+      }
+    }
+
+    if (!localizedData) {
+      return baseCopy;
+    }
+
+    const merged: any = { ...baseCopy };
+    for (const [field, value] of Object.entries(localizedData)) {
+      merged[field] = this.mergeLocalizedValue(baseCopy[field], value);
+    }
+
+    if (typeof merged.subtitulo === "string") {
+      merged.subtitulo = (
+        <p className="text-cursive p-0 m-0">
+          <em>{merged.subtitulo}</em>
+        </p>
+      );
+    }
+
+    return merged;
   }
 
   displayAmenidades(): React.ReactNode {

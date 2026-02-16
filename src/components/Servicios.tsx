@@ -1,12 +1,8 @@
 import {
-    MDBCard,
-    MDBCardBody,
-    MDBCardGroup,
-    MDBCardHeader,
-    MDBCardLink,
-    MDBCardText,
-    MDBCardTitle,
-} from "mdb-react-ui-kit";
+    Card,
+    Col,
+    Row,
+} from "react-bootstrap";
 import { useTranslation } from "../i18n.tsx";
 
 export default function Servicios() {
@@ -20,85 +16,93 @@ export default function Servicios() {
 
             <br/>
 
-            <MDBCardGroup className="text-center" style={{ "textTransform": "capitalize"}}>
-                <MDBCard className="m-xs-0 m-sm-0 m-md-2 m-lg-2 m-xl-2">
-                    <MDBCardHeader>
-                        <MDBCardTitle>
+            <Row className="text-center" style={{ "textTransform": "capitalize"}}>
+                <Col md={6} className="m-xs-0 m-sm-0 m-md-2 m-lg-2 m-xl-2">
+                <Card>
+                    <Card.Header>
+                        <Card.Title>
                             <h4>{t("pages.services.advisory")}</h4>
-                        </MDBCardTitle>
-                    </MDBCardHeader>
-                    <MDBCardBody>
-                        <MDBCardText className="text-center">
+                        </Card.Title>
+                    </Card.Header>
+                    <Card.Body>
+                        <Card.Text className="text-center">
                             {t("pages.services.advisoryDesc")}
-                        </MDBCardText>
+                        </Card.Text>
                         <br/>
-                        <MDBCardLink
+                        <a
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
                             
                         >
                             {t("pages.services.moreInfo")}
-                        </MDBCardLink>
-                    </MDBCardBody>
-                </MDBCard>
+                        </a>
+                    </Card.Body>
+                </Card>
+                </Col>
 
-                <MDBCard className="m-2">
-                    <MDBCardHeader>
-                        <MDBCardTitle>
+                <Col md={6} className="m-2">
+                <Card>
+                    <Card.Header>
+                        <Card.Title>
                             <h4>{t("pages.services.propertyManagement")}</h4>
-                        </MDBCardTitle>
-                    </MDBCardHeader>
-                    <MDBCardBody>
-                        <MDBCardText>
+                        </Card.Title>
+                    </Card.Header>
+                    <Card.Body>
+                        <Card.Text>
                             {t("pages.services.propertyManagementDesc")}
-                        </MDBCardText>
+                        </Card.Text>
                         <br/>
-                        <MDBCardLink
+                        <a
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
                         >
                             {t("pages.services.moreInfo")}
-                        </MDBCardLink>
-                    </MDBCardBody>
-                </MDBCard>
-            </MDBCardGroup>
-            <MDBCardGroup className="text-center">
-                <MDBCard className="m-2">
-                    <MDBCardHeader>
-                        <MDBCardTitle>{t("pages.services.sales")}</MDBCardTitle>
-                    </MDBCardHeader>
-                    <MDBCardBody>
-                        <MDBCardText>
+                        </a>
+                    </Card.Body>
+                </Card>
+                </Col>
+            </Row>
+            <Row className="text-center">
+                <Col md={6} className="m-2">
+                <Card>
+                    <Card.Header>
+                        <Card.Title>{t("pages.services.sales")}</Card.Title>
+                    </Card.Header>
+                    <Card.Body>
+                        <Card.Text>
                             {t("pages.services.salesDesc")}
-                        </MDBCardText>
+                        </Card.Text>
                         <br/>
-                        <MDBCardLink
+                        <a
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
                         >
                             {t("pages.services.moreInfo")}
-                        </MDBCardLink>
-                    </MDBCardBody>
-                </MDBCard>
+                        </a>
+                    </Card.Body>
+                </Card>
+                </Col>
 
-                <MDBCard className="m-2">
-                    <MDBCardHeader>
-                        <MDBCardTitle>{t("pages.services.purchase")}</MDBCardTitle>
-                    </MDBCardHeader>
-                    <MDBCardBody>
-                        <MDBCardText>
+                <Col md={6} className="m-2">
+                <Card>
+                    <Card.Header>
+                        <Card.Title>{t("pages.services.purchase")}</Card.Title>
+                    </Card.Header>
+                    <Card.Body>
+                        <Card.Text>
                             {t("pages.services.purchaseDesc")}
-                        </MDBCardText>
+                        </Card.Text>
                         <br/>
-                        <MDBCardLink
+                        <a
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
                         >
                             {t("pages.services.moreInfo")}
-                        </MDBCardLink>
-                    </MDBCardBody>
-                </MDBCard>
-            </MDBCardGroup>
+                        </a>
+                    </Card.Body>
+                </Card>
+                </Col>
+            </Row>
         </>
     );
 }
