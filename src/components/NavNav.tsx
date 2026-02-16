@@ -65,7 +65,7 @@ const NavNav = () => {
     setLang(l);
   };
 
-  const tText = (key: string) => {
+  const getTranslatedText = (key: string) => {
     const value = t(key);
     return Array.isArray(value) ? value.join(" ") : value;
   };
@@ -137,8 +137,8 @@ const NavNav = () => {
                   <div className="d-flex w-75 ms-4 my-3">
                     <input
                       className="form-control"
-                      placeholder={tText('nav.search')}
-                      aria-label={tText('nav.search')}
+                      placeholder={getTranslatedText('nav.search')}
+                      aria-label={getTranslatedText('nav.search')}
                       type="Search"
                       value={searchQueryArea}
                       onChange={handleSearchArea}
@@ -162,8 +162,8 @@ const NavNav = () => {
                   <div className="d-flex w-75 ms-4 my-3">
                     <input
                       className="form-control"
-                      placeholder={tText('nav.search')}
-                      aria-label={tText('nav.search')}
+                      placeholder={getTranslatedText('nav.search')}
+                      aria-label={getTranslatedText('nav.search')}
                       type="Search"
                       value={searchQueryDesarrollo}
                       onChange={handleSearchDesarrollo}

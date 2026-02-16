@@ -1,16 +1,34 @@
 import "./Asociados.scss";
 import { Link } from "react-router-dom";
 import Asociados from "../objects/asociados/Asociados";
+import { useTranslation } from "../i18n.tsx";
 
 export default function Equipo() {
+  const { t } = useTranslation();
+  const getLocalizedRole = (role: string) => {
+    const normalized = (role || "").toLowerCase();
+    if (normalized.includes("dueña") || normalized.includes("owner")) {
+      return t("roles.owner");
+    }
+    if (normalized.includes("office manager")) {
+      return t("roles.officeManager");
+    }
+    if (normalized.includes("property manager")) {
+      return t("roles.propertyManager");
+    }
+    if (normalized.includes("broker")) {
+      return t("roles.broker");
+    }
+    return t("roles.agent");
+  };
+
   return (
     <section
       id="asociados"
       className="m-5 p-5 mt-0 pt-0 container-sm mx-auto justify-content-center"
     >
       <div className="page-header">
-        
-        <h1 className="text-center mt-5 display-6">Asociados</h1>
+        <h1 className="text-center mt-5 display-6">{t("pages.asociados.title", "Asociados")}</h1>
         <hr className="hr hr-blurry w-50 mx-auto mb-5" />
       </div>
       <div className="row active-with-click">
@@ -21,7 +39,7 @@ export default function Equipo() {
                 <span>{asociado.firstName + " " + asociado.lastName}</span>
                 <strong>
                   {/* <i className="fa fa-fw fa-star" /> */}
-                  {asociado.role}
+                  {getLocalizedRole(asociado.role)}
                 </strong>
               </h2>
               <div className="mc-content">

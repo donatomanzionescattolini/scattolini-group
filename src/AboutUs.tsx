@@ -8,9 +8,7 @@ export function AboutUs() {
                 style={{textIndent: "20px", marginBottom: `4%!important`}}
                 className=" text-center pt-0 mt-0 display-6 justify"
             >
-
-
-                Scattolini Group
+                {t("pages.about.title", "Scattolini Group")}
             </h2>
             <hr className="hr hr-blurry text-center w-50 mx-auto"/>
             {window.innerWidth > 768 && (

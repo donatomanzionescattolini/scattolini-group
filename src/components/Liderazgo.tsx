@@ -1,6 +1,8 @@
 import { Col, Row } from "react-bootstrap";
+import { useTranslation } from "../i18n.tsx";
 
 export default function Liderazgo() {
+  const { t } = useTranslation();
   return (
     <Row className="row  p-0 m-auto">
       <Col
@@ -19,24 +21,15 @@ export default function Liderazgo() {
       </Col>
       <Col xs={12} sm={12} md={4} lg={4} xl={4} className="px-auto py-5">
         <h4 className="text-center mt-5">
-          Equipo de expertos, Servicio Personalizado
+          {t("pages.leadership.subtitle")}
         </h4>
         <br></br>
         <p style={{ textIndent: "2em" }} className="mt-5">
-          Scattolini Group está dirigido por Elda Scattolini, una agente de
-          bienes raíces con 20 años de experiencia en el mercado del sur de
-          Florida. Elda ha ayudado a cientos de clientes de diferentes partes
-          del mundo a alcanzar sus objetivos inmobiliarios, con profesionalismo,
-          integridad y dedicación.
+          {t("pages.leadership.paragraph1")}
         </p>
 
         <p className="text-muted " style={{ textIndent: "2em" }}>
-          Elda y su equipo de agentes son expertos en el área del sur de
-          Florida, con un amplio conocimiento de los vecindarios, las escuelas,
-          las comodidades y las tendencias del mercado. Te guiarán en cada paso
-          del proceso, desde encontrar la propiedad adecuada hasta negociar el
-          mejor precio y cerrar el trato de manera eficiente y sin
-          contratiempos.
+          {t("pages.leadership.paragraph2")}
         </p>
       </Col>
       <Col xs={12} sm={12} md={2} lg={2} xl={2}>

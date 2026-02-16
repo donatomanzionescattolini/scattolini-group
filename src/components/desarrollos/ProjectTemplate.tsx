@@ -23,10 +23,7 @@ import * as React from "react";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
   const { t, lang } = useTranslation();
-  const params =
-    typeof (paramz.desarrollo as any)?.getLocalizedContent === "function"
-      ? (paramz.desarrollo as any).getLocalizedContent(lang)
-      : paramz.desarrollo;
+  const params = paramz.desarrollo;
   const [nombre] = useState(params.nombre);
   const [area] = useState(params.area);
   const [desarrollosArea] = useState(getDesarrollosForArea(area));
@@ -49,7 +46,9 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   };
   const localizedTitulo: string = String(getLocalized(params.titulo));
   const localizedSubtitulo: string = String(getLocalized(params.slogan));
-  const [introduccion] = useState(params.introduccion);
+  const localizedIntroduccion: string[] = Array.isArray(params.introduccion)
+    ? params.introduccion.map((par: any) => String(getLocalized(par)))
+    : [];
   const [CaracteristicasAmenidades] = useState(() => caract.amenidades);
   const [CaracteristicasEdificio] = useState(() => caract.edificio);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
@@ -158,7 +157,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           {<h4 className="mt-0 text-center">{localizedSubtitulo}</h4>}
           <div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3    text-justify responsive">
             <div className=" mx-lg-5 mx-xl-5 mx-md-1 mx-sm-1 mx-xs-1 px-5 font-16 text-center">
-              {(introduccion as Array<string>).map((par: string, idx: number) => (
+              {localizedIntroduccion.map((par: string, idx: number) => (
                 <p key={`intro-${idx}`}>{par}</p>
               ))}
             </div>
@@ -185,7 +184,9 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}
               type="video/mp4"
             />
-            Your browser does not support the video tag.
+            {lang === "en"
+              ? "Your browser does not support the video tag."
+              : "Tu navegador no soporta la etiqueta de video."}
           </video>
         )}
       </section>
@@ -332,23 +333,19 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           {/* Legacy alternative card layout intentionally removed */}
           <Row>
             {[...desarrollosArea.values()].map((desarrollo, idx) => {
-              const localizedDesarrollo =
-                typeof (desarrollo as any)?.getLocalizedContent === "function"
-                  ? (desarrollo as any).getLocalizedContent(lang)
-                  : desarrollo;
               return (
-                <Col key={localizedDesarrollo.nombre ?? idx} xs={12} sm={12} md={6} lg={4} xl={4}>
-                  <Link to={`/desarrollos/${localizedDesarrollo.nombre}/`}>
+                <Col key={desarrollo.nombre ?? idx} xs={12} sm={12} md={6} lg={4} xl={4}>
+                  <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                     <div
                       className="propiedades-img p-0 m-0"
                       style={{
-                        background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${localizedDesarrollo.nombre}.webp')`,
+                        background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
                         backgroundSize: "cover",
                       }}
                     ></div>
 
                     <h4 className="text-center card-title m-2 ">
-                      {getLocalized(localizedDesarrollo.titulo) || (localizedDesarrollo.nombre || "").split("-").map((word, idx) => (
+                      {getLocalized(desarrollo.titulo) || (desarrollo.nombre || "").split("-").map((word, idx) => (
                         <span key={`word-${idx}`}>{word.charAt(0).toUpperCase() + word.substring(1)} </span>
                       ))}
                     </h4>

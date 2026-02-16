@@ -5,8 +5,7 @@ import { desarrolloMap} from "../objects/desarrollos/Desarrollos.ts";
 import { useTranslation } from "../i18n.tsx";
 
 export default function AreasComponent(): React.ReactElement {
-  const { t } = useTranslation();
-  const lang = (localStorage.getItem("lang") as string) || "es";
+  const { t, lang } = useTranslation();
   const getLocalized = (field: any) => {
     if (!field) return "";
     if (typeof field === "object") return field[lang] || field.es || Object.values(field)[0] || "";
@@ -20,7 +19,7 @@ export default function AreasComponent(): React.ReactElement {
       <br />
       <br />
       <div>
-        <h3 className="text-center mb-1">{t("areas.title", "Áreas")}</h3>
+        <h3 className="text-center mb-1">{t("pages.areas.title", "Áreas")}</h3>
       </div>
       <hr className="hr hr-blurry w-50 mx-auto" />
 

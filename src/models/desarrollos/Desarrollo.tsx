@@ -9,90 +9,22 @@ class Desarrollo {
     if (area) this.area = area;
   }
 
-  private toCamelCaseKey(value: string): string {
-    return value
-      .split("-")
-      .map((part, index) =>
-        index === 0
-          ? part
-          : part.charAt(0).toUpperCase() + part.slice(1)
-      )
-      .join("");
-  }
-
-  private resolveDesarrolloKeyCandidates(): string[] {
-    const rawName = String(this.nombre || "").trim();
-    if (!rawName) return [];
-
-    const normalized = rawName.toLowerCase();
-    const compact = normalized.replace(/[-\s]/g, "");
-    const camel = this.toCamelCaseKey(normalized);
-
-    return Array.from(new Set([rawName, normalized, compact, camel]));
-  }
-
-  private mergeLocalizedValue(baseValue: any, localizedValue: any): any {
-    if (localizedValue === undefined || localizedValue === null) {
-      return baseValue;
-    }
-
-    if (Array.isArray(localizedValue)) {
-      return localizedValue;
-    }
-
-    if (
-      typeof localizedValue === "object" &&
-      !React.isValidElement(localizedValue) &&
-      localizedValue !== null
-    ) {
-      const merged = {
-        ...(typeof baseValue === "object" && baseValue !== null ? baseValue : {}),
-        ...localizedValue,
-      };
-      return merged;
-    }
-
-    return localizedValue;
-  }
-
   getLocalizedContent(lang: "es" | "en"): any {
-    const keys = this.resolveDesarrolloKeyCandidates();
-    const localizedData = keys
-      .map((k) => getDesarrolloData(k, lang))
-      .find((entry) => entry !== null);
-
-    const baseCopy: any = { ...this };
-
-    for (const [field, value] of Object.entries(baseCopy)) {
-      if (
-        value &&
-        typeof value === "object" &&
-        !Array.isArray(value) &&
-        !React.isValidElement(value) &&
-        ("es" in value || "en" in value)
-      ) {
-        baseCopy[field] = value[lang] || value.es || value.en || "";
-      }
+    const desarrolloKey = this.nombre?.replace(/[-\s]/g, "").toLowerCase();
+    const localizedData = getDesarrolloData(desarrolloKey, lang);
+    
+    if (localizedData) {
+      return {
+        ...this,
+        titulo: localizedData.titulo || this.titulo,
+        subtitulo: localizedData.subtitulo ? 
+          <p className="text-cursive p-0 m-0"><em>{localizedData.subtitulo}</em></p> : 
+          this.subtitulo,
+        introduccion: localizedData.introduccion || this.introduccion,
+      };
     }
-
-    if (!localizedData) {
-      return baseCopy;
-    }
-
-    const merged: any = { ...baseCopy };
-    for (const [field, value] of Object.entries(localizedData)) {
-      merged[field] = this.mergeLocalizedValue(baseCopy[field], value);
-    }
-
-    if (typeof merged.subtitulo === "string") {
-      merged.subtitulo = (
-        <p className="text-cursive p-0 m-0">
-          <em>{merged.subtitulo}</em>
-        </p>
-      );
-    }
-
-    return merged;
+    
+    return this;
   }
 
   displayAmenidades(): React.ReactNode {
@@ -196,22 +128,38 @@ class Desarrollo {
   }
 
   displayCaracteristicasEdificio(): React.ReactNode {
+    const currentLang = (typeof localStorage !== "undefined" &&
+      (localStorage.getItem("scattolini_lang") as "es" | "en" | null)) || "es";
+    const labels = {
+      es: {
+        location: "Ubicación",
+        developer: "Constructora",
+        year: "Año de Construcción",
+        size: "Tamaño de viviendas en pies cuadrados",
+      },
+      en: {
+        location: "Location",
+        developer: "Developer",
+        year: "Year of Construction",
+        size: "Home size in square feet",
+      },
+    }[currentLang];
     const ubicacion = this.ubicación ?? this.ubicacion;
     return (
       <dl>
-        <dt>Ubicación</dt>
+        <dt>{labels.location}</dt>
         <dd>{ubicacion}</dd>
         {this.constructora && (
           <>
-            <dt>Constructora</dt>
+            <dt>{labels.developer}</dt>
             <dd>{typeof this.constructora === "string" ? this.constructora : String(this.constructora)}</dd>
           </>
         )}
-        <dt>Año de Construcción</dt>
+        <dt>{labels.year}</dt>
         <dd>{this.estimatedCompletionYear}</dd>
         {this.piesCuadrados && (
           <>
-            <dt>Tamaño de viviendas en pies cuadrados</dt>
+            <dt>{labels.size}</dt>
             <dd>{String(this.piesCuadrados)}</dd>
           </>
         )}

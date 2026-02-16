@@ -16,10 +16,7 @@ import AreasComponent from "../AreasComponent.tsx";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
   const { t, lang } = useTranslation();
-  const params =
-    typeof (paramz.desarrollo as any)?.getLocalizedContent === "function"
-      ? (paramz.desarrollo as any).getLocalizedContent(lang)
-      : paramz.desarrollo;
+  const params = paramz.desarrollo;
   const [nombre] = useState(params.nombre);
   const [area] = useState(params.area);
   const [numberOfImages] = useState(params.numberOfImages);
@@ -28,7 +25,6 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
   const [caract] = useState(params.caracteristicas as caracteristicas);
   const [banner] = useState(params.banner);
-  const [introduccion] = useState(params.introduccion);
 
   const getLocalized = (field: any) => {
     if (!field) return "";
@@ -38,6 +34,9 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   };
   const titulo = String(getLocalized(params.titulo));
   const subtitulo = String(getLocalized(params.subtitulo) || getLocalized(params.slogan));
+  const introduccion = Array.isArray(params.introduccion)
+    ? params.introduccion.map((par: any) => String(getLocalized(par)))
+    : [];
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -70,7 +69,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
           <div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3 text-justify responsive">
             <div className="mx-lg-5 mx-xl-5 mx-md-1 mx-sm-1 mx-xs-1 px-5 font-16 text-center">
-              {(introduccion as Array<string> || []).map((par: string, idx: number) => (
+              {introduccion.map((par: string, idx: number) => (
                 <p key={`intro-${idx}`}>{par}</p>
               ))}
             </div>
@@ -98,7 +97,9 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}
                 type="video/mp4"
               />
-              Your browser does not support the video tag.
+              {lang === "en"
+                ? "Your browser does not support the video tag."
+                : "Tu navegador no soporta la etiqueta de video."}
             </video>
           )}
         </Container>
@@ -137,30 +138,25 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           <h3 className="text-center mb-1">{t("pages.project.propertiesInArea")}</h3>
           <hr className="hr hr-blurry w-50 mx-auto" />
           <Row>
-            {[...((paramz.desarrollo.area?.desarrollos) || [])].map((des: any, idx: number) => {
-              const localizedDes =
-                typeof des?.getLocalizedContent === "function"
-                  ? des.getLocalizedContent(lang)
-                  : des;
-              return (
-              <Col key={localizedDes.nombre ?? idx} xs={12} sm={12} md={6} lg={4} xl={4}>
-                <Link to={`/desarrollos/${localizedDes.nombre}/`}>
+            {[...((paramz.desarrollo.area?.desarrollos) || [])].map((des: any, idx: number) => (
+              <Col key={des.nombre ?? idx} xs={12} sm={12} md={6} lg={4} xl={4}>
+                <Link to={`/desarrollos/${des.nombre}/`}>
                   <div
                     className="propiedades-img p-0 m-0"
                     style={{
-                      background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area?.name}/${localizedDes.nombre}.webp')`,
+                      background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area?.name}/${des.nombre}.webp')`,
                       backgroundSize: "cover",
                     }}
                   ></div>
                   <h4 className="text-center card-title m-2">
-                    {String(getLocalized(localizedDes.titulo) || localizedDes.nombre)
+                    {String(getLocalized(des.titulo) || des.nombre)
                       .split("-")
                       .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
                       .join(" ")}
                   </h4>
                 </Link>
               </Col>
-            )})}
+            ))}
           </Row>
         </Container>
       </section>
