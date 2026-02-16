@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import {
   MDBRow,
@@ -28,7 +28,7 @@ export default function MultiStepWizard({
 }: MultiStepWizardProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<any>(data);
-  const { control, handleSubmit, formState: { errors }, setValue } = useForm({
+  const { control, handleSubmit, setValue } = useForm({
     defaultValues: formData,
   });
 
@@ -107,7 +107,7 @@ export default function MultiStepWizard({
     return value || '';
   };
 
-  const setFieldValue = (fieldName: string, value: string) => {
+  const setFieldValue = useCallback((fieldName: string, value: string) => {
     let processedValue: any = value;
     
     // Handle arrays (like introduccion and descripcion)
@@ -115,9 +115,9 @@ export default function MultiStepWizard({
       processedValue = value.split('\n\n').filter(p => p.trim());
     }
     
-    setFormData({ ...formData, [fieldName]: processedValue });
+    setFormData((prev: any) => ({ ...prev, [fieldName]: processedValue }));
     setValue(fieldName, processedValue);
-  };
+  }, [setValue]);
 
   const renderField = (fieldName: string) => {
     const isTextarea = ['introduccion', 'descripcion', 'slogan'].includes(fieldName);

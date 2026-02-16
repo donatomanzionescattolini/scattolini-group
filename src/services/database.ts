@@ -11,6 +11,7 @@ import {
 import { db } from '../config/firebase';
 import Desarrollo from '../models/desarrollos/Desarrollo';
 import { Area } from '../models/areas/Area';
+import { DesarrolloDocument, AreaDocument } from '../types/firestore';
 
 // Collection names
 const DESARROLLOS_COLLECTION = 'desarrollos';
@@ -58,25 +59,25 @@ export function serializeArea(area: Area): any {
 }
 
 // Desarrollo CRUD operations
-export async function getDesarrollo(id: string): Promise<any | null> {
+export async function getDesarrollo(id: string): Promise<DesarrolloDocument | null> {
   const docRef = doc(db, DESARROLLOS_COLLECTION, id);
   const docSnap = await getDoc(docRef);
   
   if (docSnap.exists()) {
-    return { id: docSnap.id, ...docSnap.data() };
+    return { id: docSnap.id, ...docSnap.data() } as DesarrolloDocument;
   }
   return null;
 }
 
-export async function getAllDesarrollos(): Promise<any[]> {
+export async function getAllDesarrollos(): Promise<DesarrolloDocument[]> {
   const querySnapshot = await getDocs(collection(db, DESARROLLOS_COLLECTION));
   return querySnapshot.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),
-  }));
+  })) as DesarrolloDocument[];
 }
 
-export async function getDesarrollosByArea(areaName: string): Promise<any[]> {
+export async function getDesarrollosByArea(areaName: string): Promise<DesarrolloDocument[]> {
   const q = query(
     collection(db, DESARROLLOS_COLLECTION),
     where('area.name', '==', areaName)
@@ -85,7 +86,7 @@ export async function getDesarrollosByArea(areaName: string): Promise<any[]> {
   return querySnapshot.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),
-  }));
+  })) as DesarrolloDocument[];
 }
 
 export async function saveDesarrollo(id: string, data: any): Promise<void> {
@@ -102,22 +103,22 @@ export async function updateDesarrollo(
 }
 
 // Area CRUD operations
-export async function getArea(id: string): Promise<any | null> {
+export async function getArea(id: string): Promise<AreaDocument | null> {
   const docRef = doc(db, AREAS_COLLECTION, id);
   const docSnap = await getDoc(docRef);
   
   if (docSnap.exists()) {
-    return { id: docSnap.id, ...docSnap.data() };
+    return { id: docSnap.id, ...docSnap.data() } as AreaDocument;
   }
   return null;
 }
 
-export async function getAllAreas(): Promise<any[]> {
+export async function getAllAreas(): Promise<AreaDocument[]> {
   const querySnapshot = await getDocs(collection(db, AREAS_COLLECTION));
   return querySnapshot.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),
-  }));
+  })) as AreaDocument[];
 }
 
 export async function saveArea(id: string, data: any): Promise<void> {
