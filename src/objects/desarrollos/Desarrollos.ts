@@ -134,9 +134,9 @@ desarrolloMap.push({
     Ora(),
     Cipriani(),
     MercedesBenzPlacesMiami(),
-    _2200Brickell,
-    DolceAndGabbanaResidences,
-    ViceroyBrickell
+    _2200Brickell(),
+    DolceAndGabbanaResidences(),
+    ViceroyBrickell()
   ]),
 });
 
@@ -170,7 +170,7 @@ desarrolloMap.push({
     TheVilla(),
     VidaResidences(),
     ElleResidences(),
-    EdgeHouseResidences,
+    EdgeHouseResidences(),
   ]),
 });
 desarrolloMap.push({
