@@ -24,6 +24,10 @@ import ContactFormComponent from "./components/ContactFormComponent.tsx";
 import ContactoComponent from "./components/ContactoComponent.tsx";
 
 import { useTranslation } from "./i18n.tsx";
+import { AuthProvider } from "./contexts/AuthContext.tsx";
+import Login from "./components/auth/Login.tsx";
+import Editor from "./components/editor/Editor.tsx";
+import ProtectedRoute from "./components/auth/ProtectedRoute.tsx";
 
 export default function App() {
   const { t } = useTranslation();
@@ -32,25 +36,37 @@ export default function App() {
     }, []);
   return (
     <BrowserRouter>
-      <Nav />
-      
+      <AuthProvider>
+        <Nav />
+        
 
-      <Routes>
-        {/*pestañas*/}
-        <Route element={<Home />} path="/" />
-        <Route element={<AliadosComponent />} path="/aliados" />
-        <Route element={<Liderazgo />} path="/liderazgo" />
-        <Route element={<ContactoComponent />} path="/contacto" />
-        <Route element={<DesarrollosTodos />} path={"/desarrollos"} />
-        <Route element={<AreasComponent />} path="/areas" />
+        <Routes>
+          {/*pestañas*/}
+          <Route element={<Home />} path="/" />
+          <Route element={<AliadosComponent />} path="/aliados" />
+          <Route element={<Liderazgo />} path="/liderazgo" />
+          <Route element={<ContactoComponent />} path="/contacto" />
+          <Route element={<DesarrollosTodos />} path={"/desarrollos"} />
+          <Route element={<AreasComponent />} path="/areas" />
 
-        {DesarrollosRoutes()}
+          {DesarrollosRoutes()}
 
-        <Route element={<Equipo />} path={"/asociados"} />
+          <Route element={<Equipo />} path={"/asociados"} />
 
-        <Route element={<ManzioneProperties />} path={"/manzione-properties"} />
-        {AreasRoutes()}
-      </Routes>
+          <Route element={<ManzioneProperties />} path={"/manzione-properties"} />
+          {AreasRoutes()}
+          
+          {/* Authentication Routes */}
+          <Route element={<Login />} path="/login" />
+          <Route
+            element={
+              <ProtectedRoute>
+                <Editor />
+              </ProtectedRoute>
+            }
+            path="/editor"
+          />
+        </Routes>
       <FloatingWhatsApp
         
         phoneNumber={"13056139338"}
@@ -62,7 +78,8 @@ export default function App() {
         notificationSound
         className={"floating-whatsapp"}
       />
-      <Footer />
+        <Footer />
+      </AuthProvider>
     </BrowserRouter>
   );
 }

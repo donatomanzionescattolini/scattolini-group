@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "latest",
     "@fortawesome/fontawesome-free": "latest",
+    "@hookform/resolvers": "^5.2.2",
     "@material/banner": "latest",
     "@popperjs/core": "latest",
     "@types/express": "latest",
@@ -21,16 +22,19 @@
     "compression": "latest",
     "cross-env": "latest",
     "express": "^5.2.1",
+    "firebase": "^12.9.0",
     "material-components-web": "latest",
     "mdb-react-ui-kit": "latest",
     "mdb-ui-kit": "^9.1.0",
     "react-bootstrap": "latest",
     "react-floating-whatsapp": "latest",
+    "react-hook-form": "^7.71.1",
     "react-router-dom": "latest",
     "sirv": "latest",
     "uuid": "latest",
     "vercel": "^50.17.1",
-    "vite-tsconfig-paths": "latest"
+    "vite-tsconfig-paths": "latest",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/babel__core": "^7.20.5",

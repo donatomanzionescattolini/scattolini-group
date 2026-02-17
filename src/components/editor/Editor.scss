@@ -1,0 +1,40 @@
+.editor-page {
+  min-height: 100vh;
+  background-color: #f2f2ed;
+
+  .editor-header {
+    background-color: #0e2d2f;
+    color: white;
+
+    h1 {
+      color: white;
+      font-size: 1.75rem;
+    }
+  }
+
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+
+    .nav-link {
+      color: #0e2d2f;
+      border: none;
+      border-bottom: 3px solid transparent;
+      font-weight: 500;
+
+      &.active {
+        color: #1f595a;
+        border-bottom-color: #1f595a;
+        background-color: transparent;
+      }
+
+      &:hover:not(.active) {
+        border-bottom-color: #8a6944;
+      }
+    }
+  }
+}
