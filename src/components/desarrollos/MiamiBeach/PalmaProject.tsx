@@ -1,9 +1,10 @@
 import ProjectTemplate from "../ProjectTemplate.tsx";
 import Palma from "../../../objects/desarrollos/MiamiBeach/Palma.tsx";
+import { useTranslation } from "../../../i18n.tsx";
 
 export default function PalmaProject(){
-
-    return <ProjectTemplate desarrollo={Palma()} />
+    const { lang } = useTranslation();
+    return <ProjectTemplate desarrollo={Palma(lang)} />
 
 
 }

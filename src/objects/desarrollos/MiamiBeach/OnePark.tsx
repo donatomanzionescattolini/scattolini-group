@@ -1,7 +1,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
-export default function OnePark() {
+export default function OnePark(lang: "en" | "es" = "es") {
     const OneParkObject = new Desarrollo();
     OneParkObject.nombre = "one-park";
 

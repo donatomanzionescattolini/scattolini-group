@@ -1,6 +1,8 @@
 import ProjectTemplate from "../ProjectTemplate.tsx";
 import TheWilliam from "../../../objects/desarrollos/MiamiBeach/TheWilliam.tsx";
+import { useTranslation } from "../../../i18n.tsx";
 
 export default function TheWilliamProject() {
-    return <ProjectTemplate desarrollo={TheWilliam}/>;
+    const { lang } = useTranslation();
+    return <ProjectTemplate desarrollo={TheWilliam(lang)}/>;
 }

@@ -1,13 +1,41 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
-export default function FivePark() {
+export default function FivePark(lang: "en" | "es" = "es") {
     const FiveParkObject = new Desarrollo();
     FiveParkObject.nombre = "five-park";
 
     FiveParkObject.direccion = "500 Alton Rd, Miami Beach, FL 33139, Estados Unidos";
     FiveParkObject.caracteristicas = {
-        amenidades: (
+        amenidades: lang === "en" ? (
+            <>
+                <ul className="text-capitalize list ">
+                    <li>Coworking area with private offices and meeting rooms</li>
+                    <li>Children's learning lab and teen club</li>
+                    <li>Screening room</li>
+                    <li>Luxury short-term guest suites for friends and family</li>
+                    <li>Residents-only poolside bar and café</li>
+                    <li>24-hour concierge and butler service</li>
+                    <li>Housekeeping services available</li>
+                    <li>Transportation to Beach Club via electric vehicle</li>
+                    <li>Fully equipped fitness center</li>
+                    <li>Spa and treatment rooms</li>
+                    <li>State-of-the-art fiber optics provide high-quality internet and WiFi service from every corner of Five Park residences and amenities, including garage and elevator spaces</li>
+
+                    <li>
+                        The adjacent 3-acre Canopy Park features a MONSTRUM playground, outdoor gym, picnic areas, dog park, shaded gardens, and art installations
+                    </li>
+
+                    <li>
+                        The green, plant-filled amenity deck boasts stunning sunset views of the Miami skyline and bay, visible from adult and family pools. The expansive space also offers unparalleled relaxation with shaded trellises, sunset terrace, numerous cabanas and lounges, and meditation deck
+                    </li>
+
+                    <li>
+                        Private beach club located south of Fifth, with lounge chairs, umbrellas, and towel service
+                    </li>
+                </ul>
+            </>
+        ) : (
             <>
                 <ul className="text-capitalize list ">
                     <li> área de coworking con oficinas privadas y</li>
@@ -53,7 +81,39 @@ export default function FivePark() {
                 </ul>
             </>
         ),
-        edificio: (
+        edificio: lang === "en" ? (
+            <>
+                <ul>
+                    <li>Floors: 48</li>
+                    <li>Units: 98 residences with 2, 3, 4, and 5 bedrooms</li>
+                    <li>Location: 500 Alton Rd, Miami Beach, FL 33139</li>
+                </ul>
+                <ul>
+                    <li>Private porte-cochère and residents' lobby</li>
+                    <li>Electric vehicle charging stations</li>
+                    <li>
+                        The adjacent 3-acre Canopy Park features a MONSTRUM playground, outdoor gym, picnic areas, dog park, shaded gardens, and art installations
+                    </li>
+                    <li>
+                        The green, plant-filled amenity terrace boasts stunning sunset views of the Miami skyline and bay, visible from adult and family pools. The expansive space also offers unparalleled relaxation with shaded trellises, sunset terrace, numerous cabanas and lounges, and meditation deck
+                    </li>
+                    <li>Private Beach Club</li>
+                    <li>Coworking area with private offices and meeting rooms</li>
+                    <li>
+                        Children's learning lab and teen club
+                    </li>
+                    <li>Screening room</li>
+                    <li>Luxury short-term guest suites</li>
+                    <li>Residents-only poolside bar and café</li>
+                    <li>24-hour concierge and butler service</li>
+                    <li>Fitness center</li>
+                    <li>Spa and treatment rooms</li>
+                    <li>
+                        State-of-the-art fiber optics provide high-quality Internet and WiFi service from every corner of Five Park residences and amenities, including garage and elevator spaces
+                    </li>
+                </ul>
+            </>
+        ) : (
             <>
                 <ul>
                     <li>Pisos: 48</li>
@@ -97,7 +157,44 @@ export default function FivePark() {
                 </ul>
             </>
         ),
-        residencias: (
+        residencias: lang === "en" ? (
+            <>
+                <ul>
+                    <li>Private elevator</li>
+                    <li>
+                        10' wide sliding door openings allow terrace access from living rooms
+                    </li>
+                    <li>10-foot high ceilings</li>
+                    <li>
+                        Residences feature custom-designed kitchens by Gabellini Sheppard
+                    </li>
+                    <li>Italian-made kitchen cabinets</li>
+                    <li>
+                        Decorative colored frosted glass upper cabinets
+                    </li>
+                    <li>Integrated dining tables with wood top</li>
+                    <li>
+                        Gaggenau appliances with ducted venting grilles
+                    </li>
+                    <li>Master bedrooms with walk-in closets</li>
+                    <li>
+                        Custom-designed Gabellini Sheppard master bathrooms feature Italian-made vanities and textured glass shower doors
+                    </li>
+                    <li>
+                        Cutting-edge Hansgrohe bathroom fixtures are present in secondary bathrooms
+                    </li>
+                    <li>
+                        Front-loading washers and ducted, vented dryers for clean, quiet laundry access
+                    </li>
+                    <li>
+                        Custom Five Park app for convenient amenity management and home experience
+                    </li>
+                    <li>
+                        Residences are prepared with platinum pre-wiring
+                    </li>
+                </ul>
+            </>
+        ) : (
             <>
                 <ul>
                     <li>Ascensor privado</li>
@@ -144,12 +241,21 @@ export default function FivePark() {
             </>
         ),
     };
-    FiveParkObject.introduccion = [
+    FiveParkObject.introduccion = lang === "en" ? [
+        "Bay and ocean view residences in Miami's most innovative tower",
+        "A brand new residential tower arrives in Miami Beach with incomparable views in all directions. Exceptional amenities across 50,000 square feet (4,645 square meters) with wellness services, private beach club, and park on three acres of land right outside your door. A truly stunning creation from the world's most visionary design minds"
+    ] : [
         "Residencias con vista a la bahía yel mar en la torre más innovadora de miami",
         "Un flamante torre residencial llega a Miami Beach con vistas incomparables en todas las direcciones.Amenidades excepcionales a lo largo de 50.000 pies cuadrados (4645 metros cuadrados) con serviciospropios de bienestar, club de playa privado y parque con un terreno de tres acres (más de una hectárea) frente a la puerta de su casa. Una creación verdaderamente impresionante de las mentes de diseño más visionarias del mundo",
     ];
-    FiveParkObject.titulo = "Five Park";
-    FiveParkObject.slogan = "VidaResidences a un Nivel Superior";
+    FiveParkObject.titulo = {
+        es: "Five Park",
+        en: "Five Park"
+    };
+    FiveParkObject.slogan = {
+        es: "VidaResidences a un Nivel Superior",
+        en: "Residential Living at a Higher Level"
+    };
     FiveParkObject.numberOfImages = 45;
     FiveParkObject.banner = true;
     FiveParkObject.area = MiamiBeach();

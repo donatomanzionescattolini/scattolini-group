@@ -1,19 +1,19 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Homestead from "../../areas/Homestead.tsx";
 
-export default function SalernoEstates() {
-  const SalernoEstates = new Desarrollo();
-  SalernoEstates.nombre = "salerno-estates";
-  SalernoEstates.titulo = "Salerno Estates";
-  SalernoEstates.slogan = "";
-  SalernoEstates.area = Homestead();
-  SalernoEstates.caracteristicas = {
+export default function SalernoEstates(lang: "en" | "es" = "es") {
+  const SalernoEstatesObject = new Desarrollo();
+  SalernoEstatesObject.nombre = "salerno-estates";
+  SalernoEstatesObject.titulo = { es: "Salerno Estates", en: "Salerno Estates" };
+  SalernoEstatesObject.slogan = { es: "", en: "" };
+  SalernoEstatesObject.area = Homestead();
+  SalernoEstatesObject.caracteristicas = {
     edificio: <></>,
     residencias: <></>,
     amenidades: <></>,
   };
 
-  SalernoEstates.introduccion = [];
+  SalernoEstatesObject.introduccion = [];
 
-  return SalernoEstates;
+  return SalernoEstatesObject;
 }
