@@ -1,33 +1,485 @@
 {
   "nav": {
-    "home": "Home",
+    "inicio": "Home",
+    "liderazgo": "Leadership",
+    "asociados": "Team",
+    "aliados": "Allies",
     "areas": "Areas",
+    "contacto": "Contact",
     "desarrollos": "Developments",
-    "contact": "Contact",
-    "leadership": "Leadership",
-    "partners": "Partners"
+    "equipo": "Our Team"
   },
   "hero": {
     "title": "SCATTOLINI GROUP",
     "subtitle": "Real Estate Agency",
-    "contact_cta": "Contact Us"
+    "cta": "Contact Us Today"
   },
-  "areas": {
-    "title": "Areas"
+  "pages": {
+    "areas": {
+      "title": "Areas"
+    },
+    "desarrollos": {
+      "envyResidence": {
+        "titulo": "ENVY Pompano Beach",
+        "subtitulo": "Live Beyond the Ordinary",
+        "slogan": "Live Beyond the Ordinary.",
+        "direccion": "475 SE 1st St, Pompano Beach, FL 33060",
+        "ubicacion": "475 SE 1st St, Pompano Beach, FL 33060"
+      },
+      "baccarat": {
+        "title": "Developments"
+      }
+    },
+    "asociados": {
+      "title": "Associates"
+    },
+    "contacto": {
+      "title": "Contact",
+      "address": "12750 NW 17th Street Unit 222, Miami, Florida 33182",
+      "telefono": "Phone:",
+      "fax": "Fax:",
+      "horasOficina": "Office Hours",
+      "horasTexto": "Monday to Friday: 9am - 5pm\nSaturday: By appointment\nSunday: Closed",
+      "enviarCorreo": "Send an email",
+      "cerrarFormulario": "Close contact form",
+      "formularioTitulo": "Contact form",
+      "officeHours": "Office Hours",
+      "openForm": "Send an email",
+      "closeForm": "Close contact form",
+      "contactFormTitle": "Contact form",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "message": "Message",
+        "sendButton": "Send",
+        "emailLink": "this email"
+      },
+      "alerts": {
+        "successTitle": "Message sent",
+        "successMessage": "Message sent successfully!",
+        "failureTitle": "Send failed",
+        "failureMessage": "There was a problem sending the email. Please try again or email us directly at"
+      },
+      "officeHoursText": "Monday - Friday: 9am - 5pm\nSaturday: By appointment\nSunday: Closed",
+      "phone_label": "Phone",
+      "fax_label": "Fax",
+      "mondayFriday": "Monday - Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "byAppointment": "By appointment",
+      "closed": "Closed"
+    },
+    "manzione": {
+      "title": "Property Management You Can Trust",
+      "description": "In our company, we specialize in property management. We ensure that each property is well cared for and maintained, and we take care of all the details so that our clients can enjoy the peace of mind of knowing their property is in good hands."
+    },
+    "about": {
+      "title": "Scattolini Group",
+      "whoWeAre": "Who We Are",
+      "requestConsultation": "Request a consultation",
+      "callUs": "Call us today",
+      "paragraph": "Scattolini Group is a team of experts with decades of experience in the South Florida real estate market. We have had the privilege of assisting numerous clients from around the world by providing a full range of real estate services in this vibrant region.",
+      "consultationText": "One of our experts would be happy to schedule a consultation to explore options tailored to your needs",
+      "seeMore": "See More"
+    },
+    "services": {
+      "title": "Services",
+      "advisory": "Real Estate Advisory",
+      "propertyManagement": "Property Management",
+      "sales": "Property Sales",
+      "purchase": "Property Purchase",
+      "moreInfo": "Get more info",
+      "advisoryDesc": "We provide expert advisory across all areas of the real estate market.",
+      "propertyManagementDesc": "Full-service property management for owners and investors.",
+      "salesDesc": "High-quality property sales services to help you find and sell premium real estate.",
+      "purchaseDesc": "We help clients find the perfect property matching needs and budget."
+    },
+    "project": {
+      "caracteristicas": "Features",
+      "edificio": "Building",
+      "residencias": "Residences",
+      "amenidades": "Amenities",
+      "galeria": "Photo Gallery",
+      "pdf": {
+        "brochure": "Brochure",
+        "hoja": "Spec Sheet",
+        "planos": "Plans"
+      },
+      "pdfUI": {
+        "cantDisplay": "Cannot display PDF file.",
+        "download": "Download it",
+        "downloadBtn": "Download",
+        "documentsTitle": "Project Documents",
+        "instead": "instead."
+      },
+      "propertiesInArea": "Properties in the Area",
+      "contactUsToday": "Contact Us Today"
+    },
+    "leadership": {
+      "subtitle": "Expert team, personalized service",
+      "paragraph1": "Scattolini Group is led by Elda Scattolini, a real estate agent with 20 years of experience in the South Florida market. Elda has helped hundreds of clients from around the world reach their real estate goals with professionalism, integrity, and dedication.",
+      "paragraph2": "Elda and her team of agents are experts in the South Florida area, with deep knowledge of neighborhoods, schools, amenities, and market trends. They will guide you every step of the way, from finding the right property to negotiating the best price and closing the deal smoothly."
+    }
   },
-  "project": {
-    "features": "Features",
-    "gallery": "Photo Gallery",
-    "documents": "Documents",
-    "download": "Download",
-    "properties_in_area": "Properties in the Area"
+  "whatsapp": {
+    "placeholder": "I'd like to schedule a call or meeting with an agent to learn more about the South Florida real estate market and discuss options available to me",
+    "status": "Replies within the first 24 hours"
+  },
+  "roles": {
+    "owner": "😸 Owner & Agent",
+    "officeManager": "😸 Agent & Office Manager",
+    "agent": "🤠 Agent",
+    "propertyManager": "😸 Agent & Property Manager",
+    "broker": "🚀 Broker"
+  },
+  "desarrollos": {
+    "envyResidence": {
+      "titulo": "ENVY Pompano Beach",
+      "subtitulo": "Live Beyond the Ordinary",
+      "slogan": "Live Beyond the Ordinary.",
+      "direccion": "475 SE 1st St, Pompano Beach, FL 33060",
+      "ubicacion": "475 SE 1st St, Pompano Beach, FL 33060",
+      "introduccion": [
+        "Envy Residences combines modern vibes and a strategic location. Built in 2021, it offers 214 units ranging from studios to 3-bedroom apartments. Enjoy first-class amenities such as a resort-style pool, fitness center with a climbing wall, mini-golf, and social areas. Just 1.8 miles from the beach and with flexible rental restrictions, Envy is perfect for living or investing."
+      ],
+      "caracteristicas": {
+        "edificio": {
+          "ubicacion": "Location",
+          "unidades": "Number of Units",
+          "unidadesCount": "213 Residences",
+          "pisos": "Floors",
+          "pisosCount": "Two towers of 11 floors each",
+          "tipoResidencia": "Residence Type",
+          "tipoResidenciaDesc": "Spacious floor plans including studios and 1, 2, and 3-bedroom residences",
+          "apertura": "Opening Year",
+          "aperturaYear": "2025"
+        },
+        "residencias": {
+          "disenos": "Open-concept designs with floor-to-ceiling windows.",
+          "cocinas": "Designer kitchens with premium appliances.",
+          "banos": "Spa-inspired bathrooms with elegant finishes.",
+          "balcones": "Private balconies with stunning views of Pompano Beach."
+        },
+        "amenidades": {
+          "bienestar": "Wellness center: a state-of-the-art gym and yoga space.",
+          "piscina": "Resort-style pool: a beautifully landscaped pool deck for ultimate relaxation.",
+          "salon": "Sophisticated lounge and entertainment room: an elegant common area for socializing.",
+          "mascotas": "Pet perks: a designated pet area for your furry friends.",
+          "parque": "Children's park: a fun and safe space for kids to play."
+        }
+      },
+      "tipos": {
+        "estudio": "Studios",
+        "habitacion1": "1 Bedroom",
+        "habitacion2": "2 Bedrooms",
+        "habitacion3": "3 Bedrooms"
+      }
+    },
+    "baccarat": {
+      "titulo": "Baccarat Residences",
+      "subtitulo": "Where life shines forever",
+      "introduccion": [
+        "Baccarat proudly presents its first collection of residences to the Miami market.",
+        "Illuminated by the infinite glow of the sun, this elevated tower will stand radiant on the waterfront where the river meets the bay, in the heart of the city's bright lights. Combining the vibrant vitality and magnetic dynamism of Brickell with enlightened design and ingenious service, residents can expect a lifestyle infused with unexpected delights and inspired brilliance",
+        "Penthouse residences available for exclusive preview."
+      ]
+    },
+    "brickell2200": {
+      "titulo": "2200 Brickell",
+      "subtitulo": "An Urban Sanctuary in the Heart of Brickell",
+      "introduccion": [
+        "2200 Brickell is a new luxury condominium in South Brickell, designed by Revuelta Architecture and featuring interior design by ODA New York.",
+        "These 1 to 4 bedroom luxury residences offer spectacular finishes, high-end appliances, floor-to-ceiling glass windows, assigned parking on same floor, and much more.",
+        "Residents at 2200 Brickell enjoy amenities such as a resort-style pool with outdoor spa and poolside cabanas, pickleball court, summer kitchen, outdoor fitness area, children's play area, a quarter-mile walking track, and more."
+      ]
+    },
+    "labaia": {
+      "titulo": "La Baia",
+      "subtitulo": "Waterfront Elegance",
+      "introduccion": [
+        "La Baia offers 57 luxury residences in Bay Harbor Islands with spectacular views of Biscayne Bay and the Atlantic Ocean.",
+        "Each residence features 9 to 10-foot high ceilings, private terraces, imported wood flooring and marble finishes.",
+        "Enjoy an exclusive lifestyle with luxury amenities and a prime location."
+      ]
+    },
+    "elleResidences": {
+      "titulo": "Elle Residences",
+      "subtitulo": "The New Home of High Style",
+      "introduccion": [
+        "Live on the runway of Miami's design, fashion and culture districts at ELLE Residences, inspired by 80 years of trend-setting fashion and decor.",
+        "Elle Residences Miami is a collection of 180 elegant residences with no rental restrictions. Its interior design features a nod to the magazine's Parisian roots.",
+        "Exclusive design by Behar Font & Partners and refined interiors by The One Atelier come together to offer an exquisite collection of homes in the Edgewater area."
+      ],
+      "direccion": "3618 NE 5th Ave, Miami, FL 33137, United States",
+      "caracteristicas": {
+        "residencias": {
+          "descripcion": "Acquire your own floor in the heart of Miami. Inspired by the pages of ELLE Decor, the residences combine mid-century modern style and contemporary French style with a touch of tropical luxury.",
+          "planos": "Well-thought-out floor plans with high ceilings and water and horizon views.",
+          "suites": "Grande Suites on the upper floor with 11-foot ceilings",
+          "ventanas": "Impact-resistant floor-to-ceiling windows and doors",
+          "cocinas": "Elegant kitchens with Miele appliance package",
+          "muebles": "Italian furniture and carpentry imported from Italkraft",
+          "encimeras": "Exquisite quartz countertops",
+          "suelos": "French-inspired chevron pattern wood flooring",
+          "accesorios": "Modern brass accessories and finishes"
+        }
+      }
+    },
+    "ariaReserve": {
+      "titulo": "Aria Reserve",
+      "subtitulo": "Uncompromising Luxury",
+      "introduccion": [
+        "Aria Reserve presents ultra-luxury residences with panoramic bay and city views.",
+        "Designed by the most prestigious architects, every detail reflects elegance and sophistication.",
+        "Enjoy world-class amenities and an unbeatable location in Edgewater."
+      ]
+    },
+    "ella": {
+      "titulo": "Ella Miami Beach",
+      "subtitulo": "A Tribute To Miami Beach's Glamorous Past",
+      "introduccion": [
+        "Ella, a tribute to the splendid history of Miami Beach, combines vintage elegance with contemporary lines, creating a moving atmosphere that captures the spirit of Miami Beach.",
+        "Meticulously designed, Ella offers exceptional living experiences, meeting the highest standards of contemporary sophistication.",
+        "Ella sets a new standard for Miami residential developments with short-term rentals. The renowned firm Arquitectonica developed a bold and modern aesthetic."
+      ],
+      "direccion": "6940 Abbot Avenue, Miami Beach, FL 33141",
+      "caracteristicas": {
+        "edificio": {
+          "pisos": "95 residences",
+          "unidades": "1 to 2 bedroom apartments",
+          "constructora": "Constellation",
+          "finalizacion": "2026"
+        },
+        "residencias": {
+          "vistas": "Ocean / bay views",
+          "proximidad": "Beach proximity",
+          "techos": "Approximately 9' + ceiling heights",
+          "lavanderia": "Washer/dryer in apartment",
+          "terrazas": "Terraces with outlets",
+          "alquileres": "Short-term rentals allowed",
+          "cocinas": "ItalKraft kitchens",
+          "electrodomesticos": "Jennair appliance package, 30\" induction stove, 24 to 36\" refrigerators",
+          "armarios": "Designer closets",
+          "encimeras": "Stone countertops"
+        }
+      }
+    },
+    "astonMartin": {
+      "titulo": "Aston Martin Residences",
+      "subtitulo": "Automotive Luxury Redefined",
+      "introduccion": [
+        "Aston Martin Residences brings the legendary craftsmanship of Aston Martin to the heart of Miami.",
+        "391 luxury residences with stunning views of the bay and city.",
+        "Experience the epitome of urban luxury with world-class amenities and sophisticated design."
+      ],
+      "direccion": "300 Biscayne Boulevard Way",
+      "caracteristicas": {
+        "edificio": {
+          "ubicacion": "300 Biscayne Boulevard Way",
+          "residencias": "391 Residences in Condominium",
+          "diseno": "Designed by Aston Martin"
+        }
+      }
+    },
+    "domusBrickellCenter": {
+      "titulo": "Domus Brickell Center",
+      "subtitulo": "The height of luxury in the heart of Brickell",
+      "introduccion": [
+        "Domus Brickell Center is a contemporary residential development offering stylish, fully-furnished studios, one, and two-bedroom apartments equipped with hotel-like amenities and flexible ownership, perfectly located in Miami's vibrant Brickell neighborhood. This 35-story tower features 579 residences designed by MC+G Architecture and developed by North Development, an alliance between Edifica (Peru) and Oak Capital (Miami).",
+        "Domus Brickell Center redefines Miami living by combining luxury, location, and style under one roof. It provides a unique blend of hotel-style amenities with the privacy and convenience of a personal residence. It's an ideal opportunity for local buyers, international investors, and digital nomads seeking a modern, flexible space with high yield potential and professional management."
+      ],
+      "direccion": "1034 SW 2nd Ave, Miami FL 33130",
+      "ubicacion": "1034 SW 2nd Ave, Miami FL 33130",
+      "caracteristicas": {
+        "amenidades": {
+          "descripcion": "Domus Brickell Center offers unique amenities to cater to its residents' needs, such as a rooftop pool, bar, grilling area, lounge, 1,540-square-foot ground floor food and beverage, spacious lobby with approximately 4,000 square feet of meeting space, surround sound speakers and ambient music, pet-friendly building, EV charging stations, Domus bike sharing, specialized air filtration system in all common areas and more...",
+          "salonVestibulo": "The Cypress Room lobby lounge",
+          "cafe": "Barista café and bakery",
+          "vinos": "Wine bar with covered terrace",
+          "mercado": "Artisanal market",
+          "patio": "Outdoor patio in a covered garden",
+          "gimnasio": "State-of-the-art fitness center",
+          "piscinaAzotea": "Rooftop pool with panoramic city and bay views",
+          "cabanas": "Cabanas with day beds",
+          "jacuzzi": "Hot tub",
+          "yoga": "Rooftop yoga space",
+          "barAzotea": "Rooftop bar",
+          "coworking": "Ample coworking space",
+          "reuniones": "Meeting/conference room",
+          "bienvenida": "24-hour welcome room",
+          "valet": "24-hour valet service",
+          "atencion": "24-hour customer service line",
+          "operador": "Experienced hotel operator to oversee unit management",
+          "limpieza": "Experienced housekeeping team",
+          "hoteleria": "in hospitality",
+          "portal": "Rental portal for owners"
+        },
+        "residencias": {
+          "descripcion": "All luxury residences at Domus Brickell Center include spacious floor plans, 9+ foot ceilings, wind-impact resistant windows, balconies, sleek kitchen cabinetry, stainless steel kitchen appliances, UV-filtered water and more! Enjoy spectacular views of the luxurious Brickell and Downtown buildings and the entire Miami skyline.",
+          "terminados": "Delivered fully finished and furnished. Private balcony in all apartments",
+          "cerradura": "Smart lock system with keyless entry",
+          "cocinaEquipada": "Kitchen equipped with Bosch appliances",
+          "accesorios": "Modern fixtures",
+          "cubiertas": "Quartz countertops",
+          "lavadora": "Washer/Dryer",
+          "aguaFiltrada": "UV-filtered water in all apartments"
+        },
+        "edificio": {
+          "ubicacion": "Location",
+          "pisos": "Floors",
+          "pisosCount": "35",
+          "residencias": "Number of Residences",
+          "residenciasCount": "579",
+          "tiposResidencias": "Types of Residences",
+          "tiposResidenciasDesc": "Studios, 1 & 2 bedrooms",
+          "finalizacion": "Year of Construction Completion",
+          "finalizacionYear": "2027",
+          "techos": "9+ foot ceilings in all apartments",
+          "vestibuloAmplio": "Spacious lobby with approximately 4,200 square feet of meeting space and high floor-to-ceiling windows",
+          "altavoces": "Speakers with ambient music in the Cypress Room",
+          "petFriendly": "Pet Friendly",
+          "ventanas": "Wind-impact resistant windows",
+          "estaciones": "Electric vehicle charging stations",
+          "bicicletas": "Bicycles for resident use",
+          "aire": "Filtered air conditioning in all common areas"
+        }
+      }
+    },
+    "viceroy-brickell": {
+      "titulo": "Viceroy Brickell",
+      "introduccion": [
+        "Viceroy Residences Brickell is a luxury tower in Brickell with impressive views and premium amenities."
+      ],
+      "direccion": "77 SE 5th St, Miami, FL 33131, USA",
+      "banner": "true",
+      "numberOfImages": "35",
+      "caracteristicas": {
+        "edificio": {
+          "direccionLabel": "Address",
+          "añoLabel": "Year of Construction / Completion",
+          "pisosLabel": "Number of Floors",
+          "unidadesLabel": "Number of Units",
+          "tipoLabel": "Type of Units",
+          "cuartosLabel": "Number of Rooms"
+        },
+        "residencias": {
+          "p1": "Collection of tower residences topped by penthouses.",
+          "p2": "Floor plans offering studios and 1–3 bedroom residences."
+        },
+        "amenidades": {
+          "p1": "Prime location at One Brickell with direct access to the riverwalk.",
+          "p2": "Resort-style terrace and wellness facilities."
+        }
+      }
+    },
+    "cipriani": {
+      "titulo": "Cipriani Residences",
+      "introduccion": [
+        "Brilliantly designed by Arquitectonica and 1508 London, these elegant residences offer Cipriani-level service and luxury."
+      ],
+      "banner": "true",
+      "numberOfImages": "14",
+      "caracteristicas": {
+        "edificio": {
+          "p1": "A distinctive addition to the Brickell skyline.",
+          "li1": "An elegant 80-story tower with cascading curved glass facade",
+          "li2": "A collection of residences including exceptional penthouses",
+          "li3": "Dining services exclusively for Cipriani residents",
+          "li4": "Panoramic views of Biscayne Bay and Brickell skyline"
+        },
+        "residencias": {
+          "li1": "Spacious living rooms with 10-foot ceilings",
+          "li2": "Floor-to-ceiling sliding glass doors",
+          "li3": "Terrace access from living room and master bedroom",
+          "li4": "Elegant walk-in closets in each master bedroom"
+        },
+        "amenidades": {
+          "li1": "Private porte cochere with lush gardens",
+          "li2": "Impressive lobby and high-speed elevators",
+          "li3": "Private dining experiences by Cipriani"
+        }
+      }
+    },
+    "lofty": {
+      "titulo": "Lofty Residences Brickell",
+      "introduccion": [
+        "Lofty Residences is a 43-story condominium setting a new standard of cosmopolitan living in Brickell."
+      ],
+      "slogan": "A New Standard of Cosmopolitan Living in Brickell",
+      "banner": "true",
+      "numberOfImages": "55",
+      "caracteristicas": {
+        "residencias": {
+          "title": "The Residences",
+          "li1": "Urban luxury residences with modern open layouts from 485SF — 930 SF",
+          "li2": "Fully finished and specially furnished residences",
+          "li3": "Panoramic views of the Miami River and skyline"
+        },
+        "edificio": {
+          "li1": "Short-term rentals permitted by right",
+          "li2": "Two-story lobby with floor-to-ceiling windows",
+          "li3": "24/7 valet service"
+        },
+        "amenidades": {
+          "li1": "Resort-style pool with cabanas",
+          "li2": "Pool terrace grill and bar",
+          "li3": "Coworking lounge"
+        }
+      }
+    },
+    "1428-brickell": {
+      "titulo": "The Residences at 1428 Brickell",
+      "introduccion": [
+        "The Residences at 1428 Brickell was carefully planned to deliver amenities and privacy to every resident."
+      ],
+      "slogan": "Your life. Your way.",
+      "banner": "true",
+      "numberOfImages": "39"
+    },
+    "14-river-district": {
+      "titulo": "14 River District",
+      "introduccion": [
+        "River District 14 offers a complete waterfront lifestyle along the Miami River and Biscayne Bay."
+      ],
+      "direccion": "1420 NW 14th Ave, Miami, FL 33125, USA",
+      "numberOfImages": "27",
+      "banner": "true"
+    },
+    "888-brickell-dolce-and-gabbana-residences": {
+      "titulo": "888 Brickell Dolce & Gabbana Residences",
+      "introduccion": [
+        "888 Brickell by Dolce & Gabbana redefines Italian luxury with branded residences and hotel in Miami."
+      ],
+      "banner": "true",
+      "numberOfImages": "21",
+      "numberOfFloors": "90",
+      "numberOfUnits": "259",
+      "direccion": "888 Brickell Ave, Miami, FL 33131, USA"
+    },
+    "mercedes-benz-places-miami": {
+      "titulo": "Mercedes-Benz Places Miami",
+      "introduccion": [
+        "Mercedes-Benz Places Miami offers design-forward residences with integrated technology and premium amenities."
+      ],
+      "slogan": "Miami, Living, Elevated",
+      "nombre": "mercedes-benz-places-miami",
+      "banner": "true",
+      "numberOfImages": "17"
+    },
+    "ora": {
+      "titulo": "Ora by Casa Tua",
+      "introduccion": [
+        "ORA by Casa Tua delivers flexible ownership residences in Brickell with Italian design and hospitality-led services."
+      ],
+      "slogan": "Residences with Soul in the Heart of Miami",
+      "banner": "true",
+      "numberOfImages": "14",
+      "video": "https://player.vimeo.com/video/806352821?autoplay=true"
+    }
   },
   "footer": {
-    "copyright": "© {year} Scattolini Group"
-  },
-  "docs": {
-    "brochure": "Brochure",
-    "hoja": "Fact Sheet",
-    "planos": "Plans"
+    "contact": "Get in touch",
+    "address": "Doral, FL"
   }
 }
