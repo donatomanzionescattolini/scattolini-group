@@ -9,8 +9,10 @@ import AsociadosSmallComponent from "./AsociadosSmallComponent";
 import DesarrollosTodos from "./desarrollos/DesarrollosComponent";
 import Quotes from "./Quotes";
 import Servicios from "./Servicios";
+import { useTranslation } from "../i18n.tsx";
 
 export function Home() {
+  const { t } = useTranslation();
   const [width, setWidth] = React.useState(window.innerWidth);
 
   useEffect(() => {
@@ -54,15 +56,15 @@ export function Home() {
           <div className="overlay"></div>
 
           <div className="content text-center ">
-            <h1 className="display-2" id="hero-heading">SCATTOLINI GROUP</h1>
+            <h1 className="display-2" id="hero-heading">{t("hero.title", "SCATTOLINI GROUP")}</h1>
             <p className="lead" id="hero-subheading">
-              Agencia Inmobiliaria
+              {t("hero.subtitle", "Real Estate Agency")}
             </p>
             <a
               className="btn btn-large btn-outline-secondary mt-3"
               href="mailto:elda.scattolini@scattolinigroup.com"
             >
-              Contáctanos Hoy
+              {t("hero.cta", "Contact us today")}
             </a>
           </div>
         </div>

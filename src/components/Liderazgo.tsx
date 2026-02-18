@@ -1,6 +1,8 @@
 import { MDBCol, MDBRow } from "mdb-react-ui-kit";
+import { useTranslation } from "../i18n.tsx";
 
 export default function Liderazgo() {
+  const { t } = useTranslation();
   return (
     <MDBRow className="row  p-0 m-auto">
       <MDBCol
@@ -19,24 +21,21 @@ export default function Liderazgo() {
       </MDBCol>
       <MDBCol xs={12} sm={12} md={4} lg={4} xl={4} className="px-auto py-5">
         <h4 className="text-center mt-5">
-          Equipo de expertos, Servicio Personalizado
+          {t("pages.liderazgo.title", "Expert team, personalized service")}
         </h4>
         <br></br>
         <p style={{ textIndent: "2em" }} className="mt-5">
-          Scattolini Group está dirigido por Elda Scattolini, una agente de
-          bienes raíces con 20 años de experiencia en el mercado del sur de
-          Florida. Elda ha ayudado a cientos de clientes de diferentes partes
-          del mundo a alcanzar sus objetivos inmobiliarios, con profesionalismo,
-          integridad y dedicación.
+          {t(
+            "pages.liderazgo.paragraph1",
+            "Scattolini Group is led by Elda Scattolini, a real estate agent with 20 years of experience in the South Florida market. Elda has helped hundreds of clients from around the world reach their real estate goals with professionalism, integrity, and dedication."
+          )}
         </p>
 
         <p className="text-muted " style={{ textIndent: "2em" }}>
-          Elda y su equipo de agentes son expertos en el área del sur de
-          Florida, con un amplio conocimiento de los vecindarios, las escuelas,
-          las comodidades y las tendencias del mercado. Te guiarán en cada paso
-          del proceso, desde encontrar la propiedad adecuada hasta negociar el
-          mejor precio y cerrar el trato de manera eficiente y sin
-          contratiempos.
+          {t(
+            "pages.liderazgo.paragraph2",
+            "Elda and her team are experts in South Florida, with deep knowledge of neighborhoods, schools, amenities, and market trends. They will guide you through every step of the process, from finding the right property to negotiating the best price and closing efficiently."
+          )}
         </p>
       </MDBCol>
       <MDBCol xs={12} sm={12} md={2} lg={2} xl={2}>

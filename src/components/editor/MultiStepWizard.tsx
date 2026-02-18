@@ -10,6 +10,7 @@ import {
   MDBCardBody,
 } from 'mdb-react-ui-kit';
 import './MultiStepWizard.scss';
+import { useTranslation } from '../../i18n.tsx';
 
 interface MultiStepWizardProps {
   type: 'desarrollo' | 'area';
@@ -26,6 +27,7 @@ export default function MultiStepWizard({
   onCancel,
   saving,
 }: MultiStepWizardProps) {
+  const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<any>(data);
   const { control, handleSubmit, setValue } = useForm({
@@ -37,34 +39,34 @@ export default function MultiStepWizard({
     if (type === 'desarrollo') {
       return [
         {
-          title: 'Información Básica',
+          title: t('pages.editor.wizard.desarrollo.basic', 'Basic info'),
           fields: ['nombre', 'titulo', 'slogan'],
         },
         {
-          title: 'Detalles',
+          title: t('pages.editor.wizard.desarrollo.details', 'Details'),
           fields: ['introduccion', 'ubicacion', 'ubicación'],
         },
         {
-          title: 'Características',
+          title: t('pages.editor.wizard.desarrollo.features', 'Features'),
           fields: ['numberOfUnits', 'numberOfFloors', 'estimatedCompletionYear'],
         },
         {
-          title: 'Revisión',
+          title: t('pages.editor.wizard.review', 'Review'),
           fields: [],
         },
       ];
     } else {
       return [
         {
-          title: 'Información Básica',
+          title: t('pages.editor.wizard.area.basic', 'Basic info'),
           fields: ['name', 'titulo', 'slogan'],
         },
         {
-          title: 'Descripción',
+          title: t('pages.editor.wizard.area.description', 'Description'),
           fields: ['descripcion'],
         },
         {
-          title: 'Revisión',
+          title: t('pages.editor.wizard.review', 'Review'),
           fields: [],
         },
       ];
@@ -121,7 +123,8 @@ export default function MultiStepWizard({
 
   const renderField = (fieldName: string) => {
     const isTextarea = ['introduccion', 'descripcion', 'slogan'].includes(fieldName);
-    const label = fieldName.charAt(0).toUpperCase() + fieldName.slice(1);
+    const fallbackLabel = fieldName.charAt(0).toUpperCase() + fieldName.slice(1);
+    const label = t(`pages.editor.fields.${fieldName}`, fallbackLabel);
 
     return (
       <div key={fieldName} className="mb-4">
@@ -157,7 +160,7 @@ export default function MultiStepWizard({
       // Review step
       return (
         <div className="review-step">
-          <h4 className="mb-4">Revisión de Cambios</h4>
+          <h4 className="mb-4">{t('pages.editor.reviewTitle', 'Review changes')}</h4>
           <MDBCard className="mb-3">
             <MDBCardBody>
               {Object.keys(formData).map((key) => {
@@ -180,7 +183,7 @@ export default function MultiStepWizard({
                 return (
                   <div key={key} className="mb-3">
                     <strong className="text-capitalize">{key}:</strong>
-                    <div className="text-muted">{String(displayValue || 'N/A')}</div>
+                    <div className="text-muted">{String(displayValue || t('common.na', 'N/A'))}</div>
                   </div>
                 );
               })}
@@ -221,21 +224,21 @@ export default function MultiStepWizard({
           <MDBCol>
             {currentStep > 0 && (
               <MDBBtn color="secondary" onClick={handlePrevious}>
-                Anterior
+                {t('common.previous', 'Previous')}
               </MDBBtn>
             )}
           </MDBCol>
           <MDBCol className="text-end">
             <MDBBtn color="secondary" onClick={onCancel} className="me-2">
-              Cancelar
+              {t('common.cancel', 'Cancel')}
             </MDBBtn>
             {currentStep === steps.length - 1 ? (
               <MDBBtn type="submit" color="primary" disabled={saving}>
-                {saving ? 'Guardando...' : 'Guardar Cambios'}
+                {saving ? t('common.saving', 'Saving...') : t('common.saveChanges', 'Save changes')}
               </MDBBtn>
             ) : (
               <MDBBtn type="submit" color="primary">
-                Siguiente
+                {t('common.next', 'Next')}
               </MDBBtn>
             )}
           </MDBCol>

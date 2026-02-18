@@ -16,17 +16,26 @@ import {
 } from '../../services/database';
 import Desarrollo from '../../models/desarrollos/Desarrollo';
 import MultiStepWizard from './MultiStepWizard';
+import { useTranslation } from '../../i18n.tsx';
 
 export default function DesarrolloEditor() {
+  const { t, lang } = useTranslation();
   const [selectedDesarrollo, setSelectedDesarrollo] = useState<any | null>(null);
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState<'success' | 'error' | ''>('');
   const [desarrollos, setDesarrollos] = useState<any[]>([]);
 
   useEffect(() => {
     loadDesarrollos();
   }, []);
+
+  const getLocalized = (field: any) => {
+    if (!field) return '';
+    if (typeof field === 'object') return field[lang] || field.es || Object.values(field)[0] || '';
+    return field;
+  };
 
   const loadDesarrollos = () => {
     // Get desarrollos from the desarrolloMap
@@ -45,19 +54,23 @@ export default function DesarrolloEditor() {
   const handleSelectDesarrollo = (desarrollo: any) => {
     setSelectedDesarrollo(desarrollo);
     setMessage('');
+    setMessageType('');
   };
 
   const handleSaveDesarrollo = async (data: any) => {
     setSaving(true);
     setMessage('');
+    setMessageType('');
     try {
       const desarrolloId = data.nombre || data.id;
       await saveDesarrollo(desarrolloId, serializeDesarrollo(data));
-      setMessage('✓ Desarrollo guardado exitosamente');
+      setMessage(t('pages.editor.messages.desarrolloSaved', 'Development saved successfully'));
+      setMessageType('success');
       setTimeout(() => setMessage(''), 3000);
     } catch (error) {
       console.error('Error saving desarrollo:', error);
-      setMessage('✗ Error al guardar el desarrollo');
+      setMessage(t('pages.editor.messages.desarrolloSaveError', 'Error saving development'));
+      setMessageType('error');
     } finally {
       setSaving(false);
     }
@@ -66,23 +79,24 @@ export default function DesarrolloEditor() {
   const handleCancel = () => {
     setSelectedDesarrollo(null);
     setMessage('');
+    setMessageType('');
   };
 
   if (selectedDesarrollo) {
     return (
       <div>
         <div className="d-flex justify-content-between align-items-center mb-4">
-          <h3>Editar: {selectedDesarrollo.titulo || selectedDesarrollo.nombre}</h3>
+          <h3>
+            {t('pages.editor.edit', 'Edit')}: {getLocalized(selectedDesarrollo.titulo) || selectedDesarrollo.nombre}
+          </h3>
           <MDBBtn color="secondary" onClick={handleCancel}>
-            Volver a la lista
+            {t('pages.editor.backToList', 'Back to list')}
           </MDBBtn>
         </div>
 
         {message && (
           <div
-            className={`alert ${
-              message.includes('✓') ? 'alert-success' : 'alert-danger'
-            } mb-4`}
+            className={`alert ${messageType === 'success' ? 'alert-success' : 'alert-danger'} mb-4`}
           >
             {message}
           </div>
@@ -101,7 +115,7 @@ export default function DesarrolloEditor() {
 
   return (
     <div>
-      <h3 className="mb-4">Seleccione un Desarrollo para Editar</h3>
+      <h3 className="mb-4">{t('pages.editor.selectDesarrollo', 'Select a development to edit')}</h3>
       
       {loading ? (
         <div className="text-center py-5">
@@ -117,10 +131,10 @@ export default function DesarrolloEditor() {
               className="d-flex justify-content-between align-items-center"
             >
               <div>
-                <strong>{desarrollo.titulo || desarrollo.nombre}</strong>
+                <strong>{getLocalized(desarrollo.titulo) || desarrollo.nombre}</strong>
                 {desarrollo.area && (
                   <div className="text-muted small">
-                    Área: {desarrollo.area.titulo || desarrollo.area.name}
+                    {t('pages.editor.areaLabel', 'Area')}: {getLocalized(desarrollo.area.titulo) || desarrollo.area.name}
                   </div>
                 )}
               </div>

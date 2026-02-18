@@ -11,8 +11,10 @@ import {
   MDBBtn,
 } from 'mdb-react-ui-kit';
 import './Login.scss';
+import { useTranslation } from '../../i18n.tsx';
 
 export default function Login() {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -27,7 +29,7 @@ export default function Login() {
     e.preventDefault();
 
     if (!email || !password) {
-      setError('Por favor, ingrese email y contraseña');
+      setError(t('pages.auth.login.errors.missingFields', 'Please enter email and password'));
       return;
     }
 
@@ -40,8 +42,8 @@ export default function Login() {
       console.error('Login error:', err);
       setError(
         err.code === 'auth/user-not-found' || err.code === 'auth/wrong-password'
-          ? 'Email o contraseña incorrectos'
-          : 'Error al iniciar sesión. Por favor, intente de nuevo.'
+          ? t('pages.auth.login.errors.invalidCredentials', 'Incorrect email or password')
+          : t('pages.auth.login.errors.generic', 'Error signing in. Please try again.')
       );
     } finally {
       setLoading(false);
@@ -54,9 +56,9 @@ export default function Login() {
         <MDBCol md="6" lg="5">
           <MDBCard>
             <MDBCardBody className="p-5">
-              <h2 className="text-center mb-4">Iniciar Sesión</h2>
+              <h2 className="text-center mb-4">{t('pages.auth.login.title', 'Sign in')}</h2>
               <p className="text-center text-muted mb-4">
-                Panel de administración
+                {t('pages.auth.login.subtitle', 'Admin panel')}
               </p>
 
               {error && (
@@ -68,7 +70,7 @@ export default function Login() {
               <form onSubmit={handleSubmit}>
                 <MDBInput
                   wrapperClass="mb-4"
-                  label="Correo electrónico"
+                  label={t('pages.auth.login.emailLabel', 'Email')}
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -77,7 +79,7 @@ export default function Login() {
 
                 <MDBInput
                   wrapperClass="mb-4"
-                  label="Contraseña"
+                  label={t('pages.auth.login.passwordLabel', 'Password')}
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -90,7 +92,9 @@ export default function Login() {
                   disabled={loading}
                   color="primary"
                 >
-                  {loading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
+                  {loading
+                    ? t('pages.auth.login.loading', 'Signing in...')
+                    : t('pages.auth.login.submit', 'Sign in')}
                 </MDBBtn>
               </form>
             </MDBCardBody>

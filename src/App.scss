@@ -246,8 +246,14 @@ nav {
 
 #navbarNavDropdown > ul > li a:hover,
 #navbarNavDropdown > ul > li:hover,
-.dropdown-item:hover {
-  color: var(--color-brown) !important;
+.dropdown-item:hover,
+.dropdown-item:focus,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .dropdown-toggle:hover,
+.navbar .dropdown-toggle:focus {
+  background-color: var(--color-brown) !important;
+  color: var(--color-background) !important;
   cursor: pointer !important;
 }
 

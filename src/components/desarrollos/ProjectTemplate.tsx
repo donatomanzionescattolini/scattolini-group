@@ -102,7 +102,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg`}
               width="100%"
               height="auto"
-              alt={`Banner del proyecto ${localizedTitulo || nombre}`}
+              alt={`${t("pages.project.bannerAlt", "Project banner")}: ${localizedTitulo || nombre}`}
             />
           )}
 
@@ -187,7 +187,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}
               type="video/mp4"
             />
-            Your browser does not support the video tag.
+            {t("common.videoNotSupported", "Your browser does not support the video tag.")}
           </video>
         )}
       </section>

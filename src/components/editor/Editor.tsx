@@ -17,8 +17,10 @@ import { useNavigate } from 'react-router-dom';
 import DesarrolloEditor from './DesarrolloEditor';
 import AreaEditor from './AreaEditor';
 import './Editor.scss';
+import { useTranslation } from '../../i18n.tsx';
 
 export default function Editor() {
+  const { t } = useTranslation();
   const { logout, currentUser } = useAuth();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<'desarrollos' | 'areas'>('desarrollos');
@@ -38,14 +40,14 @@ export default function Editor() {
         <MDBContainer>
           <MDBRow className="align-items-center py-3">
             <MDBCol md="6">
-              <h1 className="mb-0">Panel de Administración</h1>
+              <h1 className="mb-0">{t('pages.editor.title', 'Admin Panel')}</h1>
               <p className="text-muted mb-0">
-                Sesión iniciada como: {currentUser?.email}
+                {t('pages.editor.signedInAs', 'Signed in as')}: {currentUser?.email}
               </p>
             </MDBCol>
             <MDBCol md="6" className="text-end">
               <MDBBtn color="secondary" onClick={handleLogout}>
-                Cerrar Sesión
+                {t('pages.editor.logout', 'Sign out')}
               </MDBBtn>
             </MDBCol>
           </MDBRow>
@@ -61,7 +63,7 @@ export default function Editor() {
                   onClick={() => setActiveTab('desarrollos')}
                   active={activeTab === 'desarrollos'}
                 >
-                  Desarrollos
+                  {t('pages.editor.tabs.desarrollos', 'Developments')}
                 </MDBTabsLink>
               </MDBTabsItem>
               <MDBTabsItem>
@@ -69,7 +71,7 @@ export default function Editor() {
                   onClick={() => setActiveTab('areas')}
                   active={activeTab === 'areas'}
                 >
-                  Áreas
+                  {t('pages.editor.tabs.areas', 'Areas')}
                 </MDBTabsLink>
               </MDBTabsItem>
             </MDBTabs>
