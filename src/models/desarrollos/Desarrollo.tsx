@@ -1,5 +1,5 @@
 import React from "react";
-import { getDesarrolloData } from "../../i18n";
+import { getDesarrolloData, getTranslation } from "../../i18n";
 
 class Desarrollo {
   // permissive dynamic container used across many object files
@@ -139,23 +139,27 @@ class Desarrollo {
     return null;
   }
 
-  displayCaracteristicasEdificio(): React.ReactNode {
+  displayCaracteristicasEdificio(lang: "es" | "en" = "es"): React.ReactNode {
     const ubicacion = this.ubicación ?? this.ubicacion;
+    const locationLabel = getTranslation("pages.project.buildingFields.location", lang) as string;
+    const builderLabel = getTranslation("pages.project.buildingFields.builder", lang) as string;
+    const constructionYearLabel = getTranslation("pages.project.buildingFields.constructionYear", lang) as string;
+    const squareFeetLabel = getTranslation("pages.project.buildingFields.squareFeet", lang) as string;
     return (
       <dl>
-        <dt>Ubicación</dt>
+        <dt>{locationLabel}</dt>
         <dd>{ubicacion}</dd>
         {this.constructora && (
           <>
-            <dt>Constructora</dt>
+            <dt>{builderLabel}</dt>
             <dd>{typeof this.constructora === "string" ? this.constructora : String(this.constructora)}</dd>
           </>
         )}
-        <dt>Año de Construcción</dt>
+        <dt>{constructionYearLabel}</dt>
         <dd>{this.estimatedCompletionYear}</dd>
         {this.piesCuadrados && (
           <>
-            <dt>Tamaño de viviendas en pies cuadrados</dt>
+            <dt>{squareFeetLabel}</dt>
             <dd>{String(this.piesCuadrados)}</dd>
           </>
         )}
@@ -163,10 +167,10 @@ class Desarrollo {
     );
   }
 
-  createCaracteristicas(): any {
+  createCaracteristicas(lang: "es" | "en" = "es"): any {
     return {
       residencias: this.displayCaracteristicasResidencias(),
-      edificio: this.displayCaracteristicasEdificio(),
+      edificio: this.displayCaracteristicasEdificio(lang),
       amenidades: this.displayAmenidades(),
     };
   }

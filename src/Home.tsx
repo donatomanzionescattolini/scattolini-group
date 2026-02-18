@@ -58,7 +58,7 @@ export function Home() {
               src="https://pagina-mama.s3.amazonaws.com/assets2/video-homepage.mp4"
               type="video/webm"
             />
-            Your browser does not support the video tag.
+            {t("common.videoUnsupported")}
           </video>
           <div className="overlay"></div>
 
@@ -123,4 +123,3 @@ export function Home() {
 }
 
 export default Home;
-

@@ -15,19 +15,21 @@ import {
     MDBNavbarNav,
     MDBNavbarToggler,
 } from "mdb-react-ui-kit";
+import { useTranslation } from "../i18n.tsx";
 
 export default function NavComponent() {
     const [showBasic, setShowBasic] = useState(true);
+    const { t } = useTranslation();
 
     return (
         <MDBNavbar expand="lg" light bgColor="light">
             <MDBContainer fluid>
-                <MDBNavbarBrand href="/">Brand</MDBNavbarBrand>
+                <MDBNavbarBrand href="/">{t("navComponent.brand")}</MDBNavbarBrand>
 
                 <MDBNavbarToggler
                     aria-controls="navbarSupportedContent"
                     aria-expanded="false"
-                    aria-label="Toggle navigation"
+                    aria-label={t("nav.toggleNavigation")}
                     onClick={() => setShowBasic(!showBasic)}
                 >
                     <MDBIcon icon="bars" fas/>
@@ -37,20 +39,20 @@ export default function NavComponent() {
                     <MDBNavbarNav>
                         <MDBNavbarItem>
                             <MDBNavbarLink active aria-current="page" href="#">
-                                Home
+                                {t("navComponent.home")}
                             </MDBNavbarLink>
                         </MDBNavbarItem>
                         <MDBNavbarItem>
-                            <MDBNavbarLink href="/">Link</MDBNavbarLink>
+                            <MDBNavbarLink href="/">{t("navComponent.link")}</MDBNavbarLink>
                         </MDBNavbarItem>
 
                         <MDBNavbarItem>
                             <MDBDropdown>
-                                <MDBDropdownToggle tag="a">Dropdown</MDBDropdownToggle>
+                                <MDBDropdownToggle tag="a">{t("navComponent.dropdown")}</MDBDropdownToggle>
                                 <MDBDropdownMenu>
-                                    <MDBDropdownItem link>Action</MDBDropdownItem>
-                                    <MDBDropdownItem link>Another action</MDBDropdownItem>
-                                    <MDBDropdownItem link>Something else here</MDBDropdownItem>
+                                    <MDBDropdownItem link>{t("navComponent.action")}</MDBDropdownItem>
+                                    <MDBDropdownItem link>{t("navComponent.anotherAction")}</MDBDropdownItem>
+                                    <MDBDropdownItem link>{t("navComponent.somethingElse")}</MDBDropdownItem>
                                 </MDBDropdownMenu>
                             </MDBDropdown>
                         </MDBNavbarItem>
@@ -62,14 +64,14 @@ export default function NavComponent() {
                                 tabIndex={-1}
                                 aria-disabled="true"
                             >
-                                Disabled
+                                {t("navComponent.disabled")}
                             </MDBNavbarLink>
                         </MDBNavbarItem>
                     </MDBNavbarNav>
 
                     <form>
-                        <input type="search" placeholder="Type query" aria-label="Search"/>
-                        <MDBBtn color="primary">Search</MDBBtn>
+                        <input type="search" placeholder={t("navComponent.searchPlaceholder")} aria-label={t("nav.search")}/>
+                        <MDBBtn color="primary">{t("navComponent.searchButton")}</MDBBtn>
                     </form>
                 </MDBCollapse>
             </MDBContainer>
