@@ -10,7 +10,7 @@ export function AboutUs() {
             >
 
 
-                Scattolini Group
+                {t("pages.about.title")}
             </h2>
             <hr className="hr hr-blurry text-center w-50 mx-auto"/>
             {window.innerWidth > 768 && (

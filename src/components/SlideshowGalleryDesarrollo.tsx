@@ -1,6 +1,7 @@
 import {Carousel} from "react-bootstrap";
 
 import React, {useState} from "react";
+import { useTranslation } from "../i18n.tsx";
 
 interface Props {
     name: string;
@@ -8,6 +9,7 @@ interface Props {
 }
 
 export default function SlideshowGalleryDesarrollo(props: Props) {
+    const { t } = useTranslation();
     const [name] = useState<string>(props.name);
 
     const returnEls: React.JSX.Element[] = [];
@@ -48,7 +50,7 @@ export default function SlideshowGalleryDesarrollo(props: Props) {
                             autoFocus
                             height={500}
                             src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).jpg`}
-                            alt=""
+                            alt={String(t("pages.project.galleryImageAlt")).replace("{index}", String(j))}
                         />
                     </picture>
                 </Carousel.Item>

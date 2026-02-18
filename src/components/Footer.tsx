@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center py-3">
-        © {new Date().getFullYear()} Scattolini Group
+        © {new Date().getFullYear()} {t("pages.about.title")}
       </div>
     </MDBFooter>
   );

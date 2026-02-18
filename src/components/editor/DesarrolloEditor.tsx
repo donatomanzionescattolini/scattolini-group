@@ -16,8 +16,10 @@ import {
 } from '../../services/database';
 import Desarrollo from '../../models/desarrollos/Desarrollo';
 import MultiStepWizard from './MultiStepWizard';
+import { useTranslation } from "../../i18n.tsx";
 
 export default function DesarrolloEditor() {
+  const { t } = useTranslation();
   const [selectedDesarrollo, setSelectedDesarrollo] = useState<any | null>(null);
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -53,11 +55,11 @@ export default function DesarrolloEditor() {
     try {
       const desarrolloId = data.nombre || data.id;
       await saveDesarrollo(desarrolloId, serializeDesarrollo(data));
-      setMessage('✓ Desarrollo guardado exitosamente');
+      setMessage(t("pages.admin.editor.desarrolloSaved"));
       setTimeout(() => setMessage(''), 3000);
     } catch (error) {
       console.error('Error saving desarrollo:', error);
-      setMessage('✗ Error al guardar el desarrollo');
+      setMessage(t("pages.admin.editor.desarrolloSaveError"));
     } finally {
       setSaving(false);
     }
@@ -72,9 +74,9 @@ export default function DesarrolloEditor() {
     return (
       <div>
         <div className="d-flex justify-content-between align-items-center mb-4">
-          <h3>Editar: {selectedDesarrollo.titulo || selectedDesarrollo.nombre}</h3>
+          <h3>{t("pages.admin.editor.edit")} {selectedDesarrollo.titulo || selectedDesarrollo.nombre}</h3>
           <MDBBtn color="secondary" onClick={handleCancel}>
-            Volver a la lista
+            {t("pages.admin.editor.backToList")}
           </MDBBtn>
         </div>
 
@@ -101,7 +103,7 @@ export default function DesarrolloEditor() {
 
   return (
     <div>
-      <h3 className="mb-4">Seleccione un Desarrollo para Editar</h3>
+      <h3 className="mb-4">{t("pages.admin.editor.selectDesarrollo")}</h3>
       
       {loading ? (
         <div className="text-center py-5">
@@ -118,11 +120,11 @@ export default function DesarrolloEditor() {
             >
               <div>
                 <strong>{desarrollo.titulo || desarrollo.nombre}</strong>
-                {desarrollo.area && (
-                  <div className="text-muted small">
-                    Área: {desarrollo.area.titulo || desarrollo.area.name}
-                  </div>
-                )}
+                  {desarrollo.area && (
+                    <div className="text-muted small">
+                      {t("pages.admin.editor.areaLabel")}: {desarrollo.area.titulo || desarrollo.area.name}
+                    </div>
+                  )}
               </div>
               <i className="fas fa-chevron-right"></i>
             </MDBListGroupItem>

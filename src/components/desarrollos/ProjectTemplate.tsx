@@ -51,6 +51,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   };
   const localizedTitulo: string = String(getLocalized(params.titulo));
   const localizedSubtitulo: string = String(getLocalized(params.slogan));
+  const bannerAlt = String(t("pages.project.bannerAlt")).replace("{title}", localizedTitulo || nombre);
   const [introduccion] = useState(params.introduccion);
   const [CaracteristicasAmenidades] = useState(() => caract.amenidades);
   const [CaracteristicasEdificio] = useState(() => caract.edificio);
@@ -102,7 +103,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg`}
               width="100%"
               height="auto"
-              alt={`Banner del proyecto ${localizedTitulo || nombre}`}
+              alt={bannerAlt}
             />
           )}
 
@@ -187,7 +188,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}
               type="video/mp4"
             />
-            Your browser does not support the video tag.
+            {t("common.videoUnsupported")}
           </video>
         )}
       </section>

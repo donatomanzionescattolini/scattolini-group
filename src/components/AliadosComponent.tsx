@@ -18,7 +18,7 @@ export default function AliadosComponent() {
                     <Link to="#">
                         <img
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/hue-house.png"
-                            alt="Hue House"
+                            alt={t("pages.aliados.hueHouseAlt")}
                             width="100%"
                         />
                     </Link>
@@ -28,7 +28,7 @@ export default function AliadosComponent() {
                     <Link to="https://www.manzionesdesign.com//">
                         <img
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/manzionesdesign.png"
-                            alt="Manzione S. Design"
+                            alt={t("pages.aliados.manzioneDesignAlt")}
                             width="100%"
                         />
                     </Link>
@@ -37,7 +37,7 @@ export default function AliadosComponent() {
                     <MDBCardLink href="/manzione-properties/">
                         <img
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/manzioneproperties.webp"
-                            alt="Manzione Properties"
+                            alt={t("pages.aliados.manzionePropertiesAlt")}
                             width="100%"
                         />
                     </MDBCardLink>
