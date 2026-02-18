@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Document, Page, pdfjs} from "react-pdf";
 import "react-pdf/dist/esm/Page/TextLayer.css";
+import { useTranslation } from "../../i18n.tsx";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     "pdfjs-dist/build/pdf.worker.min.js",
@@ -8,6 +9,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 export default function PDFV(props) {
+    const { t } = useTranslation();
     // The URL of the PDF document
     const url = props.url;
 
@@ -63,11 +65,11 @@ export default function PDFV(props) {
 
                 ></Page>
                 <div className="pdf-controls d-flex flex-row justify-content-around w-50 m-auto ">
-                    <button onClick={goPrev}>Prev</button>
+                    <button onClick={goPrev}>{t("common.previous")}</button>
                     <span>
-            Page {pageNumber} of {numPages}
+            {t("common.page")} {pageNumber} {t("common.of")} {numPages}
           </span>
-                    <button onClick={goNext}>Next</button>
+                    <button onClick={goNext}>{t("common.next")}</button>
                 </div>
             </Document>
         </div>

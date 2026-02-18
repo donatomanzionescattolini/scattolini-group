@@ -74,7 +74,7 @@ export default function App() {
         statusMessage={t("whatsapp.status")}
         avatar="https://pagina-mama.s3.amazonaws.com/assets2/asociados/elda-whatsapp.png"
         placeholder={t("whatsapp.placeholder")}
-        accountName={"Scattolini Group"}
+        accountName={t("pages.about.title")}
         notificationSound
         className={"floating-whatsapp"}
       />

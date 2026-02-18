@@ -30,7 +30,9 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   const [tabVisible, setTabVisible] = useState("brochure");
   const [video] = useState(params.video);
 
-  const [caract] = useState(params.caracteristicas as caracteristicas);
+  const caract = (params.createCaracteristicas
+    ? params.createCaracteristicas(lang)
+    : params.caracteristicas) as caracteristicas;
   const [banner] = useState(params.banner);
   const [introduccion] = useState(params.introduccion);
 
@@ -42,6 +44,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   };
   const titulo = String(getLocalized(params.titulo));
   const subtitulo = String(getLocalized(params.subtitulo) || getLocalized(params.slogan));
+  const bannerAlt = String(t("pages.project.bannerAlt")).replace("{title}", titulo || nombre);
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -60,7 +63,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg`}
               width="100%"
               height="auto"
-              alt={`Banner ${titulo || nombre}`}
+              alt={bannerAlt}
             />
           )}
         </MDBContainer>
@@ -102,7 +105,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}
                 type="video/mp4"
               />
-              Your browser does not support the video tag.
+              {t("common.videoUnsupported")}
             </video>
           )}
         </MDBContainer>

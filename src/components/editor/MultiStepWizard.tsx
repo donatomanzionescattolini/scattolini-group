@@ -10,6 +10,7 @@ import {
   MDBCardBody,
 } from 'mdb-react-ui-kit';
 import './MultiStepWizard.scss';
+import { useTranslation } from "../../i18n.tsx";
 
 interface MultiStepWizardProps {
   type: 'desarrollo' | 'area';
@@ -26,45 +27,59 @@ export default function MultiStepWizard({
   onCancel,
   saving,
 }: MultiStepWizardProps) {
+  const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<any>(data);
   const { control, handleSubmit, setValue } = useForm({
     defaultValues: formData,
   });
+  const fieldLabels: Record<string, string> = {
+    nombre: t("pages.admin.fields.name"),
+    titulo: t("pages.admin.fields.title"),
+    slogan: t("pages.admin.fields.slogan"),
+    introduccion: t("pages.admin.fields.introduction"),
+    ubicacion: t("pages.admin.fields.location"),
+    ubicación: t("pages.admin.fields.location"),
+    numberOfUnits: t("pages.admin.fields.numberOfUnits"),
+    numberOfFloors: t("pages.admin.fields.numberOfFloors"),
+    estimatedCompletionYear: t("pages.admin.fields.estimatedCompletionYear"),
+    name: t("pages.admin.fields.name"),
+    descripcion: t("pages.admin.fields.description"),
+  };
 
   // Define steps based on type
   const getSteps = () => {
     if (type === 'desarrollo') {
       return [
         {
-          title: 'Información Básica',
+          title: t("pages.admin.wizard.steps.basicInfo"),
           fields: ['nombre', 'titulo', 'slogan'],
         },
         {
-          title: 'Detalles',
+          title: t("pages.admin.wizard.steps.details"),
           fields: ['introduccion', 'ubicacion', 'ubicación'],
         },
         {
-          title: 'Características',
+          title: t("pages.admin.wizard.steps.features"),
           fields: ['numberOfUnits', 'numberOfFloors', 'estimatedCompletionYear'],
         },
         {
-          title: 'Revisión',
+          title: t("pages.admin.wizard.steps.review"),
           fields: [],
         },
       ];
     } else {
       return [
         {
-          title: 'Información Básica',
+          title: t("pages.admin.wizard.steps.basicInfo"),
           fields: ['name', 'titulo', 'slogan'],
         },
         {
-          title: 'Descripción',
+          title: t("pages.admin.wizard.steps.description"),
           fields: ['descripcion'],
         },
         {
-          title: 'Revisión',
+          title: t("pages.admin.wizard.steps.review"),
           fields: [],
         },
       ];
@@ -121,7 +136,7 @@ export default function MultiStepWizard({
 
   const renderField = (fieldName: string) => {
     const isTextarea = ['introduccion', 'descripcion', 'slogan'].includes(fieldName);
-    const label = fieldName.charAt(0).toUpperCase() + fieldName.slice(1);
+    const label = fieldLabels[fieldName] || fieldName.charAt(0).toUpperCase() + fieldName.slice(1);
 
     return (
       <div key={fieldName} className="mb-4">
@@ -157,7 +172,7 @@ export default function MultiStepWizard({
       // Review step
       return (
         <div className="review-step">
-          <h4 className="mb-4">Revisión de Cambios</h4>
+          <h4 className="mb-4">{t("pages.admin.wizard.reviewTitle")}</h4>
           <MDBCard className="mb-3">
             <MDBCardBody>
               {Object.keys(formData).map((key) => {
@@ -179,8 +194,8 @@ export default function MultiStepWizard({
 
                 return (
                   <div key={key} className="mb-3">
-                    <strong className="text-capitalize">{key}:</strong>
-                    <div className="text-muted">{String(displayValue || 'N/A')}</div>
+                    <strong className="text-capitalize">{fieldLabels[key] || key}:</strong>
+                    <div className="text-muted">{String(displayValue || t("common.notAvailable"))}</div>
                   </div>
                 );
               })}

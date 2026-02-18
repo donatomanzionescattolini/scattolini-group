@@ -25,19 +25,19 @@ export default function Page() {
           <div className="text-left justify-content-center pt-1 pl-5 pr-0 m-0">
             <div className="text-justify">
               <h1 className="h1-responsive font-weight-bold text-center my-5">
-                {t("contacto.title", "Scattolini Group")}
+                {t("pages.contacto.title")}
               </h1>
               <address>
                 {" "}
-                {t("contacto.address", "12750 NW 17th Street Unit 222, Miami, Florida 33182")}
+                {t("pages.contacto.address")}
               </address>
-              {t("contacto.telefono", "Teléfono:")} (305) 381-5120<br></br>
-              {t("contacto.fax", "Fax:")} (305) 381-5423<br></br>
+              {t("pages.contacto.telefono")} (305) 381-5120<br></br>
+              {t("pages.contacto.fax")} (305) 381-5423<br></br>
               <br></br>
-              <b> {t("contacto.horasOficina", "Horas de Oficina")}</b>
+              <b> {t("pages.contacto.officeHours")}</b>
               <br></br>
               <br></br>
-              {t("contacto.horasTexto", "Lunes a viernes: 9am - 5pm\nSábado: Con cita\nDomingo: Cerrado").split('\n').map((line, index) => (
+              {t("pages.contacto.officeHoursText").split('\n').map((line, index) => (
                 <span key={index}>
                   {line}
                   {index < 2 && <br></br>}
@@ -68,7 +68,7 @@ export default function Page() {
               block
               onClick={openContact}
             >
-              {(show && t("contacto.cerrarFormulario", "Cerrar Formulario de Contacto")) || t("contacto.enviarCorreo", "Enviar un correo")}
+              {(show && t("pages.contacto.closeForm")) || t("pages.contacto.openForm")}
             </MDBBtn>
           </MDBCol>
           <MDBCol></MDBCol>
@@ -76,12 +76,12 @@ export default function Page() {
         {/* <FloatingWhatsApp accountName='Scattolini Group' phoneNumber="+13056139338"></FloatingWhatsApp> */}
       </MDBRow>
       )){" "}
-      {show && (
-        <MDBRow
-          id="contact-form"
-          className="my-5 d-flex justify-content-center"
-        >
-          <h2>{t("contacto.formularioTitulo", "Formulario de contacto")}</h2>
+        {show && (
+          <MDBRow
+            id="contact-form"
+            className="my-5 d-flex justify-content-center"
+          >
+          <h2>{t("pages.contacto.contactFormTitle")}</h2>
           <br />
           <br />
           <ContactFormComponent />

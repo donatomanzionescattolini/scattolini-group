@@ -14,7 +14,7 @@ export default function AsociadosSmallComponent() {
             <div className="xcontainer d-flex justify-content-center">
                 <img
                     src="https://pagina-mama.s3.amazonaws.com/assets2/asociados/asociados2.png"
-                    alt="Equipo"
+                    alt={t("nav.equipo")}
                     className="image-responsive object-fit-cover mx-auto justify-content-center"
                     style={{maxWidth: "100%!important"}}
                 />

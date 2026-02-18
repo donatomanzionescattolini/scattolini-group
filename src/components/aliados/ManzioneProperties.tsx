@@ -21,7 +21,7 @@ export default function ManzioneProperties() {
           src={
             "https://pagina-mama.s3.amazonaws.com/assets2/asociados/monica.jpg"
           }
-          alt="Elda"
+          alt={t("pages.manzione.imageAlt")}
           className="w-50 m-auto img-thumbnail"
         />
       </MDBCol>
@@ -34,12 +34,12 @@ export default function ManzioneProperties() {
         className=" m-0 p-auto m-auto"
       >
         <h4 className="text-center">
-          {t("manzione.title", "Administración de propiedades en la que puedes confiar")}
+          {t("pages.manzione.title")}
         </h4>
 
         <br></br>
         <p className=" mx-0 my-0" style={{ textIndent: 50 }}>
-          {t("manzione.descripcion", "En nuestra empresa, nos especializamos en la administración de propiedades. Nos aseguramos de que cada propiedad esté bien cuidada y mantenida, y nos encargamos de todos los detalles para que nuestros clientes puedan disfrutar de la tranquilidad de saber que su propiedad está en buenas manos.")}
+          {t("pages.manzione.descripcion")}
         </p>
       </MDBCol>
     </MDBRow>

@@ -27,6 +27,7 @@ export default function AreaTemplate(props: AreaProps) {
   const titulo = getLocalized(area.titulo);
   const slogan = getLocalized(area.slogan);
   const descripcion = getLocalized(area.descripcion);
+  const photoAlt = String(t("pages.areas.photoAlt")).replace("{title}", String(titulo || nombre));
   const images = [];
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -85,7 +86,7 @@ export default function AreaTemplate(props: AreaProps) {
           sm={10}
           className="d-flex justify-content-center align-items-center"
         >
-          <img src={firstImage} alt={`Photo ${titulo} Introductory Section`} />
+          <img src={firstImage} alt={photoAlt} />
         </MDBCol>
         <MDBCol className="" md={1} sm={1}></MDBCol>
       </MDBRow>
