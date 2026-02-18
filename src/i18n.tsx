@@ -17,7 +17,7 @@ const translations: Record<Lang, any> = {
             asociados: "Asociados",
             aliados: "Aliados",
             areas: "Áreas",
-            contact: "Contacto",
+            contacto: "Contacto",
             desarrollos: "Desarrollos",
             equipo: "Nuestro Equipo",
             search: "Buscar",
@@ -113,7 +113,7 @@ const translations: Record<Lang, any> = {
             },
             manzione: {
                 title: "Administración de propiedades en la que puedes confiar",
-                description: "En nuestra empresa, nos especializamos en la administración de propiedades. Nos aseguramos de que cada propiedad esté bien cuidada y mantenida, y nos encargamos de todos los detalles para que nuestros clientes puedan disfrutar de la tranquilidad de saber que su propiedad está en buenas manos.",
+                descripcion: "En nuestra empresa, nos especializamos en la administración de propiedades. Nos aseguramos de que cada propiedad esté bien cuidada y mantenida, y nos encargamos de todos los detalles para que nuestros clientes puedan disfrutar de la tranquilidad de saber que su propiedad está en buenas manos.",
                 imageAlt: "Monica Manzione",
             },
             about: {
@@ -696,7 +696,7 @@ const translations: Record<Lang, any> = {
             asociados: "Team",
             aliados: "Allies",
             areas: "Areas",
-            contact: "Contact",
+            contacto: "Contact",
             desarrollos: "Developments",
             equipo: "Our Team",
             search: "Search",
@@ -792,7 +792,7 @@ const translations: Record<Lang, any> = {
             },
             manzione: {
                 title: "Property Management You Can Trust",
-                description: "In our company, we specialize in property management. We ensure that each property is well cared for and maintained, and we take care of all the details so that our clients can enjoy the peace of mind of knowing their property is in good hands.",
+                descripcion: "In our company, we specialize in property management. We ensure that each property is well cared for and maintained, and we take care of all the details so that our clients can enjoy the peace of mind of knowing their property is in good hands.",
                 imageAlt: "Monica Manzione",
             },
             about: {

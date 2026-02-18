@@ -39,7 +39,7 @@ export default function ManzioneProperties() {
 
         <br></br>
         <p className=" mx-0 my-0" style={{ textIndent: 50 }}>
-          {t("pages.manzione.description")}
+          {t("pages.manzione.descripcion")}
         </p>
       </MDBCol>
     </MDBRow>
