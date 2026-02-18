@@ -10,8 +10,20 @@ class Desarrollo {
   }
 
   getLocalizedContent(lang: "es" | "en"): any {
-    const desarrolloKey = this.nombre?.replace(/[-\s]/g, "").toLowerCase();
-    const localizedData = getDesarrolloData(desarrolloKey, lang);
+    const rawName = String(this.nombre || "");
+    const kebab = rawName
+      .replace(/([a-z0-9])([A-Z])/g, "$1-$2")
+      .replace(/[\s_]+/g, "-")
+      .replace(/-+/g, "-")
+      .toLowerCase();
+    const compact = rawName.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+    const keyCandidates = [...new Set([rawName, rawName.toLowerCase(), kebab, compact].filter(Boolean))];
+
+    let localizedData: any = null;
+    for (const key of keyCandidates) {
+      localizedData = getDesarrolloData(key, lang);
+      if (localizedData) break;
+    }
     
     if (localizedData) {
       return {

@@ -92,6 +92,35 @@ a:active {
   color: white;
 }
 
+/* Language toggle button styles */
+.btn-primary {
+  background-color: var(--color-brown);
+  border-color: var(--color-brown);
+  box-shadow: 0 0 0 0.2rem rgba(138, 105, 68, 0.5);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--color-brown-light);
+  border-color: var(--color-brown-light);
+  box-shadow: 0 0 0 0.2rem rgba(138, 105, 68, 0.5);
+}
+
+.btn-outline-primary {
+  color: var(--color-brown);
+  border-color: var(--color-brown);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background-color: var(--color-brown);
+  border-color: var(--color-brown);
+  color: white;
+  box-shadow: 0 0 0 0.2rem rgba(138, 105, 68, 0.5);
+}
+
 .card {
   background: var(--color-background);
   border: none;
@@ -217,8 +246,14 @@ nav {
 
 #navbarNavDropdown > ul > li a:hover,
 #navbarNavDropdown > ul > li:hover,
-.dropdown-item:hover {
-  color: var(--color-brown) !important;
+.dropdown-item:hover,
+.dropdown-item:focus,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .dropdown-toggle:hover,
+.navbar .dropdown-toggle:focus {
+  background-color: var(--color-brown) !important;
+  color: var(--color-background) !important;
   cursor: pointer !important;
 }
 

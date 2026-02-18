@@ -1,6 +1,8 @@
-import IconBeachResidences from "../../../objects/desarrollos/Hollywood/IconBeachResidences";
+import IconBeachResidencesObject from "../../../objects/desarrollos/Hollywood/IconBeachResidences";
 import ProjectTemplate from "../ProjectTemplate";
+import { useTranslation } from "../../../i18n.tsx";
 
 export default function IconBeachResidencesProject() {
-  return <ProjectTemplate desarrollo={IconBeachResidences} />;
+  const { lang } = useTranslation();
+  return <ProjectTemplate desarrollo={IconBeachResidencesObject(lang)} />;
 }

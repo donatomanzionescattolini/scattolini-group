@@ -1,0 +1,25 @@
+.login-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+
+  .card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  h2 {
+    color: #0e2d2f;
+    font-weight: 600;
+  }
+
+  .btn-primary {
+    background-color: #1f595a;
+    border-color: #1f595a;
+
+    &:hover {
+      background-color: #0e2d2f;
+      border-color: #0e2d2f;
+    }
+  }
+}

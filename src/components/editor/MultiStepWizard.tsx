@@ -1,0 +1,249 @@
+import React, { useState, useEffect, useCallback } from 'react';
+import { useForm, Controller } from 'react-hook-form';
+import {
+  MDBRow,
+  MDBCol,
+  MDBBtn,
+  MDBInput,
+  MDBTextArea,
+  MDBCard,
+  MDBCardBody,
+} from 'mdb-react-ui-kit';
+import './MultiStepWizard.scss';
+import { useTranslation } from '../../i18n.tsx';
+
+interface MultiStepWizardProps {
+  type: 'desarrollo' | 'area';
+  data: any;
+  onSave: (data: any) => Promise<void>;
+  onCancel: () => void;
+  saving: boolean;
+}
+
+export default function MultiStepWizard({
+  type,
+  data,
+  onSave,
+  onCancel,
+  saving,
+}: MultiStepWizardProps) {
+  const { t } = useTranslation();
+  const [currentStep, setCurrentStep] = useState(0);
+  const [formData, setFormData] = useState<any>(data);
+  const { control, handleSubmit, setValue } = useForm({
+    defaultValues: formData,
+  });
+
+  // Define steps based on type
+  const getSteps = () => {
+    if (type === 'desarrollo') {
+      return [
+        {
+          title: t('pages.editor.wizard.desarrollo.basic', 'Basic info'),
+          fields: ['nombre', 'titulo', 'slogan'],
+        },
+        {
+          title: t('pages.editor.wizard.desarrollo.details', 'Details'),
+          fields: ['introduccion', 'ubicacion', 'ubicación'],
+        },
+        {
+          title: t('pages.editor.wizard.desarrollo.features', 'Features'),
+          fields: ['numberOfUnits', 'numberOfFloors', 'estimatedCompletionYear'],
+        },
+        {
+          title: t('pages.editor.wizard.review', 'Review'),
+          fields: [],
+        },
+      ];
+    } else {
+      return [
+        {
+          title: t('pages.editor.wizard.area.basic', 'Basic info'),
+          fields: ['name', 'titulo', 'slogan'],
+        },
+        {
+          title: t('pages.editor.wizard.area.description', 'Description'),
+          fields: ['descripcion'],
+        },
+        {
+          title: t('pages.editor.wizard.review', 'Review'),
+          fields: [],
+        },
+      ];
+    }
+  };
+
+  const steps = getSteps();
+
+  const handleNext = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  const onSubmit = async (data: any) => {
+    setFormData(data);
+    if (currentStep === steps.length - 1) {
+      // Final step - save
+      await onSave(data);
+    } else {
+      handleNext();
+    }
+  };
+
+  const getFieldValue = (fieldName: string) => {
+    const value = formData[fieldName];
+    if (Array.isArray(value)) {
+      return value.join('\n\n');
+    }
+    if (typeof value === 'object' && value !== null) {
+      if (value.es) return value.es;
+      return JSON.stringify(value, null, 2);
+    }
+    return value || '';
+  };
+
+  const setFieldValue = useCallback((fieldName: string, value: string) => {
+    let processedValue: any = value;
+    
+    // Handle arrays (like introduccion and descripcion)
+    if (fieldName === 'introduccion' || fieldName === 'descripcion') {
+      processedValue = value.split('\n\n').filter(p => p.trim());
+    }
+    
+    setFormData((prev: any) => ({ ...prev, [fieldName]: processedValue }));
+    setValue(fieldName, processedValue);
+  }, [setValue]);
+
+  const renderField = (fieldName: string) => {
+    const isTextarea = ['introduccion', 'descripcion', 'slogan'].includes(fieldName);
+    const fallbackLabel = fieldName.charAt(0).toUpperCase() + fieldName.slice(1);
+    const label = t(`pages.editor.fields.${fieldName}`, fallbackLabel);
+
+    return (
+      <div key={fieldName} className="mb-4">
+        <Controller
+          name={fieldName}
+          control={control}
+          render={({ field }) => (
+            isTextarea ? (
+              <MDBTextArea
+                label={label}
+                rows={fieldName === 'introduccion' || fieldName === 'descripcion' ? 6 : 3}
+                value={getFieldValue(fieldName)}
+                onChange={(e) => setFieldValue(fieldName, e.target.value)}
+              />
+            ) : (
+              <MDBInput
+                label={label}
+                type="text"
+                value={getFieldValue(fieldName)}
+                onChange={(e) => setFieldValue(fieldName, e.target.value)}
+              />
+            )
+          )}
+        />
+      </div>
+    );
+  };
+
+  const renderStep = () => {
+    const step = steps[currentStep];
+
+    if (currentStep === steps.length - 1) {
+      // Review step
+      return (
+        <div className="review-step">
+          <h4 className="mb-4">{t('pages.editor.reviewTitle', 'Review changes')}</h4>
+          <MDBCard className="mb-3">
+            <MDBCardBody>
+              {Object.keys(formData).map((key) => {
+                const value = formData[key];
+                
+                // Skip complex objects and functions
+                if (typeof value === 'function') return null;
+                if (value && typeof value === 'object' && '$$typeof' in value) return null;
+                if (key === 'area') return null;
+                if (key === 'caracteristicas') return null;
+                
+                let displayValue = value;
+                if (Array.isArray(value)) {
+                  displayValue = value.join(', ');
+                } else if (typeof value === 'object' && value !== null) {
+                  if (value.es) displayValue = value.es;
+                  else displayValue = JSON.stringify(value);
+                }
+
+                return (
+                  <div key={key} className="mb-3">
+                    <strong className="text-capitalize">{key}:</strong>
+                    <div className="text-muted">{String(displayValue || t('common.na', 'N/A'))}</div>
+                  </div>
+                );
+              })}
+            </MDBCardBody>
+          </MDBCard>
+        </div>
+      );
+    }
+
+    return (
+      <div className="form-step">
+        <h4 className="mb-4">{step.title}</h4>
+        {step.fields.map((field) => renderField(field))}
+      </div>
+    );
+  };
+
+  return (
+    <div className="multi-step-wizard">
+      <div className="wizard-steps mb-4">
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className={`wizard-step ${index === currentStep ? 'active' : ''} ${
+              index < currentStep ? 'completed' : ''
+            }`}
+          >
+            <div className="step-number">{index + 1}</div>
+            <div className="step-title">{step.title}</div>
+          </div>
+        ))}
+      </div>
+
+      <form onSubmit={handleSubmit(onSubmit)}>
+        {renderStep()}
+
+        <MDBRow className="mt-4">
+          <MDBCol>
+            {currentStep > 0 && (
+              <MDBBtn color="secondary" onClick={handlePrevious}>
+                {t('common.previous', 'Previous')}
+              </MDBBtn>
+            )}
+          </MDBCol>
+          <MDBCol className="text-end">
+            <MDBBtn color="secondary" onClick={onCancel} className="me-2">
+              {t('common.cancel', 'Cancel')}
+            </MDBBtn>
+            {currentStep === steps.length - 1 ? (
+              <MDBBtn type="submit" color="primary" disabled={saving}>
+                {saving ? t('common.saving', 'Saving...') : t('common.saveChanges', 'Save changes')}
+              </MDBBtn>
+            ) : (
+              <MDBBtn type="submit" color="primary">
+                {t('common.next', 'Next')}
+              </MDBBtn>
+            )}
+          </MDBCol>
+        </MDBRow>
+      </form>
+    </div>
+  );
+}

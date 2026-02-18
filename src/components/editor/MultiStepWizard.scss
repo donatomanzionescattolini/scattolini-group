@@ -1,0 +1,119 @@
+.multi-step-wizard {
+  .wizard-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #dee2e6;
+      z-index: 0;
+      transform: translateY(-50%);
+    }
+
+    .wizard-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      background-color: #f2f2ed;
+      padding: 0 10px;
+
+      .step-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #dee2e6;
+        color: #6c757d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .step-title {
+        font-size: 0.875rem;
+        color: #6c757d;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      &.active {
+        .step-number {
+          background-color: #1f595a;
+          color: white;
+          transform: scale(1.1);
+        }
+
+        .step-title {
+          color: #0e2d2f;
+          font-weight: 600;
+        }
+      }
+
+      &.completed {
+        .step-number {
+          background-color: #8a6944;
+          color: white;
+        }
+
+        .step-title {
+          color: #8a6944;
+        }
+      }
+    }
+  }
+
+  .form-step,
+  .review-step {
+    min-height: 300px;
+
+    h4 {
+      color: #0e2d2f;
+      font-weight: 600;
+    }
+
+    .card {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+    }
+  }
+
+  .review-step {
+    .text-capitalize {
+      color: #0e2d2f;
+      font-size: 0.95rem;
+    }
+
+    .text-muted {
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .multi-step-wizard .wizard-steps {
+    .step-title {
+      font-size: 0.75rem;
+    }
+
+    .step-number {
+      width: 32px;
+      height: 32px;
+      font-size: 0.875rem;
+    }
+  }
+}

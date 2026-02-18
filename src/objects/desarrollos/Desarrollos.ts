@@ -86,6 +86,7 @@ import TheWilliam from "./MiamiBeach/TheWilliam.tsx";
 import SeventyTwoCarlyle from "./MiamiBeach/72Carlyle.tsx";
 import TulaResidences from "./NorthBayVillage/TulaResidences.tsx";
 import ViceroyBrickell from "./Brickell/ViceroyBrickell.tsx";
+import StRegisBrickell from "./Brickell/StRegisBrickell.tsx";
 import SevenParkResidences from "./Hollywood/SevenParkResidences.tsx";
 import GaiaResidences from "./Hollywood/GaiaResidences.tsx";
 import FaenaResidences from "./MiamiBeach/FaenaResidences.tsx";
@@ -105,7 +106,8 @@ desarrolloMap.push({
 
 desarrolloMap.push({
   area: PompanoBeach(),
-  des: new Set([WPompanoBeach, EnvyResidence("es")]),});
+  des: new Set([WPompanoBeach("es"), EnvyResidence("es")]),
+});
 
 desarrolloMap.push({ area: PembrokePines(), des: new Set([]) });
 desarrolloMap.push({
@@ -120,7 +122,7 @@ desarrolloMap.push({
 
 desarrolloMap.push({
   area: Hollywood(),
-  des: new Set([IconBeachResidences, SevenParkResidences, GaiaResidences]),
+  des: new Set([IconBeachResidences(), SevenParkResidences(), GaiaResidences()]),
 });
 desarrolloMap.push({
   area: Brickell(),
@@ -136,7 +138,8 @@ desarrolloMap.push({
     MercedesBenzPlacesMiami(),
     _2200Brickell(),
     DolceAndGabbanaResidences(),
-    ViceroyBrickell()
+    ViceroyBrickell(),
+    StRegisBrickell,
   ]),
 });
 
@@ -174,8 +177,8 @@ desarrolloMap.push({
   ]),
 });
 desarrolloMap.push({
-    area: NorthBayVillage(),
-    des:new Set([TulaResidences, ShomaBay()])
+  area: NorthBayVillage(),
+  des: new Set([TulaResidences, ShomaBay()]),
 });
 desarrolloMap.push({
   area: MiamiBeach(),
@@ -186,9 +189,9 @@ desarrolloMap.push({
     OnePark(),
     SeventyTwoPark(),
     Palma(),
-      TheWilliam,
-    SeventyTwoCarlyle,
-    FaenaResidences
+    TheWilliam(),
+    SeventyTwoCarlyle(),
+    FaenaResidences(),
   ]),
 });
 
