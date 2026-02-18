@@ -136,9 +136,9 @@ desarrolloMap.push({
     Ora(),
     Cipriani(),
     MercedesBenzPlacesMiami(),
-    _2200Brickell(),
-    DolceAndGabbanaResidences(),
-    ViceroyBrickell(),
+    _2200Brickell("es"),
+    DolceAndGabbanaResidences("es"),
+    ViceroyBrickell("es"),
     StRegisBrickell,
   ]),
 });
