@@ -170,7 +170,7 @@ const Nav = () => {
             </MDBNavbarItem>
 
             <MDBNavbarItem>
-              <MDBNavbarLink href="/contacto/">{t('nav.contacto')}</MDBNavbarLink>
+              <MDBNavbarLink href="/contacto/">{t('nav.contact')}</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBDropdown>
