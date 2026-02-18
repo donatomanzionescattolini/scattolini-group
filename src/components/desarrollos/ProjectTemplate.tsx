@@ -204,7 +204,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           <MDBTabs>
             <MDBTabsItem
               style={{ color: "#2b2a2e!important" }}
-              title={t("pages.project.pdf.brochure")}
+              title={t("pages.project.pdf.brochure") as string}
             >
               <MDBTabsLink onClick={() => openTab("brochure")} href="#docs">
                 {" "}

@@ -1,15 +1,22 @@
 {
   "nav": {
     "home": "Inicio",
+    "inicio": "Inicio",
     "areas": "Áreas",
     "desarrollos": "Desarrollos",
     "contact": "Contacto",
     "leadership": "Liderazgo",
-    "partners": "Asociados"
+    "liderazgo": "Liderazgo",
+    "partners": "Asociados",
+    "asociados": "Asociados",
+    "aliados": "Aliados",
+    "equipo": "Nuestro Equipo",
+    "search": "Buscar"
   },
   "hero": {
     "title": "SCATTOLINI GROUP",
     "subtitle": "Agencia Inmobiliaria",
+    "cta": "Contáctanos Hoy",
     "contact_cta": "Contáctanos Hoy"
   },
   "areas": {
@@ -21,6 +28,75 @@
     "documents": "Documentos De Interés",
     "download": "Descargar",
     "properties_in_area": "Propiedades en el Área"
+  },
+  "pages": {
+    "areas": {
+      "title": "Áreas"
+    },
+    "desarrollos": {
+      "title": "Desarrollos"
+    },
+    "about": {
+      "whoWeAre": "Quiénes Somos",
+      "paragraph": "Scattolini Group es un equipo de expertos con décadas de experiencia en el mercado inmobiliario del sur de Florida. Hemos tenido el privilegio de asistir a numerosos clientes provenientes de diversas partes del mundo, brindándoles nuestra amplia gama de servicios en el ámbito de los bienes raíces en esta vibrante región.",
+      "requestConsultation": "Solicita una Consulta",
+      "callUs": "Llámanos hoy",
+      "consultationText": "Cualquiera de nuestros expertos estaría encantado de programar una consulta para explorar las opciones disponibles de acuerdo a tus necesidades",
+      "seeMore": "Ver Más"
+    },
+    "services": {
+      "title": "Servicios",
+      "advisory": "Asesoramiento Inmobiliario",
+      "advisoryDesc": "Brindamos asesoramiento experto en todas las áreas del mercado inmobiliario.",
+      "propertyManagement": "Administración de Propiedades",
+      "propertyManagementDesc": "Administración de propiedades con servicio completo para propietarios e inversores.",
+      "sales": "Venta de Propiedades",
+      "salesDesc": "Asistencia experta en la venta de su propiedad.",
+      "purchase": "Compra de Propiedades",
+      "purchaseDesc": "Orientación profesional en la compra de propiedades.",
+      "moreInfo": "Obtener más información"
+    },
+    "project": {
+      "caracteristicas": "Características",
+      "edificio": "Edificio",
+      "residencias": "Residencias",
+      "amenidades": "Amenidades",
+      "galeria": "Galería Fotográfica",
+      "contactUsToday": "Contáctanos Hoy",
+      "propertiesInArea": "Propiedades en el Área",
+      "pdf": {
+        "brochure": "Brochure",
+        "hoja": "Hoja Informativa",
+        "planos": "Planos"
+      },
+      "pdfUI": {
+        "documentsTitle": "Documentos de Interés",
+        "download": "Descargar",
+        "downloadBtn": "Descargar",
+        "cantDisplay": "No se puede mostrar el PDF",
+        "instead": "en su lugar"
+      }
+    },
+    "contacto": {
+      "alerts": {
+        "successTitle": "Mensaje Enviado",
+        "successMessage": "¡Mensaje enviado con éxito!",
+        "failureTitle": "Error al Enviar",
+        "failureMessage": "Hubo un problema enviando el correo. Por favor intente de nuevo o envíenos un correo desde su propio servicio a"
+      },
+      "form": {
+        "name": "Nombre",
+        "email": "Correo Electrónico",
+        "phone": "Número de Teléfono",
+        "message": "Mensaje",
+        "sendButton": "Enviar",
+        "emailLink": "este correo"
+      }
+    }
+  },
+  "whatsapp": {
+    "status": "Normalmente responde en 1 hora",
+    "placeholder": "Escribe un mensaje..."
   },
   "footer": {
     "copyright": "© {year} Scattolini Group"

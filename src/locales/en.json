@@ -1,15 +1,22 @@
 {
   "nav": {
     "home": "Home",
+    "inicio": "Home",
     "areas": "Areas",
     "desarrollos": "Developments",
     "contact": "Contact",
     "leadership": "Leadership",
-    "partners": "Partners"
+    "liderazgo": "Leadership",
+    "partners": "Partners",
+    "asociados": "Partners",
+    "aliados": "Allies",
+    "equipo": "Our Team",
+    "search": "Search"
   },
   "hero": {
     "title": "SCATTOLINI GROUP",
     "subtitle": "Real Estate Agency",
+    "cta": "Contact Us",
     "contact_cta": "Contact Us"
   },
   "areas": {
@@ -21,6 +28,75 @@
     "documents": "Documents",
     "download": "Download",
     "properties_in_area": "Properties in the Area"
+  },
+  "pages": {
+    "areas": {
+      "title": "Areas"
+    },
+    "desarrollos": {
+      "title": "Developments"
+    },
+    "about": {
+      "whoWeAre": "Who We Are",
+      "paragraph": "Scattolini Group is a team of experts with decades of experience in the South Florida real estate market. We have had the privilege of assisting numerous clients from diverse parts of the world, providing them with our wide range of services in the real estate field in this vibrant region.",
+      "requestConsultation": "Request a Consultation",
+      "callUs": "Call us today",
+      "consultationText": "Any of our experts would be delighted to schedule a consultation to explore the options available according to your needs",
+      "seeMore": "See More"
+    },
+    "services": {
+      "title": "Services",
+      "advisory": "Real Estate Advisory",
+      "advisoryDesc": "We provide expert advisory in all areas of the real estate market.",
+      "propertyManagement": "Property Management",
+      "propertyManagementDesc": "Full-service property management for owners and investors.",
+      "sales": "Property Sales",
+      "salesDesc": "Expert assistance in selling your property.",
+      "purchase": "Property Purchase",
+      "purchaseDesc": "Professional guidance in purchasing properties.",
+      "moreInfo": "Get more information"
+    },
+    "project": {
+      "caracteristicas": "Features",
+      "edificio": "Building",
+      "residencias": "Residences",
+      "amenidades": "Amenities",
+      "galeria": "Photo Gallery",
+      "contactUsToday": "Contact Us Today",
+      "propertiesInArea": "Properties in the Area",
+      "pdf": {
+        "brochure": "Brochure",
+        "hoja": "Fact Sheet",
+        "planos": "Floor Plans"
+      },
+      "pdfUI": {
+        "documentsTitle": "Documents of Interest",
+        "download": "Download",
+        "downloadBtn": "Download",
+        "cantDisplay": "Cannot display PDF",
+        "instead": "instead"
+      }
+    },
+    "contacto": {
+      "alerts": {
+        "successTitle": "Message Sent",
+        "successMessage": "Message sent successfully!",
+        "failureTitle": "Error Sending",
+        "failureMessage": "There was a problem sending the email. Please try again or send us an email from your own service to"
+      },
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "message": "Message",
+        "sendButton": "Send",
+        "emailLink": "this email"
+      }
+    }
+  },
+  "whatsapp": {
+    "status": "Typically replies within 1 hour",
+    "placeholder": "Type a message..."
   },
   "footer": {
     "copyright": "© {year} Scattolini Group"

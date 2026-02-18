@@ -1,4 +1,4 @@
-import React, { _jsx as _jsx } from "react";
+import React from "react";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
 import { getDesarrolloI18n } from "../useDesarrolloI18n";

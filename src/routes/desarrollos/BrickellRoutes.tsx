@@ -1,4 +1,4 @@
-import React, { ReactFragment } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 import DomusProject from "../../components/desarrollos/Brickell/DomusProject";
 import LoftyProject from "../../components/desarrollos/Brickell/LoftyProject";

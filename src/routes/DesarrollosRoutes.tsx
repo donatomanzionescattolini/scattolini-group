@@ -6,7 +6,7 @@ import BayHarborIslands from "./desarrollos/BayHarborIslandsRoutes";
 import EdgewaterRoutes from "./desarrollos/EdgewaterRoutes";
 import HomesteadRoutes from "./desarrollos/Homestead";
 import PinecrestRoutes from "./desarrollos/PinecrestRoutes";
-import fragment from "./desarrollos/SunnyIslesRoutes";
+import SunnyIslesRoutes from "./desarrollos/SunnyIslesRoutes";
 import FloridaCityRoutes from "./desarrollos/FloridaCityRoutes";
 import NorthBayVillageRoutes from "./desarrollos/NorthBayVillageRoutes";
 import CoralGablesRoutes from "./desarrollos/CoralGablesRoutes";
@@ -25,26 +25,26 @@ export default function DesarrollosRoutes() {
 
   return (
     <React.Fragment>
-      {MiamiBeachRoutes()}
-      {BrickellRoutes()}
-      {DowntownRoutes()}
-      {BayHarborIslands()}
-      {EdgewaterRoutes()}
-      {HomesteadRoutes()}
-      {PinecrestRoutes()}
-      {fragment}
-      {FloridaCityRoutes()}
-      {NorthBayVillageRoutes()}
-      {CoralGablesRoutes()}
-      {CoconutGroveRoutes()}
-      {SouthMiamiRoutes()}
-      {FtLauderdaleRoutes()}
-      {WynwoodRoutes()}
-      {MidtownMiamiRoutes()}
-      {AventuraRoutes()}
-      {DaniaBeachRoutes()}
-      {PompanoBeachRoutes()}
-      {HollywoodRoutes()}
+      <MiamiBeachRoutes />
+      <BrickellRoutes />
+      <DowntownRoutes />
+      <BayHarborIslands />
+      <EdgewaterRoutes />
+      <HomesteadRoutes />
+      <PinecrestRoutes />
+      <SunnyIslesRoutes />
+      <FloridaCityRoutes />
+      <NorthBayVillageRoutes />
+      <CoralGablesRoutes />
+      <CoconutGroveRoutes />
+      <SouthMiamiRoutes />
+      <FtLauderdaleRoutes />
+      <WynwoodRoutes />
+      <MidtownMiamiRoutes />
+      <AventuraRoutes />
+      <DaniaBeachRoutes />
+      <PompanoBeachRoutes />
+      <HollywoodRoutes />
     </React.Fragment>
   );
 }
