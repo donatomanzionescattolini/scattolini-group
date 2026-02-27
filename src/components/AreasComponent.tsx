@@ -40,7 +40,7 @@ export default function AreasComponent(): React.ReactElement {
           <Col key={area.name} xs={12} sm={12} md={6} lg={4} xl={4}>
             <Link to={`/areas/${area.name}/`}>
               <div
-                className="propiedades-img p-0 m-0"
+                className="propiedades-img p-0 m-0 w-100"
                 style={{
                   background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/thumbnail.webp')`,
                   backgroundSize: "cover",
