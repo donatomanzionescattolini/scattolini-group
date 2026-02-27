@@ -6,7 +6,7 @@ import { useTranslation } from "../i18n.tsx";
 
 export default function AreasComponent(): React.ReactElement {
   const { t, lang } = useTranslation();
-  const getLocalized = (field: any) => {
+  const getLocalized = (field: string | Record<string, string> | null | undefined) => {
     if (!field) return "";
     const isPlaceholder = (value: unknown) =>
       typeof value === "string" && value.trim().toLowerCase() === "latest";
@@ -24,10 +24,10 @@ export default function AreasComponent(): React.ReactElement {
     return field;
   };
 
-  const allAreas = [...desarrolloMap.values()].map((x: any) => x.area);
+  const allAreas = [...desarrolloMap.values()].map((x) => x.area);
   
   // Filter to only show areas that have projects
-  const { areasWithProjects, areasWithoutProjects } = useMemo(() => {
+  const { areasWithProjects } = useMemo(() => {
     const withProjects: typeof allAreas = [];
     const withoutProjects: typeof allAreas = [];
     

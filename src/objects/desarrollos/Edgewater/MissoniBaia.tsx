@@ -22,11 +22,11 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
             <>
                 <ul>
                     <li>
-                        Vistas directas a la bahÃ­a o a la ciudad desde cada residencia
+                        Vistas directas a la bahía o a la ciudad desde cada residencia
                     </li>
-                    <li>Residencias de la Torre Sur con vistas de 270Â°</li>
-                    <li>Residencias East Bay y Tower con vistas de 180Â°</li>
-                    <li>Balcones de 10' de profundidad frente a la bahÃ­a</li>
+                    <li>Residencias de la Torre Sur con vistas de 270°</li>
+                    <li>Residencias East Bay y Tower con vistas de 180°</li>
+                    <li>Balcones de 10' de profundidad frente a la bahía</li>
                     <li>Balcones de 8' de profundidad frente a la ciudad</li>
                     <li>Acristalamiento de piso a techo en todas las residencias</li>
                     <li>Vestidores</li>
@@ -41,7 +41,7 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                         Tocadores y baños para él y para ella en las residencias de la
                         Torre Este y Sur
                     </li>
-                    <li>MÃ¡rmol de piso a techo, incluido el zócalo de mÃ¡rmol</li>
+                    <li>Mármol de piso a techo, incluido el zócalo de mármol</li>
                     <li>
                         Cabezales de ducha dobles en residencias de la Torre Este y Sur
                     </li>
@@ -49,13 +49,13 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <br/>
                     <strong>Cocina</strong>
                     <br/>
-                    <li>Electrodomésticos de primera lÃ­nea que incluyen:</li>
+                    <li>Electrodomésticos de primera línea que incluyen:</li>
                     <li>Microonda</li>
                     <li>Enfriador de vino</li>
                     <li>Estufa</li>
                     <li>Nevera y congelador grandes de lado a lado</li>
                     <li>Zona lavavajillas</li>
-                    <li>Despensa extraÃ­ble</li>
+                    <li>Despensa extraíble</li>
                     <li>Campana sobre la estufa</li>
                     <li>Triturador</li>
                 </ul>
@@ -69,14 +69,14 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <br/>
                     <p>
                         En el quinto y el sexto piso de la torre, los servicios incluyen
-                        un espacio de descanso frente a la bahÃ­a con una piscina con
+                        un espacio de descanso frente a la bahía con una piscina con
                         vista al mar, una sala de entretenimiento, un salón de belleza,
                         una sala de juegos para niños, un spa para mascotas, un amplio
-                        gimnasio con vista a la bahÃ­a y uno de los spas mÃ¡s grandes de
+                        gimnasio con vista a la bahía y uno de los spas más grandes de
                         Miami, exclusivo para los residentes. Un puente exterior que
                         comunica el conjunto de servicios techados del sexto piso con la
                         solana de paso de la piscina, que incluye cabanas, una piscina
-                        olÃ­mpica, piscina lounge, opciones acuÃ¡ticas para los niños y
+                        olímpica, piscina lounge, opciones acuáticas para los niños y
                         una cancha de tenis.
                     </p>
                     <br/>
@@ -87,13 +87,13 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <br/>
                     <li>Servicio de valet parking</li>
                     <li>
-                        Terraza exterior junto a la bahÃ­a para uso exclusivo de los
+                        Terraza exterior junto a la bahía para uso exclusivo de los
                         residentes y sus invitados
                     </li>
                     <li>Camino peatonal a lo largo del agua.</li>
                     <li>Conserje personal y atención en la recepción 24 horas</li>
-                    <li>Habitación para entrega de paqueterÃ­a</li>
-                    <li>Salón interior junto a la bahÃ­a</li>
+                    <li>Habitación para entrega de paquetería</li>
+                    <li>Salón interior junto a la bahía</li>
                     <br/>
                     <strong>Quinto Piso</strong>
                     <br/>
@@ -112,28 +112,28 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                         Puente exterior que conecta las amenidades del edificio del
                         sexto piso con la terraza de la piscina
                     </li>
-                    <li>Piscina de dimensión olÃ­mpica</li>
+                    <li>Piscina de dimensión olímpica</li>
                     <li>Piscina en el lounge</li>
                     <li>Spa de hidromasaje al aire libre</li>
                     <li>Tumbonas junto a la piscina</li>
                     <li>Chapoteadero para niños</li>
-                    <li>Ãrea de césped para niños</li>
+                    <li>Área de césped para niños</li>
                     <li>Bar y parrilla exterior</li>
                     <li>Dos salones junto a la piscina exclusivos para residentes</li>
                     <li>
-                        Vestidores para hombres y mujeres â€¢ Cancha de tenis elevada
+                        Vestidores para hombres y mujeres • Cancha de tenis elevada
                     </li>
                     <br/>
                     <strong>Séptimo Piso, Amenidades Techadas</strong>
                     <li>
-                        Cubierta exterior que envuelve al edificio con mÃºltiples Ã¡reas
+                        Cubierta exterior que envuelve al edificio con múltiples áreas
                         de descanso
                     </li>
                     <li>
-                        Terraza junto a la bahÃ­a con piscina volada y vista a la bahÃ­a
+                        Terraza junto a la bahía con piscina volada y vista a la bahía
                     </li>
                     <li>
-                        Salón interior con terraza en la bahÃ­a y techo de doble altura
+                        Salón interior con terraza en la bahía y techo de doble altura
                     </li>
                     <li>
                         Sala de juegos para residentes con mesa de billar, bar, gran
@@ -144,7 +144,7 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <strong>Séptimo Piso</strong>
                     <br/>
                     <li>
-                        Gimnasio de 3,208 pies cuadrados con vistas de 180 Â° de la bahÃ­a
+                        Gimnasio de 3,208 pies cuadrados con vistas de 180° de la bahía
                     </li>
                     <li>Estudio de yoga privado</li>
                     <li>Estudio para entrenamiento privado</li>
@@ -158,18 +158,18 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <strong>Piscinas</strong>
                     <br/>
                     <li>
-                        Los servicios acuÃ¡ticos de los condominios de lujo de Missoni
+                        Los servicios acuáticos de los condominios de lujo de Missoni
                         Baia ofrecen oportunidades para actividades tanto recreativas
                         como deportivas.
                     </li>
 
                     <li>
-                        Terraza frente a la bahÃ­a: Una espectacular piscina volada con
+                        Terraza frente a la bahía: Una espectacular piscina volada con
                         vista a Downtown Miami y a Biscayne Bay.
                     </li>
 
                     <li>
-                        Piscina junto a la bahÃ­a: En la terraza frontal, hay una piscina
+                        Piscina junto a la bahía: En la terraza frontal, hay una piscina
                         con vista a Biscayne Bay.
                     </li>
 

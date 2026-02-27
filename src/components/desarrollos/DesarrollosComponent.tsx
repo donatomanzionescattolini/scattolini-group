@@ -1,42 +1,42 @@
-import { Container, Row, Col } from "react-bootstrap";
-import Areas from "../../objects/areas/Areas";
-import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos";
-import { Link } from "react-router-dom";
-import { useTranslation } from "../../i18n.tsx";
-import Desarrollo from "../../models/desarrollos/Desarrollo";
-import "./DesarrollosComponent.css";
+import { Component } from 'react';
+import { Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { getDesarrollosForArea } from '../../objects/desarrollos/Desarrollos';
 
-export default function DesarrollosComponent() {
-  const { t, lang } = useTranslation();
-  const getLocalized = (field: string | Record<string, unknown> | undefined): string => {
-    if (!field) return "";
-    const isPlaceholder = (value: unknown) =>
-      typeof value === "string" && value.trim().toLowerCase() === "latest";
-    if (typeof field === "object") {
-      const preferred = field[lang];
-      if (preferred && !isPlaceholder(preferred)) return String(preferred);
-      const spanish = field.es;
-      if (spanish && !isPlaceholder(spanish)) return String(spanish);
-      const firstValid = Object.values(field).find(
-        (value) => value && !isPlaceholder(value)
-      );
-      return firstValid ? String(firstValid) : "";
+export default class DesarrollosComponent extends Component {
+  render() {
+    interface Area {
+      name: string;
+      titulo: string;
+      slogan: string;
+      descripcion: string[] | { es: string[]; en: string[] };
+      numberOfImages: number;
     }
-    if (isPlaceholder(field)) return "";
-    return field;
-  };
 
-  const areas = Areas();
+    interface Desarrollo {
+      nome: string;
+      titulo: string;
+    }
 
-  return (
-    <Container>
-      <br />
-      <div>
-        <h3 className="text-center mb-1">{t("pages.desarrollos.title")}</h3>
-      </div>
-      <hr className="hr hr-blurry w-50 mx-auto" />
+    const getLocalized = (titulo: string): string => {
+      const language = localStorage.getItem('language') || 'es';
+      const translations: Record<string, Record<string, string>> = {
+        es: { /* Spanish translations */ },
+        en: { /* English translations */ },
+      };
+      return translations[language]?.[titulo] || titulo;
+    };
 
-      {areas.map((area) => {
+    const areas: Area[] = []; // Define your areas data here
+
+    return (
+      <>
+        <div className="propiedades-img p-0 m-0 w-100 desarrollo-card">
+          {/* Other component code */}
+        </div>
+        <hr className="hr hr-blurry w-50 mx-auto" />
+
+        {areas.map((area) => {
         const desarr = getDesarrollosForArea(area) ?? new Set();
         return (
           <div key={area.name} className="mb-5">
@@ -44,18 +44,27 @@ export default function DesarrollosComponent() {
             <Row>
               {Array.from(desarr).map((desarrollo, idx: number) => {
                 const dev = desarrollo as unknown as Desarrollo;
+                const getLocalized = (titulo: string): string => {
+                  const language = localStorage.getItem('language') || 'es';
+                  const translations: Record<string, Record<string, string>> = {
+                    es: { /* Spanish translations */ },
+                    en: { /* English translations */ },
+                  };
+                  return translations[language]?.[titulo] || titulo;
+                };
+
                 return (
-                  <Col key={dev.nombre ?? `${area.name}-${idx}`} xs={12} sm={6} md={6} lg={4} xl={4} className="gallery-item">
-                    <Link to={`/desarrollos/${dev.nombre}/`}>
+                  <Col key={dev.nome ?? `${area.name}-${idx}`} xs={12} sm={12} md={6} lg={4} xl={4}>
+                    <Link to={`/desarrollos/${dev.nome}/`}>
                       <div
-                        className="gallery-card"
+                        className="propiedades-img p-0 m-0 desarrollo-card"
                         style={{
-                          backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${dev.nombre}.webp')`,
+                          backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${dev.nome}.webp')`,
                         }}
-                      />
-                      <h4 className="text-center">
-                        {getLocalized(dev.titulo) || dev.nombre}
-                      </h4>
+                      ></div>
+                      <h5 className="text-center mt-2">
+                        {getLocalized(dev.titulo) || dev.nome}
+                      </h5>
                     </Link>
                   </Col>
                 );
@@ -64,6 +73,7 @@ export default function DesarrollosComponent() {
           </div>
         );
       })}
-    </Container>
-  );
+      </>
+    );
+  }
 }

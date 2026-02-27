@@ -26,8 +26,8 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 <li>
                     Experiencia de spa inspirada en los spas termales italianos que
                     contiene piscinas de inmersión, salas de vapor y sauna, y un
-                    extenso menÃº de tratamientosGimnasio espacioso y lleno de luz con
-                    equipos Technogym de Ãºltima generación y estudios de yoga, pilates
+                    extenso menú de tratamientosGimnasio espacioso y lleno de luz con
+                    equipos Technogym de última generación y estudios de yoga, pilates
                     y boxeo totalmente equipados
                 </li>
                 <li>
@@ -36,10 +36,10 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     tumbonas
                 </li>
 
-                <li>Club para residentes con biblioteca y salones Ã­ntimos</li>
+                <li>Club para residentes con biblioteca y salones íntimos</li>
                 <li>
                     Sala de juntas y espacios de trabajo privadosSala de
-                    entretenimiento con varias Ã¡reas de juego que incluyen billar,
+                    entretenimiento con varias áreas de juego que incluyen billar,
                     póquer y tejo
                 </li>
                 <li>Sala de proyecciones y multimediaSalón familiar dedicado</li>
@@ -47,20 +47,19 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 <li>
                     El propio restaurante MFG de la villa, concebido como una
                     experiencia culinaria de inspiración italiana que abarca dos
-                    niveles para incluir cenas frente a la bahÃ­a y comedores privados
+                    niveles para incluir cenas frente a la bahía y comedores privados
                     exclusivos para residentes Alimentos y bebidas seleccionados por
                     MFG en todo el edificio
                 </li>
-                <li>Bar de jugos y cafeterÃ­a solo para residentes</li>
-
+                <li>Bar de jugos y cafetería solo para residentes</li>
                 <li>
                     Servicios de chef privado en casa y clases de cocina Reservas
-                    preferenciales, servicio de conserjerÃ­a y privilegios de cobro en
-                    todos los restaurantes MFG, asÃ­ como acceso VIP y prioritario e
+                    preferenciales, servicio de conserjería y privilegios de cobro en
+                    todos los restaurantes MFG, así como acceso VIP y prioritario e
                     invitaciones a eventos
                 </li>
                 <li>
-                    Cocinas y comedores a pedido, asÃ­ como catering privado y en el
+                    Cocinas y comedores a pedido, así como catering privado y en el
                     lugar por parte de los chefs de MFG Opciones de aprovisionamiento
                     y almacenamiento de comestibles en la residencia Servicio de
                     alimentos y bebidas junto a la piscina
@@ -70,7 +69,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
         edificio: (
             <ul>
                 <li>Pisos: 55</li>
-                <li>NÃºmero de unidades: residencias de 3, 4 y 5 dormitorios</li>
+                <li>Número de unidades: residencias de 3, 4 y 5 dormitorios</li>
                 <li>Ubicación: 700 NE 29th St, Miami, FL 33137</li>
                 <hr className="hr hr-blurry w-50 mx-auto"/>
 
@@ -81,10 +80,10 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 </li>
                 <li>
                     Infinitas vistas de 360Â° del amanecer y el atardecer que abarcan
-                    la bahÃ­a, el océano, el centro de Miami y Miami Beach
+                    la bahía, el océano, el centro de Miami y Miami Beach
                 </li>
                 <li>
-                    Diseño icónico del edificio que combina un exoesqueleto Ãºnico de
+                    Diseño icónico del edificio que combina un exoesqueleto único de
                     bronce fundido anclado por un podio de servicios de vidrio
                     multifacético inspirado en piedras preciosas
                 </li>
@@ -102,7 +101,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 </li>
                 <li>
                     Jardines estilo Piazza conectados con el próximo Miami Baywalk y
-                    el paseo marÃ­timo, con una cómoda accesibilidad a las tiendas y
+                    el paseo marítimo, con una cómoda accesibilidad a las tiendas y
                     restaurantes del Design District
                 </li>
                 <li>Exuberantes jardines privados diseñados por Enzo Enea</li>
@@ -127,11 +126,11 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 <li>
                     El propio restaurante MFG de la villa, concebido como una
                     experiencia culinaria de inspiración italiana que abarca dos
-                    niveles para incluir cenas frente a la bahÃ­a y comedores privados
+                    niveles para incluir cenas frente a la bahía y comedores privados
                     exclusivos para los residentes
                 </li>
                 <li>MFG seleccionó alimentos y bebidas en todo el edificio</li>
-                <li>Bar de jugos y cafeterÃ­a solo para residentes</li>
+                <li>Bar de jugos y cafetería solo para residentes</li>
                 <li>Servicios de chef privado a domicilio y clases de cocina</li>
                 <li>
                     Cocinas y comedores bajo demanda, asÃ­ como catering privado y en
@@ -141,7 +140,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 <li>
                     Experiencia de spa inspirada en los spas termales italianos que
                     contiene piscinas de inmersión, salas de vapor y sauna, y un
-                    amplio menÃº de tratamientos
+                    amplio menú de tratamientos
                 </li>
                 <li>
                     Gimnasio espacioso y lleno de luz con equipos Technogym de Ãºltima
