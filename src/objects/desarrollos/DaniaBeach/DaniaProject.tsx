@@ -5,11 +5,11 @@ export default function createDaniaProject() {
   DaniaProjectObject.nombre = "dania-project";
   DaniaProjectObject.titulo = {
     es: "Dania Project",
-    en:"latest"
+    en: "Dania Project"
   };
   DaniaProjectObject.slogan = {
     es: "Vivienda de lujo en Dania Beach",
-    en:"latest"
+    en: "Luxury Living in Dania Beach"
   };
   DaniaProjectObject.caracteristicas = {
     es: {

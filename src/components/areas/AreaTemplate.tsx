@@ -1,10 +1,12 @@
-import { useLayoutEffect, useMemo } from "react";
-import { Col, Image, Row } from "react-bootstrap";
+import { useEffect, useLayoutEffect, useMemo, useState } from "react";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos";
 import Desarrollo from "../../models/desarrollos/Desarrollo";
 import { resolveLocalizedValue, useTranslation } from "../../i18n.tsx";
 import { Area } from "../../models/areas/Area.tsx";
+import AreasComponent from "../AreasComponent.tsx";
+import ContactFormComponent from "../ContactFormComponent.tsx";
 interface AreaProps {
   area: Area;
 }
@@ -12,6 +14,13 @@ interface AreaProps {
 export default function AreaTemplate(props: AreaProps) {
   const { t, lang } = useTranslation();
   const area = props.area;
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const onResize = () => setInnerWidth(window.innerWidth);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   const getLocalizedString = (field: unknown, fallback = ""): string => {
     const resolved = resolveLocalizedValue<string>(field as any, lang);
@@ -138,6 +147,28 @@ export default function AreaTemplate(props: AreaProps) {
         </Row>
       </div>
       <div className="container-fluid m-0 p-0 overflow-scroll horizontal-scrollable"></div>
+      <div className="skew-c"></div>
+      <section className="colour-block">
+        <AreasComponent />
+      </section>
+      <div className="skew-cc"></div>
+      <section className="white-block">
+        <h2>{t("pages.project.contactUsToday")}</h2>
+        {innerWidth <= 768 && (
+          <Container>
+            <ContactFormComponent />
+          </Container>
+        )}
+        {innerWidth > 768 && (
+          <Container
+            fluid
+            className="d-flex justify-content-center w-100 p-0 m-0"
+          >
+            <ContactFormComponent />
+          </Container>
+        )}
+      </section>
+      <div className="skew-c"></div>
     </>
   );
 }

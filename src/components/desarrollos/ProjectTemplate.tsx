@@ -286,79 +286,108 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             > */}
           <MDBTabsContent>
             <MDBTabsPane show={tabVisible === "brochure"}>
-              <iframe
-                src={`https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}&embedded=true`}
-                width="100%"
-                height="500px"
-                style={{ border: "none" }}
-                title="Brochure PDF"
-              >
-                <p>
-                  {t("pages.project.pdfUI.cantDisplay")}{" "}
-                  <Link
+              <div className="pdf-container text-center">
+                <object
+                  data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/brochure.pdf`}
+                  type="application/pdf"
+                  width="100%"
+                  height="600px"
+                >
+                  <div className="pdf-fallback p-5 bg-light rounded">
+                    <i className="fas fa-file-pdf fa-4x text-danger mb-3 d-block"></i>
+                    <p className="mb-3">{t("pages.project.pdfUI.cantDisplay")}</p>
+                    <a
+                      href={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/brochure.pdf`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary btn-lg"
+                    >
+                      <i className="fas fa-download me-2"></i>
+                      {t("pages.project.pdfUI.downloadBtn")} Brochure
+                    </a>
+                  </div>
+                </object>
+                <div className="mt-3">
+                  <a
+                    href={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/brochure.pdf`}
                     target="_blank"
-                    className="text-decoration-underline"
-                    to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/brochure.pdf`}
+                    rel="noopener noreferrer"
+                    className="btn btn-outline-secondary"
                   >
-                    {t("pages.project.pdfUI.download")}
-                  </Link>{" "}
-                  {t("pages.project.pdfUI.instead")}
-                </p>
-              </iframe>
+                    <i className="fas fa-external-link-alt me-2"></i>
+                    {t("pages.project.pdfUI.downloadBtn")}
+                  </a>
+                </div>
+              </div>
             </MDBTabsPane>
             <MDBTabsPane show={tabVisible === "hoja"}>
-              <iframe
-                src={`https://docs.google.com/viewer?url=${encodeURIComponent(`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/hoja.pdf`)}&embedded=true`}
-                width="100%"
-                height="500px"
-                style={{ border: "none" }}
-                title="Fact Sheet PDF"
-              >
-                <p>
-                  {t("pages.project.pdfUI.cantDisplay")}{" "}
-                  <Link
+              <div className="pdf-container text-center">
+                <object
+                  data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/hoja.pdf`}
+                  type="application/pdf"
+                  width="100%"
+                  height="600px"
+                >
+                  <div className="pdf-fallback p-5 bg-light rounded">
+                    <i className="fas fa-file-pdf fa-4x text-danger mb-3 d-block"></i>
+                    <p className="mb-3">{t("pages.project.pdfUI.cantDisplay")}</p>
+                    <a
+                      href={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/hoja.pdf`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary btn-lg"
+                    >
+                      <i className="fas fa-download me-2"></i>
+                      {t("pages.project.pdfUI.downloadBtn")} {t("pages.project.pdf.hoja")}
+                    </a>
+                  </div>
+                </object>
+                <div className="mt-3">
+                  <a
+                    href={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/hoja.pdf`}
                     target="_blank"
-                    className="text-decoration-underline"
-                    to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/hoja.pdf`}
+                    rel="noopener noreferrer"
+                    className="btn btn-outline-secondary"
                   >
-                    {t("pages.project.pdfUI.download")}
-                  </Link>{" "}
-                  {t("pages.project.pdfUI.instead")}
-                </p>
-              </iframe>
+                    <i className="fas fa-external-link-alt me-2"></i>
+                    {t("pages.project.pdfUI.downloadBtn")}
+                  </a>
+                </div>
+              </div>
             </MDBTabsPane>
             <MDBTabsPane show={tabVisible === "planos"}>
-              <iframe
-                src={`https://docs.google.com/viewer?url=${encodeURIComponent(`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/planos.pdf`)}&embedded=true`}
-                width="100%"
-                height="500px"
-                style={{ border: "none" }}
-                title="Floor Plans PDF"
-              >
-                <p>
-                  {t("pages.project.pdfUI.cantDisplay")}{" "}
-                  <Link
-                    target="_blank"
-                    className="text-decoration-underline"
-                    to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/planos.pdf`}
-                  >
-                    {t("pages.project.pdfUI.download")}
-                  </Link>{" "}
-                  {t("pages.project.pdfUI.instead")}
-                </p>
-              </iframe>
-            </MDBTabsPane>
-            <MDBTabsPane show>
-              <div className="d-flex justify-content-center font-size-lg">
-                <Link
-                  className="btn btn-outline-secondary btn-small"
-                  type="button"
-                  target="#top"
-                  to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-                  download
+              <div className="pdf-container text-center">
+                <object
+                  data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/planos.pdf`}
+                  type="application/pdf"
+                  width="100%"
+                  height="600px"
                 >
-                  {t("pages.project.pdfUI.downloadBtn")}
-                </Link>
+                  <div className="pdf-fallback p-5 bg-light rounded">
+                    <i className="fas fa-file-pdf fa-4x text-danger mb-3 d-block"></i>
+                    <p className="mb-3">{t("pages.project.pdfUI.cantDisplay")}</p>
+                    <a
+                      href={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/planos.pdf`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary btn-lg"
+                    >
+                      <i className="fas fa-download me-2"></i>
+                      {t("pages.project.pdfUI.downloadBtn")} {t("pages.project.pdf.planos")}
+                    </a>
+                  </div>
+                </object>
+                <div className="mt-3">
+                  <a
+                    href={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/planos.pdf`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-outline-secondary"
+                  >
+                    <i className="fas fa-external-link-alt me-2"></i>
+                    {t("pages.project.pdfUI.downloadBtn")}
+                  </a>
+                </div>
               </div>
             </MDBTabsPane>
           </MDBTabsContent>

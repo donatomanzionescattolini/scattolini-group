@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /editor/
+Disallow: /api/
 
+# Sitemaps
 Sitemap: https://scattolinigroup.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

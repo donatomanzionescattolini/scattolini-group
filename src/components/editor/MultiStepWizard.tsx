@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useCallback } from 'react';
+﻿import React, { useState, useCallback, useMemo } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import {
   MDBRow,
@@ -12,6 +12,7 @@ import {
 import './MultiStepWizard.scss';
 import { useTranslation } from '../../i18n.tsx';
 import MediaUploadStep from './MediaUploadStep';
+import Areas from '../../objects/areas/Areas';
 
 interface MultiStepWizardProps {
   type: 'desarrollo' | 'area';
@@ -28,12 +29,32 @@ export default function MultiStepWizard({
   onCancel,
   saving,
 }: MultiStepWizardProps) {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<any>(data);
   const { control, handleSubmit, setValue } = useForm({
     defaultValues: formData,
   });
+
+  // Get available areas for select dropdown
+  const areas = useMemo(() => {
+    const areaList = Areas();
+    // Remove duplicates by name
+    const unique = new Map();
+    areaList.forEach(area => {
+      if (area.name && !unique.has(area.name)) {
+        unique.set(area.name, area);
+      }
+    });
+    return Array.from(unique.values());
+  }, []);
+
+  // Helper to get localized value from an area
+  const getLocalizedValue = (value: string | { es: string, en: string } | undefined): string => {
+    if (!value) return '';
+    if (typeof value === 'string') return value;
+    return value[lang] || value.es || '';
+  };
 
   // Define steps based on type
   const getSteps = () => {
@@ -141,6 +162,39 @@ export default function MultiStepWizard({
             projectName={projectName}
             onNumberOfImagesChange={handleNumberOfImagesChange}
           />
+        </div>
+      );
+    }
+
+    // Handle select fields that reference existing data
+    if (fieldName === 'areaName') {
+      const fallbackLabel = t('pages.editor.fields.areaName', 'Area');
+      const currentValue = formData.areaName || formData.area?.name || '';
+      
+      return (
+        <div key={fieldName} className="mb-4">
+          <label htmlFor="areaName-select" className="form-label">{fallbackLabel}</label>
+          <select
+            id="areaName-select"
+            className="form-select"
+            value={currentValue}
+            title={fallbackLabel}
+            aria-label={fallbackLabel}
+            onChange={(e) => {
+              setFormData((prev: any) => ({ ...prev, areaName: e.target.value }));
+              setValue('areaName', e.target.value);
+            }}
+          >
+            <option value="">{t('pages.editor.selectArea', '-- Select an area --')}</option>
+            {areas.map((area) => (
+              <option key={area.name} value={area.name}>
+                {getLocalizedValue(area.titulo) || area.name}
+              </option>
+            ))}
+          </select>
+          <div className="form-text text-muted">
+            {t('pages.editor.areaHelp', 'Select the area where this development is located')}
+          </div>
         </div>
       );
     }

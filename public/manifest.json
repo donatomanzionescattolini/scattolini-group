@@ -1,25 +1,23 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Scattolini",
+  "name": "Scattolini Group - Luxury Real Estate",
+  "description": "Agencia inmobiliaria boutique de lujo en Miami, Florida",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type":"latest"
+      "src": "https://pagina-mama.s3.amazonaws.com/assets2/logos/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes":"latest"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes":"latest"
+      "src": "https://pagina-mama.s3.amazonaws.com/assets2/logos/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color":"latest"
+  "theme_color": "#1a1a1a",
+  "background_color": "#ffffff",
+  "lang": "es",
+  "categories": ["real estate", "business"]
 }
