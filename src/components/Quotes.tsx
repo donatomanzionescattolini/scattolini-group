@@ -8,7 +8,7 @@ interface Props {
 
 export default function Quotes(props: Props) {
     const { lang } = useTranslation();
-    const getLocalized = (field: any) => {
+    const getLocalized = (field: string | Record<string, string> | undefined) => {
         if (!field) return "";
         const isPlaceholder = (value: unknown) =>
             typeof value === "string" && value.trim().toLowerCase() === "latest";

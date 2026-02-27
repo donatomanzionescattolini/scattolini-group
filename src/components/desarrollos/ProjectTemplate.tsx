@@ -1,16 +1,14 @@
 ﻿import "bootstrap/dist/css/bootstrap.min.css";
-import SlideshowGalleryDesarrollo from "./SlideshowGalleryDesarrollo";
 import "@material/banner/dist/mdc.banner.min.css";
 
 import { ReactNode, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useTranslation } from "../../i18n.tsx";
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
-import Accordion from "react-bootstrap/Accordion";
 import { Link } from "react-router-dom";
 import {
-  caracteristicas,
   ProjectParams,
 } from "../../models/desarrollos/ProjectParams.tsx";
+import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
@@ -18,33 +16,30 @@ import * as React from "react";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
   const { t, lang } = useTranslation();
-  const params: any = useMemo(() => {
-    let desarrollo: any = paramz.desarrollo;
+  const params = useMemo<Desarrollo>(() => {
+    const desarrollo = paramz.desarrollo;
     if (typeof desarrollo === "function") {
-      try {
-        desarrollo = desarrollo(lang);
-      } catch (error) {
-        desarrollo = desarrollo();
+      if (desarrollo.length === 0) {
+        return (desarrollo as () => Desarrollo)();
       }
+      return (desarrollo as (locale: "en" | "es") => Desarrollo)(lang);
     }
     return desarrollo;
   }, [paramz.desarrollo, lang]);
   const nombre = params.nombre;
   const area = params.area;
   const desarrollosArea = useMemo(() => getDesarrollosForArea(area), [area]);
-  const numberOfImages = params.numberOfImages;
   const [tabVisible, setTabVisible] = useState("brochure");
   const video: string | ReactNode = params.video
     ? params.video
     : `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`;
 
-  const caract = params.caracteristicas as caracteristicas;
   const banner = params.banner;
   // compute localized values for titulo and subtitulo to avoid passing Record types into JSX
   const isPlaceholder = (value: unknown): boolean =>
     typeof value === "string" && value.trim().toLowerCase() === "latest";
 
-  const getLocalized = (field: any) => {
+  const getLocalized = (field: string | Record<string, string> | undefined | null) => {
     if (!field) return "";
     if (typeof field === "object") {
       const preferred = field[lang];
@@ -64,11 +59,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   const introduccion: Array<string> = Array.isArray(params.introduccion)
     ? params.introduccion
     : [];
-  const CaracteristicasAmenidades = caract?.amenidades;
-  const CaracteristicasEdificio = caract?.edificio;
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-  const CaracteristicasResidencias = caract?.residencias;
-  const pdfUrl = `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`;
 
   useEffect(() => {
     const onResize = () => setInnerWidth(window.innerWidth);
@@ -79,27 +70,6 @@ export default function ProjectTemplate(paramz: ProjectParams) {
     window.scrollTo(0, 0);
   }, []);
 
-  function openTab(docType: string) {
-    switch (docType) {
-      case "brochure":
-        tabVisible === "brochure"
-          ? setTabVisible("none")
-          : setTabVisible("brochure");
-        break;
-
-      case "hoja":
-        tabVisible === "hoja" ? setTabVisible("none") : setTabVisible("hoja");
-        break;
-      case "planos":
-        tabVisible === "planos"
-          ? setTabVisible("none")
-          : setTabVisible("planos");
-        break;
-      default:
-        setTabVisible("none");
-        break;
-    }
-  }
 
   return (
     <>
@@ -228,7 +198,6 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               <Nav.Item>
                 <Nav.Link 
                   eventKey="brochure"
-                  onClick={() => openTab("brochure")}
                   style={{ color: "#2b2a2e" }}
                 >
                   {t("pages.project.pdf.brochure")}
@@ -237,7 +206,6 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               <Nav.Item>
                 <Nav.Link
                   eventKey="hoja"
-                  onClick={() => openTab("hoja")}
                   style={{ color: "#2b2a2e" }}
                 >
                   {t("pages.project.pdf.hoja")}
@@ -246,7 +214,6 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               <Nav.Item>
                 <Nav.Link
                   eventKey="planos"
-                  onClick={() => openTab("planos")}
                   style={{ color: "#2b2a2e" }}
                 >
                   {t("pages.project.pdf.planos")}

@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "../i18n.tsx";
 import { useNavigate } from "react-router-dom";
-import { Navbar, Nav as BsNav, NavDropdown, Container, InputGroup, Form } from "react-bootstrap";
+import { Navbar, Nav as BsNav, NavDropdown, Container, Form } from "react-bootstrap";
 import Areas from "../objects/areas/Areas";
 import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos";
 import Desarrollo from "../models/desarrollos/Desarrollo";
@@ -81,7 +81,7 @@ const Nav = () => {
     setShowNavCentred(false);
   };
 
-  const getLocalized = (field: any) => {
+  const getLocalized = (field: string | Record<string, string> | null | undefined) => {
     if (!field) return "";
     const isPlaceholder = (value: unknown) =>
       typeof value === "string" && value.trim().toLowerCase() === "latest";

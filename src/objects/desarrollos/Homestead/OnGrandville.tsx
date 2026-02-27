@@ -1,5 +1,4 @@
-﻿import React from "react";
-import Desarrollo from "../../../models/desarrollos/Desarrollo";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import Homestead from "../../areas/Homestead";
 
 export default function OnGrandville(lang: "en" | "es" = "es") {

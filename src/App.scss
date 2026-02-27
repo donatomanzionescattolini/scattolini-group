@@ -21,6 +21,8 @@
 
 * {
   box-sizing: border-box;
+  /* Ensure elements are clickable by default */
+  pointer-events: auto;
 }
 
 body,
@@ -28,13 +30,14 @@ html {
   margin: 0;
   padding: 0;
   background: var(--color-background);
-  color: var(--color-brown);
+  color: rgba(138, 105, 68, 0.85);
   font-family: "Cormorant Garamond", serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 1.5;
-  opacity: 0.92;
   -webkit-font-smoothing: antialiased;
+  /* Ensure body doesn't block interactions */
+  pointer-events: auto;
 }
 
 div {
@@ -249,6 +252,16 @@ nav {
   display: flex !important;
   flex-direction: row !important;
   align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar a,
+.navbar .nav-link,
+.navbar .dropdown-item,
+.navbar .btn {
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .navbar-brand {
@@ -370,7 +383,14 @@ nav {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   padding: var(--spacing-md);
-  z-index: 2;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.video-container .content a,
+.video-container .content .btn {
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .video-container .overlay {
@@ -381,6 +401,8 @@ nav {
   height: 100%;
   background-color: var(--color-overlay);
   opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Video iframe centering for project pages */
@@ -425,7 +447,7 @@ nav {
 }
 
 .btn-hero-primary {
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-brown) 100%);
   border: none;
   color: white;
   padding: 0.9rem 2rem;
@@ -434,13 +456,13 @@ nav {
   letter-spacing: 0.05em;
   border-radius: 50px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);
 }
 
 .btn-hero-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-  background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+  box-shadow: 0 6px 20px rgba(138, 105, 68, 0.5);
+  background: linear-gradient(135deg, var(--color-brown) 0%, var(--color-darkblue) 100%);
   color: white;
 }
 
@@ -722,12 +744,58 @@ video {
   margin-right: auto;
 }
 
-/* Ensure floating WhatsApp stays fixed and above content */
+/* Ensure floating WhatsApp stays fixed and only button/chat are clickable */
 .floating-whatsapp {
   position: fixed !important;
   bottom: 20px !important;
   right: 20px !important;
   z-index: 9998 !important;
+  /* Constrain wrapper to only contain its content */
+  width: auto !important;
+  height: auto !important;
+  max-width: 400px !important;
+  display: inline-block !important;
+  pointer-events: none !important;
+  /* Ensure no invisible parts extend beyond content */
+  overflow: visible !important;
+}
+
+/* Re-enable pointer events only on the actual interactive parts */
+.floating-whatsapp > *,
+.floating-whatsapp button,
+.floating-whatsapp [class*="button"],
+.floating-whatsapp [class*="chat"],
+.floating-whatsapp [class*="popup"],
+.floating-whatsapp [class*="notification"],
+.floating-whatsapp [class*="avatar"],
+.floating-whatsapp input,
+.floating-whatsapp textarea {
+  pointer-events: auto !important;
+}
+
+/* Ensure main content is always clickable */
+#root {
+  position: relative;
+}
+
+main,
+section,
+.container,
+.container-fluid {
+  position: relative;
+  pointer-events: auto;
+}
+
+/* Ensure links and buttons throughout the page are clickable */
+a,
+button,
+.btn,
+.nav-link,
+.dropdown-item,
+.card,
+[role="button"] {
+  pointer-events: auto !important;
+  cursor: pointer;
 }
 
 #asociados-row div {

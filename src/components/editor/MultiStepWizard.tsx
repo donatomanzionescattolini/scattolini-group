@@ -160,8 +160,13 @@ export default function MultiStepWizard({
 
     // Handle select fields that reference existing data
     if (fieldName === 'areaName') {
-      const fallbackLabel = t('pages.editor.fields.areaName', 'Area');
-      const currentValue = formData.areaName || formData.area?.name || '';
+      const fallbackLabel = String(t('pages.editor.fields.areaName', 'Area') ?? 'Area');
+      const currentValue =
+        typeof formData.areaName === 'string'
+          ? formData.areaName
+          : typeof formData.area?.name === 'string'
+            ? formData.area.name
+            : '';
       
       return (
         <div key={fieldName} className="mb-4">

@@ -1,7 +1,7 @@
 .floating-lang-toggle {
   position: fixed;
   bottom: 90px; /* Above the WhatsApp button */
-  right: 20px;
+  left: 20px;
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -54,7 +54,7 @@
 @media (max-width: 480px) {
   .floating-lang-toggle {
     bottom: 80px;
-    right: 15px;
+    left: 15px;
   }
 
   .floating-lang-toggle .lang-btn {
@@ -68,13 +68,13 @@
 @supports (padding: env(safe-area-inset-bottom)) {
   .floating-lang-toggle {
     bottom: calc(85px + env(safe-area-inset-bottom));
-    right: calc(20px + env(safe-area-inset-right));
+    left: calc(20px + env(safe-area-inset-left));
   }
 
   @media (max-width: 480px) {
     .floating-lang-toggle {
       bottom: calc(80px + env(safe-area-inset-bottom));
-      right: calc(15px + env(safe-area-inset-right));
+      left: calc(15px + env(safe-area-inset-left));
     }
   }
 }

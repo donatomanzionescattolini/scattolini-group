@@ -24,13 +24,13 @@ export default function LaMaré() {
                     <dd>2026</dd>
                 </dl>
                 <ul>
-                    <li>Hermosa costa ajardinada frente a la bahía</li>
+                    <li>Hermosa costa ajardinada frente a la bahÃ­a</li>
                     <li>Grandes terrazas con paredes de cristal perfectas para el entretenimiento</li>
                     <li>Garaje de estacionamiento seguro con amplio estacionamiento</li>
-                    <li>Acogedor vestíbulo de entrada y sal?n con portero las 24 horas</li>
+                    <li>Acogedor vestÃ­bulo de entrada y salón con portero las 24 horas</li>
                     <li>Cómodas trasteras privadas para cada residencia</li>
-                    <li>8 pisos con 33 residencias amplias, aireadas y llenas de luz, muchas de ellas con vistas a la bahía</li>
-                    <li>Distribuciones de planos de planta de 2 a 4 dormitorios que van desde 1,567 a mÁs de 4,200 pies cuadrados.</li>
+                    <li>8 pisos con 33 residencias amplias, aireadas y llenas de luz, muchas de ellas con vistas a la bahÃ­a</li>
+                    <li>Distribuciones de planos de planta de 2 a 4 dormitorios que van desde 1,567 a mÃ¡s de 4,200 pies cuadrados.</li>
                     <li>Muelles para botes disponibles para residents</li>
                 </ul>
             </>
@@ -40,10 +40,10 @@ export default function LaMaré() {
                 <ul>
                     <li>Elegantes y grandes alturas de techo de 9'2" a 10'2" en residencias selectas</li>
                     <li>Los ascensores privados llevan a los residentes directamente a sus hogares con un sistema de cerradura con llave</li>
-                    <li>Cocinas Poliform personalizadas con encimeras de piedra con un conjunto de electrodom?sticos Miele de primera línea, que incluye sistema de caf? y nevera para vinos</li>
+                    <li>Cocinas Poliform personalizadas con encimeras de piedra con un conjunto de electrodomésticos Miele de primera lÃ­nea, que incluye sistema de café y nevera para vinos</li>
                     <li>Elegantes accesorios italianos en cocinas y baños de by Antonio Lupi</li>
-                    <li>Vistas panor?micas de la bahía a trav?s de ventanas de piso a techo de 9 pies</li>
-                    <li>2 amplios Áticos, cada uno con piscinas privadas en la azotea</li>
+                    <li>Vistas panorÃ¡micas de la bahÃ­a a través de ventanas de piso a techo de 9 pies</li>
+                    <li>2 amplios Ã¡ticos, cada uno con piscinas privadas en la azotea</li>
                     <li>Ducha doble y bañera profunda en los baños principales</li>
                 </ul>
             </>
@@ -52,26 +52,26 @@ export default function LaMaré() {
             <dl><dt>Colección Regency</dt>
                 <dd><ul>
 
-                    <li>Espacio al aire libre frente a la bahía con jardines y ?reas de descanso</li>
-                    <li>Gimnasio de última generaci?n</li>
+                    <li>Espacio al aire libre frente a la bahÃ­a con jardines y Ã¡reas de descanso</li>
+                    <li>Gimnasio de Ãºltima generación</li>
                     <li>Instalaciones de spa con vapor y sauna</li>
-                    <li>Terraza ajardinada de la piscina en la azotea tipo centro turístico con piscina infinita, jacuzzi, tumbonas y tumbonas</li>
+                    <li>Terraza ajardinada de la piscina en la azotea tipo centro turÃ­stico con piscina infinita, jacuzzi, tumbonas y tumbonas</li>
                     <li>Bar en la azotea y cocina de verano</li>
                     <li>Salón residencial para reuniones grupales y proyecciones</li>
                     <li>Muelles privados disponibles para los residentes</li>
-                    <li>Vestíbulo de entrada y sal?n de bienvenida</li>
+                    <li>VestÃ­bulo de entrada y salón de bienvenida</li>
                     <li>Los ascensores semiprivados y privados llevan a los residentes directamente a sus hogares con sistema de cerradura con llave</li>
                     <li>Cómodas trasteras privadas para cada residencia</li>
-                    <li>Garaje de estacionamiento con 69 espacios de estacionamiento (2 espacios por residencia), así como estacionamiento adicional cerrado y cerrado en la planta baja</li>
+                    <li>Garaje de estacionamiento con 69 espacios de estacionamiento (2 espacios por residencia), asÃ­ como estacionamiento adicional cerrado y cerrado en la planta baja</li>
                 </ul></dd>
                 <dt>Colección Signature</dt>
                 <dd><ul>
-                    <li>Espacio al aire libre frente a la bahía con paisajismo y ?reas de descanso</li>
+                    <li>Espacio al aire libre frente a la bahÃ­a con paisajismo y Ã¡reas de descanso</li>
                     <li>Bodega</li>
                     <li>Gran habitación para el disfrute de amigos y familiares</li>
-                    <li>Terraza ajardinada de la piscina en la azotea tipo centro turístico con piscina, jacuzzi, tumbonas, tumbonas, cocina al aire libre y bar / sal?n</li>
+                    <li>Terraza ajardinada de la piscina en la azotea tipo centro turÃ­stico con piscina, jacuzzi, tumbonas, tumbonas, cocina al aire libre y bar / salón</li>
                     <li>Muelles privados disponibles para los residentes</li>
-                    <li>Vestíbulo de entrada y sal?n de bienvenida</li>
+                    <li>VestÃ­bulo de entrada y salón de bienvenida</li>
                     <li>Los ascensores semiprivados y privados llevan a los residentes directamente a sus hogares con sistema de cerradura con llave</li>
                     <li>Cómodas trasteras privadas para cada residencia</li>
                     <li>Garaje de estacionamiento seguro con amplio estacionamiento</li>
@@ -80,7 +80,7 @@ export default function LaMaré() {
         ),
     };
     LaMaréObject.introduccion = [
-        "La Mar? se compone de dos exquisitas torres que ofrecen una experiencia de vida extraordinaria. El Regency Collection es un moderno edificio de cristal definido por su sorprendente belleza, sostenibilidad y refinada sensaci?n de comodidad, con un interior en el que destaca una paleta suave y natural. La Signature Collection, por su parte, es una estructura contempor?nea de impresionante dise?o con interiores armoniosos.Aquí, la exclusividad es la norma, ya que cada unidad cuenta con ventanas envolventes de suelo a techo que brindan una vista clara de su impresionante est?tica n?utica.Con componentes aerodin?micos, elementos tropicales y el generoso uso de piedra color arena, travertino y maderas aclaradas, los residentes disfrutan de privacidad y se ven envueltos en una atm?sfera estilo resort",
+        "La Maré se compone de dos exquisitas torres que ofrecen una experiencia de vida extraordinaria. El Regency Collection es un moderno edificio de cristal definido por su sorprendente belleza, sostenibilidad y refinada sensación de comodidad, con un interior en el que destaca una paleta suave y natural. La Signature Collection, por su parte, es una estructura contemporÃ¡nea de impresionante diseño con interiores armoniosos.AquÃ­, la exclusividad es la norma, ya que cada unidad cuenta con ventanas envolventes de suelo a techo que brindan una vista clara de su impresionante estética nÃ¡utica.Con componentes aerodinÃ¡micos, elementos tropicales y el generoso uso de piedra color arena, travertino y maderas aclaradas, los residentes disfrutan de privacidad y se ven envueltos en una atmósfera estilo resort",
     ];
     LaMaréObject.titulo = "La Maré";
     LaMaréObject.slogan = <p>Bay Harbor Islands<br/><small><em>Espacio y comodidad reinventados</em></small></p>;

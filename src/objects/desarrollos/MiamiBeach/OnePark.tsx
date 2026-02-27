@@ -1,6 +1,6 @@
 ﻿import MiamiBeach from "../../areas/MiamiBeach.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-export default function OnePark(lang: "en" | "es" = "es") {
+export default function OnePark() {
     const OneParkObject = new Desarrollo();
     OneParkObject.nombre = "one-park";
 
@@ -26,7 +26,7 @@ export default function OnePark(lang: "en" | "es" = "es") {
                     <li>Hall de entrada residencial privado y porte-cochere.</li>
                     <li>
                         Garaje de estacionamiento seguro, con estaciones de carga de
-                        vehículos el?ctricos.
+                        vehÃ­culos eléctricos.
                     </li>
                     <li>Seguridad profesional y videovigilancia las 24 horas.</li>
                 </ul>
@@ -42,40 +42,40 @@ export default function OnePark(lang: "en" | "es" = "es") {
                     </li>
                     <li>
                         Entrada cerrada y estacionamiento en garaje seguro con
-                        estaciones de carga de vehículos el?ctricos
+                        estaciones de carga de vehÃ­culos eléctricos
                     </li>
-                    <li>Porte Cochère residencial privado de entrega y vestíbulo</li>
+                    <li>Porte CochÃ¨re residencial privado de entrega y vestÃ­bulo</li>
                     <li>Seguridad profesional y videovigilancia las 24 horas</li>
                     <li>
-                        Vistas panor?micas que abarcan el Parque Estatal del Río Oleta,
-                        el Océano AtlÁntico, el horizonte de Miami y la Laguna SoLé
+                        Vistas panorÃ¡micas que abarcan el Parque Estatal del RÃ­o Oleta,
+                        el Océano AtlÃ¡ntico, el horizonte de Miami y la Laguna SoLé
                     </li>
                     <li>
                         Planos de planta abiertos espaciosos y completamente terminados
-                        con alturas de techo de mÁs de 9 pies
+                        con alturas de techo de mÃ¡s de 9 pies
                     </li>
                     <li>
                         Balcones envolventes privados de gran tamaño, con piso
                         terminado, con barandillas de vidrio sin costuras
                     </li>
                     <li>
-                        Suite principal con puertas de núcleo s?lido y vestidores
+                        Suite principal con puertas de nÃºcleo sólido y vestidores
                         grandes para él y para ella
                     </li>
                     <li>Paredes insonorizadas en todas partes</li>
-                    <li>Preparado para la tecnología inteligente</li>
+                    <li>Preparado para la tecnologÃ­a inteligente</li>
                     <li>Gabinetes de cocina italianos de Ital Kraft</li>
                     <li>Encimeras y salpicaderos de piedra</li>
                     <li>Electrodomésticos Sub-Zero y Wolf</li>
                     <li>Lavadora y secadora silenciosas de carga frontal</li>
                     <li>Tocadores de baño italianos de Ital Kraft</li>
-                    <li>Grifería de ba?o de estilo europeo</li>
+                    <li>GriferÃ­a de baño de estilo europeo</li>
                     <li>
                         Duchas sin marco, con mampara de vidrio y cabezales de ducha de
                         mano
                     </li>
                     <li>
-                        Ba?o principal con cuarto húmedo y ba?era profunda en unidades
+                        Baño principal con cuarto hÃºmedo y bañera profunda en unidades
                         selectas
                     </li>
                 </ul>
@@ -85,7 +85,7 @@ export default function OnePark(lang: "en" | "es" = "es") {
             <>
                 <ul>
                     <li>
-                        Gimnasio de última generaci?n totalmente equipado, con vista a
+                        Gimnasio de Ãºltima generación totalmente equipado, con vista a
                         ONE Beach Club
                     </li>
                     <li>
@@ -99,7 +99,7 @@ export default function OnePark(lang: "en" | "es" = "es") {
                     </li>
                     <li>Sala de juegos para adolescentes</li>
                     <li>
-                        6º piso Sal?n social interior / exterior con vista a ONE Beach
+                        6Âº piso Salón social interior / exterior con vista a ONE Beach
                         Club
                     </li>
                     <li>Salón de negocios ejecutivo con espacio de coworking</li>
@@ -120,12 +120,12 @@ export default function OnePark(lang: "en" | "es" = "es") {
                         pickleball
                     </li>
                     <li>
-                        Jardín de medio acre dise?ado por el arquitecto paisajista de
+                        JardÃ­n de medio acre diseñado por el arquitecto paisajista de
                         renombre internacional Enzo Enea con pasarelas exuberantemente
                         ajardinadas que conducen a través de ONE Jardin a ONE Beach Club
                     </li>
                     <li>
-                        Club de playa privado con playas de arena y Crystal Lagoon de
+                        Club de playa privado con playas de arena y Crystal Lagoonâ„¢ de
                         siete acres
                     </li>
                     <li>
@@ -135,19 +135,19 @@ export default function OnePark(lang: "en" | "es" = "es") {
                     <li>Cabañas de playa</li>
                     <li>Lugares de picnic</li>
                     <li>
-                        Servicio de bocadillos, toallas y bebidas estilo conserjería
+                        Servicio de bocadillos, toallas y bebidas estilo conserjerÃ­a
                     </li>
                     <li>Asistentes de piscina y servicio de toallas</li>
                     <li>
                         Clases de bienestar, que incluyen yoga, pilates y spinning para
-                        la búsqueda de una vida saludable
+                        la bÃºsqueda de una vida saludable
                     </li>
                 </ul>
             </>
         ),
     };
     OneParkObject.introduccion = [
-        "One Park Tower by Turnberry es un moderno condominio residencial, que cuenta con 303 residencias de lujo en configuraciones de 1, 2 y 3 dormitorios. Una de sus principales características es su programa de alquiler flexible, que permite una estancia mínima de 30 días 12 veces al a?o. El dise?o minimalista de Arquitectonica en esta torre de 31 pisos permite que entre mucha luz natural en todas las residencias y ?ticos. El aclamado estudio Meyer Davis trabaj? en el dise?o interior de One Park Tower; y el hermoso dise?o paisajístico es obra maestra de Enzo Enea. Cada residencia tiene su propia filosofía de dise?o, manteniendo un enfoque de dise?o muy minimalista y un ambiente relajante como en cualquier otro lugar del sur de Florida. Este edificio est? ubicado en SoL? Mia, una comunidad planificada ubicada en North Miami, Florida, que cuenta con una laguna privada y una playa privada. La mejor característica de One Park Tower es la ubicaci?n: el condominio est? a pocos minutos de Bay Harbor Islands y Sunny Isles Beach.      ",
+        "One Park Tower by Turnberry es un moderno condominio residencial, que cuenta con 303 residencias de lujo en configuraciones de 1, 2 y 3 dormitorios. Una de sus principales caracterÃ­sticas es su programa de alquiler flexible, que permite una estancia mÃ­nima de 30 dÃ­as 12 veces al año. El diseño minimalista de Arquitectonica en esta torre de 31 pisos permite que entre mucha luz natural en todas las residencias y Ã¡ticos. El aclamado estudio Meyer Davis trabajó en el diseño interior de One Park Tower; y el hermoso diseño paisajÃ­stico es obra maestra de Enzo Enea. Cada residencia tiene su propia filosofÃ­a de diseño, manteniendo un enfoque de diseño muy minimalista y un ambiente relajante como en cualquier otro lugar del sur de Florida. Este edificio estÃ¡ ubicado en SoLé Mia, una comunidad planificada ubicada en North Miami, Florida, que cuenta con una laguna privada y una playa privada. La mejor caracterÃ­stica de One Park Tower es la ubicación: el condominio estÃ¡ a pocos minutos de Bay Harbor Islands y Sunny Isles Beach.      ",
     ];
     OneParkObject.titulo = "One Park";
     OneParkObject.slogan = <em>by Turnberry</em>;
