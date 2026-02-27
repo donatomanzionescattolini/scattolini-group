@@ -76,7 +76,6 @@ export default function Page() {
         </Row>
         {/* <FloatingWhatsApp accountName='Scattolini Group' phoneNumber="+13056139338"></FloatingWhatsApp> */}
       </Row>
-      )){" "}
       {show && (
         <Row
           id="contact-form"

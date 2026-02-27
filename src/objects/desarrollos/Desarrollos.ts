@@ -144,6 +144,11 @@ desarrolloMap.push({
 });
 
 desarrolloMap.push({
+  area: SouthMiami(),
+  des: new Set([]),
+});
+
+desarrolloMap.push({
   area: BayHarbor(),
   des: new Set([LaMaré(), LaBaia(), Origin(), TheWell()]),
 });
@@ -159,10 +164,6 @@ desarrolloMap.push({
     WaldorfAstoria(),
     Jem(),
   ]),
-});
-desarrolloMap.push({
-  area: SouthMiami(),
-  des: new Set([]),
 });
 desarrolloMap.push({
   area: Edgewater(),

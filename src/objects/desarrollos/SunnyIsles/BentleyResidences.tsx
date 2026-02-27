@@ -47,7 +47,7 @@ export default function BentleyResidences(lang: "en" | "es" = "es") {
         amenidades: (
             <>
                 <ul>
-                    <li>Gimnasio de última generaci�n</li>
+                    <li>Gimnasio de última generaci?n</li>
                     <li>Piscina con cabañas</li>
                     <li>Balneario</li>
                     <li>Restaurante</li>

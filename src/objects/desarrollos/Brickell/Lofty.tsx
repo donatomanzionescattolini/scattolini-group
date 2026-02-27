@@ -13,9 +13,9 @@ export default function Lofty(lang: "en" | "es" = "es") {
         <br />
         <strong>{getLocalizedField("caracteristicas.residencias.title", "Las Residencias")}</strong>
         <br />
-        <li>{getLocalizedField("caracteristicas.residencias.li1", "Residencias urbanas de lujo con dise�os abiertos modernos desde 485SF � 930 SF")}</li>
+        <li>{getLocalizedField("caracteristicas.residencias.li1", "Residencias urbanas de lujo con dise?os abiertos modernos desde 485SF ? 930 SF")}</li>
         <li>{getLocalizedField("caracteristicas.residencias.li2", "Todas las residencias se entregan completamente terminadas y amuebladas especialmente seleccionadas por INC.")}</li>
-        <li>{getLocalizedField("caracteristicas.residencias.li3", "Vistas panor�micas del río Miami y el horizonte de Miami")}</li>
+        <li>{getLocalizedField("caracteristicas.residencias.li3", "Vistas panor?micas del río Miami y el horizonte de Miami")}</li>
       </ul>
     ),
     edificio: (

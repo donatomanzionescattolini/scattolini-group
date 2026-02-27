@@ -31,7 +31,7 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                 </li>
                 <li>
                     Cada residencia cuenta con ventanas de piso a techo con vistas
-                    directas a la bahía y al oc�ano." ";
+                    directas a la bahía y al oc?ano." ";
                 </li>
                 <li>Todas las residencias cuentan con habitaciones con baño.</li>
                 <li>
@@ -52,7 +52,7 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                     las Áreas de estar y con el suite principal
                 </li>
                 <li>
-                    Dise�o fluido único que brinda a cada residencia vistas al mar
+                    Dise?o fluido único que brinda a cada residencia vistas al mar
                     orientadas al este también como vistas del atardecer orientadas al
                     oeste desde los dormitorios.
                 </li>
@@ -61,7 +61,7 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                     estudio o sala multimedia." ";
                 </li>
 
-                <li>Incluye b�vedas de garaje privadas únicas para 2+3 coches</li>
+                <li>Incluye b?vedas de garaje privadas únicas para 2+3 coches</li>
             </ul>
         ),
         amenidades: (
@@ -76,7 +76,7 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                     <li>y almacenamiento</li>
                     <li>Acceso a Baywalk a lo largo del agua</li>
                     <li>Restaurante con vistas a la bahía</li>
-                    <li>Caf� con vistas a la bahía y terrazas al aire libre</li>
+                    <li>Caf? con vistas a la bahía y terrazas al aire libre</li>
                     <li>Servicios de valet parking</li>
                     <li>Conserje personal y recepcionista las 24 horas</li>
                     <li>Sala de paquetes para entregas</li>
@@ -84,7 +84,7 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                     <li>Piscina lounge</li>
                     <li>Zonas de solÁrium</li>
                     <li>Spa con hidromasaje y terraza solarium privada</li>
-                    <li>Jardín de meditaci�n</li>
+                    <li>Jardín de meditaci?n</li>
                     <li>
                         Servicio de tabla de paddle surf con guarda y acceso a privado
                     </li>
@@ -106,7 +106,7 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                     <br/>
                     <strong>Al Aire Libre</strong>
                     <br/>
-                    <li>Piscina de tama�o semiolímpico</li>
+                    <li>Piscina de tama?o semiolímpico</li>
                     <li>Spa con hidromasaje al aire libre</li>
                     <li>Divanes junto a la piscina</li>
                     <li>Zona de chapoteo para niños</li>
@@ -128,14 +128,14 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                     <strong>Gimnasio y Spa</strong>
                     <br/>
                     <li>
-                        Gimnasio de última generaci�n con vistas al nivel del jardín
+                        Gimnasio de última generaci?n con vistas al nivel del jardín
                     </li>
                     <li>con zona de ejercicio exterior</li>
                     <li>Canchas de tenis</li>
                     <li>Pista de pÁdel</li>
                     <li>Cancha de baloncesto</li>
                     <li>
-                        Área de sal�n de yoga con jardín de meditaci�n al aire libre
+                        Área de sal?n de yoga con jardín de meditaci?n al aire libre
                     </li>
                     <li>Zona de relajación Spa</li>
                     <li>Salas y servicios de masajes exclusivos</li>

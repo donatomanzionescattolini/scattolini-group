@@ -104,9 +104,9 @@ a:active {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background-color: var(--color-brown);
+  background-color: transparent;
   border-color: var(--color-brown);
-  color: var(--color-background);
+  color: var(--color-brown);
   box-shadow: none;
 }
 
@@ -126,25 +126,45 @@ a:active {
 
 /* Language toggle button keeps highlighted hover */
 .lang-toggle-btn.btn-primary {
-  background-color: var(--color-brown);
-  border-color: var(--color-brown);
-  color: var(--color-background);
+  background-color: var(--color-brown) !important;
+  border-color: var(--color-brown) !important;
+  color: var(--color-background) !important;
+  --bs-btn-bg: var(--color-brown);
+  --bs-btn-border-color: var(--color-brown);
+  --bs-btn-color: var(--color-background);
+  --mdb-btn-bg: var(--color-brown);
+  --mdb-btn-border-color: var(--color-brown);
+  --mdb-btn-color: var(--color-background);
 }
 
 .lang-toggle-btn.btn-primary:hover,
 .lang-toggle-btn.btn-primary:focus,
 .lang-toggle-btn.btn-primary:active {
-  background-color: var(--color-brown-light);
-  border-color: var(--color-brown-light);
-  color: var(--color-background);
+  background-color: var(--color-brown-light) !important;
+  border-color: var(--color-brown-light) !important;
+  color: var(--color-background) !important;
+  --bs-btn-hover-bg: var(--color-brown-light);
+  --bs-btn-hover-border-color: var(--color-brown-light);
+  --mdb-btn-hover-bg: var(--color-brown-light);
+  --mdb-btn-hover-border-color: var(--color-brown-light);
 }
 
 .lang-toggle-btn.btn-outline-primary:hover,
 .lang-toggle-btn.btn-outline-primary:focus,
 .lang-toggle-btn.btn-outline-primary:active {
-  background-color: var(--color-brown);
-  border-color: var(--color-brown);
-  color: var(--color-background);
+  background-color: var(--color-brown) !important;
+  border-color: var(--color-brown) !important;
+  color: var(--color-background) !important;
+  --bs-btn-hover-bg: var(--color-brown);
+  --bs-btn-hover-border-color: var(--color-brown);
+  --mdb-btn-hover-bg: var(--color-brown);
+  --mdb-btn-hover-border-color: var(--color-brown);
+}
+
+.img-thumbnail {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 
 .card {
@@ -366,6 +386,7 @@ nav {
 .white-block {
   width: 100%;
   padding: 7% 1% 10% 1%;
+  padding-top: 120px;
   color: var(--color-darkblue);
 }
 

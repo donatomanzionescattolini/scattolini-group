@@ -9,7 +9,7 @@ export default function FloridaCity() {
   floridaDto.name = "florida-city";
   floridaDto.titulo = {
     es: "Florida City",
-    en:"latest"
+    en: "Florida City"
   };
   floridaDto.descripcion = {
     es: [
@@ -21,7 +21,7 @@ export default function FloridaCity() {
   };
   floridaDto.slogan = {
     es: "Puerta de Entrada a los Cayos de Florida y los Everglades",
-    en:"latest"
+    en: "Gateway to the Florida Keys and the Everglades"
   };
   floridaDto.numberOfImages = 15;
   return floridaDto;

@@ -26,7 +26,7 @@ export default function OnePark(lang: "en" | "es" = "es") {
                     <li>Hall de entrada residencial privado y porte-cochere.</li>
                     <li>
                         Garaje de estacionamiento seguro, con estaciones de carga de
-                        vehículos el�ctricos.
+                        vehículos el?ctricos.
                     </li>
                     <li>Seguridad profesional y videovigilancia las 24 horas.</li>
                 </ul>
@@ -42,12 +42,12 @@ export default function OnePark(lang: "en" | "es" = "es") {
                     </li>
                     <li>
                         Entrada cerrada y estacionamiento en garaje seguro con
-                        estaciones de carga de vehículos el�ctricos
+                        estaciones de carga de vehículos el?ctricos
                     </li>
                     <li>Porte Cochère residencial privado de entrega y vestíbulo</li>
                     <li>Seguridad profesional y videovigilancia las 24 horas</li>
                     <li>
-                        Vistas panor�micas que abarcan el Parque Estatal del Río Oleta,
+                        Vistas panor?micas que abarcan el Parque Estatal del Río Oleta,
                         el Océano AtlÁntico, el horizonte de Miami y la Laguna SoLé
                     </li>
                     <li>
@@ -59,7 +59,7 @@ export default function OnePark(lang: "en" | "es" = "es") {
                         terminado, con barandillas de vidrio sin costuras
                     </li>
                     <li>
-                        Suite principal con puertas de núcleo s�lido y vestidores
+                        Suite principal con puertas de núcleo s?lido y vestidores
                         grandes para él y para ella
                     </li>
                     <li>Paredes insonorizadas en todas partes</li>
@@ -69,13 +69,13 @@ export default function OnePark(lang: "en" | "es" = "es") {
                     <li>Electrodomésticos Sub-Zero y Wolf</li>
                     <li>Lavadora y secadora silenciosas de carga frontal</li>
                     <li>Tocadores de baño italianos de Ital Kraft</li>
-                    <li>Grifería de ba�o de estilo europeo</li>
+                    <li>Grifería de ba?o de estilo europeo</li>
                     <li>
                         Duchas sin marco, con mampara de vidrio y cabezales de ducha de
                         mano
                     </li>
                     <li>
-                        Ba�o principal con cuarto húmedo y ba�era profunda en unidades
+                        Ba?o principal con cuarto húmedo y ba?era profunda en unidades
                         selectas
                     </li>
                 </ul>
@@ -85,7 +85,7 @@ export default function OnePark(lang: "en" | "es" = "es") {
             <>
                 <ul>
                     <li>
-                        Gimnasio de última generaci�n totalmente equipado, con vista a
+                        Gimnasio de última generaci?n totalmente equipado, con vista a
                         ONE Beach Club
                     </li>
                     <li>
@@ -99,7 +99,7 @@ export default function OnePark(lang: "en" | "es" = "es") {
                     </li>
                     <li>Sala de juegos para adolescentes</li>
                     <li>
-                        6º piso Sal�n social interior / exterior con vista a ONE Beach
+                        6º piso Sal?n social interior / exterior con vista a ONE Beach
                         Club
                     </li>
                     <li>Salón de negocios ejecutivo con espacio de coworking</li>
@@ -120,12 +120,12 @@ export default function OnePark(lang: "en" | "es" = "es") {
                         pickleball
                     </li>
                     <li>
-                        Jardín de medio acre dise�ado por el arquitecto paisajista de
+                        Jardín de medio acre dise?ado por el arquitecto paisajista de
                         renombre internacional Enzo Enea con pasarelas exuberantemente
                         ajardinadas que conducen a través de ONE Jardin a ONE Beach Club
                     </li>
                     <li>
-                        Club de playa privado con playas de arena y Crystal Lagoon�� de
+                        Club de playa privado con playas de arena y Crystal Lagoon de
                         siete acres
                     </li>
                     <li>
@@ -147,7 +147,7 @@ export default function OnePark(lang: "en" | "es" = "es") {
         ),
     };
     OneParkObject.introduccion = [
-        "One Park Tower by Turnberry es un moderno condominio residencial, que cuenta con 303 residencias de lujo en configuraciones de 1, 2 y 3 dormitorios. Una de sus principales características es su programa de alquiler flexible, que permite una estancia mínima de 30 días 12 veces al a�o. El dise�o minimalista de Arquitectonica en esta torre de 31 pisos permite que entre mucha luz natural en todas las residencias y �ticos. El aclamado estudio Meyer Davis trabaj� en el dise�o interior de One Park Tower; y el hermoso dise�o paisajístico es obra maestra de Enzo Enea. Cada residencia tiene su propia filosofía de dise�o, manteniendo un enfoque de dise�o muy minimalista y un ambiente relajante como en cualquier otro lugar del sur de Florida. Este edificio est� ubicado en SoL� Mia, una comunidad planificada ubicada en North Miami, Florida, que cuenta con una laguna privada y una playa privada. La mejor característica de One Park Tower es la ubicaci�n: el condominio est� a pocos minutos de Bay Harbor Islands y Sunny Isles Beach.      ",
+        "One Park Tower by Turnberry es un moderno condominio residencial, que cuenta con 303 residencias de lujo en configuraciones de 1, 2 y 3 dormitorios. Una de sus principales características es su programa de alquiler flexible, que permite una estancia mínima de 30 días 12 veces al a?o. El dise?o minimalista de Arquitectonica en esta torre de 31 pisos permite que entre mucha luz natural en todas las residencias y ?ticos. El aclamado estudio Meyer Davis trabaj? en el dise?o interior de One Park Tower; y el hermoso dise?o paisajístico es obra maestra de Enzo Enea. Cada residencia tiene su propia filosofía de dise?o, manteniendo un enfoque de dise?o muy minimalista y un ambiente relajante como en cualquier otro lugar del sur de Florida. Este edificio est? ubicado en SoL? Mia, una comunidad planificada ubicada en North Miami, Florida, que cuenta con una laguna privada y una playa privada. La mejor característica de One Park Tower es la ubicaci?n: el condominio est? a pocos minutos de Bay Harbor Islands y Sunny Isles Beach.      ",
     ];
     OneParkObject.titulo = "One Park";
     OneParkObject.slogan = <em>by Turnberry</em>;

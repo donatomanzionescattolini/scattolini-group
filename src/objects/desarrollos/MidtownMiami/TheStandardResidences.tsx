@@ -5,7 +5,7 @@ TheStandardResidences.area = MidtownMiami();
 TheStandardResidences.titulo = "The Standard Residences";
 TheStandardResidences.nombre = "the-standard-residences";
 TheStandardResidences.introduccion = [
-  "The Standard Residences cuenta con 12 pisos, con 228 residencias que van desde estudios hasta configuraciones de 2 dormitorios. Este es el primer proyecto residencial de la famosa marca de hoteles, The Standard. Todas las ubicaciones tienen que ver con el ambiente y la experiencia... Disfruta del ambiente y la cultura únicos de la marca como nunca antes. Las comodidades incluyen Internet de alta velocidad, amplio vestíbulo, spa para mascotas, terraza en la azotea con piscina y cabañas, sala de proyección privada, piso social, gimnasio, espacios de trabajo conjunto y m�s. Las residencias est�ndar Midtown Miami est�n a pasos de todo; Midtown es el vecindario m�s amigable para los peatones de Miami, conectado con el Design District en el norte y Wynwood en el sur. Este increíble condominio no solo fue diseñado por la galardonada firma Arquitectonica, sino que también ofrece increíbles vistas de la ciudad.",
+  "The Standard Residences cuenta con 12 pisos, con 228 residencias que van desde estudios hasta configuraciones de 2 dormitorios. Este es el primer proyecto residencial de la famosa marca de hoteles, The Standard. Todas las ubicaciones tienen que ver con el ambiente y la experiencia... Disfruta del ambiente y la cultura únicos de la marca como nunca antes. Las comodidades incluyen Internet de alta velocidad, amplio vestíbulo, spa para mascotas, terraza en la azotea con piscina y cabañas, sala de proyección privada, piso social, gimnasio, espacios de trabajo conjunto y m?s. Las residencias est?ndar Midtown Miami est?n a pasos de todo; Midtown es el vecindario m?s amigable para los peatones de Miami, conectado con el Design District en el norte y Wynwood en el sur. Este increíble condominio no solo fue diseñado por la galardonada firma Arquitectonica, sino que también ofrece increíbles vistas de la ciudad.",
 ];
 TheStandardResidences.numberOfImages = 25;
 TheStandardResidences.direccion = "3100 NE 1st Avenue, Miami, FL 33137";
@@ -93,8 +93,8 @@ TheStandardResidences.caracteristicas = {
   <ul>
 <li>Los acabados instalados a la medida, diseñados por Urban Robot, elevan la experiencia humana y brindan un sentido de pertenencia</li>
 <li>Los elegantes planos de planta abiertos y los techos de nueve pies (2.74 m) de altura invitan el ingreso de la luz natural a través de las puertas corredizas de vidrio enteras </li>
-<li>Las cocinas contempor�neas abiertas con electrodomésticos de primera línea son elegantes y funcionales </li>
-<li>El piso de cer�mica de primera calidad inspirado en madera ofrece una sofisticación atemporal </li>
+<li>Las cocinas contempor?neas abiertas con electrodomésticos de primera línea son elegantes y funcionales </li>
+<li>El piso de cer?mica de primera calidad inspirado en madera ofrece una sofisticación atemporal </li>
 <li>Los baños a la medida se destacan por envidiables tocadores dobles y ducha con dos rociadores; todo acentuado por elegantes accesorios en tonos de bronce </li>
 <li>Lavadora y secadora de alta eficiencia </li>
 <li>Las terrazas privadas al aire libre en ciertas residencias se conjugan a la perfección con la energía vibrante de Midtown Miami</li>

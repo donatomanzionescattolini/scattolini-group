@@ -7,11 +7,11 @@ export default function BayHarbor(): Area {
     bayHarbor.name = "bay-harbor";
     bayHarbor.titulo = {
         es: "Bay Harbor Islands",
-        en:"latest"
+        en: "Bay Harbor Islands"
     };
     bayHarbor.slogan = {
         es: "El Tesoro Inadvertido de la Bahía",
-        en:"latest"
+        en: "The Unseen Treasure of the Bay"
     };
     bayHarbor.descripcion = {
         es: [

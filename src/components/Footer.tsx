@@ -19,26 +19,35 @@ export default function Footer() {
     return field;
   };
 
+  // Filter areas to only include those with developments
+  const areasWithDesarrollos = areas.filter((area) => {
+    const desarrollos = getDesarrollosForArea(area);
+    return desarrollos && desarrollos.size > 0;
+  });
+
   return (
     <MDBFooter className="font-small bg-light pt-4">
-      <div className="container text-center text-md-left">
-        <div className="row">
-          {areas.map((area) => (
-            <div key={area.name} className="col-md-3 mb-md-0 mb-3">
-              <h5 className="text-uppercase">{getLocalized(area.titulo)}</h5>
-              <ul className="list-unstyled">
-                {[...getDesarrollosForArea(area)].map((des) => (
-                  <li key={des.nombre ?? des.titulo ?? Math.random()}>
-                    <a href={`/desarrollos/${des.nombre}/`}>
-                      {typeof des.titulo === "object"
-                        ? getLocalized(des.titulo)
-                        : des.titulo || des.nombre}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+      <div className="container text-center">
+        <div className="row justify-content-center">
+          {areasWithDesarrollos.map((area) => {
+            const desarrollos = getDesarrollosForArea(area);
+            return (
+              <div key={area.name} className="col-auto mb-md-0 mb-3 text-center px-4">
+                <h5 className="text-uppercase">{getLocalized(area.titulo)}</h5>
+                <ul className="list-unstyled text-center">
+                  {[...desarrollos].map((des) => (
+                    <li key={des.nombre ?? des.titulo ?? Math.random()}>
+                      <a href={`/desarrollos/${des.nombre}/`}>
+                        {typeof des.titulo === "object"
+                          ? getLocalized(des.titulo)
+                          : des.titulo || des.nombre}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="text-center py-3">

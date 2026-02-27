@@ -14,7 +14,7 @@ import React from "react";export default function CasaBella(lang: "en" | "es" = 
             <ul>
                 <li>Número de pisos:</li>
                 <li>Número de unidades: 306</li>
-                <li>Ubicaci�n: 1444 Biscayne Blvd, Miami, FL 33132 ·</li>
+                <li>Ubicaci?n: 1444 Biscayne Blvd, Miami, FL 33132 ·</li>
                 <li>Habitaciones por unidad: 1-5 dormitorios</li>
             </ul>
         ),
@@ -29,7 +29,7 @@ import React from "react";export default function CasaBella(lang: "en" | "es" = 
                     para mejorar la seguridad
                 </li>
                 <li>
-                    La mayoría de las unidades disfrutan de amplios dise�os de paso
+                    La mayoría de las unidades disfrutan de amplios dise?os de paso
                     con techos altos de 10 pies y vistas impresionantes de la Bahía de
                     Biscayne, el horizonte del centro de Miami y las impresionantes
                     puestas de sol desde el oeste
@@ -42,7 +42,7 @@ import React from "react";export default function CasaBella(lang: "en" | "es" = 
                     seleccionados individualmente por Piero Lissoni
                 </li>
                 <li>
-                    El paquete de electrodom�sticos de vidrio negro de primera línea
+                    El paquete de electrodom?sticos de vidrio negro de primera línea
                     incluye refrigerador / congelador Sub-Zero integrado de 36
                     pulgadas con paneles, microondas de cajón de transición Wolf,
                     lavavajillas silencioso, horno de convección incorporado Wolf,
@@ -50,7 +50,7 @@ import React from "react";export default function CasaBella(lang: "en" | "es" = 
                 </li>
                 <li>
                     Fregadero de acero inoxidable de gran tamaño de radio cero con
-                    caj�n de grifo extraíble de dise�o europeo de una sola palanca
+                    caj?n de grifo extraíble de dise?o europeo de una sola palanca
                 </li>
                 <li>
                     Baños principales diseñados por Piero Lissoni con gabinetes y
@@ -74,7 +74,7 @@ import React from "react";export default function CasaBella(lang: "en" | "es" = 
                 <li>Amplia sala de fiestas con vistas a la bahía de Biscayne</li>
                 <li>cine</li>
                 <li>Sala de vinos</li>
-                <li>Colecci�n de arte de calidad museística</li>
+                <li>Colecci?n de arte de calidad museística</li>
                 <li>
                     Centro de negocios totalmente equipado, incluyendo sala de
                     conferencias

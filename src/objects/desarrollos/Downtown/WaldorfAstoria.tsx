@@ -24,7 +24,7 @@ export default function WaldorfAstoria(lang: "en" | "es" = "es") {
                 </li>
                 <li>Interiores creados por la firma de diseño BAMO</li>
                 <li>Callejón del pavo real</li>
-                <li>Piscina con cafetería al aire libre y caba�as privadas</li>
+                <li>Piscina con cafetería al aire libre y caba?as privadas</li>
                 <li>Bar privado / sala de degustación de vinos</li>
                 <li>Restaurante de autor</li>
                 <li>Restaurante todo el día Brasserie</li>
@@ -36,14 +36,14 @@ export default function WaldorfAstoria(lang: "en" | "es" = "es") {
                     Gimnasio de vanguardia con estudios de entrenamiento privados
                 </li>
                 <li>
-                    Porteros las 24 horas y asistentes de recepci�n del vestíbulo
+                    Porteros las 24 horas y asistentes de recepci?n del vestíbulo
                 </li>
                 <li>
                     Porte cochère privado con servicio de aparcacoches las 24 horas y
                     entrada residencial privada
                 </li>
                 <li>
-                    Servicios de conserjería las 24 horas, adem�s de profesionales
+                    Servicios de conserjería las 24 horas, adem?s de profesionales
                     dedicados en el lugar
                 </li>
                 <li>Gerente residente residente y seguridad las 24 horas</li>
@@ -70,9 +70,9 @@ export default function WaldorfAstoria(lang: "en" | "es" = "es") {
                     Océano AtlÁntico
                 </li>
                 <li>
-                    Experiencia de tecnología dom�stica inteligente para una
+                    Experiencia de tecnología dom?stica inteligente para una
                     personalización perfecta con solo tocar un botón. Incluye sistemas
-                    integrados de audio, vídeo e iluminaci�n.
+                    integrados de audio, vídeo e iluminaci?n.
                 </li>
                 <li>
                     Todas las residencias vienen equipadas con un paquete de
@@ -109,7 +109,7 @@ export default function WaldorfAstoria(lang: "en" | "es" = "es") {
                     italianos personalizados
                 </li>
                 <li>
-                    Accesorios, características y accesorios de ba�o Dornbracht y
+                    Accesorios, características y accesorios de ba?o Dornbracht y
                     Duravit
                 </li>
             </ul>
@@ -117,7 +117,7 @@ export default function WaldorfAstoria(lang: "en" | "es" = "es") {
         amenidades: undefined,
     };
     WaldorfAstoriaObject.introduccion = [
-        "Waldorf Astoria Miami presenta a la ciudad una de las marcas de hoteles de lujo m�s prestigiosas del mundo, propiedad de Hilton Hotels. La torre ofrece 100 pisos de residencias. Los arquitectos de la firma Sieger Su�rez dise�aron el edificio para parecerse a una pila de cubos de vidrio apilados de manera desigual. Con 1,049 pies de altura, Waldorf Astoria Hotel and Residences Miami es la torre m�s alta de Miami y el primer rascacielos superalto de Miami. Las residencias tienen vistas espectaculares de la Bahía de Biscayne, el Puerto de Miami, Brickell Avenue, el centro de Miami, Key Biscayne y South Beach. La ubicaci�n perfecta de Waldorf Astoria Miami permite a los residentes vivir a pocos minutos del nuevo Miami World Center, varias atracciones culturales, arte, turismo y moda.",
+        "Waldorf Astoria Miami presenta a la ciudad una de las marcas de hoteles de lujo m?s prestigiosas del mundo, propiedad de Hilton Hotels. La torre ofrece 100 pisos de residencias. Los arquitectos de la firma Sieger Su?rez dise?aron el edificio para parecerse a una pila de cubos de vidrio apilados de manera desigual. Con 1,049 pies de altura, Waldorf Astoria Hotel and Residences Miami es la torre m?s alta de Miami y el primer rascacielos superalto de Miami. Las residencias tienen vistas espectaculares de la Bahía de Biscayne, el Puerto de Miami, Brickell Avenue, el centro de Miami, Key Biscayne y South Beach. La ubicaci?n perfecta de Waldorf Astoria Miami permite a los residentes vivir a pocos minutos del nuevo Miami World Center, varias atracciones culturales, arte, turismo y moda.",
     ];
     WaldorfAstoriaObject.titulo = "Waldorf Astoria";
     WaldorfAstoriaObject.slogan = "";

@@ -5,11 +5,11 @@ export default function MiamiBeach() {
     miamiBeach.name = "miami-beach";
     miamiBeach.titulo = {
         es: "Miami Beach",
-        en:"latest"
+        en: "Miami Beach"
     };
     miamiBeach.slogan = {
         es: "La Ciudad Mágica",
-        en:"latest"
+        en: "The Magic City"
     };
     miamiBeach.descripcion = {
         es: [

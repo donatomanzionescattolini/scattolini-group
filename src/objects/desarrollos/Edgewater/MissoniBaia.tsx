@@ -49,7 +49,7 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <br/>
                     <strong>Cocina</strong>
                     <br/>
-                    <li>Electrodom�sticos de primera línea que incluyen:</li>
+                    <li>Electrodom?sticos de primera línea que incluyen:</li>
                     <li>Microonda</li>
                     <li>Enfriador de vino</li>
                     <li>Estufa</li>
@@ -72,11 +72,11 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                         un espacio de descanso frente a la bahía con una piscina con
                         vista al mar, una sala de entretenimiento, un salón de belleza,
                         una sala de juegos para niños, un spa para mascotas, un amplio
-                        gimnasio con vista a la bahía y uno de los spas m�s grandes de
+                        gimnasio con vista a la bahía y uno de los spas m?s grandes de
                         Miami, exclusivo para los residentes. Un puente exterior que
                         comunica el conjunto de servicios techados del sexto piso con la
                         solana de paso de la piscina, que incluye cabanas, una piscina
-                        olímpica, piscina lounge, opciones acu�ticas para los ni�os y
+                        olímpica, piscina lounge, opciones acu?ticas para los ni?os y
                         una cancha de tenis.
                     </p>
                     <br/>
@@ -92,8 +92,8 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     </li>
                     <li>Camino peatonal a lo largo del agua.</li>
                     <li>Conserje personal y atención en la recepción 24 horas</li>
-                    <li>Habitaci�n para entrega de paquetería</li>
-                    <li>Sal�n interior junto a la bahía</li>
+                    <li>Habitaci?n para entrega de paquetería</li>
+                    <li>Sal?n interior junto a la bahía</li>
                     <br/>
                     <strong>Quinto Piso</strong>
                     <br/>
@@ -112,12 +112,12 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                         Puente exterior que conecta las amenidades del edificio del
                         sexto piso con la terraza de la piscina
                     </li>
-                    <li>Piscina de dimensi�n olímpica</li>
+                    <li>Piscina de dimensi?n olímpica</li>
                     <li>Piscina en el lounge</li>
                     <li>Spa de hidromasaje al aire libre</li>
                     <li>Tumbonas junto a la piscina</li>
                     <li>Chapoteadero para niños</li>
-                    <li>Área de c�sped para ni�os</li>
+                    <li>Área de c?sped para ni?os</li>
                     <li>Bar y parrilla exterior</li>
                     <li>Dos salones junto a la piscina exclusivos para residentes</li>
                     <li>
@@ -126,14 +126,14 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <br/>
                     <strong>Séptimo Piso, Amenidades Techadas</strong>
                     <li>
-                        Cubierta exterior que envuelve al edificio con múltiples �reas
+                        Cubierta exterior que envuelve al edificio con múltiples ?reas
                         de descanso
                     </li>
                     <li>
                         Terraza junto a la bahía con piscina volada y vista a la bahía
                     </li>
                     <li>
-                        Sal�n interior con terraza en la bahía y techo de doble altura
+                        Sal?n interior con terraza en la bahía y techo de doble altura
                     </li>
                     <li>
                         Sala de juegos para residentes con mesa de billar, bar, gran
@@ -188,7 +188,7 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     </li>
                     <br/>
                     <li>
-                        M�s all� del gimnasio, la cancha de tenis y las múltiples
+                        M?s all? del gimnasio, la cancha de tenis y las múltiples
                         piscinas, estas residencias de lujo ofrecen exclusivo para sus
                         residentes, uno de los spas mÁs grandes y lujosos de Miami.
                         Concebido por los diseñadores de Aman con interiores por Paris
@@ -225,7 +225,7 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <strong>Espacios Familiares</strong>
                     <br/>
                     <li>
-                        M�s all� de gimnasio, cancha de tenis y las múltiples piscinas,
+                        M?s all? de gimnasio, cancha de tenis y las múltiples piscinas,
                         este lujoso condominio ofrece un amplio spa exclusivo para sus
                         residentes, el cual es uno de los spas mÁs grandes y lujosos de
                         Miami. Concebido por los diseñadores de Aman y con interiores de
@@ -235,10 +235,10 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                         de Biscayne Bay y el horizonte de Miami.
                     </li>
                     <br/>
-                    <strong>Children�"s Playroom</strong>
+                    <strong>Children"s Playroom</strong>
                     <br/>
                     <li>
-                        Club para ni�os: una sala de juegos única en su clase con vista
+                        Club para ni?os: una sala de juegos única en su clase con vista
                         a Biscayne Bay celebra el gusto de Missoni por la familia y
                         refleja la estética colorida y la sensibilidad fantÁstica del
                         hogar de la propia Angela Missoni; con casas de muñecas vestidas
@@ -247,10 +247,10 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                         Missoni en las paredes.
                     </li>
                     <br/>
-                    <strong>Miami Luxury Condos: Kids�" Fountains</strong>
+                    <strong>Miami Luxury Condos: Kids" Fountains</strong>
                     <br/>
                     <li>
-                        Área de juegos para ni�os: un �rea de juegos acu�ticos
+                        Área de juegos para ni?os: un ?rea de juegos acu?ticos
                         encantadora, diseñada especialmente para niños.
                     </li>
                 </ul>

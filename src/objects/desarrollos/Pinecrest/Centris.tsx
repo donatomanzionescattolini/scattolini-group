@@ -51,7 +51,7 @@ export default function Centris() {
         residencias: (
             <>
                 <dl>
-                    <dt>COLECCI�N DIAMOND (viviendas unifamiliares)</dt>
+                    <dt>COLECCIÓN DIAMOND (viviendas unifamiliares)</dt>
 
                     <p>
                         Diamond Collection ofrece cinco diseños de casas de lujo estilo
@@ -79,9 +79,7 @@ export default function Centris() {
                     <dt>Modelo de Florencia</dt>
                     <dd> 3,573 pies cuadrados | 5 dormitorios | 4,5 baños</dd>
 
-                    <dd>����-</dd>
-
-                    <dt>COLECCI�N SAPPHIRE (casas adosadas)</dt>
+                    <dt>COLECCIÓN SAPPHIRE (casas adosadas)</dt>
                     <dd>
                         <p>
                             The Sapphire Collection ofrece nuevas casas adosadas de lujo a
@@ -113,11 +111,10 @@ export default function Centris() {
     };
 
     CentrisObject.introduccion = [
-        "Presentamos CentrisObject, una comunidad de casas adosadas y propiedades de lujo nuevas a la venta en Miami, FL. CentrisObject est� idealmente ubicado en SW 120th Street y 82nd Avenue, cerca de Pinecrest y The Falls, con f�cil acceso a las playas y al centro de Miami. En CentrisObject, los residentes disfrutar�n de entrada con acceso controlado para vehículos, un pabell�n con piscina, �rea de juegos infantiles y un parque en el coraz�n de la comunidad, y cada casa est� equipada con accesorios y acabados de lujo, todo sin costo adicional.",
+        "Presentamos CentrisObject, una comunidad de casas adosadas y propiedades de lujo nuevas a la venta en Miami, FL. CentrisObject est? idealmente ubicado en SW 120th Street y 82nd Avenue, cerca de Pinecrest y The Falls, con f?cil acceso a las playas y al centro de Miami. En CentrisObject, los residentes disfrutar?n de entrada con acceso controlado para vehículos, un pabell?n con piscina, ?rea de juegos infantiles y un parque en el coraz?n de la comunidad, y cada casa est? equipada con accesorios y acabados de lujo, todo sin costo adicional.",
     ];
     CentrisObject.titulo = "Centris";
     CentrisObject.slogan = "";
     CentrisObject.numberOfImages = 36;
     return CentrisObject;
 }
-

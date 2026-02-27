@@ -24,7 +24,7 @@ export default function Origin() {
                         Piscina panorÁmica en la azotea con cocinas de verano junto a la
                         piscina y bar
                     </li>
-                    <li>Gimnasio con equipos de última generaci�n</li>
+                    <li>Gimnasio con equipos de última generaci?n</li>
                     <li>
                         Servicios personalizados, seguridad las 24 horas y tecnología
                         avanzada
@@ -33,7 +33,7 @@ export default function Origin() {
                         Estacionamiento sin asistencia designado para todas las
                         residencias
                     </li>
-                    <li>Estaciones de carga para vehículos el�ctricos</li>
+                    <li>Estaciones de carga para vehículos el?ctricos</li>
                     <li>
                         Fibra hasta el hogar para video e Internet de alta velocidad
                     </li>
@@ -74,7 +74,7 @@ export default function Origin() {
                     <li>PH Residences cuenta con techos de 11 pies</li>
                     <li>
                         Cocinas italianas importadas totalmente equipadas con
-                        electrodom�sticos de última generaci�n
+                        electrodom?sticos de última generaci?n
                     </li>
                     <li>Baños modernos con mÁrmol italiano y gabinetes europeos</li>
                     <li>Pisos de porcelana italiana en toda la casa</li>
@@ -126,10 +126,10 @@ export default function Origin() {
         ),
     };
     OriginObject.introduccion = [
-        // "Origin es un edificio boutique elegante que combina el inigualable estilo de vida de Miami, fant�sticas amenidades y planos de gran tama�o. A tan solo pasos de las blancas playas de Miami y las reconocidas tiendas Bal Harbour, Origin es un paraíso urbano cerca de cada comodidad de la ciudad. Una exclusiva colecci�n de 27 residencias costeras dise�adas para la familia moderna, que evocan sofisticaci�n y bienestar",
+        // "Origin es un edificio boutique elegante que combina el inigualable estilo de vida de Miami, fant?sticas amenidades y planos de gran tama?o. A tan solo pasos de las blancas playas de Miami y las reconocidas tiendas Bal Harbour, Origin es un paraíso urbano cerca de cada comodidad de la ciudad. Una exclusiva colecci?n de 27 residencias costeras dise?adas para la familia moderna, que evocan sofisticaci?n y bienestar",
         "Una exquisita colección de 27 residencias de lujo de edición limitada frente al mar, en colaboración con Artefacto, los proveedores de la sofisticada vida del Sur de la Florida",
-        "Este elegante edificio residencial boutique personifica lo último en estilo de vida de Miami, seductoras vistas y amplios planos de planta. A pocos pasos de las prístinas playas de Miami y de las mundialmente conocidas tiendas de Bal Harbour, ORIGIN es lo último en vida urbana isle�a, a la vez que se encuentra a pocos pasos de todas las comodidades de la vida en la ciudad",
-        "Artefacto decodifica un estilo de vida que goza de gran prestigio entre los grandes nombres de la arquitectura y la decoraci�n, creando el epítome de la vida c�lida y contempor�nea.",
+        "Este elegante edificio residencial boutique personifica lo último en estilo de vida de Miami, seductoras vistas y amplios planos de planta. A pocos pasos de las prístinas playas de Miami y de las mundialmente conocidas tiendas de Bal Harbour, ORIGIN es lo último en vida urbana isle?a, a la vez que se encuentra a pocos pasos de todas las comodidades de la vida en la ciudad",
+        "Artefacto decodifica un estilo de vida que goza de gran prestigio entre los grandes nombres de la arquitectura y la decoraci?n, creando el epítome de la vida c?lida y contempor?nea.",
     ];
     OriginObject.titulo = "Origin Residences";
     OriginObject.slogan = "Sofisticada VidaResidences Isleña";

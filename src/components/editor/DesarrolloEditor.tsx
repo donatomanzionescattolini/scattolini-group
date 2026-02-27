@@ -30,7 +30,19 @@ export default function DesarrolloEditor() {
 
   const getLocalized = (field: any) => {
     if (!field) return '';
-    if (typeof field === 'object') return field[lang] || field.es || Object.values(field)[0] || '';
+    const isPlaceholder = (value: unknown) =>
+      typeof value === 'string' && value.trim().toLowerCase() === 'latest';
+    if (typeof field === 'object') {
+      const preferred = field[lang];
+      if (preferred && !isPlaceholder(preferred)) return preferred;
+      const spanish = field.es;
+      if (spanish && !isPlaceholder(spanish)) return spanish;
+      const firstValid = Object.values(field).find(
+        (value) => value && !isPlaceholder(value)
+      );
+      return (firstValid as string) || '';
+    }
+    if (isPlaceholder(field)) return '';
     return field;
   };
 

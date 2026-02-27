@@ -27,7 +27,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     Experiencia de spa inspirada en los spas termales italianos que
                     contiene piscinas de inmersión, salas de vapor y sauna, y un
                     extenso menú de tratamientosGimnasio espacioso y lleno de luz con
-                    equipos Technogym de última generaci�n y estudios de yoga, pilates
+                    equipos Technogym de última generaci?n y estudios de yoga, pilates
                     y boxeo totalmente equipados
                 </li>
                 <li>
@@ -81,10 +81,10 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 </li>
                 <li>
                     Infinitas vistas de 360° del amanecer y el atardecer que abarcan
-                    la bahía, el oc�ano, el centro de Miami y Miami Beach
+                    la bahía, el oc?ano, el centro de Miami y Miami Beach
                 </li>
                 <li>
-                    Dise�o ic�nico del edificio que combina un exoesqueleto único de
+                    Dise?o ic?nico del edificio que combina un exoesqueleto único de
                     bronce fundido anclado por un podio de servicios de vidrio
                     multifacético inspirado en piedras preciosas
                 </li>
@@ -102,7 +102,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 </li>
                 <li>
                     Jardines estilo Piazza conectados con el próximo Miami Baywalk y
-                    el paseo marítimo, con una c�moda accesibilidad a las tiendas y
+                    el paseo marítimo, con una c?moda accesibilidad a las tiendas y
                     restaurantes del Design District
                 </li>
                 <li>Exuberantes jardines privados diseñados por Enzo Enea</li>
@@ -158,7 +158,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
             <>
                 <ul>
                     <li>
-                        Vistas panor�micas de la Bahía de Biscayne y el Oc�ano Atl�ntico
+                        Vistas panor?micas de la Bahía de Biscayne y el Oc?ano Atl?ntico
                     </li>
                     <li>
                         Los vestíbulos de entrada se abren a amplios planos de planta
@@ -222,7 +222,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                         La bañera de gran tamaño a lo largo de la pared de la ventana
                         ofrece vistas panorÁmicas del agua
                     </li>
-                    <li>Grifería y molduras de ba�o Dornbracht y Duravit</li>
+                    <li>Grifería y molduras de ba?o Dornbracht y Duravit</li>
                     <li>Tocadores de madera italiana personalizados</li>
                     <li>
                         Hogar inteligente precableado para preferencias individuales de
@@ -230,21 +230,21 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     </li>
                     <li>
                         Todos los electrodomésticos de cocina de CornuFé, Wolf y
-                        Sub-Zero con electrodom�sticos de lavandería de Electrolux
+                        Sub-Zero con electrodom?sticos de lavandería de Electrolux
                     </li>
                 </ul>
             </>
         ),
     };
     TheVillaObject.introduccion = [
-        "Las vibrantes vistas a la bahía y la ciudad, combinadas con 55 pisos de espacios indulgentes, definen este exclusivo desarrollo de condominio, compuesto por un total de 70 unidades que van desde 2,939 a 6,143 pies cuadrados. Con opciones de tres a cinco amplias habitaciones, cada detalle arquitect�nico y de dise�o se adapta de forma única para crear un entorno lujoso y sin fisuras para los residentes. El renombrado equipo MFG se dedica a proporcionar un estilo de vida de alto nivel, anticip�ndose y respondiendo a cada necesidad con una filosofía de opulencia sin límites. Prep�rese para sumergirse en una experiencia de primer nivel completamente incomparable.",
+        "Las vibrantes vistas a la bahía y la ciudad, combinadas con 55 pisos de espacios indulgentes, definen este exclusivo desarrollo de condominio, compuesto por un total de 70 unidades que van desde 2,939 a 6,143 pies cuadrados. Con opciones de tres a cinco amplias habitaciones, cada detalle arquitect?nico y de dise?o se adapta de forma única para crear un entorno lujoso y sin fisuras para los residentes. El renombrado equipo MFG se dedica a proporcionar un estilo de vida de alto nivel, anticip?ndose y respondiendo a cada necesidad con una filosofía de opulencia sin límites. Prep?rese para sumergirse en una experiencia de primer nivel completamente incomparable.",
     ];
 
     TheVillaObject.slogan =
         <p className="text-lowercase w-50 mx-auto">
             <span className="text-capitalize">¡El</span> rascacielos residencial
             mÁs sorprendente de" "; <span className="text-capitalize">Edgewater, Miami </span>finalmente
-            est� aquí!
+            est? aquí!
             <br></br>
         </p>
     ;

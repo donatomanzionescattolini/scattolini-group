@@ -34,7 +34,7 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
                     instalaciones multimedia
                 </li>
                 <li>
-                    Gimnasio totalmente equipado de última generaci�n curado por
+                    Gimnasio totalmente equipado de última generaci?n curado por
                     Altitude Fitness con teatro cardiovascular, sala de spinning,
                     salas de yoga y meditación, todas con vista al Área del complejo
                     de la cubierta de la piscina
@@ -56,7 +56,7 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
                     de trabajo privados
                 </li>
                 <li>Bodega y sala de degustación</li>
-                <li>Estaciones de carga de vehículos el�ctricos</li>
+                <li>Estaciones de carga de vehículos el?ctricos</li>
                 <li>Espacios para guardar bicicletas</li>
                 <li>
                     Conserje muy atento, con correo conveniente y mostrador de
@@ -102,13 +102,13 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
                 </li>
                 <li>
                     Generosos techos altos de diez pies de acabado liso en pisos
-                    típicos que se elevan a once y doce pies en niveles de �tico
+                    típicos que se elevan a once y doce pies en niveles de ?tico
                 </li>
                 <li>Cocinas gourmet</li>
                 <li>
-                    Electrodom�sticos de cocina de primera línea que incluyen:
+                    Electrodom?sticos de cocina de primera línea que incluyen:
                     refrigerador / congelador Sub-Zero con dispensador interno de agua
-                    fría y m�quina de hielo, almacenamiento de vino Sub-Zero, estufa
+                    fría y m?quina de hielo, almacenamiento de vino Sub-Zero, estufa
                     de inducción Wolf, horno contemporÁneo y horno de vapor Wolf serie
                     M, lavavajillas Cove con gabinetes integrados y campana extractora
                     oculta de velocidad variable
@@ -143,7 +143,7 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
                     cable
                 </li>
                 <li>
-                    Tecnología de interfaz para servicios de construcci�n como
+                    Tecnología de interfaz para servicios de construcci?n como
                     conserjería, valet, seguridad y servicios en el hogar como audio,
                     video, iluminación, tratamientos de ventanas, Internet y satélite
                 </li>
@@ -151,7 +151,7 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
         ),
         amenidades: (
             <ul>
-                <li>Gimnasio totalmente equipado de última generaci�n</li>
+                <li>Gimnasio totalmente equipado de última generaci?n</li>
                 <li>Puerto deportivo privado</li>
                 <li>Lujosa sala club</li>
                 <li>Sala de proyección privada</li>

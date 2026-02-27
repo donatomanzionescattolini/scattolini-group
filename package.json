@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.999.0",
+    "@aws-sdk/s3-request-presigner": "^3.999.0",
     "@emailjs/browser": "latest",
     "@material/banner": "latest",
     "@popperjs/core": "latest",
@@ -21,8 +23,8 @@
     "react-dom": "^19.2.4",
     "react-floating-whatsapp": "latest",
     "react-hook-form": "latest",
-    "react-router-dom": "latest",
-    "react-pdf": "^10.2.0"
+    "react-pdf": "^10.2.0",
+    "react-router-dom": "latest"
   },
   "devDependencies": {
     "@types/node": "^25.3.2",

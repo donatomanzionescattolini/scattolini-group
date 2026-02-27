@@ -37,7 +37,7 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
 
                 <li>
                     <b>Dormitorios por residencia:</b> Residencias de 1-5 dormitorios,
-                    dúplex, �ticos y �ticos triples
+                    dúplex, ?ticos y ?ticos triples
                 </li>
 
                 <li>
@@ -76,7 +76,7 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
                     <h5>Características</h5>
                     <ul>
                         <li>
-                            Vistas panor�micas de la Bahía de Biscayne, el oc�ano y el
+                            Vistas panor?micas de la Bahía de Biscayne, el oc?ano y el
                             icónico horizonte de Miami.
                         </li>
                         <li> 10 pies de altura de techo en residencias.</li>
@@ -86,7 +86,7 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
                             todas las residencias.
                         </li>
                         <li>
-                            " "; Cocinas de primera línea con gabinetes y electrodom�sticos
+                            " "; Cocinas de primera línea con gabinetes y electrodom?sticos
                             europeos.
                         </li>
                         <li> Baños con gabinetes europeos.</li>
@@ -183,7 +183,7 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
                         <li> Sky Bar y Lounge</li>
                         <li> Conserje de piscina</li>
                         <li> Gran Salón</li>
-                        <li> Cocina del chef de última generaci�n</li>
+                        <li> Cocina del chef de última generaci?n</li>
                         <li> Comedor Privado</li>
                     </ul>
                 </li>

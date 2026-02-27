@@ -90,7 +90,7 @@ export default function Ora(lang: "en" | "es" = "es") {
         ),
         amenidades: (
             <ul>
-                <li>EL SAL�N SOCIAL</li>
+                <li>EL SALÓN SOCIAL</li>
                 <li>
                     Justo debajo del parque del cielo, el único espacio de un
                     propietario para reunirse y jugar, reconectarse y recargarse.
@@ -102,7 +102,7 @@ export default function Ora(lang: "en" | "es" = "es") {
                 <li>Biblioteca de lectura</li>
                 <li>
                     Espacios de trabajo abiertos y compartidos, oficinas privadas,
-                    salas de creaci�n de contenido y energía inspirada y dinámica
+                    salas de creaci?n de contenido y energía inspirada y dinámica
                 </li>
                 <li><b>LA PISCINA</b></li>
                 <li>
@@ -120,7 +120,7 @@ export default function Ora(lang: "en" | "es" = "es") {
                     Un espacio abierto y amplio diseñado para todo tipo de
                     entrenamiento o sesión de entrenamiento.
                 </li>
-                <li>Equipos de última generaci�n enfocados en el rendimiento</li>
+                <li>Equipos de última generaci?n enfocados en el rendimiento</li>
                 <li>
                     cardio, entrenamiento de resistencia y acondicionamiento de fuerza
                 </li>
@@ -169,4 +169,3 @@ export default function Ora(lang: "en" | "es" = "es") {
     );
     return OraObject;
 }
-

@@ -53,8 +53,8 @@ export default function Login() {
   return (
     <MDBContainer className="login-container py-5">
       <MDBRow className="justify-content-center">
-        <MDBCol md="6" lg="5">
-          <MDBCard>
+        <MDBCol md="8" lg="6" xl="5">
+          <MDBCard className="shadow-5">
             <MDBCardBody className="p-5">
               <h2 className="text-center mb-4">{t('pages.auth.login.title', 'Sign in')}</h2>
               <p className="text-center text-muted mb-4">

@@ -26,7 +26,7 @@ export default function Cipriani(lang: "en" | "es" = "es") {
           <li>{getLocalizedField("caracteristicas.edificio.li1", "Una elegante torre de 80 pisos con una fachada curva de vidrio en cascada")}</li>
           <li>{getLocalizedField("caracteristicas.edificio.li2", "Una colección de 397 residencias, incluidos Áticos excepcionales con piscina privada")}</li>
           <li>{getLocalizedField("caracteristicas.edificio.li3", "Servicios de comedor solo para residentes de Cipriani")}</li>
-          <li>{getLocalizedField("caracteristicas.edificio.li4", "Vistas panor�micas de la Bahía de Biscayne, el horizonte de Brickell y Coconut Grove")}</li>
+          <li>{getLocalizedField("caracteristicas.edificio.li4", "Vistas panor?micas de la Bahía de Biscayne, el horizonte de Brickell y Coconut Grove")}</li>
           <li>{getLocalizedField("caracteristicas.edificio.li5", "Personal 24 horas capacitado por Cipriani")}</li>
         </ul>
       </div>
@@ -35,7 +35,7 @@ export default function Cipriani(lang: "en" | "es" = "es") {
       <div>
         <ul>
           <li>{getLocalizedField("caracteristicas.residencias.li1", "Amplias salas de estar con alturas de techo de 10 pies")}</li>
-          <li>{getLocalizedField("caracteristicas.residencias.li2", "Puertas y ventanas corredizas de vidrio de piso a techo con magníficas vistas panor�micas.")}</li>
+          <li>{getLocalizedField("caracteristicas.residencias.li2", "Puertas y ventanas corredizas de vidrio de piso a techo con magníficas vistas panor?micas.")}</li>
           <li>{getLocalizedField("caracteristicas.residencias.li3", "Acceso a la terraza desde la sala de estar y el dormitorio principal de cada residencia.")}</li>
           <li>{getLocalizedField("caracteristicas.residencias.li4", "Elegantes vestidores en cada dormitorio principal")}</li>
         </ul>

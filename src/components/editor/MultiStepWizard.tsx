@@ -11,6 +11,7 @@ import {
 } from 'mdb-react-ui-kit';
 import './MultiStepWizard.scss';
 import { useTranslation } from '../../i18n.tsx';
+import MediaUploadStep from './MediaUploadStep';
 
 interface MultiStepWizardProps {
   type: 'desarrollo' | 'area';
@@ -49,6 +50,10 @@ export default function MultiStepWizard({
         {
           title: t('pages.editor.wizard.desarrollo.features', 'Features'),
           fields: ['numberOfUnits', 'numberOfFloors', 'estimatedCompletionYear'],
+        },
+        {
+          title: t('pages.editor.wizard.desarrollo.media', 'Media (S3)'),
+          fields: ['mediaUpload'],
         },
         {
           title: t('pages.editor.wizard.review', 'Review'),
@@ -121,7 +126,25 @@ export default function MultiStepWizard({
     setValue(fieldName, processedValue);
   }, [setValue]);
 
+  const handleNumberOfImagesChange = useCallback((count: number) => {
+    setFormData((prev: any) => ({ ...prev, numberOfImages: count }));
+    setValue('numberOfImages', count);
+  }, [setValue]);
+
   const renderField = (fieldName: string) => {
+    if (fieldName === 'mediaUpload') {
+      const projectName = formData.nombre || 'project-name';
+      
+      return (
+        <div key={fieldName} className="mb-4">
+          <MediaUploadStep 
+            projectName={projectName}
+            onNumberOfImagesChange={handleNumberOfImagesChange}
+          />
+        </div>
+      );
+    }
+
     const isTextarea = ['introduccion', 'descripcion', 'slogan'].includes(fieldName);
     const fallbackLabel = fieldName.charAt(0).toUpperCase() + fieldName.slice(1);
     const label = t(`pages.editor.fields.${fieldName}`, fallbackLabel);

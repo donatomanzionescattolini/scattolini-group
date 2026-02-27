@@ -3,11 +3,11 @@ export default function PompanoBeach() {
     const PompanoBeachObject = new Area("pompano-beach");
     PompanoBeachObject.titulo = {
         es: "Pompano Beach",
-        en:"latest"
+        en: "Pompano Beach"
     };
     PompanoBeachObject.slogan = {
         es: "La bienvenida más cálida de Florida.",
-        en:"latest"
+        en: "Florida's Warmest Welcome."
     };
     PompanoBeachObject.descripcion = {
         es: [

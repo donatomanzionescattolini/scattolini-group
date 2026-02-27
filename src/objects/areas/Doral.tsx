@@ -5,11 +5,11 @@ export default function Doral() {
     doral.name = "doral";
     doral.titulo = {
         es: "Doral",
-        en:"latest"
+        en: "Doral"
     };
     doral.slogan = {
         es: "¡Vive, Trabaja, Aprende y Juega!",
-        en:"latest"
+        en: "Live, Work, Learn and Play!"
     };
     doral.descripcion = {
         es: [

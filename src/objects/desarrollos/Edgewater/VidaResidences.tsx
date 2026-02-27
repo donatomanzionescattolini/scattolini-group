@@ -21,7 +21,7 @@ export default function VidaResidences(lang: "en" | "es" = "es") {
                     </li>
                     <li>Restaurante/bar privado en la azotea</li>
                     <li>Impresionantes vistas de la Bahía de Biscayne</li>
-                    <li>Gimnasio de última generaci�n</li>
+                    <li>Gimnasio de última generaci?n</li>
                     <li>Conveniente barra de jugos y café</li>
                     <li>Centro de coworking HiTech</li>
                     <li>Acceso controlado a la propiedad</li>

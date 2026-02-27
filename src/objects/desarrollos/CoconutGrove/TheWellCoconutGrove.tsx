@@ -6,7 +6,7 @@ TheWellCoconutGrove.titulo = "The Well | Coconut Grove";
 TheWellCoconutGrove.banner = true;
 TheWellCoconutGrove.slogan =
     <i><h6 className={"text-muted"}>El bienestar vive aquí</h6></i>;
-TheWellCoconutGrove.introduccion = ["THE WELL Coconut Grove es tu santuario de bienestar holístico. Aquí, el bienestar es la esencia de tu vida, ofreci�ndote tiempo y espacio para relajarte, recargar energías y reconectar con lo que realmente importa: tu bienestar. Ubicado en el frondoso y arbolado vecindario de Coconut Grove, THE WELL est� dise�ado para apoyar tu estilo de vida equilibrado, permiti�ndote vivir, trabajar y disfrutar en armonía con tu salud. Las residencias, que se integran a la perfecci�n con el entorno, incluyen 194 casas únicas, desde cuatro casas adosadas hasta nueve lofts en planta baja, todas con amplios balcones privados, interiores abiertos y luminosos, y detalles personalizados que potencian la vitalidad, aumentan la energía y te ayudan a sentirte en tu mejor momento.\n" +
+TheWellCoconutGrove.introduccion = ["THE WELL Coconut Grove es tu santuario de bienestar holístico. Aquí, el bienestar es la esencia de tu vida, ofreci?ndote tiempo y espacio para relajarte, recargar energías y reconectar con lo que realmente importa: tu bienestar. Ubicado en el frondoso y arbolado vecindario de Coconut Grove, THE WELL est? dise?ado para apoyar tu estilo de vida equilibrado, permiti?ndote vivir, trabajar y disfrutar en armonía con tu salud. Las residencias, que se integran a la perfecci?n con el entorno, incluyen 194 casas únicas, desde cuatro casas adosadas hasta nueve lofts en planta baja, todas con amplios balcones privados, interiores abiertos y luminosos, y detalles personalizados que potencian la vitalidad, aumentan la energía y te ayudan a sentirte en tu mejor momento.\n" +
 "\n"];
 TheWellCoconutGrove.numberOfImages = 49;
 TheWellCoconutGrove.numberOfUnits = 194;
@@ -23,27 +23,27 @@ TheWellCoconutGrove.caracteristicas = {
                 <li>194 residencias con 94 planos de planta distintos</li>
                 <li>Vestíbulo de llegada de residentes sereno e inmerso en una luz natural difusa</li>
                 <li>Diseño interior-exterior abierto y aireado</li>
-                <li>Sensaci�n holística de serenidad: aromaterapia sutil y jardines interiores restauradores</li>
+                <li>Sensaci?n holística de serenidad: aromaterapia sutil y jardines interiores restauradores</li>
                 <li>Iluminación natural optimizada en todas partes</li>
                 <li>Casas adosadas seleccionadas con acceso directo a la calle y entrada con jardín privado</li>
                 <li>Lofts en planta baja con techo de 22' de altura en gran sala y pared de ventanas de doble altura</li>
-                <li>Azotea de 40.000 pies cuadrados dise�ada como un oasis de bienestar al aire libre con 2 piscinas, ba�os de agua fría y caliente, cancha de pickleball, Fitness Forest, bar y restaurante</li>
-                <li>Club de bienestar de última generaci�n de 13.000 pies cuadrados con cafetería, espacios sociales y de trabajo conjunto, bar de jugos frescos y refrigerios org�nicos</li>
+                <li>Azotea de 40.000 pies cuadrados dise?ada como un oasis de bienestar al aire libre con 2 piscinas, ba?os de agua fría y caliente, cancha de pickleball, Fitness Forest, bar y restaurante</li>
+                <li>Club de bienestar de última generaci?n de 13.000 pies cuadrados con cafetería, espacios sociales y de trabajo conjunto, bar de jugos frescos y refrigerios org?nicos</li>
                 <li>Servicio de toallas frías y calientes a la llegada y a la salida</li>
                 <li>Biblioteca del vestíbulo</li>
                 <li>Jardín de hierbas exclusivo para residentes en el jardín del vestíbulo</li>
-                <li>El jardín de t� cuenta con un exuberante paisaje, un patio interior y exterior y un estanque de reflexi�n</li>
-                <li>El invernadero lleno de luz exclusivo para residentes cuenta con vidrios de doble altura con vista al jardín de t� interior y exterior con una silla de recuperaci�n Shiftwave para restablecer el sistema nervioso despu�s de un largo día y un sal�n de bienestar para trabajar en conjunto y recibir terapia intravenosa</li>
+                <li>El jardín de t? cuenta con un exuberante paisaje, un patio interior y exterior y un estanque de reflexi?n</li>
+                <li>El invernadero lleno de luz exclusivo para residentes cuenta con vidrios de doble altura con vista al jardín de t? interior y exterior con una silla de recuperaci?n Shiftwave para restablecer el sistema nervioso despu?s de un largo día y un sal?n de bienestar para trabajar en conjunto y recibir terapia intravenosa</li>
                 <li>Centro de fitness exclusivo para residentes y estudio de movimiento para grupos pequeños, perfecto para entrenamiento privado</li>
                 <li>Piscina exclusiva para residentes en la azotea con cabañas y tumbonas privadas</li>
                 <li>Segunda piscina en la azotea y jacuzzi con cabañas privadas y tumbonas para residentes y miembros del THE WELL Club</li>
                 <li>Comedor privado con cocina de catering y barra para eventos</li>
                 <li>Seguridad las 24 horas</li>
-                <li>Estaciones de carga de vehículos el�ctricos disponibles para los residentes</li>
+                <li>Estaciones de carga de vehículos el?ctricos disponibles para los residentes</li>
                 <li>Servicio de valet parking</li>
                 <li>Centro holístico de bienestar y fitness</li>
                 <li>Estudio de movimiento consciente con yoga aéreo y pared de gong curativo</li>
-                <li>Hermoso ba�o comunitario con vapor, sauna, ba�o de agua fría y caldarium</li>
+                <li>Hermoso ba?o comunitario con vapor, sauna, ba?o de agua fría y caldarium</li>
                 <li>CÁmara hiperbÁrica</li>
                 <li>Salón Vitality</li>
                 <li>Estudio de entrenamiento y movimiento EMS</li>
@@ -81,7 +81,7 @@ TheWellCoconutGrove.caracteristicas = {
                     <li>Gabinetes italianos Italkraft personalizados</li>
                     <li>Islas de cocina o penínsulas en cada residencia con espacio para sentarse</li>
                     <li>Encimeras y salpicaderos de cuarcita</li>
-                    <li>Fregadero de cocina Kraus Kore��, conocido por su dise�o uniforme, su funci�n y su espacio de trabajo equilibrado con accesorios integrados</li>
+                    <li>Fregadero de cocina Kraus Kore, conocido por su dise?o uniforme, su funci?n y su espacio de trabajo equilibrado con accesorios integrados</li>
                     <li>Grifo extraíble Grohe con opciones de agua filtrada, fría, sin gas y con gas</li>
                     <li>Electrodomésticos Sub-Zero, Wolf y ASKO, incluido un refrigerador para vinos Sub-Zero integrado</li>
                     <li>Accesorios de cocina especiales: hervidor eléctrico, Nutri Bullet, robot de cocina Suvie y freidora de aire</li>
@@ -92,7 +92,7 @@ TheWellCoconutGrove.caracteristicas = {
                 <ul>
                     <li>Cabezal de ducha de lluvia Dornbracht con barra deslizante de pared incluida, con ducha de mano o ducha linfÁtica</li>
                     <li>Duchas de vapor en residencias de 3 y 4 dormitorios</li>
-                    <li>Ba�eras independientes para aliviar músculos y articulaciones cansadas disponibles en unidades seleccionadas</li>
+                    <li>Ba?eras independientes para aliviar músculos y articulaciones cansadas disponibles en unidades seleccionadas</li>
                     <li>Pisos de piedra natural y paredes de piedra revestida detrÁs de los tocadores principales</li>
                     <li>Tocadores de piedra natural con lavabos dobles y gabinetes italianos Italkraft personalizados</li>
                     <li>Espejos de tocador iluminados</li>

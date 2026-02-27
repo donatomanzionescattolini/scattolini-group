@@ -26,12 +26,12 @@ export default function FourteenTwentyEight(lang: "en" | "es" = "es") {
                 <li>impulsada parcialmente por el sol</li>
                 <li>80,000 pies cuadrados de instalaciones para el uso</li>
                 <li>exclusivo de las 189 residencias</li>
-                <li>Ascensores privados de última generaci�n y alta velocidad</li>
+                <li>Ascensores privados de última generaci?n y alta velocidad</li>
                 <li>Propiedad completamente privada solo para residentes</li>
                 <li>Amplio vestíbulo</li>
                 <li>Estación de vigilancia atendida a toda hora mÁs</li>
                 <li>entrada con verja</li>
-                <li>Recepci�n las 24 horas del día con servicio tiempo completo</li>
+                <li>Recepci?n las 24 horas del día con servicio tiempo completo</li>
                 <li>de conserjes, aparcacoches y porteros</li>
                 <li>Cada residencia incluye dos o mÁs espacios de</li>
                 <li>estacionamiento con servicio de valet y Áreas privadas</li>
@@ -42,13 +42,13 @@ export default function FourteenTwentyEight(lang: "en" | "es" = "es") {
                     residencias para preservar la privacidad, eliminar al mÁximo
                 </li>
                 <li>la transmisión de sonidos y generar mayor seguridad</li>
-                <li>Estaciones de carga para vehículos el�ctricos</li>
+                <li>Estaciones de carga para vehículos el?ctricos</li>
             </ul>
         ),
         residencias: (
             <ul>
                 <li>
-                    &nbsp;Cada residencia est� orientada hacia la bahía de Biscayne y
+                    &nbsp;Cada residencia est? orientada hacia la bahía de Biscayne y
                     cuenta con espacios amplios y luminosos permitidos por paredes de
                     vidrio.
                 </li>
@@ -117,7 +117,7 @@ export default function FourteenTwentyEight(lang: "en" | "es" = "es") {
                 <li>Acceso exclusivo a un club de playa privado</li>
                 <li>Coche eléctrico dedicado para excursiones locales</li>
                 <li>
-                    THE WELL Locker: la última colecci�n de tecnología de bienestar,
+                    THE WELL Locker: la última colecci?n de tecnología de bienestar,
                     que incluye Theragun, Therabeam, mantas infrarrojas, botas
                     linfÁticas, FaceWare Pro y otros, para uso exclusivo de los
                     residentes

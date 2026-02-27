@@ -2,7 +2,7 @@
 import SlideshowGalleryDesarrollo from "./SlideshowGalleryDesarrollo";
 import "@material/banner/dist/mdc.banner.min.css";
 
-import { JSX, ReactNode, useLayoutEffect, useMemo, useState } from "react";
+import { ReactNode, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useTranslation } from "../../i18n.tsx";
 import {
   MDBAccordion,
@@ -39,39 +39,52 @@ export default function ProjectTemplate(paramz: ProjectParams) {
     }
     return desarrollo;
   }, [paramz.desarrollo, lang]);
-  const [nombre] = useState(params.nombre);
-  const [area] = useState(params.area);
-  const [desarrollosArea] = useState(getDesarrollosForArea(area));
-  const [numberOfImages] = useState(params.numberOfImages);
+  const nombre = params.nombre;
+  const area = params.area;
+  const desarrollosArea = useMemo(() => getDesarrollosForArea(area), [area]);
+  const numberOfImages = params.numberOfImages;
   const [tabVisible, setTabVisible] = useState("brochure");
-  const vid: string | ReactNode = params.video
+  const video: string | ReactNode = params.video
     ? params.video
     : `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`;
-  const [video] = useState<string | JSX.Element>(vid as JSX.Element);
 
-  const [caract] = useState(params.caracteristicas as caracteristicas);
-  const [banner] = useState(params.banner);
+  const caract = params.caracteristicas as caracteristicas;
+  const banner = params.banner;
   // compute localized values for titulo and subtitulo to avoid passing Record types into JSX
+  const isPlaceholder = (value: unknown): boolean =>
+    typeof value === "string" && value.trim().toLowerCase() === "latest";
+
   const getLocalized = (field: any) => {
     if (!field) return "";
     if (typeof field === "object") {
-      return field[lang] || field["es"] || Object.values(field)[0] || "";
+      const preferred = field[lang];
+      if (preferred && !isPlaceholder(preferred)) return preferred;
+      const spanish = field["es"];
+      if (spanish && !isPlaceholder(spanish)) return spanish;
+      const firstValid = Object.values(field).find(
+        (value) => value && !isPlaceholder(value)
+      );
+      return firstValid || "";
     }
+    if (isPlaceholder(field)) return "";
     return field;
   };
   const localizedTitulo: string = String(getLocalized(params.titulo));
   const localizedSubtitulo: string = String(getLocalized(params.slogan));
-  const [introduccion] = useState(params.introduccion);
-  const [CaracteristicasAmenidades] = useState(() => caract.amenidades);
-  const [CaracteristicasEdificio] = useState(() => caract.edificio);
+  const introduccion: Array<string> = Array.isArray(params.introduccion)
+    ? params.introduccion
+    : [];
+  const CaracteristicasAmenidades = caract?.amenidades;
+  const CaracteristicasEdificio = caract?.edificio;
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-  const [CaracteristicasResidencias] = useState(() => caract.residencias);
-  const [pdfUrl] = useState(
-    `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`
-  );
-  window.onresize = () => {
-    setInnerWidth(window.innerWidth);
-  };
+  const CaracteristicasResidencias = caract?.residencias;
+  const pdfUrl = `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`;
+
+  useEffect(() => {
+    const onResize = () => setInnerWidth(window.innerWidth);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -155,22 +168,27 @@ export default function ProjectTemplate(paramz: ProjectParams) {
 
       <section className="colour-block">
         <MDBContainer>
-          {innerWidth < 768 && (
-            <div>
-              <br />
-              <br />
-              <br />
-            </div>
-          )}
           <h2 className=" text-center animate-charcter" style={{}}>
             {localizedTitulo}
           </h2>
 
           <hr className="hr hr-blurry w-50 mx-auto" />
           {<h4 className="mt-0 text-center">{localizedSubtitulo}</h4>}
+          {area && (
+            <div className="text-center mb-3">
+              <Link 
+                to={`/areas/${area.name}/`} 
+                className="text-muted text-decoration-none"
+                style={{ fontSize: '0.9rem' }}
+              >
+                <i className="fas fa-map-marker-alt me-1"></i>
+                {t('pages.project.locatedIn', 'Located in')} <strong>{getLocalized(area.titulo)}</strong>
+              </Link>
+            </div>
+          )}
           <div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3    text-justify responsive">
             <div className=" mx-lg-5 mx-xl-5 mx-md-1 mx-sm-1 mx-xs-1 px-5 font-16 text-center">
-              {(introduccion as Array<string>).map((par: string, idx: number) => (
+              {introduccion.map((par: string, idx: number) => (
                 <p key={`intro-${idx}`}>{par}</p>
               ))}
             </div>
@@ -268,73 +286,67 @@ export default function ProjectTemplate(paramz: ProjectParams) {
             > */}
           <MDBTabsContent>
             <MDBTabsPane show={tabVisible === "brochure"}>
-              <object
-                data={pdfUrl}
-                type="application/pdf"
+              <iframe
+                src={`https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}&embedded=true`}
                 width="100%"
                 height="500px"
+                style={{ border: "none" }}
+                title="Brochure PDF"
               >
-                <big>
-                  <p>
-                    {t("pages.project.pdfUI.cantDisplay")}{" "}
-                    <Link
-                      target="_blank"
-                      className="text-decoration-underline"
-                      download
-                      to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-                    >
-                      {t("pages.project.pdfUI.download")}
-                    </Link>{" "}
-                    {t("pages.project.pdfUI.instead")}
-                  </p>
-                </big>
-              </object>
+                <p>
+                  {t("pages.project.pdfUI.cantDisplay")}{" "}
+                  <Link
+                    target="_blank"
+                    className="text-decoration-underline"
+                    to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/brochure.pdf`}
+                  >
+                    {t("pages.project.pdfUI.download")}
+                  </Link>{" "}
+                  {t("pages.project.pdfUI.instead")}
+                </p>
+              </iframe>
             </MDBTabsPane>
             <MDBTabsPane show={tabVisible === "hoja"}>
-              <object
-                data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-                type="application/pdf"
+              <iframe
+                src={`https://docs.google.com/viewer?url=${encodeURIComponent(`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/hoja.pdf`)}&embedded=true`}
                 width="100%"
                 height="500px"
+                style={{ border: "none" }}
+                title="Fact Sheet PDF"
               >
-                <big>
-                  <p>
-                    {t("pages.project.pdfUI.cantDisplay")}{" "}
-                    <Link
-                      target="_blank"
-                      className="text-decoration-underline"
-                      download
-                      to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-                    >
-                      {t("pages.project.pdfUI.download")}
-                    </Link>{" "}
-                    {t("pages.project.pdfUI.instead")}
-                  </p>
-                </big>
-              </object>
+                <p>
+                  {t("pages.project.pdfUI.cantDisplay")}{" "}
+                  <Link
+                    target="_blank"
+                    className="text-decoration-underline"
+                    to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/hoja.pdf`}
+                  >
+                    {t("pages.project.pdfUI.download")}
+                  </Link>{" "}
+                  {t("pages.project.pdfUI.instead")}
+                </p>
+              </iframe>
             </MDBTabsPane>
             <MDBTabsPane show={tabVisible === "planos"}>
-              <object
-                data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-                type="application/pdf"
+              <iframe
+                src={`https://docs.google.com/viewer?url=${encodeURIComponent(`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/planos.pdf`)}&embedded=true`}
                 width="100%"
                 height="500px"
+                style={{ border: "none" }}
+                title="Floor Plans PDF"
               >
-                <big>
-                  <p>
-                    {t("pages.project.pdfUI.cantDisplay")}{" "}
-                    <Link
-                      target="_blank"
-                      className="text-decoration-underline"
-                      download
-                      to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-                    >
-                      {t("pages.project.pdfUI.download")}
-                    </Link>{" "}
-                    {t("pages.project.pdfUI.instead")}
-                  </p>
-                </big>
-              </object>
+                <p>
+                  {t("pages.project.pdfUI.cantDisplay")}{" "}
+                  <Link
+                    target="_blank"
+                    className="text-decoration-underline"
+                    to={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/planos.pdf`}
+                  >
+                    {t("pages.project.pdfUI.download")}
+                  </Link>{" "}
+                  {t("pages.project.pdfUI.instead")}
+                </p>
+              </iframe>
             </MDBTabsPane>
             <MDBTabsPane show>
               <div className="d-flex justify-content-center font-size-lg">
@@ -403,7 +415,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           </MDBRow>
         </MDBContainer>
         {/* <div> */}
-        {/* <h3 className="text-center">Otras Ãreas</h3> */}
+        {/* <h3 className="text-center">Otras Áreas</h3> */}
         {/* </div> */}
         <br></br>
       </section>

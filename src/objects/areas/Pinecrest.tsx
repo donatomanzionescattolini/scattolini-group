@@ -6,11 +6,11 @@ export default function Pinecrest() {
     pinecrest.name = "pinecrest";
     pinecrest.titulo = {
         es: "Pinecrest",
-        en:"latest"
+        en: "Pinecrest"
     };
     pinecrest.slogan = {
         es: "Calidad de Vida y Paisajes Exuberantes",
-        en:"latest"
+        en: "Quality of Life and Lush Landscapes"
     };
     pinecrest.descripcion = {
         es: [

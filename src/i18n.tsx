@@ -21,6 +21,22 @@ const translations: Record<Lang, any> = {
             desarrollos: "Desarrollos",
             equipo: "Nuestro Equipo",
             search: "Buscar",
+            toggleNavigation: "Alternar navegación",
+            logoAlt: "Logo de Scattolini Group",
+            switchToSpanish: "Cambiar a español",
+            switchToEnglish: "Cambiar a inglés",
+        },
+        navComponent: {
+            brand: "Scattolini Group",
+            home: "Inicio",
+            link: "Enlace",
+            dropdown: "Opciones",
+            action: "Acción",
+            anotherAction: "Otra acción",
+            somethingElse: "Algo más",
+            disabled: "Deshabilitado",
+            searchPlaceholder: "Buscar",
+            searchButton: "Buscar",
         },
         hero: {
             title: "SCATTOLINI GROUP",
@@ -28,8 +44,17 @@ const translations: Record<Lang, any> = {
             cta: "Contáctanos Hoy",
         },
         pages: {
-            areas: {title: "Áreas"},
+            areas: {
+                title: "Áreas",
+                photoAlt: "Foto del área",
+            },
+            aliados: {
+                hueHouseAlt: "Logo de Hue House",
+                manzioneDesignAlt: "Logo de Manzione Design",
+                manzionePropertiesAlt: "Logo de Manzione Properties",
+            },
             desarrollos: {
+                title: "Desarrollos",
                 envyResidence: {
                     titulo: "ENVY Pompano Beach",
                     subtitulo: "Vive más allá de lo ordinario",
@@ -70,6 +95,8 @@ const translations: Record<Lang, any> = {
                 selectArea: "Seleccione un área para editar",
                 areaLabel: "Área",
                 reviewTitle: "Revisión de cambios",
+                addDesarrollo: "Agregar desarrollo",
+                createDesarrollo: "Crear desarrollo",
                 tabs: {
                     desarrollos: "Desarrollos",
                     areas: "Áreas",
@@ -85,6 +112,16 @@ const translations: Record<Lang, any> = {
                         basic: "Información básica",
                         details: "Detalles",
                         features: "Características",
+                        media: "Multimedia (S3)",
+                        mediaUpload: "Recursos multimedia del proyecto",
+                        mediaInfo: "Subir archivos a S3. Serán accesibles en:",
+                        images: "Imágenes (Galería)",
+                        imagesHelp: "Subir a: /image-gallery/image (1).jpg, etc.",
+                        pdfs: "PDFs (Folletos/Planos)",
+                        pdfsHelp: "Subir a: /pdfs/",
+                        video: "Video",
+                        videoHelp: "Subir a: /video.mp4",
+                        uploadBtn: "Subir a S3",
                     },
                     area: {
                         basic: "Información básica",
@@ -93,9 +130,10 @@ const translations: Record<Lang, any> = {
                     review: "Revisión",
                 },
                 fields: {
-                    nombre: "Nombre",
+                    nombre: "Identificador (nombre)",
                     titulo: "Título",
                     slogan: "Slogan",
+                    areaName: "Nombre del área",
                     introduccion: "Introducción",
                     ubicacion: "Ubicación",
                     "ubicación": "Ubicación",
@@ -146,6 +184,7 @@ const translations: Record<Lang, any> = {
             manzione: {
                 title: "Administración de propiedades en la que puedes confiar",
                 descripcion: "En nuestra empresa, nos especializamos en la administración de propiedades. Nos aseguramos de que cada propiedad esté bien cuidada y mantenida, y nos encargamos de todos los detalles para que nuestros clientes puedan disfrutar de la tranquilidad de saber que su propiedad está en buenas manos.",
+                imageAlt: "Imagen de administración de propiedades",
             },
             about: {
                 title: "Scattolini Group",
@@ -170,11 +209,13 @@ const translations: Record<Lang, any> = {
             },
             project: {
                 bannerAlt: "Banner del proyecto",
+                galleryImageAlt: "Imagen de galería del proyecto",
                 caracteristicas: "Características",
                 edificio: "Edificio",
                 residencias: "Residencias",
                 amenidades: "Amenidades",
                 galeria: "Galería Fotográfica",
+                locatedIn: "Ubicado en",
                 pdf: {
                     brochure: "Brochure",
                     hoja: "Hoja de Datos",
@@ -262,6 +303,9 @@ const translations: Record<Lang, any> = {
             brickell2200: {
                 titulo: "2200 Brickell",
                 subtitulo: "Un Santuario Urbano en el Corazón de Brickell",
+                slogan: "Un Santuario Urbano en el Corazón de Brickell",
+                direccion: "2200 Brickell Ave, Miami, FL",
+                typeOfUnits: "Residencias de 1 a 4 habitaciones",
                 introduccion: [
                     "2200 Brickell is a new condominio de lujo en South Brickell, diseñado por Revuelta Architecture y con diseño interior de ODA New York.",
                     "Estas lujosas residencias de 1 a 4 habitaciones ofrecen acabados espectaculares, electrodomésticos de alta calidad, ventanas de vidrio de piso a techo, estacionamiento asignado en espacios en el mismo piso y mucho más.",
@@ -541,8 +585,11 @@ const translations: Record<Lang, any> = {
         common: {
             loading: "Cargando...",
             videoNotSupported: "Tu navegador no soporta el video.",
+            videoUnsupported: "Tu navegador no soporta el video.",
             next: "Siguiente",
             previous: "Anterior",
+            page: "Página",
+            of: "de",
             cancel: "Cancelar",
             saving: "Guardando...",
             saveChanges: "Guardar cambios",
@@ -564,6 +611,22 @@ const translations: Record<Lang, any> = {
             desarrollos: "Developments",
             equipo: "Our Team",
             search: "Search",
+            toggleNavigation: "Toggle navigation",
+            logoAlt: "Scattolini Group logo",
+            switchToSpanish: "Switch to Spanish",
+            switchToEnglish: "Switch to English",
+        },
+        navComponent: {
+            brand: "Scattolini Group",
+            home: "Home",
+            link: "Link",
+            dropdown: "Dropdown",
+            action: "Action",
+            anotherAction: "Another action",
+            somethingElse: "Something else",
+            disabled: "Disabled",
+            searchPlaceholder: "Search",
+            searchButton: "Search",
         },
         hero: {
             title: "SCATTOLINI GROUP",
@@ -571,8 +634,17 @@ const translations: Record<Lang, any> = {
             cta: "Contact Us Today",
         },
         pages: {
-            areas: {title: "Areas"},
+            areas: {
+                title: "Areas",
+                photoAlt: "Area photo",
+            },
+            aliados: {
+                hueHouseAlt: "Hue House logo",
+                manzioneDesignAlt: "Manzione Design logo",
+                manzionePropertiesAlt: "Manzione Properties logo",
+            },
             desarrollos: {
+                title: "Developments",
                 envyResidence: {
                     titulo: "ENVY Pompano Beach",
                     subtitulo: "Live Beyond the Ordinary",
@@ -613,6 +685,8 @@ const translations: Record<Lang, any> = {
                 selectArea: "Select an area to edit",
                 areaLabel: "Area",
                 reviewTitle: "Review changes",
+                addDesarrollo: "Add development",
+                createDesarrollo: "Create development",
                 tabs: {
                     desarrollos: "Developments",
                     areas: "Areas",
@@ -628,6 +702,16 @@ const translations: Record<Lang, any> = {
                         basic: "Basic info",
                         details: "Details",
                         features: "Features",
+                        media: "Media (S3)",
+                        mediaUpload: "Project Media Assets",
+                        mediaInfo: "Upload files to S3. They will be accessible at:",
+                        images: "Images (Gallery)",
+                        imagesHelp: "Upload to: /image-gallery/image (1).jpg, etc.",
+                        pdfs: "PDFs (Brochures/Floorplans)",
+                        pdfsHelp: "Upload to: /pdfs/",
+                        video: "Video",
+                        videoHelp: "Upload to: /video.mp4",
+                        uploadBtn: "Upload to S3",
                     },
                     area: {
                         basic: "Basic info",
@@ -636,9 +720,10 @@ const translations: Record<Lang, any> = {
                     review: "Review",
                 },
                 fields: {
-                    nombre: "Name",
+                    nombre: "Identifier (name)",
                     titulo: "Title",
                     slogan: "Slogan",
+                    areaName: "Area name",
                     introduccion: "Introduction",
                     ubicacion: "Location",
                     "ubicación": "Location",
@@ -689,6 +774,8 @@ const translations: Record<Lang, any> = {
             manzione: {
                 title: "Property Management You Can Trust",
                 description: "In our company, we specialize in property management. We ensure that each property is well cared for and maintained, and we take care of all the details so that our clients can enjoy the peace of mind of knowing their property is in good hands.",
+                descripcion: "In our company, we specialize in property management. We ensure that each property is well cared for and maintained, and we take care of all the details so that our clients can enjoy the peace of mind of knowing their property is in good hands.",
+                imageAlt: "Property management image",
             },
             about: {
                 title: "Scattolini Group",
@@ -713,6 +800,7 @@ const translations: Record<Lang, any> = {
             },
             project: {
                 bannerAlt: "Project banner",
+                galleryImageAlt: "Project gallery image",
                 caracteristicas: "Features",
                 edificio: "Building",
                 residencias: "Residences",
@@ -805,6 +893,9 @@ const translations: Record<Lang, any> = {
             brickell2200: {
                 titulo: "2200 Brickell",
                 subtitulo: "An Urban Sanctuary in the Heart of Brickell",
+                slogan: "An Urban Sanctuary in the Heart of Brickell",
+                direccion: "2200 Brickell Ave, Miami, FL",
+                typeOfUnits: "1 to 4 bedroom residences",
                 introduccion: [
                     "2200 Brickell is a new luxury condominium in South Brickell, designed by Revuelta Architecture and featuring interior design by ODA New York.",
                     "These 1 to 4 bedroom luxury residences offer spectacular finishes, high-end appliances, floor-to-ceiling glass windows, assigned parking on same floor, and much more.",
@@ -967,8 +1058,11 @@ const translations: Record<Lang, any> = {
         common: {
             loading: "Loading...",
             videoNotSupported: "Your browser does not support the video tag.",
+            videoUnsupported: "Your browser does not support the video tag.",
             next: "Next",
             previous: "Previous",
+            page: "Page",
+            of: "of",
             cancel: "Cancel",
             saving: "Saving...",
             saveChanges: "Save changes",
@@ -980,6 +1074,45 @@ const translations: Record<Lang, any> = {
         },
     },
 };
+
+function resolvePathValue(source: unknown, path: string): unknown {
+    const keys = path.split(".");
+    let cur: unknown = source;
+    for (const key of keys) {
+        if (cur && typeof cur === "object" && key in (cur as Record<string, unknown>)) {
+            cur = (cur as Record<string, unknown>)[key];
+            continue;
+        }
+        return undefined;
+    }
+    return cur;
+}
+
+function buildPathCandidates(path: string): string[] {
+    if (path.startsWith("pages.")) {
+        return [path, path.slice(6)];
+    }
+    return [path, `pages.${path}`];
+}
+
+function lookupTranslationValue(lang: Lang, path: string): unknown {
+    const source = translations[lang];
+    for (const candidate of buildPathCandidates(path)) {
+        const value = resolvePathValue(source, candidate);
+        if (value !== undefined) {
+            return value;
+        }
+    }
+    return undefined;
+}
+
+function isPlaceholderValue(value: unknown): boolean {
+    return typeof value === "string" && value.trim().toLowerCase() === "latest";
+}
+
+function isUsableTranslationValue(value: unknown): boolean {
+    return value !== undefined && value !== null && !isPlaceholderValue(value);
+}
 
 interface I18nContextValue {
     lang: Lang;
@@ -1021,17 +1154,16 @@ export function TranslationProvider({children, defaultLang = "es" as Lang}: {
 
     const t = useMemo(() => {
         return (path: string, fallback?: string | null): string | string[] | null => {
-            const keys = path.split(".");
-            let cur: any = translations[lang];
-            for (const k of keys) {
-                if (cur && typeof cur === "object" && k in cur) {
-                    cur = cur[k];
-                } else {
-                    return fallback !== undefined ? (fallback as string) : path;
-                }
-            }
-            if (cur === null) return null;
-            return (typeof cur === "string" || Array.isArray(cur)) ? cur : (fallback !== undefined ? (fallback as string) : path);
+            const fallbackLang: Lang = lang === "es" ? "en" : "es";
+            const currentValue = lookupTranslationValue(lang, path);
+            const fallbackValue = lookupTranslationValue(fallbackLang, path);
+            const resolved = isUsableTranslationValue(currentValue)
+                ? currentValue
+                : fallbackValue;
+
+            if (resolved === null) return null;
+            if (typeof resolved === "string" || Array.isArray(resolved)) return resolved;
+            return fallback !== undefined ? (fallback as string) : path;
         };
     }, [lang]);
 
@@ -1042,17 +1174,16 @@ export function TranslationProvider({children, defaultLang = "es" as Lang}: {
 }
 
 export function getTranslation(path: string, lang: Lang, fallback?: string | null): string | string[] | null {
-    const keys = path.split(".");
-    let cur: any = translations[lang];
-    for (const k of keys) {
-        if (cur && typeof cur === "object" && k in cur) {
-            cur = cur[k];
-        } else {
-            return fallback !== undefined ? (fallback as string) : path;
-        }
-    }
-    if (cur === null) return null;
-    return (typeof cur === "string" || Array.isArray(cur)) ? cur : (fallback !== undefined ? (fallback as string) : path);
+    const fallbackLang: Lang = lang === "es" ? "en" : "es";
+    const currentValue = lookupTranslationValue(lang, path);
+    const fallbackValue = lookupTranslationValue(fallbackLang, path);
+    const resolved = isUsableTranslationValue(currentValue)
+        ? currentValue
+        : fallbackValue;
+
+    if (resolved === null) return null;
+    if (typeof resolved === "string" || Array.isArray(resolved)) return resolved;
+    return fallback !== undefined ? (fallback as string) : path;
 }
 
 export function useTranslation() {
@@ -1092,17 +1223,18 @@ export function resolveLocalizedValue<T>(
         const record = value as Record<string, T | undefined>;
         for (const currentLang of buildLanguagePriority(lang, fallbackLang)) {
             const candidate = record[currentLang];
-            if (candidate !== undefined && candidate !== null) {
+            if (candidate !== undefined && candidate !== null && !isPlaceholderValue(candidate)) {
                 return candidate as T;
             }
         }
         for (const candidate of Object.values(record)) {
-            if (candidate !== undefined && candidate !== null) {
+            if (candidate !== undefined && candidate !== null && !isPlaceholderValue(candidate)) {
                 return candidate as T;
             }
         }
         return undefined;
     }
+    if (isPlaceholderValue(value)) return undefined;
     return value as T;
 }
 

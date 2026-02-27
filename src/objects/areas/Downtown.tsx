@@ -5,11 +5,11 @@ export default function Downtown() {
     downtown.name = "downtown";
     downtown.titulo = {
         es: "Downtown",
-        en:"latest"
+        en: "Downtown"
     };
     downtown.slogan = {
         es: "El Corazón de la Ciudad",
-        en:"latest"
+        en: "The Heart of the City"
     };
     downtown.descripcion = {
         es: ["Descubre Downtown Miami, el corazón vibrante y emocionante de la ciudad. Con su impresionante arquitectura, su amplia oferta de restaurantes y tiendas, y su animada vida nocturna, Downtown Miami es el lugar perfecto para aquellos que buscan una experiencia urbana única. Además, hay muchas opciones de propiedades disponibles, desde lujosos condominios con vistas impresionantes hasta modernos lofts y apartamentos. ¡No pierda la oportunidad de invertir en esta emocionante área de Miami!"],

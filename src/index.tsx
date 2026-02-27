@@ -35,7 +35,8 @@ for (let i = 0; i < images.length; i++) {
     image.style.maxWidth = "100%";
     image.style.padding = "0";
     image.style.margin = "auto";
-    image.classList.add("img-thumbnail");
+    image.style.border = "none";
+    image.style.boxShadow = "none";
 }
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

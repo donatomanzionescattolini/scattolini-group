@@ -17,7 +17,7 @@ export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
                 <li>Piscina estilo resort y cabañas</li>
                 <li>Amplios centros de coworking</li>
                 <li>Canchas de pickleball cubiertas</li>
-                <li>Gimnasio de última generaci�n</li>
+                <li>Gimnasio de última generaci?n</li>
                 <li>
                     Amplio salón y Área multimedia para reunirse con amigos y
                     relajarse
@@ -64,7 +64,7 @@ export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
                     relajarse.{" "}
                 </li>
                 <li>
-                    Piscina y Caba�as: En un día caluroso, disfrute del patio al aire
+                    Piscina y Caba?as: En un día caluroso, disfrute del patio al aire
                     libre donde puede nadar o cocinar a la parrilla.
                 </li>
                 <li>
@@ -76,7 +76,7 @@ export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
                     disponibles para residentes e invitados.
                 </li>
                 <li>Comodidades</li>
-                <li>Gimnasio de última generaci�n</li>
+                <li>Gimnasio de última generaci?n</li>
                 <li>
                     Manténgase en forma y activo con nuestro gimnasio completamente
                     equipado y canchas de pickleball.
@@ -97,7 +97,7 @@ export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
         ),
     };
     FourteenRiverDistrictObject.introduccion = getLocalizedArray("introduccion", [
-        "Ubicado en el borde del segundo distrito de salud pública m�s grande del país y a las puertas del río Miami..."
+        "Ubicado en el borde del segundo distrito de salud pública m?s grande del país y a las puertas del río Miami..."
     ]);
     FourteenRiverDistrictObject.titulo = getLocalizedField("titulo", "14 River District");
     FourteenRiverDistrictObject.slogan = getLocalizedField("slogan", "");

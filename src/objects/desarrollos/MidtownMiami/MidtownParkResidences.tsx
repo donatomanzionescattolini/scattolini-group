@@ -4,7 +4,7 @@ const MidtownParkResidences = new Desarrollo(MidtownMiami());
 MidtownParkResidences.titulo = "Midtown Park Residences";
 MidtownParkResidences.nombre = "midtown-park-residences";
 MidtownParkResidences.introduccion = [
-  "Midtown Park es un animado centro de cinco acres las 24 horas del día en Midtown Miami, que une Design District, Wynwood y Edgewater. Este espacio de uso mixto combina oficinas, casas de lujo y �reas públicas vibrantes, fomentando la creatividad y la comunidad. Con m�s de 100,000 pies cuadrados de tiendas y restaurantes a nivel de calle, mejora el ambiente transitable. El desarrollo cuenta con un acre de espacios verdes, incluidos los parques East y West y dos paseos sombreados. Una entrada empedrada en Midtown Boulevard agrega comodidad, mientras que el tercer piso alberga un club de raqueta de ocho canchas para recreación de primer nivel. Las oficinas boutique atraen a firmas creativas, pr�cticas legales y profesionales de las finanzas, enriqueciendo la escena din�mica de Midtown.",
+  "Midtown Park es un animado centro de cinco acres las 24 horas del día en Midtown Miami, que une Design District, Wynwood y Edgewater. Este espacio de uso mixto combina oficinas, casas de lujo y ?reas públicas vibrantes, fomentando la creatividad y la comunidad. Con m?s de 100,000 pies cuadrados de tiendas y restaurantes a nivel de calle, mejora el ambiente transitable. El desarrollo cuenta con un acre de espacios verdes, incluidos los parques East y West y dos paseos sombreados. Una entrada empedrada en Midtown Boulevard agrega comodidad, mientras que el tercer piso alberga un club de raqueta de ocho canchas para recreación de primer nivel. Las oficinas boutique atraen a firmas creativas, pr?cticas legales y profesionales de las finanzas, enriqueciendo la escena din?mica de Midtown.",
 ];
 MidtownParkResidences.slogan =
   "El mejor lugar para estar es ahora es el mejor lugar para vivir";
@@ -62,7 +62,7 @@ MidtownParkResidences.caracteristicas = {
         </li>
         <li>
           Baños principales con duchas dobles con mampara de vidrio, accesorios
-          de latón Hansgrohe y paredes de cer�mica Jade exclusivas diseñadas por
+          de latón Hansgrohe y paredes de cer?mica Jade exclusivas diseñadas por
           Meyer Davis Studio
         </li>
         <li>

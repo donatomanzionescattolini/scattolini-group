@@ -19,7 +19,7 @@ export default function ShomaBay(lang: "en" | "es" = "es") {
                 </li>
                 <li>Habitaciones por unidad: 1-3</li>
 
-                <li>Sal�n del vestíbulo</li>
+                <li>Sal?n del vestíbulo</li>
                 <li>Área de juego</li>
                 <li>Spa para mascotas</li>
                 <li>Biblioteca</li>
@@ -43,7 +43,7 @@ export default function ShomaBay(lang: "en" | "es" = "es") {
                 <li>Encimeras de cuarzo</li>
                 <li>Gabinetes italianos con iluminación debajo del gabinete</li>
                 <li>Estaciones de carga USB</li>
-                <li>Grifería de cocina multifunci�n</li>
+                <li>Grifería de cocina multifunci?n</li>
                 <li>Electrodomésticos de acero inoxidable de alta eficiencia</li>
                 <li>Baños inspirados en el spa</li>
                 <li>Tocadores de diseño con espejos iluminados</li>

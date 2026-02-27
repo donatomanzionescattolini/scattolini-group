@@ -60,7 +60,7 @@ export default function TheAvenue(lang: "en" | "es" = "es") {
                         refrigeradores y estufas Wolf; y gabinetes italianos importados
                         con herrajes de primera calidad
                     </li>
-                    <li>Grifería y accesorios de ba�o premium de estilo europeo</li>
+                    <li>Grifería y accesorios de ba?o premium de estilo europeo</li>
                 </ul>
             </>
         ),
@@ -68,7 +68,7 @@ export default function TheAvenue(lang: "en" | "es" = "es") {
             <>
                 <ul>
                     <li>
-                        Recepci�n 24 horas, servicio de aparcacoches, conserjería y
+                        Recepci?n 24 horas, servicio de aparcacoches, conserjería y
                         seguridad
                     </li>
                     <li>
@@ -94,7 +94,7 @@ export default function TheAvenue(lang: "en" | "es" = "es") {
         ),
     };
     TheAvenueObject.introduccion = getLocalizedArray("introduccion", [
-        "Creado por el estudio de arquitectura líder Bermello Ajamil & Partners, The Avenue cobra vida con un dise�o inspirado en el clasicismo mediterr�neo. Descubra un edificio esculpido y atemporal que encajar� perfectamente en The City Beautiful mientras se destaca como una direcci�n emblem�tica",
+        "Creado por el estudio de arquitectura líder Bermello Ajamil & Partners, The Avenue cobra vida con un dise?o inspirado en el clasicismo mediterr?neo. Descubra un edificio esculpido y atemporal que encajar? perfectamente en The City Beautiful mientras se destaca como una direcci?n emblem?tica",
 
         "Cada residencia se completa con acabados de buen gusto y muebles y decoración seleccionados por expertos de Adriana Hoyos Design Studio. Después de redefinir el lujo tropical durante casi tres décadas, el equipo ahora dejarÁ su huella en la mejor dirección de Coral Gables",
 

@@ -16,7 +16,7 @@ export default function Domus(lang: "en" | "es" = "es") {
                 <li>Aparcacoches</li>
                 <li>Aparcamiento de bicicletas</li>
                 <li>Cafetería</li>
-                <li>Sal�n Jardín</li>
+                <li>Sal?n Jardín</li>
                 <li>Coworking</li>
                 <li>Habitación de paquetes</li>
                 <li>Gimnasio</li>
@@ -43,7 +43,7 @@ export default function Domus(lang: "en" | "es" = "es") {
                     Domus Brickell ofrece un espacio ideal para socializar y
                     establecer contactos, con 500 metros cuadrados de Áreas comunes
                     modernas y acogedoras adecuadas para cualquier ocasión. Desde su
-                    vestíbulo, perfecto para reuniones de negocios y relajaci�n, hasta
+                    vestíbulo, perfecto para reuniones de negocios y relajaci?n, hasta
                     el minimercado, el espacio de trabajo, la cafetería y el hermoso
                     jardín, Domus Brickell Park ofrece un refugio tranquilo sin tener
                     que salir de casa. Por supuesto, la experiencia solo se completa
@@ -56,9 +56,9 @@ export default function Domus(lang: "en" | "es" = "es") {
                     <li>Parque de bolsillo cubierto al aire libre</li>
                     <li>Cafetería y panadería con terraza cubierta</li>
                     <li>Mercado artesanal que ofrece opciones gourmet</li>
-                    <li>Exuberante sal�n en el jardín</li>
+                    <li>Exuberante sal?n en el jardín</li>
                     <li>Bar de vinos y cervezas</li>
-                    <li>Gimnasio con equipos de última generaci�n</li>
+                    <li>Gimnasio con equipos de última generaci?n</li>
                     <li>Baño de vapor</li>
                     <li>Terraza de la piscina en la azotea con cabañas</li>
                     <li>Jacuzzi</li>

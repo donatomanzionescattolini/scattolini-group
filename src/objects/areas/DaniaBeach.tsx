@@ -7,7 +7,7 @@ export default function DaniaBeach() {
 
     DaniaBeachObject.titulo = {
         es: "Dania Beach",
-        en:"latest"
+        en: "Dania Beach"
     };
     DaniaBeachObject.descripcion = {
         es: [
@@ -20,7 +20,7 @@ export default function DaniaBeach() {
     DaniaBeachObject.numberOfImages = 22;
     DaniaBeachObject.slogan = {
         es: "Vívela, Disfrútala, Pláyala",
-        en:"latest"
+        en: "Live It, Enjoy It, Beach It"
     };
 
 

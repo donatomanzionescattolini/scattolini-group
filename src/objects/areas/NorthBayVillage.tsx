@@ -5,11 +5,11 @@ export default function NorthBayVillage() {
     northBayVillage.name = "north-bay-village";
     northBayVillage.titulo = {
         es: "North Bay Village",
-        en:"latest"
+        en: "North Bay Village"
     };
     northBayVillage.slogan = {
         es: "El Corazón de la Bahía",
-        en:"latest"
+        en: "The Heart of the Bay"
     };
     northBayVillage.descripcion = {
         es: [

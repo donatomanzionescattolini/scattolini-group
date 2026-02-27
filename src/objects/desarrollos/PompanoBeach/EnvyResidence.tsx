@@ -53,13 +53,13 @@ envyResidenceObject.caracteristicas = {
     <>
       <ul>
         <li>
-          {getLocalizedField("caracteristicas.amenidades.bienestar", "Centro de bienestar: un gimnasio de última generaci�n y espacio de yoga.")}
+          {getLocalizedField("caracteristicas.amenidades.bienestar", "Centro de bienestar: un gimnasio de última generaci?n y espacio de yoga.")}
         </li>
         <li>
           {getLocalizedField("caracteristicas.amenidades.piscina", "Piscina estilo resort: una cubierta de piscina hermosamente ajardinada para la mÁxima relajación.")}
         </li>
         <li>
-          {getLocalizedField("caracteristicas.amenidades.salon", "Sofisticado sal�n y sala de entretenimiento: un �rea común elegante para socializar.")}
+          {getLocalizedField("caracteristicas.amenidades.salon", "Sofisticado sal?n y sala de entretenimiento: un ?rea común elegante para socializar.")}
         </li>
         <li>
           {getLocalizedField("caracteristicas.amenidades.mascotas", "Ventajas para mascotas: un Área de mascotas designada para sus amigos peludos.")}

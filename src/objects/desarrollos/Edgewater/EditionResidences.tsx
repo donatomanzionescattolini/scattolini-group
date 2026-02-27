@@ -62,7 +62,7 @@ export default function EditionResidences(lang: "en" | "es" = "es") {
                 <li>
                     Acceso prioritario a todas las instalaciones y comodidades del
                     hotel. Reservas de habitaciones con tarifas especiales para
-                    residentes en The Miami Beach EDITION; mejoras de habitaci�n según
+                    residentes en The Miami Beach EDITION; mejoras de habitaci?n según
                     disponibilidad Acceso prioritario a todo el espacio público
                     rentable para eventos privados Acceso a salas de reuniones y
                     centro de negocios Acceso prioritario a restaurantes y bares del

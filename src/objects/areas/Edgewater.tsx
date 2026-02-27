@@ -5,11 +5,11 @@ export default function Edgewater() {
     edgewater.name = "edgewater";
     edgewater.titulo = {
         es: "Edgewater",
-        en:"latest"
+        en: "Edgewater"
     };
     edgewater.slogan = {
         es: "La Ciudad de la Hospitalidad",
-        en:"latest"
+        en: "The City of Hospitality"
     };
     edgewater.descripcion = {
         es: [

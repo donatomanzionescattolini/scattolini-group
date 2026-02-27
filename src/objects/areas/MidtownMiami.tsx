@@ -4,7 +4,7 @@ export default function MidtownMiami() {
     MidtownMiamiObject.name = "midtown-miami";
     MidtownMiamiObject.titulo = {
         es: "Midtown Miami",
-        en:"latest"
+        en: "Midtown Miami"
     };
     MidtownMiamiObject.numberOfImages = 43;
     MidtownMiamiObject.descripcion = {
@@ -19,7 +19,7 @@ export default function MidtownMiami() {
     };
     MidtownMiamiObject.slogan = {
         es: "Donde la Creatividad y la Ciudad se Encuentran",
-        en:"latest"
+        en: "Where Creativity and the City Meet"
     };
 
     return MidtownMiamiObject;

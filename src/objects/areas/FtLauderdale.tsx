@@ -5,7 +5,7 @@ export default function FtLauderdale() {
     FtLauderdaleObject.numberOfImages = 34;
     FtLauderdaleObject.titulo = {
         es: "Ft. Lauderdale",
-        en:"latest"
+        en: "Ft. Lauderdale"
     };
     FtLauderdaleObject.name = "ft-lauderdale";
     FtLauderdaleObject.descripcion = {
@@ -18,7 +18,7 @@ export default function FtLauderdale() {
     };
     FtLauderdaleObject.slogan = {
         es: "Venecia de América",
-        en:"latest"
+        en: "Venice of America"
     };
     
     return FtLauderdaleObject;

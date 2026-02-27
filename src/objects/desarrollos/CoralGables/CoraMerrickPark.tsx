@@ -47,8 +47,8 @@ Baños principales para mejorar el bienestar</li>
   amenidades: <>
       <ul>
         <li>La primera pista de pÁdel de Coral Gable</li>
-        <li>Spa con sauna, ba�o de vapor y ba�o de agua fría y caliente</li>
-        <li>Gimnasio de última generaci�n</li>
+        <li>Spa con sauna, ba?o de vapor y ba?o de agua fría y caliente</li>
+        <li>Gimnasio de última generaci?n</li>
         <li>
           Terraza con piscina al aire libre que incluye cabañas privadas y
           cocina al aire libre
@@ -66,15 +66,15 @@ Baños principales para mejorar el bienestar</li>
         <li>Cora busca obtener la Certificación de Construcción WELL</li>
         <li>Sistemas avanzados de purificación de aire y agua</li>
         <li>
-          El dise�o biofílico de Arquitectonica integra la naturaleza y los
+          El dise?o biofílico de Arquitectonica integra la naturaleza y los
           materiales naturales, inspirando comunidad y movimiento
         </li>
         <li>
-          El dise�o acústico de Cora promueve la comodidad y la tranquilidad,
+          El dise?o acústico de Cora promueve la comodidad y la tranquilidad,
           reduciendo el ruido y mejorando la productividad
         </li>
         <li>
-          La innovadora tecnología de iluminaci�n maximiza la luz natural y
+          La innovadora tecnología de iluminaci?n maximiza la luz natural y
           proporciona una iluminación equilibrada para espacios vibrantes y bien
           iluminados
         </li>
@@ -96,7 +96,7 @@ Baños principales para mejorar el bienestar</li>
 };
 CoraMerrickPark.numberOfImages = 45;
 CoraMerrickPark.introduccion = [
-  "Cora Merrick Park es un condominio residencial de lujo. Su fachada presenta acentos cl�sicos de bronce, estuco texturizado y piedra oolita combinados con elegantes columnas tradicionales. Cora ofrece solo 12 pisos con 74 residencias súper exclusivas de 1 a 3 rec�maras, con acabados espectaculares y apartamentos totalmente amueblados dise�ados por el famoso Robot Urbano. Las comodidades de primera línea proporcionar�n una piscina, gimnasio, sauna, sala club, centro de negocios, �reas sociales y mucho m�s. Los residentes de Cora est�n perfectamente conectados con las tiendas en Merrick Park, restaurantes al aire libre y opciones de bienestar.",
+  "Cora Merrick Park es un condominio residencial de lujo. Su fachada presenta acentos cl?sicos de bronce, estuco texturizado y piedra oolita combinados con elegantes columnas tradicionales. Cora ofrece solo 12 pisos con 74 residencias súper exclusivas de 1 a 3 rec?maras, con acabados espectaculares y apartamentos totalmente amueblados dise?ados por el famoso Robot Urbano. Las comodidades de primera línea proporcionar?n una piscina, gimnasio, sauna, sala club, centro de negocios, ?reas sociales y mucho m?s. Los residentes de Cora est?n perfectamente conectados con las tiendas en Merrick Park, restaurantes al aire libre y opciones de bienestar.",
 ];
 CoraMerrickPark.numberOfFloors = 12;
 CoraMerrickPark.numberOfUnits = 74;

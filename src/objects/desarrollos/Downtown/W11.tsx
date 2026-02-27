@@ -12,11 +12,11 @@ export default function W11() {
     W11Object.introduccion = [
         "La vida moderna estÁ en perpetuo movimiento. Siempre estamos encendidos la mudanza. Las residencias en West Eleventh fueron creadas con esa noción en mente. Una experiencia con verdadera flexibilidad de vida para dueños",
 
-        "West Eleventh Residences ofrece las primeras residencias de condominios de lujo administradas de manera centralizada que brindan a los propietarios la opci�n de hospedar 365 días en Airbnb.",
+        "West Eleventh Residences ofrece las primeras residencias de condominios de lujo administradas de manera centralizada que brindan a los propietarios la opci?n de hospedar 365 días en Airbnb.",
 
         "West Eleventh ha reinventado la propiedad de viviendas en condominios de lujo al brindar una verdadera flexibilidad de vida. Cada residencia completamente amueblada ofrece un lugar al que llamar hogar y la " +
         "oportunidad de ser anfitrión exclusivo en Airbnb.",
-        "Todas las comodidades fueron consideradas en West Eleventh, desde las infinitas indulgencias disponibles en el entretenimiento experiencial de tres niveles y el sal�n culinario hasta un nivel de comodidades vibrante con una piscina estilo centro turístico con �reas de sal�n privadas. Todo esto, anclado por una presencia callejera que emana naturalmente la energía del emocionante vecindario circundante del edificio.  ",
+        "Todas las comodidades fueron consideradas en West Eleventh, desde las infinitas indulgencias disponibles en el entretenimiento experiencial de tres niveles y el sal?n culinario hasta un nivel de comodidades vibrante con una piscina estilo centro turístico con ?reas de sal?n privadas. Todo esto, anclado por una presencia callejera que emana naturalmente la energía del emocionante vecindario circundante del edificio.  ",
     ];
     W11Object.caracteristicas = {
         amenidades: <></>,
@@ -30,11 +30,11 @@ export default function W11() {
                         alojamiento
                     </li>
                     <li>
-                        Posibilidad de hospedar 365 días en Airbnb. El alojamiento est�
+                        Posibilidad de hospedar 365 días en Airbnb. El alojamiento est?
                         sujeto a las leyes locales y otras restricciones
                     </li>
                     <li>
-                        Vistas del horizonte de Miami, la Bahía de Biscayne y el Oc�ano
+                        Vistas del horizonte de Miami, la Bahía de Biscayne y el Oc?ano
                         AtlÁntico
                     </li>
                     <li>
@@ -43,13 +43,13 @@ export default function W11() {
                     <li>Restaurante de autor</li>
                     <li>
                         Vibrante nivel de comodidades con una piscina estilo centro
-                        turístico con �reas de sal�n privadas
+                        turístico con ?reas de sal?n privadas
                     </li>
-                    <li>Centro de fitness y bienestar de última generaci�n</li>
-                    <li>Espacio de vestíbulo residencial moderno y de alto dise�o</li>
+                    <li>Centro de fitness y bienestar de última generaci?n</li>
+                    <li>Espacio de vestíbulo residencial moderno y de alto dise?o</li>
                     <li>Colección curada de instalaciones de arte personalizadas</li>
                     <li>
-                        Cuenta con la última tecnología de "construcci�n inteligente"
+                        Cuenta con la última tecnología de "construcci?n inteligente"
                     </li>
                 </ul>
             </>
@@ -70,7 +70,7 @@ export default function W11() {
                     <li>Construido en lavadora y secadora de primera línea</li>
                     <li>
                         Cada residencia ofrece un nivel de eficiencia sin precedentes a
-                        trav�s de una experiencia de tecnología de hogar inteligente PMG
+                        trav?s de una experiencia de tecnología de hogar inteligente PMG
                         para una personalización perfecta con solo tocar un botón.
                     </li>
                     <li>
@@ -80,7 +80,7 @@ export default function W11() {
                     </li>
                     <li>
                         Precableado para comunicaciones de alta velocidad, múltiples
-                        líneas telef�nicas y cable
+                        líneas telef?nicas y cable
                     </li>
                     <li>Balcones franceses en residencias selectas</li>
                     <li>
@@ -88,17 +88,17 @@ export default function W11() {
                         salpicaduras y un fregadero contemporÁneo de montaje inferior
                     </li>
                     <li>
-                        El paquete de electrodom�sticos de primera línea incluye
+                        El paquete de electrodom?sticos de primera línea incluye
                         microondas, lavavajillas, horno empotrado y refrigerador
                     </li>
                     <li>
                         Gabinetes de cocina y baño importados y personalizados por
                         Italkraft
                     </li>
-                    <li>Accesorios, características y accesorios de ba�o WaterWorks</li>
+                    <li>Accesorios, características y accesorios de ba?o WaterWorks</li>
                     <li>
                         Encimeras de baño personalizadas y pisos y paredes terminados en
-                        �reas húmedas
+                        ?reas húmedas
                     </li>
                     <li>Duchas acristaladas</li>
                 </ul>

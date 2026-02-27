@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "../i18n.tsx";
+import { useNavigate } from "react-router-dom";
 import {
   MDBCollapse,
   MDBContainer,
@@ -23,33 +24,42 @@ import { Area } from "../models/areas/Area";
 
 const Nav = () => {
   const { t, lang, setLang } = useTranslation();
+  const navigate = useNavigate();
   const [showNavCentred, setShowNavCentred] = useState(false);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
 
-  window.addEventListener("resize", () => {
-    setInnerWidth(window.innerWidth);
-  });
-  const [allAreas] = useState(Areas());
+  useEffect(() => {
+    const handleResize = () => setInnerWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const allAreas = useMemo(() => Areas(), []);
   const [filteredAreas, setFilteredAreas] = useState<Array<Area>>(allAreas);
 
-  const [allDesarrollos] = useState<Desarrollo[]>(
+  const allDesarrollos = useMemo<Desarrollo[]>(
+    () =>
     Areas()
       .map((area) => [...getDesarrollosForArea(area)])
-      .reduce((prev, cur) => [...prev, ...cur])
+      .reduce((prev, cur) => [...prev, ...cur]),
+    []
   );
 
   const [filteredDesarrollos, setFilteredDesarrollos] =
     useState<Desarrollo[]>(allDesarrollos);
 
+  useEffect(() => setFilteredAreas(allAreas), [allAreas]);
+  useEffect(() => setFilteredDesarrollos(allDesarrollos), [allDesarrollos]);
+
   const [searchQueryDesarrollo, setSearchQueryDesarrollo] = useState("");
   const handleSearchDesarrollo = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const q = event.target.value.toLowerCase().trim();
     setSearchQueryDesarrollo(event.target.value);
-    if (searchQueryDesarrollo === "") {
+    if (!q) {
       setFilteredDesarrollos(allDesarrollos);
       return;
     }
 
-    const q = event.target.value.toLowerCase();
     const filteredDesarrolloz = allDesarrollos.filter((desarrollo) => {
       const name = (desarrollo.nombre || "").toLowerCase();
       const title = (getLocalized(desarrollo.titulo) || name).toLowerCase();
@@ -60,15 +70,15 @@ const Nav = () => {
   };
   const [searchQueryArea, setSearchQueryArea] = useState("");
   const handleSearchArea = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const q = event.target.value.toLowerCase().trim();
     setSearchQueryArea(event.target.value);
-    if (searchQueryArea === "") {
+    if (!q) {
       setFilteredAreas(allAreas);
       return;
     }
 
     const filteredAreaz = allAreas.filter((area) => {
       const title = (getLocalized(area.titulo) || "").toLowerCase();
-      const q = event.target.value.toLowerCase();
       return title.includes(q) || q.includes(title);
     });
 
@@ -80,9 +90,27 @@ const Nav = () => {
     setLang(l);
   };
 
+  const goTo = (path: string) => (event: React.MouseEvent<HTMLElement>) => {
+    event.preventDefault();
+    navigate(path);
+    setShowNavCentred(false);
+  };
+
   const getLocalized = (field: any) => {
     if (!field) return "";
-    if (typeof field === "object") return field[lang] || field.es || Object.values(field)[0] || "";
+    const isPlaceholder = (value: unknown) =>
+      typeof value === "string" && value.trim().toLowerCase() === "latest";
+    if (typeof field === "object") {
+      const preferred = field[lang];
+      if (preferred && !isPlaceholder(preferred)) return preferred;
+      const spanish = field.es;
+      if (spanish && !isPlaceholder(spanish)) return spanish;
+      const firstValid = Object.values(field).find(
+        (value) => value && !isPlaceholder(value)
+      );
+      return firstValid || "";
+    }
+    if (isPlaceholder(field)) return "";
     return field;
   };
 
@@ -117,25 +145,51 @@ const Nav = () => {
           <MDBNavbarNav fullWidth={true} className="mb-2 mb-lg-0">
             <MDBNavbarItem>
               <div className="d-flex align-items-center ms-3">
-                <button className={`btn btn-sm ${lang === 'es' ? 'btn-primary' : 'btn-outline-primary'} me-1`} onClick={() => switchLang('es')} aria-label={String(t("nav.switchToSpanish") || "")}>ES</button>
-                <button className={`btn btn-sm ${lang === 'en' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => switchLang('en')} aria-label={String(t("nav.switchToEnglish") || "")}>EN</button>
+                <button
+                  type="button"
+                  className={`lang-toggle-btn btn btn-sm me-1 ${lang === 'es' ? 'active' : ''}`}
+                  onClick={() => switchLang('es')}
+                  aria-label={String(t("nav.switchToSpanish") || "")}
+                  style={{
+                    backgroundColor: lang === 'es' ? '#8a6944' : 'transparent',
+                    color: lang === 'es' ? '#fff' : '#8a6944',
+                    border: '1px solid #8a6944',
+                    fontWeight: lang === 'es' ? 'bold' : 'normal'
+                  }}
+                >
+                  ES
+                </button>
+                <button
+                  type="button"
+                  className={`lang-toggle-btn btn btn-sm ${lang === 'en' ? 'active' : ''}`}
+                  onClick={() => switchLang('en')}
+                  aria-label={String(t("nav.switchToEnglish") || "")}
+                  style={{
+                    backgroundColor: lang === 'en' ? '#8a6944' : 'transparent',
+                    color: lang === 'en' ? '#fff' : '#8a6944',
+                    border: '1px solid #8a6944',
+                    fontWeight: lang === 'en' ? 'bold' : 'normal'
+                  }}
+                >
+                  EN
+                </button>
               </div>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink aria-current="page" href="/">
+              <MDBNavbarLink aria-current="page" href="/" onClick={goTo("/")}>
                 {t('nav.inicio')}
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href="/liderazgo/">{t('nav.liderazgo')}</MDBNavbarLink>
+              <MDBNavbarLink href="/liderazgo/" onClick={goTo("/liderazgo")}>{t('nav.liderazgo')}</MDBNavbarLink>
             </MDBNavbarItem>
 
             <MDBNavbarItem>
-              <MDBNavbarLink href="/asociados/">{t('nav.asociados')}</MDBNavbarLink>
+              <MDBNavbarLink href="/asociados/" onClick={goTo("/asociados")}>{t('nav.asociados')}</MDBNavbarLink>
             </MDBNavbarItem>
             {innerWidth > 650 && (
               <MDBNavbarItem>
-                <MDBNavbarBrand href="/">
+                <MDBNavbarBrand href="/" onClick={goTo("/")}>
                   <img
                     width={300}
                     src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
@@ -146,7 +200,13 @@ const Nav = () => {
             )}
             <MDBNavbarItem>
               <MDBDropdown>
-                <MDBDropdownToggle tag="a">{t('nav.areas')}</MDBDropdownToggle>
+                <MDBDropdownToggle 
+                  tag="a" 
+                  className="nav-link" 
+                  style={{ background: 'transparent', border: 'none', boxShadow: 'none' }}
+                >
+                  {t('nav.areas')}
+                </MDBDropdownToggle>
                 <MDBDropdownMenu className="responsive column">
                   <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
                     <input
@@ -160,7 +220,12 @@ const Nav = () => {
                   </MDBInputGroup>
                   <>
                     {filteredAreas.map((area) => (
-                      <MDBDropdownItem key={area.name} link href={"/areas/" + area.name}>
+                      <MDBDropdownItem
+                        key={area.name}
+                        link
+                        href={"/areas/" + area.name}
+                        onClick={goTo("/areas/" + encodeURIComponent(area.name))}
+                      >
                         {getLocalized(area.titulo)}
                       </MDBDropdownItem>
                     ))}
@@ -170,11 +235,17 @@ const Nav = () => {
             </MDBNavbarItem>
 
             <MDBNavbarItem>
-              <MDBNavbarLink href="/contacto/">{t('nav.contacto')}</MDBNavbarLink>
+              <MDBNavbarLink href="/contacto/" onClick={goTo("/contacto")}>{t('nav.contacto')}</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBDropdown>
-                <MDBDropdownToggle tag="a">{t('nav.desarrollos')}</MDBDropdownToggle>
+                <MDBDropdownToggle 
+                  tag="a" 
+                  className="nav-link"
+                  style={{ background: 'transparent', border: 'none', boxShadow: 'none' }}
+                >
+                  {t('nav.desarrollos')}
+                </MDBDropdownToggle>
                 <MDBDropdownMenu className="responsive column">
                   <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
                     <input
@@ -188,7 +259,12 @@ const Nav = () => {
                   </MDBInputGroup>
                   <>
                     {filteredDesarrollos.map((desarrollo, idx) => (
-                      <MDBDropdownItem key={desarrollo.nombre ?? idx} link href={'/desarrollos/' + (desarrollo.nombre ?? idx)}>
+                      <MDBDropdownItem
+                        key={desarrollo.nombre ?? idx}
+                        link
+                        href={'/desarrollos/' + (desarrollo.nombre ?? idx)}
+                        onClick={goTo('/desarrollos/' + encodeURIComponent(String(desarrollo.nombre ?? idx)))}
+                      >
                         {getLocalized(desarrollo.titulo) || desarrollo.nombre}
                       </MDBDropdownItem>
                     ))}

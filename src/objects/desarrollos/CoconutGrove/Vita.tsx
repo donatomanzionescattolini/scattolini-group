@@ -21,7 +21,7 @@ export default function Vita() {
                     las residencias que brindan la capacidad de instalar iluminación
                     empotrada, parlantes y difusores lineales
                 </li>
-                <li>Puertas correderas de vidrio del fabricante alem�n Schüco</li>
+                <li>Puertas correderas de vidrio del fabricante alem?n Schüco</li>
                 <li>
                     El sistema Crestron Smart Home preinstalado permite el control de
                     iluminación, sistemas audiovisuales y sistemas de calefacción,
@@ -65,7 +65,7 @@ export default function Vita() {
                     cuando Se abren las puertas
                 </li>
                 <li>
-                    Conjunto completo de electrodom�sticos de primera línea de Miele,
+                    Conjunto completo de electrodom?sticos de primera línea de Miele,
                     que incluyen enfriador de vino incorporado, refrigerador /
                     congelador y lavavajillas
                 </li>
@@ -89,7 +89,7 @@ export default function Vita() {
                     camino ideal para caminar o correr
                 </li>
                 <li>
-                    Los asientos frente a la bahía y las �reas de entretenimiento
+                    Los asientos frente a la bahía y las ?reas de entretenimiento
                     permiten a los residentes disfrutar plenamente del entorno frente
                     al mar y de los espectaculares amaneceres y atardeceres
                 </li>
@@ -126,28 +126,28 @@ export default function Vita() {
                     exclusivamente para los residentes de Vita y sus invitados
                 </li>
                 <li>
-                    Sofisticado espacio dise�ado en Italia por A++ con una increíble
+                    Sofisticado espacio dise?ado en Italia por A++ con una increíble
                     atención al detalle. El Área estÁ abierta exclusivamente a los
-                    residentes de Vita e incluye un gimnasio de última generaci�n, una
+                    residentes de Vita e incluye un gimnasio de última generaci?n, una
                     sala de estudio dedicada y un spa con vestuarios para hombres y
                     mujeres con saunas y baños de vapor
                 </li>
                 <li>
                     Los garajes individuales privados y cerrados permiten el
                     estacionamiento de autoservicio y estÁn diseñados con
-                    disposiciones para estaciones de carga de vehículos el�ctricos y
+                    disposiciones para estaciones de carga de vehículos el?ctricos y
                     un elevador opcional para un segundo vehículo
                 </li>
                 <li>
                     Un edificio de aparcacoches ofrece estaciones de carga de
-                    vehículos el�ctricos
+                    vehículos el?ctricos
                 </li>
                 <li>Servicio de valet 24/7</li>
                 <li>Almacenamiento de bicicletas convenientemente ubicado</li>
                 <li>
                     Wi-Fi en todos los espacios compartidos interiores y exteriores
                 </li>
-                <li>Una aplicaci�n digital de conserjería</li>
+                <li>Una aplicaci?n digital de conserjería</li>
             </ul>
         ),
         amenidades: (
@@ -218,7 +218,7 @@ export default function Vita() {
                         Puerto deportivo con muelles para barcos.
                     </li>
                     <br/>
-                    <li>Vistas panor�micas de la Bahía de Biscayne</li>
+                    <li>Vistas panor?micas de la Bahía de Biscayne</li>
                     <br/>
                     <li>
                         <strong>Aparcacoches</strong>
@@ -246,7 +246,7 @@ export default function Vita() {
                     <li>
                         <strong>Vita Linc</strong>
                         <br/>
-                        Una aplicaci�n de conserjería digital para registrar a los
+                        Una aplicaci?n de conserjería digital para registrar a los
                         huéspedes y proporcionarles una llave electrónica.
                     </li>
                     <br/>
@@ -278,7 +278,7 @@ export default function Vita() {
         ),
     };
     VitaObject.introduccion = [
-        "Vita at Grove Isle es un edificio de 7 pisos frente al mar, con amplios balcones. El edificio fue dise�ado por la firma de renombre mundial CallisonRTKL: un impresionante condominio curvilíneo envuelve el extremo norte de la isla, junto a la Bahía de Biscayne. Cuando se trata de relajaci�n y entretenimiento, hay muchas comodidades disponibles, que incluyen un sal�n para residentes, piscina y jacuzzi frente a la bahía, caba�as y m�s. Las 65 residencias frente al mar ofrecen vistas supremas de la Bahía de Biscayne y un dise�o interior moderno, así como accesorios y electrodom�sticos finos. La colecci�n de penthouses de dos niveles en Vita cuenta con 14 unidades exageradas, todas ellas con espectaculares terrazas en la azotea con piscinas privadas e impresionantes vistas de la Bahía de Biscayne, Key Biscayne, Coconut Grove y el centro de Miami. Vita at Grove Isle se destaca por su entorno familiar seguro, con algo para que todos disfruten. Su conveniente ubicaci�n est� a solo unos pasos de tiendas y restaurantes. La flora y fauna de Coconut Grove define la experiencia con cientos de a�os de crecimiento y esplendor natural.",
+        "Vita at Grove Isle es un edificio de 7 pisos frente al mar, con amplios balcones. El edificio fue dise?ado por la firma de renombre mundial CallisonRTKL: un impresionante condominio curvilíneo envuelve el extremo norte de la isla, junto a la Bahía de Biscayne. Cuando se trata de relajaci?n y entretenimiento, hay muchas comodidades disponibles, que incluyen un sal?n para residentes, piscina y jacuzzi frente a la bahía, caba?as y m?s. Las 65 residencias frente al mar ofrecen vistas supremas de la Bahía de Biscayne y un dise?o interior moderno, así como accesorios y electrodom?sticos finos. La colecci?n de penthouses de dos niveles en Vita cuenta con 14 unidades exageradas, todas ellas con espectaculares terrazas en la azotea con piscinas privadas e impresionantes vistas de la Bahía de Biscayne, Key Biscayne, Coconut Grove y el centro de Miami. Vita at Grove Isle se destaca por su entorno familiar seguro, con algo para que todos disfruten. Su conveniente ubicaci?n est? a solo unos pasos de tiendas y restaurantes. La flora y fauna de Coconut Grove define la experiencia con cientos de a?os de crecimiento y esplendor natural.",
     ];
     VitaObject.titulo = "Vita at Grove Isle";
     VitaObject.numberOfImages = 55;
