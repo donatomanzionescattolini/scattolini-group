@@ -384,17 +384,15 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           <Row>
             {[...desarrollosArea.values()].map((desarrollo, idx) => {
               return (
-                <Col key={desarrollo.nombre ?? idx} xs={12} sm={12} md={6} lg={4} xl={4}>
+                <Col key={desarrollo.nombre ?? idx} xs={12} sm={6} md={6} lg={4} xl={4} className="gallery-item">
                   <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                     <div
-                      className="propiedades-img p-0 m-0"
+                      className="gallery-card"
                       style={{
-                        background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
-                        backgroundSize: "cover",
+                        backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
                       }}
-                    ></div>
-
-                    <h4 className="text-center card-title m-2 ">
+                    />
+                    <h4 className="text-center">
                       {getLocalized(desarrollo.titulo) || (desarrollo.nombre || "").split("-") .map((word: string, idx: number) => (
                         <span key={`word-${idx}`}>{word.charAt(0).toUpperCase() + word.substring(1)} </span>
                       ))}

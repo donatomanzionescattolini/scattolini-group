@@ -33,17 +33,15 @@ function AreasComponent() {
 
       <Row>
         {Areas().map((area) => (
-          <Col key={area.name} xs={12} sm={12} md={6} lg={4} xl={4}>
+          <Col key={area.name} xs={12} sm={6} md={6} lg={4} xl={4} className="gallery-item">
             <Link to={`/areas/${area.name}/`}>
               <div
-                className="propiedades-img p-0 m-0 w-100"
+                className="gallery-card"
                 style={{
-                  background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/thumbnail.webp')`,
-                  backgroundSize: "cover",
+                  backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/thumbnail.webp')`,
                 }}
-              ></div>
-
-              <h4 className="text-center card-title m-2 ">
+              />
+              <h4 className="text-center">
                 {getLocalized(area.titulo)}
               </h4>
             </Link>

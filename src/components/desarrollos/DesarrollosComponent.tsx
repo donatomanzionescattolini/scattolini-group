@@ -45,17 +45,17 @@ export default function DesarrollosComponent() {
               {Array.from(desarr).map((desarrollo, idx: number) => {
                 const dev = desarrollo as unknown as Desarrollo;
                 return (
-                  <Col key={dev.nombre ?? `${area.name}-${idx}`} xs={12} sm={12} md={6} lg={4} xl={4}>
+                  <Col key={dev.nombre ?? `${area.name}-${idx}`} xs={12} sm={6} md={6} lg={4} xl={4} className="gallery-item">
                     <Link to={`/desarrollos/${dev.nombre}/`}>
                       <div
-                        className="propiedades-img p-0 m-0 desarrollo-card"
+                        className="gallery-card"
                         style={{
                           backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${dev.nombre}.webp')`,
                         }}
-                      ></div>
-                      <h5 className="text-center mt-2">
+                      />
+                      <h4 className="text-center">
                         {getLocalized(dev.titulo) || dev.nombre}
-                      </h5>
+                      </h4>
                     </Link>
                   </Col>
                 );
