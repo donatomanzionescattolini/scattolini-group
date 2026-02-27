@@ -285,7 +285,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               style={{ width: "100%", height: 500 }}
             > */}
           <MDBTabsContent>
-            <MDBTabsPane show={tabVisible === "brochure"}>
+            <MDBTabsPane open={tabVisible === "brochure"}>
               <div className="pdf-container text-center">
                 <object
                   data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/brochure.pdf`}
@@ -320,7 +320,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 </div>
               </div>
             </MDBTabsPane>
-            <MDBTabsPane show={tabVisible === "hoja"}>
+            <MDBTabsPane open={tabVisible === "hoja"}>
               <div className="pdf-container text-center">
                 <object
                   data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/hoja.pdf`}
@@ -355,7 +355,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 </div>
               </div>
             </MDBTabsPane>
-            <MDBTabsPane show={tabVisible === "planos"}>
+            <MDBTabsPane open={tabVisible === "planos"}>
               <div className="pdf-container text-center">
                 <object
                   data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/planos.pdf`}
