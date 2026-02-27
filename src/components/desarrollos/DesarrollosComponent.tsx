@@ -1,11 +1,13 @@
-import React from 'react';
+import { Component } from 'react';
 
-const DesarrollosComponent = () => {
+class DesarrollosComponent extends Component {
+  render() {
     return (
-        <div className="image-container w-100">
-            {/* Your other content goes here */}
-        </div>
+      <div className="propiedades-img p-0 m-0 w-100 desarrollo-card">
+        {/* Other component code */}
+      </div>
     );
-};
+  }
+}
 
 export default DesarrollosComponent;
