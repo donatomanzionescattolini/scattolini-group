@@ -125,7 +125,8 @@ const Nav = () => {
 
         <Navbar.Collapse id="navbarCenteredExample" in={showNavCentred}>
           <BsNav className="w-100 mb-2 mb-lg-0">
-            <BsNav.Item>
+            {/* Language toggle - hidden on mobile (uses FloatingLangToggle instead) */}
+            <BsNav.Item className="d-none d-lg-block">
               <div className="d-flex align-items-center ms-3">
                 <button
                   type="button"

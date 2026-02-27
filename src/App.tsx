@@ -22,6 +22,7 @@ import Home from "./Home.tsx";
 import { useTranslation } from "./i18n.tsx";
 import DesarrollosRoutes from "./routes/DesarrollosRoutes.tsx";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
+import FloatingLangToggle from "./components/FloatingLangToggle.tsx";
 export default function App() {
   const { t } = useTranslation();
   useLayoutEffect(() => {
@@ -60,6 +61,7 @@ export default function App() {
             path="/editor"
           />
         </Routes>
+      <FloatingLangToggle />
       <FloatingWhatsApp
         
         phoneNumber={"13056139338"}

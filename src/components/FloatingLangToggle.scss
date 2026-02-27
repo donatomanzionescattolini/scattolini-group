@@ -1,0 +1,70 @@
+.floating-lang-toggle {
+  position: fixed;
+  bottom: 90px; /* Above the WhatsApp button */
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  padding: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.floating-lang-toggle .lang-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--color-brown);
+  background: transparent;
+  color: var(--color-brown);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-lang-toggle .lang-btn:active {
+  transform: scale(0.95);
+}
+
+.floating-lang-toggle .lang-btn.active {
+  background: var(--color-brown);
+  color: white;
+  border-color: var(--color-brown);
+}
+
+/* Hide on desktop (lg and up) */
+@media (min-width: 992px) {
+  .floating-lang-toggle {
+    display: none !important;
+  }
+}
+
+/* Adjust for extra small screens */
+@media (max-width: 480px) {
+  .floating-lang-toggle {
+    bottom: 85px;
+    right: 15px;
+  }
+
+  .floating-lang-toggle .lang-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Safe area support for notched devices */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .floating-lang-toggle {
+    bottom: calc(90px + env(safe-area-inset-bottom));
+    right: calc(20px + env(safe-area-inset-right));
+  }
+}
