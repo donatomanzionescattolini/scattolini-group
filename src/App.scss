@@ -30,9 +30,10 @@ html {
   background: var(--color-background);
   color: var(--color-brown);
   font-family: "Cormorant Garamond", serif;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.5;
+  opacity: 0.92;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -50,7 +51,7 @@ section {
   margin: 0;
   color: var(--color-brown);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 h2 {
@@ -73,7 +74,7 @@ h4 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 13px;
 }
 
 a {
@@ -382,6 +383,36 @@ nav {
   opacity: 0.5;
 }
 
+/* Video iframe centering for project pages */
+.white-block .video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.white-block .video-container iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Project video wrapper */
+.project-video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.project-video-inner {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 /* Hero section enhancements */
 .hero-tagline {
   font-size: 1.1rem;
@@ -564,7 +595,7 @@ nav {
 
 #hero-heading {
   font-variant: normal !important;
-  font-family: 'Gayathri', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: bolder;
 }
 
@@ -587,7 +618,7 @@ nav {
 #quotes .blockquote {
   height: 100px;
   color: var(--color-brown);
-  font-size: 16px;
+  font-size: 13px;
   vertical-align: middle;
 }
 
@@ -686,10 +717,17 @@ img {
 iframe,
 video {
   max-width: 100% !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Ensure floating WhatsApp stays fixed and above content */
 .floating-whatsapp {
-  position: relative !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 9998 !important;
 }
 
 #asociados-row div {
@@ -720,12 +758,26 @@ video {
   font-family: "Cormorant Garamond", serif;
   color: var(--color-brown);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
   margin: 1%;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
   padding: 10px;
+}
+
+/* Center video iframes in project pages */
+.white-block iframe,
+.white-block video {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.white-block > .d-flex iframe,
+.white-block > .d-flex video {
+  display: block;
+  margin: 0 auto;
 }
 
 .city-firstcarousel img {

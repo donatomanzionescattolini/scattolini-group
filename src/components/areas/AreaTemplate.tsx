@@ -23,14 +23,14 @@ export default function AreaTemplate(props: AreaProps) {
   }, []);
 
   const getLocalizedString = (field: unknown, fallback = ""): string => {
-    const resolved = resolveLocalizedValue<string>(field as any, lang);
+    const resolved = resolveLocalizedValue<string>(field as string | Record<string, string | undefined> | undefined, lang);
     if (typeof resolved === "string") return resolved;
     if (typeof field === "string") return field;
     return fallback;
   };
 
   const getLocalizedArray = (field: unknown, fallback: string[] = []): string[] => {
-    const resolved = resolveLocalizedValue<string[]>(field as any, lang);
+    const resolved = resolveLocalizedValue<string[]>(field as string[] | Record<string, string[] | undefined> | undefined, lang);
     if (Array.isArray(resolved)) return resolved;
     if (Array.isArray(field)) return field as string[];
     return fallback;
@@ -52,10 +52,11 @@ export default function AreaTemplate(props: AreaProps) {
   for (let i = 1; i <= area.numberOfImages; i++) {
     images.push(
       <Image
+        key={`carousel-${nombre}-${i}`}
         fluid
         rounded
         src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/carousel-${i}.webp`}
-      ></Image>
+      />
     );
   }
   const firstImage = `https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/firstImage.jpg`;
@@ -116,7 +117,7 @@ export default function AreaTemplate(props: AreaProps) {
         <Row>
           {[...areaDesarrollos.values()].map((desarrollo) => {
             return (
-              <Col xs={12} sm={12} md={6} lg={4} xl={4}>
+              <Col key={desarrollo.nombre} xs={12} sm={12} md={6} lg={4} xl={4}>
                 <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                   <div
                     className="propiedades-img p-0 m-0"

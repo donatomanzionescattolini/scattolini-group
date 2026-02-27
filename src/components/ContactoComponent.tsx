@@ -51,12 +51,12 @@ export default function Page() {
         <Col md={6}>
           <iframe
             title="Scattolini Group office location"
-            src="https://www.google.com/maps/embedpb=!1m18!1m12!1m3!1d3592.434979553679!2d-80.40457942587769!3d25.789220007469854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9bef22d2a8b8d%3A0xeb3e2fa5183c827!2s12750%20NW%2017th%20St%2C%20Miami%2C%20FL%2033182!5e0!3m2!1sen!2sus!4v1691887259163!5m2!1sen!2sus"
-            style={{ border: "0" }}
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.434979553679!2d-80.40457942587769!3d25.789220007469854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9bef22d2a8b8d%3A0xeb3e2fa5183c827!2s12750%20NW%2017th%20St%2C%20Miami%2C%20FL%2033182!5e0!3m2!1sen!2sus!4v1691887259163!5m2!1sen!2sus"
+            style={{ border: "0", width: "100%", minHeight: "300px" }}
             allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className=" h-100 align-items-center my-auto"
+            className="h-100 align-items-center my-auto"
           ></iframe>
         </Col>
         <Row className="w-100 p-0 m-0">

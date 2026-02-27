@@ -87,7 +87,7 @@ export function Home() {
           </div>
         </div>
       </Container>
-      <TrustSignals />
+      {/* <TrustSignals /> */}
       {width < 768 && <br></br>}
       <section className="white-block pb-0 mb-0 pt-5">
         <AboutUs />

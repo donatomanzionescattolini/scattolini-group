@@ -187,27 +187,31 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">
-        {typeof video !== "string" || !video ? (
-          video
-        ) : (
-          <video
-            width="auto"
-            height="500"
-            controls
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="mx-auto my-0 p-0 d-flex flex-row justify-content-center"
-          >
-            <source
-              src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}
-              type="video/mp4"
-            />
-            {t("common.videoNotSupported", "Your browser does not support the video tag.")}
-          </video>
-        )}
+        <div className="project-video-wrapper">
+          <div className="project-video-inner">
+            {typeof video !== "string" || !video ? (
+              video
+            ) : (
+              <video
+                width="auto"
+                height="500"
+                controls
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                className="mx-auto my-0 p-0"
+              >
+                <source
+                  src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}
+                  type="video/mp4"
+                />
+                {t("common.videoNotSupported", "Your browser does not support the video tag.")}
+              </video>
+            )}
+          </div>
+        </div>
       </section>
       <div className="skew-c"></div>
       <section className="colour-block">
