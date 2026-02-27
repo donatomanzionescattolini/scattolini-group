@@ -1,22 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "../i18n.tsx";
 import { useNavigate } from "react-router-dom";
-import {
-  MDBCollapse,
-  MDBContainer,
-  MDBDropdown,
-  MDBDropdownItem,
-  MDBDropdownMenu,
-  MDBDropdownToggle,
-  MDBIcon,
-  MDBInputGroup,
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBNavbarNav,
-  MDBNavbarToggler,
-} from "mdb-react-ui-kit";
+import { Navbar, Nav as BsNav, NavDropdown, Container, InputGroup, Form } from "react-bootstrap";
 import Areas from "../objects/areas/Areas";
 import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos";
 import Desarrollo from "../models/desarrollos/Desarrollo";
@@ -115,13 +100,10 @@ const Nav = () => {
   };
 
   return (
-    <MDBNavbar expand="lg" light bgColor="light">
-      <MDBContainer fluid>
-        <MDBNavbarToggler
-          type="button"
-          data-target="#navbarCenteredExample"
+    <Navbar expand="lg" bg="light" variant="light">
+      <Container fluid>
+        <Navbar.Toggle
           aria-controls="navbarCenteredExample"
-          aria-expanded="false"
           aria-label={String(t("nav.toggleNavigation") || "")}
           onClick={() => setShowNavCentred(!showNavCentred)}
         >
@@ -136,14 +118,14 @@ const Nav = () => {
               </div>
             )}
             <div>
-              <MDBIcon icon="caret-down" />
+              <i className="fas fa-caret-down" />
             </div>
           </div>
-        </MDBNavbarToggler>
+        </Navbar.Toggle>
 
-        <MDBCollapse navbar open={showNavCentred} id="navbarCenteredExample">
-          <MDBNavbarNav fullWidth={true} className="mb-2 mb-lg-0">
-            <MDBNavbarItem>
+        <Navbar.Collapse id="navbarCenteredExample" in={showNavCentred}>
+          <BsNav className="w-100 mb-2 mb-lg-0">
+            <BsNav.Item>
               <div className="d-flex align-items-center ms-3">
                 <button
                   type="button"
@@ -174,108 +156,78 @@ const Nav = () => {
                   EN
                 </button>
               </div>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink aria-current="page" href="/" onClick={goTo("/")}>
+            </BsNav.Item>
+            <BsNav.Item>
+              <BsNav.Link href="/" onClick={goTo("/")}>
                 {t('nav.inicio')}
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink href="/liderazgo/" onClick={goTo("/liderazgo")}>{t('nav.liderazgo')}</MDBNavbarLink>
-            </MDBNavbarItem>
+              </BsNav.Link>
+            </BsNav.Item>
+            <BsNav.Item>
+              <BsNav.Link href="/liderazgo/" onClick={goTo("/liderazgo")}>{t('nav.liderazgo')}</BsNav.Link>
+            </BsNav.Item>
 
-            <MDBNavbarItem>
-              <MDBNavbarLink href="/asociados/" onClick={goTo("/asociados")}>{t('nav.asociados')}</MDBNavbarLink>
-            </MDBNavbarItem>
+            <BsNav.Item>
+              <BsNav.Link href="/asociados/" onClick={goTo("/asociados")}>{t('nav.asociados')}</BsNav.Link>
+            </BsNav.Item>
             {innerWidth > 650 && (
-              <MDBNavbarItem>
-                <MDBNavbarBrand href="/" onClick={goTo("/")}>
+              <BsNav.Item>
+                <Navbar.Brand href="/" onClick={goTo("/")}>
                   <img
                     width={300}
                     src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
                     alt={String(t("nav.logoAlt") || "")}
                   />
-                </MDBNavbarBrand>
-              </MDBNavbarItem>
+                </Navbar.Brand>
+              </BsNav.Item>
             )}
-            <MDBNavbarItem>
-              <MDBDropdown>
-                <MDBDropdownToggle 
-                  tag="a" 
-                  className="nav-link" 
-                  style={{ background: 'transparent', border: 'none', boxShadow: 'none' }}
+            <NavDropdown title={t('nav.areas')} id="areas-dropdown" className="responsive column">
+              <div className="d-flex w-75 ms-4 my-3">
+                <Form.Control
+                  placeholder={t('nav.search') as string}
+                  aria-label={t('nav.search') as string}
+                  type="search"
+                  value={searchQueryArea}
+                  onChange={handleSearchArea}
+                />
+              </div>
+              {filteredAreas.map((area) => (
+                <NavDropdown.Item
+                  key={area.name}
+                  href={"/areas/" + area.name}
+                  onClick={goTo("/areas/" + encodeURIComponent(area.name))}
                 >
-                  {t('nav.areas')}
-                </MDBDropdownToggle>
-                <MDBDropdownMenu className="responsive column">
-                  <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
-                    <input
-                      className="form-control"
-                      placeholder={t('nav.search') as string}
-                      aria-label={t('nav.search') as string}
-                      type="Search"
-                      value={searchQueryArea}
-                      onChange={handleSearchArea}
-                    />
-                  </MDBInputGroup>
-                  <>
-                    {filteredAreas.map((area) => (
-                      <MDBDropdownItem
-                        key={area.name}
-                        link
-                        href={"/areas/" + area.name}
-                        onClick={goTo("/areas/" + encodeURIComponent(area.name))}
-                      >
-                        {getLocalized(area.titulo)}
-                      </MDBDropdownItem>
-                    ))}
-                  </>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavbarItem>
+                  {getLocalized(area.titulo)}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
 
-            <MDBNavbarItem>
-              <MDBNavbarLink href="/contacto/" onClick={goTo("/contacto")}>{t('nav.contacto')}</MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBDropdown>
-                <MDBDropdownToggle 
-                  tag="a" 
-                  className="nav-link"
-                  style={{ background: 'transparent', border: 'none', boxShadow: 'none' }}
+            <BsNav.Item>
+              <BsNav.Link href="/contacto/" onClick={goTo("/contacto")}>{t('nav.contacto')}</BsNav.Link>
+            </BsNav.Item>
+            <NavDropdown title={t('nav.desarrollos')} id="desarrollos-dropdown" className="responsive column">
+              <div className="d-flex w-75 ms-4 my-3">
+                <Form.Control
+                  placeholder={t('nav.search') as string}
+                  aria-label={t('nav.search') as string}
+                  type="search"
+                  value={searchQueryDesarrollo}
+                  onChange={handleSearchDesarrollo}
+                />
+              </div>
+              {filteredDesarrollos.map((desarrollo, idx) => (
+                <NavDropdown.Item
+                  key={desarrollo.nombre ?? idx}
+                  href={'/desarrollos/' + (desarrollo.nombre ?? idx)}
+                  onClick={goTo('/desarrollos/' + encodeURIComponent(String(desarrollo.nombre ?? idx)))}
                 >
-                  {t('nav.desarrollos')}
-                </MDBDropdownToggle>
-                <MDBDropdownMenu className="responsive column">
-                  <MDBInputGroup tag="form" className="d-flex w-75 ms-4 my-3">
-                    <input
-                      className="form-control"
-                      placeholder={t('nav.search') as string}
-                      aria-label={t('nav.search') as string}
-                      type="Search"
-                      value={searchQueryDesarrollo}
-                      onChange={handleSearchDesarrollo}
-                    />
-                  </MDBInputGroup>
-                  <>
-                    {filteredDesarrollos.map((desarrollo, idx) => (
-                      <MDBDropdownItem
-                        key={desarrollo.nombre ?? idx}
-                        link
-                        href={'/desarrollos/' + (desarrollo.nombre ?? idx)}
-                        onClick={goTo('/desarrollos/' + encodeURIComponent(String(desarrollo.nombre ?? idx)))}
-                      >
-                        {getLocalized(desarrollo.titulo) || desarrollo.nombre}
-                      </MDBDropdownItem>
-                    ))}
-                  </>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavbarItem>
-          </MDBNavbarNav>
-        </MDBCollapse>
-      </MDBContainer>
-    </MDBNavbar>
+                  {getLocalized(desarrollo.titulo) || desarrollo.nombre}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
+          </BsNav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

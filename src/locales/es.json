@@ -11,30 +11,32 @@
     "asociados": "Asociados",
     "aliados": "Aliados",
     "equipo": "Nuestro Equipo",
-    "search":"latest"
+    "search": "Buscar"
   },
   "hero": {
     "title": "SCATTOLINI GROUP",
     "subtitle": "Agencia Inmobiliaria",
     "cta": "Contáctanos Hoy",
-    "contact_cta":"latest"
+    "contact_cta": "Contáctanos"
   },
   "areas": {
-    "title":"latest"
+    "title": "Áreas",
+    "photoAlt": "Foto de {title}"
   },
   "project": {
     "features": "Características",
     "gallery": "Galería Fotográfica",
     "documents": "Documentos De Interés",
     "download": "Descargar",
-    "properties_in_area":"latest"
+    "properties_in_area": "Propiedades en el Área"
   },
   "pages": {
     "areas": {
-      "title":"latest"
+      "title": "Áreas",
+      "photoAlt": "Foto de {title}"
     },
     "desarrollos": {
-      "title":"latest"
+      "title": "Desarrollos"
     },
     "about": {
       "whoWeAre": "Quiénes Somos",
@@ -42,7 +44,7 @@
       "requestConsultation": "Solicita una Consulta",
       "callUs": "Llámanos hoy",
       "consultationText": "Cualquiera de nuestros expertos estaría encantado de programar una consulta para explorar las opciones disponibles de acuerdo a tus necesidades",
-      "seeMore":"latest"
+      "seeMore": "Ver Más"
     },
     "services": {
       "title": "Servicios",
@@ -54,7 +56,7 @@
       "salesDesc": "Asistencia experta en la venta de su propiedad.",
       "purchase": "Compra de Propiedades",
       "purchaseDesc": "Orientación profesional en la compra de propiedades.",
-      "moreInfo":"latest"
+      "moreInfo": "Más Información"
     },
     "project": {
       "caracteristicas": "Características",
@@ -67,22 +69,24 @@
       "pdf": {
         "brochure": "Brochure",
         "hoja": "Hoja Informativa",
-        "planos":"latest"
+        "planos": "Planos"
       },
       "pdfUI": {
         "documentsTitle": "Documentos de Interés",
         "download": "Descargar",
-        "downloadButton": "Descargar",
-        "cantDisplay": "No se puede mostrar el PDF",
-        "instead":"latest"
-      }
+        "downloadBtn": "Descargar",
+        "cantDisplay": "No se puede mostrar el PDF en su navegador."
+      },
+      "bannerAlt": "Banner del proyecto",
+      "galleryImageAlt": "Imagen de galería {index}",
+      "locatedIn": "Ubicado en"
     },
     "contacto": {
       "alerts": {
         "successTitle": "Mensaje Enviado",
         "successMessage": "¡Mensaje enviado con éxito!",
         "failureTitle": "Error al Enviar",
-        "failureMessage":"latest"
+        "failureMessage": "Error al enviar el mensaje. Por favor, inténtelo de nuevo."
       },
       "form": {
         "name": "Nombre",
@@ -90,20 +94,23 @@
         "phone": "Número de Teléfono",
         "message": "Mensaje",
         "sendButton": "Enviar",
-        "emailLink":"latest"
+        "emailLink": "O envíanos un correo a"
       }
     }
   },
   "whatsapp": {
     "status": "Normalmente responde en 1 hora",
-    "placeholder":"latest"
+    "placeholder": "Escribe un mensaje..."
   },
   "footer": {
-    "copyright":"latest"
+    "copyright": "Todos los derechos reservados"
   },
   "docs": {
     "brochure": "Brochure",
     "hoja": "Hoja Informativa",
-    "planos":"latest"
+    "planos": "Planos"
+  },
+  "common": {
+    "videoNotSupported": "Su navegador no soporta la etiqueta de video."
   }
 }

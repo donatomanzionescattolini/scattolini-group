@@ -11,30 +11,32 @@
     "asociados": "Partners",
     "aliados": "Allies",
     "equipo": "Our Team",
-    "search":"latest"
+    "search": "Search"
   },
   "hero": {
     "title": "SCATTOLINI GROUP",
     "subtitle": "Real Estate Agency",
     "cta": "Contact Us",
-    "contact_cta":"latest"
+    "contact_cta": "Get in Touch"
   },
   "areas": {
-    "title":"latest"
+    "title": "Areas",
+    "photoAlt": "Photo of {title}"
   },
   "project": {
     "features": "Features",
     "gallery": "Photo Gallery",
     "documents": "Documents",
     "download": "Download",
-    "properties_in_area":"latest"
+    "properties_in_area": "Properties in the Area"
   },
   "pages": {
     "areas": {
-      "title":"latest"
+      "title": "Areas",
+      "photoAlt": "Photo of {title}"
     },
     "desarrollos": {
-      "title":"latest"
+      "title": "Developments"
     },
     "about": {
       "whoWeAre": "Who We Are",
@@ -42,7 +44,7 @@
       "requestConsultation": "Request a Consultation",
       "callUs": "Call us today",
       "consultationText": "Any of our experts would be delighted to schedule a consultation to explore the options available according to your needs",
-      "seeMore":"latest"
+      "seeMore": "See More"
     },
     "services": {
       "title": "Services",
@@ -54,7 +56,7 @@
       "salesDesc": "Expert assistance in selling your property.",
       "purchase": "Property Purchase",
       "purchaseDesc": "Professional guidance in purchasing properties.",
-      "moreInfo":"latest"
+      "moreInfo": "More Information"
     },
     "project": {
       "caracteristicas": "Features",
@@ -67,22 +69,24 @@
       "pdf": {
         "brochure": "Brochure",
         "hoja": "Fact Sheet",
-        "planos":"latest"
+        "planos": "Floor Plans"
       },
       "pdfUI": {
         "documentsTitle": "Documents of Interest",
         "download": "Download",
-        "downloadButton": "Download",
-        "cantDisplay": "Cannot display PDF",
-        "instead":"latest"
-      }
+        "downloadBtn": "Download",
+        "cantDisplay": "Cannot display PDF in your browser."
+      },
+      "bannerAlt": "Project banner",
+      "galleryImageAlt": "Gallery image {index}",
+      "locatedIn": "Located in"
     },
     "contacto": {
       "alerts": {
         "successTitle": "Message Sent",
         "successMessage": "Message sent successfully!",
         "failureTitle": "Error Sending",
-        "failureMessage":"latest"
+        "failureMessage": "Failed to send message. Please try again."
       },
       "form": {
         "name": "Name",
@@ -90,20 +94,23 @@
         "phone": "Phone Number",
         "message": "Message",
         "sendButton": "Send",
-        "emailLink":"latest"
+        "emailLink": "Or email us at"
       }
     }
   },
   "whatsapp": {
     "status": "Typically replies within 1 hour",
-    "placeholder":"latest"
+    "placeholder": "Type a message..."
   },
   "footer": {
-    "copyright":"latest"
+    "copyright": "All rights reserved"
   },
   "docs": {
     "brochure": "Brochure",
     "hoja": "Fact Sheet",
-    "planos":"latest"
+    "planos": "Floor Plans"
+  },
+  "common": {
+    "videoNotSupported": "Your browser does not support the video tag."
   }
 }

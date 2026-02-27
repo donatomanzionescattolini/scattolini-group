@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
+import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { desarrolloMap} from "../objects/desarrollos/Desarrollos.ts";
 import { useTranslation } from "../i18n.tsx";
@@ -27,7 +27,7 @@ export default function AreasComponent(): React.ReactElement {
   const areas = [...desarrolloMap.values()].map((x: any) => x.area);
 
   return (
-    <MDBContainer>
+    <Container>
       <br />
       <br />
       <div>
@@ -35,9 +35,9 @@ export default function AreasComponent(): React.ReactElement {
       </div>
       <hr className="hr hr-blurry w-50 mx-auto" />
 
-      <MDBRow>
+      <Row>
         {areas.map((area) => (
-          <MDBCol key={area.name} xs={12} sm={12} md={6} lg={4} xl={4}>
+          <Col key={area.name} xs={12} sm={12} md={6} lg={4} xl={4}>
             <Link to={`/areas/${area.name}/`}>
               <div
                 className="propiedades-img p-0 m-0"
@@ -49,9 +49,9 @@ export default function AreasComponent(): React.ReactElement {
 
               <h4 className="text-center card-title m-2">{getLocalized(area.titulo)}</h4>
             </Link>
-          </MDBCol>
+          </Col>
         ))}
-      </MDBRow>
-    </MDBContainer>
+      </Row>
+    </Container>
   );
 }

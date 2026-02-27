@@ -2,8 +2,11 @@
   min-height: 70vh;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  display: flex;
-  align-items: center;
+
+  > .row {
+    min-height: 60vh;
+    align-items: center;
+  }
 
   .card {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);

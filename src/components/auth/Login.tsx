@@ -1,15 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBInput,
-  MDBBtn,
-} from 'mdb-react-ui-kit';
+import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 import './Login.scss';
 import { useTranslation } from '../../i18n.tsx';
 
@@ -51,11 +43,11 @@ export default function Login() {
   };
 
   return (
-    <MDBContainer className="login-container py-5">
-      <MDBRow className="justify-content-center">
-        <MDBCol md="8" lg="6" xl="5">
-          <MDBCard className="shadow-5">
-            <MDBCardBody className="p-5">
+    <Container className="login-container py-5">
+      <Row className="justify-content-center align-items-center">
+        <Col md={6} lg={5} xl={4}>
+          <Card className="shadow">
+            <Card.Body className="p-5">
               <h2 className="text-center mb-4">{t('pages.auth.login.title', 'Sign in')}</h2>
               <p className="text-center text-muted mb-4">
                 {t('pages.auth.login.subtitle', 'Admin panel')}
@@ -67,40 +59,42 @@ export default function Login() {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit}>
-                <MDBInput
-                  wrapperClass="mb-4"
-                  label={t('pages.auth.login.emailLabel', 'Email')}
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
+              <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-4">
+                  <Form.Label>{t('pages.auth.login.emailLabel', 'Email')}</Form.Label>
+                  <Form.Control
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </Form.Group>
 
-                <MDBInput
-                  wrapperClass="mb-4"
-                  label={t('pages.auth.login.passwordLabel', 'Password')}
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
+                <Form.Group className="mb-4">
+                  <Form.Label>{t('pages.auth.login.passwordLabel', 'Password')}</Form.Label>
+                  <Form.Control
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                </Form.Group>
 
-                <MDBBtn
+                <Button
                   type="submit"
+                  variant="primary"
                   className="w-100 mb-3"
                   disabled={loading}
-                  color="primary"
                 >
                   {loading
                     ? t('pages.auth.login.loading', 'Signing in...')
                     : t('pages.auth.login.submit', 'Sign in')}
-                </MDBBtn>
-              </form>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
+                </Button>
+              </Form>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 }

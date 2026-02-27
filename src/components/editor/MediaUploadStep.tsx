@@ -1,11 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import {
-  MDBBtn,
-  MDBCard,
-  MDBCardBody,
-  MDBSpinner,
-  MDBBadge,
-} from 'mdb-react-ui-kit';
+import { Button, Card, Spinner, Badge } from 'react-bootstrap';
 import { useTranslation } from '../../i18n.tsx';
 import {
   listDesarrolloMedia,
@@ -244,7 +238,7 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
 
       {uploading && (
         <div className="alert alert-info mb-3 d-flex align-items-center">
-          <MDBSpinner size="sm" className="me-2" />
+          <Spinner animation="border" size="sm" className="me-2" />
           {uploadProgress}
         </div>
       )}
@@ -256,25 +250,25 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
       </p>
 
       {/* Banner Section */}
-      <MDBCard className="mb-3">
-        <MDBCardBody>
+      <Card className="mb-3">
+        <Card.Body>
           <div className="d-flex justify-content-between align-items-center mb-2">
             <h6 className="mb-0">
               <i className="fas fa-image me-2"></i>
               {t('pages.editor.media.banner', 'Banner')}
             </h6>
-            <MDBBadge color={getMediaByType('banner').length > 0 ? 'success' : 'secondary'}>
+            <Badge bg={getMediaByType('banner').length > 0 ? 'success' : 'secondary'}>
               {getMediaByType('banner').length > 0 ? '✓' : t('pages.editor.media.missing', 'Missing')}
-            </MDBBadge>
+            </Badge>
           </div>
           
           {getMediaByType('banner').map(file => (
             <div key={file.key} className="d-flex align-items-center mb-2 p-2 bg-light rounded">
               <img src={file.url} alt="Banner preview" className="banner-preview" />
               <span className="flex-grow-1 small">{file.name} {formatFileSize(file.size)}</span>
-              <MDBBtn size="sm" color="danger" onClick={() => handleDeleteFile(file)}>
+              <Button size="sm" variant="danger" onClick={() => handleDeleteFile(file)}>
                 <i className="fas fa-trash"></i>
-              </MDBBtn>
+              </Button>
             </div>
           ))}
           
@@ -290,29 +284,29 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
             />
             <div className="form-text">{t('pages.editor.media.bannerHelp', 'File must be named "banner.jpg"')}</div>
           </div>
-        </MDBCardBody>
-      </MDBCard>
+        </Card.Body>
+      </Card>
 
       {/* Video Section */}
-      <MDBCard className="mb-3">
-        <MDBCardBody>
+      <Card className="mb-3">
+        <Card.Body>
           <div className="d-flex justify-content-between align-items-center mb-2">
             <h6 className="mb-0">
               <i className="fas fa-video me-2"></i>
               {t('pages.editor.media.video', 'Video')}
             </h6>
-            <MDBBadge color={getMediaByType('video').length > 0 ? 'success' : 'secondary'}>
+            <Badge bg={getMediaByType('video').length > 0 ? 'success' : 'secondary'}>
               {getMediaByType('video').length > 0 ? '✓' : t('pages.editor.media.missing', 'Missing')}
-            </MDBBadge>
+            </Badge>
           </div>
           
           {getMediaByType('video').map(file => (
             <div key={file.key} className="d-flex align-items-center mb-2 p-2 bg-light rounded">
               <i className="fas fa-file-video fa-2x me-2 text-primary"></i>
               <span className="flex-grow-1 small">{file.name} {formatFileSize(file.size)}</span>
-              <MDBBtn size="sm" color="danger" onClick={() => handleDeleteFile(file)}>
+              <Button size="sm" variant="danger" onClick={() => handleDeleteFile(file)}>
                 <i className="fas fa-trash"></i>
-              </MDBBtn>
+              </Button>
             </div>
           ))}
           
@@ -328,20 +322,20 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
             />
             <div className="form-text">{t('pages.editor.media.videoHelp', 'File must be named "video.mp4"')}</div>
           </div>
-        </MDBCardBody>
-      </MDBCard>
+        </Card.Body>
+      </Card>
 
       {/* PDFs Section */}
-      <MDBCard className="mb-3">
-        <MDBCardBody>
+      <Card className="mb-3">
+        <Card.Body>
           <div className="d-flex justify-content-between align-items-center mb-2">
             <h6 className="mb-0">
               <i className="fas fa-file-pdf me-2"></i>
               {t('pages.editor.media.pdfs', 'PDF Documents')}
             </h6>
-            <MDBBadge color={getMediaByType('pdf').length >= 3 ? 'success' : 'warning'}>
+            <Badge bg={getMediaByType('pdf').length >= 3 ? 'success' : 'warning'}>
               {getMediaByType('pdf').length}/3
-            </MDBBadge>
+            </Badge>
           </div>
           
           {getMediaByType('pdf').map(file => (
@@ -352,9 +346,9 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
                 <i className="fas fa-eye"></i>
                 <span className="visually-hidden">View PDF</span>
               </a>
-              <MDBBtn size="sm" color="danger" onClick={() => handleDeleteFile(file)}>
+              <Button size="sm" variant="danger" onClick={() => handleDeleteFile(file)}>
                 <i className="fas fa-trash"></i>
-              </MDBBtn>
+              </Button>
             </div>
           ))}
           
@@ -373,20 +367,20 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
               {t('pages.editor.media.pdfHelp', 'Files must be named: brochure.pdf, hoja.pdf, or planos.pdf')}
             </div>
           </div>
-        </MDBCardBody>
-      </MDBCard>
+        </Card.Body>
+      </Card>
 
       {/* Gallery Section */}
-      <MDBCard className="mb-3">
-        <MDBCardBody>
+      <Card className="mb-3">
+        <Card.Body>
           <div className="d-flex justify-content-between align-items-center mb-2">
             <h6 className="mb-0">
               <i className="fas fa-images me-2"></i>
               {t('pages.editor.media.gallery', 'Image Gallery')}
             </h6>
-            <MDBBadge color={getMediaByType('gallery').length > 0 ? 'success' : 'secondary'}>
+            <Badge bg={getMediaByType('gallery').length > 0 ? 'success' : 'secondary'}>
               {getMediaByType('gallery').length} {t('pages.editor.media.images', 'images')}
-            </MDBBadge>
+            </Badge>
           </div>
           
           <div className="d-flex flex-wrap gap-2 mb-3">
@@ -428,12 +422,12 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
               {t('pages.editor.media.galleryHelp', 'Upload JPG images. They will be automatically renamed to "image (1).jpg", "image (2).jpg", etc.')}
             </div>
           </div>
-        </MDBCardBody>
-      </MDBCard>
+        </Card.Body>
+      </Card>
 
       {loading && (
         <div className="text-center py-3">
-          <MDBSpinner size="sm" /> {t('pages.editor.media.loadingMedia', 'Loading current media...')}
+          <Spinner animation="border" size="sm" /> {t('pages.editor.media.loadingMedia', 'Loading current media...')}
         </div>
       )}
     </div>

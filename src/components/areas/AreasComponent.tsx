@@ -1,4 +1,4 @@
-import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
+import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Areas from "../../objects/areas/Areas";
 import { useTranslation } from "../../i18n.tsx";
@@ -23,7 +23,7 @@ function AreasComponent() {
     return field;
   };
   return (
-    <MDBContainer>
+    <Container>
       <br></br>
       <br></br>
       <div>
@@ -31,9 +31,9 @@ function AreasComponent() {
       </div>
       <hr className="hr hr-blurry w-50 mx-auto" />
 
-      <MDBRow>
+      <Row>
         {Areas().map((area) => (
-          <MDBCol key={area.name} xs={12} sm={12} md={6} lg={4} xl={4}>
+          <Col key={area.name} xs={12} sm={12} md={6} lg={4} xl={4}>
             <Link to={`/areas/${area.name}/`}>
               <div
                 className="propiedades-img p-0 m-0 w-100"
@@ -47,10 +47,10 @@ function AreasComponent() {
                 {getLocalized(area.titulo)}
               </h4>
             </Link>
-          </MDBCol>
+          </Col>
         ))}
-      </MDBRow>
-    </MDBContainer>
+      </Row>
+    </Container>
   );
 }
 

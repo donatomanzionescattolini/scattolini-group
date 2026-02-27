@@ -4,18 +4,8 @@ import "@material/banner/dist/mdc.banner.min.css";
 
 import { ReactNode, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useTranslation } from "../../i18n.tsx";
-import {
-  MDBAccordion,
-  MDBAccordionItem,
-  MDBCol,
-  MDBContainer,
-  MDBRow,
-  MDBTabs,
-  MDBTabsContent,
-  MDBTabsItem,
-  MDBTabsLink,
-  MDBTabsPane,
-} from "mdb-react-ui-kit";
+import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
 import { Link } from "react-router-dom";
 import {
   caracteristicas,
@@ -114,7 +104,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
   return (
     <>
       <a id="top" href="#top">
-        <MDBContainer
+        <Container
           fluid
           id={"banner"}
           className={"jumbotron"}
@@ -162,12 +152,12 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               />
             </>
           )}
-        </MDBContainer>
+        </Container>
       </a>
       <div className="skew-c"></div>
 
       <section className="colour-block">
-        <MDBContainer>
+        <Container>
           <h2 className=" text-center animate-charcter" style={{}}>
             {localizedTitulo}
           </h2>
@@ -193,7 +183,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               ))}
             </div>
           </div>
-        </MDBContainer>
+        </Container>
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">
@@ -221,7 +211,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       </section>
       <div className="skew-c"></div>
       <section className="colour-block">
-        <MDBContainer className="embed-responsive small responsive centered">
+        <Container className="embed-responsive small responsive centered">
           <br></br>
           <div>
             <h3 className="text-center">{t("pages.project.pdfUI.documentsTitle")}</h3>
@@ -229,36 +219,36 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           <hr className="hr hr-blurry w-50 mx-auto" />
 
           <br></br>
-          <MDBTabs>
-            <MDBTabsItem
-              style={{ color: "#2b2a2e!important" }}
-              title={t("pages.project.pdf.brochure") as string}
-            >
-              <MDBTabsLink onClick={() => openTab("brochure")} href="#docs">
-                {" "}
-                {t("pages.project.pdf.brochure")}
-              </MDBTabsLink>
-            </MDBTabsItem>
-            <MDBTabsItem>
-              <MDBTabsLink
-                style={{ color: "#2b2a2e!important" }}
-                onClick={() => openTab("hoja")}
-                href="#docs"
-              >
-                {t("pages.project.pdf.hoja")}
-              </MDBTabsLink>
-            </MDBTabsItem>
-            <MDBTabsItem>
-              <MDBTabsLink
-                style={{ color: "#2b2a2e!important" }}
-                aria-keyshortcuts=""
-                href="#docs"
-                onClick={() => openTab("planos")}
-              >
-                {t("pages.project.pdf.planos")}
-              </MDBTabsLink>
-            </MDBTabsItem>
-          </MDBTabs>
+          <Tab.Container activeKey={tabVisible} onSelect={(k) => k && setTabVisible(k)}>
+            <Nav variant="tabs">
+              <Nav.Item>
+                <Nav.Link 
+                  eventKey="brochure"
+                  onClick={() => openTab("brochure")}
+                  style={{ color: "#2b2a2e" }}
+                >
+                  {t("pages.project.pdf.brochure")}
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link
+                  eventKey="hoja"
+                  onClick={() => openTab("hoja")}
+                  style={{ color: "#2b2a2e" }}
+                >
+                  {t("pages.project.pdf.hoja")}
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link
+                  eventKey="planos"
+                  onClick={() => openTab("planos")}
+                  style={{ color: "#2b2a2e" }}
+                >
+                  {t("pages.project.pdf.planos")}
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
           {/*{tabVisible === "none" &&*/}
           {/*    (<><h1 className="display-6 text-center"><small className={"text-muted "}>Aprenda mas sobre este maravilloso proyecto!</small></h1>*/}
           {/*    <br></br>*/}
@@ -284,8 +274,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           {/* data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
               style={{ width: "100%", height: 500 }}
             > */}
-          <MDBTabsContent>
-            <MDBTabsPane open={tabVisible === "brochure"}>
+          <Tab.Content>
+            <Tab.Pane eventKey="brochure">
               <div className="pdf-container text-center">
                 <object
                   data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/brochure.pdf`}
@@ -319,8 +309,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                   </a>
                 </div>
               </div>
-            </MDBTabsPane>
-            <MDBTabsPane open={tabVisible === "hoja"}>
+            </Tab.Pane>
+            <Tab.Pane eventKey="hoja">
               <div className="pdf-container text-center">
                 <object
                   data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/hoja.pdf`}
@@ -354,8 +344,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                   </a>
                 </div>
               </div>
-            </MDBTabsPane>
-            <MDBTabsPane open={tabVisible === "planos"}>
+            </Tab.Pane>
+            <Tab.Pane eventKey="planos">
               <div className="pdf-container text-center">
                 <object
                   data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/planos.pdf`}
@@ -389,13 +379,14 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                   </a>
                 </div>
               </div>
-            </MDBTabsPane>
-          </MDBTabsContent>
-        </MDBContainer>
+            </Tab.Pane>
+          </Tab.Content>
+          </Tab.Container>
+        </Container>
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">
-        <MDBContainer>
+        <Container>
           <br />
           <br></br>
           <div>
@@ -419,10 +410,10 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           {/*    })}*/}
 
           {/*</MDBRow>*/}
-          <MDBRow>
+          <Row>
             {[...desarrollosArea.values()].map((desarrollo, idx) => {
               return (
-                <MDBCol key={desarrollo.nombre ?? idx} xs={12} sm={12} md={6} lg={4} xl={4}>
+                <Col key={desarrollo.nombre ?? idx} xs={12} sm={12} md={6} lg={4} xl={4}>
                   <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                     <div
                       className="propiedades-img p-0 m-0"
@@ -438,11 +429,11 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                       ))}
                     </h4>
                   </Link>
-                </MDBCol>
+                </Col>
               );
             })}
-          </MDBRow>
-        </MDBContainer>
+          </Row>
+        </Container>
         {/* <div> */}
         {/* <h3 className="text-center">Otras Áreas</h3> */}
         {/* </div> */}
@@ -456,19 +447,19 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       <section className="white-block">
           <h2 className={""}>{t("pages.project.contactUsToday")}</h2>
         {innerWidth <= 768 && (
-          <MDBContainer>
+          <Container>
 
             <ContactFormComponent />
-          </MDBContainer>
+          </Container>
         )}
         {innerWidth > 768 && (
-          <MDBContainer
+          <Container
             fluid
             className="d-flex justify-content-center w-100 p-0 m-0"
           >
 
             <ContactFormComponent  />
-          </MDBContainer>
+          </Container>
         )}
       </section>
       <div className="skew-c"></div>

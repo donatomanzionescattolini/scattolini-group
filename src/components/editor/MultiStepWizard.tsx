@@ -1,14 +1,6 @@
 ﻿import React, { useState, useCallback, useMemo } from 'react';
 import { useForm, Controller } from 'react-hook-form';
-import {
-  MDBRow,
-  MDBCol,
-  MDBBtn,
-  MDBInput,
-  MDBTextArea,
-  MDBCard,
-  MDBCardBody,
-} from 'mdb-react-ui-kit';
+import { Row, Col, Button, Card, Form } from 'react-bootstrap';
 import './MultiStepWizard.scss';
 import { useTranslation } from '../../i18n.tsx';
 import MediaUploadStep from './MediaUploadStep';
@@ -210,19 +202,24 @@ export default function MultiStepWizard({
           control={control}
           render={({ field }) => (
             isTextarea ? (
-              <MDBTextArea
-                label={label}
-                rows={fieldName === 'introduccion' || fieldName === 'descripcion' ? 6 : 3}
-                value={getFieldValue(fieldName)}
-                onChange={(e) => setFieldValue(fieldName, e.target.value)}
-              />
+              <Form.Group>
+                <Form.Label>{label}</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={fieldName === 'introduccion' || fieldName === 'descripcion' ? 6 : 3}
+                  value={getFieldValue(fieldName)}
+                  onChange={(e) => setFieldValue(fieldName, e.target.value)}
+                />
+              </Form.Group>
             ) : (
-              <MDBInput
-                label={label}
-                type="text"
-                value={getFieldValue(fieldName)}
-                onChange={(e) => setFieldValue(fieldName, e.target.value)}
-              />
+              <Form.Group>
+                <Form.Label>{label}</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={getFieldValue(fieldName)}
+                  onChange={(e) => setFieldValue(fieldName, e.target.value)}
+                />
+              </Form.Group>
             )
           )}
         />
@@ -238,8 +235,8 @@ export default function MultiStepWizard({
       return (
         <div className="review-step">
           <h4 className="mb-4">{t('pages.editor.reviewTitle', 'Review changes')}</h4>
-          <MDBCard className="mb-3">
-            <MDBCardBody>
+          <Card className="mb-3">
+            <Card.Body>
               {Object.keys(formData).map((key) => {
                 const value = formData[key];
                 
@@ -264,8 +261,8 @@ export default function MultiStepWizard({
                   </div>
                 );
               })}
-            </MDBCardBody>
-          </MDBCard>
+            </Card.Body>
+          </Card>
         </div>
       );
     }
@@ -297,29 +294,29 @@ export default function MultiStepWizard({
       <form onSubmit={handleSubmit(onSubmit)}>
         {renderStep()}
 
-        <MDBRow className="mt-4">
-          <MDBCol>
+        <Row className="mt-4">
+          <Col>
             {currentStep > 0 && (
-              <MDBBtn color="secondary" onClick={handlePrevious}>
+              <Button variant="secondary" onClick={handlePrevious}>
                 {t('common.previous', 'Previous')}
-              </MDBBtn>
+              </Button>
             )}
-          </MDBCol>
-          <MDBCol className="text-end">
-            <MDBBtn color="secondary" onClick={onCancel} className="me-2">
+          </Col>
+          <Col className="text-end">
+            <Button variant="secondary" onClick={onCancel} className="me-2">
               {t('common.cancel', 'Cancel')}
-            </MDBBtn>
+            </Button>
             {currentStep === steps.length - 1 ? (
-              <MDBBtn type="submit" color="primary" disabled={saving}>
+              <Button type="submit" variant="primary" disabled={saving}>
                 {saving ? t('common.saving', 'Saving...') : t('common.saveChanges', 'Save changes')}
-              </MDBBtn>
+              </Button>
             ) : (
-              <MDBBtn type="submit" color="primary">
+              <Button type="submit" variant="primary">
                 {t('common.next', 'Next')}
-              </MDBBtn>
+              </Button>
             )}
-          </MDBCol>
-        </MDBRow>
+          </Col>
+        </Row>
       </form>
     </div>
   );

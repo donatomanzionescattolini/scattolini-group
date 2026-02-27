@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  MDBBtn,
-  MDBSpinner,
-  MDBListGroup,
-  MDBListGroupItem,
-} from 'mdb-react-ui-kit';
+import { Button, Spinner, ListGroup } from 'react-bootstrap';
 import Areas from '../../objects/areas/Areas';
 import { getDesarrollosForArea } from '../../objects/desarrollos/Desarrollos';
 import {
@@ -138,9 +133,9 @@ export default function DesarrolloEditor() {
           <h3>
             {(isCreating ? t('pages.editor.createDesarrollo', 'Create development') : t('pages.editor.edit', 'Edit'))}: {getLocalized(selectedDesarrollo.titulo) || selectedDesarrollo.nombre || 'Nuevo'}
           </h3>
-          <MDBBtn color="secondary" onClick={handleCancel}>
+          <Button variant="secondary" onClick={handleCancel}>
             {t('pages.editor.backToList', 'Back to list')}
-          </MDBBtn>
+          </Button>
         </div>
 
         {message && (
@@ -166,19 +161,19 @@ export default function DesarrolloEditor() {
     <div>
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h3 className="mb-0">{t('pages.editor.selectDesarrollo', 'Select a development to edit')}</h3>
-        <MDBBtn onClick={handleCreateNew}>
+        <Button onClick={handleCreateNew}>
           {t('pages.editor.addDesarrollo', 'Add development')}
-        </MDBBtn>
+        </Button>
       </div>
       
       {loading ? (
         <div className="text-center py-5">
-          <MDBSpinner />
+          <Spinner animation="border" />
         </div>
       ) : (
-        <MDBListGroup>
+        <ListGroup>
           {desarrollos.map((desarrollo, index) => (
-            <MDBListGroupItem
+            <ListGroup.Item
               key={index}
               action
               onClick={() => handleSelectDesarrollo(desarrollo)}
@@ -193,9 +188,9 @@ export default function DesarrolloEditor() {
                 )}
               </div>
               <i className="fas fa-chevron-right"></i>
-            </MDBListGroupItem>
+            </ListGroup.Item>
           ))}
-        </MDBListGroup>
+        </ListGroup>
       )}
     </div>
   );

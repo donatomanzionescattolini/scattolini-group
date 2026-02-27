@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  MDBRow,
-  MDBCol,
-  MDBBtn,
-  MDBSpinner,
-  MDBListGroup,
-  MDBListGroupItem,
-} from 'mdb-react-ui-kit';
+import { Row, Col, Button, Spinner, ListGroup } from 'react-bootstrap';
 import Areas from '../../objects/areas/Areas';
 import { getAllAreas, saveArea, serializeArea } from '../../services/database';
 import { Area } from '../../models/areas/Area';
@@ -87,9 +80,9 @@ export default function AreaEditor() {
           <h3>
             {t('pages.editor.edit', 'Edit')}: {getLocalized(selectedArea.titulo) || selectedArea.name}
           </h3>
-          <MDBBtn color="secondary" onClick={handleCancel}>
+          <Button variant="secondary" onClick={handleCancel}>
             {t('pages.editor.backToList', 'Back to list')}
-          </MDBBtn>
+          </Button>
         </div>
 
         {message && (
@@ -117,12 +110,12 @@ export default function AreaEditor() {
       
       {loading ? (
         <div className="text-center py-5">
-          <MDBSpinner />
+          <Spinner animation="border" />
         </div>
       ) : (
-        <MDBListGroup>
+        <ListGroup>
           {areas.map((area, index) => (
-            <MDBListGroupItem
+            <ListGroup.Item
               key={index}
               action
               onClick={() => handleSelectArea(area)}
@@ -135,9 +128,9 @@ export default function AreaEditor() {
                 )}
               </div>
               <i className="fas fa-chevron-right"></i>
-            </MDBListGroupItem>
+            </ListGroup.Item>
           ))}
-        </MDBListGroup>
+        </ListGroup>
       )}
     </div>
   );
