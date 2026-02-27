@@ -23,12 +23,12 @@ CoraMerrickPark.caracteristicas = {
     <dt>Tipo de Residencia</dt>
     <dd>Condominio</dd>
     <dt>Estilo de Residencia</dt>
-    <dd>ContemporÁneo</dd>
+    <dd>ContemporÃ¡neo</dd>
     </dl></>,
   residencias:<><ul>
-  <li >Diseño mediterrÁneo contemporÁneo</li>
+  <li >Diseño mediterrÃ¡neo contemporÃ¡neo</li>
   <li >De una a tres habitaciones con residencias de estudio, que van desde 678 a 2,651 pies cuadrados</li>
-  <li >Combinaciones de unidades flexibles disponibles para crear espacios habitables mÁs grandes y personalizados</li>
+  <li >Combinaciones de unidades flexibles disponibles para crear espacios habitables mÃ¡s grandes y personalizados</li>
   <li >Alturas de techo de 10'</li>
   <li >Diseños llenos de luz con ventanas del piso al techo</li>
   <li >Amplios balcones privados</li>
@@ -46,9 +46,9 @@ Baños principales para mejorar el bienestar</li>
 </ul></>,
   amenidades: <>
       <ul>
-        <li>La primera pista de pÁdel de Coral Gable</li>
-        <li>Spa con sauna, ba?o de vapor y ba?o de agua fría y caliente</li>
-        <li>Gimnasio de última generaci?n</li>
+        <li>La primera pista de pÃ¡del de Coral Gable</li>
+        <li>Spa con sauna, baño de vapor y baño de agua frÃ­a y caliente</li>
+        <li>Gimnasio de Ãºltima generación</li>
         <li>
           Terraza con piscina al aire libre que incluye cabañas privadas y
           cocina al aire libre
@@ -61,20 +61,20 @@ Baños principales para mejorar el bienestar</li>
         <li>Guardabicicletas</li>
         <li>Sala de conferencias</li>
         <li>Gimnasio con equipo de bienestar y recuperación</li>
-        <li>Gran vestíbulo</li>
+        <li>Gran vestÃ­bulo</li>
         <li>Parque exuberante de 5,000 pies cuadrados</li>
         <li>Cora busca obtener la Certificación de Construcción WELL</li>
         <li>Sistemas avanzados de purificación de aire y agua</li>
         <li>
-          El dise?o biofílico de Arquitectonica integra la naturaleza y los
+          El diseño biofÃ­lico de Arquitectonica integra la naturaleza y los
           materiales naturales, inspirando comunidad y movimiento
         </li>
         <li>
-          El dise?o acústico de Cora promueve la comodidad y la tranquilidad,
+          El diseño acÃºstico de Cora promueve la comodidad y la tranquilidad,
           reduciendo el ruido y mejorando la productividad
         </li>
         <li>
-          La innovadora tecnología de iluminaci?n maximiza la luz natural y
+          La innovadora tecnologÃ­a de iluminación maximiza la luz natural y
           proporciona una iluminación equilibrada para espacios vibrantes y bien
           iluminados
         </li>
@@ -85,18 +85,18 @@ Baños principales para mejorar el bienestar</li>
         </li>
         <li>
           {" "}
-          Los productos de bienestar seleccionados en todas las Áreas comunes
+          Los productos de bienestar seleccionados en todas las Ã¡reas comunes
           respaldan las elecciones saludables
         </li>
         <li>
-          Tecnología de monitoreo de salud en el hogar inteligente de vanguardia
+          TecnologÃ­a de monitoreo de salud en el hogar inteligente de vanguardia
         </li>
       </ul>
     </>
 };
 CoraMerrickPark.numberOfImages = 45;
 CoraMerrickPark.introduccion = [
-  "Cora Merrick Park es un condominio residencial de lujo. Su fachada presenta acentos cl?sicos de bronce, estuco texturizado y piedra oolita combinados con elegantes columnas tradicionales. Cora ofrece solo 12 pisos con 74 residencias súper exclusivas de 1 a 3 rec?maras, con acabados espectaculares y apartamentos totalmente amueblados dise?ados por el famoso Robot Urbano. Las comodidades de primera línea proporcionar?n una piscina, gimnasio, sauna, sala club, centro de negocios, ?reas sociales y mucho m?s. Los residentes de Cora est?n perfectamente conectados con las tiendas en Merrick Park, restaurantes al aire libre y opciones de bienestar.",
+  "Cora Merrick Park es un condominio residencial de lujo. Su fachada presenta acentos clÃ¡sicos de bronce, estuco texturizado y piedra oolita combinados con elegantes columnas tradicionales. Cora ofrece solo 12 pisos con 74 residencias sÃºper exclusivas de 1 a 3 recÃ¡maras, con acabados espectaculares y apartamentos totalmente amueblados diseñados por el famoso Robot Urbano. Las comodidades de primera lÃ­nea proporcionarÃ¡n una piscina, gimnasio, sauna, sala club, centro de negocios, Ã¡reas sociales y mucho mÃ¡s. Los residentes de Cora estÃ¡n perfectamente conectados con las tiendas en Merrick Park, restaurantes al aire libre y opciones de bienestar.",
 ];
 CoraMerrickPark.numberOfFloors = 12;
 CoraMerrickPark.numberOfUnits = 74;

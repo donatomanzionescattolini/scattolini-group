@@ -14,19 +14,19 @@ export default function VidaResidences(lang: "en" | "es" = "es") {
                     <li>Pisos: 9</li>
                     <li>Residencias: 121</li>
                     <li>Ubicación: 3050 Biscayne Blvd, Miami, FL 33137</li>
-                    <li>MÁs de 22,000 pies cuadrados de comodidades</li>
+                    <li>MÃ¡s de 22,000 pies cuadrados de comodidades</li>
                     <li>
                         Amplia piscina de tranquilidad en la azotea con jacuzzi, cabañas
                         y estaciones de parrilla
                     </li>
                     <li>Restaurante/bar privado en la azotea</li>
-                    <li>Impresionantes vistas de la Bahía de Biscayne</li>
-                    <li>Gimnasio de última generaci?n</li>
+                    <li>Impresionantes vistas de la BahÃ­a de Biscayne</li>
+                    <li>Gimnasio de Ãºltima generación</li>
                     <li>Conveniente barra de jugos y café</li>
                     <li>Centro de coworking HiTech</li>
                     <li>Acceso controlado a la propiedad</li>
                     <li>
-                        Servicios de conserjería las 24 horas del día, los 7 días de la
+                        Servicios de conserjerÃ­a las 24 horas del dÃ­a, los 7 dÃ­as de la
                         semana
                     </li>
                 </ul>
@@ -48,7 +48,7 @@ export default function VidaResidences(lang: "en" | "es" = "es") {
                     <li>Tocadores personalizados</li>
                     <li>Lavadora y secadora en residencias</li>
                     <li>Armarios empotrados</li>
-                    <li>Paquetes de iluminación contemporÁnea</li>
+                    <li>Paquetes de iluminación contemporÃ¡nea</li>
                     <li>Sistemas de hogar inteligente</li>
                     <li>Sistema de entrada sin llave</li>
                 </ul>
@@ -62,7 +62,7 @@ export default function VidaResidences(lang: "en" | "es" = "es") {
                     <li>Rooftop</li>
                     <li>Restaurantes</li>
                     <li>Lounge</li>
-                    <li>Áreas al aire libre</li>
+                    <li>Ãreas al aire libre</li>
 
                     <li>Gimnasio</li>
                 </ul>
@@ -73,7 +73,7 @@ export default function VidaResidences(lang: "en" | "es" = "es") {
         getLocalizedField("introduccion.0", "Vida = Life"),
     ]);
     Vida.titulo = getLocalizedField("titulo", "Vida Residences");
-    Vida.slogan = getLocalizedField("slogan", "Un tramo mÁs allÁ de lo ordinario...");
+    Vida.slogan = getLocalizedField("slogan", "Un tramo mÃ¡s allÃ¡ de lo ordinario...");
     Vida.numberOfImages = parseInt(getLocalizedField("numberOfImages", "24"), 10) || 24;
     Vida.banner = getLocalizedField("banner", "true") === "true";
     Vida.area = Edgewater();

@@ -8,11 +8,11 @@ export default function StRegis(lang: "en" | "es" = "es") {
 
     StRegisObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "52"), 10) || 52;
     StRegisObject.nombre = getLocalizedField("nombre", "st-regis");
-    StRegisObject.titulo = getLocalizedField("titulo", "St. Regis® ");
+    StRegisObject.titulo = getLocalizedField("titulo", "St. RegisÂ® ");
     StRegisObject.slogan = getLocalizedField("slogan", "Vivir exquisito es vivir extraordinario");
     StRegisObject.introduccion = getLocalizedArray("introduccion", [
-        "Situado a lo largo de la hermosa costa de South  con exquisitas vistas frente a la bahía, The St. Regis Residences, Miami personifica la vida elegante. Refleja las sensibilidades de aquellos que son impulsados por el conocimiento, exigen excelencia, respetan la tradici?n y valoran la individualidad por encima de todo.",
-        "The St. Regis Residences, Miami representa un futuro impulsado por un pasado hist?rico. Un lugar donde las nuevas generaciones crear?n una vida de momentos legendarios, en hogares únicos para personas que perciben sus legados personales innatamente entrelazados con la rica herencia de Miami.",
+        "Situado a lo largo de la hermosa costa de South  con exquisitas vistas frente a la bahÃ­a, The St. Regis Residences, Miami personifica la vida elegante. Refleja las sensibilidades de aquellos que son impulsados por el conocimiento, exigen excelencia, respetan la tradición y valoran la individualidad por encima de todo.",
+        "The St. Regis Residences, Miami representa un futuro impulsado por un pasado histórico. Un lugar donde las nuevas generaciones crearÃ¡n una vida de momentos legendarios, en hogares Ãºnicos para personas que perciben sus legados personales innatamente entrelazados con la rica herencia de Miami.",
         "Desarrollado por Grupo Relacionado e Integra Investments, St. Regis Residences ofrece un diseño majestuoso de Robert AM Stern Architects que presenta interiores exclusivos de Rockwell Group y paisajismo de Enzo Enea Group.",
     ]);
     StRegisObject.banner = true;
@@ -20,8 +20,8 @@ export default function StRegis(lang: "en" | "es" = "es") {
     StRegisObject.caracteristicas = {
         edificio: (
             <p>
-                St. Regis®  se encuentra dentro de una red de conexiones de
-                transporte cercanas, lo que brinda fÁcil acceso al Aeropuerto
+                St. RegisÂ®  se encuentra dentro de una red de conexiones de
+                transporte cercanas, lo que brinda fÃ¡cil acceso al Aeropuerto
                 Internacional de Miami, el Puerto de Miami, el Distrito de las Artes
                 de Wynwood, el Distrito de Diseño, los teatros y museos
                 internacionalmente aclamados del centro y los estadios deportivos de
@@ -32,14 +32,14 @@ export default function StRegis(lang: "en" | "es" = "es") {
             <div>
                 <p>
                     Una sola torre de 48 pisos que alberga 150 residencias, incluidos
-                    penthouses y sky villas. St. Regis®  es una colecci?n de
+                    penthouses y sky villas. St. RegisÂ®  es una colección de
                     casas de 2 a 7 habitaciones que miden entre 2,616 y 7,391 pies
-                    cuadrados. Pie. Con techos de 10 pies, tecnología inteligente
+                    cuadrados. Pie. Con techos de 10 pies, tecnologÃ­a inteligente
                     integrada y tocador en cada unidad. Este edificio ofrece mucho
                     espacio interior para comodidades y vistas despejadas del
-                    horizonte de Miami, la Bahía de Biscayne y el Oc?ano Atl?ntico.
-                    Tambi?n ofrece el servicio de mayordomo St. Regis®, servicios de
-                    limpieza y privilegios de membresía global
+                    horizonte de Miami, la BahÃ­a de Biscayne y el Océano AtlÃ¡ntico.
+                    También ofrece el servicio de mayordomo St. RegisÂ®, servicios de
+                    limpieza y privilegios de membresÃ­a global
                 </p>
                 <br></br>
                 <br></br>
@@ -49,7 +49,7 @@ export default function StRegis(lang: "en" | "es" = "es") {
                     </li>
                     <li className="list-group-item">
                         {" "}
-                        Ascensor privado y vestíbulo de entrada para cada residencia.
+                        Ascensor privado y vestÃ­bulo de entrada para cada residencia.
                     </li>
                     <li className="list-group-item">
                         {" "}
@@ -72,7 +72,7 @@ export default function StRegis(lang: "en" | "es" = "es") {
                     <li className="list-group-item"></li>
                     <li className="list-group-item">
                         {" "}
-                        Tecnología integrada para el hogar inteligente
+                        TecnologÃ­a integrada para el hogar inteligente
                     </li>
                     <li className="list-group-item">
                         {" "}
@@ -105,10 +105,10 @@ export default function StRegis(lang: "en" | "es" = "es") {
                 </li>
                 <li className="list-group-item">
                     {" "}
-                    Lobby residencial privado atendido 24 horas al día, 7 días a la
+                    Lobby residencial privado atendido 24 horas al dÃ­a, 7 dÃ­as a la
                     semana
                 </li>
-                <li className="list-group-item"> Conserjería las 24 horas</li>
+                <li className="list-group-item"> ConserjerÃ­a las 24 horas</li>
                 <li className="list-group-item">
                     {" "}
                     Servicio de valet parking en el lugar y espacios de
@@ -116,7 +116,7 @@ export default function StRegis(lang: "en" | "es" = "es") {
                 </li>
                 <li className="list-group-item">
                     {" "}
-                    Estaciones de carga para vehículos el?ctricos
+                    Estaciones de carga para vehÃ­culos eléctricos
                 </li>
                 <li className="list-group-item">
                     {" "}
@@ -139,16 +139,16 @@ export default function StRegis(lang: "en" | "es" = "es") {
                 <li className="list-group-item">
                     {" "}
                     Terrenos tipo parque y exuberantes terrazas de la firma suiza de
-                    dise?o paisajístico Enea Garden Design
+                    diseño paisajÃ­stico Enea Garden Design
                 </li>
                 <li className="list-group-item">
                     {" "}
-                    Sala multimedia de última generaci?n
+                    Sala multimedia de Ãºltima generación
                 </li>
 
                 <li className="list-group-item">
                     {" "}
-                    Centro de negocios con cafetería y salas de conferencias
+                    Centro de negocios con cafeterÃ­a y salas de conferencias
                 </li>
                 <li className="list-group-item">
                     {" "}
@@ -168,7 +168,7 @@ export default function StRegis(lang: "en" | "es" = "es") {
                 </li>
                 <li className="list-group-item">
                     {" "}
-                    Servicios de peluquería y paseo de perros en spa para mascotas.
+                    Servicios de peluquerÃ­a y paseo de perros en spa para mascotas.
                 </li>
                 <li className="list-group-item">
                     {" "}

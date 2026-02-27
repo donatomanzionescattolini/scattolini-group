@@ -4,7 +4,7 @@ const MidtownParkResidences = new Desarrollo(MidtownMiami());
 MidtownParkResidences.titulo = "Midtown Park Residences";
 MidtownParkResidences.nombre = "midtown-park-residences";
 MidtownParkResidences.introduccion = [
-  "Midtown Park es un animado centro de cinco acres las 24 horas del día en Midtown Miami, que une Design District, Wynwood y Edgewater. Este espacio de uso mixto combina oficinas, casas de lujo y ?reas públicas vibrantes, fomentando la creatividad y la comunidad. Con m?s de 100,000 pies cuadrados de tiendas y restaurantes a nivel de calle, mejora el ambiente transitable. El desarrollo cuenta con un acre de espacios verdes, incluidos los parques East y West y dos paseos sombreados. Una entrada empedrada en Midtown Boulevard agrega comodidad, mientras que el tercer piso alberga un club de raqueta de ocho canchas para recreación de primer nivel. Las oficinas boutique atraen a firmas creativas, pr?cticas legales y profesionales de las finanzas, enriqueciendo la escena din?mica de Midtown.",
+  "Midtown Park es un animado centro de cinco acres las 24 horas del dÃ­a en Midtown Miami, que une Design District, Wynwood y Edgewater. Este espacio de uso mixto combina oficinas, casas de lujo y Ã¡reas pÃºblicas vibrantes, fomentando la creatividad y la comunidad. Con mÃ¡s de 100,000 pies cuadrados de tiendas y restaurantes a nivel de calle, mejora el ambiente transitable. El desarrollo cuenta con un acre de espacios verdes, incluidos los parques East y West y dos paseos sombreados. Una entrada empedrada en Midtown Boulevard agrega comodidad, mientras que el tercer piso alberga un club de raqueta de ocho canchas para recreaciÃ³n de primer nivel. Las oficinas boutique atraen a firmas creativas, prÃ¡cticas legales y profesionales de las finanzas, enriqueciendo la escena dinÃ¡mica de Midtown.",
 ];
 MidtownParkResidences.slogan =
   "El mejor lugar para estar es ahora es el mejor lugar para vivir";
@@ -13,14 +13,14 @@ MidtownParkResidences.ubicacion = "2916 N Miami Ave, Miami, FL 33127 ";
 MidtownParkResidences.numberOfFloors = 30;
 MidtownParkResidences.numberOfUnits = 290;
 MidtownParkResidences.typeOfUnits = "Estudios, 1-5 habitaciones";
-MidtownParkResidences.slogan = "La Vida Exuberante Comienza Aquí";
+MidtownParkResidences.slogan = "La Vida Exuberante Comienza AquÃ­";
 MidtownParkResidences.caracteristicas = {
   edificio: (
     <>
       <dl>
         <dt>ubicacion</dt>
         <dd>{MidtownParkResidences.ubicacion}</dd>
-        <dt>Año de apertura</dt>
+        <dt>AÃ±o de apertura</dt>
         <dd>{MidtownParkResidences.estimatedCompletionYear}</dd>
         <dt>Numero de pisos</dt>
         <dd>{MidtownParkResidences.numberOfFloors}</dd>
@@ -36,38 +36,38 @@ MidtownParkResidences.caracteristicas = {
       <ul>
         <li>
           Amplios estudios de concepto abierto, completamente terminados,
-          residencias de una y dos habitaciones, con alturas de techo de mÁs de
+          residencias de una y dos habitaciones, con alturas de techo de mÃ¡s de
           9 pies
         </li>
         <li>
-          Colección privada de residencias tipo penthouse con salas de estar en
-          esquina de doble altura y techos de 20 pies, diseños de cuatro y cinco
+          ColecciÃ³n privada de residencias tipo penthouse con salas de estar en
+          esquina de doble altura y techos de 20 pies, diseÃ±os de cuatro y cinco
           habitaciones, terrazas en la azotea, jardines y piscinas privadas.
         </li>
         <li>
-          Balcones privados envolventes de gran tamaño con pisos terminados y
+          Balcones privados envolventes de gran tamaÃ±o con pisos terminados y
           barandillas de vidrio.
         </li>
         <li>
           Ventanas y puertas corredizas de piso a techo tintadas, resistentes a
-          impactos y de bajo consumo energético
+          impactos y de bajo consumo energÃ©tico
         </li>
         <li>
           Pisos de porcelanato de madera importada en todas las residencias.
         </li>
         <li>
-          Cocinas diseñadas por Meyer Davis Studio con gabinetes italianos,
-          encimeras de cuarzo importadas y detalles de tiradores de latón con
-          electrodomésticos Sub-Zero Wolf integrados y grifos Hansgrohe.
+          Cocinas diseÃ±adas por Meyer Davis Studio con gabinetes italianos,
+          encimeras de cuarzo importadas y detalles de tiradores de latÃ³n con
+          electrodomÃ©sticos Sub-Zero Wolf integrados y grifos Hansgrohe.
         </li>
         <li>
-          Baños principales con duchas dobles con mampara de vidrio, accesorios
-          de latón Hansgrohe y paredes de cer?mica Jade exclusivas diseñadas por
+          BaÃ±os principales con duchas dobles con mampara de vidrio, accesorios
+          de latÃ³n Hansgrohe y paredes de cerÃ¡mica Jade exclusivas diseÃ±adas por
           Meyer Davis Studio
         </li>
         <li>
-          Las residencias de tres habitaciones y de colección privada incluyen
-          lavanderías completas, baños de Proper y bañeras independientes.
+          Las residencias de tres habitaciones y de colecciÃ³n privada incluyen
+          lavanderÃ­as completas, baÃ±os de Proper y baÃ±eras independientes.
         </li>
       </ul>
     </>
@@ -75,10 +75,10 @@ MidtownParkResidences.caracteristicas = {
   amenidades: (
     <ul>
       <li>
-        Impresionante vestíbulo y espacio de galería de 5.000 pies cuadrados
-        repleto de arte, diseñado por Meyer Davis Studio, con un espectacular
-        techo de 16 pies, una recepción escultural con servicio de conserjería
-        las 24 horas, los 7 días de la semana, y 150 pies de frente de vidrio
+        Impresionante vestÃ­bulo y espacio de galerÃ­a de 5.000 pies cuadrados
+        repleto de arte, diseÃ±ado por Meyer Davis Studio, con un espectacular
+        techo de 16 pies, una recepciÃ³n escultural con servicio de conserjerÃ­a
+        las 24 horas, los 7 dÃ­as de la semana, y 150 pies de frente de vidrio
         con vista a Midtown Boulevard, East Park y los paseos.
       </li>
       <li>
@@ -86,32 +86,32 @@ MidtownParkResidences.caracteristicas = {
         entrega.
       </li>
       <li>
-        La cafetería de la planta baja junto al vestíbulo ofrece un lugar para
-        recargar energías por la mañana con café y pasteles antes de dirigirse
+        La cafeterÃ­a de la planta baja junto al vestÃ­bulo ofrece un lugar para
+        recargar energÃ­as por la maÃ±ana con cafÃ© y pasteles antes de dirigirse
         al vecindario.
       </li>
       <li>
-        Puerta cochera de llegada frente al East Park con estación de valet
+        Puerta cochera de llegada frente al East Park con estaciÃ³n de valet
         parking y acceso a la variedad de boutiques, restaurantes gourmet y
-        cafés de Midtown Park.
+        cafÃ©s de Midtown Park.
       </li>
 
       <li>
         Sala East Lounge con cocina de chef, televisores de pantalla grande,
-        asientos cómodos y conexión a terrazas al aire libre.
+        asientos cÃ³modos y conexiÃ³n a terrazas al aire libre.
       </li>
-      <li>Salón de eventos para reuniones familiares íntimas y eventos.</li>
+      <li>SalÃ³n de eventos para reuniones familiares Ã­ntimas y eventos.</li>
       <li>
-        Salón de negocios y coworking con mostradores de café, pasteles y jugos
+        SalÃ³n de negocios y coworking con mostradores de cafÃ©, pasteles y jugos
         naturales.
       </li>
-      <li>Sala de juegos para niños junto a la piscina.</li>
+      <li>Sala de juegos para niÃ±os junto a la piscina.</li>
       <li>
-        Gimnasio de 3.000 pies cuadrados y sala de pilates con equipos de última
-        generación
+        Gimnasio de 3.000 pies cuadrados y sala de pilates con equipos de Ãºltima
+        generaciÃ³n
       </li>
       <li>
-        Spa, vestuarios, baño de vapor, sauna y conexión a terrazas exteriores.
+        Spa, vestuarios, baÃ±o de vapor, sauna y conexiÃ³n a terrazas exteriores.
       </li>
       <li>Golf virtual y sala de proyecciones.</li>
 
@@ -122,22 +122,22 @@ MidtownParkResidences.caracteristicas = {
       </li>
       <li>
         Un calendario completo de reuniones sociales, fitness, bienestar y mucho
-        mÁs.
+        mÃ¡s.
       </li>
       <li>
         Servicios a domicilio a pedido, como entrega de comestibles, catering,
-        servicio culinario personalizado, limpieza, servicio de lavandería y
-        mÁs.
+        servicio culinario personalizado, limpieza, servicio de lavanderÃ­a y
+        mÃ¡s.
       </li>
       <li>
-        Servicios mientras estÁ fuera, incluido el cuidado de mascotas, cuidado
+        Servicios mientras estÃ¡ fuera, incluido el cuidado de mascotas, cuidado
         de plantas y mantenimiento de rutina del hogar*
       </li>
       <li>Masajes a la carta y tratamientos de spa.</li>
       <li>Entrenamiento personalizado y clases de yoga.</li>
       <li>
         Servicios de chef gourmet para organizar cenas privadas y eventos en el
-        séptimo piso.
+        sÃ©ptimo piso.
       </li>
       <li>
         Como propietario de una residencia adecuada, usted forma parte de una
@@ -150,11 +150,11 @@ MidtownParkResidences.caracteristicas = {
         Hospitality.
       </li>
       <li>
-        Reconocimiento VIP con cortesías personalizadas durante toda su estancia
+        Reconocimiento VIP con cortesÃ­as personalizadas durante toda su estancia
       </li>
       <li>
         Acceso exclusivo a Proper Presents: nuestra serie de eventos culturales
-        exclusivos a los que solo se puede asistir con invitación
+        exclusivos a los que solo se puede asistir con invitaciÃ³n
       </li>
     </ul>
   ),

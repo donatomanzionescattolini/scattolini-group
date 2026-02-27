@@ -22,11 +22,11 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
             <>
                 <ul>
                     <li>
-                        Vistas directas a la bahía o a la ciudad desde cada residencia
+                        Vistas directas a la bahÃ­a o a la ciudad desde cada residencia
                     </li>
-                    <li>Residencias de la Torre Sur con vistas de 270°</li>
-                    <li>Residencias East Bay y Tower con vistas de 180°</li>
-                    <li>Balcones de 10' de profundidad frente a la bahía</li>
+                    <li>Residencias de la Torre Sur con vistas de 270Â°</li>
+                    <li>Residencias East Bay y Tower con vistas de 180Â°</li>
+                    <li>Balcones de 10' de profundidad frente a la bahÃ­a</li>
                     <li>Balcones de 8' de profundidad frente a la ciudad</li>
                     <li>Acristalamiento de piso a techo en todas las residencias</li>
                     <li>Vestidores</li>
@@ -41,7 +41,7 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                         Tocadores y baños para él y para ella en las residencias de la
                         Torre Este y Sur
                     </li>
-                    <li>MÁrmol de piso a techo, incluido el zócalo de mÁrmol</li>
+                    <li>MÃ¡rmol de piso a techo, incluido el zócalo de mÃ¡rmol</li>
                     <li>
                         Cabezales de ducha dobles en residencias de la Torre Este y Sur
                     </li>
@@ -49,13 +49,13 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <br/>
                     <strong>Cocina</strong>
                     <br/>
-                    <li>Electrodom?sticos de primera línea que incluyen:</li>
+                    <li>Electrodomésticos de primera lÃ­nea que incluyen:</li>
                     <li>Microonda</li>
                     <li>Enfriador de vino</li>
                     <li>Estufa</li>
                     <li>Nevera y congelador grandes de lado a lado</li>
                     <li>Zona lavavajillas</li>
-                    <li>Despensa extraíble</li>
+                    <li>Despensa extraÃ­ble</li>
                     <li>Campana sobre la estufa</li>
                     <li>Triturador</li>
                 </ul>
@@ -69,14 +69,14 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <br/>
                     <p>
                         En el quinto y el sexto piso de la torre, los servicios incluyen
-                        un espacio de descanso frente a la bahía con una piscina con
+                        un espacio de descanso frente a la bahÃ­a con una piscina con
                         vista al mar, una sala de entretenimiento, un salón de belleza,
                         una sala de juegos para niños, un spa para mascotas, un amplio
-                        gimnasio con vista a la bahía y uno de los spas m?s grandes de
+                        gimnasio con vista a la bahÃ­a y uno de los spas mÃ¡s grandes de
                         Miami, exclusivo para los residentes. Un puente exterior que
                         comunica el conjunto de servicios techados del sexto piso con la
                         solana de paso de la piscina, que incluye cabanas, una piscina
-                        olímpica, piscina lounge, opciones acu?ticas para los ni?os y
+                        olÃ­mpica, piscina lounge, opciones acuÃ¡ticas para los niños y
                         una cancha de tenis.
                     </p>
                     <br/>
@@ -87,13 +87,13 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <br/>
                     <li>Servicio de valet parking</li>
                     <li>
-                        Terraza exterior junto a la bahía para uso exclusivo de los
+                        Terraza exterior junto a la bahÃ­a para uso exclusivo de los
                         residentes y sus invitados
                     </li>
                     <li>Camino peatonal a lo largo del agua.</li>
                     <li>Conserje personal y atención en la recepción 24 horas</li>
-                    <li>Habitaci?n para entrega de paquetería</li>
-                    <li>Sal?n interior junto a la bahía</li>
+                    <li>Habitación para entrega de paqueterÃ­a</li>
+                    <li>Salón interior junto a la bahÃ­a</li>
                     <br/>
                     <strong>Quinto Piso</strong>
                     <br/>
@@ -112,28 +112,28 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                         Puente exterior que conecta las amenidades del edificio del
                         sexto piso con la terraza de la piscina
                     </li>
-                    <li>Piscina de dimensi?n olímpica</li>
+                    <li>Piscina de dimensión olÃ­mpica</li>
                     <li>Piscina en el lounge</li>
                     <li>Spa de hidromasaje al aire libre</li>
                     <li>Tumbonas junto a la piscina</li>
                     <li>Chapoteadero para niños</li>
-                    <li>Área de c?sped para ni?os</li>
+                    <li>Ãrea de césped para niños</li>
                     <li>Bar y parrilla exterior</li>
                     <li>Dos salones junto a la piscina exclusivos para residentes</li>
                     <li>
-                        Vestidores para hombres y mujeres ⬢ Cancha de tenis elevada
+                        Vestidores para hombres y mujeres â€¢ Cancha de tenis elevada
                     </li>
                     <br/>
                     <strong>Séptimo Piso, Amenidades Techadas</strong>
                     <li>
-                        Cubierta exterior que envuelve al edificio con múltiples ?reas
+                        Cubierta exterior que envuelve al edificio con mÃºltiples Ã¡reas
                         de descanso
                     </li>
                     <li>
-                        Terraza junto a la bahía con piscina volada y vista a la bahía
+                        Terraza junto a la bahÃ­a con piscina volada y vista a la bahÃ­a
                     </li>
                     <li>
-                        Sal?n interior con terraza en la bahía y techo de doble altura
+                        Salón interior con terraza en la bahÃ­a y techo de doble altura
                     </li>
                     <li>
                         Sala de juegos para residentes con mesa de billar, bar, gran
@@ -144,7 +144,7 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <strong>Séptimo Piso</strong>
                     <br/>
                     <li>
-                        Gimnasio de 3,208 pies cuadrados con vistas de 180 ° de la bahía
+                        Gimnasio de 3,208 pies cuadrados con vistas de 180 Â° de la bahÃ­a
                     </li>
                     <li>Estudio de yoga privado</li>
                     <li>Estudio para entrenamiento privado</li>
@@ -158,23 +158,23 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     <strong>Piscinas</strong>
                     <br/>
                     <li>
-                        Los servicios acuÁticos de los condominios de lujo de Missoni
+                        Los servicios acuÃ¡ticos de los condominios de lujo de Missoni
                         Baia ofrecen oportunidades para actividades tanto recreativas
                         como deportivas.
                     </li>
 
                     <li>
-                        Terraza frente a la bahía: Una espectacular piscina volada con
+                        Terraza frente a la bahÃ­a: Una espectacular piscina volada con
                         vista a Downtown Miami y a Biscayne Bay.
                     </li>
 
                     <li>
-                        Piscina junto a la bahía: En la terraza frontal, hay una piscina
+                        Piscina junto a la bahÃ­a: En la terraza frontal, hay una piscina
                         con vista a Biscayne Bay.
                     </li>
 
                     <li>
-                        Piscina olímpica: Una piscina de longitud olímpica que ofrece la
+                        Piscina olÃ­mpica: Una piscina de longitud olÃ­mpica que ofrece la
                         oportunidad de un entrenamiento atlético serio.
                     </li>
                     <br/>
@@ -188,14 +188,14 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     </li>
                     <br/>
                     <li>
-                        M?s all? del gimnasio, la cancha de tenis y las múltiples
+                        MÃ¡s allÃ¡ del gimnasio, la cancha de tenis y las mÃºltiples
                         piscinas, estas residencias de lujo ofrecen exclusivo para sus
-                        residentes, uno de los spas mÁs grandes y lujosos de Miami.
+                        residentes, uno de los spas mÃ¡s grandes y lujosos de Miami.
                         Concebido por los diseñadores de Aman con interiores por Paris
-                        Forino, sus características inigualables incluyen elegantes
+                        Forino, sus caracterÃ­sticas inigualables incluyen elegantes
                         salas interiores para masajes, duchas de vapor, saunas,
                         vestidores, terrazas exteriores para masajes con vistas
-                        espectaculares de Biscayne Bay y la línea del horizonte de
+                        espectaculares de Biscayne Bay y la lÃ­nea del horizonte de
                         Miami.
                     </li>
                     <br/>
@@ -213,44 +213,44 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                         Miami. Diseñado con una paleta serena y sofisticada, el spa
                         cuenta con salas privadas para masajes, duchas y terrazas
                         exteriores para masajes y tratamientos con una vista
-                        espectacular de Biscayne Bay y la línea del horizonte de Miami.
+                        espectacular de Biscayne Bay y la lÃ­nea del horizonte de Miami.
                     </li>
                     <br/>
                     <br/>
                     <li>
                         Gimnasio: un gimnasio moderno y vanguardista de 1,700 pies
-                        cuadrados que ofrece una vista de180° de Biscayne Bay.
+                        cuadrados que ofrece una vista de180Â° de Biscayne Bay.
                     </li>
                     <br/>
                     <strong>Espacios Familiares</strong>
                     <br/>
                     <li>
-                        M?s all? de gimnasio, cancha de tenis y las múltiples piscinas,
+                        MÃ¡s allÃ¡ de gimnasio, cancha de tenis y las mÃºltiples piscinas,
                         este lujoso condominio ofrece un amplio spa exclusivo para sus
-                        residentes, el cual es uno de los spas mÁs grandes y lujosos de
+                        residentes, el cual es uno de los spas mÃ¡s grandes y lujosos de
                         Miami. Concebido por los diseñadores de Aman y con interiores de
-                        Paris Forino, sus características inigualables incluyen
+                        Paris Forino, sus caracterÃ­sticas inigualables incluyen
                         elegantes salas para masajes, duchas de vapor, saunas,
                         vestidores, terrazas para tratamientos con vistas espectaculares
                         de Biscayne Bay y el horizonte de Miami.
                     </li>
                     <br/>
-                    <strong>Children"s Playroom</strong>
+                    <strong>Childrenâ€™s Playroom</strong>
                     <br/>
                     <li>
-                        Club para ni?os: una sala de juegos única en su clase con vista
+                        Club para niños: una sala de juegos Ãºnica en su clase con vista
                         a Biscayne Bay celebra el gusto de Missoni por la familia y
-                        refleja la estética colorida y la sensibilidad fantÁstica del
+                        refleja la estética colorida y la sensibilidad fantÃ¡stica del
                         hogar de la propia Angela Missoni; con casas de muñecas vestidas
-                        de telas estampadas de Missoni y detalles lúdicos como banquitos
-                        de duendes de jardín y adornos de mariposas originales de
+                        de telas estampadas de Missoni y detalles lÃºdicos como banquitos
+                        de duendes de jardÃ­n y adornos de mariposas originales de
                         Missoni en las paredes.
                     </li>
                     <br/>
-                    <strong>Miami Luxury Condos: Kids" Fountains</strong>
+                    <strong>Miami Luxury Condos: Kidsâ€™ Fountains</strong>
                     <br/>
                     <li>
-                        Área de juegos para ni?os: un ?rea de juegos acu?ticos
+                        Ãrea de juegos para niños: un Ã¡rea de juegos acuÃ¡ticos
                         encantadora, diseñada especialmente para niños.
                     </li>
                 </ul>

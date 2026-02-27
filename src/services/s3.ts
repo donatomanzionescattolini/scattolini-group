@@ -2,6 +2,7 @@ import { S3Client, PutObjectCommand, ListObjectsV2Command, DeleteObjectCommand }
 
 const BUCKET_NAME = "pagina-mama";
 const ASSETS_PREFIX = "assets2/desarrollos";
+const AREAS_PREFIX = "assets2/areas";
 
 // S3 client configuration - credentials should be set via environment variables
 const s3Client = new S3Client({
@@ -17,6 +18,7 @@ export const VALID_FILE_TYPES = {
   pdfs: ["brochure.pdf", "hoja.pdf", "planos.pdf"],
   video: ["video.mp4"],
   banner: ["banner.jpg"],
+  thumbnail: ["thumbnail.webp"],
   gallery: /^image \(\d+\)\.jpg$/i,
 } as const;
 
@@ -31,7 +33,7 @@ export interface MediaFile {
   key: string;
   name: string;
   url: string;
-  type: "pdf" | "video" | "banner" | "gallery";
+  type: "pdf" | "video" | "banner" | "gallery" | "thumbnail";
   size?: number;
   lastModified?: Date;
 }
@@ -39,7 +41,7 @@ export interface MediaFile {
 /**
  * Validates if a file has a correct name based on its type
  */
-export function validateFileName(fileName: string, fileType: "pdf" | "video" | "banner" | "gallery"): { valid: boolean; error?: string } {
+export function validateFileName(fileName: string, fileType: "pdf" | "video" | "banner" | "gallery" | "thumbnail"): { valid: boolean; error?: string } {
   const normalizedName = fileName.toLowerCase();
   
   switch (fileType) {
@@ -61,6 +63,12 @@ export function validateFileName(fileName: string, fileType: "pdf" | "video" | "
         return { valid: false, error: "Banner must be named 'banner.jpg'" };
       }
       break;
+    case "thumbnail":
+      // Thumbnail will be renamed automatically, accept any webp
+      if (!normalizedName.endsWith(".webp")) {
+        return { valid: false, error: "Thumbnail must be a .webp file" };
+      }
+      break;
     case "gallery":
       if (!VALID_FILE_TYPES.gallery.test(fileName)) {
         return { 
@@ -79,8 +87,9 @@ export function validateFileName(fileName: string, fileType: "pdf" | "video" | "
  */
 export async function uploadFileToS3(
   file: File,
+  areaName: string,
   desarrolloName: string,
-  fileType: "pdf" | "video" | "banner" | "gallery"
+  fileType: "pdf" | "video" | "banner" | "gallery" | "thumbnail"
 ): Promise<UploadResult> {
   // Validate file name
   const validation = validateFileName(file.name, fileType);
@@ -89,19 +98,25 @@ export async function uploadFileToS3(
   }
 
   // Determine the S3 path based on file type
+  // Path structure: assets2/desarrollos/{areaName}/{desarrolloName}/...
+  // Thumbnail goes to: assets2/areas/{areaName}/{desarrolloName}.webp
   let s3Path: string;
   switch (fileType) {
     case "pdf":
-      s3Path = `${ASSETS_PREFIX}/${desarrolloName}/pdfs/${file.name}`;
+      s3Path = `${ASSETS_PREFIX}/${areaName}/${desarrolloName}/pdfs/${file.name}`;
       break;
     case "video":
-      s3Path = `${ASSETS_PREFIX}/${desarrolloName}/video.mp4`;
+      s3Path = `${ASSETS_PREFIX}/${areaName}/${desarrolloName}/video.mp4`;
       break;
     case "banner":
-      s3Path = `${ASSETS_PREFIX}/${desarrolloName}/banner.jpg`;
+      s3Path = `${ASSETS_PREFIX}/${areaName}/${desarrolloName}/banner.jpg`;
+      break;
+    case "thumbnail":
+      // Thumbnail goes to areas folder with desarrollo name
+      s3Path = `${AREAS_PREFIX}/${areaName}/${desarrolloName}.webp`;
       break;
     case "gallery":
-      s3Path = `${ASSETS_PREFIX}/${desarrolloName}/image-gallery/${file.name}`;
+      s3Path = `${ASSETS_PREFIX}/${areaName}/${desarrolloName}/image-gallery/${file.name}`;
       break;
   }
 
@@ -134,11 +149,12 @@ export async function uploadFileToS3(
 /**
  * List all media files for a desarrollo
  */
-export async function listDesarrolloMedia(desarrolloName: string): Promise<MediaFile[]> {
-  const prefix = `${ASSETS_PREFIX}/${desarrolloName}/`;
+export async function listDesarrolloMedia(areaName: string, desarrolloName: string): Promise<MediaFile[]> {
+  const prefix = `${ASSETS_PREFIX}/${areaName}/${desarrolloName}/`;
   const files: MediaFile[] = [];
 
   try {
+    // List files in the desarrollo folder
     const command = new ListObjectsV2Command({
       Bucket: BUCKET_NAME,
       Prefix: prefix,
@@ -176,6 +192,29 @@ export async function listDesarrolloMedia(desarrolloName: string): Promise<Media
         });
       }
     }
+    
+    // Also check for thumbnail in areas folder
+    const thumbnailKey = `${AREAS_PREFIX}/${areaName}/${desarrolloName}.webp`;
+    const thumbnailCommand = new ListObjectsV2Command({
+      Bucket: BUCKET_NAME,
+      Prefix: thumbnailKey,
+    });
+    
+    const thumbnailResponse = await s3Client.send(thumbnailCommand);
+    if (thumbnailResponse.Contents) {
+      for (const object of thumbnailResponse.Contents) {
+        if (object.Key === thumbnailKey) {
+          files.push({
+            key: object.Key,
+            name: `${desarrolloName}.webp`,
+            url: `https://${BUCKET_NAME}.s3.amazonaws.com/${object.Key}`,
+            type: "thumbnail",
+            size: object.Size,
+            lastModified: object.LastModified,
+          });
+        }
+      }
+    }
   } catch (error) {
     console.error("S3 list error:", error);
   }
@@ -204,16 +243,16 @@ export async function deleteFileFromS3(key: string): Promise<boolean> {
 /**
  * Count gallery images for a desarrollo
  */
-export async function countGalleryImages(desarrolloName: string): Promise<number> {
-  const files = await listDesarrolloMedia(desarrolloName);
+export async function countGalleryImages(areaName: string, desarrolloName: string): Promise<number> {
+  const files = await listDesarrolloMedia(areaName, desarrolloName);
   return files.filter(f => f.type === "gallery").length;
 }
 
 /**
  * Get the next available gallery image number
  */
-export async function getNextGalleryImageNumber(desarrolloName: string): Promise<number> {
-  const files = await listDesarrolloMedia(desarrolloName);
+export async function getNextGalleryImageNumber(areaName: string, desarrolloName: string): Promise<number> {
+  const files = await listDesarrolloMedia(areaName, desarrolloName);
   const galleryFiles = files.filter(f => f.type === "gallery");
   
   let maxNumber = 0;
@@ -233,11 +272,12 @@ export async function getNextGalleryImageNumber(desarrolloName: string): Promise
  */
 export async function uploadGalleryImage(
   file: File,
+  areaName: string,
   desarrolloName: string,
   imageNumber: number
 ): Promise<UploadResult> {
   const newFileName = `image (${imageNumber}).jpg`;
-  const s3Path = `${ASSETS_PREFIX}/${desarrolloName}/image-gallery/${newFileName}`;
+  const s3Path = `${ASSETS_PREFIX}/${areaName}/${desarrolloName}/image-gallery/${newFileName}`;
 
   try {
     const arrayBuffer = await file.arrayBuffer();

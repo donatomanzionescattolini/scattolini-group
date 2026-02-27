@@ -147,10 +147,12 @@ export default function MultiStepWizard({
   const renderField = (fieldName: string) => {
     if (fieldName === 'mediaUpload') {
       const projectName = formData.nombre || 'project-name';
+      const areaName = formData.areaName || formData.area?.name || 'unknown-area';
       
       return (
         <div key={fieldName} className="mb-4">
           <MediaUploadStep 
+            areaName={areaName}
             projectName={projectName}
             onNumberOfImagesChange={handleNumberOfImagesChange}
           />

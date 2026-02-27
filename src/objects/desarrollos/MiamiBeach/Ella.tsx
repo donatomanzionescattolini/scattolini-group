@@ -1,9 +1,10 @@
-﻿import Constructora from "../../../models/constructora/Constructora.tsx";
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Constructora from "../../../models/constructora/Constructora.tsx";
+import Brickell from "../../areas/Brickell.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
 export default function Ella(lang: "en" | "es" = "es") {
-    const EllaObject = new Desarrollo();
+    const EllaObject = new Desarrollo(Brickell());
     EllaObject.estimatedCompletionYear=2026;
     EllaObject.numberOfRooms={start:1,end:2};
     EllaObject.numberOfUnits=95;
@@ -22,9 +23,9 @@ export default function Ella(lang: "en" | "es" = "es") {
         "Meticulously designed, Ella offers exceptional living experiences, meeting the highest standards of contemporary sophistication.",
         "Ella sets a new standard for Miami residential developments with short-term rentals. The renowned Arquitectonica firm developed a bold and modern aesthetic. Its modern and efficient design can be experienced in all amenities and residences. The building offers 95 residences with short-term rentals ranging from 1-bedroom suites to 2-bedrooms, with ocean and bay views, along with luxury interior finishes."
     ] : [
-        "Ella, un tributo a la espléndida historia de Miami Beach, combina la elegancia vintage con líneas contemporáneas, creando una atmósfera conmovedora que captura el espíritu de Miami Beach.",
-        "Meticulosamente diseñada, Ella ofrece experiencias de vida excepcionales, cumpliendo con los más altos estándares de sofisticación contemporánea.",
-        "Ella establece un nuevo estándar para los desarrollos residenciales de Miami con alquileres a corto plazo. La reconocida firma Arquitectonica, desarrolló una estética atrevida y moderna. Su diseño moderno y eficiente se puede experimentar en todas las comodidades y residencias El edificio ofrece 95 residencias con alquileres a corto plazo que van desde suites de 1 dormitorio hasta 2 dormitorios, con vistas al mar y a la bahía, junto con acabados interiores de lujo."
+        "Ella, un tributo a la espléndida historia de Miami Beach, combina la elegancia vintage con lÃ­neas contemporÃ¡neas, creando una atmósfera conmovedora que captura el espÃ­ritu de Miami Beach.",
+        "Meticulosamente diseñada, Ella ofrece experiencias de vida excepcionales, cumpliendo con los mÃ¡s altos estÃ¡ndares de sofisticación contemporÃ¡nea.",
+        "Ella establece un nuevo estÃ¡ndar para los desarrollos residenciales de Miami con alquileres a corto plazo. La reconocida firma Arquitectonica, desarrolló una estética atrevida y moderna. Su diseño moderno y eficiente se puede experimentar en todas las comodidades y residencias El edificio ofrece 95 residencias con alquileres a corto plazo que van desde suites de 1 dormitorio hasta 2 dormitorios, con vistas al mar y a la bahÃ­a, junto con acabados interiores de lujo."
     ];
     EllaObject.amenidades = lang === "en" ? [
         "Rooftop pool overlooking Miami's downtown skyline and the Atlantic Ocean",
@@ -51,18 +52,18 @@ export default function Ella(lang: "en" | "es" = "es") {
         "Covered walkway",
         "Two elevators and loading dock for easy move-in and move-out"
     ] : [
-        "Piscina en la azotea con vistas al horizonte del centro de Miami y al Océano Atlántico",
-        "Inmersión en frío",
+        "Piscina en la azotea con vistas al horizonte del centro de Miami y al Océano AtlÃ¡ntico",
+        "Inmersión en frÃ­o",
         "Sauna",
         "Gimnasio",
-        "Pista de pádel / pickleball",
+        "Pista de pÃ¡del / pickleball",
         "Salón para residentes",
         "Exuberante terraza de yoga y meditación al aire libre",
         "Cocina de verano",
         "Ducha exterior",
         "Plataforma de observación y salón",
         "Comedor cubierto al aire libre",
-        "Cruceros de playa de cortesía",
+        "Cruceros de playa de cortesÃ­a",
         "Salón de coworking",
         "Administración de propiedades in situ",
         "Garaje de estacionamiento en el lugar",
@@ -70,10 +71,10 @@ export default function Ella(lang: "en" | "es" = "es") {
         "Almacenamiento de bicicletas",
         "Almacenamiento de playa y surf",
         "Sala de paquetes",
-        "Gran vestíbulo con salón",
+        "Gran vestÃ­bulo con salón",
         "Venta minorista in situ",
         "Paseo cubierto",
-        "Dos ascensores y muelle de carga con fácil entrada y salida"
+        "Dos ascensores y muelle de carga con fÃ¡cil entrada y salida"
     ];
     EllaObject.residencias = lang === "en" ? [
         "Ocean / bay views",
@@ -93,7 +94,7 @@ export default function Ella(lang: "en" | "es" = "es") {
         "Laufen toilet and sink",
         "Fully furnished residences available from Interiors by Steven G for purchase"
     ] : [
-        "Vistas al mar / bahía",
+        "Vistas al mar / bahÃ­a",
         "Proximidad a la playa",
         "Aproximadamente 9' + alturas de techo",
         "Lavadora/secadora en el apartamento",
@@ -106,7 +107,7 @@ export default function Ella(lang: "en" | "es" = "es") {
         "Garajes para electrodomésticos en residencias selectas",
         "Armarios de diseño",
         "Encimeras de piedra",
-        "Herrajes y accesorios de fontanería de Hansgrohe",
+        "Herrajes y accesorios de fontanerÃ­a de Hansgrohe",
         "Inodoro y lavabo Laufen",
         "Residencias totalmente amuebladas disponibles en Interiors by Steven G para su compra"
     ];
@@ -117,9 +118,10 @@ export default function Ella(lang: "en" | "es" = "es") {
     EllaObject.constructora=new Constructora("Constellation");
     EllaObject.slogan = {
         es: "Un Tributo Al Glamuroso Pasado De Miami Beach",
-        en: "A Tribute to Miami Beach's Glamorous Past"
+        en: "A Tribute To Miami Beach's Glamorous Past"
     };
     EllaObject.numberOfImages = 21;
-    EllaObject.video = <iframe width="555" height="500" className="object-fit-cover" src="https://www.youtube.com/embed/mIbAaxXmKTIautoplay=1"  title="Ella Miami Beach - Airbnb boutique"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>;
+    EllaObject.video = <iframe width="555" height="500" className="object-fit-cover" src="https://www.youtube.com/embed/mIbAaxXmKTI?autoplay=1"  title="Ella Miami Beach - Airbnb boutique"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>;
     return EllaObject;
 }
+

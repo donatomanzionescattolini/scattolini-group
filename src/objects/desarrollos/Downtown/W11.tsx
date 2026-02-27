@@ -10,13 +10,13 @@ export default function W11() {
     W11Object.titulo = "West Eleventh Residences";
     W11Object.slogan = "Lleva la vida a una nueva dirección nunca antes imaginada";
     W11Object.introduccion = [
-        "La vida moderna estÁ en perpetuo movimiento. Siempre estamos encendidos la mudanza. Las residencias en West Eleventh fueron creadas con esa noción en mente. Una experiencia con verdadera flexibilidad de vida para dueños",
+        "La vida moderna estÃ¡ en perpetuo movimiento. Siempre estamos encendidos la mudanza. Las residencias en West Eleventh fueron creadas con esa noción en mente. Una experiencia con verdadera flexibilidad de vida para dueños",
 
-        "West Eleventh Residences ofrece las primeras residencias de condominios de lujo administradas de manera centralizada que brindan a los propietarios la opci?n de hospedar 365 días en Airbnb.",
+        "West Eleventh Residences ofrece las primeras residencias de condominios de lujo administradas de manera centralizada que brindan a los propietarios la opción de hospedar 365 dÃ­as en Airbnb.",
 
         "West Eleventh ha reinventado la propiedad de viviendas en condominios de lujo al brindar una verdadera flexibilidad de vida. Cada residencia completamente amueblada ofrece un lugar al que llamar hogar y la " +
         "oportunidad de ser anfitrión exclusivo en Airbnb.",
-        "Todas las comodidades fueron consideradas en West Eleventh, desde las infinitas indulgencias disponibles en el entretenimiento experiencial de tres niveles y el sal?n culinario hasta un nivel de comodidades vibrante con una piscina estilo centro turístico con ?reas de sal?n privadas. Todo esto, anclado por una presencia callejera que emana naturalmente la energía del emocionante vecindario circundante del edificio.  ",
+        "Todas las comodidades fueron consideradas en West Eleventh, desde las infinitas indulgencias disponibles en el entretenimiento experiencial de tres niveles y el salón culinario hasta un nivel de comodidades vibrante con una piscina estilo centro turÃ­stico con Ã¡reas de salón privadas. Todo esto, anclado por una presencia callejera que emana naturalmente la energÃ­a del emocionante vecindario circundante del edificio.  ",
     ];
     W11Object.caracteristicas = {
         amenidades: <></>,
@@ -30,12 +30,12 @@ export default function W11() {
                         alojamiento
                     </li>
                     <li>
-                        Posibilidad de hospedar 365 días en Airbnb. El alojamiento est?
+                        Posibilidad de hospedar 365 dÃ­as en Airbnb. El alojamiento estÃ¡
                         sujeto a las leyes locales y otras restricciones
                     </li>
                     <li>
-                        Vistas del horizonte de Miami, la Bahía de Biscayne y el Oc?ano
-                        AtlÁntico
+                        Vistas del horizonte de Miami, la BahÃ­a de Biscayne y el Océano
+                        AtlÃ¡ntico
                     </li>
                     <li>
                         30,000 SF Tri-Level Experiential Entertainment and Culinary Hall
@@ -43,13 +43,13 @@ export default function W11() {
                     <li>Restaurante de autor</li>
                     <li>
                         Vibrante nivel de comodidades con una piscina estilo centro
-                        turístico con ?reas de sal?n privadas
+                        turÃ­stico con Ã¡reas de salón privadas
                     </li>
-                    <li>Centro de fitness y bienestar de última generaci?n</li>
-                    <li>Espacio de vestíbulo residencial moderno y de alto dise?o</li>
+                    <li>Centro de fitness y bienestar de Ãºltima generación</li>
+                    <li>Espacio de vestÃ­bulo residencial moderno y de alto diseño</li>
                     <li>Colección curada de instalaciones de arte personalizadas</li>
                     <li>
-                        Cuenta con la última tecnología de "construcci?n inteligente"
+                        Cuenta con la Ãºltima tecnologÃ­a de "construcción inteligente"
                     </li>
                 </ul>
             </>
@@ -63,42 +63,42 @@ export default function W11() {
                     </li>
                     <li>
                         Armarios totalmente empotrados en los dormitorios principales con
-                        todas las estanterías y cajones preinstalados para una comodidad
+                        todas las estanterÃ­as y cajones preinstalados para una comodidad
                         absoluta
                     </li>
                     <li>Tonos personalizados</li>
-                    <li>Construido en lavadora y secadora de primera línea</li>
+                    <li>Construido en lavadora y secadora de primera lÃ­nea</li>
                     <li>
                         Cada residencia ofrece un nivel de eficiencia sin precedentes a
-                        trav?s de una experiencia de tecnología de hogar inteligente PMG
+                        través de una experiencia de tecnologÃ­a de hogar inteligente PMG
                         para una personalización perfecta con solo tocar un botón.
                     </li>
                     <li>
                         Todas las residencias vienen equipadas con un paquete de
-                        iluminación contemporÁneo, que incluye iluminación empotrada,
+                        iluminación contemporÃ¡neo, que incluye iluminación empotrada,
                         atenuadores y control de iluminación.
                     </li>
                     <li>
-                        Precableado para comunicaciones de alta velocidad, múltiples
-                        líneas telef?nicas y cable
+                        Precableado para comunicaciones de alta velocidad, mÃºltiples
+                        lÃ­neas telefónicas y cable
                     </li>
                     <li>Balcones franceses en residencias selectas</li>
                     <li>
                         Cocinas totalmente integradas con encimeras personalizadas,
-                        salpicaduras y un fregadero contemporÁneo de montaje inferior
+                        salpicaduras y un fregadero contemporÃ¡neo de montaje inferior
                     </li>
                     <li>
-                        El paquete de electrodom?sticos de primera línea incluye
+                        El paquete de electrodomésticos de primera lÃ­nea incluye
                         microondas, lavavajillas, horno empotrado y refrigerador
                     </li>
                     <li>
                         Gabinetes de cocina y baño importados y personalizados por
                         Italkraft
                     </li>
-                    <li>Accesorios, características y accesorios de ba?o WaterWorks</li>
+                    <li>Accesorios, caracterÃ­sticas y accesorios de baño WaterWorks</li>
                     <li>
                         Encimeras de baño personalizadas y pisos y paredes terminados en
-                        ?reas húmedas
+                        Ã¡reas hÃºmedas
                     </li>
                     <li>Duchas acristaladas</li>
                 </ul>

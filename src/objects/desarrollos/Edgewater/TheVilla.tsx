@@ -12,7 +12,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
     TheVillaObject.video =
         <iframe
             height="500"
-            src="https://www.youtube.com/embed/tn194BN9-8Uautoplay=1&controls=0"
+            src="https://www.youtube.com/embed/tn194BN9-8U?autoplay=1&controls=0"
             title="Villa Miami Residences (2027) - EdgewaterComponent Miami"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -26,8 +26,8 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 <li>
                     Experiencia de spa inspirada en los spas termales italianos que
                     contiene piscinas de inmersión, salas de vapor y sauna, y un
-                    extenso menú de tratamientosGimnasio espacioso y lleno de luz con
-                    equipos Technogym de última generaci?n y estudios de yoga, pilates
+                    extenso menÃº de tratamientosGimnasio espacioso y lleno de luz con
+                    equipos Technogym de Ãºltima generación y estudios de yoga, pilates
                     y boxeo totalmente equipados
                 </li>
                 <li>
@@ -36,10 +36,10 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     tumbonas
                 </li>
 
-                <li>Club para residentes con biblioteca y salones íntimos</li>
+                <li>Club para residentes con biblioteca y salones Ã­ntimos</li>
                 <li>
                     Sala de juntas y espacios de trabajo privadosSala de
-                    entretenimiento con varias Áreas de juego que incluyen billar,
+                    entretenimiento con varias Ã¡reas de juego que incluyen billar,
                     póquer y tejo
                 </li>
                 <li>Sala de proyecciones y multimediaSalón familiar dedicado</li>
@@ -47,20 +47,20 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 <li>
                     El propio restaurante MFG de la villa, concebido como una
                     experiencia culinaria de inspiración italiana que abarca dos
-                    niveles para incluir cenas frente a la bahía y comedores privados
+                    niveles para incluir cenas frente a la bahÃ­a y comedores privados
                     exclusivos para residentes Alimentos y bebidas seleccionados por
                     MFG en todo el edificio
                 </li>
-                <li>Bar de jugos y cafetería solo para residentes</li>
+                <li>Bar de jugos y cafeterÃ­a solo para residentes</li>
 
                 <li>
                     Servicios de chef privado en casa y clases de cocina Reservas
-                    preferenciales, servicio de conserjería y privilegios de cobro en
-                    todos los restaurantes MFG, así como acceso VIP y prioritario e
+                    preferenciales, servicio de conserjerÃ­a y privilegios de cobro en
+                    todos los restaurantes MFG, asÃ­ como acceso VIP y prioritario e
                     invitaciones a eventos
                 </li>
                 <li>
-                    Cocinas y comedores a pedido, así como catering privado y en el
+                    Cocinas y comedores a pedido, asÃ­ como catering privado y en el
                     lugar por parte de los chefs de MFG Opciones de aprovisionamiento
                     y almacenamiento de comestibles en la residencia Servicio de
                     alimentos y bebidas junto a la piscina
@@ -70,7 +70,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
         edificio: (
             <ul>
                 <li>Pisos: 55</li>
-                <li>Número de unidades: residencias de 3, 4 y 5 dormitorios</li>
+                <li>NÃºmero de unidades: residencias de 3, 4 y 5 dormitorios</li>
                 <li>Ubicación: 700 NE 29th St, Miami, FL 33137</li>
                 <hr className="hr hr-blurry w-50 mx-auto"/>
 
@@ -80,11 +80,11 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     Charles & Co.
                 </li>
                 <li>
-                    Infinitas vistas de 360° del amanecer y el atardecer que abarcan
-                    la bahía, el oc?ano, el centro de Miami y Miami Beach
+                    Infinitas vistas de 360Â° del amanecer y el atardecer que abarcan
+                    la bahÃ­a, el océano, el centro de Miami y Miami Beach
                 </li>
                 <li>
-                    Dise?o ic?nico del edificio que combina un exoesqueleto único de
+                    Diseño icónico del edificio que combina un exoesqueleto Ãºnico de
                     bronce fundido anclado por un podio de servicios de vidrio
                     multifacético inspirado en piedras preciosas
                 </li>
@@ -102,22 +102,22 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 </li>
                 <li>
                     Jardines estilo Piazza conectados con el próximo Miami Baywalk y
-                    el paseo marítimo, con una c?moda accesibilidad a las tiendas y
+                    el paseo marÃ­timo, con una cómoda accesibilidad a las tiendas y
                     restaurantes del Design District
                 </li>
                 <li>Exuberantes jardines privados diseñados por Enzo Enea</li>
-                <li>Fachada de bahía premium que rodea dos lados del edificio</li>
+                <li>Fachada de bahÃ­a premium que rodea dos lados del edificio</li>
                 <li>
                     Embarcación flotante con piscina inspirada en el lago de Como en
-                    la Bahía de Biscayne, junto a la cala
+                    la BahÃ­a de Biscayne, junto a la cala
                 </li>
                 <li>Muelle privado con embarcadero</li>
                 <li>Acceso al helipuerto para llegadas y salidas sin problemas</li>
                 <li>Garaje privado con estaciones de carga eléctrica</li>
                 <li>
                     Un estilo de vida sin fisuras y de siguiente nivel imaginado y
-                    totalmente atendido por el aclamado equipo de MFG. Una filosofía
-                    de opulencia sin límites en la que todas las necesidades se
+                    totalmente atendido por el aclamado equipo de MFG. Una filosofÃ­a
+                    de opulencia sin lÃ­mites en la que todas las necesidades se
                     anticipan y se atienden
                 </li>
                 <li>Administrador de fincas in situ y curador interno</li>
@@ -127,24 +127,24 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 <li>
                     El propio restaurante MFG de la villa, concebido como una
                     experiencia culinaria de inspiración italiana que abarca dos
-                    niveles para incluir cenas frente a la bahía y comedores privados
+                    niveles para incluir cenas frente a la bahÃ­a y comedores privados
                     exclusivos para los residentes
                 </li>
                 <li>MFG seleccionó alimentos y bebidas en todo el edificio</li>
-                <li>Bar de jugos y cafetería solo para residentes</li>
+                <li>Bar de jugos y cafeterÃ­a solo para residentes</li>
                 <li>Servicios de chef privado a domicilio y clases de cocina</li>
                 <li>
-                    Cocinas y comedores bajo demanda, así como catering privado y en
+                    Cocinas y comedores bajo demanda, asÃ­ como catering privado y en
                     el lugar
                 </li>
                 <li>Servicio de alimentos y bebidas junto a la piscina</li>
                 <li>
                     Experiencia de spa inspirada en los spas termales italianos que
                     contiene piscinas de inmersión, salas de vapor y sauna, y un
-                    amplio menú de tratamientos
+                    amplio menÃº de tratamientos
                 </li>
                 <li>
-                    Gimnasio espacioso y lleno de luz con equipos Technogym de última
+                    Gimnasio espacioso y lleno de luz con equipos Technogym de Ãºltima
                     generación y estudios de yoga, pilates y boxeo totalmente
                     equipados
                 </li>
@@ -158,10 +158,10 @@ export default function TheVilla(lang: "en" | "es" = "es") {
             <>
                 <ul>
                     <li>
-                        Vistas panor?micas de la Bahía de Biscayne y el Oc?ano Atl?ntico
+                        Vistas panorÃ¡micas de la BahÃ­a de Biscayne y el Océano AtlÃ¡ntico
                     </li>
                     <li>
-                        Los vestíbulos de entrada se abren a amplios planos de planta
+                        Los vestÃ­bulos de entrada se abren a amplios planos de planta
                         con alturas de techo de 10 a 11 pies
                     </li>
                     <li>
@@ -174,7 +174,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     </li>
                     <li>
                         Elección de pisos de madera o porcelana complementados con
-                        carpintería personalizada para puertas, gabinetes y molduras
+                        carpinterÃ­a personalizada para puertas, gabinetes y molduras
                     </li>
                     <li>
                         Cocinas de chef diseñadas a medida por Mario Carbone para
@@ -195,7 +195,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                         madera y la opción de acabado lacado verde o crema
                     </li>
                     <li>
-                        Despensas con microondas incorporado y estanterías generosas
+                        Despensas con microondas incorporado y estanterÃ­as generosas
                     </li>
                     <li>
                         Carta de materiales complementarios de latón, laca, acero
@@ -203,14 +203,14 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     </li>
                     <li>
                         Refrigeración y almacenamiento de vino incorporados con
-                        estanterías personalizadas y control de temperatura
+                        estanterÃ­as personalizadas y control de temperatura
                     </li>
                     <li>
-                        Amplias suites principales con vistas panorÁmicas, sala de estar
+                        Amplias suites principales con vistas panorÃ¡micas, sala de estar
                         y acceso directo al balcón
                     </li>
                     <li>
-                        Elegantes vestidores de estilo atelier con estanterías y
+                        Elegantes vestidores de estilo atelier con estanterÃ­as y
                         almacenamiento
                     </li>
                     <li>
@@ -220,9 +220,9 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     </li>
                     <li>
                         La bañera de gran tamaño a lo largo de la pared de la ventana
-                        ofrece vistas panorÁmicas del agua
+                        ofrece vistas panorÃ¡micas del agua
                     </li>
-                    <li>Grifería y molduras de ba?o Dornbracht y Duravit</li>
+                    <li>GriferÃ­a y molduras de baño Dornbracht y Duravit</li>
                     <li>Tocadores de madera italiana personalizados</li>
                     <li>
                         Hogar inteligente precableado para preferencias individuales de
@@ -230,21 +230,21 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     </li>
                     <li>
                         Todos los electrodomésticos de cocina de CornuFé, Wolf y
-                        Sub-Zero con electrodom?sticos de lavandería de Electrolux
+                        Sub-Zero con electrodomésticos de lavanderÃ­a de Electrolux
                     </li>
                 </ul>
             </>
         ),
     };
     TheVillaObject.introduccion = [
-        "Las vibrantes vistas a la bahía y la ciudad, combinadas con 55 pisos de espacios indulgentes, definen este exclusivo desarrollo de condominio, compuesto por un total de 70 unidades que van desde 2,939 a 6,143 pies cuadrados. Con opciones de tres a cinco amplias habitaciones, cada detalle arquitect?nico y de dise?o se adapta de forma única para crear un entorno lujoso y sin fisuras para los residentes. El renombrado equipo MFG se dedica a proporcionar un estilo de vida de alto nivel, anticip?ndose y respondiendo a cada necesidad con una filosofía de opulencia sin límites. Prep?rese para sumergirse en una experiencia de primer nivel completamente incomparable.",
+        "Las vibrantes vistas a la bahÃ­a y la ciudad, combinadas con 55 pisos de espacios indulgentes, definen este exclusivo desarrollo de condominio, compuesto por un total de 70 unidades que van desde 2,939 a 6,143 pies cuadrados. Con opciones de tres a cinco amplias habitaciones, cada detalle arquitectónico y de diseño se adapta de forma Ãºnica para crear un entorno lujoso y sin fisuras para los residentes. El renombrado equipo MFG se dedica a proporcionar un estilo de vida de alto nivel, anticipÃ¡ndose y respondiendo a cada necesidad con una filosofÃ­a de opulencia sin lÃ­mites. PrepÃ¡rese para sumergirse en una experiencia de primer nivel completamente incomparable.",
     ];
 
     TheVillaObject.slogan =
         <p className="text-lowercase w-50 mx-auto">
-            <span className="text-capitalize">¡El</span> rascacielos residencial
-            mÁs sorprendente de" "; <span className="text-capitalize">Edgewater, Miami </span>finalmente
-            est? aquí!
+            <span className="text-capitalize">Â¡El</span> rascacielos residencial
+            mÃ¡s sorprendente de" "; <span className="text-capitalize">Edgewater, Miami </span>finalmente
+            estÃ¡ aquÃ­!
             <br></br>
         </p>
     ;

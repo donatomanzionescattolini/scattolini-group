@@ -37,7 +37,7 @@ export default function Quotes(props: Props) {
             indicators={false}
         >
             {props.quotes.map((quote: Quote, idx: number) => (
-                <CarouselItem key={quote.id ?? idx}>
+                <CarouselItem key={`quote-${idx}`}>
       {innerWidth <= 560 && <><br></br><br></br></>}
 
                     <blockquote className="blockquote overflow-visible" style={{overflow: "visible!important"}}>

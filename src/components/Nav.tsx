@@ -19,15 +19,18 @@ const Nav = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const allAreas = useMemo(() => Areas(), []);
+  // Only include areas that have projects to sell
+  const allAreas = useMemo(() => {
+    return Areas().filter((area) => getDesarrollosForArea(area).size > 0);
+  }, []);
   const [filteredAreas, setFilteredAreas] = useState<Array<Area>>(allAreas);
 
   const allDesarrollos = useMemo<Desarrollo[]>(
     () =>
-    Areas()
+    allAreas
       .map((area) => [...getDesarrollosForArea(area)])
-      .reduce((prev, cur) => [...prev, ...cur]),
-    []
+      .reduce((prev, cur) => [...prev, ...cur], []),
+    [allAreas]
   );
 
   const [filteredDesarrollos, setFilteredDesarrollos] =

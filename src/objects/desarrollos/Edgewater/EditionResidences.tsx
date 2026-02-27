@@ -20,36 +20,36 @@ export default function EditionResidences(lang: "en" | "es" = "es") {
             <ul>
                 <li>Director exclusivo de residencias</li>
                 <li>Entrada privada exclusiva para residencias</li>
-                <li>Servicios de conserjería las 24 horas</li>
+                <li>Servicios de conserjerÃ­a las 24 horas</li>
                 <li>Servicios de portero</li>
                 <li>Servicios de botones</li>
                 <li>
                     Periódico,correo,revistas, y entrega de paquetes a su puerta
                 </li>
-                <li>Servicios de recogida y entrega de lavandería y tintorería</li>
+                <li>Servicios de recogida y entrega de lavanderÃ­a y tintorerÃ­a</li>
                 <li>Coordinación de mudanza con la empresa de mudanzas</li>
                 <li>
-                    Asistencia de conserjería con reservas de aerolíneas y vuelos
+                    Asistencia de conserjerÃ­a con reservas de aerolÃ­neas y vuelos
                     privados
                 </li>
                 <li>
-                    Asistencia de conserjería con arreglos de transporte terrestre y
+                    Asistencia de conserjerÃ­a con arreglos de transporte terrestre y
                     al aeropuerto Información y reservas de teatro y entretenimiento
                 </li>
                 <li>
-                    Asistencia de conserjería con reserva de horarios de salida de
+                    Asistencia de conserjerÃ­a con reserva de horarios de salida de
                     golf
                 </li>
                 <li>Organizar el alquiler de electrónica personal</li>
                 <li>
-                    Equipo audiovisual y servicios de secretaría multilingüe. Manejo
-                    de envíos postales locales e internacionales.
+                    Equipo audiovisual y servicios de secretarÃ­a multilingÃ¼e. Manejo
+                    de envÃ­os postales locales e internacionales.
                 </li>
                 <li>
-                    Servicios de envío y embalaje Asistencia de conserjería para
+                    Servicios de envÃ­o y embalaje Asistencia de conserjerÃ­a para
                     organizar servicios de cuidado de niños y niñera Asistencia de
-                    conserjería para organizar paseos de mascotas y servicios de
-                    peluquería
+                    conserjerÃ­a para organizar paseos de mascotas y servicios de
+                    peluquerÃ­a
                 </li>
                 <li>
                     Información y reservas de perreras Llamadas de despertador
@@ -62,12 +62,12 @@ export default function EditionResidences(lang: "en" | "es" = "es") {
                 <li>
                     Acceso prioritario a todas las instalaciones y comodidades del
                     hotel. Reservas de habitaciones con tarifas especiales para
-                    residentes en The Miami Beach EDITION; mejoras de habitaci?n según
-                    disponibilidad Acceso prioritario a todo el espacio público
+                    residentes en The Miami Beach EDITION; mejoras de habitación segÃºn
+                    disponibilidad Acceso prioritario a todo el espacio pÃºblico
                     rentable para eventos privados Acceso a salas de reuniones y
                     centro de negocios Acceso prioritario a restaurantes y bares del
                     hotel Estado de prioridad en reservas de bares y restaurantes del
-                    hotel Acceso a todos los eventos públicos
+                    hotel Acceso a todos los eventos pÃºblicos
                 </li>
                 <li>
                     Eventos especiales y otras comodidades disponibles para los
@@ -83,7 +83,7 @@ export default function EditionResidences(lang: "en" | "es" = "es") {
                     Tienda minorista EDITION (y otras instalaciones de entretenimiento
                     dentro de The MiamiBeach EDITION) Reservas prioritarias para
                     cabañas junto a la piscina tumbonas y sombrillas en la playa y la
-                    piscina. Reservas prioritarias para todos los deportes acuÁticos
+                    piscina. Reservas prioritarias para todos los deportes acuÃ¡ticos
                     recreativos. Acceso al gimnasio. Acceso al spa y servicios de
                     salón. Planificación de eventos especiales. Valet parking y
                     reservas de limusinas.

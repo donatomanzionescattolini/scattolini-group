@@ -12,9 +12,9 @@ import React from "react";export default function CasaBella(lang: "en" | "es" = 
     CasaBellaObject.caracteristicas = {
         edificio: (
             <ul>
-                <li>Número de pisos:</li>
-                <li>Número de unidades: 306</li>
-                <li>Ubicaci?n: 1444 Biscayne Blvd, Miami, FL 33132 ·</li>
+                <li>NÃºmero de pisos:</li>
+                <li>NÃºmero de unidades: 306</li>
+                <li>Ubicación: 1444 Biscayne Blvd, Miami, FL 33132 Â·</li>
                 <li>Habitaciones por unidad: 1-5 dormitorios</li>
             </ul>
         ),
@@ -22,15 +22,15 @@ import React from "react";export default function CasaBella(lang: "en" | "es" = 
             <ul>
                 <li>
                     Todas las residencias cuentan con dos ascensores privados y
-                    vestíbulo privado
+                    vestÃ­bulo privado
                 </li>
                 <li>
-                    Los ascensores estÁn equipados con control de acceso biométrico
+                    Los ascensores estÃ¡n equipados con control de acceso biométrico
                     para mejorar la seguridad
                 </li>
                 <li>
-                    La mayoría de las unidades disfrutan de amplios dise?os de paso
-                    con techos altos de 10 pies y vistas impresionantes de la Bahía de
+                    La mayorÃ­a de las unidades disfrutan de amplios diseños de paso
+                    con techos altos de 10 pies y vistas impresionantes de la BahÃ­a de
                     Biscayne, el horizonte del centro de Miami y las impresionantes
                     puestas de sol desde el oeste
                 </li>
@@ -42,15 +42,15 @@ import React from "react";export default function CasaBella(lang: "en" | "es" = 
                     seleccionados individualmente por Piero Lissoni
                 </li>
                 <li>
-                    El paquete de electrodom?sticos de vidrio negro de primera línea
+                    El paquete de electrodomésticos de vidrio negro de primera lÃ­nea
                     incluye refrigerador / congelador Sub-Zero integrado de 36
                     pulgadas con paneles, microondas de cajón de transición Wolf,
                     lavavajillas silencioso, horno de convección incorporado Wolf,
-                    encimera de vidrio cerÁmico y refrigeración de vino
+                    encimera de vidrio cerÃ¡mico y refrigeración de vino
                 </li>
                 <li>
                     Fregadero de acero inoxidable de gran tamaño de radio cero con
-                    caj?n de grifo extraíble de dise?o europeo de una sola palanca
+                    cajón de grifo extraÃ­ble de diseño europeo de una sola palanca
                 </li>
                 <li>
                     Baños principales diseñados por Piero Lissoni con gabinetes y
@@ -71,10 +71,10 @@ import React from "react";export default function CasaBella(lang: "en" | "es" = 
                     Sala de juegos para niños, con juegos educativos y pizarra
                     inteligente
                 </li>
-                <li>Amplia sala de fiestas con vistas a la bahía de Biscayne</li>
+                <li>Amplia sala de fiestas con vistas a la bahÃ­a de Biscayne</li>
                 <li>cine</li>
                 <li>Sala de vinos</li>
-                <li>Colecci?n de arte de calidad museística</li>
+                <li>Colección de arte de calidad museÃ­stica</li>
                 <li>
                     Centro de negocios totalmente equipado, incluyendo sala de
                     conferencias
@@ -82,7 +82,7 @@ import React from "react";export default function CasaBella(lang: "en" | "es" = 
                 <li>Espacio de coworking con un cómodo salón</li>
                 <li>Spa para mascotas</li>
                 <li>360 Wellness Center incluye:</li>
-                <li>Gimnasio de primer nivel con vistas a la bahía de Biscayne</li>
+                <li>Gimnasio de primer nivel con vistas a la bahÃ­a de Biscayne</li>
                 <li>Sala privada de yoga</li>
                 <li>Sala de spinning</li>
                 <li>

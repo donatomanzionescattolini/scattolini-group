@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { desarrolloMap} from "../objects/desarrollos/Desarrollos.ts";
+import { desarrolloMap, getDesarrollosForArea } from "../objects/desarrollos/Desarrollos.ts";
 import { useTranslation } from "../i18n.tsx";
 
 export default function AreasComponent(): React.ReactElement {
@@ -24,7 +24,30 @@ export default function AreasComponent(): React.ReactElement {
     return field;
   };
 
-  const areas = [...desarrolloMap.values()].map((x: any) => x.area);
+  const allAreas = [...desarrolloMap.values()].map((x: any) => x.area);
+  
+  // Filter to only show areas that have projects
+  const { areasWithProjects, areasWithoutProjects } = useMemo(() => {
+    const withProjects: typeof allAreas = [];
+    const withoutProjects: typeof allAreas = [];
+    
+    allAreas.forEach((area) => {
+      const desarrollos = getDesarrollosForArea(area);
+      if (desarrollos.size > 0) {
+        withProjects.push(area);
+      } else {
+        withoutProjects.push(area);
+      }
+    });
+    
+    return { areasWithProjects: withProjects, areasWithoutProjects: withoutProjects };
+  }, [allAreas]);
+  
+  // Areas without projects (kept for future use):
+  // These areas exist but have no active listings yet
+  // console.log('Areas without projects:', areasWithoutProjects.map(a => a.name));
+  
+  const areas = areasWithProjects;
 
   return (
     <Container>

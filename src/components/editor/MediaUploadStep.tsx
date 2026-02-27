@@ -14,11 +14,12 @@ import {
 import './MediaUploadStep.scss';
 
 interface MediaUploadStepProps {
+  areaName: string;
   projectName: string;
   onNumberOfImagesChange: (count: number) => void;
 }
 
-export default function MediaUploadStep({ projectName, onNumberOfImagesChange }: MediaUploadStepProps) {
+export default function MediaUploadStep({ areaName, projectName, onNumberOfImagesChange }: MediaUploadStepProps) {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
@@ -31,13 +32,15 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
   const pdfInputRef = useRef<HTMLInputElement>(null);
   const videoInputRef = useRef<HTMLInputElement>(null);
   const bannerInputRef = useRef<HTMLInputElement>(null);
+  const thumbnailInputRef = useRef<HTMLInputElement>(null);
 
-  const baseUrl = `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${projectName}`;
+  const baseUrl = `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${areaName}/${projectName}`;
+  const thumbnailUrl = `https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaName}/${projectName}.webp`;
 
   const loadCurrentMedia = useCallback(async () => {
     setLoading(true);
     try {
-      const files = await listDesarrolloMedia(projectName);
+      const files = await listDesarrolloMedia(areaName, projectName);
       setCurrentMedia(files);
       const galleryCount = files.filter(f => f.type === 'gallery').length;
       onNumberOfImagesChange(galleryCount);
@@ -46,7 +49,7 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
     } finally {
       setLoading(false);
     }
-  }, [projectName, onNumberOfImagesChange]);
+  }, [areaName, projectName, onNumberOfImagesChange]);
 
   useEffect(() => {
     if (projectName) {
@@ -68,7 +71,7 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
     setError('');
     setUploadProgress(t('pages.editor.media.uploadingBanner', 'Uploading banner...') as string);
 
-    const result = await uploadFileToS3(file, projectName, 'banner');
+    const result = await uploadFileToS3(file, areaName, projectName, 'banner');
     
     if (result.success) {
       setSuccess(t('pages.editor.media.bannerUploaded', 'Banner uploaded successfully') as string);
@@ -80,6 +83,34 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
     setUploading(false);
     setUploadProgress('');
     if (bannerInputRef.current) bannerInputRef.current.value = '';
+  };
+
+  const handleThumbnailUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    // Validate file type
+    if (!file.name.toLowerCase().endsWith('.webp')) {
+      setError(t('pages.editor.media.thumbnailFormatError', 'Thumbnail must be a .webp file') as string);
+      return;
+    }
+
+    setUploading(true);
+    setError('');
+    setUploadProgress(t('pages.editor.media.uploadingThumbnail', 'Uploading area thumbnail...') as string);
+
+    const result = await uploadFileToS3(file, areaName, projectName, 'thumbnail');
+    
+    if (result.success) {
+      setSuccess(t('pages.editor.media.thumbnailUploaded', 'Area thumbnail uploaded successfully') as string);
+      await loadCurrentMedia();
+    } else {
+      setError(result.error || 'Upload failed');
+    }
+
+    setUploading(false);
+    setUploadProgress('');
+    if (thumbnailInputRef.current) thumbnailInputRef.current.value = '';
   };
 
   const handleVideoUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -96,7 +127,7 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
     setError('');
     setUploadProgress(t('pages.editor.media.uploadingVideo', 'Uploading video...') as string);
 
-    const result = await uploadFileToS3(file, projectName, 'video');
+    const result = await uploadFileToS3(file, areaName, projectName, 'video');
     
     if (result.success) {
       setSuccess(t('pages.editor.media.videoUploaded', 'Video uploaded successfully') as string);
@@ -129,7 +160,7 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
 
       setUploadProgress(`${t('pages.editor.media.uploading', 'Uploading')} ${file.name}... (${i + 1}/${files.length})`);
 
-      const result = await uploadFileToS3(file, projectName, 'pdf');
+      const result = await uploadFileToS3(file, areaName, projectName, 'pdf');
       
       if (!result.success) {
         setError(`${file.name}: ${result.error}`);
@@ -150,7 +181,7 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
     setUploading(true);
     setError('');
 
-    let nextNumber = await getNextGalleryImageNumber(projectName);
+    let nextNumber = await getNextGalleryImageNumber(areaName, projectName);
     let uploadedCount = 0;
 
     for (let i = 0; i < files.length; i++) {
@@ -164,7 +195,7 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
 
       setUploadProgress(`${t('pages.editor.media.uploading', 'Uploading')} image (${nextNumber}).jpg... (${i + 1}/${files.length})`);
 
-      const result = await uploadGalleryImage(file, projectName, nextNumber);
+      const result = await uploadGalleryImage(file, areaName, projectName, nextNumber);
       
       if (result.success) {
         nextNumber++;
@@ -175,7 +206,7 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
     }
 
     if (uploadedCount > 0) {
-      const totalCount = await countGalleryImages(projectName);
+      const totalCount = await countGalleryImages(areaName, projectName);
       onNumberOfImagesChange(totalCount);
       setSuccess(`${uploadedCount} ${t('pages.editor.media.imagesUploaded', 'images uploaded successfully')}`);
     }
@@ -195,7 +226,7 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
     if (success) {
       await loadCurrentMedia();
       if (file.type === 'gallery') {
-        const totalCount = await countGalleryImages(projectName);
+        const totalCount = await countGalleryImages(areaName, projectName);
         onNumberOfImagesChange(totalCount);
       }
     } else {
@@ -283,6 +314,49 @@ export default function MediaUploadStep({ projectName, onNumberOfImagesChange }:
               title="Upload banner image"
             />
             <div className="form-text">{t('pages.editor.media.bannerHelp', 'File must be named "banner.jpg"')}</div>
+          </div>
+        </Card.Body>
+      </Card>
+
+      {/* Area Thumbnail Section */}
+      <Card className="mb-3">
+        <Card.Body>
+          <div className="d-flex justify-content-between align-items-center mb-2">
+            <h6 className="mb-0">
+              <i className="fas fa-th me-2"></i>
+              {t('pages.editor.media.thumbnail', 'Area Thumbnail')}
+            </h6>
+            <Badge bg={getMediaByType('thumbnail').length > 0 ? 'success' : 'secondary'}>
+              {getMediaByType('thumbnail').length > 0 ? '✓' : t('pages.editor.media.missing', 'Missing')}
+            </Badge>
+          </div>
+          <p className="small text-muted mb-2">
+            {t('pages.editor.media.thumbnailInfo', 'This image appears in area listings.')}
+            <br />
+            <code>{thumbnailUrl}</code>
+          </p>
+          
+          {getMediaByType('thumbnail').map(file => (
+            <div key={file.key} className="d-flex align-items-center mb-2 p-2 bg-light rounded">
+              <img src={file.url} alt="Thumbnail preview" className="thumbnail-preview" />
+              <span className="flex-grow-1 small">{file.name} {formatFileSize(file.size)}</span>
+              <Button size="sm" variant="danger" onClick={() => handleDeleteFile(file)}>
+                <i className="fas fa-trash"></i>
+              </Button>
+            </div>
+          ))}
+          
+          <div className="mt-2">
+            <input
+              ref={thumbnailInputRef}
+              type="file"
+              className="form-control form-control-sm"
+              accept="image/webp"
+              onChange={handleThumbnailUpload}
+              disabled={uploading}
+              title="Upload area thumbnail"
+            />
+            <div className="form-text">{t('pages.editor.media.thumbnailHelp', 'Upload a .webp image for area listings')}</div>
           </div>
         </Card.Body>
       </Card>

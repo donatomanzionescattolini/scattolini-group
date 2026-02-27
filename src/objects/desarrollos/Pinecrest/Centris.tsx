@@ -26,23 +26,23 @@ export default function Centris() {
                     <dt>Lote de niños</dt>
 
                     <dd>
-                        El Área de juegos ofrecerÁ horas de diversión al aire libre para
-                        los mÁs pequeños y estÁ convenientemente ubicada junto al Área
+                        El Ã¡rea de juegos ofrecerÃ¡ horas de diversión al aire libre para
+                        los mÃ¡s pequeños y estÃ¡ convenientemente ubicada junto al Ã¡rea
                         de la piscina
                     </dd>
 
                     <dt>Parque</dt>
 
                     <dd>
-                        Un parque ubicado en el centro ofrecerÁ senderos pavimentados y
-                        muchas Áreas verdes, este serÁ el lugar perfecto para los paseos
+                        Un parque ubicado en el centro ofrecerÃ¡ senderos pavimentados y
+                        muchas Ã¡reas verdes, este serÃ¡ el lugar perfecto para los paseos
                         diarios de usted y su amigo peludo.
                     </dd>
 
                     <dt>Piscina</dt>
                     <dd>
                         Flota en un tubo, chapotea y refréscate en la piscina o
-                        simplemente relÁjate mientras preparas el almuerzo en la
+                        simplemente relÃ¡jate mientras preparas el almuerzo en la
                         glorieta de la barbacoa.
                     </dd>
                 </dl>
@@ -51,15 +51,15 @@ export default function Centris() {
         residencias: (
             <>
                 <dl>
-                    <dt>COLECCIÓN DIAMOND (viviendas unifamiliares)</dt>
+                    <dt>COLECCIÃ“N DIAMOND (viviendas unifamiliares)</dt>
 
                     <p>
                         Diamond Collection ofrece cinco diseños de casas de lujo estilo
                         propiedad en la comunidad del plan maestro Centris, que
-                        próximamente llegarÁ a Miami, FL. En el centro de Centris hay
+                        próximamente llegarÃ¡ a Miami, FL. En el centro de Centris hay
                         una piscina comunitaria rodeada por un pabellón, un parque y un
-                        Área de juegos infantiles para uso residencial. Con una
-                        ubicación ideal, los propietarios estÁn a solo minutos de
+                        Ã¡rea de juegos infantiles para uso residencial. Con una
+                        ubicación ideal, los propietarios estÃ¡n a solo minutos de
                         Kendall, Pinecrest y The Falls. Todos ellos albergan las mejores
                         tiendas, restaurantes, entretenimiento y recreación de Florida.
                     </p>
@@ -79,23 +79,25 @@ export default function Centris() {
                     <dt>Modelo de Florencia</dt>
                     <dd> 3,573 pies cuadrados | 5 dormitorios | 4,5 baños</dd>
 
-                    <dt>COLECCIÓN SAPPHIRE (casas adosadas)</dt>
+                    <dd>â€”â€”â€”â€”-</dd>
+
+                    <dt>COLECCIÃ“N SAPPHIRE (casas adosadas)</dt>
                     <dd>
                         <p>
                             The Sapphire Collection ofrece nuevas casas adosadas de lujo a
                             la venta en la comunidad del plan maestro Centris,
                             próximamente en Miami, FL. Perfecto para todo tipo de
-                            familias, los compradores de vivienda tendrÁn la opción de
+                            familias, los compradores de vivienda tendrÃ¡n la opción de
                             elegir entre tres diseños de planos de planta espaciosos. En
                             el centro de Centris hay una piscina comunitaria rodeada por
-                            una glorieta, un parque y un Área de juegos infantiles para
-                            uso residencial. Con una ubicación ideal, esta comunidad estÁ
+                            una glorieta, un parque y un Ã¡rea de juegos infantiles para
+                            uso residencial. Con una ubicación ideal, esta comunidad estÃ¡
                             a solo minutos de Dadeland Mall y The Falls para brindar a los
                             residentes lo mejor en tiendas, restaurantes y
                             entretenimiento.
                         </p>
                         <dl>
-                            <dt>Modelo de CeilÁn</dt>
+                            <dt>Modelo de CeilÃ¡n</dt>
                             <dd> 2,115 pies cuadrados | 3 dormitorios | 2.5 baños</dd>
 
                             <dt>Modelo estrella</dt>
@@ -111,10 +113,11 @@ export default function Centris() {
     };
 
     CentrisObject.introduccion = [
-        "Presentamos CentrisObject, una comunidad de casas adosadas y propiedades de lujo nuevas a la venta en Miami, FL. CentrisObject est? idealmente ubicado en SW 120th Street y 82nd Avenue, cerca de Pinecrest y The Falls, con f?cil acceso a las playas y al centro de Miami. En CentrisObject, los residentes disfrutar?n de entrada con acceso controlado para vehículos, un pabell?n con piscina, ?rea de juegos infantiles y un parque en el coraz?n de la comunidad, y cada casa est? equipada con accesorios y acabados de lujo, todo sin costo adicional.",
+        "Presentamos CentrisObject, una comunidad de casas adosadas y propiedades de lujo nuevas a la venta en Miami, FL. CentrisObject estÃ¡ idealmente ubicado en SW 120th Street y 82nd Avenue, cerca de Pinecrest y The Falls, con fÃ¡cil acceso a las playas y al centro de Miami. En CentrisObject, los residentes disfrutarÃ¡n de entrada con acceso controlado para vehÃ­culos, un pabellón con piscina, Ã¡rea de juegos infantiles y un parque en el corazón de la comunidad, y cada casa estÃ¡ equipada con accesorios y acabados de lujo, todo sin costo adicional.",
     ];
     CentrisObject.titulo = "Centris";
     CentrisObject.slogan = "";
     CentrisObject.numberOfImages = 36;
     return CentrisObject;
 }
+

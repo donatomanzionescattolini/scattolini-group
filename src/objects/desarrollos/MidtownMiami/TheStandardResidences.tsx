@@ -5,7 +5,7 @@ TheStandardResidences.area = MidtownMiami();
 TheStandardResidences.titulo = "The Standard Residences";
 TheStandardResidences.nombre = "the-standard-residences";
 TheStandardResidences.introduccion = [
-  "The Standard Residences cuenta con 12 pisos, con 228 residencias que van desde estudios hasta configuraciones de 2 dormitorios. Este es el primer proyecto residencial de la famosa marca de hoteles, The Standard. Todas las ubicaciones tienen que ver con el ambiente y la experiencia... Disfruta del ambiente y la cultura únicos de la marca como nunca antes. Las comodidades incluyen Internet de alta velocidad, amplio vestíbulo, spa para mascotas, terraza en la azotea con piscina y cabañas, sala de proyección privada, piso social, gimnasio, espacios de trabajo conjunto y m?s. Las residencias est?ndar Midtown Miami est?n a pasos de todo; Midtown es el vecindario m?s amigable para los peatones de Miami, conectado con el Design District en el norte y Wynwood en el sur. Este increíble condominio no solo fue diseñado por la galardonada firma Arquitectonica, sino que también ofrece increíbles vistas de la ciudad.",
+  "The Standard Residences cuenta con 12 pisos, con 228 residencias que van desde estudios hasta configuraciones de 2 dormitorios. Este es el primer proyecto residencial de la famosa marca de hoteles, The Standard. Todas las ubicaciones tienen que ver con el ambiente y la experiencia... Disfruta del ambiente y la cultura Ãºnicos de la marca como nunca antes. Las comodidades incluyen Internet de alta velocidad, amplio vestÃ­bulo, spa para mascotas, terraza en la azotea con piscina y cabaÃ±as, sala de proyecciÃ³n privada, piso social, gimnasio, espacios de trabajo conjunto y mÃ¡s. Las residencias estÃ¡ndar Midtown Miami estÃ¡n a pasos de todo; Midtown es el vecindario mÃ¡s amigable para los peatones de Miami, conectado con el Design District en el norte y Wynwood en el sur. Este increÃ­ble condominio no solo fue diseÃ±ado por la galardonada firma Arquitectonica, sino que tambiÃ©n ofrece increÃ­bles vistas de la ciudad.",
 ];
 TheStandardResidences.numberOfImages = 25;
 TheStandardResidences.direccion = "3100 NE 1st Avenue, Miami, FL 33137";
@@ -19,11 +19,11 @@ TheStandardResidences.caracteristicas = {
   edificio: (
     <>
       <dl>
-        <dt>Año de apertura</dt>
+        <dt>AÃ±o de apertura</dt>
         <dd>{TheStandardResidences.estimatedCompletionYear}</dd>
-        <dt>Número de pisos</dt>
+        <dt>NÃºmero de pisos</dt>
         <dd>{TheStandardResidences.numberOfFloors}</dd>
-        <dt>Número de unidades</dt>
+        <dt>NÃºmero de unidades</dt>
         <dd>{TheStandardResidences.numberOfUnits}</dd>
         <dt>Tipo de unidades</dt>
         <dd>{TheStandardResidences.typeOfUnits}</dd>
@@ -45,38 +45,38 @@ TheStandardResidences.caracteristicas = {
           Ascensores de alta velocidad con acceso controlado a la propiedad.
         </li>
         <li>
-          Programa de alquiler flexible con estadía mínima de 30 días, 12 veces
-          al año
+          Programa de alquiler flexible con estadÃ­a mÃ­nima de 30 dÃ­as, 12 veces
+          al aÃ±o
         </li>
         <li>
           Servicio de Internet de alta velocidad y WiFi en toda la propiedad.
         </li>
         <li>
-          Amplio vestíbulo con techos altos de doble altura y espacios sociales
-          cuidadosamente personalizados, incluido The Standard Café
+          Amplio vestÃ­bulo con techos altos de doble altura y espacios sociales
+          cuidadosamente personalizados, incluido The Standard CafÃ©
         </li>
         <li> Comunidad que admite mascotas con spa de aseo</li>
         <li>
-          Terraza en la azotea estilo centro turístico con jardines tropicales
+          Terraza en la azotea estilo centro turÃ­stico con jardines tropicales
           que cuenta con una piscina de 60 pies de largo, spa con hidromasaje,
-          cabañas junto a la piscina y duchas de lluvia al aire libre.
+          cabaÃ±as junto a la piscina y duchas de lluvia al aire libre.
         </li>
         <li>
-          Restaurante y bar en la azotea de inspiración global con servicio
+          Restaurante y bar en la azotea de inspiraciÃ³n global con servicio
           junto a la piscina y entrega a pedido a residencias
         </li>
         <li>
-          Sala de proyección privada de alta definición con equipos
-          audiovisuales de última generación.
+          Sala de proyecciÃ³n privada de alta definiciÃ³n con equipos
+          audiovisuales de Ãºltima generaciÃ³n.
         </li>
         <li>
-          Piso social vibrante con amplio salón, bar de karaoke y cocina y bar
+          Piso social vibrante con amplio salÃ³n, bar de karaoke y cocina y bar
           gourmet, todos con vista a la cancha de pickleball, ideal para
-          cualquier celebración o reunión.
+          cualquier celebraciÃ³n o reuniÃ³n.
         </li>
         <li>
-          Piso deportivo con gimnasio de última generación totalmente equipado,
-          terraza de yoga al aire libre, estudio de yoga y meditación interior,
+          Piso deportivo con gimnasio de Ãºltima generaciÃ³n totalmente equipado,
+          terraza de yoga al aire libre, estudio de yoga y meditaciÃ³n interior,
           saunas de infrarrojos y cancha de pickleball.
         </li>
         <li>
@@ -84,25 +84,25 @@ TheStandardResidences.caracteristicas = {
           de juntas privada con internet de alta velocidad
         </li>
         <li> Espacios para guardar bicicletas.</li>
-        <li> Vestíbulo atendido las 24 horas y servicios de conserjería.</li>
+        <li> VestÃ­bulo atendido las 24 horas y servicios de conserjerÃ­a.</li>
       </ul>
     </>
   ),
   residencias: (
     <>
   <ul>
-<li>Los acabados instalados a la medida, diseñados por Urban Robot, elevan la experiencia humana y brindan un sentido de pertenencia</li>
-<li>Los elegantes planos de planta abiertos y los techos de nueve pies (2.74 m) de altura invitan el ingreso de la luz natural a través de las puertas corredizas de vidrio enteras </li>
-<li>Las cocinas contempor?neas abiertas con electrodomésticos de primera línea son elegantes y funcionales </li>
-<li>El piso de cer?mica de primera calidad inspirado en madera ofrece una sofisticación atemporal </li>
-<li>Los baños a la medida se destacan por envidiables tocadores dobles y ducha con dos rociadores; todo acentuado por elegantes accesorios en tonos de bronce </li>
+<li>Los acabados instalados a la medida, diseÃ±ados por Urban Robot, elevan la experiencia humana y brindan un sentido de pertenencia</li>
+<li>Los elegantes planos de planta abiertos y los techos de nueve pies (2.74 m) de altura invitan el ingreso de la luz natural a travÃ©s de las puertas corredizas de vidrio enteras </li>
+<li>Las cocinas contemporÃ¡neas abiertas con electrodomÃ©sticos de primera lÃ­nea son elegantes y funcionales </li>
+<li>El piso de cerÃ¡mica de primera calidad inspirado en madera ofrece una sofisticaciÃ³n atemporal </li>
+<li>Los baÃ±os a la medida se destacan por envidiables tocadores dobles y ducha con dos rociadores; todo acentuado por elegantes accesorios en tonos de bronce </li>
 <li>Lavadora y secadora de alta eficiencia </li>
-<li>Las terrazas privadas al aire libre en ciertas residencias se conjugan a la perfección con la energía vibrante de Midtown Miami</li>
+<li>Las terrazas privadas al aire libre en ciertas residencias se conjugan a la perfecciÃ³n con la energÃ­a vibrante de Midtown Miami</li>
 </ul>
     </>
   ),
 };
-TheStandardResidences.slogan = "Un estÁndar superior";
+TheStandardResidences.slogan = "Un estÃ¡ndar superior";
 TheStandardResidences.banner = true;
 
 export default TheStandardResidences;
