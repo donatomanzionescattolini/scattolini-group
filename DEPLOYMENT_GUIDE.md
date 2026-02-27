@@ -115,7 +115,7 @@ When prompted:
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination":"latest"
       }
     ],
     "headers": [
@@ -124,7 +124,7 @@ When prompted:
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=31536000"
+            "value":"latest"
           }
         ]
       }

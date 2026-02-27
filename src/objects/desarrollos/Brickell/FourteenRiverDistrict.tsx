@@ -1,8 +1,7 @@
-import React from "react";
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
-
+import React from "react";
 export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("14-river-district", lang);
     const FourteenRiverDistrictObject = new Desarrollo(Brickell());
@@ -18,9 +17,9 @@ export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
                 <li>Piscina estilo resort y cabañas</li>
                 <li>Amplios centros de coworking</li>
                 <li>Canchas de pickleball cubiertas</li>
-                <li>Gimnasio de última generación</li>
+                <li>Gimnasio de última generaci�n</li>
                 <li>
-                    Amplio salón y área multimedia para reunirse con amigos y
+                    Amplio salón y Área multimedia para reunirse con amigos y
                     relajarse
                 </li>
                 <li>
@@ -42,7 +41,7 @@ export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
                     Duchas de lluvia en baños primarios y tocadores personalizados
                 </li>
                 <li>
-                    Paquetes de iluminación contemporáneos, que incluyen iluminación
+                    Paquetes de iluminación contemporÁneos, que incluyen iluminación
                     empotrada, atenuadores y control de iluminación
                 </li>
                 <li>Techos altos de 8.8'</li>
@@ -58,14 +57,14 @@ export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
         amenidades: (
             <ul>
                 <li>
-                    Los espacios comunes de River District 14 están bellamente
+                    Los espacios comunes de River District 14 estÁn bellamente
                     diseñados con eficiencia y facilidad de acceso. Con su diversa
                     selección de comodidades, River District 14 ofrece oportunidades
                     para socializar, hacer ejercicio, trabajar en equipo o simplemente
                     relajarse.{" "}
                 </li>
                 <li>
-                    Piscina y Cabañas: En un día caluroso, disfrute del patio al aire
+                    Piscina y Caba�as: En un día caluroso, disfrute del patio al aire
                     libre donde puede nadar o cocinar a la parrilla.
                 </li>
                 <li>
@@ -77,13 +76,13 @@ export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
                     disponibles para residentes e invitados.
                 </li>
                 <li>Comodidades</li>
-                <li>Gimnasio de última generación</li>
+                <li>Gimnasio de última generaci�n</li>
                 <li>
                     Manténgase en forma y activo con nuestro gimnasio completamente
                     equipado y canchas de pickleball.
                 </li>
                 <li>
-                    Amplio salón y área multimedia para reunirse con amigos y
+                    Amplio salón y Área multimedia para reunirse con amigos y
                     relajarse.
                 </li>
                 <li>
@@ -98,10 +97,11 @@ export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
         ),
     };
     FourteenRiverDistrictObject.introduccion = getLocalizedArray("introduccion", [
-        "Ubicado en el borde del segundo distrito de salud pública más grande del país y a las puertas del río Miami..."
+        "Ubicado en el borde del segundo distrito de salud pública m�s grande del país y a las puertas del río Miami..."
     ]);
     FourteenRiverDistrictObject.titulo = getLocalizedField("titulo", "14 River District");
     FourteenRiverDistrictObject.slogan = getLocalizedField("slogan", "");
     FourteenRiverDistrictObject.direccion = getLocalizedField("direccion", "1420 NW 14th Ave, Miami, FL 33125, USA");
     return FourteenRiverDistrictObject;
 }
+

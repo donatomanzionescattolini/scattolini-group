@@ -6,12 +6,12 @@ export default function CoconutGrove() {
     coconutGroveObject.name = "coconut-grove";
     coconutGroveObject.titulo = {
         es: "Coconut Grove",
-        en: "Coconut Grove"
+        en:"latest"
     };
     coconutGroveObject.numberOfImages = 14;
     coconutGroveObject.slogan = {
         es: "El Neighborhood Original de Miami",
-        en: "Miami's Original Neighborhood"
+        en:"latest"
     };
     coconutGroveObject.descripcion = {
         es: [

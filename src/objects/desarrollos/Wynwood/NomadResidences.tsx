@@ -1,13 +1,12 @@
+﻿import Wynwood from "../../areas/Wynwood.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo";
-import Wynwood from "../../areas/Wynwood";
-
 export default function NomadResidences() {
 
     const NomadResidencesObject = new Desarrollo(Wynwood());
     NomadResidencesObject.nombre = "nomad-residences";
     NomadResidencesObject.titulo = "Nomad Residences";
-    NomadResidencesObject.slogan = "Carácter individual, un mundo de confort";
-    NomadResidencesObject.introduccion = ["El Nomad Wynwood Residences cuenta con 329 residencias de lujo. Las unidades varían en tamaño desde 478 pies cuadrados hasta 911 pies cuadrados. Fue desarrollado por Related Group, el prestigioso desarrollador detrás de Icon Brickell, SLS Lux, Brickell Heights, Hyde Beach, Baccarat Residences y muchos otros edificios de ultra lujo en el sur de Florida. Diseñado por Arquitectonica y con un elegante diseño interior de Design Agency. Este condominio residencial ubicado en el centro se encuentra en la vibrante área de Wynwood de Miami, Florida. Algunas de las atracciones más importantes son las paredes de Wynwood, las galerías de arte, la alta cocina, las tiendas y los lugares culturales que brindarán a los residentes una experiencia de vida como en ningún otro lugar del sur de la Florida."];
+    NomadResidencesObject.slogan = "CarÁcter individual, un mundo de confort";
+    NomadResidencesObject.introduccion = ["El Nomad Wynwood Residences cuenta con 329 residencias de lujo. Las unidades varían en tama�o desde 478 pies cuadrados hasta 911 pies cuadrados. Fue desarrollado por Related Group, el prestigioso desarrollador detr�s de Icon Brickell, SLS Lux, Brickell Heights, Hyde Beach, Baccarat Residences y muchos otros edificios de ultra lujo en el sur de Florida. Dise�ado por Arquitectonica y con un elegante dise�o interior de Design Agency. Este condominio residencial ubicado en el centro se encuentra en la vibrante �rea de Wynwood de Miami, Florida. Algunas de las atracciones m�s importantes son las paredes de Wynwood, las galerías de arte, la alta cocina, las tiendas y los lugares culturales que brindar�n a los residentes una experiencia de vida como en ningún otro lugar del sur de la Florida."];
     NomadResidencesObject.banner = true;
     NomadResidencesObject.ubicación = "280 NW 27th Street, Miami, FL 33127"
     NomadResidencesObject.numberOfUnits = 329;
@@ -32,7 +31,7 @@ export default function NomadResidences() {
                 <li>Balcones privados en todas las residencias</li>
                 <li>Vestidores espaciosos en la mayoría de las residencias</li>
                 <li>Techos de 9+ pies</li>
-                <li>Cocinas modernas y aerodinámicas con electrodomésticos Bosch</li>
+                <li>Cocinas modernas y aerodinÁmicas con electrodomésticos Bosch</li>
                 <li>Gabinetes importados de diseño italiano</li>
                 <li>Diseños adaptables y abiertos</li>
                 <li>Exquisitas encimeras de piedra</li>
@@ -41,7 +40,7 @@ export default function NomadResidences() {
                 <li>Lavadora y secadora</li>
             </ul></>,
         amenidades: <><ul>
-            <li>Curaduría y diseño NoMad aclamados a nivel mundial</li>
+            <li>Curaduría y dise�o NoMad aclamados a nivel mundial</li>
             <li>Restaurante y bar NoMad en la azotea con ascensor independiente</li>
             <li>Paisajismo inspirado e impecable</li>
             <li>Piscina en la azotea de servicio completo, terraza y cabañas</li>
@@ -65,3 +64,4 @@ export default function NomadResidences() {
     return NomadResidencesObject;
 
 }
+

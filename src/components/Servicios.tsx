@@ -1,14 +1,13 @@
 import {
-    MDBCard,
-    MDBCardBody,
-    MDBCardGroup,
-    MDBCardHeader,
-    MDBCardLink,
-    MDBCardText,
-    MDBCardTitle,
-} from "mdb-react-ui-kit";
-import { useTranslation } from "../i18n.tsx";
-
+    Card,
+    CardBody,
+    CardGroup,
+    CardHeader,
+    CardLink,
+    CardText,
+    CardTitle,
+}     from  "react-bootstrap";
+import { useTranslation } from "../i18n.tsx";      
 export default function Servicios() {
     const { t } = useTranslation();
     return (
@@ -20,85 +19,85 @@ export default function Servicios() {
 
             <br/>
 
-            <MDBCardGroup className="text-center" style={{ "textTransform": "capitalize"}}>
-                <MDBCard className="m-xs-0 m-sm-0 m-md-2 m-lg-2 m-xl-2">
-                    <MDBCardHeader>
-                        <MDBCardTitle>
+            <CardGroup className="text-center" style={{ "textTransform": "capitalize"}}>
+                <Card className="m-xs-0 m-sm-0 m-md-2 m-lg-2 m-xl-2">
+                    <CardHeader>
+                        <CardTitle>
                             <h4>{t("pages.services.advisory")}</h4>
-                        </MDBCardTitle>
-                    </MDBCardHeader>
-                    <MDBCardBody>
-                        <MDBCardText className="text-center">
+                        </CardTitle>
+                    </CardHeader>
+                    <CardBody>
+                        <CardText className="text-center">
                             {t("pages.services.advisoryDesc")}
-                        </MDBCardText>
+                        </CardText>
                         <br/>
-                        <MDBCardLink
+                        <CardLink
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
                             
                         >
                             {t("pages.services.moreInfo")}
-                        </MDBCardLink>
-                    </MDBCardBody>
-                </MDBCard>
+                        </CardLink>
+                    </CardBody>
+                </Card>
 
-                <MDBCard className="m-2">
-                    <MDBCardHeader>
-                        <MDBCardTitle>
+                <Card className="m-2">
+                    <CardHeader>
+                        <CardTitle>
                             <h4>{t("pages.services.propertyManagement")}</h4>
-                        </MDBCardTitle>
-                    </MDBCardHeader>
-                    <MDBCardBody>
-                        <MDBCardText>
+                        </CardTitle>
+                    </CardHeader>
+                    <CardBody>
+                        <CardText>
                             {t("pages.services.propertyManagementDesc")}
-                        </MDBCardText>
+                        </CardText>
                         <br/>
-                        <MDBCardLink
+                        <CardLink
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
                         >
                             {t("pages.services.moreInfo")}
-                        </MDBCardLink>
-                    </MDBCardBody>
-                </MDBCard>
-            </MDBCardGroup>
-            <MDBCardGroup className="text-center">
-                <MDBCard className="m-2">
-                    <MDBCardHeader>
-                        <MDBCardTitle>{t("pages.services.sales")}</MDBCardTitle>
-                    </MDBCardHeader>
-                    <MDBCardBody>
-                        <MDBCardText>
+                        </CardLink>
+                    </CardBody>
+                </Card>
+            </CardGroup>
+            <CardGroup className="text-center">
+                <Card className="m-2">
+                    <CardHeader>
+                        <CardTitle>{t("pages.services.sales")}</CardTitle>
+                    </CardHeader>
+                    <CardBody>
+                        <CardText>
                             {t("pages.services.salesDesc")}
-                        </MDBCardText>
+                        </CardText>
                         <br/>
-                        <MDBCardLink
+                        <CardLink
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
                         >
                             {t("pages.services.moreInfo")}
-                        </MDBCardLink>
-                    </MDBCardBody>
-                </MDBCard>
+                        </CardLink>
+                    </CardBody>
+                </Card>
 
-                <MDBCard className="m-2">
-                    <MDBCardHeader>
-                        <MDBCardTitle>{t("pages.services.purchase")}</MDBCardTitle>
-                    </MDBCardHeader>
-                    <MDBCardBody>
-                        <MDBCardText>
+                <Card className="m-2">
+                    <CardHeader>
+                        <CardTitle>{t("pages.services.purchase")}</CardTitle>
+                    </CardHeader>
+                    <CardBody>
+                        <CardText>
                             {t("pages.services.purchaseDesc")}
-                        </MDBCardText>
+                        </CardText>
                         <br/>
-                        <MDBCardLink
+                        <CardLink
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
                         >
                             {t("pages.services.moreInfo")}
-                        </MDBCardLink>
-                    </MDBCardBody>
-                </MDBCard>
-            </MDBCardGroup>
+                        </CardLink>
+                    </CardBody>
+                </Card>
+            </CardGroup>
         </>
     );
 }

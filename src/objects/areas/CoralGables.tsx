@@ -6,11 +6,11 @@ export default function CoralGables() {
     coralGables.name = "coral-gables";
     coralGables.titulo = {
         es: "Coral Gables",
-        en: "Coral Gables"
+        en:"latest"
     };
     coralGables.slogan = {
         es: "La Ciudad Hermosa",
-        en: "The City Beautiful"
+        en:"latest"
     };
     coralGables.descripcion = {
         es: [

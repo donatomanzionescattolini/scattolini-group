@@ -1,31 +1,31 @@
 import { Route } from "react-router-dom";
+import AreasComponent from "../components/areas/AreasComponent";
+import AventuraComponent from "../components/areas/AventuraComponent";
 import BayHarborComponent from "../components/areas/BayHarborComponent";
 import BrickellComponent from "../components/areas/BrickellComponent";
 import CoconutGroveComponent from "../components/areas/CoconutGroveComponent";
 import CoralGablesComponent from "../components/areas/CoralGablesComponent";
+import DaniaBeachComponent from "../components/areas/DaniaBeachComponent";
 import DoralComponent from "../components/areas/DoralComponent";
 import DowntownComponent from "../components/areas/DowntownComponent";
 import EdgewaterComponent from "../components/areas/EdgewaterComponent";
+import FloridaCityComponent from "../components/areas/FloridaCityComponent";
+import FtLauderdaleComponent from "../components/areas/FtLauderdaleComponent";
+import HollyWoodComponent from "../components/areas/HollywoodComponent";
 import HomesteadComponent from "../components/areas/HomesteadComponent";
 import MiamiBeachComponent from "../components/areas/MiamiBeachComponent";
-import NorthBayVillageComponent from "../components/areas/NorthBayVillageComponent";
-import PinecrestComponent from "../components/areas/PinecrestComponent";
-import SunnyIslesComponent from "../components/areas/SunnyIslesComponent";
-import React from "react";
-import FloridaCityComponent from "../components/areas/FloridaCityComponent";
-import SouthMiamiComponent from "../components/areas/SouthMiamiComponent";
-import FtLauderdaleComponent from "../components/areas/FtLauderdaleComponent";
-import WynwoodCoponent from "../components/areas/WynwoodComponent";
-import AventuraComponent from "../components/areas/AventuraComponent";
-import PembrokePinesComponent from "../components/areas/PembrokePinesComponent";
-import HollyWoodComponent from "../components/areas/HollywoodComponent";
-import DaniaBeachComponent from "../components/areas/DaniaBeachComponent";
-import PompanoBeachComponent from "../components/areas/PompanoBeachComponent";
 import MidtownMiamiProject from "../components/areas/MidtownMiamiProject";
-
+import NorthBayVillageComponent from "../components/areas/NorthBayVillageComponent";
+import PembrokePinesComponent from "../components/areas/PembrokePinesComponent";
+import PinecrestComponent from "../components/areas/PinecrestComponent";
+import PompanoBeachComponent from "../components/areas/PompanoBeachComponent";
+import SouthMiamiComponent from "../components/areas/SouthMiamiComponent";
+import SunnyIslesComponent from "../components/areas/SunnyIslesComponent";
+import WynwoodCoponent from "../components/areas/WynwoodComponent";
 export default function AreasRoutes() {
   return (
-    <React.Fragment>
+    <>
+      <Route element={<AreasComponent />} path="/areas" />
       <Route element={<BrickellComponent />} path="/areas/brickell" />
       <Route element={<DowntownComponent />} path="/areas/downtown" />
       <Route element={<HomesteadComponent />} path="/areas/homestead" />
@@ -47,7 +47,7 @@ export default function AreasRoutes() {
       <Route
         element={<MiamiBeachComponent />}
         path="/areas/miami-beach"
-      ></Route>
+      />
       <Route
         element={<FtLauderdaleComponent />}
         path={"/areas/ft-lauderdale"}
@@ -70,6 +70,6 @@ export default function AreasRoutes() {
       <Route element={<HollyWoodComponent />} path="/areas/hollywood" />
       <Route element={<DaniaBeachComponent />} path="/areas/dania-beach" />
       <Route element={<MidtownMiamiProject />} path="/areas/midtown-miami" />
-    </React.Fragment>
+    </>
   );
 }

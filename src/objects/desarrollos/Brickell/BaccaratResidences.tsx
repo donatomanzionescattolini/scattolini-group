@@ -1,8 +1,6 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Brickell from "../../areas/Brickell.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
-
+import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 export default function BaccaratResidences(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("baccarat", lang);
 
@@ -11,7 +9,7 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
     baccaratResidencesObject.area = Brickell();
 
     baccaratResidencesObject.nombre = "baccarat";
-    baccaratResidencesObject.video = <div className={"video-container container-fluid justify-content-center"}><div style={{"padding":"56.25% 0 0 0",position:"relative"}}><iframe src="https://player.vimeo.com/video/725808410?h=2dd1afbdd4&autoplay=1&loop=1&title=0&byline=0&portrait=0" style={{"position":"absolute",top:0,left:0,width:"100%",height:"100%"}}frameBorder={0} allow={"autoplay; fullscreen; picture-in-picture"} allowFullScreen/></div><script src="https://player.vimeo.com/api/player.js"/></div>;
+    baccaratResidencesObject.video = <div className={"video-container container-fluid justify-content-center"}><div style={{"padding":"56.25% 0 0 0",position:"relative"}}><iframe src="https://player.vimeo.com/video/725808410h=2dd1afbdd4&autoplay=1&loop=1&title=0&byline=0&portrait=0" style={{"position":"absolute",top:0,left:0,width:"100%",height:"100%"}}frameBorder={0} allow={"autoplay; fullscreen; picture-in-picture"} allowFullScreen/></div><script src="https://player.vimeo.com/api/player.js"/></div>;
     baccaratResidencesObject.caracteristicas = {
         edificio: (
             <ul>
@@ -24,7 +22,7 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
                 <li>
                     Amenidades elevadas del nivel 12 cubierta del complejo cargada con
                     una espectacular piscina salina climatizada de entrada cero, spa
-                    al aire libre, cabañas junto a la piscina, área de cocina de
+                    al aire libre, cabañas junto a la piscina, Área de cocina de
                     verano y terraza bellamente ajardinada
                 </li>
                 <li>
@@ -36,9 +34,9 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
                     instalaciones multimedia
                 </li>
                 <li>
-                    Gimnasio totalmente equipado de última generación curado por
+                    Gimnasio totalmente equipado de última generaci�n curado por
                     Altitude Fitness con teatro cardiovascular, sala de spinning,
-                    salas de yoga y meditación, todas con vista al área del complejo
+                    salas de yoga y meditación, todas con vista al Área del complejo
                     de la cubierta de la piscina
                 </li>
                 <li>
@@ -58,7 +56,7 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
                     de trabajo privados
                 </li>
                 <li>Bodega y sala de degustación</li>
-                <li>Estaciones de carga de vehículos eléctricos</li>
+                <li>Estaciones de carga de vehículos el�ctricos</li>
                 <li>Espacios para guardar bicicletas</li>
                 <li>
                     Conserje muy atento, con correo conveniente y mostrador de
@@ -76,9 +74,9 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
                     de plantas y mantenimiento fuera del hogar
                 </li>
                 <li>
-                    Puerto deportivo privado con atraque de más de 300 pies lineales
+                    Puerto deportivo privado con atraque de mÁs de 300 pies lineales
                     con yate residente para servicios de reserva a pedido y taxi
-                    acuático privado
+                    acuÁtico privado
                 </li>
                 <li>Membresía del Beach Club a 1 Hotel South Beach</li>
             </ul>
@@ -86,8 +84,8 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
         residencias: (
             <ul>
                 <li>
-                    Planos de planta contemporáneos de concepto abierto y fluidos con
-                    residencias y áticos de una, dos, tres y cuatro habitaciones,
+                    Planos de planta contemporÁneos de concepto abierto y fluidos con
+                    residencias y Áticos de una, dos, tres y cuatro habitaciones,
                     todos ofrecidos con una selección de exquisitos acabados de
                     decoración y listos para su ocupación inmediata
                 </li>
@@ -98,20 +96,20 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
                 </li>
                 <li>
                     Amplias terrazas privadas de ocho pies de profundidad accesibles
-                    desde las áreas de estar y dormitorio principal de cada
+                    desde las Áreas de estar y dormitorio principal de cada
                     residencia, y envuelven terrazas en unidades de esquina, con
-                    barandillas de vidrio para vistas sin obstáculos
+                    barandillas de vidrio para vistas sin obstÁculos
                 </li>
                 <li>
                     Generosos techos altos de diez pies de acabado liso en pisos
-                    típicos que se elevan a once y doce pies en niveles de ático
+                    típicos que se elevan a once y doce pies en niveles de �tico
                 </li>
                 <li>Cocinas gourmet</li>
                 <li>
-                    Electrodomésticos de cocina de primera línea que incluyen:
+                    Electrodom�sticos de cocina de primera línea que incluyen:
                     refrigerador / congelador Sub-Zero con dispensador interno de agua
-                    fría y máquina de hielo, almacenamiento de vino Sub-Zero, estufa
-                    de inducción Wolf, horno contemporáneo y horno de vapor Wolf serie
+                    fría y m�quina de hielo, almacenamiento de vino Sub-Zero, estufa
+                    de inducción Wolf, horno contemporÁneo y horno de vapor Wolf serie
                     M, lavavajillas Cove con gabinetes integrados y campana extractora
                     oculta de velocidad variable
                 </li>
@@ -145,7 +143,7 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
                     cable
                 </li>
                 <li>
-                    Tecnología de interfaz para servicios de construcción como
+                    Tecnología de interfaz para servicios de construcci�n como
                     conserjería, valet, seguridad y servicios en el hogar como audio,
                     video, iluminación, tratamientos de ventanas, Internet y satélite
                 </li>
@@ -153,7 +151,7 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
         ),
         amenidades: (
             <ul>
-                <li>Gimnasio totalmente equipado de última generación</li>
+                <li>Gimnasio totalmente equipado de última generaci�n</li>
                 <li>Puerto deportivo privado</li>
                 <li>Lujosa sala club</li>
                 <li>Sala de proyección privada</li>
@@ -174,7 +172,7 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
                 <li>
                     Amenidades elevadas del nivel 12 cubierta del complejo cargada con
                     una espectacular piscina salina climatizada de entrada cero, spa
-                    al aire libre, cabañas junto a la piscina, área de cocina de
+                    al aire libre, cabañas junto a la piscina, Área de cocina de
                     verano y terraza bellamente ajardinada
                 </li>
                 <li>

@@ -1,6 +1,6 @@
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
 export default function BentleyResidences(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("bentley-residences", lang);
@@ -47,7 +47,7 @@ export default function BentleyResidences(lang: "en" | "es" = "es") {
         amenidades: (
             <>
                 <ul>
-                    <li>Gimnasio de última generación</li>
+                    <li>Gimnasio de última generaci�n</li>
                     <li>Piscina con cabañas</li>
                     <li>Balneario</li>
                     <li>Restaurante</li>
@@ -69,7 +69,7 @@ export default function BentleyResidences(lang: "en" | "es" = "es") {
         <iframe
             width="1280"
             height="720"
-            src="https://www.youtube.com/embed/6FwGK20FXtI?list=TLGGDuU-t1V96uoxNzEwMjAyMw&autoplay=1&controls=0"
+            src="https://www.youtube.com/embed/6FwGK20FXtIlist=TLGGDuU-t1V96uoxNzEwMjAyMw&autoplay=1&controls=0"
             title="Bentley Residences Miami - Lobby"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -84,7 +84,7 @@ export default function BentleyResidences(lang: "en" | "es" = "es") {
         <iframe
             width="1600"
             height="900"
-            src="https://www.youtube.com/embed/RmtuXP6nIiI?list=TLGGweicZODCOb8xMTEyMjAyMw&autoplay=1&controls=0"
+            src="https://www.youtube.com/embed/RmtuXP6nIiIlist=TLGGweicZODCOb8xMTEyMjAyMw&autoplay=1&controls=0"
             title="Bentley Residences Miami - Residences"
             frameBorder={0}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -93,3 +93,4 @@ export default function BentleyResidences(lang: "en" | "es" = "es") {
     );
     return BentleyResidencesObject;
 }
+

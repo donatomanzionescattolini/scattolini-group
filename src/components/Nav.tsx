@@ -94,7 +94,7 @@ const Nav = () => {
           data-target="#navbarCenteredExample"
           aria-controls="navbarCenteredExample"
           aria-expanded="false"
-          aria-label={t("nav.toggleNavigation")}
+          aria-label={String(t("nav.toggleNavigation") || "")}
           onClick={() => setShowNavCentred(!showNavCentred)}
         >
           <div className="d-flex flex-column align-items-top justify-content-center">
@@ -103,7 +103,7 @@ const Nav = () => {
                 <img
                   width="40%"
                   src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
-                  alt={t("nav.logoAlt")}
+                  alt={String(t("nav.logoAlt") || "")}
                 />
               </div>
             )}
@@ -113,12 +113,12 @@ const Nav = () => {
           </div>
         </MDBNavbarToggler>
 
-        <MDBCollapse navbar show={showNavCentred} id="navbarCenteredExample">
+        <MDBCollapse navbar open={showNavCentred} id="navbarCenteredExample">
           <MDBNavbarNav fullWidth={true} className="mb-2 mb-lg-0">
             <MDBNavbarItem>
               <div className="d-flex align-items-center ms-3">
-                <button className={`btn btn-sm ${lang === 'es' ? 'btn-primary' : 'btn-outline-primary'} me-1`} onClick={() => switchLang('es')} aria-label={t("nav.switchToSpanish")}>ES</button>
-                <button className={`btn btn-sm ${lang === 'en' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => switchLang('en')} aria-label={t("nav.switchToEnglish")}>EN</button>
+                <button className={`btn btn-sm ${lang === 'es' ? 'btn-primary' : 'btn-outline-primary'} me-1`} onClick={() => switchLang('es')} aria-label={String(t("nav.switchToSpanish") || "")}>ES</button>
+                <button className={`btn btn-sm ${lang === 'en' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => switchLang('en')} aria-label={String(t("nav.switchToEnglish") || "")}>EN</button>
               </div>
             </MDBNavbarItem>
             <MDBNavbarItem>
@@ -139,7 +139,7 @@ const Nav = () => {
                   <img
                     width={300}
                     src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
-                    alt={t("nav.logoAlt")}
+                    alt={String(t("nav.logoAlt") || "")}
                   />
                 </MDBNavbarBrand>
               </MDBNavbarItem>

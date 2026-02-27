@@ -1,12 +1,13 @@
-import React from 'react'
-import Desarrollo from '../../../models/desarrollos/Desarrollo';
-import Edgewater from '../../areas/Edgewater';
-import Constructora from '../../../models/constructora/Constructora';
-import { getDesarrolloI18n } from '../useDesarrolloI18n';
+import React from "react";
+
+import Edgewater from "../../areas/Edgewater";
+import Desarrollo from "../../../models/desarrollos/Desarrollo";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
 export default function ElleResidences(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("elle-residences", lang);
-    const ElleResidencesObject = new Desarrollo();
+    const ElleResidencesObject = new Desarrollo(Edgewater());
+    ElleResidencesObject.area = Edgewater();
 
     ElleResidencesObject.nombre = getLocalizedField("nombre", "elle-residences");
 
@@ -44,7 +45,7 @@ export default function ElleResidences(lang: "en" | "es" = "es") {
         ,
         amenidades:
             <><p>Descubra una colección de comodidades de estilo de vida diseñadas para una vida elegante y sin esfuerzo. No es solo un apartamento tipo piso. ELLE es su salón, cafetería, club de piscina, área de juegos y mucho más.</p><ul>
-                <b>El vestíbulo</b>
+                <li><b>El vestíbulo</b></li>
                 <li>Gran vestíbulo de doble altura</li>
                 <li>Servicios de check-in de huéspedes</li>
                 <li>Servicio de aparcacoches</li>
@@ -56,7 +57,7 @@ export default function ElleResidences(lang: "en" | "es" = "es") {
                 <li>Tiendas minoristas boutique</li>
                 <li>Casa de bicicletas y almacenamiento de bicicletas</li>
                 <li>WiFi de alta velocidad</li>
-                <b>La Terraza</b>
+                <li><b>La Terraza</b></li>
                 <li>Terraza estilo resort inspirada en la Riviera Francesa</li>
                 <li>Piscina del complejo con exposición de norte a sur.</li>
                 <li>Cabañas privadas y tumbonas</li>
@@ -67,7 +68,7 @@ export default function ElleResidences(lang: "en" | "es" = "es") {
                 <li>Gimnasio al aire libre y área de yoga con jardín de meditación, spa y piscina de agua fría</li>
                 <li>Spa con sauna, baño de vapor, ducha de sensaciones y pared de sal.</li>
                 <li>Sala privada para tratamientos de salón y bienestar.</li>
-                <b>La Azotea de Sommet</b>
+                <li><b>La Azotea de Sommet</b></li>
                 <li>Piscina del complejo con vistas despejadas al norte, este y oeste.</li>
                 <li>Terraza solárium con cabañas privadas</li>
                 <li>Club de residentes con biblioteca, sala de escucha, salón con bar y espacio de entretenimiento.</li>

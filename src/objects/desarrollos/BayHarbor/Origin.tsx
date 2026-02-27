@@ -1,6 +1,5 @@
+﻿import BayHarbor from "../../areas/BayHarbor.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import BayHarbor from "../../areas/BayHarbor.tsx";
-
 export default function Origin() {
     const OriginObject = new Desarrollo();
 
@@ -10,7 +9,7 @@ export default function Origin() {
         <iframe
             className=" mx-auto"
             height={500}
-            src="https://www.youtube.com/embed/9eegKJbb5vQ?autoplay=1&controls=0"
+            src="https://www.youtube.com/embed/9eegKJbb5vQautoplay=1&controls=0"
             title="Sophisticated Waterfront Living : Origin Residences by artefacto | Bay Harbor Islands"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -22,10 +21,10 @@ export default function Origin() {
             <>
                 <ul>
                     <li>
-                        Piscina panorámica en la azotea con cocinas de verano junto a la
+                        Piscina panorÁmica en la azotea con cocinas de verano junto a la
                         piscina y bar
                     </li>
-                    <li>Gimnasio con equipos de última generación</li>
+                    <li>Gimnasio con equipos de última generaci�n</li>
                     <li>
                         Servicios personalizados, seguridad las 24 horas y tecnología
                         avanzada
@@ -34,7 +33,7 @@ export default function Origin() {
                         Estacionamiento sin asistencia designado para todas las
                         residencias
                     </li>
-                    <li>Estaciones de carga para vehículos eléctricos</li>
+                    <li>Estaciones de carga para vehículos el�ctricos</li>
                     <li>
                         Fibra hasta el hogar para video e Internet de alta velocidad
                     </li>
@@ -46,13 +45,13 @@ export default function Origin() {
                         Marina con 8 muelles para botes que van desde 25 a 40 pies
                     </li>
                     <li>
-                        Acceso directo al Océano Atlántico a través de la ensenada de
+                        Acceso directo al Océano AtlÁntico a través de la ensenada de
                         Haulover, así como acceso directo a las vías navegables
                         intracosteras de Miami y Fort Lauderdale
                     </li>
                     <li>Cabañas privadas frente al mar</li>
                     <li>
-                        Muelle de lanzamiento de deportes acuáticos para kayaks y tablas
+                        Muelle de lanzamiento de deportes acuÁticos para kayaks y tablas
                         de paddle surf
                     </li>
                 </ul>
@@ -75,11 +74,11 @@ export default function Origin() {
                     <li>PH Residences cuenta con techos de 11 pies</li>
                     <li>
                         Cocinas italianas importadas totalmente equipadas con
-                        electrodomésticos de última generación
+                        electrodom�sticos de última generaci�n
                     </li>
-                    <li>Baños modernos con mármol italiano y gabinetes europeos</li>
+                    <li>Baños modernos con mÁrmol italiano y gabinetes europeos</li>
                     <li>Pisos de porcelana italiana en toda la casa</li>
-                    <li>Balcones privados panorámicos en cada residencia</li>
+                    <li>Balcones privados panorÁmicos en cada residencia</li>
                     <li>Vestidores de gran tamaño</li>
                     <li>Amplio vestidor principal</li>
                     <li>Lavadora y secadora de tamaño completo de carga frontal</li>
@@ -95,7 +94,7 @@ export default function Origin() {
                     <strong>Club Acqua</strong>
                     <br/>
                     <li>
-                        El Club Náutico provee almacenamiento de paddleboard y kayak con
+                        El Club NÁutico provee almacenamiento de paddleboard y kayak con
                         espacio de limpieza, para disfrutar tranquilamente de las
                         cristalinas aguas del canal intracostero y los canales cercanos.
                     </li>
@@ -104,7 +103,7 @@ export default function Origin() {
                     <br/>
                     <li>
                         Una marina con 9 espacios para botes desde 25 hasta 40 pies,
-                        acceso directo al Océano Atlántico, cabañas privadas costeras y
+                        acceso directo al Océano AtlÁntico, cabañas privadas costeras y
                         un espacio para kayaks y paddleboards.
                     </li>
                     <br/>
@@ -112,7 +111,7 @@ export default function Origin() {
                     <br/>
                     <li>
                         Con un parque para perros y estación de baño para mascotas. Cada
-                        amigo peludo podrá disfrutar de un espacio para correr y
+                        amigo peludo podrÁ disfrutar de un espacio para correr y
                         divertirse libremente.
                     </li>
                     <br/>
@@ -120,17 +119,17 @@ export default function Origin() {
                     <br/>
                     <li>
                         El nivel de la terraza incluye una piscina, sillas asoleadoras,
-                        un bar y diversas áreas sociales para relajarte.
+                        un bar y diversas Áreas sociales para relajarte.
                     </li>
                 </ul>
             </>
         ),
     };
     OriginObject.introduccion = [
-        // "Origin es un edificio boutique elegante que combina el inigualable estilo de vida de Miami, fantásticas amenidades y planos de gran tamaño. A tan solo pasos de las blancas playas de Miami y las reconocidas tiendas Bal Harbour, Origin es un paraíso urbano cerca de cada comodidad de la ciudad. Una exclusiva colección de 27 residencias costeras diseñadas para la familia moderna, que evocan sofisticación y bienestar",
+        // "Origin es un edificio boutique elegante que combina el inigualable estilo de vida de Miami, fant�sticas amenidades y planos de gran tama�o. A tan solo pasos de las blancas playas de Miami y las reconocidas tiendas Bal Harbour, Origin es un paraíso urbano cerca de cada comodidad de la ciudad. Una exclusiva colecci�n de 27 residencias costeras dise�adas para la familia moderna, que evocan sofisticaci�n y bienestar",
         "Una exquisita colección de 27 residencias de lujo de edición limitada frente al mar, en colaboración con Artefacto, los proveedores de la sofisticada vida del Sur de la Florida",
-        "Este elegante edificio residencial boutique personifica lo último en estilo de vida de Miami, seductoras vistas y amplios planos de planta. A pocos pasos de las prístinas playas de Miami y de las mundialmente conocidas tiendas de Bal Harbour, ORIGIN es lo último en vida urbana isleña, a la vez que se encuentra a pocos pasos de todas las comodidades de la vida en la ciudad",
-        "Artefacto decodifica un estilo de vida que goza de gran prestigio entre los grandes nombres de la arquitectura y la decoración, creando el epítome de la vida cálida y contemporánea.",
+        "Este elegante edificio residencial boutique personifica lo último en estilo de vida de Miami, seductoras vistas y amplios planos de planta. A pocos pasos de las prístinas playas de Miami y de las mundialmente conocidas tiendas de Bal Harbour, ORIGIN es lo último en vida urbana isle�a, a la vez que se encuentra a pocos pasos de todas las comodidades de la vida en la ciudad",
+        "Artefacto decodifica un estilo de vida que goza de gran prestigio entre los grandes nombres de la arquitectura y la decoraci�n, creando el epítome de la vida c�lida y contempor�nea.",
     ];
     OriginObject.titulo = "Origin Residences";
     OriginObject.slogan = "Sofisticada VidaResidences Isleña";
@@ -138,3 +137,4 @@ export default function Origin() {
     OriginObject.area = BayHarbor();
     return OriginObject;
 }
+

@@ -535,7 +535,7 @@ const translations: Record<Lang, any> = {
                 slogan: "Residencias con Alma en el Corazón de Miami",
                 banner: "true",
                 numberOfImages: "14",
-                video: "https://player.vimeo.com/video/806352821?autoplay=true"
+                video: "https://player.vimeo.com/video/806352821autoplay=true"
             },
         },
         common: {
@@ -1061,6 +1061,49 @@ export function useTranslation() {
         throw new Error("useTranslation must be used within TranslationProvider");
     }
     return {t: ctx.t, lang: ctx.lang, setLang: ctx.setLang};
+}
+
+function isLocalizedRecord(value: unknown): value is Record<string, unknown> {
+    if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+    const record = value as Record<string, unknown>;
+    return "es" in record || "en" in record;
+}
+
+function buildLanguagePriority(lang: Lang, fallbackLang?: Lang): Lang[] {
+    const priority: Lang[] = [lang];
+    if (fallbackLang && fallbackLang !== lang && !priority.includes(fallbackLang)) {
+        priority.push(fallbackLang);
+    }
+    (["es", "en"] as Lang[]).forEach((candidate) => {
+        if (!priority.includes(candidate)) {
+            priority.push(candidate);
+        }
+    });
+    return priority;
+}
+
+export function resolveLocalizedValue<T>(
+    value: T | Record<string, T | undefined> | undefined,
+    lang: Lang,
+    fallbackLang?: Lang
+): T | undefined {
+    if (value === null || value === undefined) return undefined;
+    if (isLocalizedRecord(value)) {
+        const record = value as Record<string, T | undefined>;
+        for (const currentLang of buildLanguagePriority(lang, fallbackLang)) {
+            const candidate = record[currentLang];
+            if (candidate !== undefined && candidate !== null) {
+                return candidate as T;
+            }
+        }
+        for (const candidate of Object.values(record)) {
+            if (candidate !== undefined && candidate !== null) {
+                return candidate as T;
+            }
+        }
+        return undefined;
+    }
+    return value as T;
 }
 
 function buildDesarrolloKeyCandidates(desarrolloKey: string): string[] {

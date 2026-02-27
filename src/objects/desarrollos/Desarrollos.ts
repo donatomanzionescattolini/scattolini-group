@@ -228,16 +228,14 @@ desarrolloMap.push({area: MidtownMiami(),des:new Set([MidtownParkResidences,TheS
 desarrolloMap.forEach((entry) => {
   entry.des = new Set(
     [...entry.des].map((desar) => {
-      desar.area = desarrolloMap.find(
-        (a) => a.area.name === entry.area.name
-      ).area;
+      desar.area = entry.area;
       return desar;
     })
   );
   return entry;
 });
 
-export function getDesarrollosForArea(area: Area): Set<Desarrollo> {
+export function getDesarrollosForArea(area: Area, _lang?: "en" | "es"): Set<Desarrollo> {
   const filtered = desarrolloMap.filter((entry) =>
     entry.area.name
       .toLowerCase()
@@ -245,9 +243,10 @@ export function getDesarrollosForArea(area: Area): Set<Desarrollo> {
       .includes(area.name.trim().toLowerCase())
   );
   
-  if (filtered.length === 0) {
+  const first = filtered[0];
+  if (!first) {
     return new Set<Desarrollo>();
   }
   
-  return filtered[0].des;
+  return first.des;
 }

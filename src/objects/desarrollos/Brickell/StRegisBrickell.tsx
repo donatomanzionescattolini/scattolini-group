@@ -1,6 +1,5 @@
+﻿import Brickell from "../../areas/Brickell.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import Brickell from "../../areas/Brickell.tsx";
-
 const StRegisBrickell = new Desarrollo(Brickell());
 StRegisBrickell.nombre = "st-regis-brickell";
 StRegisBrickell.titulo = "St Regis Brickell";

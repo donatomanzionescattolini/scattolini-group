@@ -7,11 +7,11 @@ const PembrokePines = () => {
     PembrokePinesObject.name = "pembroke-pines";
     PembrokePinesObject.slogan = {
         es: "Únase a Nosotros – Progrese con Nosotros",
-        en: "Join Us – Progress with Us"
+        en:"latest"
     };
     PembrokePinesObject.titulo = {
         es: "Pembroke Pines",
-        en: "Pembroke Pines"
+        en:"latest"
     };
     PembrokePinesObject.descripcion = {
         es: [

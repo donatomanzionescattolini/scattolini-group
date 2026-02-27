@@ -1,7 +1,6 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import MidtownMiami from "../../areas/MidtownMiami";
-
-const JeanGeorgesMiamiTropicResidences = new Desarrollo(MidtownMiami);
+const JeanGeorgesMiamiTropicResidences = new Desarrollo(MidtownMiami());
 JeanGeorgesMiamiTropicResidences.nombre =
   "jean-georges-miami-tropic-residences";
 JeanGeorgesMiamiTropicResidences.titulo = "Jean-Georges Miami Tropic Residences";
@@ -9,11 +8,11 @@ JeanGeorgesMiamiTropicResidences.estimatedCompletionYear = 2028;
 JeanGeorgesMiamiTropicResidences.numberOfFloors=49;
 JeanGeorgesMiamiTropicResidences.numberOfUnits =    329;
 JeanGeorgesMiamiTropicResidences.numberOfRooms= {start:1, end:4};
-JeanGeorgesMiamiTropicResidences.area = MidtownMiami;
-JeanGeorgesMiamiTropicResidences.ubicación= "3501 N Miami Ave, Miami, FL 33127, USA";
+JeanGeorgesMiamiTropicResidences.area = MidtownMiami();
+JeanGeorgesMiamiTropicResidences.ubicacion= "3501 N Miami Ave, Miami, FL 33127, USA";
 JeanGeorgesMiamiTropicResidences.introduccion = [
-  "Descubre Jean-Georges Tropic Residences, una joya arquitectónica en el corazón de Midtown Miami. Este exclusivo desarrollo residencial redefine el lujo contemporáneo con su diseño elegante y sofisticado, inspirado en la visión del renombrado chef Jean-Georges Vongerichten. Cada detalle ha sido cuidadosamente pensado para ofrecer un estilo de vida excepcional, desde sus amplias residencias con vistas panorámicas hasta sus amenidades de primer nivel que incluyen un gimnasio de última generación, piscina infinita y espacios sociales diseñados para la comodidad y el entretenimiento.",
-  "Ubicado estratégicamente en una de las zonas más vibrantes de Miami, Jean-Georges Tropic Residences ofrece acceso inmediato a una variedad de restaurantes, tiendas y opciones culturales. Vive la experiencia de Midtown Miami con su ambiente dinámico y cosmopolita, todo mientras disfrutas de la tranquilidad y privacidad que este desarrollo exclusivo proporciona. Jean-Georges Tropic Residences es más que un hogar; es un estilo de vida donde el lujo, la comodidad y la ubicación se unen para crear una experiencia residencial inigualable.",
+  "Descubre Jean-Georges Tropic Residences, una joya arquitectónica en el corazón de Midtown Miami. Este exclusivo desarrollo residencial redefine el lujo contempor�neo con su diseño elegante y sofisticado, inspirado en la visión del renombrado chef Jean-Georges Vongerichten. Cada detalle ha sido cuidadosamente pensado para ofrecer un estilo de vida excepcional, desde sus amplias residencias con vistas panor�micas hasta sus amenidades de primer nivel que incluyen un gimnasio de última generación, piscina infinita y espacios sociales diseñados para la comodidad y el entretenimiento.",
+  "Ubicado estratégicamente en una de las zonas m�s vibrantes de Miami, Jean-Georges Tropic Residences ofrece acceso inmediato a una variedad de restaurantes, tiendas y opciones culturales. Vive la experiencia de Midtown Miami con su ambiente din�mico y cosmopolita, todo mientras disfrutas de la tranquilidad y privacidad que este desarrollo exclusivo proporciona. Jean-Georges Tropic Residences es m�s que un hogar; es un estilo de vida donde el lujo, la comodidad y la ubicacion se unen para crear una experiencia residencial inigualable.",
 ];
 JeanGeorgesMiamiTropicResidences.numberOfImages  = 30;
 JeanGeorgesMiamiTropicResidences.caracteristicas = {
@@ -28,9 +27,9 @@ JeanGeorgesMiamiTropicResidences.caracteristicas = {
         <dd>{JeanGeorgesMiamiTropicResidences.numberOfUnits}</dd>
         <dt>Número de cuartos</dt>
         <dd>{JeanGeorgesMiamiTropicResidences.numberOfRooms.start + " - " + JeanGeorgesMiamiTropicResidences.numberOfRooms.end}</dd>
-        <dt>Ubicación</dt>
+        <dt>ubicacion</dt>
         <dd>
-          <address>{JeanGeorgesMiamiTropicResidences.ubicación}</address>
+          <address>{JeanGeorgesMiamiTropicResidences.ubicacion}</address>
         </dd>
       </dl>
     </>
@@ -45,7 +44,7 @@ JeanGeorgesMiamiTropicResidences.caracteristicas = {
         </li>
         <li>
           Diseñado por Yabu Pushelberg, el abundante suelo y los niveles de
-          servicios están inmersos en el follaje inspirado en el paisaje
+          servicios estÁn inmersos en el follaje inspirado en el paisaje
           tropical de Miami.
         </li>
         <li>
@@ -117,7 +116,7 @@ JeanGeorgesMiamiTropicResidences.caracteristicas = {
         <li>Disposiciones para cortinas motorizadas</li>
         <li>Encimera superior con losa de piedra natural</li>
         <li>
-          Protector contra salpicaduras de mosaico de azulejos de cerámica
+          Protector contra salpicaduras de mosaico de azulejos de cerÁmica
           rojo-marrón Yohen Border
         </li>
         <li>
@@ -125,13 +124,13 @@ JeanGeorgesMiamiTropicResidences.caracteristicas = {
           refrigerador y lavavajillas integrados en el panel
         </li>
         <li>
-          Ducha y bañeras con baldosas cerámicas verticales en tonos arcilla
+          Ducha y bañeras con baldosas cer�micas verticales en tonos arcilla
           rosa
         </li>
         <li>
           Accesorios de plomería de acabado premium de níquel cepillado Gessi
         </li>
-        <li>Encimeras de granito rojo volcán</li>
+        <li>Encimeras de granito rojo volcÁn</li>
         <li>
           Gabinetes de tocador de madera italiana con acabado en madera de playa
           clara
@@ -144,3 +143,4 @@ JeanGeorgesMiamiTropicResidences.caracteristicas = {
 JeanGeorgesMiamiTropicResidences.banner = true;
 
 export default JeanGeorgesMiamiTropicResidences;
+

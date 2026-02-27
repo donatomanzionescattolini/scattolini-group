@@ -1,80 +1,51 @@
-import React, {useState} from "react";
-import {
-    MDBBtn,
-    MDBCollapse,
-    MDBContainer,
-    MDBDropdown,
-    MDBDropdownItem,
-    MDBDropdownMenu,
-    MDBDropdownToggle,
-    MDBIcon,
-    MDBNavbar,
-    MDBNavbarBrand,
-    MDBNavbarItem,
-    MDBNavbarLink,
-    MDBNavbarNav,
-    MDBNavbarToggler,
-} from "mdb-react-ui-kit";
+import React, { useState } from "react";
+import { Button, Container, Form, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { useTranslation } from "../i18n.tsx";
 
 export default function NavComponent() {
-    const [showBasic, setShowBasic] = useState(true);
-    const { t } = useTranslation();
+  const [showBasic, setShowBasic] = useState(false);
+  const { t } = useTranslation();
 
-    return (
-        <MDBNavbar expand="lg" light bgColor="light">
-            <MDBContainer fluid>
-                <MDBNavbarBrand href="/">{t("navComponent.brand")}</MDBNavbarBrand>
+  return (
+    <Navbar expand="lg" bg="light" expanded={showBasic}>
+      <Container fluid>
+        <Navbar.Brand href="/">{t("navComponent.brand")}</Navbar.Brand>
 
-                <MDBNavbarToggler
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label={t("nav.toggleNavigation")}
-                    onClick={() => setShowBasic(!showBasic)}
-                >
-                    <MDBIcon icon="bars" fas/>
-                </MDBNavbarToggler>
+        <Navbar.Toggle
+          aria-controls="navbarSupportedContent"
+          aria-label={t("nav.toggleNavigation")}
+          onClick={() => setShowBasic((prev) => !prev)}
+        />
 
-                <MDBCollapse navbar show={showBasic}>
-                    <MDBNavbarNav>
-                        <MDBNavbarItem>
-                            <MDBNavbarLink active aria-current="page" href="#">
-                                {t("navComponent.home")}
-                            </MDBNavbarLink>
-                        </MDBNavbarItem>
-                        <MDBNavbarItem>
-                            <MDBNavbarLink href="/">{t("navComponent.link")}</MDBNavbarLink>
-                        </MDBNavbarItem>
+        <Navbar.Collapse id="navbarSupportedContent">
+          <Nav className="me-auto">
+            <Nav.Link href="#" active>
+              {t("navComponent.home")}
+            </Nav.Link>
+            <Nav.Link href="/">{t("navComponent.link")}</Nav.Link>
 
-                        <MDBNavbarItem>
-                            <MDBDropdown>
-                                <MDBDropdownToggle tag="a">{t("navComponent.dropdown")}</MDBDropdownToggle>
-                                <MDBDropdownMenu>
-                                    <MDBDropdownItem link>{t("navComponent.action")}</MDBDropdownItem>
-                                    <MDBDropdownItem link>{t("navComponent.anotherAction")}</MDBDropdownItem>
-                                    <MDBDropdownItem link>{t("navComponent.somethingElse")}</MDBDropdownItem>
-                                </MDBDropdownMenu>
-                            </MDBDropdown>
-                        </MDBNavbarItem>
+            <NavDropdown title={t("navComponent.dropdown")} id="navcomponent-dropdown">
+              <NavDropdown.Item>{t("navComponent.action")}</NavDropdown.Item>
+              <NavDropdown.Item>{t("navComponent.anotherAction")}</NavDropdown.Item>
+              <NavDropdown.Item>{t("navComponent.somethingElse")}</NavDropdown.Item>
+            </NavDropdown>
 
-                        <MDBNavbarItem>
-                            <MDBNavbarLink
-                                disabled
-                                href="/"
-                                tabIndex={-1}
-                                aria-disabled="true"
-                            >
-                                {t("navComponent.disabled")}
-                            </MDBNavbarLink>
-                        </MDBNavbarItem>
-                    </MDBNavbarNav>
+            <Nav.Link disabled href="/">
+              {t("navComponent.disabled")}
+            </Nav.Link>
+          </Nav>
 
-                    <form>
-                        <input type="search" placeholder={t("navComponent.searchPlaceholder")} aria-label={t("nav.search")}/>
-                        <MDBBtn color="primary">{t("navComponent.searchButton")}</MDBBtn>
-                    </form>
-                </MDBCollapse>
-            </MDBContainer>
-        </MDBNavbar>
-    );
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder={t("navComponent.searchPlaceholder")}
+              aria-label={t("nav.search")}
+              className="me-2"
+            />
+            <Button variant="primary">{t("navComponent.searchButton")}</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }

@@ -1,8 +1,7 @@
-import React from "react";
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
-
+import React from "react";
 export default function Domus(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("domus", lang);
     const Domus = new Desarrollo(Brickell());
@@ -17,7 +16,7 @@ export default function Domus(lang: "en" | "es" = "es") {
                 <li>Aparcacoches</li>
                 <li>Aparcamiento de bicicletas</li>
                 <li>Cafetería</li>
-                <li>Salón Jardín</li>
+                <li>Sal�n Jardín</li>
                 <li>Coworking</li>
                 <li>Habitación de paquetes</li>
                 <li>Gimnasio</li>
@@ -42,9 +41,9 @@ export default function Domus(lang: "en" | "es" = "es") {
             <>
                 <p>
                     Domus Brickell ofrece un espacio ideal para socializar y
-                    establecer contactos, con 500 metros cuadrados de áreas comunes
+                    establecer contactos, con 500 metros cuadrados de Áreas comunes
                     modernas y acogedoras adecuadas para cualquier ocasión. Desde su
-                    vestíbulo, perfecto para reuniones de negocios y relajación, hasta
+                    vestíbulo, perfecto para reuniones de negocios y relajaci�n, hasta
                     el minimercado, el espacio de trabajo, la cafetería y el hermoso
                     jardín, Domus Brickell Park ofrece un refugio tranquilo sin tener
                     que salir de casa. Por supuesto, la experiencia solo se completa
@@ -52,14 +51,14 @@ export default function Domus(lang: "en" | "es" = "es") {
                     únicas de Brickell.
                 </p>
                 <ul>
-                    <li>Más de 4.200 pies cuadrados de lobby de hospitalidad</li>
+                    <li>MÁs de 4.200 pies cuadrados de lobby de hospitalidad</li>
                     <li>La habitación del pavo real</li>
                     <li>Parque de bolsillo cubierto al aire libre</li>
                     <li>Cafetería y panadería con terraza cubierta</li>
                     <li>Mercado artesanal que ofrece opciones gourmet</li>
-                    <li>Exuberante salón en el jardín</li>
+                    <li>Exuberante sal�n en el jardín</li>
                     <li>Bar de vinos y cervezas</li>
-                    <li>Gimnasio con equipos de última generación</li>
+                    <li>Gimnasio con equipos de última generaci�n</li>
                     <li>Baño de vapor</li>
                     <li>Terraza de la piscina en la azotea con cabañas</li>
                     <li>Jacuzzi</li>
@@ -74,7 +73,7 @@ export default function Domus(lang: "en" | "es" = "es") {
     Domus.banner = getLocalizedField("banner", "true") === "true";
     Domus.video = (
         <iframe id="ytplayer" width="720" height="405"
-                src={getLocalizedField("video", "https://www.youtube.com/embed/M_9_sCBNLDQ?autoplay=1&controls=0")}
+                src={getLocalizedField("video", "https://www.youtube.com/embed/M_9_sCBNLDQautoplay=1&controls=0")}
                 frameBorder={0} allowFullScreen/>
     );
     Domus.titulo = getLocalizedField("titulo", "Domus FLATS");
@@ -82,3 +81,4 @@ export default function Domus(lang: "en" | "es" = "es") {
     Domus.numberOfImages = parseInt(getLocalizedField("numberOfImages", "7"), 10) || 7;
     return Domus;
 }
+

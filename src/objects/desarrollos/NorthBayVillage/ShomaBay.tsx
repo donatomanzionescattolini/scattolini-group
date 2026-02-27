@@ -1,8 +1,7 @@
-import React from "react";
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
-
+import React from "react";
 export default function ShomaBay(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("shoma-bay", lang);
     const ShomaBayObject = new Desarrollo();
@@ -20,7 +19,7 @@ export default function ShomaBay(lang: "en" | "es" = "es") {
                 </li>
                 <li>Habitaciones por unidad: 1-3</li>
 
-                <li>Salón del vestíbulo</li>
+                <li>Sal�n del vestíbulo</li>
                 <li>Área de juego</li>
                 <li>Spa para mascotas</li>
                 <li>Biblioteca</li>
@@ -44,7 +43,7 @@ export default function ShomaBay(lang: "en" | "es" = "es") {
                 <li>Encimeras de cuarzo</li>
                 <li>Gabinetes italianos con iluminación debajo del gabinete</li>
                 <li>Estaciones de carga USB</li>
-                <li>Grifería de cocina multifunción</li>
+                <li>Grifería de cocina multifunci�n</li>
                 <li>Electrodomésticos de acero inoxidable de alta eficiencia</li>
                 <li>Baños inspirados en el spa</li>
                 <li>Tocadores de diseño con espejos iluminados</li>
@@ -87,7 +86,7 @@ export default function ShomaBay(lang: "en" | "es" = "es") {
             <iframe
                 width={"100%"}
                 height={500}
-                src="https://www.youtube.com/embed/UIfivX8efkQ?autoplay=true"
+                src="https://www.youtube.com/embed/UIfivX8efkQautoplay=true"
                 title="Shoma Bay North Bay Village... Presented by Ashton Coleman"
                 allowFullScreen
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -97,3 +96,4 @@ export default function ShomaBay(lang: "en" | "es" = "es") {
     ;
     return ShomaBayObject;
 }
+

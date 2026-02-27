@@ -1,8 +1,7 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import FloridaCity from "../../areas/FloridaCity.tsx";
+import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Homestead from "../../areas/Homestead.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
-
 export default function Alba(lang: "en" | "es" = "es") {
   const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("alba", lang);
   const AlbaObject = new Desarrollo();
@@ -54,3 +53,5 @@ export default function Alba(lang: "en" | "es" = "es") {
 
   return AlbaObject;
 }
+
+

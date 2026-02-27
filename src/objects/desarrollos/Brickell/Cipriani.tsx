@@ -1,8 +1,7 @@
-import React from "react";
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
-
+import React from "react";
 export default function Cipriani(lang: "en" | "es" = "es") {
   const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("cipriani", lang);
   const CiprianiObject = new Desarrollo(Brickell());
@@ -25,9 +24,9 @@ export default function Cipriani(lang: "en" | "es" = "es") {
         <p>{getLocalizedField("caracteristicas.edificio.p1", "Una adición distintiva al horizonte de Brickell, la torre de vidrio de 80 pisos...")}</p>
         <ul>
           <li>{getLocalizedField("caracteristicas.edificio.li1", "Una elegante torre de 80 pisos con una fachada curva de vidrio en cascada")}</li>
-          <li>{getLocalizedField("caracteristicas.edificio.li2", "Una colección de 397 residencias, incluidos áticos excepcionales con piscina privada")}</li>
+          <li>{getLocalizedField("caracteristicas.edificio.li2", "Una colección de 397 residencias, incluidos Áticos excepcionales con piscina privada")}</li>
           <li>{getLocalizedField("caracteristicas.edificio.li3", "Servicios de comedor solo para residentes de Cipriani")}</li>
-          <li>{getLocalizedField("caracteristicas.edificio.li4", "Vistas panorámicas de la Bahía de Biscayne, el horizonte de Brickell y Coconut Grove")}</li>
+          <li>{getLocalizedField("caracteristicas.edificio.li4", "Vistas panor�micas de la Bahía de Biscayne, el horizonte de Brickell y Coconut Grove")}</li>
           <li>{getLocalizedField("caracteristicas.edificio.li5", "Personal 24 horas capacitado por Cipriani")}</li>
         </ul>
       </div>
@@ -36,7 +35,7 @@ export default function Cipriani(lang: "en" | "es" = "es") {
       <div>
         <ul>
           <li>{getLocalizedField("caracteristicas.residencias.li1", "Amplias salas de estar con alturas de techo de 10 pies")}</li>
-          <li>{getLocalizedField("caracteristicas.residencias.li2", "Puertas y ventanas corredizas de vidrio de piso a techo con magníficas vistas panorámicas.")}</li>
+          <li>{getLocalizedField("caracteristicas.residencias.li2", "Puertas y ventanas corredizas de vidrio de piso a techo con magníficas vistas panor�micas.")}</li>
           <li>{getLocalizedField("caracteristicas.residencias.li3", "Acceso a la terraza desde la sala de estar y el dormitorio principal de cada residencia.")}</li>
           <li>{getLocalizedField("caracteristicas.residencias.li4", "Elegantes vestidores en cada dormitorio principal")}</li>
         </ul>
@@ -53,3 +52,4 @@ export default function Cipriani(lang: "en" | "es" = "es") {
 
   return CiprianiObject;
 }
+

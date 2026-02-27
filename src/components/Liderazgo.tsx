@@ -1,11 +1,11 @@
-import { MDBCol, MDBRow } from "mdb-react-ui-kit";
+import { Row, Col } from "react-bootstrap";
 import { useTranslation } from "../i18n.tsx";
 
 export default function Liderazgo() {
   const { t } = useTranslation();
   return (
-    <MDBRow className="row  p-0 m-auto">
-      <MDBCol
+    <Row className="row  p-0 m-auto">
+      <Col
         xs={12}
         sm={12}
         md={6}
@@ -18,8 +18,8 @@ export default function Liderazgo() {
           alt="Elda"
           className="w-50 m-auto img-thumbnail"
         />
-      </MDBCol>
-      <MDBCol xs={12} sm={12} md={4} lg={4} xl={4} className="px-auto py-5">
+      </Col>
+      <Col xs={12} sm={12} md={4} lg={4} xl={4} className="px-auto py-5">
         <h4 className="text-center mt-5">
           {t("pages.liderazgo.title", "Expert team, personalized service")}
         </h4>
@@ -37,10 +37,10 @@ export default function Liderazgo() {
             "Elda and her team are experts in South Florida, with deep knowledge of neighborhoods, schools, amenities, and market trends. They will guide you through every step of the process, from finding the right property to negotiating the best price and closing efficiently."
           )}
         </p>
-      </MDBCol>
-      <MDBCol xs={12} sm={12} md={2} lg={2} xl={2}>
+      </Col>
+      <Col xs={12} sm={12} md={2} lg={2} xl={2}>
         <br></br>
-      </MDBCol>
-    </MDBRow>
+      </Col>
+    </Row>
   );
 }

@@ -1,6 +1,6 @@
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
 export default function TheMansionsAtAcqualina(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("the-mansions-at-acqualina", lang);
@@ -10,7 +10,7 @@ export default function TheMansionsAtAcqualina(lang: "en" | "es" = "es") {
         <iframe
             width="1280"
             height="720"
-            src="https://www.youtube.com/embed/JGatjfTjo2c?autoplay=1&controls=0"
+            src="https://www.youtube.com/embed/JGatjfTjo2cautoplay=1&controls=0"
             title="The Mansions at Acqualina"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -40,7 +40,7 @@ export default function TheMansionsAtAcqualina(lang: "en" | "es" = "es") {
         amenidades: (
             <>
                 <ul>
-                    <li>Gimnasio con equipos de última generación</li>
+                    <li>Gimnasio con equipos de última generaci�n</li>
                     <li>Cabañas privadas junto a la piscina</li>
                     <li>Hammam Spa</li>
                     <li>Centro Infantil</li>
@@ -72,7 +72,7 @@ export default function TheMansionsAtAcqualina(lang: "en" | "es" = "es") {
                     <li>Servicio de Monitoreo de Alarmas de Intrusión</li>
                     <li>Encimeras y salpicaderos de piedra importada</li>
                     <li>
-                        Bañera independiente a medida con accesorios de fontanería
+                        Ba�era independiente a medida con accesorios de fontanería
                         Dornbracht
                     </li>
                 </ul>
@@ -80,7 +80,7 @@ export default function TheMansionsAtAcqualina(lang: "en" | "es" = "es") {
         ),
     };
     TheMansionsAtAcqualinaObject.introduccion = getLocalizedArray("introduccion", [
-        getLocalizedField("introduccion.0", "Ubicado en su propia mansión en el cielo, se calma con los suaves vientos alisios mientras las olas barren la orilla de su prístina playa de arena blanca."),
+        getLocalizedField("introduccion.0", "Ubicado en su propia mansi�n en el cielo, se calma con los suaves vientos alisios mientras las olas barren la orilla de su prístina playa de arena blanca."),
     ]);
     TheMansionsAtAcqualinaObject.titulo = getLocalizedField("titulo", "The Mansions at Acqualina");
     TheMansionsAtAcqualinaObject.slogan = getLocalizedField("slogan", "Descubre la vida en condominio en Sunny Isles Beach");
@@ -89,3 +89,4 @@ export default function TheMansionsAtAcqualina(lang: "en" | "es" = "es") {
     TheMansionsAtAcqualinaObject.area = SunnyIsles();
     return TheMansionsAtAcqualinaObject;
 }
+

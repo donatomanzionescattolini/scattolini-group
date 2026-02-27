@@ -1,8 +1,7 @@
-import React from 'react'
-import Desarrollo from '../../../models/desarrollos/Desarrollo';
-import Downtown from '../../areas/Downtown';
-import Constructora from '../../../models/constructora/Constructora';
-import { getDesarrolloI18n } from '../useDesarrolloI18n';
+import Constructora from "../../../models/constructora/Constructora";
+import Desarrollo from "../../../models/desarrollos/Desarrollo";
+import Downtown from "../../areas/Downtown";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
 export default function Jem(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("jem", lang);

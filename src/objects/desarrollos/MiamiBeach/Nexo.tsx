@@ -106,7 +106,7 @@ export default function Nexo(lang: "en" | "es" = "es") {
     ];
     NexoObject.caracteristicas={edificio:NexoObject.displayCaracteristicasEdificio(),residencias:NexoObject.displayCaracteristicasResidencias(),amenidades:NexoObject.displayAmenidades()};;
     NexoObject.banner=true;
-    NexoObject.video=<iframe width="500" height="300" className="object-fit-cover" src="https://www.youtube.com/embed/E9S3zVDO1vs?autoplay=1"  title="Nexo Residences - North Miami Beach (2024) por Julieta Lepre" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>;
+    NexoObject.video=<iframe width="500" height="300" className="object-fit-cover" src="https://www.youtube.com/embed/E9S3zVDO1vsautoplay=1"  title="Nexo Residences - North Miami Beach (2024) por Julieta Lepre" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>;
     NexoObject.numberOfImages=41;
     return NexoObject;
 }

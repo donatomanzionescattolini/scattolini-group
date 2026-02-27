@@ -1,6 +1,4 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import BayHarbor from "../../areas/BayHarbor.tsx";
-
 export default function TheWell() {
     const TheWellObject = new Desarrollo();
 
@@ -160,6 +158,6 @@ export default function TheWell() {
     ];
     TheWellObject.titulo = "The Well";
     TheWellObject.slogan = "Bienvenido al Bienestar";
-    TheWellObject.area = BayHarbor();
+    TheWellObject.area = "Bay Harbor";
     return TheWellObject;
 }

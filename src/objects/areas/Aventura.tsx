@@ -7,7 +7,7 @@ export default function Aventura() {
     let AventuraObject = new Area("aventura");
     AventuraObject.titulo = {
         es: "Aventura",
-        en: "Aventura"
+        en:"latest"
     };
     AventuraObject.numberOfImages = 23;
     AventuraObject.descripcion = {
@@ -22,7 +22,7 @@ export default function Aventura() {
     };
     AventuraObject.slogan = {
         es: "Ciudad de Excelencia",
-        en: "City of Excellence"
+        en:"latest"
     };
     AventuraObject.name = "aventura";
     return AventuraObject;

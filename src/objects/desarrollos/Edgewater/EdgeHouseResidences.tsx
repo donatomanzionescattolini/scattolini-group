@@ -1,5 +1,5 @@
+﻿import Edgewater from "../../areas/Edgewater.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo";
-import Edgewater from "../../areas/Edgewater";
 import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
 export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
@@ -24,7 +24,7 @@ export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
     <>
       <dl>
         <dt>Ubicación</dt>
-        <dd>{EdgeHouseResidences.ubicación}</dd>
+        <dd>{EdgeHouseResidences.ubicacion}</dd>
         <dt>Número de Unidades</dt>
         <dd>{EdgeHouseResidences.numberOfUnits}</dd>
         <dt>Número de pisos</dt>
@@ -44,7 +44,7 @@ export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
     <>
       <ul>
         <li>
-          Selección de residencias de 2 y 3 dormitorios con opción de “lock-out
+          Selecci�n de residencias de 2 y 3 dormitorios con opci�n de �Slock-out
         </li>
         <li>
           Totalmente terminadas y amuebladas, diseñadas por la reconocida
@@ -69,7 +69,7 @@ export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
   amenidades: (
     <>
       <ul>
-        <li>Recepción y conserjería con servicios personalizado</li>
+        <li>Recepci�n y conserjería con servicios personalizado</li>
         <li>Lobby con salón y café-bar, con techos de doble altura</li>
         <li>Mercado gourmet abierto 24/7</li>
         <li>Sala de paquetes inteligente de LUXER ONE</li>
@@ -79,10 +79,10 @@ export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
           aire libre
         </li>
         <li>Bar en la piscina con servicio completo</li>
-        <li>Spa con sauna, baño de vapor y área de relajación</li>
+        <li>Spa con sauna, baño de vapor y Área de relajación</li>
         <li>Salas de tratamiento de bienestar privadas</li>
         <li>Gimnasio completamente equipado y estudio de yoga</li>
-        <li>Jardín zen con estanque de reflexión y deck de meditación</li>
+        <li>Jardín zen con estanque de reflexi�n y deck de meditaci�n</li>
         <li>
           Salón para residentes a nivel de la piscina, con asientos interiores y
           exteriores
@@ -93,7 +93,7 @@ export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
           Sala de podcast con equipo profesional y paneles acústicos
           insonorizados
         </li>
-        <li>Área de juegos para niños</li>
+        <li>Área de juegos para ni�os</li>
         <li>Putting green de golf</li>
         <li>Cocina al aire libre con parrilla y asientos de lounge</li>
         <li>Jardinería exuberante</li>
@@ -104,4 +104,6 @@ export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
 };
 return EdgeHouseResidences;
 }
+
+
 

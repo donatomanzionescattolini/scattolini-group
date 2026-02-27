@@ -1,3 +1,4 @@
+﻿import Pinecrest from "../../areas/Pinecrest.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
 export default function PineParkVillas() {
@@ -8,16 +9,16 @@ export default function PineParkVillas() {
             <>
                 <p>
                     Pine Park Villas es un colectivo de 18 lujosas y costeras villas
-                    de estilo contemporáneo de 3 pisos en un enclave privado y
+                    de estilo contemporÁneo de 3 pisos en un enclave privado y
                     cerrado. Se entrega completamente terminado con gabinetes
                     MiaCucina, electrodomésticos Sub-Zero & Wolf, ascensor, garaje
                     para 2 coches y patios traseros privados. Sumérgete en una piscina
                     comunitaria de borde infinito con cabañas de baño. Gracia
                     arquitectónica, detalles sin concesiones y calidad duradera. Pine
-                    Park Villas está estableciendo el nuevo estándar de vida en casas
-                    adosadas de lujo en uno de los vecindarios más atractivos del sur
+                    Park Villas estÁ estableciendo el nuevo estÁndar de vida en casas
+                    adosadas de lujo en uno de los vecindarios mÁs atractivos del sur
                     de Florida. Pinecrest, un pueblo suburbano ideal, cuenta con
-                    proximidad y fácil acceso a la Bahía de Biscayne, extraordinarios
+                    proximidad y f�cil acceso a la Bahía de Biscayne, extraordinarios
                     parques públicos, excelentes tiendas y algunas de las mejores
                     escuelas públicas y privadas del sureste.
                 </p>
@@ -43,9 +44,9 @@ export default function PineParkVillas() {
                 <ul>
                     <li>4 Dormitorios, 3 Baños, 2 Tocadores</li>
 
-                    <li>2,858 pies cuadrados – 3,145 pies cuadrados habitables</li>
+                    <li>2,858 pies cuadrados � 3,145 pies cuadrados habitables</li>
 
-                    <li>3,451 pies cuadrados – 3,725 pies cuadrados en total</li>
+                    <li>3,451 pies cuadrados � 3,725 pies cuadrados en total</li>
 
                     <li>Sala de estar/Medios/Sala familiar</li>
 
@@ -55,7 +56,7 @@ export default function PineParkVillas() {
 
                     <li>Espacios habitables de varios niveles</li>
 
-                    <li>Amplias recámaras con walk-in closets</li>
+                    <li>Amplias recÁmaras con walk-in closets</li>
 
                     <li>
                         Los patios traseros privados son la base de estas casas únicas.
@@ -82,8 +83,8 @@ export default function PineParkVillas() {
         ),
     };
     PineParkVillasObject.introduccion = [
-        "Pine Park Villas está estableciendo el nuevo estándar de vida en casas adosadas de lujo en uno de los vecindarios más atractivos del sur de Florida. Pinecrest, un pueblo suburbano ideal, cuenta con proximidad y fácil acceso a la Bahía de Biscayne, extraordinarios parques públicos, excelentes tiendas y algunas de las mejores escuelas públicas y privadas del sureste.",
-        "The Village of Pinecrest fue reconocido como uno de los diez mejores lugares de Florida por su calidad de vida en general por el South Florida Business Journal. Pine Park Villas ofrece una ubicación ideal en Pinecrest con fácil acceso al centro de Miami, Coral Gables y el aeropuerto internacional de Miami.      ",
+        "Pine Park Villas est� estableciendo el nuevo est�ndar de vida en casas adosadas de lujo en uno de los vecindarios m�s atractivos del sur de Florida. Pinecrest, un pueblo suburbano ideal, cuenta con proximidad y f�cil acceso a la Bahía de Biscayne, extraordinarios parques públicos, excelentes tiendas y algunas de las mejores escuelas públicas y privadas del sureste.",
+        "The Village of Pinecrest fue reconocido como uno de los diez mejores lugares de Florida por su calidad de vida en general por el South Florida Business Journal. Pine Park Villas ofrece una ubicación ideal en Pinecrest con fÁcil acceso al centro de Miami, Coral Gables y el aeropuerto internacional de Miami.      ",
     ];
     PineParkVillasObject.titulo = "Pine Park Villas";
     PineParkVillasObject.slogan = "Estilo de vida redefinido";
@@ -101,3 +102,4 @@ export default function PineParkVillas() {
 
     return PineParkVillasObject;
 }
+

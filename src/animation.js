@@ -13,7 +13,7 @@
  **/
 var _gsScope =
     "undefined" != typeof module && module.exports && "undefined" != typeof global
-        ? global
+         global
         : this || window;
 (_gsScope._gsQueue || (_gsScope._gsQueue = [])).push(function () {
     "use strict";
@@ -34,12 +34,12 @@ var _gsScope =
                         f = a.cycle;
                     for (d in f)
                         (e = f[d]),
-                            (a[d] = "function" == typeof e ? e(c, b[c], b) : e[c % e.length]);
+                            (a[d] = "function" == typeof e  e(c, b[c], b) : e[c % e.length]);
                     delete a.cycle;
                 },
                 f = function (a) {
                     if ("function" == typeof a) return a;
-                    var b = "object" == typeof a ? a : {each: a},
+                    var b = "object" == typeof a  a : {each: a},
                         c = b.ease,
                         d = b.from || 0,
                         e = b.base || 0,
@@ -60,7 +60,7 @@ var _gsScope =
                             u = (k || b).length,
                             v = f[u];
                         if (!v) {
-                            if (((t = "auto" === b.grid ? 0 : (b.grid || [1 / 0])[0]), !t)) {
+                            if (((t = "auto" === b.grid  0 : (b.grid || [1 / 0])[0]), !t)) {
                                 for (
                                     r = -(1 / 0);
                                     r < (r = k[t++].BoundingClientRect.left) && u > t;
@@ -69,8 +69,8 @@ var _gsScope =
                             }
                             for (
                                 v = f[u] = [],
-                                    l = g ? Math.min(t, u) * i - 0.5 : d % t,
-                                    m = g ? (u * i) / t - 0.5 : (d / t) | 0,
+                                    l = g  Math.min(t, u) * i - 0.5 : d % t,
+                                    m = g  (u * i) / t - 0.5 : (d / t) | 0,
                                     r = 0,
                                     s = 1 / 0,
                                     q = 0;
@@ -80,7 +80,7 @@ var _gsScope =
                                 (n = (q % t) - l),
                                     (o = m - ((q / t) | 0)),
                                     (v[q] = p =
-                                        h ? Math.abs("y" === h ? o : n) : Math.sqrt(n * n + o * o)),
+                                        h  Math.abs("y" === h  o : n) : Math.sqrt(n * n + o * o)),
                                 p > r && (r = p),
                                 s > p && (s = p);
                             (v.max = r - s),
@@ -89,17 +89,17 @@ var _gsScope =
                                     b.amount ||
                                     b.each *
                                     (t > u
-                                        ? u - 1
+                                         u - 1
                                         : h
-                                            ? "y" === h
-                                                ? u / t
+                                             "y" === h
+                                                 u / t
                                                 : t
                                             : Math.max(t, u / t)) ||
                                     0),
-                                (v.b = 0 > u ? e - u : e);
+                                (v.b = 0 > u  e - u : e);
                         }
                         return (
-                            (u = (v[a] - v.min) / v.max), v.b + (c ? c.getRatio(u) : u) * v.v
+                            (u = (v[a] - v.min) / v.max), v.b + (c  c.getRatio(u) : u) * v.v
                         );
                     };
                 },
@@ -147,7 +147,7 @@ var _gsScope =
                     ((e._startTime = e._timeline._time),
                         e._uncache(!1),
                         e._gc
-                            ? e._enabled(!0, !1)
+                             e._enabled(!0, !1)
                             : e._timeline.insert(e, e._startTime - e._delay));
                     for (d in a) e.vars[d] = a[d];
                     if (e._initted || g)
@@ -179,7 +179,7 @@ var _gsScope =
                         n,
                         o,
                         p = this,
-                        q = p._dirty ? p.totalDuration() : p._totalDuration,
+                        q = p._dirty  p.totalDuration() : p._totalDuration,
                         r = p._time,
                         s = p._totalTime,
                         t = p._cycle,
@@ -187,13 +187,13 @@ var _gsScope =
                         v = p._rawPrevTime;
                     if (
                         (a >= q - h && a >= 0
-                            ? ((p._totalTime = q),
+                             ((p._totalTime = q),
                                 (p._cycle = p._repeat),
                                 p._yoyo && 0 !== (1 & p._cycle)
-                                    ? ((p._time = 0),
-                                        (p.ratio = p._ease._calcEnd ? p._ease.getRatio(0) : 0))
+                                     ((p._time = 0),
+                                        (p.ratio = p._ease._calcEnd  p._ease.getRatio(0) : 0))
                                     : ((p._time = u),
-                                        (p.ratio = p._ease._calcEnd ? p._ease.getRatio(1) : 1)),
+                                        (p.ratio = p._ease._calcEnd  p._ease.getRatio(1) : 1)),
                             p._reversed ||
                             ((e = !0),
                                 (f = "onComplete"),
@@ -206,20 +206,20 @@ var _gsScope =
                                 (v === h && "isPause" !== p.data)) &&
                             v !== a &&
                             ((d = !0), v > h && (f = "onReverseComplete")),
-                                (p._rawPrevTime = n = !b || a || v === a ? a : h)))
+                                (p._rawPrevTime = n = !b || a || v === a  a : h)))
                             : h > a
-                                ? ((p._totalTime = p._time = p._cycle = 0),
-                                    (p.ratio = p._ease._calcEnd ? p._ease.getRatio(0) : 0),
+                                 ((p._totalTime = p._time = p._cycle = 0),
+                                    (p.ratio = p._ease._calcEnd  p._ease.getRatio(0) : 0),
                                 (0 !== s || (0 === u && v > 0)) &&
                                 ((f = "onReverseComplete"), (e = p._reversed)),
                                     a > -h
-                                        ? (a = 0)
+                                         (a = 0)
                                         : 0 > a &&
                                         ((p._active = !1),
                                         0 === u &&
                                         (p._initted || !p.vars.lazy || d) &&
                                         (v >= 0 && (d = !0),
-                                            (p._rawPrevTime = n = !b || a || v === a ? a : h))),
+                                            (p._rawPrevTime = n = !b || a || v === a  a : h))),
                                 p._initted || (d = !0))
                                 : ((p._totalTime = p._time = a),
                                 0 !== p._repeat &&
@@ -237,43 +237,43 @@ var _gsScope =
                                 o &&
                                 (p._yoyoEase ||
                                 (o !== !0 || p._initted
-                                    ? (p._yoyoEase = o =
+                                     (p._yoyoEase = o =
                                         o === !0
-                                            ? p._ease
+                                             p._ease
                                             : o instanceof Ease
-                                                ? o
+                                                 o
                                                 : Ease.map[o])
                                     : ((o = p.vars.ease),
                                         (p._yoyoEase = o =
                                             o
-                                                ? o instanceof Ease
-                                                    ? o
+                                                 o instanceof Ease
+                                                     o
                                                     : "function" == typeof o
-                                                        ? new Ease(o, p.vars.easeParams)
+                                                         new Ease(o, p.vars.easeParams)
                                                         : Ease.map[o] || c.defaultEase
                                                 : c.defaultEase))),
-                                    (p.ratio = o ? 1 - o.getRatio((u - p._time) / u) : 0))),
-                                    p._time > u ? (p._time = u) : p._time < 0 && (p._time = 0)),
+                                    (p.ratio = o  1 - o.getRatio((u - p._time) / u) : 0))),
+                                    p._time > u  (p._time = u) : p._time < 0 && (p._time = 0)),
                                     p._easeType && !o
-                                        ? ((k = p._time / u),
+                                         ((k = p._time / u),
                                             (l = p._easeType),
                                             (m = p._easePower),
                                         (1 === l || (3 === l && k >= 0.5)) && (k = 1 - k),
                                         3 === l && (k *= 2),
                                             1 === m
-                                                ? (k *= k)
+                                                 (k *= k)
                                                 : 2 === m
-                                                    ? (k *= k * k)
+                                                     (k *= k * k)
                                                     : 3 === m
-                                                        ? (k *= k * k * k)
+                                                         (k *= k * k * k)
                                                         : 4 === m && (k *= k * k * k * k),
                                             (p.ratio =
                                                 1 === l
-                                                    ? 1 - k
+                                                     1 - k
                                                     : 2 === l
-                                                        ? k
+                                                         k
                                                         : p._time / u < 0.5
-                                                            ? k / 2
+                                                             k / 2
                                                             : 1 - k / 2))
                                         : o || (p.ratio = p._ease.getRatio(p._time / u))),
                         r === p._time && !d && t === p._cycle)
@@ -300,10 +300,10 @@ var _gsScope =
                                     void (p._lazy = [a, b])
                             );
                         !p._time || e || o
-                            ? e &&
+                             e &&
                             this._ease._calcEnd &&
                             !o &&
-                            (p.ratio = p._ease.getRatio(0 === p._time ? 0 : 1))
+                            (p.ratio = p._ease.getRatio(0 === p._time  0 : 1))
                             : (p.ratio = p._ease.getRatio(p._time / u));
                     }
                     for (
@@ -314,7 +314,7 @@ var _gsScope =
                         (2 === p._initted && a > 0 && p._init(),
                         p._startAt &&
                         (a >= 0
-                            ? p._startAt.render(a, !0, d)
+                             p._startAt.render(a, !0, d)
                             : f || (f = "_dummyGS")),
                         p.vars.onStart &&
                         (0 !== p._totalTime || 0 === u) &&
@@ -323,7 +323,7 @@ var _gsScope =
                         g;
                     )
                         g.f
-                            ? g.t[g.p](g.c * p.ratio + g.s)
+                             g.t[g.p](g.c * p.ratio + g.s)
                             : (g.t[g.p] = g.c * p.ratio + g.s),
                             (g = g._next);
                     p._onUpdate &&
@@ -448,7 +448,7 @@ var _gsScope =
             var n = function (a, b) {
                     for (var d = [], e = 0, f = a._first; f;)
                         f instanceof c
-                            ? (d[e++] = f)
+                             (d[e++] = f)
                             : (b && (d[e++] = f), (d = d.concat(n(f, b))), (e = d.length)),
                             (f = f._next);
                     return d;
@@ -471,7 +471,7 @@ var _gsScope =
                         ((f = g.target === g.vars.onComplete) && d) ||
                         (c && !f)) &&
                     (a
-                        ? g.totalTime(g._reversed ? 0 : g.totalDuration())
+                         g.totalTime(g._reversed  0 : g.totalDuration())
                         : g._enabled(!1, !1));
             }),
                 (g.killChildTweensOf = function (a, b) {
@@ -520,7 +520,7 @@ var _gsScope =
                         var d = a._rootTimeline,
                             e = c.ticker.time;
                         return arguments.length
-                            ? ((b = b || h),
+                             ((b = b || h),
                                 (d._startTime = e - ((e - d._startTime) * d._timeScale) / b),
                                 (d = a._rootFramesTimeline),
                                 (e = c.ticker.frame),
@@ -531,19 +531,19 @@ var _gsScope =
                     }),
                     (l.progress = function (a, b) {
                         return arguments.length
-                            ? this.totalTime(
+                             this.totalTime(
                                 this.duration() *
-                                (this._yoyo && 0 !== (1 & this._cycle) ? 1 - a : a) +
+                                (this._yoyo && 0 !== (1 & this._cycle)  1 - a : a) +
                                 this._cycle * (this._duration + this._repeatDelay),
                                 b
                             )
                             : this.duration()
-                                ? this._time / this._duration
+                                 this._time / this._duration
                                 : this.ratio;
                     }),
                     (l.totalProgress = function (a, b) {
                         return arguments.length
-                            ? this.totalTime(this.totalDuration() * a, b)
+                             this.totalTime(this.totalDuration() * a, b)
                             : this._totalTime / this.totalDuration();
                     }),
                     (l.time = function (a, b) {
@@ -555,27 +555,27 @@ var _gsScope =
                         return (
                             a > c && (a = c),
                                 this.totalTime(
-                                    this._yoyo && 1 & d ? c - a + e : this._repeat ? a + e : a,
+                                    this._yoyo && 1 & d  c - a + e : this._repeat  a + e : a,
                                     b
                                 )
                         );
                     }),
                     (l.duration = function (b) {
                         return arguments.length
-                            ? a.prototype.duration.call(this, b)
+                             a.prototype.duration.call(this, b)
                             : this._duration;
                     }),
                     (l.totalDuration = function (a) {
                         return arguments.length
-                            ? -1 === this._repeat
-                                ? this
+                             -1 === this._repeat
+                                 this
                                 : this.duration(
                                     (a - this._repeat * this._repeatDelay) / (this._repeat + 1)
                                 )
                             : (this._dirty &&
                             ((this._totalDuration =
                                 -1 === this._repeat
-                                    ? 999999999999
+                                     999999999999
                                     : this._duration * (this._repeat + 1) +
                                     this._repeatDelay * this._repeat),
                                 (this._dirty = !1)),
@@ -583,16 +583,16 @@ var _gsScope =
                     }),
                     (l.repeat = function (a) {
                         return arguments.length
-                            ? ((this._repeat = a), this._uncache(!0))
+                             ((this._repeat = a), this._uncache(!0))
                             : this._repeat;
                     }),
                     (l.repeatDelay = function (a) {
                         return arguments.length
-                            ? ((this._repeatDelay = a), this._uncache(!0))
+                             ((this._repeatDelay = a), this._uncache(!0))
                             : this._repeatDelay;
                     }),
                     (l.yoyo = function (a) {
-                        return arguments.length ? ((this._yoyo = a), this) : this._yoyo;
+                        return arguments.length  ((this._yoyo = a), this) : this._yoyo;
                     }),
                     g
             );
@@ -642,7 +642,7 @@ var _gsScope =
                         for (d in f)
                             (e = f[d]),
                                 (a[d] =
-                                    "function" == typeof e ? e(c, b[c], b) : e[c % e.length]);
+                                    "function" == typeof e  e(c, b[c], b) : e[c % e.length]);
                         delete a.cycle;
                     },
                     o = (g.pauseCallback = function () {
@@ -660,7 +660,7 @@ var _gsScope =
                     },
                     r = function (a) {
                         if ("function" == typeof a) return a;
-                        var b = "object" == typeof a ? a : {each: a},
+                        var b = "object" == typeof a  a : {each: a},
                             c = b.ease,
                             d = b.from || 0,
                             e = b.base || 0,
@@ -682,7 +682,7 @@ var _gsScope =
                                 v = f[u];
                             if (!v) {
                                 if (
-                                    ((t = "auto" === b.grid ? 0 : (b.grid || [1 / 0])[0]), !t)
+                                    ((t = "auto" === b.grid  0 : (b.grid || [1 / 0])[0]), !t)
                                 ) {
                                     for (
                                         r = -(1 / 0);
@@ -692,8 +692,8 @@ var _gsScope =
                                 }
                                 for (
                                     v = f[u] = [],
-                                        l = g ? Math.min(t, u) * i - 0.5 : d % t,
-                                        m = g ? (u * i) / t - 0.5 : (d / t) | 0,
+                                        l = g  Math.min(t, u) * i - 0.5 : d % t,
+                                        m = g  (u * i) / t - 0.5 : (d / t) | 0,
                                         r = 0,
                                         s = 1 / 0,
                                         q = 0;
@@ -704,7 +704,7 @@ var _gsScope =
                                         (o = m - ((q / t) | 0)),
                                         (v[q] = p =
                                             h
-                                                ? Math.abs("y" === h ? o : n)
+                                                 Math.abs("y" === h  o : n)
                                                 : Math.sqrt(n * n + o * o)),
                                     p > r && (r = p),
                                     s > p && (s = p);
@@ -714,18 +714,18 @@ var _gsScope =
                                         b.amount ||
                                         b.each *
                                         (t > u
-                                            ? u - 1
+                                             u - 1
                                             : h
-                                                ? "y" === h
-                                                    ? u / t
+                                                 "y" === h
+                                                     u / t
                                                     : t
                                                 : Math.max(t, u / t)) ||
                                         0),
-                                    (v.b = 0 > u ? e - u : e);
+                                    (v.b = 0 > u  e - u : e);
                             }
                             return (
                                 (u = (v[a] - v.min) / v.max),
-                                v.b + (c ? c.getRatio(u) : u) * v.v
+                                v.b + (c  c.getRatio(u) : u) * v.v
                             );
                         };
                     },
@@ -737,7 +737,7 @@ var _gsScope =
                         (s.kill()._gc = s._forcingPlayhead = s._hasPause = !1),
                         (s.to = function (a, b, d, e) {
                             var f = (d.repeat && l.TweenMax) || c;
-                            return b ? this.add(new f(a, b, d), e) : this.set(a, d, e);
+                            return b  this.add(new f(a, b, d), e) : this.set(a, d, e);
                         }),
                         (s.from = function (a, b, d, e) {
                             return this.add(
@@ -749,7 +749,7 @@ var _gsScope =
                             var g = (e.repeat && l.TweenMax) || c;
                             return (
                                 (e = q(this, e, d)),
-                                    b ? this.add(g.fromTo(a, b, d, e), f) : this.set(a, e, f)
+                                    b  this.add(g.fromTo(a, b, d, e), f) : this.set(a, e, f)
                             );
                         }),
                         (s.staggerTo = function (a, b, e, f, g, i, j, k) {
@@ -846,7 +846,7 @@ var _gsScope =
                                         "string" != typeof m &&
                                         "function" != typeof m &&
                                         ("sequence" === g
-                                            ? (j = m._startTime + m.totalDuration() / m._timeScale)
+                                             (j = m._startTime + m.totalDuration() / m._timeScale)
                                             : "start" === g && (m._startTime -= m.delay())),
                                             (j += h);
                                     return p._uncache(!0);
@@ -875,7 +875,7 @@ var _gsScope =
                             )
                                 for (n = p, o = n.rawTime() > e._startTime; n._timeline;)
                                     o && n._timeline.smoothChildTiming
-                                        ? n.totalTime(n._totalTime, !0)
+                                         n.totalTime(n._totalTime, !0)
                                         : n._gc && n._enabled(!0, !1),
                                         (n = n._timeline);
                             return p;
@@ -884,13 +884,13 @@ var _gsScope =
                             if (b instanceof a) {
                                 this._remove(b, !1);
                                 var c = (b._timeline = b.vars.useFrames
-                                    ? a._rootFramesTimeline
+                                     a._rootFramesTimeline
                                     : a._rootTimeline);
                                 return (
                                     (b._startTime =
-                                        (b._paused ? b._pauseTime : c._time) -
+                                        (b._paused  b._pauseTime : c._time) -
                                         (b._reversed
-                                            ? b.totalDuration() - b._totalTime
+                                             b.totalDuration() - b._totalTime
                                             : b._totalTime) /
                                         b._timeScale),
                                         this
@@ -901,7 +901,7 @@ var _gsScope =
                                 return this;
                             }
                             return "string" == typeof b
-                                ? this.removeLabel(b)
+                                 this.removeLabel(b)
                                 : this.kill(null, b);
                         }),
                         (s._remove = function (a, c) {
@@ -909,7 +909,7 @@ var _gsScope =
                             var d = this._last;
                             return (
                                 d
-                                    ? this._time > this.duration() &&
+                                     this._time > this.duration() &&
                                     ((this._time = this._duration),
                                         (this._totalTime = this._totalDuration))
                                     : (this._time =
@@ -946,7 +946,7 @@ var _gsScope =
                             return delete this._labels[a], this;
                         }),
                         (s.getLabelTime = function (a) {
-                            return null != this._labels[a] ? this._labels[a] : -1;
+                            return null != this._labels[a]  this._labels[a] : -1;
                         }),
                         (s._parseTimeOrLabel = function (b, c, d, e) {
                             var f, g;
@@ -959,8 +959,8 @@ var _gsScope =
                             if (
                                 ((f =
                                     "number" != typeof b || c
-                                        ? this.duration() > 99999999999
-                                            ? this.recent().endTime(!1)
+                                         this.duration() > 99999999999
+                                             this.recent().endTime(!1)
                                             : this._duration
                                         : 0),
                                 "string" == typeof c)
@@ -968,7 +968,7 @@ var _gsScope =
                                 return this._parseTimeOrLabel(
                                     c,
                                     d && "number" == typeof b && null == this._labels[c]
-                                        ? b - f
+                                         b - f
                                         : 0,
                                     d
                                 );
@@ -980,20 +980,20 @@ var _gsScope =
                             else {
                                 if (((g = b.indexOf("=")), -1 === g))
                                     return null == this._labels[b]
-                                        ? d
-                                            ? (this._labels[b] = f + c)
+                                         d
+                                             (this._labels[b] = f + c)
                                             : c
                                         : this._labels[b] + c;
                                 (c =
                                     parseInt(b.charAt(g - 1) + "1", 10) * Number(b.substr(g + 1))),
                                     (b =
-                                        g > 1 ? this._parseTimeOrLabel(b.substr(0, g - 1), 0, d) : f);
+                                        g > 1  this._parseTimeOrLabel(b.substr(0, g - 1), 0, d) : f);
                             }
                             return Number(b) + c;
                         }),
                         (s.seek = function (a, b) {
                             return this.totalTime(
-                                "number" == typeof a ? a : this._parseTimeOrLabel(a),
+                                "number" == typeof a  a : this._parseTimeOrLabel(a),
                                 b !== !1
                             );
                         }),
@@ -1018,7 +1018,7 @@ var _gsScope =
                                 n,
                                 o = this,
                                 p = o._time,
-                                q = o._dirty ? o.totalDuration() : o._totalDuration,
+                                q = o._dirty  o.totalDuration() : o._totalDuration,
                                 r = o._startTime,
                                 s = o._timeScale,
                                 t = o._paused;
@@ -1043,7 +1043,7 @@ var _gsScope =
                                 ((o._time = o._totalTime = a = l._startTime),
                                     (n =
                                         o._startTime +
-                                        (o._reversed ? o._duration - a : a) / o._timeScale));
+                                        (o._reversed  o._duration - a : a) / o._timeScale));
                             }
                             if (a >= q - e && a >= 0)
                                 (o._totalTime = o._time = q),
@@ -1061,7 +1061,7 @@ var _gsScope =
                                 ((i = !0),
                                 o._rawPrevTime > e && (h = "onReverseComplete"))),
                                     (o._rawPrevTime =
-                                        o._duration || !b || a || o._rawPrevTime === a ? a : e),
+                                        o._duration || !b || a || o._rawPrevTime === a  a : e),
                                     (a = q + 1e-4);
                             else if (e > a)
                                 if (
@@ -1076,13 +1076,13 @@ var _gsScope =
                                 )
                                     (o._active = !1),
                                         o._timeline.autoRemoveChildren && o._reversed
-                                            ? ((i = f = !0), (h = "onReverseComplete"))
+                                             ((i = f = !0), (h = "onReverseComplete"))
                                             : o._rawPrevTime >= 0 && o._first && (i = !0),
                                         (o._rawPrevTime = a);
                                 else {
                                     if (
                                         ((o._rawPrevTime =
-                                            o._duration || !b || a || o._rawPrevTime === a ? a : e),
+                                            o._duration || !b || a || o._rawPrevTime === a  a : e),
                                         0 === a && f)
                                     )
                                         for (d = o._first; d && 0 === d._startTime;)
@@ -1110,8 +1110,8 @@ var _gsScope =
                                         (d._active || (d._startTime <= m && !d._paused && !d._gc)) &&
                                         (l === d && (o.pause(), (o._pauseTime = n)),
                                             d._reversed
-                                                ? d.render(
-                                                    (d._dirty ? d.totalDuration() : d._totalDuration) -
+                                                 d.render(
+                                                    (d._dirty  d.totalDuration() : d._totalDuration) -
                                                     (a - d._startTime) * d._timeScale,
                                                     b,
                                                     c
@@ -1131,7 +1131,7 @@ var _gsScope =
                                                 for (l = d._prev; l && l.endTime() > o._time;)
                                                     l.render(
                                                         l._reversed
-                                                            ? l.totalDuration() -
+                                                             l.totalDuration() -
                                                             (a - l._startTime) * l._timeScale
                                                             : (a - l._startTime) * l._timeScale,
                                                         b,
@@ -1141,8 +1141,8 @@ var _gsScope =
                                                 (l = null), o.pause(), (o._pauseTime = n);
                                             }
                                             d._reversed
-                                                ? d.render(
-                                                    (d._dirty ? d.totalDuration() : d._totalDuration) -
+                                                 d.render(
+                                                    (d._dirty  d.totalDuration() : d._totalDuration) -
                                                     (a - d._startTime) * d._timeScale,
                                                     b,
                                                     c
@@ -1176,7 +1176,7 @@ var _gsScope =
                             for (var f = [], g = this._first, h = 0; g;)
                                 g._startTime < e ||
                                 (g instanceof c
-                                    ? b !== !1 && (f[h++] = g)
+                                     b !== !1 && (f[h++] = g)
                                     : (d !== !1 && (f[h++] = g),
                                     a !== !1 &&
                                     ((f = f.concat(g.getChildren(!0, b, d))),
@@ -1218,7 +1218,7 @@ var _gsScope =
                         (s._kill = function (a, b) {
                             if (!a && !b) return this._enabled(!1, !1);
                             for (
-                                var c = b ? this.getTweensOf(b) : this.getChildren(!0, !0, !1),
+                                var c = b  this.getTweensOf(b) : this.getChildren(!0, !0, !1),
                                     d = c.length,
                                     e = !1;
                                 --d > -1;
@@ -1249,7 +1249,7 @@ var _gsScope =
                         }),
                         (s.duration = function (a) {
                             return arguments.length
-                                ? (0 !== this.duration() &&
+                                 (0 !== this.duration() &&
                                 0 !== a &&
                                 this.timeScale(this._duration / a),
                                     this)
@@ -1268,7 +1268,7 @@ var _gsScope =
                                             e._sortChildren &&
                                             !f._paused &&
                                             !e._calculatingDuration
-                                                ? ((e._calculatingDuration = 1),
+                                                 ((e._calculatingDuration = 1),
                                                     e.add(f, f._startTime - f._delay),
                                                     (e._calculatingDuration = 0))
                                                 : (g = f._startTime),
@@ -1290,7 +1290,7 @@ var _gsScope =
                                 return this._totalDuration;
                             }
                             return a && this.totalDuration()
-                                ? this.timeScale(this._totalDuration / a)
+                                 this.timeScale(this._totalDuration / a)
                                 : this;
                         }),
                         (s.paused = function (b) {
@@ -1310,9 +1310,9 @@ var _gsScope =
                             return a &&
                             (this._paused ||
                                 (this._repeat && this.time() > 0 && this.totalProgress() < 1))
-                                ? this._totalTime % (this._duration + this._repeatDelay)
+                                 this._totalTime % (this._duration + this._repeatDelay)
                                 : this._paused
-                                    ? this._totalTime
+                                     this._totalTime
                                     : (this._timeline.rawTime(a) - this._startTime) * this._timeScale;
                         }),
                         d
@@ -1438,7 +1438,7 @@ var _gsScope =
                                 o,
                                 p = this,
                                 q = p._time,
-                                r = p._dirty ? p.totalDuration() : p._totalDuration,
+                                r = p._dirty  p.totalDuration() : p._totalDuration,
                                 s = p._duration,
                                 t = p._totalTime,
                                 u = p._startTime,
@@ -1459,9 +1459,9 @@ var _gsScope =
                                 p._first &&
                                 ((k = !0), w > e && (j = "onReverseComplete"))),
                                     (p._rawPrevTime =
-                                        p._duration || !b || a || p._rawPrevTime === a ? a : e),
+                                        p._duration || !b || a || p._rawPrevTime === a  a : e),
                                     p._yoyo && 1 & p._cycle
-                                        ? (p._time = a = 0)
+                                         (p._time = a = 0)
                                         : ((p._time = s), (a = s + 1e-4));
                             else if (e > a)
                                 if (
@@ -1478,13 +1478,13 @@ var _gsScope =
                                 )
                                     (p._active = !1),
                                         p._timeline.autoRemoveChildren && p._reversed
-                                            ? ((k = f = !0), (j = "onReverseComplete"))
+                                             ((k = f = !0), (j = "onReverseComplete"))
                                             : w >= 0 && p._first && (k = !0),
                                         (p._rawPrevTime = a);
                                 else {
                                     if (
                                         ((p._rawPrevTime =
-                                            s || !b || a || p._rawPrevTime === a ? a : e),
+                                            s || !b || a || p._rawPrevTime === a  a : e),
                                         0 === a && f)
                                     )
                                         for (d = p._first; d && 0 === d._startTime;)
@@ -1506,9 +1506,9 @@ var _gsScope =
                                     (p._time = p._totalTime - p._cycle * l),
                                 p._yoyo && 1 & p._cycle && (p._time = s - p._time),
                                     p._time > s
-                                        ? ((p._time = s), (a = s + 1e-4))
+                                         ((p._time = s), (a = s + 1e-4))
                                         : p._time < 0
-                                            ? (p._time = a = 0)
+                                             (p._time = a = 0)
                                             : (a = p._time)));
                             if (p._hasPause && !p._forcingPlayhead && !b) {
                                 if (((a = p._time), a > q || (p._repeat && y !== p._cycle)))
@@ -1527,7 +1527,7 @@ var _gsScope =
                                 m &&
                                 ((o =
                                     p._startTime +
-                                    (p._reversed ? p._duration - m._startTime : m._startTime) /
+                                    (p._reversed  p._duration - m._startTime : m._startTime) /
                                     p._timeScale),
                                 m._startTime < s &&
                                 ((p._time = p._rawPrevTime = a = m._startTime),
@@ -1543,12 +1543,12 @@ var _gsScope =
                                     E = p._time;
                                 if (
                                     ((p._totalTime = y * s),
-                                        p._cycle < y ? (z = !z) : (p._totalTime += s),
+                                        p._cycle < y  (z = !z) : (p._totalTime += s),
                                         (p._time = q),
-                                        (p._rawPrevTime = 0 === s ? w - 1e-4 : w),
+                                        (p._rawPrevTime = 0 === s  w - 1e-4 : w),
                                         (p._cycle = y),
                                         (p._locked = !0),
-                                        (q = z ? 0 : s),
+                                        (q = z  0 : s),
                                         p.render(q, b, 0 === s),
                                     b ||
                                     p._gc ||
@@ -1563,7 +1563,7 @@ var _gsScope =
                                     (A &&
                                     ((p._cycle = y),
                                         (p._locked = !0),
-                                        (q = z ? s + 1e-4 : -1e-4),
+                                        (q = z  s + 1e-4 : -1e-4),
                                         p.render(q, !0, !1)),
                                         (p._locked = !1),
                                     p._paused && !x)
@@ -1600,8 +1600,8 @@ var _gsScope =
                                         (d._startTime <= p._time && !d._paused && !d._gc)) &&
                                     (m === d && (p.pause(), (p._pauseTime = o)),
                                         d._reversed
-                                            ? d.render(
-                                                (d._dirty ? d.totalDuration() : d._totalDuration) -
+                                             d.render(
+                                                (d._dirty  d.totalDuration() : d._totalDuration) -
                                                 (a - d._startTime) * d._timeScale,
                                                 b,
                                                 c
@@ -1618,7 +1618,7 @@ var _gsScope =
                                             for (m = d._prev; m && m.endTime() > p._time;)
                                                 m.render(
                                                     m._reversed
-                                                        ? m.totalDuration() -
+                                                         m.totalDuration() -
                                                         (a - m._startTime) * m._timeScale
                                                         : (a - m._startTime) * m._timeScale,
                                                     b,
@@ -1628,8 +1628,8 @@ var _gsScope =
                                             (m = null), p.pause(), (p._pauseTime = o);
                                         }
                                         d._reversed
-                                            ? d.render(
-                                                (d._dirty ? d.totalDuration() : d._totalDuration) -
+                                             d.render(
+                                                (d._dirty  d.totalDuration() : d._totalDuration) -
                                                 (a - d._startTime) * d._timeScale,
                                                 b,
                                                 c
@@ -1674,7 +1674,7 @@ var _gsScope =
                                 if (b[c].time < a) return b[c].name;
                             return null;
                         }),
-                        (k.LabelsArray = function  {
+                        (k.LabelsArray = function () {
                             var a,
                                 b = [],
                                 c = 0;
@@ -1691,9 +1691,9 @@ var _gsScope =
                         }),
                         (k.progress = function (a, b) {
                             return arguments.length
-                                ? this.totalTime(
+                                 this.totalTime(
                                     this.duration() *
-                                    (this._yoyo && 0 !== (1 & this._cycle) ? 1 - a : a) +
+                                    (this._yoyo && 0 !== (1 & this._cycle)  1 - a : a) +
                                     this._cycle * (this._duration + this._repeatDelay),
                                     b
                                 )
@@ -1701,19 +1701,19 @@ var _gsScope =
                         }),
                         (k.totalProgress = function (a, b) {
                             return arguments.length
-                                ? this.totalTime(this.totalDuration() * a, b)
+                                 this.totalTime(this.totalDuration() * a, b)
                                 : this._totalTime / this.totalDuration() || 0;
                         }),
                         (k.totalDuration = function (b) {
                             return arguments.length
-                                ? -1 !== this._repeat && b
-                                    ? this.timeScale(this.totalDuration() / b)
+                                 -1 !== this._repeat && b
+                                     this.timeScale(this.totalDuration() / b)
                                     : this
                                 : (this._dirty &&
                                 (a.prototype.totalDuration.call(this),
                                     (this._totalDuration =
                                         -1 === this._repeat
-                                            ? 999999999999
+                                             999999999999
                                             : this._duration * (this._repeat + 1) +
                                             this._repeatDelay * this._repeat)),
                                     this._totalDuration);
@@ -1727,27 +1727,27 @@ var _gsScope =
                             return (
                                 a > c && (a = c),
                                     this.totalTime(
-                                        this._yoyo && 1 & d ? c - a + e : this._repeat ? a + e : a,
+                                        this._yoyo && 1 & d  c - a + e : this._repeat  a + e : a,
                                         b
                                     )
                             );
                         }),
                         (k.repeat = function (a) {
                             return arguments.length
-                                ? ((this._repeat = a), this._uncache(!0))
+                                 ((this._repeat = a), this._uncache(!0))
                                 : this._repeat;
                         }),
                         (k.repeatDelay = function (a) {
                             return arguments.length
-                                ? ((this._repeatDelay = a), this._uncache(!0))
+                                 ((this._repeatDelay = a), this._uncache(!0))
                                 : this._repeatDelay;
                         }),
                         (k.yoyo = function (a) {
-                            return arguments.length ? ((this._yoyo = a), this) : this._yoyo;
+                            return arguments.length  ((this._yoyo = a), this) : this._yoyo;
                         }),
                         (k.currentLabel = function (a) {
                             return arguments.length
-                                ? this.seek(a, !0)
+                                 this.seek(a, !0)
                                 : this.getLabelBefore(this._time + e);
                         }),
                         d
@@ -1820,11 +1820,11 @@ var _gsScope =
                             (l = n.d),
                             (m = a[x + 1].d),
                             h
-                                ? ((t = b[j]),
+                                 ((t = b[j]),
                                     (u = c[j]),
-                                    (v = ((u + t) * e * 0.25) / (g ? 0.5 : d[j] || 0.5)),
-                                    (o = l - (l - k) * (g ? 0.5 * e : 0 !== t ? v / t : 0)),
-                                    (p = l + (m - l) * (g ? 0.5 * e : 0 !== u ? v / u : 0)),
+                                    (v = ((u + t) * e * 0.25) / (g  0.5 : d[j] || 0.5)),
+                                    (o = l - (l - k) * (g  0.5 * e : 0 !== t  v / t : 0)),
+                                    (p = l + (m - l) * (g  0.5 * e : 0 !== u  v / u : 0)),
                                     (q =
                                         l - (o + (((p - o) * ((3 * t) / (t + u) + 0.5)) / 4 || 0))))
                                 : ((o = l - (l - k) * e * 0.5),
@@ -1833,12 +1833,12 @@ var _gsScope =
                             (o += q),
                             (p += q),
                             (n.c = r = o),
-                            0 !== j ? (n.b = y) : (n.b = y = n.a + 0.6 * (n.c - n.a)),
+                            0 !== j  (n.b = y) : (n.b = y = n.a + 0.6 * (n.c - n.a)),
                             (n.da = l - k),
                             (n.ca = r - k),
                             (n.ba = y - k),
                             f
-                                ? ((s = i(k, y, r, l)),
+                                 ((s = i(k, y, r, l)),
                                     a.splice(x, 1, s[0], s[1], s[2], s[3]),
                                     (x += 4))
                                 : x++,
@@ -1890,7 +1890,7 @@ var _gsScope =
                         v = {},
                         w = [],
                         x = m || a[0];
-                    (l = "string" == typeof l ? "," + l + "," : h), null == f && (f = 1);
+                    (l = "string" == typeof l  "," + l + "," : h), null == f && (f = 1);
                     for (o in a[0]) w.push(o);
                     if (a.length > 1) {
                         for (u = a[a.length - 1], t = !0, n = w.length; --n > -1;)
@@ -1918,7 +1918,7 @@ var _gsScope =
                                         (d[q] = (d[q] || 0) + r * r);
                         for (n = d.length; --n > -1;) d[n] = Math.sqrt(d[n]);
                     }
-                    for (n = w.length, q = g ? 4 : 1; --n > -1;)
+                    for (n = w.length, q = g  4 : 1; --n > -1;)
                         (o = w[n]),
                             (p = v[o]),
                             j(p, f, g, i, e[o]),
@@ -1939,7 +1939,7 @@ var _gsScope =
                         n,
                         o,
                         p = {},
-                        q = "cubic" === b ? 3 : 2,
+                        q = "cubic" === b  3 : 2,
                         r = "soft" === b,
                         s = [];
                     if ((r && c && (a = [c].concat(a)), null == a || a.length < q + 1))
@@ -1953,9 +1953,9 @@ var _gsScope =
                         )
                             (d =
                                 null == c
-                                    ? a[k][m]
+                                     a[k][m]
                                     : "string" == typeof (o = a[k][m]) && "=" === o.charAt(1)
-                                        ? c[m] + Number(o.charAt(0) + o.substr(2))
+                                         c[m] + Number(o.charAt(0) + o.substr(2))
                                         : Number(o)),
                             r && k > 1 && l - 1 > k && (i[n++] = (d + i[n - 2]) / 2),
                                 (i[n++] = d);
@@ -1963,10 +1963,10 @@ var _gsScope =
                             (d = i[k]),
                                 (e = i[k + 1]),
                                 (f = i[k + 2]),
-                                (h = 2 === q ? 0 : i[k + 3]),
+                                (h = 2 === q  0 : i[k + 3]),
                                 (i[n++] = o =
                                     3 === q
-                                        ? new g(d, e, f, h)
+                                         new g(d, e, f, h)
                                         : new g(d, (2 * e + d) / 3, (2 * e + f) / 3, f));
                         i.length = n;
                     }
@@ -2034,7 +2034,7 @@ var _gsScope =
                             (this._mod = {}),
                             (this._props = []),
                             (this._timeRes =
-                                null == b.timeResolution ? 6 : parseInt(b.timeResolution, 10));
+                                null == b.timeResolution  6 : parseInt(b.timeResolution, 10));
                         var d,
                             e,
                             f,
@@ -2045,9 +2045,9 @@ var _gsScope =
                             k = i[0],
                             n = b.autoRotate || c.vars.orientToBezier;
                         this._autoRotate = n
-                            ? n instanceof Array
-                                ? n
-                                : [["x", "y", "rotation", n === !0 ? 0 : Number(n) || 0]]
+                             n instanceof Array
+                                 n
+                                : [["x", "y", "rotation", n === !0  0 : Number(n) || 0]]
                             : null;
                         for (d in k) this._props.push(d);
                         for (f = this._props.length; --f > -1;)
@@ -2055,10 +2055,10 @@ var _gsScope =
                                 this._overwriteProps.push(d),
                                 (e = this._func[d] = "function" == typeof a[d]),
                                 (j[d] = e
-                                    ? a[
+                                     a[
                                         d.indexOf("set") ||
                                         "function" != typeof a["get" + d.substr(3)]
-                                            ? d
+                                             d
                                             : "get" + d.substr(3)
                                         ]()
                                     : parseFloat(a[d])),
@@ -2068,9 +2068,9 @@ var _gsScope =
                                 "cubic" !== b.type &&
                                 "quadratic" !== b.type &&
                                 "soft" !== b.type
-                                    ? l(
+                                     l(
                                         i,
-                                        isNaN(b.curviness) ? 1 : b.curviness,
+                                        isNaN(b.curviness)  1 : b.curviness,
                                         !1,
                                         "thruBasic" === b.type,
                                         b.correlate,
@@ -2101,21 +2101,21 @@ var _gsScope =
                                     (d = n[f][g]),
                                         (this._func[d] =
                                             "function" == typeof a[d]
-                                                ? a[
+                                                 a[
                                                     d.indexOf("set") ||
                                                     "function" != typeof a["get" + d.substr(3)]
-                                                        ? d
+                                                         d
                                                         : "get" + d.substr(3)
                                                     ]
                                                 : !1);
                                 (d = n[f][2]),
                                     (this._initialRotations[f] =
                                         (this._func[d]
-                                            ? this._func[d].call(this._target)
+                                             this._func[d].call(this._target)
                                             : this._target[d]) || 0),
                                     this._overwriteProps.push(d);
                             }
-                        return (this._startRatio = c.vars.runBackwards ? 1 : 0), !0;
+                        return (this._startRatio = c.vars.runBackwards  1 : 0), !0;
                     },
                     set: function (b) {
                         var c,
@@ -2148,7 +2148,7 @@ var _gsScope =
                                     (this._s2 = l[(this._s1 = this._si = 0)]);
                             } else if (m < this._l1 && e > 0) {
                                 for (; e > 0 && (this._l1 = k[--e]) >= m;) ;
-                                0 === e && m < this._l1 ? (this._l1 = 0) : e++,
+                                0 === e && m < this._l1  (this._l1 = 0) : e++,
                                     (this._l2 = k[e]),
                                     (this._li = e),
                                     (this._curSeg = l = this._segments[e]),
@@ -2165,24 +2165,24 @@ var _gsScope =
                                 (this._s1 = l[e - 1]), (this._si = e);
                             } else if (m < this._s1 && e > 0) {
                                 for (; e > 0 && (this._s1 = l[--e]) >= m;) ;
-                                0 === e && m < this._s1 ? (this._s1 = 0) : e++,
+                                0 === e && m < this._s1  (this._s1 = 0) : e++,
                                     (this._s2 = l[e]),
                                     (this._si = e);
                             }
                             h =
                                 1 === b
-                                    ? 1
+                                     1
                                     : (e + (m - this._s1) / (this._s2 - this._s1)) * this._prec ||
                                     0;
                         } else
-                            (c = 0 > b ? 0 : b >= 1 ? n - 1 : (n * b) >> 0),
+                            (c = 0 > b  0 : b >= 1  n - 1 : (n * b) >> 0),
                                 (h = (b - c * (1 / n)) * n);
                         for (d = 1 - h, e = this._props.length; --e > -1;)
                             (f = this._props[e]),
                                 (g = this._beziers[f][c]),
                                 (i = (h * h * g.da + 3 * d * (h * g.ca + d * g.ba)) * h + g.a),
                             this._mod[f] && (i = this._mod[f](i, p)),
-                                o[f] ? p[f](i) : (p[f] = i);
+                                o[f]  p[f](i) : (p[f] = i);
                         if (this._autoRotate) {
                             var r,
                                 s,
@@ -2195,7 +2195,7 @@ var _gsScope =
                             for (e = y.length; --e > -1;)
                                 (f = y[e][2]),
                                     (w = y[e][3] || 0),
-                                    (x = y[e][4] === !0 ? 1 : a),
+                                    (x = y[e][4] === !0  1 : a),
                                     (g = this._beziers[y[e][0]]),
                                     (r = this._beziers[y[e][1]]),
                                 g &&
@@ -2211,10 +2211,10 @@ var _gsScope =
                                     (t += (v - t) * h),
                                     (v += (r.c + (r.d - r.c) * h - v) * h),
                                     (i = q
-                                        ? Math.atan2(v - t, u - s) * x + w
+                                         Math.atan2(v - t, u - s) * x + w
                                         : this._initialRotations[e]),
                                 this._mod[f] && (i = this._mod[f](i, p)),
-                                    o[f] ? p[f](i) : (p[f] = i));
+                                    o[f]  p[f](i) : (p[f] = i));
                         }
                     },
                 }),
@@ -2255,12 +2255,12 @@ var _gsScope =
                                     0 === q.autoRotate && (q.autoRotate = !0),
                                     !q.autoRotate ||
                                     q.autoRotate instanceof Array ||
-                                    ((j = q.autoRotate === !0 ? 0 : Number(q.autoRotate)),
+                                    ((j = q.autoRotate === !0  0 : Number(q.autoRotate)),
                                         (q.autoRotate =
                                             null != l.end.left
-                                                ? [["left", "top", "rotation", j, !1]]
+                                                 [["left", "top", "rotation", j, !1]]
                                                 : null != l.end.x
-                                                    ? [["x", "y", "rotation", j, !1]]
+                                                     [["x", "y", "rotation", j, !1]]
                                                     : !1)),
                                     q.autoRotate &&
                                     (g._transform || g._enableTransforms(!1),
@@ -2338,26 +2338,26 @@ var _gsScope =
                     p,
                     q,
                     r,
-                    s = /(?:\-|\.|\b)(\d|\.|e\-)+/g,
-                    t = /(?:\d|\-\d|\.\d|\-\.\d|\+=\d|\-=\d|\+=.\d|\-=\.\d)+/g,
-                    u = /(?:\+=|\-=|\-|\b)[\d\-\.]+[a-zA-Z0-9]*(?:%|\b)/gi,
-                    v = /(?:\+=|\-=|\-|\b)[\d\-\.]+[a-zA-Z0-9]*(?:%|\b),?/gi,
-                    w = /(?![+-]?\d*\.?\d+|[+-]|e[+-]\d+)[^0-9]/g,
-                    x = /(?:\d|\-|\+|=|#|\.)*/g,
+                    s = /(:\-|\.|\b)(\d|\.|e\-)+/g,
+                    t = /(:\d|\-\d|\.\d|\-\.\d|\+=\d|\-=\d|\+=.\d|\-=\.\d)+/g,
+                    u = /(:\+=|\-=|\-|\b)[\d\-\.]+[a-zA-Z0-9]*(:%|\b)/gi,
+                    v = /(:\+=|\-=|\-|\b)[\d\-\.]+[a-zA-Z0-9]*(:%|\b),/gi,
+                    w = /(![+-]\d*\.\d+|[+-]|e[+-]\d+)[^0-9]/g,
+                    x = /(:\d|\-|\+|=|#|\.)*/g,
                     y = /opacity *= *([^)]*)/i,
                     z = /opacity:([^;]*)/i,
-                    A = /alpha\(opacity *=.+?\)/i,
+                    A = /alpha\(opacity *=.+\)/i,
                     B = /^(rgb|hsl)/,
                     C = /([A-Z])/g,
                     D = /-([a-z])/gi,
-                    E = /(^(?:url\(\"|url\())|(?:(\"\))$|\)$)/gi,
+                    E = /(^(:url\(\"|url\())|(:(\"\))$|\)$)/gi,
                     F = function (a, b) {
                         return b.toUpperCase();
                     },
-                    G = /(?:Left|Right|Width)/i,
+                    G = /(:Left|Right|Width)/i,
                     H = /(M11|M12|M21|M22)=[\d\-\.e]+/gi,
-                    I = /progid\:DXImageTransform\.Microsoft\.Matrix\(.+?\)/i,
-                    J = /,(?=[^\)]*(?:\(|$))/gi,
+                    I = /progid\:DXImageTransform\.Microsoft\.Matrix\(.+\)/i,
+                    J = /,(=[^\)]*(:\(|$))/gi,
                     K = /[\s,\(]/i,
                     L = Math.PI / 180,
                     M = 180 / Math.PI,
@@ -2370,9 +2370,9 @@ var _gsScope =
                     },
                     Q = function (a, b) {
                         var c = P.createElementNS
-                            ? P.createElementNS(b || "http://www.w3.org/1999/xhtml", a)
+                             P.createElementNS(b || "http://www.w3.org/1999/xhtml", a)
                             : P.createElement(a);
-                        return c.style ? c : P.createElement(a);
+                        return c.style  c : P.createElement(a);
                     },
                     R = Q("div"),
                     S = Q("img"),
@@ -2392,7 +2392,7 @@ var _gsScope =
                                 /Trident\/.*rv:([0-9]{1,}[\.0-9]{0,})/.exec(U)) &&
                             (p = parseFloat(RegExp.$1)),
                                 b
-                                    ? ((b.style.cssText = "top:1px;opacity:.55;"),
+                                     ((b.style.cssText = "top:1px;opacity:.55;"),
                                         /^0.55/.test(b.style.opacity))
                                     : !1
                         );
@@ -2400,11 +2400,11 @@ var _gsScope =
                     W = function (a) {
                         return y.test(
                             "string" == typeof a
-                                ? a
-                                : (a.currentStyle ? a.currentStyle.filter : a.style.filter) ||
+                                 a
+                                : (a.currentStyle  a.currentStyle.filter : a.style.filter) ||
                                 ""
                         )
-                            ? parseFloat(RegExp.$1) / 100
+                             parseFloat(RegExp.$1) / 100
                             : 1;
                     },
                     X = function (a) {
@@ -2425,14 +2425,14 @@ var _gsScope =
                             --d > -1 && void 0 === e[c[d] + a];
                         ) ;
                         return d >= 0
-                            ? ((Z = 3 === d ? "ms" : c[d]),
+                             ((Z = 3 === d  "ms" : c[d]),
                                 (Y = "-" + Z.toLowerCase() + "-"),
                             Z + a)
                             : null;
                     },
                     _ =
                         "undefined" != typeof window
-                            ? window
+                             window
                             : P.defaultView || {
                             ComputedStyle: function  {
                             }
@@ -2443,17 +2443,17 @@ var _gsScope =
                     ba = (g.getStyle = function (a, b, c, d, e) {
                         var f;
                         return V || "opacity" !== b
-                            ? (!d && a.style[b]
-                                ? (f = a.style[b])
+                             (!d && a.style[b]
+                                 (f = a.style[b])
                                 : (c = c || aa(a))
-                                    ? (f =
+                                     (f =
                                         c[b] ||
                                         c.getPropertyValue(b) ||
                                         c.PropertyValue(b.replace(C, "-$1").toLowerCase))
                                     : a.currentStyle && (f = a.currentStyle[b]),
                                 null == e ||
                                 (f && "none" !== f && "auto" !== f && "auto auto" !== f)
-                                    ? f
+                                     f
                                     : e)
                             : W(a);
                     }),
@@ -2470,7 +2470,7 @@ var _gsScope =
                             o = 1 === d;
                         if ((n && (d = -d), o && (d *= 100), "lineHeight" !== c || e))
                             if ("%" === e && -1 !== c.indexOf("border"))
-                                h = (d / 100) * (k ? a.clientWidth : a.clientHeight);
+                                h = (d / 100) * (k  a.clientWidth : a.clientHeight);
                             else {
                                 if (
                                     ((m.cssText =
@@ -2482,7 +2482,7 @@ var _gsScope =
                                     "v" !== e.charAt(0) &&
                                     "rem" !== e)
                                 )
-                                    m[k ? "borderLeftWidth" : "borderTopWidth"] = d + e;
+                                    m[k  "borderLeftWidth" : "borderTopWidth"] = d + e;
                                 else {
                                     if (
                                         ((l = a.parentNode || P.body),
@@ -2493,10 +2493,10 @@ var _gsScope =
                                         i && k && i.time === j)
                                     )
                                         return (i.width * d) / 100;
-                                    m[k ? "width" : "height"] = d + e;
+                                    m[k  "width" : "height"] = d + e;
                                 }
                                 l.appendChild(R),
-                                    (h = parseFloat(R[k ? "offsetWidth" : "offsetHeight"])),
+                                    (h = parseFloat(R[k  "offsetWidth" : "offsetHeight"])),
                                     l.removeChild(R),
                                 k &&
                                 "%" === e &&
@@ -2511,11 +2511,11 @@ var _gsScope =
                                 (a.style.lineHeight = d),
                                 (h = parseFloat(aa(a).lineHeight)),
                                 (a.style.lineHeight = i);
-                        return o && (h /= 100), n ? -h : h;
+                        return o && (h /= 100), n  -h : h;
                     }),
                     da = (T.calculateOffset = function (a, b, c) {
                         if ("absolute" !== ba(a, "position", c)) return 0;
-                        var d = "left" === b ? "Left" : "Top",
+                        var d = "left" === b  "Left" : "Top",
                             e = ba(a, "margin" + d, c);
                         return (
                             a["offset" + d] - (ca(a, b, parseFloat(e), e.replace(x, "")) || 0)
@@ -2573,10 +2573,10 @@ var _gsScope =
                             ("number" == typeof f || "string" == typeof f) &&
                             ((i[g] =
                                 "auto" !== f || ("left" !== g && "top" !== g)
-                                    ? ("" !== f && "auto" !== f && "none" !== f) ||
+                                     ("" !== f && "auto" !== f && "none" !== f) ||
                                     "string" != typeof b[g] ||
                                     "" === b[g].replace(w, "")
-                                        ? f
+                                         f
                                         : 0
                                     : da(a, g)),
                             void 0 !== j[g] && (h = new ua(j, g, j[g], h)));
@@ -2589,7 +2589,7 @@ var _gsScope =
                         if ("svg" === (a.nodeName + "").toLowerCase())
                             return (c || aa(a))[b] || 0;
                         if (a.CTM && Qa(a)) return a.getBBox[b] || 0;
-                        var d = parseFloat("width" === b ? a.offsetWidth : a.offsetHeight),
+                        var d = parseFloat("width" === b  a.offsetWidth : a.offsetHeight),
                             e = ga[b],
                             f = e.length;
                         for (c = c || aa(a, null); --f > -1;)
@@ -2605,15 +2605,15 @@ var _gsScope =
                             d = a.split(" "),
                             e =
                                 -1 !== a.indexOf("left")
-                                    ? "0%"
+                                     "0%"
                                     : -1 !== a.indexOf("right")
-                                        ? "100%"
+                                         "100%"
                                         : d[0],
                             f =
                                 -1 !== a.indexOf("top")
-                                    ? "0%"
+                                     "0%"
                                     : -1 !== a.indexOf("bottom")
-                                        ? "100%"
+                                         "100%"
                                         : d[1];
                         if (d.length > 3 && !b) {
                             for (
@@ -2626,12 +2626,12 @@ var _gsScope =
                         }
                         return (
                             null == f
-                                ? (f = "center" === e ? "50%" : "0")
+                                 (f = "center" === e  "50%" : "0")
                                 : "center" === f && (f = "50%"),
                             ("center" === e ||
                                 (isNaN(parseFloat(e)) && -1 === (e + "").indexOf("="))) &&
                             (e = "50%"),
-                                (a = e + " " + f + (d.length > 2 ? " " + d[2] : "")),
+                                (a = e + " " + f + (d.length > 2  " " + d[2] : "")),
                             b &&
                             ((b.oxp = -1 !== e.indexOf("%")),
                                 (b.oyp = -1 !== f.indexOf("%")),
@@ -2647,7 +2647,7 @@ var _gsScope =
                         return (
                             "function" == typeof a && (a = a(r, q)),
                                 "string" == typeof a && "=" === a.charAt(1)
-                                    ? parseInt(a.charAt(0) + "1", 10) * parseFloat(a.substr(2))
+                                     parseInt(a.charAt(0) + "1", 10) * parseFloat(a.substr(2))
                                     : parseFloat(a) - parseFloat(b) || 0
                         );
                     },
@@ -2658,15 +2658,15 @@ var _gsScope =
                             "string" == typeof a &&
                             "v" === a.charAt(a.length - 2) &&
                             (a =
-                                (c ? a.substr(0, 2) : 0) +
+                                (c  a.substr(0, 2) : 0) +
                                 window[
-                                "inner" + ("vh" === a.substr(-2) ? "Height" : "Width")
+                                "inner" + ("vh" === a.substr(-2)  "Height" : "Width")
                                     ] *
-                                (parseFloat(c ? a.substr(2) : a) / 100)),
+                                (parseFloat(c  a.substr(2) : a) / 100)),
                                 null == a
-                                    ? b
+                                     b
                                     : c
-                                        ? parseInt(a.charAt(0) + "1", 10) * parseFloat(a.substr(2)) + b
+                                         parseInt(a.charAt(0) + "1", 10) * parseFloat(a.substr(2)) + b
                                         : parseFloat(a) || 0
                         );
                     },
@@ -2680,26 +2680,26 @@ var _gsScope =
                         return (
                             "function" == typeof a && (a = a(r, q)),
                                 null == a
-                                    ? (h = b)
+                                     (h = b)
                                     : "number" == typeof a
-                                        ? (h = a)
+                                         (h = a)
                                         : ((e = 360),
                                             (f = a.split("_")),
                                             (i = "=" === a.charAt(1)),
                                             (g =
                                                 (i
-                                                    ? parseInt(a.charAt(0) + "1", 10) *
+                                                     parseInt(a.charAt(0) + "1", 10) *
                                                     parseFloat(f[0].substr(2))
                                                     : parseFloat(f[0])) *
-                                                (-1 === a.indexOf("rad") ? 1 : M) -
-                                                (i ? 0 : b)),
+                                                (-1 === a.indexOf("rad")  1 : M) -
+                                                (i  0 : b)),
                                         f.length &&
                                         (d && (d[c] = b + g),
                                         -1 !== a.indexOf("short") &&
                                         ((g %= e),
-                                        g !== g % (e / 2) && (g = 0 > g ? g + e : g - e)),
+                                        g !== g % (e / 2) && (g = 0 > g  g + e : g - e)),
                                             -1 !== a.indexOf("_cw") && 0 > g
-                                                ? (g = ((g + 9999999999 * e) % e) - ((g / e) | 0) * e)
+                                                 (g = ((g + 9999999999 * e) % e) - ((g / e) | 0) * e)
                                                 : -1 !== a.indexOf("ccw") &&
                                                 g > 0 &&
                                                 (g = ((g - 9999999999 * e) % e) - ((g / e) | 0) * e)),
@@ -2732,14 +2732,14 @@ var _gsScope =
                     },
                     oa = function (a, b, c) {
                         return (
-                            (a = 0 > a ? a + 1 : a > 1 ? a - 1 : a),
+                            (a = 0 > a  a + 1 : a > 1  a - 1 : a),
                             (255 *
                                 (1 > 6 * a
-                                    ? b + (c - b) * a * 6
+                                     b + (c - b) * a * 6
                                     : 0.5 > a
-                                        ? c
+                                         c
                                         : 2 > 3 * a
-                                            ? b + (c - b) * (2 / 3 - a) * 6
+                                             b + (c - b) * (2 / 3 - a) * 6
                                             : b) +
                                 0.5) |
                             0
@@ -2771,7 +2771,7 @@ var _gsScope =
                                         (g = (Number(c[0]) % 360) / 360),
                                             (h = Number(c[1]) / 100),
                                             (i = Number(c[2]) / 100),
-                                            (e = 0.5 >= i ? i * (h + 1) : i + h - i * h),
+                                            (e = 0.5 >= i  i * (h + 1) : i + h - i * h),
                                             (d = 2 * i - e),
                                         c.length > 3 && (c[3] = Number(c[3])),
                                             (c[0] = oa(g + 1 / 3, d, e)),
@@ -2794,14 +2794,14 @@ var _gsScope =
                                 (k = Math.min(d, e, f)),
                                 (i = (j + k) / 2),
                                 j === k
-                                    ? (g = h = 0)
+                                     (g = h = 0)
                                     : ((l = j - k),
-                                        (h = i > 0.5 ? l / (2 - j - k) : l / (j + k)),
+                                        (h = i > 0.5  l / (2 - j - k) : l / (j + k)),
                                         (g =
                                             j === d
-                                                ? (e - f) / l + (f > e ? 6 : 0)
+                                                 (e - f) / l + (f > e  6 : 0)
                                                 : j === e
-                                                    ? (f - d) / l + 2
+                                                     (f - d) / l + 2
                                                     : (d - e) / l + 4),
                                         (g *= 60)),
                                 (c[0] = (g + 0.5) | 0),
@@ -2827,13 +2827,13 @@ var _gsScope =
                                 (h +=
                                     e +
                                     (b
-                                        ? "hsla(" + d[0] + "," + d[1] + "%," + d[2] + "%," + d[3]
+                                         "hsla(" + d[0] + "," + d[1] + "%," + d[2] + "%," + d[3]
                                         : "rgba(" + d.join(",")) +
                                     ")");
                         return h + a.substr(g);
                     },
                     ra =
-                        "(?:\\b(?:(?:rgb|rgba|hsl|hsla)\\(.+?\\))|\\B#(?:[0-9a-f]{3}){1,2}\\b";
+                        "(:\\b(:(:rgb|rgba|hsl|hsla)\\(.+\\))|\\B#(:[0-9a-f]{3}){1,2}\\b";
                 for (j in na) ra += "|" + j + "\\b";
                 (ra = new RegExp(ra + ")", "gi")),
                     (g.colorStringFilter = function (a) {
@@ -2853,16 +2853,16 @@ var _gsScope =
                                 return a;
                             };
                         var e,
-                            f = b ? (a.match(ra) || [""])[0] : "",
+                            f = b  (a.match(ra) || [""])[0] : "",
                             g = a.split(f).join("").match(u) || [],
                             h = a.substr(0, a.indexOf(g[0])),
-                            i = ")" === a.charAt(a.length - 1) ? ")" : "",
-                            j = -1 !== a.indexOf(" ") ? " " : ",",
+                            i = ")" === a.charAt(a.length - 1)  ")" : "",
+                            j = -1 !== a.indexOf(" ")  " " : ",",
                             k = g.length,
-                            l = k > 0 ? g[0].replace(s, "") : "";
+                            l = k > 0  g[0].replace(s, "") : "";
                         return k
-                            ? (e = b
-                                ? function (a) {
+                             (e = b
+                                 function (a) {
                                     var b, m, n, o;
                                     if ("number" == typeof a) a += l;
                                     else if (d && J.test(a)) {
@@ -2881,14 +2881,14 @@ var _gsScope =
                                         k > n--)
                                     )
                                         for (; ++n < k;)
-                                            m[n] = c ? m[((n - 1) / 2) | 0] : g[n];
+                                            m[n] = c  m[((n - 1) / 2) | 0] : g[n];
                                     return (
                                         h +
                                         m.join(j) +
                                         j +
                                         b +
                                         i +
-                                        (-1 !== a.indexOf("inset") ? " inset" : "")
+                                        (-1 !== a.indexOf("inset")  " inset" : "")
                                     );
                                 }
                                 : function (a) {
@@ -2904,15 +2904,15 @@ var _gsScope =
                                         return f.join(",");
                                     }
                                     if (
-                                        ((b = a.match("," === j ? u : v) || []),
+                                        ((b = a.match("," === j  u : v) || []),
                                             (m = b.length),
                                         k > m--)
                                     )
                                         for (; ++m < k;)
-                                            b[m] = c ? b[((m - 1) / 2) | 0] : g[m];
+                                            b[m] = c  b[((m - 1) / 2) | 0] : g[m];
                                     return (
                                         (h && "none" !== a
-                                            ? a.substr(0, a.indexOf(b[0])) || h
+                                             a.substr(0, a.indexOf(b[0])) || h
                                             : h) +
                                         b.join(j) +
                                         i
@@ -2950,17 +2950,17 @@ var _gsScope =
                                 i;
                             )
                                 (b = h[i.v]),
-                                    i.r ? (b = i.r(b)) : j > b && b > -j && (b = 0),
+                                    i.r  (b = i.r(b)) : j > b && b > -j && (b = 0),
                                     (i.t[i.p] = b),
                                     (i = i._next);
                             if (
                                 (g.autoRotate &&
                                 (g.autoRotate.rotation = g.mod
-                                    ? g.mod.call(this._tween, h.rotation, this.t, this._tween)
+                                     g.mod.call(this._tween, h.rotation, this.t, this._tween)
                                     : h.rotation),
                                 1 === a || 0 === a)
                             )
-                                for (i = g.firstMPT, f = 1 === a ? "e" : "b"; i;) {
+                                for (i = g.firstMPT, f = 1 === a  "e" : "b"; i;) {
                                     if (((c = i.t), c.type)) {
                                         if (1 === c.type) {
                                             for (e = c.xs0 + c.s + c.xs1, d = 1; d < c.l; d++)
@@ -3025,11 +3025,11 @@ var _gsScope =
                                     (this.c = e),
                                     (this.n = i || b),
                                 a instanceof va || f.push(this.n),
-                                    (this.r = j ? ("function" == typeof j ? j : Math.round) : j),
+                                    (this.r = j  ("function" == typeof j  j : Math.round) : j),
                                     (this.type = h || 0),
                                 k && ((this.pr = k), (c = !0)),
-                                    (this.b = void 0 === l ? d : l),
-                                    (this.e = void 0 === m ? d + e : m),
+                                    (this.b = void 0 === l  d : l),
+                                    (this.e = void 0 === m  d + e : m),
                                 g && ((this._next = g), (g._prev = this));
                             })),
                     wa = function (a, b, c, d, e, f) {
@@ -3039,7 +3039,7 @@ var _gsScope =
                     xa = (g.parseComplex = function (a, b, c, d, e, f, h, i, j, l) {
                         (c = c || f || ""),
                         "function" == typeof d && (d = d(r, q)),
-                            (h = new va(a, b, 0, 0, h, l ? 2 : 1, null, !1, i, c, d)),
+                            (h = new va(a, b, 0, 0, h, l  2 : 1, null, !1, i, c, d)),
                             (d += ""),
                         e &&
                         ra.test(d + c) &&
@@ -3064,7 +3064,7 @@ var _gsScope =
                         for (
                             (-1 !== d.indexOf(",") || -1 !== c.indexOf(",")) &&
                             (-1 !== (d + c).indexOf("rgb") || -1 !== (d + c).indexOf("hsl")
-                                ? ((D = D.join(" ").replace(J, ", ").split(" ")),
+                                 ((D = D.join(" ").replace(J, ", ").split(" ")),
                                     (E = E.join(" ").replace(J, ", ").split(" ")))
                                 : ((D = D.join(" ").split(",").join(", ").split(" ")),
                                     (E = E.join(" ").split(",").join(", ").split(" "))),
@@ -3085,26 +3085,26 @@ var _gsScope =
                                     x,
                                     ka(u, x),
                                     u.replace(t, ""),
-                                    G && -1 !== u.indexOf("px") ? Math.round : !1,
+                                    G && -1 !== u.indexOf("px")  Math.round : !1,
                                     !0
                                 );
                             else if (e && ra.test(p))
                                 (B = u.indexOf(")") + 1),
-                                    (B = ")" + (B ? u.substr(B) : "")),
+                                    (B = ")" + (B  u.substr(B) : "")),
                                     (C = -1 !== u.indexOf("hsl") && V),
                                     (z = u),
                                     (p = pa(p, C)),
                                     (u = pa(u, C)),
                                     (y = p.length + u.length > 6),
                                     y && !V && 0 === u[3]
-                                        ? ((h["xs" + h.l] += h.l ? " transparent" : "transparent"),
+                                         ((h["xs" + h.l] += h.l  " transparent" : "transparent"),
                                             (h.e = h.e.split(E[m]).join("transparent")))
                                         : (V || (y = !1),
                                             C
-                                                ? h
+                                                 h
                                                     .appendXtra(
                                                         z.substr(0, z.indexOf("hsl")) +
-                                                        (y ? "hsla(" : "hsl("),
+                                                        (y  "hsla(" : "hsl("),
                                                         p[0],
                                                         ka(u[0], p[0]),
                                                         ",",
@@ -3116,13 +3116,13 @@ var _gsScope =
                                                         "",
                                                         p[2],
                                                         ka(u[2], p[2]),
-                                                        y ? "%," : "%" + B,
+                                                        y  "%," : "%" + B,
                                                         !1
                                                     )
                                                 : h
                                                     .appendXtra(
                                                         z.substr(0, z.indexOf("rgb")) +
-                                                        (y ? "rgba(" : "rgb("),
+                                                        (y  "rgba(" : "rgb("),
                                                         p[0],
                                                         u[0] - p[0],
                                                         ",",
@@ -3134,15 +3134,15 @@ var _gsScope =
                                                         "",
                                                         p[2],
                                                         u[2] - p[2],
-                                                        y ? "," : B,
+                                                        y  "," : B,
                                                         Math.round
                                                     ),
                                         y &&
-                                        ((p = p.length < 4 ? 1 : p[3]),
+                                        ((p = p.length < 4  1 : p[3]),
                                             h.appendXtra(
                                                 "",
                                                 p,
-                                                (u.length < 4 ? 1 : u[3]) - p,
+                                                (u.length < 4  1 : u[3]) - p,
                                                 B,
                                                 !1
                                             ))),
@@ -3157,12 +3157,12 @@ var _gsScope =
                                             Number(A),
                                             ka(w[n], A),
                                             "",
-                                            G && "px" === p.substr(z + A.length, 2) ? Math.round : !1,
+                                            G && "px" === p.substr(z + A.length, 2)  Math.round : !1,
                                             0 === n
                                         ),
                                         (o = z + A.length);
                                 h["xs" + h.l] += p.substr(o);
-                            } else h["xs" + h.l] += h.l || h["xs" + h.l] ? " " + u : u;
+                            } else h["xs" + h.l] += h.l || h["xs" + h.l]  " " + u : u;
                         if (-1 !== d.indexOf("=") && h.data) {
                             for (B = h.xs0 + h.data.s, m = 1; m < h.l; m++)
                                 B += h["xs" + m] + h.data["xn" + m];
@@ -3186,13 +3186,13 @@ var _gsScope =
                         var g = this,
                             h = g.l;
                         return (
-                            (g["xs" + h] += f && (h || g["xs" + h]) ? " " + a : a || ""),
+                            (g["xs" + h] += f && (h || g["xs" + h])  " " + a : a || ""),
                                 c || 0 === h || g.plugin
-                                    ? (g.l++,
-                                        (g.type = g.setRatio ? 2 : 1),
+                                     (g.l++,
+                                        (g.type = g.setRatio  2 : 1),
                                         (g["xs" + g.l] = d || ""),
                                         h > 0
-                                            ? ((g.data["xn" + h] = b + c),
+                                             ((g.data["xn" + h] = b + c),
                                                 (g.rxp["xn" + h] = e),
                                                 (g["xn" + h] = b),
                                             g.plugin ||
@@ -3220,7 +3220,7 @@ var _gsScope =
                     });
                 var za = function (a, b) {
                         (b = b || {}),
-                            (this.p = b.prefix ? $(a) || a : a),
+                            (this.p = b.prefix  $(a) || a : a),
                             (i[a] = i[this.p] = this),
                             (this.format =
                                 b.formatter ||
@@ -3251,7 +3251,7 @@ var _gsScope =
                                 parser: function (a, c, d, e, f, g, j) {
                                     var k = h.com.greensock.plugins[b];
                                     return k
-                                        ? (k._cssRegister(), i[d].parse(a, c, d, e, f, g, j))
+                                         (k._cssRegister(), i[d].parse(a, c, d, e, f, g, j))
                                         : (X("Error: " + b + " js file not loaded."), f);
                                 },
                             });
@@ -3269,13 +3269,13 @@ var _gsScope =
                         if (
                             (this.multi &&
                             (J.test(c) || J.test(b)
-                                ? ((h = b.replace(J, "|").split("|")),
+                                 ((h = b.replace(J, "|").split("|")),
                                     (i = c.replace(J, "|").split("|")))
                                 : m && ((h = [b]), (i = [c]))),
                                 i)
                         ) {
                             for (
-                                j = i.length > h.length ? i.length : h.length, g = 0;
+                                j = i.length > h.length  i.length : h.length, g = 0;
                                 j > g;
                                 g++
                             )
@@ -3286,7 +3286,7 @@ var _gsScope =
                                     (l = c.indexOf(m)),
                                 k !== l &&
                                 (-1 === l
-                                    ? (h[g] = h[g].split(m).join(""))
+                                     (h[g] = h[g].split(m).join(""))
                                     : -1 === k && (h[g] += " " + m)));
                             (b = h.join(", ")), (c = i.join(", "));
                         }
@@ -3324,7 +3324,7 @@ var _gsScope =
                         (this.perspective = parseFloat(g.defaultTransformPerspective) || 0),
                             (this.force3D =
                                 g.defaultForce3D !== !1 && Ha
-                                    ? g.defaultForce3D || "auto"
+                                     g.defaultForce3D || "auto"
                                     : !1);
                     }),
                     Ja = _gsScope.SVGElement,
@@ -3383,17 +3383,17 @@ var _gsScope =
                             x:
                                 parseFloat(
                                     a.hasAttribute("x")
-                                        ? a.getAttribute("x")
+                                         a.getAttribute("x")
                                         : a.hasAttribute("cx")
-                                            ? a.getAttribute("cx")
+                                             a.getAttribute("cx")
                                             : 0
                                 ) || 0,
                             y:
                                 parseFloat(
                                     a.hasAttribute("y")
-                                        ? a.getAttribute("y")
+                                         a.getAttribute("y")
                                         : a.hasAttribute("cy")
-                                            ? a.getAttribute("cy")
+                                             a.getAttribute("cy")
                                             : 0
                                 ) || 0,
                             width: 0,
@@ -3402,10 +3402,10 @@ var _gsScope =
                             (b = ja(b).split(" ")),
                             (h = [
                                 (-1 !== b[0].indexOf("%")
-                                    ? (parseFloat(b[0]) / 100) * n.width
+                                     (parseFloat(b[0]) / 100) * n.width
                                     : parseFloat(b[0])) + n.x,
                                 (-1 !== b[1].indexOf("%")
-                                    ? (parseFloat(b[1]) / 100) * n.height
+                                     (parseFloat(b[1]) / 100) * n.height
                                     : parseFloat(b[1])) + n.y,
                             ])),
                             (c.xOrigin = k = parseFloat(h[0])),
@@ -3428,7 +3428,7 @@ var _gsScope =
                         (f &&
                         ((c.xOffset = v.xOffset), (c.yOffset = v.yOffset), (v = c)),
                             e || (e !== !1 && g.defaultSmoothOrigin !== !1)
-                                ? ((i = k - t),
+                                 ((i = k - t),
                                     (j = l - u),
                                     (v.xOffset += i * w[0] + j * w[2] - i),
                                     (v.yOffset += i * w[1] + j * w[3] - j))
@@ -3460,7 +3460,7 @@ var _gsScope =
                             }
                         else this._originalBBox && (b = this._originalGetBBox);
                         return (
-                            e ? d.insertBefore(this, e) : d.appendChild(this),
+                            e  d.insertBefore(this, e) : d.appendChild(this),
                                 La.removeChild(c),
                                 (this.style.cssText = f),
                                 b
@@ -3495,12 +3495,12 @@ var _gsScope =
                             l = a.style;
                         if (
                             (Ea
-                                ? (d = ba(a, Fa, null, !0))
+                                 (d = ba(a, Fa, null, !0))
                                 : a.currentStyle &&
                                 ((d = a.currentStyle.filter.match(H)),
                                     (d =
                                         d && 4 === d.length
-                                            ? [
+                                             [
                                                 d[0].substr(4),
                                                 Number(d[2].substr(4)),
                                                 Number(d[1].substr(4)),
@@ -3521,12 +3521,12 @@ var _gsScope =
                             ((g = 1), (h = a.nextSibling), La.appendChild(a)),
                                 (d = ba(a, Fa, null, !0)),
                                 (c = !d || "none" === d || "matrix(1, 0, 0, 1, 0, 0)" === d),
-                                f ? (l.display = f) : Xa(l, "display"),
+                                f  (l.display = f) : Xa(l, "display"),
                             g &&
                             (h
-                                ? i.insertBefore(a, h)
+                                 i.insertBefore(a, h)
                                 : i
-                                    ? i.appendChild(a)
+                                     i.appendChild(a)
                                     : La.removeChild(a))),
                             (j.svg || (a.getCTM && Qa(a))) &&
                             (c &&
@@ -3557,10 +3557,10 @@ var _gsScope =
                         for (e = (d || "").match(s) || [], ya = e.length; --ya > -1;)
                             (f = Number(e[ya])),
                                 (e[ya] = (g = f - (f |= 0))
-                                    ? ((g * k + (0 > g ? -0.5 : 0.5)) | 0) / k + f
+                                     ((g * k + (0 > g  -0.5 : 0.5)) | 0) / k + f
                                     : f);
                         return b && e.length > 6
-                            ? [e[0], e[1], e[4], e[5], e[12], e[13]]
+                             [e[0], e[1], e[4], e[5], e[12], e[13]]
                             : e;
                     },
                     Ta = (T.getTransform = function (a, c, d, e) {
@@ -3571,12 +3571,12 @@ var _gsScope =
                             j,
                             k,
                             l,
-                            m = d ? a._gsTransform || new Ia() : new Ia(),
+                            m = d  a._gsTransform || new Ia() : new Ia(),
                             n = m.scaleX < 0,
                             o = 2e-5,
                             p = 1e5,
                             q = Ha
-                                ? parseFloat(ba(a, Ga, c, !1, "0 0 0").split(" ")[2]) ||
+                                 parseFloat(ba(a, Ga, c, !1, "0 0 0").split(" ")[2]) ||
                                 m.zOrigin ||
                                 0
                                 : 0,
@@ -3678,11 +3678,11 @@ var _gsScope =
                                     (y /= m.scaleX),
                                     (C /= m.scaleY),
                                     Math.abs(N) > o
-                                        ? ((m.skewX = N * M),
+                                         ((m.skewX = N * M),
                                             (B = 0),
                                         "simple" !== m.skewType && (m.scaleY *= 1 / Math.cos(N)))
                                         : (m.skewX = 0),
-                                    (m.perspective = L ? 1 / (0 > L ? -L : L) : 0),
+                                    (m.perspective = L  1 / (0 > L  -L : L) : 0),
                                     (m.x = I),
                                     (m.y = J),
                                     (m.z = K),
@@ -3698,16 +3698,16 @@ var _gsScope =
                                 (!m.rotationX && !m.rotationY)
                             ) {
                                 var O = f.length >= 6,
-                                    P = O ? f[0] : 1,
+                                    P = O  f[0] : 1,
                                     Q = f[1] || 0,
                                     R = f[2] || 0,
-                                    S = O ? f[3] : 1;
+                                    S = O  f[3] : 1;
                                 (m.x = f[4] || 0),
                                     (m.y = f[5] || 0),
                                     (i = Math.sqrt(P * P + Q * Q)),
                                     (j = Math.sqrt(S * S + R * R)),
-                                    (k = P || Q ? Math.atan2(Q, P) * M : m.rotation || 0),
-                                    (l = R || S ? Math.atan2(R, S) * M + k : m.skewX || 0),
+                                    (k = P || Q  Math.atan2(Q, P) * M : m.rotation || 0),
+                                    (l = R || S  Math.atan2(R, S) * M + k : m.skewX || 0),
                                     (m.scaleX = i),
                                     (m.scaleY = j),
                                     (m.rotation = k),
@@ -3723,10 +3723,10 @@ var _gsScope =
                             Math.abs(m.skewX) > 90 &&
                             Math.abs(m.skewX) < 270 &&
                             (n
-                                ? ((m.scaleX *= -1),
-                                    (m.skewX += m.rotation <= 0 ? 180 : -180),
-                                    (m.rotation += m.rotation <= 0 ? 180 : -180))
-                                : ((m.scaleY *= -1), (m.skewX += m.skewX <= 0 ? 180 : -180))),
+                                 ((m.scaleX *= -1),
+                                    (m.skewX += m.rotation <= 0  180 : -180),
+                                    (m.rotation += m.rotation <= 0  180 : -180))
+                                : ((m.scaleY *= -1), (m.skewX += m.skewX <= 0  180 : -180))),
                                 (m.zOrigin = q);
                             for (h in m) m[h] < o && m[h] > -o && (m[h] = 0);
                         }
@@ -3735,7 +3735,7 @@ var _gsScope =
                             ((a._gsTransform = m),
                             m.svg &&
                             (Ca && a.style[Ea]
-                                ? b.delayedCall(0.001, function () {
+                                 b.delayedCall(0.001, function () {
                                     Xa(a.style, Ea);
                                 })
                                 : !Ca &&
@@ -3779,12 +3779,12 @@ var _gsScope =
                                 v = d.y + (r * d.yPercent) / 100;
                             if (
                                 (null != d.ox &&
-                                ((n = (d.oxp ? q * d.ox * 0.01 : d.ox) - q / 2),
-                                    (o = (d.oyp ? r * d.oy * 0.01 : d.oy) - r / 2),
+                                ((n = (d.oxp  q * d.ox * 0.01 : d.ox) - q / 2),
+                                    (o = (d.oyp  r * d.oy * 0.01 : d.oy) - r / 2),
                                     (u += n - (n * h + o * i)),
                                     (v += o - (n * j + o * k))),
                                     s
-                                        ? ((n = q / 2),
+                                         ((n = q / 2),
                                             (o = r / 2),
                                             (t +=
                                                 ", Dx=" +
@@ -3794,7 +3794,7 @@ var _gsScope =
                                                 ")"))
                                         : (t += ", sizingMethod='auto expand')"),
                                     -1 !== b.indexOf("DXImageTransform.Microsoft.Matrix(")
-                                        ? (l.filter = b.replace(I, t))
+                                         (l.filter = b.replace(I, t))
                                         : (l.filter = t + " " + b),
                                 (0 === a || 1 === a) &&
                                 1 === h &&
@@ -3810,16 +3810,16 @@ var _gsScope =
                                 var w,
                                     z,
                                     A,
-                                    B = 8 > p ? 1 : -1;
+                                    B = 8 > p  1 : -1;
                                 for (
                                     n = d.ieOffsetX || 0,
                                         o = d.ieOffsetY || 0,
                                         d.ieOffsetX = Math.round(
-                                            (q - ((0 > h ? -h : h) * q + (0 > i ? -i : i) * r)) / 2 +
+                                            (q - ((0 > h  -h : h) * q + (0 > i  -i : i) * r)) / 2 +
                                             u
                                         ),
                                         d.ieOffsetY = Math.round(
-                                            (r - ((0 > k ? -k : k) * r + (0 > j ? -j : j) * q)) / 2 +
+                                            (r - ((0 > k  -k : k) * r + (0 > j  -j : j) * q)) / 2 +
                                             v
                                         ),
                                         ya = 0;
@@ -3830,19 +3830,19 @@ var _gsScope =
                                         (w = m[z]),
                                         (c =
                                             -1 !== w.indexOf("px")
-                                                ? parseFloat(w)
+                                                 parseFloat(w)
                                                 : ca(this.t, z, parseFloat(w), w.replace(x, "")) || 0),
                                         (A =
                                             c !== d[z]
-                                                ? 2 > ya
-                                                    ? -d.ieOffsetX
+                                                 2 > ya
+                                                     -d.ieOffsetX
                                                     : -d.ieOffsetY
                                                 : 2 > ya
-                                                    ? n - d.ieOffsetX
+                                                     n - d.ieOffsetX
                                                     : o - d.ieOffsetY),
                                         (l[z] =
                                             (d[z] = Math.round(
-                                                c - A * (0 === ya || 2 === ya ? 1 : B)
+                                                c - A * (0 === ya || 2 === ya  1 : B)
                                             )) + "px");
                             }
                         }
@@ -3906,7 +3906,7 @@ var _gsScope =
                                         !Ha)
                                     )
                                         return void (B || P || K
-                                            ? ((B *= L),
+                                             ((B *= L),
                                                 (x = P * L),
                                                 (y = 1e5),
                                                 (c = Math.cos(B) * E),
@@ -3955,10 +3955,10 @@ var _gsScope =
                                                     I +
                                                     ")"),
                                                 K && Ca
-                                                    ? this.t.setAttribute("transform", "matrix(" + u)
+                                                     this.t.setAttribute("transform", "matrix(" + u)
                                                     : (A[Ea] =
                                                         (z.xPercent || z.yPercent
-                                                            ? "translate(" +
+                                                             "translate(" +
                                                             z.xPercent +
                                                             "%," +
                                                             z.yPercent +
@@ -3966,7 +3966,7 @@ var _gsScope =
                                                             : "matrix(") + u))
                                             : (A[Ea] =
                                                 (z.xPercent || z.yPercent
-                                                    ? "translate(" +
+                                                     "translate(" +
                                                     z.xPercent +
                                                     "%," +
                                                     z.yPercent +
@@ -4011,7 +4011,7 @@ var _gsScope =
                                         if (!(D || C || 1 !== G || M || K))
                                             return void (A[Ea] =
                                                 (z.xPercent || z.yPercent
-                                                    ? "translate(" +
+                                                     "translate(" +
                                                     z.xPercent +
                                                     "%," +
                                                     z.yPercent +
@@ -4024,13 +4024,13 @@ var _gsScope =
                                                 J +
                                                 "px)" +
                                                 (1 !== E || 1 !== F
-                                                    ? " scale(" + E + "," + F + ")"
+                                                     " scale(" + E + "," + F + ")"
                                                     : ""));
                                         (c = g = 1), (d = f = 0);
                                     }
                                     (k = 1),
                                         (e = h = i = j = l = m = 0),
-                                        (o = M ? -1 / M : 0),
+                                        (o = M  -1 / M : 0),
                                         (p = z.zOrigin),
                                         (q = 1e-6),
                                         (v = ","),
@@ -4080,43 +4080,43 @@ var _gsScope =
                                     q > J && J > -q && (J = 0)),
                                         (u =
                                             z.xPercent || z.yPercent
-                                                ? "translate(" +
+                                                 "translate(" +
                                                 z.xPercent +
                                                 "%," +
                                                 z.yPercent +
                                                 "%) matrix3d("
                                                 : "matrix3d("),
                                         (u +=
-                                            (q > c && c > -q ? w : c) +
+                                            (q > c && c > -q  w : c) +
                                             v +
-                                            (q > f && f > -q ? w : f) +
+                                            (q > f && f > -q  w : f) +
                                             v +
-                                            (q > i && i > -q ? w : i)),
+                                            (q > i && i > -q  w : i)),
                                         (u +=
                                             v +
-                                            (q > l && l > -q ? w : l) +
+                                            (q > l && l > -q  w : l) +
                                             v +
-                                            (q > d && d > -q ? w : d) +
+                                            (q > d && d > -q  w : d) +
                                             v +
-                                            (q > g && g > -q ? w : g)),
+                                            (q > g && g > -q  w : g)),
                                         C || D || 1 !== G
-                                            ? ((u +=
+                                             ((u +=
                                                 v +
-                                                (q > j && j > -q ? w : j) +
+                                                (q > j && j > -q  w : j) +
                                                 v +
-                                                (q > m && m > -q ? w : m) +
+                                                (q > m && m > -q  w : m) +
                                                 v +
-                                                (q > e && e > -q ? w : e)),
+                                                (q > e && e > -q  w : e)),
                                                 (u +=
                                                     v +
-                                                    (q > h && h > -q ? w : h) +
+                                                    (q > h && h > -q  w : h) +
                                                     v +
-                                                    (q > k && k > -q ? w : k) +
+                                                    (q > k && k > -q  w : k) +
                                                     v +
-                                                    (q > o && o > -q ? w : o) +
+                                                    (q > o && o > -q  w : o) +
                                                     v))
                                             : (u += ",0,0,0,0,1,0,"),
-                                        (u += H + v + I + v + J + v + (M ? 1 + -J / M : 1) + ")"),
+                                        (u += H + v + I + v + J + v + (M  1 + -J / M : 1) + ")"),
                                         (A[Ea] = u);
                                 });
                 (j = Ia.prototype),
@@ -4141,7 +4141,7 @@ var _gsScope =
                             parser: function (a, b, c, d, f, h, i) {
                                 if (d._lastParsedTransform === i) return f;
                                 d._lastParsedTransform = i;
-                                var j = i.scale && "function" == typeof i.scale ? i.scale : 0;
+                                var j = i.scale && "function" == typeof i.scale  i.scale : 0;
                                 j && (i.scale = j(r, a));
                                 var k,
                                     l,
@@ -4163,7 +4163,7 @@ var _gsScope =
                                     D =
                                         z.transform &&
                                         ("function" == typeof z.transform
-                                            ? z.transform(r, q)
+                                             z.transform(r, q)
                                             : z.transform);
                                 if (
                                     ((C.skewType = z.skewType || C.skewType || g.defaultSkewType),
@@ -4215,11 +4215,11 @@ var _gsScope =
                                     if (
                                         ((k = {
                                             scaleX: la(
-                                                null != z.scaleX ? z.scaleX : z.scale,
+                                                null != z.scaleX  z.scaleX : z.scale,
                                                 C.scaleX
                                             ),
                                             scaleY: la(
-                                                null != z.scaleY ? z.scaleY : z.scale,
+                                                null != z.scaleY  z.scaleY : z.scale,
                                                 C.scaleY
                                             ),
                                             scaleZ: la(z.scaleZ, C.scaleZ),
@@ -4243,9 +4243,9 @@ var _gsScope =
                                     ((k.y = 0), (k.yPercent = la(z.y, C.yPercent))),
                                         (k.rotation = ma(
                                             "rotation" in z
-                                                ? z.rotation
+                                                 z.rotation
                                                 : "shortRotation" in z
-                                                    ? z.shortRotation + "_short"
+                                                     z.shortRotation + "_short"
                                                     : C.rotation,
                                             C.rotation,
                                             "rotation",
@@ -4254,9 +4254,9 @@ var _gsScope =
                                     Ha &&
                                     ((k.rotationX = ma(
                                         "rotationX" in z
-                                            ? z.rotationX
+                                             z.rotationX
                                             : "shortRotationX" in z
-                                                ? z.shortRotationX + "_short"
+                                                 z.shortRotationX + "_short"
                                                 : C.rotationX || 0,
                                         C.rotationX,
                                         "rotationX",
@@ -4264,9 +4264,9 @@ var _gsScope =
                                     )),
                                         (k.rotationY = ma(
                                             "rotationY" in z
-                                                ? z.rotationY
+                                                 z.rotationY
                                                 : "shortRotationY" in z
-                                                    ? z.shortRotationY + "_short"
+                                                     z.shortRotationY + "_short"
                                                     : C.rotationY || 0,
                                             C.rotationY,
                                             "rotationY",
@@ -4303,7 +4303,7 @@ var _gsScope =
                                 return (
                                     (D =
                                         "function" == typeof z.transformOrigin
-                                            ? z.transformOrigin(r, q)
+                                             z.transformOrigin(r, q)
                                             : z.transformOrigin),
                                     C.svg &&
                                     (D || z.svgOrigin) &&
@@ -4313,7 +4313,7 @@ var _gsScope =
                                         (f = wa(
                                             C,
                                             "xOrigin",
-                                            (v ? C : k).xOrigin,
+                                            (v  C : k).xOrigin,
                                             k.xOrigin,
                                             f,
                                             B
@@ -4321,7 +4321,7 @@ var _gsScope =
                                         (f = wa(
                                             C,
                                             "yOrigin",
-                                            (v ? C : k).yOrigin,
+                                            (v  C : k).yOrigin,
                                             k.yOrigin,
                                             f,
                                             B
@@ -4330,7 +4330,7 @@ var _gsScope =
                                     ((f = wa(
                                         C,
                                         "xOffset",
-                                        v ? p : C.xOffset,
+                                        v  p : C.xOffset,
                                         C.xOffset,
                                         f,
                                         B
@@ -4338,7 +4338,7 @@ var _gsScope =
                                         (f = wa(
                                             C,
                                             "yOffset",
-                                            v ? s : C.yOffset,
+                                            v  s : C.yOffset,
                                             C.yOffset,
                                             f,
                                             B
@@ -4346,7 +4346,7 @@ var _gsScope =
                                         (D = "0px 0px")),
                                     (D || (Ha && m && C.zOrigin)) &&
                                     (Ea
-                                        ? ((n = !0),
+                                         ((n = !0),
                                             (u = Ga),
                                         D ||
                                         ((D = (ba(a, u, e, !1, "50% 50%") + "").split(" ")),
@@ -4356,10 +4356,10 @@ var _gsScope =
                                             (f.b = w[u]),
                                             (f.plugin = h),
                                             Ha
-                                                ? ((l = C.zOrigin),
+                                                 ((l = C.zOrigin),
                                                     (D = D.split(" ")),
                                                     (C.zOrigin =
-                                                        (D.length > 2 ? parseFloat(D[2]) : l) || 0),
+                                                        (D.length > 2  parseFloat(D[2]) : l) || 0),
                                                     (f.xs0 = f.e =
                                                         D[0] + " " + (D[1] || "50%") + " 0px"),
                                                     (f = new va(C, "zOrigin", 0, 0, f, -1, f.n)),
@@ -4370,7 +4370,7 @@ var _gsScope =
                                     n &&
                                     (d._transformType =
                                         (C.svg && Ca) || (!m && 3 !== this._transformType)
-                                            ? 2
+                                             2
                                             : 3),
                                     j && (i.scale = j),
                                         f
@@ -4437,19 +4437,19 @@ var _gsScope =
                                     (t = m.substr((o + "").length)),
                                     (u = "=" === n.charAt(1)),
                                     u
-                                        ? ((p = parseInt(n.charAt(0) + "1", 10)),
+                                         ((p = parseInt(n.charAt(0) + "1", 10)),
                                             (n = n.substr(2)),
                                             (p *= parseFloat(n)),
-                                            (s = n.substr((p + "").length - (0 > p ? 1 : 0)) || ""))
+                                            (s = n.substr((p + "").length - (0 > p  1 : 0)) || ""))
                                         : ((p = parseFloat(n)), (s = n.substr((p + "").length))),
                                 "" === s && (s = d[c] || t),
                                 s !== t &&
                                 ((v = ca(a, "borderLeft", o, t)),
                                     (w = ca(a, "borderTop", o, t)),
                                     "%" === s
-                                        ? ((m = (v / q) * 100 + "%"), (l = (w / r) * 100 + "%"))
+                                         ((m = (v / q) * 100 + "%"), (l = (w / r) * 100 + "%"))
                                         : "em" === s
-                                            ? ((x = ca(a, "borderLeft", 1, "em")),
+                                             ((x = ca(a, "borderLeft", 1, "em")),
                                                 (m = v / x + "em"),
                                                 (l = w / x + "em"))
                                             : ((m = v + "px"), (l = w + "px")),
@@ -4494,8 +4494,8 @@ var _gsScope =
                                 o = e || aa(a, null),
                                 q = this.format(
                                     (o
-                                        ? p
-                                            ? o.getPropertyValue(n + "-x") +
+                                         p
+                                             o.getPropertyValue(n + "-x") +
                                             " " +
                                             o.getPropertyValue(n + "-y")
                                             : o.getPropertyValue(n)
@@ -4522,10 +4522,10 @@ var _gsScope =
                                     k !== (-1 !== i[j].indexOf("%")) &&
                                     ((l =
                                         0 === j
-                                            ? a.offsetWidth - S.width
+                                             a.offsetWidth - S.width
                                             : a.offsetHeight - S.height),
                                         (h[j] = k
-                                            ? (parseFloat(q) / 100) * l + "px"
+                                             (parseFloat(q) / 100) * l + "px"
                                             : (parseFloat(q) / l) * 100 + "%"));
                                 q = h.join(" ");
                             }
@@ -4539,8 +4539,8 @@ var _gsScope =
                             return (
                                 (a += ""),
                                     "co" === a.substr(0, 2)
-                                        ? a
-                                        : ja(-1 === a.indexOf(" ") ? a + " " + a : a)
+                                         a
+                                        : ja(-1 === a.indexOf(" ")  a + " " + a : a)
                             );
                         },
                     }),
@@ -4561,8 +4561,8 @@ var _gsScope =
                             var h, i, j;
                             return (
                                 9 > p
-                                    ? ((i = a.currentStyle),
-                                        (j = 8 > p ? " " : ","),
+                                     ((i = a.currentStyle),
+                                        (j = 8 > p  " " : ","),
                                         (h =
                                             "rect(" +
                                             i.clipTop +
@@ -4634,7 +4634,7 @@ var _gsScope =
                     Aa("float,cssFloat,styleFloat", {
                         parser: function (a, b, c, d, e, f) {
                             var g = a.style,
-                                h = "cssFloat" in g ? "cssFloat" : "styleFloat";
+                                h = "cssFloat" in g  "cssFloat" : "styleFloat";
                             return new va(g, h, 0, 0, e, -1, c, !1, 0, g[h], b);
                         },
                     });
@@ -4647,12 +4647,12 @@ var _gsScope =
                     (-1 === d.indexOf("atrix(") &&
                     -1 === d.indexOf("radient(") &&
                     -1 === d.indexOf("oader(")
-                        ? (c.removeAttribute("filter"), (b = !ba(this.data, "filter")))
+                         (c.removeAttribute("filter"), (b = !ba(this.data, "filter")))
                         : ((c.filter = d.replace(A, "")), (b = !0))),
                     b ||
                     (this.xn1 && (c.filter = d = d || "alpha(opacity=" + e + ")"),
                         -1 === d.indexOf("pacity")
-                            ? (0 === e && this.xn1) ||
+                             (0 === e && this.xn1) ||
                             (c.filter = d + " alpha(opacity=" + e + ")")
                             : (c.filter = d.replace(y, "opacity=" + e)));
                 };
@@ -4666,16 +4666,16 @@ var _gsScope =
                             "string" == typeof b &&
                             "=" === b.charAt(1) &&
                             (b =
-                                ("-" === b.charAt(0) ? -1 : 1) * parseFloat(b.substr(2)) + h),
+                                ("-" === b.charAt(0)  -1 : 1) * parseFloat(b.substr(2)) + h),
                             j &&
                             1 === h &&
                             "hidden" === ba(a, "visibility", e) &&
                             0 !== b &&
                             (h = 0),
                                 V
-                                    ? (f = new va(i, "opacity", h, b - h, f))
+                                     (f = new va(i, "opacity", h, b - h, f))
                                     : ((f = new va(i, "opacity", 100 * h, 100 * (b - h), f)),
-                                        (f.xn1 = j ? 1 : 0),
+                                        (f.xn1 = j  1 : 0),
                                         (i.zoom = 1),
                                         (f.type = 2),
                                         (f.b = "alpha(opacity=" + f.s + ")"),
@@ -4694,8 +4694,8 @@ var _gsScope =
                                 null,
                                 !1,
                                 0,
-                                0 !== h ? "inherit" : "hidden",
-                                0 === b ? "hidden" : "inherit"
+                                0 !== h  "inherit" : "hidden",
+                                0 === b  "hidden" :"latest"
                             )),
                                 (f.xs0 = "inherit"),
                                 d._overwriteProps.push(f.n),
@@ -4707,16 +4707,16 @@ var _gsScope =
                 var Xa = function (a, b) {
                         b &&
                         (a.removeProperty
-                            ? (("ms" === b.substr(0, 2) || "webkit" === b.substr(0, 6)) &&
+                             (("ms" === b.substr(0, 2) || "webkit" === b.substr(0, 6)) &&
                             (b = "-" + b),
                                 a.removeProperty(b.replace(C, "-$1").toLowerCase()))
                             : a.removeAttribute(b));
                     },
                     Ya = function (a) {
                         if (((this.t._gsClassPT = this), 1 === a || 0 === a)) {
-                            this.t.setAttribute("class", 0 === a ? this.b : this.e);
+                            this.t.setAttribute("class", 0 === a  this.b : this.e);
                             for (var b = this.data, c = this.t.style; b;)
-                                b.v ? (c[b.p] = b.v) : Xa(c, b.p), (b = b._next);
+                                b.v  (c[b.p] = b.v) : Xa(c, b.p), (b = b._next);
                             1 === a &&
                             this.t._gsClassPT === this &&
                             (this.t._gsClassPT = null);
@@ -4749,11 +4749,11 @@ var _gsScope =
                             (a._gsClassPT = g),
                                 (g.e =
                                     "=" !== b.charAt(1)
-                                        ? b
+                                         b
                                         : o.replace(
-                                        new RegExp("(?:\\s|^)" + b.substr(2) + "(?![\\w-])"),
+                                        new RegExp("(:\\s|^)" + b.substr(2) + "(![\\w-])"),
                                         ""
-                                    ) + ("+" === b.charAt(0) ? " " + b.substr(2) : "")),
+                                    ) + ("+" === b.charAt(0)  " " + b.substr(2) : "")),
                                 a.setAttribute("class", g.e),
                                 (j = fa(a, k, ea(a), i, m)),
                                 a.setAttribute("class", o),
@@ -4785,8 +4785,8 @@ var _gsScope =
                                 (c = b[d]),
                                 i[c] &&
                                 (i[c].parse === h
-                                    ? (e = !0)
-                                    : (c = "transformOrigin" === c ? Ga : i[c].p)),
+                                     (e = !0)
+                                    : (c = "transformOrigin" === c  Ga : i[c].p)),
                                     Xa(g, c);
                         e &&
                         (Xa(g, Ea),
@@ -4854,7 +4854,7 @@ var _gsScope =
                                 (b = n),
                                 (A.cssText = t)),
                                 b.className
-                                    ? (this._firstPT = p =
+                                     (this._firstPT = p =
                                         i.className.parse(
                                             a,
                                             b.className,
@@ -4870,7 +4870,7 @@ var _gsScope =
                             for (
                                 y = 3 === this._transformType,
                                     Ea
-                                        ? m &&
+                                         m &&
                                         ((l = !0),
                                         "" === A.zIndex &&
                                         ((w = ba(a, "zIndex", e)),
@@ -4881,7 +4881,7 @@ var _gsScope =
                                             A,
                                             "WebkitBackfaceVisibility",
                                             this._vars.WebkitBackfaceVisibility ||
-                                            (y ? "visible" : "hidden")
+                                            (y  "visible" : "hidden")
                                         ))
                                         : (A.zoom = 1),
                                     s = p;
@@ -4890,7 +4890,7 @@ var _gsScope =
                                 s = s._next;
                             (x = new va(a, "transform", 0, 0, null, 2)),
                                 this._linkCSSP(x, null, s),
-                                (x.setRatio = Ea ? Va : Ua),
+                                (x.setRatio = Ea  Va : Ua),
                                 (x.data = this._transform || Ta(a, e, !0)),
                                 (x.tween = h),
                                 (x.pr = -1),
@@ -4899,8 +4899,8 @@ var _gsScope =
                         if (c) {
                             for (; p;) {
                                 for (v = p._next, s = t; s && s.pr > p.pr;) s = s._next;
-                                (p._prev = s ? s._prev : u) ? (p._prev._next = p) : (t = p),
-                                    (p._next = s) ? (s._prev = p) : (u = p),
+                                (p._prev = s  s._prev : u)  (p._prev._next = p) : (t = p),
+                                    (p._next = s)  (s._prev = p) : (u = p),
                                     (p = v);
                             }
                             this._firstPT = t;
@@ -4948,53 +4948,53 @@ var _gsScope =
                                     "stroke" === g ||
                                     -1 !== g.indexOf("Color") ||
                                     (s && B.test(n))
-                                        ? (s ||
+                                         (s ||
                                         ((n = pa(n)),
                                             (n =
-                                                (n.length > 3 ? "rgba(" : "rgb(") +
+                                                (n.length > 3  "rgba(" : "rgb(") +
                                                 n.join(",") +
                                                 ")")),
                                             (c = xa(u, g, m, n, !0, "transparent", c, 0, f)))
                                         : s && K.test(n)
-                                            ? (c = xa(u, g, m, n, !0, null, c, 0, f))
+                                             (c = xa(u, g, m, n, !0, null, c, 0, f))
                                             : ((j = parseFloat(m)),
-                                                (o = j || 0 === j ? m.substr((j + "").length) : ""),
+                                                (o = j || 0 === j  m.substr((j + "").length) : ""),
                                             ("" === m || "auto" === m) &&
                                             ("width" === g || "height" === g
-                                                ? ((j = ia(a, g, e)), (o = "px"))
+                                                 ((j = ia(a, g, e)), (o = "px"))
                                                 : "left" === g || "top" === g
-                                                    ? ((j = da(a, g, e)), (o = "px"))
-                                                    : ((j = "opacity" !== g ? 0 : 1), (o = ""))),
+                                                     ((j = da(a, g, e)), (o = "px"))
+                                                    : ((j = "opacity" !== g  0 : 1), (o = ""))),
                                                 (t = s && "=" === n.charAt(1)),
                                                 t
-                                                    ? ((l = parseInt(n.charAt(0) + "1", 10)),
+                                                     ((l = parseInt(n.charAt(0) + "1", 10)),
                                                         (n = n.substr(2)),
                                                         (l *= parseFloat(n)),
                                                         (p = n.replace(x, "")))
                                                     : ((l = parseFloat(n)),
-                                                        (p = s ? n.replace(x, "") : "")),
-                                            "" === p && (p = g in d ? d[g] : o),
-                                                (n = l || 0 === l ? (t ? l + j : l) + p : b[g]),
+                                                        (p = s  n.replace(x, "") : "")),
+                                            "" === p && (p = g in d  d[g] : o),
+                                                (n = l || 0 === l  (t  l + j : l) + p : b[g]),
                                             o !== p &&
                                             ("" !== p || "lineHeight" === g) &&
                                             (l || 0 === l) &&
                                             j &&
                                             ((j = ca(a, g, j, o)),
                                                 "%" === p
-                                                    ? ((j /= ca(a, g, 100, "%") / 100),
+                                                     ((j /= ca(a, g, 100, "%") / 100),
                                                     b.strictUnits !== !0 && (m = j + "%"))
                                                     : "em" === p ||
                                                     "rem" === p ||
                                                     "vw" === p ||
                                                     "vh" === p
-                                                        ? (j /= ca(a, g, 1, p))
+                                                         (j /= ca(a, g, 1, p))
                                                         : "px" !== p && ((l = ca(a, g, l, p)), (p = "px")),
                                             t && (l || 0 === l) && (n = l + j + p)),
                                             t && (l += j),
                                                 (!j && 0 !== j) || (!l && 0 !== l)
-                                                    ? void 0 !== u[g] &&
+                                                     void 0 !== u[g] &&
                                                     (n || (n + "" != "NaN" && null != n))
-                                                        ? ((c = new va(
+                                                         ((c = new va(
                                                             u,
                                                             g,
                                                             l || j || 0,
@@ -5010,7 +5010,7 @@ var _gsScope =
                                                             (c.xs0 =
                                                                 "none" !== n ||
                                                                 ("display" !== g && -1 === g.indexOf("Style"))
-                                                                    ? n
+                                                                     n
                                                                     : m))
                                                         : X("invalid " + g + " tween value: " + b[g])
                                                     : ((c = new va(
@@ -5052,7 +5052,7 @@ var _gsScope =
                                 for (; e;) {
                                     if (
                                         ((b = e.c * a + e.s),
-                                            e.r ? (b = e.r(b)) : f > b && b > -f && (b = 0),
+                                            e.r  (b = e.r(b)) : f > b && b > -f && (b = 0),
                                             e.type)
                                     )
                                         if (1 === e.type)
@@ -5092,14 +5092,14 @@ var _gsScope =
                                             }
                                         else
                                             -1 === e.type
-                                                ? (e.t[e.p] = e.xs0)
+                                                 (e.t[e.p] = e.xs0)
                                                 : e.setRatio && e.setRatio(a);
                                     else e.t[e.p] = b + e.xs0;
                                     e = e._next;
                                 }
                             else
                                 for (; e;)
-                                    2 !== e.type ? (e.t[e.p] = e.b) : e.setRatio(a),
+                                    2 !== e.type  (e.t[e.p] = e.b) : e.setRatio(a),
                                         (e = e._next);
                         else
                             for (; e;) {
@@ -5125,7 +5125,7 @@ var _gsScope =
                         (this._transform = this._transform || Ta(this._target, e, !0)),
                             (this._transformType =
                                 (this._transform.svg && Ca) || (!a && 3 !== this._transformType)
-                                    ? 2
+                                     2
                                     : 3);
                     });
                 var $a = function (a) {
@@ -5142,11 +5142,11 @@ var _gsScope =
                             (b && (b._prev = a),
                             a._next && (a._next._prev = a._prev),
                                 a._prev
-                                    ? (a._prev._next = a._next)
+                                     (a._prev._next = a._next)
                                     : this._firstPT === a &&
                                     ((this._firstPT = a._next), (d = !0)),
                                 c
-                                    ? (c._next = a)
+                                     (c._next = a)
                                     : d || null !== this._firstPT || (this._firstPT = a),
                                 (a._next = b),
                                 (a._prev = c)),
@@ -5172,7 +5172,7 @@ var _gsScope =
                             (c = this._classNamePT) &&
                             ((e = c.xfirst),
                                 e && e._prev
-                                    ? this._linkCSSP(e._prev, c._next, e._prev._prev)
+                                     this._linkCSSP(e._prev, c._next, e._prev._prev)
                                     : e === this._firstPT && (this._firstPT = c._next),
                             c._next && this._linkCSSP(c._next, c._next._next, e._prev),
                                 (this._classNamePT = null)),
@@ -5246,7 +5246,7 @@ var _gsScope =
                     },
                 }),
                 b = function (a) {
-                    var b = 1 > a ? Math.pow(10, (a + "").length - 2) : 1;
+                    var b = 1 > a  Math.pow(10, (a + "").length - 2) : 1;
                     return function (c) {
                         return ((Math.round(c / a) * a * b) | 0) / b;
                     };
@@ -5275,14 +5275,14 @@ var _gsScope =
                     for (a = g._firstPT; a;)
                         (d = a._next),
                             a.pg
-                                ? a.t._mod(i)
+                                 a.t._mod(i)
                                 : a.n === f &&
                                 (2 === a.f && a.t
-                                    ? c(a.t._firstPT, i[f])
+                                     c(a.t._firstPT, i[f])
                                     : (this._add(a.t, f, a.s, a.c, i[f]),
                                     d && (d._prev = a._prev),
                                         a._prev
-                                            ? (a._prev._next = d)
+                                             (a._prev._next = d)
                                             : g._firstPT === a && (g._firstPT = d),
                                         (a._next = a._prev = null),
                                         (g._propLookup[f] = j))),
@@ -5331,7 +5331,7 @@ var _gsScope =
                     h,
                     i,
                     j,
-                    k = b.useRadians === !0 ? 2 * Math.PI : 360,
+                    k = b.useRadians === !0  2 * Math.PI : 360,
                     l = 1e-6;
                 for (e in b)
                     "useRadians" !== e &&
@@ -5341,25 +5341,25 @@ var _gsScope =
                         (f = j[0]),
                         (g = parseFloat(
                             "function" != typeof a[e]
-                                ? a[e]
+                                 a[e]
                                 : a[
                                     e.indexOf("set") ||
                                     "function" != typeof a["get" + e.substr(3)]
-                                        ? e
+                                         e
                                         : "get" + e.substr(3)
                                     ]()
                         )),
                         (h = this.finals[e] =
                             "string" == typeof f && "=" === f.charAt(1)
-                                ? g + parseInt(f.charAt(0) + "1", 10) * Number(f.substr(2))
+                                 g + parseInt(f.charAt(0) + "1", 10) * Number(f.substr(2))
                                 : Number(f) || 0),
                         (i = h - g),
                     j.length &&
                     ((f = j.join("_")),
                     -1 !== f.indexOf("short") &&
-                    ((i %= k), i !== i % (k / 2) && (i = 0 > i ? i + k : i - k)),
+                    ((i %= k), i !== i % (k / 2) && (i = 0 > i  i + k : i - k)),
                         -1 !== f.indexOf("_cw") && 0 > i
-                            ? (i = ((i + 9999999999 * k) % k) - ((i / k) | 0) * k)
+                             (i = ((i + 9999999999 * k) % k) - ((i / k) | 0) * k)
                             : -1 !== f.indexOf("ccw") &&
                             i > 0 &&
                             (i = ((i - 9999999999 * k) % k) - ((i / k) | 0) * k)),
@@ -5373,7 +5373,7 @@ var _gsScope =
                 if (1 !== a) this._super.setRatio.call(this, a);
                 else
                     for (b = this._firstPT; b;)
-                        b.f ? b.t[b.p](this.finals[b.p]) : (b.t[b.p] = this.finals[b.p]),
+                        b.f  b.t[b.p](this.finals[b.p]) : (b.t[b.p] = this.finals[b.p]),
                             (b = b._next);
             },
         })._autoCSS = !0),
@@ -5419,7 +5419,7 @@ var _gsScope =
                         var d = j(
                                 "easing." + b,
                                 function (a) {
-                                    (this._p1 = a || 0 === a ? a : 1.70158),
+                                    (this._p1 = a || 0 === a  a : 1.70158),
                                         (this._p2 = 1.525 * this._p1);
                                 },
                                 !0
@@ -5444,16 +5444,16 @@ var _gsScope =
                         }),
                         o("BackInOut", function (a) {
                             return (a *= 2) < 1
-                                ? 0.5 * a * a * ((this._p2 + 1) * a - this._p2)
+                                 0.5 * a * a * ((this._p2 + 1) * a - this._p2)
                                 : 0.5 * ((a -= 2) * a * ((this._p2 + 1) * a + this._p2) + 2);
                         })
                     ),
                     q = j(
                         "easing.SlowMo",
                         function (a, b, c) {
-                            (b = b || 0 === b ? b : 0.7),
-                                null == a ? (a = 0.7) : a > 1 && (a = 1),
-                                (this._p = 1 !== a ? b : 0),
+                            (b = b || 0 === b  b : 0.7),
+                                null == a  (a = 0.7) : a > 1 && (a = 1),
+                                (this._p = 1 !== a  b : 0),
                                 (this._p1 = (1 - a) / 2),
                                 (this._p2 = a),
                                 (this._p3 = this._p1 + this._p2),
@@ -5467,17 +5467,17 @@ var _gsScope =
                         (r.getRatio = function (a) {
                             var b = a + (0.5 - a) * this._p;
                             return a < this._p1
-                                ? this._calcEnd
-                                    ? 1 - (a = 1 - a / this._p1) * a
+                                 this._calcEnd
+                                     1 - (a = 1 - a / this._p1) * a
                                     : b - (a = 1 - a / this._p1) * a * a * a * b
                                 : a > this._p3
-                                    ? this._calcEnd
-                                        ? 1 === a
-                                            ? 0
+                                     this._calcEnd
+                                         1 === a
+                                             0
                                             : 1 - (a = (a - this._p3) / this._p1) * a
                                         : b + (a - b) * (a = (a - this._p3) / this._p1) * a * a * a
                                     : this._calcEnd
-                                        ? 1
+                                         1
                                         : b;
                         }),
                         (q.ease = new q(0.7, 0.7)),
@@ -5490,8 +5490,8 @@ var _gsScope =
                             function (a, b) {
                                 (a = a || 1),
                                     (this._p1 = 1 / a),
-                                    (this._p2 = a + (b ? 0 : 1)),
-                                    (this._p3 = b ? 1 : 0);
+                                    (this._p2 = a + (b  0 : 1)),
+                                    (this._p3 = b  1 : 0);
                             },
                             !0
                         )),
@@ -5499,7 +5499,7 @@ var _gsScope =
                         (r.constructor = b),
                         (r.getRatio = function (a) {
                             return (
-                                0 > a ? (a = 0) : a >= 1 && (a = 0.999999999),
+                                0 > a  (a = 0) : a >= 1 && (a = 0.999999999),
                                 (((this._p2 * a) | 0) + this._p3) * this._p1
                             );
                         }),
@@ -5547,27 +5547,27 @@ var _gsScope =
                                         m = l,
                                         o = b.randomize !== !1,
                                         p = b.clamp === !0,
-                                        q = b.template instanceof a ? b.template : null,
-                                        r = "number" == typeof b.strength ? 0.4 * b.strength : 0.4;
+                                        q = b.template instanceof a  b.template : null,
+                                        r = "number" == typeof b.strength  0.4 * b.strength : 0.4;
                                     --m > -1;
                                 )
-                                    (c = o ? Math.random() : (1 / l) * m),
-                                        (d = q ? q.getRatio(c) : c),
+                                    (c = o  Math.random() : (1 / l) * m),
+                                        (d = q  q.getRatio(c) : c),
                                         "none" === i
-                                            ? (e = r)
+                                             (e = r)
                                             : "out" === i
-                                                ? ((f = 1 - c), (e = f * f * r))
+                                                 ((f = 1 - c), (e = f * f * r))
                                                 : "in" === i
-                                                    ? (e = c * c * r)
+                                                     (e = c * c * r)
                                                     : 0.5 > c
-                                                        ? ((f = 2 * c), (e = f * f * 0.5 * r))
+                                                         ((f = 2 * c), (e = f * f * 0.5 * r))
                                                         : ((f = 2 * (1 - c)), (e = f * f * 0.5 * r)),
                                         o
-                                            ? (d += Math.random() * e - 0.5 * e)
+                                             (d += Math.random() * e - 0.5 * e)
                                             : m % 2
-                                                ? (d += 0.5 * e)
+                                                 (d += 0.5 * e)
                                                 : (d -= 0.5 * e),
-                                    p && (d > 1 ? (d = 1) : 0 > d && (d = 0)),
+                                    p && (d > 1  (d = 1) : 0 > d && (d = 0)),
                                         (j[k++] = {x: c, y: d});
                                 for (
                                     j.sort(function (a, b) {
@@ -5578,7 +5578,7 @@ var _gsScope =
                                     --m > -1;
                                 )
                                     (g = j[m]), (h = new n(g.x, g.y, h));
-                                this._prev = new n(0, 0, 0 !== h.t ? h : h.next);
+                                this._prev = new n(0, 0, 0 !== h.t  h : h.next);
                             },
                             !0
                         )),
@@ -5600,35 +5600,35 @@ var _gsScope =
                             "Bounce",
                             k("BounceOut", function (a) {
                                 return 1 / 2.75 > a
-                                    ? 7.5625 * a * a
+                                     7.5625 * a * a
                                     : 2 / 2.75 > a
-                                        ? 7.5625 * (a -= 1.5 / 2.75) * a + 0.75
+                                         7.5625 * (a -= 1.5 / 2.75) * a + 0.75
                                         : 2.5 / 2.75 > a
-                                            ? 7.5625 * (a -= 2.25 / 2.75) * a + 0.9375
+                                             7.5625 * (a -= 2.25 / 2.75) * a + 0.9375
                                             : 7.5625 * (a -= 2.625 / 2.75) * a + 0.984375;
                             }),
                             k("BounceIn", function (a) {
                                 return (a = 1 - a) < 1 / 2.75
-                                    ? 1 - 7.5625 * a * a
+                                     1 - 7.5625 * a * a
                                     : 2 / 2.75 > a
-                                        ? 1 - (7.5625 * (a -= 1.5 / 2.75) * a + 0.75)
+                                         1 - (7.5625 * (a -= 1.5 / 2.75) * a + 0.75)
                                         : 2.5 / 2.75 > a
-                                            ? 1 - (7.5625 * (a -= 2.25 / 2.75) * a + 0.9375)
+                                             1 - (7.5625 * (a -= 2.25 / 2.75) * a + 0.9375)
                                             : 1 - (7.5625 * (a -= 2.625 / 2.75) * a + 0.984375);
                             }),
                             k("BounceInOut", function (a) {
                                 var b = 0.5 > a;
                                 return (
-                                    (a = b ? 1 - 2 * a : 2 * a - 1),
+                                    (a = b  1 - 2 * a : 2 * a - 1),
                                         (a =
                                             1 / 2.75 > a
-                                                ? 7.5625 * a * a
+                                                 7.5625 * a * a
                                                 : 2 / 2.75 > a
-                                                    ? 7.5625 * (a -= 1.5 / 2.75) * a + 0.75
+                                                     7.5625 * (a -= 1.5 / 2.75) * a + 0.75
                                                     : 2.5 / 2.75 > a
-                                                        ? 7.5625 * (a -= 2.25 / 2.75) * a + 0.9375
+                                                         7.5625 * (a -= 2.25 / 2.75) * a + 0.9375
                                                         : 7.5625 * (a -= 2.625 / 2.75) * a + 0.984375),
-                                        b ? 0.5 * (1 - a) : 0.5 * a + 0.5
+                                        b  0.5 * (1 - a) : 0.5 * a + 0.5
                                 );
                             })
                         ),
@@ -5642,7 +5642,7 @@ var _gsScope =
                             }),
                             k("CircInOut", function (a) {
                                 return (a *= 2) < 1
-                                    ? -0.5 * (Math.sqrt(1 - a * a) - 1)
+                                     -0.5 * (Math.sqrt(1 - a * a) - 1)
                                     : 0.5 * (Math.sqrt(1 - (a -= 2) * a) + 1);
                             })
                         ),
@@ -5650,8 +5650,8 @@ var _gsScope =
                             var e = j(
                                     "easing." + b,
                                     function (a, b) {
-                                        (this._p1 = a >= 1 ? a : 1),
-                                            (this._p2 = (b || d) / (1 > a ? a : 1)),
+                                        (this._p1 = a >= 1  a : 1),
+                                            (this._p2 = (b || d) / (1 > a  a : 1)),
                                             (this._p3 =
                                                 (this._p2 / h) * (Math.asin(1 / this._p1) || 0)),
                                             (this._p2 = h / this._p2);
@@ -5697,7 +5697,7 @@ var _gsScope =
                                 "ElasticInOut",
                                 function (a) {
                                     return (a *= 2) < 1
-                                        ? -0.5 *
+                                         -0.5 *
                                         (this._p1 *
                                             Math.pow(2, 10 * (a -= 1)) *
                                             Math.sin((a - this._p3) * this._p2))
@@ -5720,7 +5720,7 @@ var _gsScope =
                             }),
                             k("ExpoInOut", function (a) {
                                 return (a *= 2) < 1
-                                    ? 0.5 * Math.pow(2, 10 * (a - 1))
+                                     0.5 * Math.pow(2, 10 * (a - 1))
                                     : 0.5 * (2 - Math.pow(2, -10 * (a - 1)));
                             })
                         ),
@@ -5802,7 +5802,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
             })(),
             r = {},
             s = function (d, f, g, h) {
-                (this.sc = r[d] ? r[d].sc : []),
+                (this.sc = r[d]  r[d].sc : []),
                     (r[d] = this),
                     (this.gsClass = null),
                     (this.func = g);
@@ -5810,7 +5810,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                 (this.check = function (j) {
                     for (var k, m, n, o, p = f.length, q = p; --p > -1;)
                         (k = r[f[p]] || new s(f[p], [])).gsClass
-                            ? ((i[p] = k.gsClass), q--)
+                             ((i[p] = k.gsClass), q--)
                             : j && k.sc.push(this);
                     if (0 === q && g) {
                         if (
@@ -5831,7 +5831,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                                 "function" == typeof define &&
                                 define.amd &&
                                 define(
-                                    (a.GreenSockAMDPath ? a.GreenSockAMDPath + "/" : "") +
+                                    (a.GreenSockAMDPath  a.GreenSockAMDPath + "/" : "") +
                                     d.split(".").pop(),
                                     [],
                                     function () {
@@ -5869,7 +5869,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     (this._func = a),
                         (this._type = c || 0),
                         (this._power = d || 0),
-                        (this._params = b ? v.concat(b) : v);
+                        (this._params = b  v.concat(b) : v);
                 },
                 !0
             ),
@@ -5887,7 +5887,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                 )
                     for (
                         f = i[j],
-                            e = d ? u("easing." + f, null, !0) : m.easing[f] || {},
+                            e = d  u("easing." + f, null, !0) : m.easing[f] || {},
                             g = k.length;
                         --g > -1;
                     )
@@ -5895,7 +5895,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                             (x[f + "." + h] =
                                 x[h + f] =
                                     e[h] =
-                                        a.Ratio ? a : a[h] || new a);
+                                        a.Ratio  a : a[h] || new a);
             });
         for (
             i = w.prototype,
@@ -5905,16 +5905,16 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         return (this._params[0] = a), this._func.apply(null, this._params);
                     var b = this._type,
                         c = this._power,
-                        d = 1 === b ? 1 - a : 2 === b ? a : 0.5 > a ? 2 * a : 2 * (1 - a);
+                        d = 1 === b  1 - a : 2 === b  a : 0.5 > a  2 * a : 2 * (1 - a);
                     return (
                         1 === c
-                            ? (d *= d)
+                             (d *= d)
                             : 2 === c
-                                ? (d *= d * d)
+                                 (d *= d * d)
                                 : 3 === c
-                                    ? (d *= d * d * d)
+                                     (d *= d * d * d)
                                     : 4 === c && (d *= d * d * d * d),
-                            1 === b ? 1 - d : 2 === b ? d : 0.5 > a ? d / 2 : 1 - d / 2
+                            1 === b  1 - d : 2 === b  d : 0.5 > a  d / 2 : 1 - d / 2
                     );
                 },
                 g = ["Linear", "Quad", "Cubic", "Quart", "Quint,Strong"],
@@ -5923,7 +5923,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
         )
             (i = g[h] + ",Power" + h),
                 y(new w(null, null, 1, h), i, "easeOut", !0),
-                y(new w(null, null, 2, h), i, "easeIn" + (0 === h ? ",easeNone" : "")),
+                y(new w(null, null, 2, h), i, "easeIn" + (0 === h  ",easeNone" : "")),
                 y(new w(null, null, 3, h), i, "easeInOut");
         (x.linear = m.easing.Linear.easeIn), (x.swing = m.easing.Quad.easeInOut);
         var z = u("events.EventDispatcher", function (a) {
@@ -5944,7 +5944,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                 )
                     (f = h[g]),
                         f.c === b && f.s === c
-                            ? h.splice(g, 1)
+                             h.splice(g, 1)
                             : 0 === i && f.pr < e && (i = g + 1);
                 h.splice(i, 0, {c: b, s: c, up: d, pr: e});
             }),
@@ -5968,7 +5968,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         (d = e[b]),
                         d &&
                         (d.up
-                            ? d.c.call(d.s || c, {type: a, target: c})
+                             d.c.call(d.s || c, {type: a, target: c})
                             : d.c.call(d.s || c));
             });
         var A = a.requestAnimationFrame,
@@ -5992,7 +5992,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                 h,
                 i = this,
                 l = C(),
-                m = b !== !1 && A ? "auto" : !1,
+                m = b !== !1 && A  "auto" : !1,
                 o = 500,
                 q = 33,
                 r = "tick",
@@ -6005,7 +6005,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         (i.time = (D - l) / 1e3),
                         (b = i.time - h),
                     (!c || b > 0 || a === !0) &&
-                    (i.frame++, (h += b + (b >= g ? 0.004 : g - b)), (d = !0)),
+                    (i.frame++, (h += b + (b >= g  0.004 : g - b)), (d = !0)),
                     a !== !0 && (f = e(s)),
                     d && i.dispatchEvent(r);
                 };
@@ -6016,27 +6016,27 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                 }),
                 (i.lagSmoothing = function (a, b) {
                     return arguments.length
-                        ? ((o = a || 1 / n), void (q = Math.min(b, o, 0)))
+                         ((o = a || 1 / n), void (q = Math.min(b, o, 0)))
                         : 1 / n > o;
                 }),
                 (i.sleep = function () {
                     null != f &&
-                    (m && B ? B(f) : clearTimeout(f),
+                    (m && B  B(f) : clearTimeout(f),
                         (e = p),
                         (f = null),
                     i === j && (k = !1));
                 }),
                 (i.wake = function (a) {
                     null !== f
-                        ? i.sleep()
+                         i.sleep()
                         : a
-                            ? (l += -D + (D = C()))
+                             (l += -D + (D = C()))
                             : i.frame > 10 && (D = C() - o + 5),
                         (e =
                             0 === c
-                                ? p
+                                 p
                                 : m && A
-                                    ? A
+                                     A
                                     : function (a) {
                                         return setTimeout(a, (1e3 * (h - i.time) + 1) | 0);
                                     }),
@@ -6045,11 +6045,11 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                 }),
                 (i.fps = function (a) {
                     return arguments.length
-                        ? ((c = a), (g = 1 / (c || 60)), (h = this.time + g), void i.wake())
+                         ((c = a), (g = 1 / (c || 60)), (h = this.time + g), void i.wake())
                         : c;
                 }),
                 (i.useRAF = function (a) {
-                    return arguments.length ? (i.sleep(), (m = a), void i.fps(c)) : m;
+                    return arguments.length  (i.sleep(), (m = a), void i.fps(c)) : m;
                 }),
                 i.fps(a),
                 setTimeout(function () {
@@ -6073,7 +6073,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     Z)
             ) {
                 k || j.wake();
-                var c = this.vars.useFrames ? Y : Z;
+                var c = this.vars.useFrames  Y : Z;
                 c.add(this, c._time), this.vars.paused && this.paused(!0);
             }
         });
@@ -6108,7 +6108,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
             (i.restart = function (a, b) {
                 return this.reversed(!1)
                     .paused(!1)
-                    .totalTime(a ? -this._delay : 0, b !== !1, !0);
+                    .totalTime(a  -this._delay : 0, b !== !1, !0);
             }),
             (i.reverse = function (a, b) {
                 return (
@@ -6147,7 +6147,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         (this._active = this.isActive()),
                     b !== !0 &&
                     (a && !this.timeline
-                        ? this._timeline.add(this, this._startTime - this._delay)
+                         this._timeline.add(this, this._startTime - this._delay)
                         : !a && this.timeline && this._timeline._remove(this, !0)),
                         !1
                 );
@@ -6159,7 +6159,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                 return this._kill(a, b), this;
             }),
             (i._uncache = function (a) {
-                for (var b = a ? this : this.timeline; b;)
+                for (var b = a  this : this.timeline; b;)
                     (b._dirty = !0), (b = b.timeline);
                 return this;
             }),
@@ -6173,7 +6173,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     c = b[a],
                     d = b[a + "Params"],
                     e = b[a + "Scope"] || b.callbackScope || this,
-                    f = d ? d.length : 0;
+                    f = d  d.length : 0;
                 switch (f) {
                     case 0:
                         c.call(e);
@@ -6193,11 +6193,11 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     var e = this.vars;
                     if (1 === arguments.length) return e[a];
                     null == b
-                        ? delete e[a]
+                         delete e[a]
                         : ((e[a] = b),
                             (e[a + "Params"] =
                                 q(c) && -1 !== c.join("").indexOf("{self}")
-                                    ? this._swapSelfInParams(c)
+                                     this._swapSelfInParams(c)
                                     : c),
                             (e[a + "Scope"] = d)),
                     "onUpdate" === a && (this._onUpdate = b);
@@ -6206,7 +6206,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
             }),
             (i.delay = function (a) {
                 return arguments.length
-                    ? (this._timeline.smoothChildTiming &&
+                     (this._timeline.smoothChildTiming &&
                     this.startTime(this._startTime + a - this._delay),
                         (this._delay = a),
                         this)
@@ -6214,7 +6214,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
             }),
             (i.duration = function (a) {
                 return arguments.length
-                    ? ((this._duration = this._totalDuration = a),
+                     ((this._duration = this._totalDuration = a),
                         this._uncache(!0),
                     this._timeline.smoothChildTiming &&
                     this._time > 0 &&
@@ -6227,13 +6227,13 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
             (i.totalDuration = function (a) {
                 return (
                     (this._dirty = !1),
-                        arguments.length ? this.duration(a) : this._totalDuration
+                        arguments.length  this.duration(a) : this._totalDuration
                 );
             }),
             (i.time = function (a, b) {
                 return arguments.length
-                    ? (this._dirty && this.totalDuration(),
-                        this.totalTime(a > this._duration ? this._duration : a, b))
+                     (this._dirty && this.totalDuration(),
+                        this.totalTime(a > this._duration  this._duration : a, b))
                     : this._time;
             }),
             (i.totalTime = function (a, b, c) {
@@ -6249,8 +6249,8 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         if (
                             (a > d && !c && (a = d),
                                 (this._startTime =
-                                    (this._paused ? this._pauseTime : e._time) -
-                                    (this._reversed ? d - a : a) / this._timeScale),
+                                    (this._paused  this._pauseTime : e._time) -
+                                    (this._reversed  d - a : a) / this._timeScale),
                             e._dirty || this._uncache(!1),
                                 e._timeline)
                         )
@@ -6270,14 +6270,14 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                 function (a, b) {
                     var c = this.duration();
                     return arguments.length
-                        ? this.totalTime(c * a, b)
+                         this.totalTime(c * a, b)
                         : c
-                            ? this._time / c
+                             this._time / c
                             : this.ratio;
                 }),
             (i.startTime = function (a) {
                 return arguments.length
-                    ? (a !== this._startTime &&
+                     (a !== this._startTime &&
                     ((this._startTime = a),
                     this.timeline &&
                     this.timeline._sortChildren &&
@@ -6288,7 +6288,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
             (i.endTime = function (a) {
                 return (
                     this._startTime +
-                    (0 != a ? this.totalDuration() : this.duration()) / this._timeScale
+                    (0 != a  this.totalDuration() : this.duration()) / this._timeScale
                 );
             }),
             (i.timeScale = function (a) {
@@ -6299,7 +6299,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     this._timeline &&
                     this._timeline.smoothChildTiming &&
                     ((b = this._pauseTime),
-                        (c = b || 0 === b ? b : this._timeline.totalTime()),
+                        (c = b || 0 === b  b : this._timeline.totalTime()),
                         (this._startTime =
                             c - ((c - this._startTime) * this._timeScale) / a)),
                         this._timeScale = a,
@@ -6311,11 +6311,11 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
             }),
             (i.reversed = function (a) {
                 return arguments.length
-                    ? (a != this._reversed &&
+                     (a != this._reversed &&
                     ((this._reversed = a),
                         this.totalTime(
                             this._timeline && !this._timeline.smoothChildTiming
-                                ? this.totalDuration() - this._totalTime
+                                 this.totalDuration() - this._totalTime
                                 : this._totalTime,
                             !0
                         )),
@@ -6336,7 +6336,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     !a &&
                     d.smoothChildTiming &&
                     ((this._startTime += c), this._uncache(!1)),
-                        (this._pauseTime = a ? b : null),
+                        (this._pauseTime = a  b : null),
                         (this._paused = a),
                         (this._active = this.isActive()),
                     !a &&
@@ -6344,7 +6344,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     this._initted &&
                     this.duration() &&
                     ((b = d.smoothChildTiming
-                        ? this._totalTime
+                         this._totalTime
                         : (b - this._startTime) / this._timeScale),
                         this.render(b, b === this._totalTime, !0))),
                     this._gc && !a && this._enabled(!0, !1),
@@ -6378,9 +6378,9 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         for (f = a._startTime; e && e._startTime > f;) e = e._prev;
                     return (
                         e
-                            ? ((a._next = e._next), (e._next = a))
+                             ((a._next = e._next), (e._next = a))
                             : ((a._next = this._first), (this._first = a)),
-                            a._next ? (a._next._prev = a) : (this._last = a),
+                            a._next  (a._next._prev = a) : (this._last = a),
                             (a._prev = e),
                             (this._recent = a),
                         this._timeline && this._uncache(!0),
@@ -6392,10 +6392,10 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     a.timeline === this &&
                     (b || a._enabled(!1, !0),
                         a._prev
-                            ? (a._prev._next = a._next)
+                             (a._prev._next = a._next)
                             : this._first === a && (this._first = a._next),
                         a._next
-                            ? (a._next._prev = a._prev)
+                             (a._next._prev = a._prev)
                             : this._last === a && (this._last = a._prev),
                         (a._next = a._prev = a.timeline = null),
                     a === this._recent && (this._recent = this._last),
@@ -6410,8 +6410,8 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     (d = e._next),
                     (e._active || (a >= e._startTime && !e._paused && !e._gc)) &&
                     (e._reversed
-                        ? e.render(
-                            (e._dirty ? e.totalDuration() : e._totalDuration) -
+                         e.render(
+                            (e._dirty  e.totalDuration() : e._totalDuration) -
                             (a - e._startTime) * e._timeScale,
                             b,
                             c
@@ -6429,7 +6429,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         (E.call(this, c, d), (this.render = H.prototype.render), null == b)
                     )
                         throw "Cannot tween a null target.";
-                    this.target = b = "string" != typeof b ? b : H.selector(b) || b;
+                    this.target = b = "string" != typeof b  b : H.selector(b) || b;
                     var e,
                         f,
                         g,
@@ -6443,9 +6443,9 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     if (
                         ((this._overwrite = i =
                             null == i
-                                ? X[H.defaultOverwrite]
+                                 X[H.defaultOverwrite]
                                 : "number" == typeof i
-                                    ? i >> 0
+                                     i >> 0
                                     : X[i]),
                         (h || b instanceof Array || (b.push && q(b))) &&
                         "number" != typeof b[0])
@@ -6460,13 +6460,13 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         )
                             (f = g[e]),
                                 f
-                                    ? "string" != typeof f
-                                        ? f.length &&
+                                     "string" != typeof f
+                                         f.length &&
                                         f !== a &&
                                         f[0] &&
                                         (f[0] === a ||
                                             (f[0].nodeType && f[0].style && !f.nodeType))
-                                            ? (g.splice(e--, 1), (this._targets = g = g.concat(o(f))))
+                                             (g.splice(e--, 1), (this._targets = g = g.concat(o(f))))
                                             : ((this._siblings[e] = aa(f, this, !1)),
                                             1 === i &&
                                             this._siblings[e].length > 1 &&
@@ -6534,31 +6534,31 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                 function (b) {
                     var c = a.$ || a.jQuery;
                     return c
-                        ? ((H.selector = c), c(b))
+                         ((H.selector = c), c(b))
                         : (d || (d = a.document),
                             d
-                                ? d.querySelectorAll
-                                    ? d.querySelectorAll(b)
-                                    : d.getElementById("#" === b.charAt(0) ? b.substr(1) : b)
+                                 d.querySelectorAll
+                                     d.querySelectorAll(b)
+                                    : d.getElementById("#" === b.charAt(0)  b.substr(1) : b)
                                 : b);
                 });
         var K = [],
             L = {},
-            M = /(?:(-|-=|\+=)?\d*\.?\d*(?:e[\-+]?\d+)?)[0-9]/gi,
-            N = /[\+-]=-?[\.\d]/,
+            M = /(:(-|-=|\+=)\d*\.\d*(:e[\-+]\d+))[0-9]/gi,
+            N = /[\+-]=-[\.\d]/,
             O = function (a) {
                 for (var b, c = this._firstPT, d = 1e-6; c;)
                     (b = c.blob
-                        ? 1 === a && null != this.end
-                            ? this.end
+                         1 === a && null != this.end
+                             this.end
                             : a
-                                ? this.join("")
+                                 this.join("")
                                 : this.start
                         : c.c * a + c.s),
                         c.m
-                            ? (b = c.m.call(this._tween, b, this._target || c.t, this._tween))
+                             (b = c.m.call(this._tween, b, this._target || c.t, this._tween))
                             : d > b && b > -d && !c.blob && (b = 0),
-                        c.f ? (c.fp ? c.t[c.p](c.fp, b) : c.t[c.p](b)) : (c.t[c.p] = b),
+                        c.f  (c.fp  c.t[c.p](c.fp, b) : c.t[c.p](b)) : (c.t[c.p] = b),
                         (c = c._next);
             },
             P = function (a) {
@@ -6594,11 +6594,11 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                 )
                     (k = f[h]),
                         (j = b.substr(m, b.indexOf(k, m) - m)),
-                        (n += j || !h ? j : ","),
+                        (n += j || !h  j : ","),
                         (m += j.length),
-                        o ? (o = (o + 1) % 5) : "rgba(" === j.substr(-5) && (o = 1),
+                        o  (o = (o + 1) % 5) : "rgba(" === j.substr(-5) && (o = 1),
                         k === e[h] || e.length <= h
-                            ? (n += k)
+                             (n += k)
                             : (n && (l.push(n), (n = "")),
                                 (g = parseFloat(e[h])),
                                 l.push(g),
@@ -6609,11 +6609,11 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                                     s: g,
                                     c:
                                         ("=" === k.charAt(1)
-                                            ? parseInt(k.charAt(0) + "1", 10) *
+                                             parseInt(k.charAt(0) + "1", 10) *
                                             parseFloat(k.substr(2))
                                             : parseFloat(k) - g) || 0,
                                     f: 0,
-                                    m: o && 4 > o ? Math.round : P,
+                                    m: o && 4 > o  Math.round : P,
                                 })),
                         (m += k.length);
                 return (
@@ -6630,11 +6630,11 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     k = typeof a[b],
                     l =
                         "function" !== k
-                            ? ""
+                             ""
                             : b.indexOf("set") || "function" != typeof a["get" + b.substr(3)]
-                                ? b
+                                 b
                                 : "get" + b.substr(3),
-                    m = "" !== c ? c : l ? (g ? a[l](g) : a[l]) : a[b],
+                    m = "" !== c  c : l  (g  a[l](g) : a[l]) : a[b],
                     n = "string" == typeof d && "=" === d.charAt(1),
                     o = {
                         t: a,
@@ -6643,10 +6643,10 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         f: "function" === k,
                         pg: 0,
                         n: e || b,
-                        m: f ? ("function" == typeof f ? f : Math.round) : 0,
+                        m: f  ("function" == typeof f  f : Math.round) : 0,
                         pr: 0,
                         c: n
-                            ? parseInt(d.charAt(0) + "1", 10) * parseFloat(d.substr(2))
+                             parseInt(d.charAt(0) + "1", 10) * parseFloat(d.substr(2))
                             : parseFloat(d) - m || 0,
                     };
                 return (
@@ -6656,11 +6656,11 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     (!n && isNaN(d)) ||
                     "boolean" == typeof m ||
                     "boolean" == typeof d
-                        ? ((o.fp = g),
+                         ((o.fp = g),
                             (j = Q(
                                 m,
                                 n
-                                    ? parseFloat(o.s) +
+                                     parseFloat(o.s) +
                                     o.c +
                                     (o.s + "").replace(/[0-9\-\.]/g, "")
                                     : d,
@@ -6680,7 +6680,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                             }))
                         : ((o.s = parseFloat(m)), n || (o.c = parseFloat(d) - o.s || 0))),
                         o.c
-                            ? ((o._next = this._firstPT) && (o._next._prev = o),
+                             ((o._next = this._firstPT) && (o._next._prev = o),
                                 (this._firstPT = o),
                                 o)
                             : void 0
@@ -6832,7 +6832,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     h._gc ||
                     h._paused ||
                     (h._timeline !== b._timeline
-                        ? ((j = j || da(b, 0, o)), 0 === da(h, j, o) && (l[m++] = h))
+                         ((j = j || da(b, 0, o)), 0 === da(h, j, o) && (l[m++] = h))
                         : h._startTime <= k &&
                         h._startTime + h.totalDuration() / h._timeScale > k &&
                         (((o || !h._initted) && k - h._startTime <= 2 * n) ||
@@ -6861,11 +6861,11 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                 return (
                     (f /= e),
                         f > b
-                            ? f - b
+                             f - b
                             : (c && f === b) || (!a._initted && 2 * n > f - b)
-                                ? n
+                                 n
                                 : (f += a.totalDuration() / a._timeScale / e) > b + n
-                                    ? 0
+                                     0
                                     : f - b - n
                 );
             };
@@ -6921,10 +6921,10 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
             if (
                 ((this._ease = k =
                     k
-                        ? k instanceof w
-                            ? k
+                         k instanceof w
+                             k
                             : "function" == typeof k
-                                ? new w(k, g.easeParams)
+                                 new w(k, g.easeParams)
                                 : x[k] || H.defaultEase
                         : H.defaultEase),
                 g.easeParams instanceof Array &&
@@ -6940,7 +6940,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         this._targets[a],
                         (this._propLookup[a] = {}),
                         this._siblings[a],
-                        h ? h[a] : null,
+                        h  h[a] : null,
                         a
                     ) && (b = !0);
             else
@@ -7018,12 +7018,12 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                             f
                         );
                 return e && this._kill(e, b)
-                    ? this._initProps(b, c, d, e, f)
+                     this._initProps(b, c, d, e, f)
                     : this._overwrite > 1 &&
                     this._firstPT &&
                     d.length > 1 &&
                     ca(b, this, c, this._overwrite, d)
-                        ? (this._kill(c, b), this._initProps(b, c, d, e, f))
+                         (this._kill(c, b), this._initProps(b, c, d, e, f))
                         : (this._firstPT &&
                         ((this.vars.lazy !== !1 && this._duration) ||
                             (this.vars.lazy && !this._duration)) &&
@@ -7041,7 +7041,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     k = h._rawPrevTime;
                 if (a >= j - n && a >= 0)
                     (h._totalTime = h._time = j),
-                        (h.ratio = h._ease._calcEnd ? h._ease.getRatio(1) : 1),
+                        (h.ratio = h._ease._calcEnd  h._ease.getRatio(1) : 1),
                     h._reversed ||
                     ((d = !0),
                         (e = "onComplete"),
@@ -7054,20 +7054,20 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         (k === n && "isPause" !== h.data)) &&
                     k !== a &&
                     ((c = !0), k > n && (e = "onReverseComplete")),
-                        (h._rawPrevTime = g = !b || a || k === a ? a : n));
+                        (h._rawPrevTime = g = !b || a || k === a  a : n));
                 else if (n > a)
                     (h._totalTime = h._time = 0),
-                        (h.ratio = h._ease._calcEnd ? h._ease.getRatio(0) : 0),
+                        (h.ratio = h._ease._calcEnd  h._ease.getRatio(0) : 0),
                     (0 !== i || (0 === j && k > 0)) &&
                     ((e = "onReverseComplete"), (d = h._reversed)),
                         a > -n
-                            ? (a = 0)
+                             (a = 0)
                             : 0 > a &&
                             ((h._active = !1),
                             0 === j &&
                             (h._initted || !h.vars.lazy || c) &&
                             (k >= 0 && (k !== n || "isPause" !== h.data) && (c = !0),
-                                (h._rawPrevTime = g = !b || a || k === a ? a : n))),
+                                (h._rawPrevTime = g = !b || a || k === a  a : n))),
                     (!h._initted || (h._startAt && h._startAt.progress())) && (c = !0);
                 else if (((h._totalTime = h._time = a), h._easeType)) {
                     var l = a / j,
@@ -7076,14 +7076,14 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     (1 === m || (3 === m && l >= 0.5)) && (l = 1 - l),
                     3 === m && (l *= 2),
                         1 === o
-                            ? (l *= l)
+                             (l *= l)
                             : 2 === o
-                                ? (l *= l * l)
+                                 (l *= l * l)
                                 : 3 === o
-                                    ? (l *= l * l * l)
+                                     (l *= l * l * l)
                                     : 4 === o && (l *= l * l * l * l),
                         (h.ratio =
-                            1 === m ? 1 - l : 2 === m ? l : 0.5 > a / j ? l / 2 : 1 - l / 2);
+                            1 === m  1 - l : 2 === m  l : 0.5 > a / j  l / 2 : 1 - l / 2);
                 } else h.ratio = h._ease.getRatio(a / j);
                 if (h._time !== i || c) {
                     if (!h._initted) {
@@ -7101,10 +7101,10 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                                     void (h._lazy = [a, b])
                             );
                         h._time && !d
-                            ? (h.ratio = h._ease.getRatio(h._time / j))
+                             (h.ratio = h._ease.getRatio(h._time / j))
                             : d &&
                             h._ease._calcEnd &&
-                            (h.ratio = h._ease.getRatio(0 === h._time ? 0 : 1));
+                            (h.ratio = h._ease.getRatio(0 === h._time  0 : 1));
                     }
                     for (
                         h._lazy !== !1 && (h._lazy = !1),
@@ -7113,7 +7113,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         0 === i &&
                         (h._startAt &&
                         (a >= 0
-                            ? h._startAt.render(a, !0, c)
+                             h._startAt.render(a, !0, c)
                             : e || (e = "_dummyGS")),
                         h.vars.onStart &&
                         (0 !== h._time || 0 === j) &&
@@ -7122,7 +7122,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         f;
                     )
                         f.f
-                            ? f.t[f.p](f.c * h.ratio + f.s)
+                             f.t[f.p](f.c * h.ratio + f.s)
                             : (f.t[f.p] = f.c * h.ratio + f.s),
                             (f = f._next);
                     h._onUpdate &&
@@ -7153,7 +7153,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     return (this._lazy = !1), this._enabled(!1, !1);
                 b =
                     "string" != typeof b
-                        ? b || this._targets || this.target
+                         b || this._targets || this.target
                         : H.selector(b) || b;
                 var d,
                     e,
@@ -7179,14 +7179,14 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                                 (h = this._propLookup[d] || {}),
                                     (this._overwrittenProps = this._overwrittenProps || []),
                                     (e = this._overwrittenProps[d] =
-                                        a ? this._overwrittenProps[d] || {} : "all");
+                                        a  this._overwrittenProps[d] || {} : "all");
                                 break;
                             }
                     } else {
                         if (b !== this.target) return !1;
                         (h = this._propLookup),
                             (e = this._overwrittenProps =
-                                a ? this._overwrittenProps || {} : "all");
+                                a  this._overwrittenProps || {} : "all");
                     }
                     if (h) {
                         if (
@@ -7203,11 +7203,11 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         }
                         for (f in j)
                             (g = h[f]) &&
-                            (m && (g.f ? g.t[g.p](g.s) : (g.t[g.p] = g.s), (i = !0)),
+                            (m && (g.f  g.t[g.p](g.s) : (g.t[g.p] = g.s), (i = !0)),
                             g.pg && g.t._kill(j) && (i = !0),
                             (g.pg && 0 !== g.t._overwriteProps.length) ||
                             (g._prev
-                                ? (g._prev._next = g._next)
+                                 (g._prev._next = g._next)
                                 : g === this._firstPT && (this._firstPT = g._next),
                             g._next && (g._next._prev = g._prev),
                                 (g._next = g._prev = null)),
@@ -7228,7 +7228,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                                 this._onUpdate =
                                     null),
                         (this._notifyPluginsOfEnabled = this._active = this._lazy = !1),
-                        (this._propLookup = this._targets ? {} : []),
+                        (this._propLookup = this._targets  {} : []),
                         E.prototype.invalidate.call(this),
                     this.vars.immediateRender &&
                     ((this._time = -n), this.render(a, !1, this.vars.lazy !== !1)),
@@ -7247,7 +7247,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                 return (
                     E.prototype._enabled.call(this, a, b),
                         this._notifyPluginsOfEnabled && this._firstPT
-                            ? H._onPluginEvent(a ? "_onEnable" : "_onDisable", this)
+                             H._onPluginEvent(a  "_onEnable" : "_onDisable", this)
                             : !1
                 );
             }),
@@ -7288,7 +7288,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
             }),
             (H.getTweensOf = function (a, b) {
                 if (null == a) return [];
-                a = "string" != typeof a ? a : H.selector(a) || a;
+                a = "string" != typeof a  a : H.selector(a) || a;
                 var c, d, e, f;
                 if ((q(a) || I(a)) && "number" != typeof a[0]) {
                     for (c = a.length, d = []; --c > -1;)
@@ -7333,7 +7333,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                         null != a[d.n] &&
                         (d._next && (d._next._prev = d._prev),
                             d._prev
-                                ? ((d._prev._next = d._next), (d._prev = null))
+                                 ((d._prev._next = d._next), (d._prev = null))
                                 : this._firstPT === d && (this._firstPT = d._next)),
                             (d = d._next);
                     return !1;
@@ -7346,7 +7346,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                                 (null != c.n && a[c.n.split(this._propName + "_").join("")])),
                             b &&
                             "function" == typeof b &&
-                            (2 === c.f ? (c.t._applyPT.m = b) : (c.m = b)),
+                            (2 === c.f  (c.t._applyPT.m = b) : (c.m = b)),
                                 (c = c._next);
                     }),
                 (H._onPluginEvent = function (a, b) {
@@ -7359,8 +7359,8 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
                     if ("_onInitAllProps" === a) {
                         for (; h;) {
                             for (g = h._next, d = e; d && d.pr > h.pr;) d = d._next;
-                            (h._prev = d ? d._prev : f) ? (h._prev._next = h) : (e = h),
-                                (h._next = d) ? (d._prev = h) : (f = h),
+                            (h._prev = d  d._prev : f)  (h._prev._next = h) : (e = h),
+                                (h._next = d)  (d._prev = h) : (f = h),
                                 (h = g);
                         }
                         h = b._firstPT = e;
@@ -7413,7 +7413,7 @@ _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
         "undefined" != typeof module &&
         module.exports &&
         "undefined" != typeof global
-            ? global
+             global
             : this || window,
         "TweenMax"
     );

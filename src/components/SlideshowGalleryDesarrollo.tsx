@@ -1,6 +1,5 @@
-import {Carousel} from "react-bootstrap";
-
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { Carousel } from "react-bootstrap";
 import { useTranslation } from "../i18n.tsx";
 
 interface Props {

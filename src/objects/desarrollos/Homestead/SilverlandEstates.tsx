@@ -1,6 +1,5 @@
+﻿import Homestead from "../../areas/Homestead.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import Homestead from "../../areas/Homestead.tsx";
-
 export default function SilverlandEstates(lang: "en" | "es" = "es") {
     const SilverlandEstatesObject = new Desarrollo();
     SilverlandEstatesObject.nombre = "silverland-estates";

@@ -1,27 +1,26 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import DaniaBeach from "../../areas/DaniaBeach.tsx";
-
 export default function createDaniaProject() {
   const DaniaProjectObject = new Desarrollo();
   DaniaProjectObject.nombre = "dania-project";
   DaniaProjectObject.titulo = {
     es: "Dania Project",
-    en: "Dania Project"
+    en:"latest"
   };
   DaniaProjectObject.slogan = {
     es: "Vivienda de lujo en Dania Beach",
-    en: "Luxury Living in Dania Beach"
+    en:"latest"
   };
   DaniaProjectObject.caracteristicas = {
     es: {
-      edificio: <></>,
-      residencias: <></>,
-      amenidades: <></>,
+      edificio: "",
+      residencias: "",
+      amenidades: "",
     },
     en: {
-      edificio: <></>,
-      residencias: <></>,
-      amenidades: <></>,
+      edificio: "",
+      residencias: "",
+      amenidades: "",
     }
   };
 
@@ -35,7 +34,7 @@ export default function createDaniaProject() {
       "Modern design meets coastal elegance"
     ]
   };
-  DaniaProjectObject.area = DaniaBeach();
+  DaniaProjectObject.area = DaniaBeach;
   DaniaProjectObject.numberOfImages = 5;
 
   return DaniaProjectObject;

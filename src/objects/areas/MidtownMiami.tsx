@@ -1,12 +1,10 @@
 import { Area } from "../../models/areas/Area";
-import React from "react";
-
 export default function MidtownMiami() {
     const MidtownMiamiObject = new Area("midtown-miami");
     MidtownMiamiObject.name = "midtown-miami";
     MidtownMiamiObject.titulo = {
         es: "Midtown Miami",
-        en: "Midtown Miami"
+        en:"latest"
     };
     MidtownMiamiObject.numberOfImages = 43;
     MidtownMiamiObject.descripcion = {
@@ -21,7 +19,7 @@ export default function MidtownMiami() {
     };
     MidtownMiamiObject.slogan = {
         es: "Donde la Creatividad y la Ciudad se Encuentran",
-        en: "Where Creativity and the City Meet"
+        en:"latest"
     };
 
     return MidtownMiamiObject;

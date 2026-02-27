@@ -1,8 +1,8 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+﻿import "bootstrap/dist/css/bootstrap.min.css";
 import SlideshowGalleryDesarrollo from "./SlideshowGalleryDesarrollo";
 import "@material/banner/dist/mdc.banner.min.css";
 
-import { JSX, ReactNode, useLayoutEffect, useState } from "react";
+import { JSX, ReactNode, useLayoutEffect, useMemo, useState } from "react";
 import { useTranslation } from "../../i18n.tsx";
 import {
   MDBAccordion,
@@ -28,7 +28,17 @@ import * as React from "react";
 
 export default function ProjectTemplate(paramz: ProjectParams) {
   const { t, lang } = useTranslation();
-  const params = paramz.desarrollo;
+  const params: any = useMemo(() => {
+    let desarrollo: any = paramz.desarrollo;
+    if (typeof desarrollo === "function") {
+      try {
+        desarrollo = desarrollo(lang);
+      } catch (error) {
+        desarrollo = desarrollo();
+      }
+    }
+    return desarrollo;
+  }, [paramz.desarrollo, lang]);
   const [nombre] = useState(params.nombre);
   const [area] = useState(params.area);
   const [desarrollosArea] = useState(getDesarrollosForArea(area));
@@ -382,7 +392,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                     ></div>
 
                     <h4 className="text-center card-title m-2 ">
-                      {getLocalized(desarrollo.titulo) || (desarrollo.nombre || "").split("-").map((word, idx) => (
+                      {getLocalized(desarrollo.titulo) || (desarrollo.nombre || "").split("-") .map((word: string, idx: number) => (
                         <span key={`word-${idx}`}>{word.charAt(0).toUpperCase() + word.substring(1)} </span>
                       ))}
                     </h4>
@@ -393,7 +403,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           </MDBRow>
         </MDBContainer>
         {/* <div> */}
-        {/* <h3 className="text-center">Otras Áreas</h3> */}
+        {/* <h3 className="text-center">Otras Ãreas</h3> */}
         {/* </div> */}
         <br></br>
       </section>
@@ -424,3 +434,4 @@ export default function ProjectTemplate(paramz: ProjectParams) {
     </>
   );
 }
+

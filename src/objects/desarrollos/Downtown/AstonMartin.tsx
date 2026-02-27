@@ -1,6 +1,6 @@
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
 export default function AstonMartin(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("astonMartin", lang);
@@ -15,7 +15,7 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
             width="100%"
             height="700"
             title="aston martin"
-            src="https://www.youtube.com/embed/q_oHUNtwq38?wmode=opaque&autoplay=true&enablejsapi=true"
+            src="https://www.youtube.com/embed/q_oHUNtwq38wmode=opaque&autoplay=true&enablejsapi=true"
             style={{opacity: 1, margin: "auto"}}
         ></iframe>;
 
@@ -37,7 +37,7 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
 
                 <li>
                     <b>Dormitorios por residencia:</b> Residencias de 1-5 dormitorios,
-                    dúplex, áticos y áticos triples
+                    dúplex, �ticos y �ticos triples
                 </li>
 
                 <li>
@@ -45,7 +45,7 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
 
                     <ul>
                         <li>Niveles 3-14: River Residences</li>
-                        <li> Niveles 15-45: Residencias panorámicas</li>
+                        <li> Niveles 15-45: Residencias panorÁmicas</li>
                         <li> Niveles 46-51: Sky Residences</li>
                         <li> Niveles 56-62: Áticos</li>
                         <li> Niveles 63-65: Ático Triple</li>
@@ -76,22 +76,22 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
                     <h5>Características</h5>
                     <ul>
                         <li>
-                            Vistas panorámicas de la Bahía de Biscayne, el océano y el
+                            Vistas panor�micas de la Bahía de Biscayne, el oc�ano y el
                             icónico horizonte de Miami.
                         </li>
                         <li> 10 pies de altura de techo en residencias.</li>
-                        <li> Altura de techo de 12 pies en áticos.</li>
+                        <li> Altura de techo de 12 pies en Áticos.</li>
                         <li>
                             " "; Ventanas de piso a techo y puertas corredizas de vidrio en
                             todas las residencias.
                         </li>
                         <li>
-                            " "; Cocinas de primera línea con gabinetes y electrodomésticos
+                            " "; Cocinas de primera línea con gabinetes y electrodom�sticos
                             europeos.
                         </li>
                         <li> Baños con gabinetes europeos.</li>
                         <li>
-                            " "; Pisos de mármol de primera calidad en toda la sala de estar,
+                            " "; Pisos de mÁrmol de primera calidad en toda la sala de estar,
                             cocina y baños.
                         </li>
                         <li>
@@ -183,7 +183,7 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
                         <li> Sky Bar y Lounge</li>
                         <li> Conserje de piscina</li>
                         <li> Gran Salón</li>
-                        <li> Cocina del chef de última generación</li>
+                        <li> Cocina del chef de última generaci�n</li>
                         <li> Comedor Privado</li>
                     </ul>
                 </li>
@@ -198,3 +198,4 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
     AstonMartinObject.numberOfImages = 29;
     return AstonMartinObject;
 }
+

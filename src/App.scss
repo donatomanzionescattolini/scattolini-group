@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700;800;900&family=Arima:wght@100;200;300;400;500;600;700&family=GFS+Neohellenic&family=Josefin+Slab:wght@100;200;300;400;500;600;700&family=Cormorant+Garamond:wght@100;300;400;700;900&family=Merriweather:wght@300;400;700;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Mulish:wght@200;300;400&family=Quicksand:wght@300;400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2family=Alegreya:wght@400;500;600;700;800;900&family=Arima:wght@100;200;300;400;500;600;700&family=GFS+Neohellenic&family=Josefin+Slab:wght@100;200;300;400;500;600;700&family=Cormorant+Garamond:wght@100;300;400;700;900&family=Merriweather:wght@300;400;700;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Mulish:wght@200;300;400&family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2family=Gayathri:wght@100;400;700&display=swap');
 
 :root {
   --color-darkblue: #0e2d2f;
@@ -88,23 +88,26 @@ a:active {
 }
 
 .btn:hover {
-  background: var(--color-brown);
-  color: white;
+  background: transparent;
+  color: var(--color-brown);
+  border-color: var(--color-brown);
 }
 
-/* Language toggle button styles */
+/* Default primary button styles (non-language buttons) */
 .btn-primary {
   background-color: var(--color-brown);
   border-color: var(--color-brown);
-  box-shadow: 0 0 0 0.2rem rgba(138, 105, 68, 0.5);
+  color: var(--color-background);
+  box-shadow: none;
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background-color: var(--color-brown-light);
-  border-color: var(--color-brown-light);
-  box-shadow: 0 0 0 0.2rem rgba(138, 105, 68, 0.5);
+  background-color: var(--color-brown);
+  border-color: var(--color-brown);
+  color: var(--color-background);
+  box-shadow: none;
 }
 
 .btn-outline-primary {
@@ -115,10 +118,33 @@ a:active {
 .btn-outline-primary:hover,
 .btn-outline-primary:focus,
 .btn-outline-primary:active {
+  background-color: transparent;
+  border-color: var(--color-brown);
+  color: var(--color-brown);
+  box-shadow: none;
+}
+
+/* Language toggle button keeps highlighted hover */
+.lang-toggle-btn.btn-primary {
   background-color: var(--color-brown);
   border-color: var(--color-brown);
-  color: white;
-  box-shadow: 0 0 0 0.2rem rgba(138, 105, 68, 0.5);
+  color: var(--color-background);
+}
+
+.lang-toggle-btn.btn-primary:hover,
+.lang-toggle-btn.btn-primary:focus,
+.lang-toggle-btn.btn-primary:active {
+  background-color: var(--color-brown-light);
+  border-color: var(--color-brown-light);
+  color: var(--color-background);
+}
+
+.lang-toggle-btn.btn-outline-primary:hover,
+.lang-toggle-btn.btn-outline-primary:focus,
+.lang-toggle-btn.btn-outline-primary:active {
+  background-color: var(--color-brown);
+  border-color: var(--color-brown);
+  color: var(--color-background);
 }
 
 .card {
@@ -179,6 +205,9 @@ nav {
 
 .navbar-brand {
   margin: 1.5rem;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 
 .navbar-brand img {
@@ -189,10 +218,17 @@ nav {
   height: auto;
   height: inherit;
   padding: 0;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .navbar-brand:hover {
   background: none;
+}
+
+.navbar-toggler img {
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .navbar-nav {

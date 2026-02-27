@@ -1,6 +1,5 @@
+﻿import Homestead from "../../areas/Homestead.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import Homestead from "../../areas/Homestead.tsx";
-
 export default function SalernoEstates(lang: "en" | "es" = "es") {
   const SalernoEstatesObject = new Desarrollo();
   SalernoEstatesObject.nombre = "salerno-estates";
@@ -17,3 +16,4 @@ export default function SalernoEstates(lang: "en" | "es" = "es") {
 
   return SalernoEstatesObject;
 }
+

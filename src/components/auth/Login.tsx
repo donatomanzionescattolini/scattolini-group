@@ -29,7 +29,7 @@ export default function Login() {
     e.preventDefault();
 
     if (!email || !password) {
-      setError(t('pages.auth.login.errors.missingFields', 'Please enter email and password'));
+      setError(String(t('pages.auth.login.errors.missingFields', 'Please enter email and password')));
       return;
     }
 
@@ -42,8 +42,8 @@ export default function Login() {
       console.error('Login error:', err);
       setError(
         err.code === 'auth/user-not-found' || err.code === 'auth/wrong-password'
-          ? t('pages.auth.login.errors.invalidCredentials', 'Incorrect email or password')
-          : t('pages.auth.login.errors.generic', 'Error signing in. Please try again.')
+          ? String(t('pages.auth.login.errors.invalidCredentials', 'Incorrect email or password'))
+          : String(t('pages.auth.login.errors.generic', 'Error signing in. Please try again.'))
       );
     } finally {
       setLoading(false);

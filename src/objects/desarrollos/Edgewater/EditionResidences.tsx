@@ -1,6 +1,6 @@
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
 export default function EditionResidences(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("edition-residences", lang);
@@ -62,7 +62,7 @@ export default function EditionResidences(lang: "en" | "es" = "es") {
                 <li>
                     Acceso prioritario a todas las instalaciones y comodidades del
                     hotel. Reservas de habitaciones con tarifas especiales para
-                    residentes en The Miami Beach EDITION; mejoras de habitación según
+                    residentes en The Miami Beach EDITION; mejoras de habitaci�n según
                     disponibilidad Acceso prioritario a todo el espacio público
                     rentable para eventos privados Acceso a salas de reuniones y
                     centro de negocios Acceso prioritario a restaurantes y bares del
@@ -83,7 +83,7 @@ export default function EditionResidences(lang: "en" | "es" = "es") {
                     Tienda minorista EDITION (y otras instalaciones de entretenimiento
                     dentro de The MiamiBeach EDITION) Reservas prioritarias para
                     cabañas junto a la piscina tumbonas y sombrillas en la playa y la
-                    piscina. Reservas prioritarias para todos los deportes acuáticos
+                    piscina. Reservas prioritarias para todos los deportes acuÁticos
                     recreativos. Acceso al gimnasio. Acceso al spa y servicios de
                     salón. Planificación de eventos especiales. Valet parking y
                     reservas de limusinas.
@@ -99,3 +99,4 @@ export default function EditionResidences(lang: "en" | "es" = "es") {
     TheEditionResidencesObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "29"), 10) || 29;
     return TheEditionResidencesObject;
 }
+

@@ -1,50 +1,48 @@
 import React from "react";
-import MiamiBeachRoutes from "./desarrollos/MiamiBeachRoutes";
-import BrickellRoutes from "./desarrollos/BrickellRoutes";
-import DowntownRoutes from "./desarrollos/DowntownRoutes";
-import BayHarborIslands from "./desarrollos/BayHarborIslandsRoutes";
-import EdgewaterRoutes from "./desarrollos/EdgewaterRoutes";
-import HomesteadRoutes from "./desarrollos/Homestead";
-import PinecrestRoutes from "./desarrollos/PinecrestRoutes";
-import SunnyIslesRoutes from "./desarrollos/SunnyIslesRoutes";
-import FloridaCityRoutes from "./desarrollos/FloridaCityRoutes";
-import NorthBayVillageRoutes from "./desarrollos/NorthBayVillageRoutes";
-import CoralGablesRoutes from "./desarrollos/CoralGablesRoutes";
-import CoconutGroveRoutes from "./desarrollos/CoconutGroveRoutes";
-import SouthMiamiRoutes from "./desarrollos/SouthMiamiRoutes";
-import FtLauderdaleRoutes from "./desarrollos/FtLauderdaleRoutes";
-import WynwoodRoutes from "./desarrollos/WynwoodRoutes";
 import AventuraRoutes from "./desarrollos/AventuraRoutes";
+import BayHarborIslandsRoutes from "./desarrollos/BayHarborIslandsRoutes";
+import BrickellRoutes from "./desarrollos/BrickellRoutes";
+import CoconutGroveRoutes from "./desarrollos/CoconutGroveRoutes";
+import CoralGablesRoutes from "./desarrollos/CoralGablesRoutes";
 import DaniaBeachRoutes from "./desarrollos/DaniaBeachRoutes";
-import PompanoBeachRoutes from "./desarrollos/PompanoBeachRoutes";
+import DowntownRoutes from "./desarrollos/DowntownRoutes";
+import EdgewaterRoutes from "./desarrollos/EdgewaterRoutes";
+import FloridaCityRoutes from "./desarrollos/FloridaCityRoutes";
+import FtLauderdaleRoutes from "./desarrollos/FtLauderdaleRoutes";
 import HollywoodRoutes from "./desarrollos/HollywoodRoutes";
+import HomesteadRoutes from "./desarrollos/Homestead";
+import MiamiBeachRoutes from "./desarrollos/MiamiBeachRoutes";
 import MidtownMiamiRoutes from "./desarrollos/MidtownMiamiRoutes";
+import NorthBayVillageRoutes from "./desarrollos/NorthBayVillageRoutes";
+import PinecrestRoutes from "./desarrollos/PinecrestRoutes";
+import PompanoBeachRoutes from "./desarrollos/PompanoBeachRoutes";
+import SouthMiamiRoutes from "./desarrollos/SouthMiamiRoutes";
+import SunnyIslesRoutes from "./desarrollos/SunnyIslesRoutes";
+import WynwoodRoutes from "./desarrollos/WynwoodRoutes";
 
 export default function DesarrollosRoutes() {
-  
-
   return (
-    <React.Fragment>
-      <MiamiBeachRoutes />
-      <BrickellRoutes />
-      <DowntownRoutes />
-      <BayHarborIslands />
-      <EdgewaterRoutes />
-      <HomesteadRoutes />
-      <PinecrestRoutes />
-      <SunnyIslesRoutes />
-      <FloridaCityRoutes />
-      <NorthBayVillageRoutes />
-      <CoralGablesRoutes />
-      <CoconutGroveRoutes />
-      <SouthMiamiRoutes />
-      <FtLauderdaleRoutes />
-      <WynwoodRoutes />
-      <MidtownMiamiRoutes />
-      <AventuraRoutes />
-      <DaniaBeachRoutes />
-      <PompanoBeachRoutes />
-      <HollywoodRoutes />
-    </React.Fragment>
+    <>
+      {MiamiBeachRoutes()}
+      {BrickellRoutes()}
+      {DowntownRoutes()}
+      {BayHarborIslandsRoutes()}
+      {EdgewaterRoutes()}
+      {HomesteadRoutes()}
+      {PinecrestRoutes()}
+      {SunnyIslesRoutes()}
+      {FloridaCityRoutes()}
+      {NorthBayVillageRoutes()}
+      {CoralGablesRoutes()}
+      {CoconutGroveRoutes()}
+      {SouthMiamiRoutes()}
+      {FtLauderdaleRoutes()}
+      {WynwoodRoutes()}
+      {MidtownMiamiRoutes()}
+      {AventuraRoutes()}
+      {DaniaBeachRoutes()}
+      {PompanoBeachRoutes()}
+      {HollywoodRoutes()}
+    </>
   );
 }

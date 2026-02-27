@@ -1,6 +1,6 @@
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
 export default function StRegis(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("st-regis", lang);
@@ -11,8 +11,8 @@ export default function StRegis(lang: "en" | "es" = "es") {
     StRegisObject.titulo = getLocalizedField("titulo", "St. Regis® ");
     StRegisObject.slogan = getLocalizedField("slogan", "Vivir exquisito es vivir extraordinario");
     StRegisObject.introduccion = getLocalizedArray("introduccion", [
-        "Situado a lo largo de la hermosa costa de South  con exquisitas vistas frente a la bahía, The St. Regis Residences, Miami personifica la vida elegante. Refleja las sensibilidades de aquellos que son impulsados por el conocimiento, exigen excelencia, respetan la tradición y valoran la individualidad por encima de todo.",
-        "The St. Regis Residences, Miami representa un futuro impulsado por un pasado histórico. Un lugar donde las nuevas generaciones crearán una vida de momentos legendarios, en hogares únicos para personas que perciben sus legados personales innatamente entrelazados con la rica herencia de Miami.",
+        "Situado a lo largo de la hermosa costa de South  con exquisitas vistas frente a la bahía, The St. Regis Residences, Miami personifica la vida elegante. Refleja las sensibilidades de aquellos que son impulsados por el conocimiento, exigen excelencia, respetan la tradici�n y valoran la individualidad por encima de todo.",
+        "The St. Regis Residences, Miami representa un futuro impulsado por un pasado hist�rico. Un lugar donde las nuevas generaciones crear�n una vida de momentos legendarios, en hogares únicos para personas que perciben sus legados personales innatamente entrelazados con la rica herencia de Miami.",
         "Desarrollado por Grupo Relacionado e Integra Investments, St. Regis Residences ofrece un diseño majestuoso de Robert AM Stern Architects que presenta interiores exclusivos de Rockwell Group y paisajismo de Enzo Enea Group.",
     ]);
     StRegisObject.banner = true;
@@ -21,7 +21,7 @@ export default function StRegis(lang: "en" | "es" = "es") {
         edificio: (
             <p>
                 St. Regis®  se encuentra dentro de una red de conexiones de
-                transporte cercanas, lo que brinda fácil acceso al Aeropuerto
+                transporte cercanas, lo que brinda fÁcil acceso al Aeropuerto
                 Internacional de Miami, el Puerto de Miami, el Distrito de las Artes
                 de Wynwood, el Distrito de Diseño, los teatros y museos
                 internacionalmente aclamados del centro y los estadios deportivos de
@@ -32,13 +32,13 @@ export default function StRegis(lang: "en" | "es" = "es") {
             <div>
                 <p>
                     Una sola torre de 48 pisos que alberga 150 residencias, incluidos
-                    penthouses y sky villas. St. Regis®  es una colección de
+                    penthouses y sky villas. St. Regis®  es una colecci�n de
                     casas de 2 a 7 habitaciones que miden entre 2,616 y 7,391 pies
                     cuadrados. Pie. Con techos de 10 pies, tecnología inteligente
                     integrada y tocador en cada unidad. Este edificio ofrece mucho
                     espacio interior para comodidades y vistas despejadas del
-                    horizonte de Miami, la Bahía de Biscayne y el Océano Atlántico.
-                    También ofrece el servicio de mayordomo St. Regis®, servicios de
+                    horizonte de Miami, la Bahía de Biscayne y el Oc�ano Atl�ntico.
+                    Tambi�n ofrece el servicio de mayordomo St. Regis®, servicios de
                     limpieza y privilegios de membresía global
                 </p>
                 <br></br>
@@ -116,7 +116,7 @@ export default function StRegis(lang: "en" | "es" = "es") {
                 </li>
                 <li className="list-group-item">
                     {" "}
-                    Estaciones de carga para vehículos eléctricos
+                    Estaciones de carga para vehículos el�ctricos
                 </li>
                 <li className="list-group-item">
                     {" "}
@@ -139,11 +139,11 @@ export default function StRegis(lang: "en" | "es" = "es") {
                 <li className="list-group-item">
                     {" "}
                     Terrenos tipo parque y exuberantes terrazas de la firma suiza de
-                    diseño paisajístico Enea Garden Design
+                    dise�o paisajístico Enea Garden Design
                 </li>
                 <li className="list-group-item">
                     {" "}
-                    Sala multimedia de última generación
+                    Sala multimedia de última generaci�n
                 </li>
 
                 <li className="list-group-item">
@@ -181,3 +181,5 @@ export default function StRegis(lang: "en" | "es" = "es") {
     };
     return StRegisObject;
 }
+
+

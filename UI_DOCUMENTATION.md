@@ -108,7 +108,7 @@ Fields:
 ### Success Message
 - Green alert box
 - Check mark (✓) icon
-- Text: "Desarrollo/Área guardado exitosamente"
+- Text:"latest"
 - Auto-dismisses after 3 seconds
 
 ### Error Message

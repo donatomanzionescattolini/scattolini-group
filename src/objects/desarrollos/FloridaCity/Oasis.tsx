@@ -1,4 +1,4 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import FloridaCity from "../../areas/FloridaCity.tsx";
 import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
@@ -19,3 +19,5 @@ export default function Oasis(lang: "en" | "es" = "es") {
 
   return OasisObject;
 }
+
+

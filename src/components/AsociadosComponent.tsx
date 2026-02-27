@@ -1,9 +1,7 @@
 import "material-components-web/dist/material-components-web.css";
-import "./Asociados.scss";
-import "mdb-ui-kit/css/mdb.min.css";
 import { Link } from "react-router-dom";
-import Asociados from "../objects/asociados/Asociados";
 import { useTranslation } from "../i18n.tsx";
+import Asociados from "../objects/asociados/Asociados";
 
 export default function Equipo() {
   const { t } = useTranslation();
@@ -55,6 +53,7 @@ export default function Equipo() {
             src="https://www.instagram.com/scattolinigroup/embed/"
             frameBorder={1}
             autoFocus
+            title="Instagram Scattolini Group"
           ></iframe>
         )}
         {innerWidth < 650 && (
@@ -64,6 +63,7 @@ export default function Equipo() {
             src="https://www.instagram.com/scattolinigroup/embed/"
             frameBorder={1}
             autoFocus
+            title="Instagram Scattolini Group"
           ></iframe>
         )}
       </div>

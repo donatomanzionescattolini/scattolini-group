@@ -7,6 +7,6 @@ export interface caracteristicas {
 }
 
 export interface ProjectParams {
-    desarrollo: Desarrollo;
+    desarrollo: Desarrollo | ((lang: "en" | "es") => Desarrollo) | (() => Desarrollo);
 
 }

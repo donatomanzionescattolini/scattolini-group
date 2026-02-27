@@ -1,14 +1,13 @@
-import { AboutUs } from "./AboutUs";
-import { MDBBtn, MDBContainer } from "mdb-react-ui-kit";
 import React, { useEffect, useLayoutEffect, useState } from "react";
+import { Container } from "react-bootstrap";
+import { AboutUs } from "./AboutUs";
 import AliadosComponent from "./components/AliadosComponent.tsx";
 import AsociadosSmallComponent from "./components/AsociadosSmallComponent.tsx";
 import Quotes from "./components/Quotes";
-import Servicios from "./components/Servicios";
+import Servicios from "./components/Servicios.tsx";
 import AreasComponent from "./components/areas/AreasComponent.tsx";
 import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
 import Quote, { quotes } from "./models/Quote";
-import FloatingContactFormComponent from "./components/FloatingContactFormComponent.tsx";
 import { useTranslation } from "./i18n.tsx";
 
 export function Home() {
@@ -41,13 +40,13 @@ export function Home() {
           className={"floating-element object-fit-cover"}
           style={{ background: "rgb(255,255,255,0.0)" }}
         >
-          <MDBBtn className="close-button" onClick={toggleShow} type={"button"}>
+          <Button className="close-button" onClick={toggleShow} type={"button"}>
             Close
-          </MDBBtn>
+          </Button>
           {/* <FloatingContactFormComponent /> */}
         {/* </div> */}
       {/* )} */}
-      <MDBContainer fluid className="jumbotron">
+      <Container fluid className="jumbotron">
         <div className="video-container">
           <video autoPlay loop muted playsInline className={" m-0 p-0"} preload="auto">
             <source
@@ -73,7 +72,7 @@ export function Home() {
             </a>
           </div>
         </div>
-      </MDBContainer>
+      </Container>
       {width < 768 && <br></br>}
       <section className="white-block pb-0 mb-0 pt-5">
         <AboutUs />
@@ -89,30 +88,30 @@ export function Home() {
 
       <div className="skew-cc"></div>
       <section className="white-block">
-        <MDBContainer>
+        <Container>
           <AsociadosSmallComponent />
-        </MDBContainer>
+        </Container>
       </section>
       <div className="skew-c"></div>
       {/* <DividerSecondComponent /> */}
       <br />
       <section className="colour-block">
-        <MDBContainer>
+        <Container>
           <Servicios />
-        </MDBContainer>
+        </Container>
         <br />
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">
-        <MDBContainer>
+        <Container>
           <DesarrollosTodos />
-        </MDBContainer>
+        </Container>
       </section>
       <div className="skew-c"></div>
       <section className="colour-block">
-        <MDBContainer>
+        <Container>
           <AliadosComponent />
-        </MDBContainer>
+        </Container>
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">

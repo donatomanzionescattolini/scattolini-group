@@ -1,10 +1,11 @@
-import AreaTemplate from "./AreaTemplate.tsx";
-import Edgewater from "../../objects/areas/Edgewater.tsx";
+import { useLayoutEffect } from "react";
+import Edgewater from "../../objects/areas/Edgewater";
+import AreaTemplate from "./AreaTemplate";
 
-import {useLayoutEffect} from "react";export default function EdgewaterComponent() {
- useLayoutEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);    return (
-        <AreaTemplate area={Edgewater()}/>
-    );
+export default function EdgewaterComponent() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return <AreaTemplate area={Edgewater()} />;
 }

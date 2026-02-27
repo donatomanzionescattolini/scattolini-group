@@ -1,14 +1,13 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import {
-  User,
-  signInWithEmailAndPassword,
-  signOut,
+  browserLocalPersistence,
   onAuthStateChanged,
   setPersistence,
-  browserLocalPersistence,
-} from 'firebase/auth';
-import { auth } from '../config/firebase';
-
+  signInWithEmailAndPassword,
+  signOut,
+  type User,
+} from "firebase/auth";
+import { auth } from "../config/firebase";
 interface AuthContextType {
   currentUser: User | null;
   loading: boolean;
@@ -27,7 +26,7 @@ export function useAuth() {
 }
 
 interface AuthProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export function AuthProvider({ children }: AuthProviderProps) {

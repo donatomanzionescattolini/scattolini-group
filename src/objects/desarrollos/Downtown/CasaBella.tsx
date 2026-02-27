@@ -1,10 +1,7 @@
-import React from "react";
-
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
-
-export default function CasaBella(lang: "en" | "es" = "es") {
+import React from "react";export default function CasaBella(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("casa-bella", lang);
     const CasaBellaObject: Desarrollo = new Desarrollo();
 
@@ -17,7 +14,7 @@ export default function CasaBella(lang: "en" | "es" = "es") {
             <ul>
                 <li>Número de pisos:</li>
                 <li>Número de unidades: 306</li>
-                <li>Ubicación: 1444 Biscayne Blvd, Miami, FL 33132 ·</li>
+                <li>Ubicaci�n: 1444 Biscayne Blvd, Miami, FL 33132 ·</li>
                 <li>Habitaciones por unidad: 1-5 dormitorios</li>
             </ul>
         ),
@@ -28,11 +25,11 @@ export default function CasaBella(lang: "en" | "es" = "es") {
                     vestíbulo privado
                 </li>
                 <li>
-                    Los ascensores están equipados con control de acceso biométrico
+                    Los ascensores estÁn equipados con control de acceso biométrico
                     para mejorar la seguridad
                 </li>
                 <li>
-                    La mayoría de las unidades disfrutan de amplios diseños de paso
+                    La mayoría de las unidades disfrutan de amplios dise�os de paso
                     con techos altos de 10 pies y vistas impresionantes de la Bahía de
                     Biscayne, el horizonte del centro de Miami y las impresionantes
                     puestas de sol desde el oeste
@@ -45,15 +42,15 @@ export default function CasaBella(lang: "en" | "es" = "es") {
                     seleccionados individualmente por Piero Lissoni
                 </li>
                 <li>
-                    El paquete de electrodomésticos de vidrio negro de primera línea
+                    El paquete de electrodom�sticos de vidrio negro de primera línea
                     incluye refrigerador / congelador Sub-Zero integrado de 36
                     pulgadas con paneles, microondas de cajón de transición Wolf,
                     lavavajillas silencioso, horno de convección incorporado Wolf,
-                    encimera de vidrio cerámico y refrigeración de vino
+                    encimera de vidrio cerÁmico y refrigeración de vino
                 </li>
                 <li>
                     Fregadero de acero inoxidable de gran tamaño de radio cero con
-                    cajón de grifo extraíble de diseño europeo de una sola palanca
+                    caj�n de grifo extraíble de dise�o europeo de una sola palanca
                 </li>
                 <li>
                     Baños principales diseñados por Piero Lissoni con gabinetes y
@@ -77,7 +74,7 @@ export default function CasaBella(lang: "en" | "es" = "es") {
                 <li>Amplia sala de fiestas con vistas a la bahía de Biscayne</li>
                 <li>cine</li>
                 <li>Sala de vinos</li>
-                <li>Colección de arte de calidad museística</li>
+                <li>Colecci�n de arte de calidad museística</li>
                 <li>
                     Centro de negocios totalmente equipado, incluyendo sala de
                     conferencias

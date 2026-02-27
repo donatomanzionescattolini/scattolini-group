@@ -1,81 +1,58 @@
-
-import { MDBContainer } from "mdb-react-ui-kit";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
+import { Container } from "react-bootstrap";
 import { AboutUs } from "../AboutUs";
-import Quote, { quotes } from "../models/Quote";
+import { useTranslation } from "../i18n";
+import { quotes } from "../models/Quote";
+import Quote from "../models/Quote";
 import AliadosComponent from "./AliadosComponent";
 import AreasComponent from "./AreasComponent";
 import AsociadosSmallComponent from "./AsociadosSmallComponent";
-import DesarrollosTodos from "./desarrollos/DesarrollosComponent";
 import Quotes from "./Quotes";
 import Servicios from "./Servicios";
-import { useTranslation } from "../i18n.tsx";
+import DesarrollosComponent from "./desarrollos/DesarrollosComponent";
 
 export function Home() {
   const { t } = useTranslation();
-  const [width, setWidth] = React.useState(window.innerWidth);
+  const [width, setWidth] = useState(window.innerWidth);
+  const [quotez] = useState<Quote[]>(quotes);
 
   useEffect(() => {
     const handleResizeWindow = () => setWidth(window.innerWidth);
-    // subscribe to window resize event "onComponentDidMount"
     window.addEventListener("resize", handleResizeWindow);
-    return () => {
-      // unsubscribe "onComponentDestroy"
-      window.removeEventListener("resize", handleResizeWindow);
-    };
+    return () => window.removeEventListener("resize", handleResizeWindow);
   }, []);
 
   useLayoutEffect(() => {
-    window.resizeTo(0, 0);
-  });
-  // State variable to store the visibility of the floating element
-  // Function to toggle the visibility of the floating element
+    window.scrollTo(0, 0);
+  }, []);
 
-  const [quotez] = useState<Quote[]>(quotes);
   return (
     <>
-      {/* {show && (
-        <div
-          className={"floating-element object-fit-cover"}
-          style={{ background: "rgb(255,255,255,0.0)" }}
-        >
-          <MDBBtn className="close-button" onClick={toggleShow} type={"button"}>
-            Close
-          </MDBBtn>
-          {/* <FloatingContactFormComponent /> */}
-        {/* </div> */}
-      {/* )} */}
-      <MDBContainer fluid jumbotron>
+      <Container fluid>
         <div className="video-container">
-          <video autoPlay loop muted playsInline className={" m-0 p-0"}>
-            <source
-              src="https://pagina-mama.s3.amazonaws.com/assets2/video-homepage.mp4"
-              type="video/mp4"
-            />
+          <video autoPlay loop muted playsInline className="m-0 p-0">
+            <source src="https://pagina-mama.s3.amazonaws.com/assets2/video-homepage.mp4" type="video/mp4" />
           </video>
           <div className="overlay"></div>
 
-          <div className="content text-center ">
-            <h1 className="display-2" id="hero-heading">{t("hero.title", "SCATTOLINI GROUP")}</h1>
+          <div className="content text-center">
+            <h1 className="display-2" id="hero-heading">
+              {t("hero.title", "SCATTOLINI GROUP")}
+            </h1>
             <p className="lead" id="hero-subheading">
               {t("hero.subtitle", "Real Estate Agency")}
             </p>
-            <a
-              className="btn btn-large btn-outline-secondary mt-3"
-              href="mailto:elda.scattolini@scattolinigroup.com"
-            >
+            <a className="btn btn-large btn-outline-secondary mt-3" href="mailto:elda.scattolini@scattolinigroup.com">
               {t("hero.cta", "Contact us today")}
             </a>
           </div>
         </div>
-      </MDBContainer>
-      {width < 768 && <br></br>}
+      </Container>
+
+      {width < 768 && <br />}
       <section className="white-block pb-0 mb-0 pt-5">
         <AboutUs />
       </section>
-      {/* <div> */}
-      {/* <h3 className="text-center">Otras Áreas</h3> */}
-      {/* </div> */}
       <div className="skew-c"></div>
 
       <section className="colour-block">
@@ -84,30 +61,29 @@ export function Home() {
 
       <div className="skew-cc"></div>
       <section className="white-block">
-        <MDBContainer>
+        <Container>
           <AsociadosSmallComponent />
-        </MDBContainer>
+        </Container>
       </section>
       <div className="skew-c"></div>
-      {/* <DividerSecondComponent /> */}
       <br />
       <section className="colour-block">
-        <MDBContainer>
+        <Container>
           <Servicios />
-        </MDBContainer>
+        </Container>
         <br />
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">
-        <MDBContainer>
-          <DesarrollosTodos />
-        </MDBContainer>
+        <Container>
+          <DesarrollosComponent />
+        </Container>
       </section>
       <div className="skew-c"></div>
       <section className="colour-block">
-        <MDBContainer>
+        <Container>
           <AliadosComponent />
-        </MDBContainer>
+        </Container>
       </section>
       <div className="skew-cc"></div>
       <section className="white-block">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Areas from "../../objects/areas/Areas.tsx";
@@ -48,14 +48,14 @@ const SlideshowGallery = (props: PropsSlideshow) => {
                 {x.nombre
                   .split("-")
                   .map(
-                    (n) => String(n.charAt(0)).toUpperCase() + n.substring(1)
+                    (n: string) => String(n.charAt(0)).toUpperCase() + n.substring(1)
                   )
                   .join(" ")}
               </h3>
               <p className="lead font-weight-bold text-white">
                 {areaObject.name
                   .split("-")
-                  .map((n) => n.charAt(0).toUpperCase() + n.substring(1))
+                  .map((n: string) => n.charAt(0).toUpperCase() + n.substring(1))
                   .join(" ")}
               </p>
             </Carousel.Caption>
@@ -83,3 +83,4 @@ const SlideshowGallery = (props: PropsSlideshow) => {
 };
 
 export default SlideshowGallery;
+

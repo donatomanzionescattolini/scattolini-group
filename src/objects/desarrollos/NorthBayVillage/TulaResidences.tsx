@@ -1,5 +1,4 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import MiamiBeach from "../../areas/MiamiBeach.tsx";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
 
 
@@ -7,7 +6,7 @@ const TulaResidences = new Desarrollo(NorthBayVillage());
 TulaResidences.nombre = "tula-residences";
 TulaResidences.titulo="Tula Residences";
 TulaResidences.banner = true;
-TulaResidences.introduccion = ["Tula Residences Miami es un condominio frente al mar de lujo de 21 pisos, con 54 residencias en total, incluyendo seis áticos únicos. Su arquitectura contemporánea combina la simetría con la individualidad. Mejorando el paisaje panorámico de la Bahía de Biscayne, la exuberante vegetación circundante crea un ambiente sereno. Las instalaciones de Tula enfatizan la conexión, la exclusividad, la elegancia y el diseño espacioso. A solo un breve paseo de distancia se encuentra Treasure Island Park, un lugar ideal para hacer picnics y ver una variedad de barcos deslizarse por la bahía."];
+TulaResidences.introduccion = ["Tula Residences Miami es un condominio frente al mar de lujo de 21 pisos, con 54 residencias en total, incluyendo seis �ticos únicos. Su arquitectura contempor�nea combina la simetría con la individualidad. Mejorando el paisaje panor�mico de la Bahía de Biscayne, la exuberante vegetaci�n circundante crea un ambiente sereno. Las instalaciones de Tula enfatizan la conexi�n, la exclusividad, la elegancia y el dise�o espacioso. A solo un breve paseo de distancia se encuentra Treasure Island Park, un lugar ideal para hacer picnics y ver una variedad de barcos deslizarse por la bahía."];
 TulaResidences.numberOfImages = 16;
 TulaResidences.numberOfUnits = 54;
 TulaResidences.numberOfFloors = 21;
@@ -34,19 +33,19 @@ TulaResidences.caracteristicas = {
     amenidades: <>
         <ul>
 
-            <li>Gran entrada en un vestíbulo de diseño llamativo con conserje las 24 horas</li>
+            <li>Gran entrada en un vestíbulo de dise�o llamativo con conserje las 24 horas</li>
           
-            <li>Piscina de estilo resort con terraza ajardinada y cabañas que ofrecen vistas al amanecer, al atardecer y nocturnas del horizonte de Miami y la Bahía de Biscayne</li>
+            <li>Piscina de estilo resort con terraza ajardinada y caba�as que ofrecen vistas al amanecer, al atardecer y nocturnas del horizonte de Miami y la Bahía de Biscayne</li>
           
-            <li>Suite de servicios de sexto piso con vistas panorámicas y oportunidades interiores / exteriores para el bienestar y la socialización</li>
+            <li>Suite de servicios de sexto piso con vistas panorÁmicas y oportunidades interiores / exteriores para el bienestar y la socialización</li>
           
-            <li>Gran habitación con chimenea de mármol, ventanas de piso a techo y vistas a la bahía</li>
+            <li>Gran habitaci�n con chimenea de m�rmol, ventanas de piso a techo y vistas a la bahía</li>
           
             <li>Habitación Skyline Club, disponible para reservas privadas</li>
           
             <li>Comedor privado para doce con cocina de calentamiento de chef para eventos atendidos</li>
           
-            <li>Gimnasio con 2.100 pies cuadrados de equipo totalmente equipado y de última generación</li>
+            <li>Gimnasio con 2.100 pies cuadrados de equipo totalmente equipado y de última generaci�n</li>
           
             <li>Edificio que admite mascotas con spa dedicado a mascotas</li>
           
@@ -65,3 +64,4 @@ TulaResidences.caracteristicas = {
 
 
 export default TulaResidences;
+

@@ -1,8 +1,7 @@
-import React from "react";
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
-
+import React from "react";
 export default function Lofty(lang: "en" | "es" = "es") {
   const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("lofty", lang);
   const Lofty = new Desarrollo(Brickell());
@@ -14,9 +13,9 @@ export default function Lofty(lang: "en" | "es" = "es") {
         <br />
         <strong>{getLocalizedField("caracteristicas.residencias.title", "Las Residencias")}</strong>
         <br />
-        <li>{getLocalizedField("caracteristicas.residencias.li1", "Residencias urbanas de lujo con diseños abiertos modernos desde 485SF — 930 SF")}</li>
+        <li>{getLocalizedField("caracteristicas.residencias.li1", "Residencias urbanas de lujo con dise�os abiertos modernos desde 485SF � 930 SF")}</li>
         <li>{getLocalizedField("caracteristicas.residencias.li2", "Todas las residencias se entregan completamente terminadas y amuebladas especialmente seleccionadas por INC.")}</li>
-        <li>{getLocalizedField("caracteristicas.residencias.li3", "Vistas panorámicas del río Miami y el horizonte de Miami")}</li>
+        <li>{getLocalizedField("caracteristicas.residencias.li3", "Vistas panor�micas del río Miami y el horizonte de Miami")}</li>
       </ul>
     ),
     edificio: (
@@ -39,10 +38,10 @@ export default function Lofty(lang: "en" | "es" = "es") {
     ),
   };
   Lofty.introduccion = getLocalizedArray("introduccion", [
-    "Lofty Residences es un elegante condominio de 43 pisos que presenta un nuevo estándar de vida cosmopolita en Brickell."
+    "Lofty Residences es un elegante condominio de 43 pisos que presenta un nuevo estÁndar de vida cosmopolita en Brickell."
   ]);
 
-  Lofty.slogan = getLocalizedField("slogan", "Un Nuevo Estándar de Vida Cosmopolita en Brickell");
+  Lofty.slogan = getLocalizedField("slogan", "Un Nuevo EstÁndar de Vida Cosmopolita en Brickell");
   Lofty.numberOfImages = parseInt(getLocalizedField("numberOfImages", "55"), 10) || 55;
   Lofty.video = (
     <iframe
@@ -50,7 +49,7 @@ export default function Lofty(lang: "en" | "es" = "es") {
       width="700"
       height="394"
       className=" m-auto h-300"
-      src={getLocalizedField("video", "https://www.youtube.com/embed/q-aJKA0dycc?si=8fV7LqMsCR8Wfz2s&autoplay=true")}
+      src={getLocalizedField("video", "https://www.youtube.com/embed/q-aJKA0dyccsi=8fV7LqMsCR8Wfz2s&autoplay=true")}
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowFullScreen
@@ -61,3 +60,4 @@ export default function Lofty(lang: "en" | "es" = "es") {
 
   return Lofty;
 }
+

@@ -6,54 +6,54 @@ This document summarizes all the internationalization translations that have bee
 
 ### 1. Baccarat Residences (`baccarat`)
 
-- **Spanish**: "Baccarat Residences" - "Donde la vida brilla para siempre"
-- **English**: "Baccarat Residences" - "Where life shines forever"
+- **Spanish**:"latest"
+- **English**:"latest"
 - **Content**: Full introduction with 3 paragraphs in both languages
 
 ### 2. 2200 Brickell (`brickell2200`)
 
-- **Spanish**: "2200 Brickell" - "Un Santuario Urbano en el Corazón de Brickell"
-- **English**: "2200 Brickell" - "An Urban Sanctuary in the Heart of Brickell"
+- **Spanish**:"latest"
+- **English**:"latest"
 - **Content**: Comprehensive introduction covering design, features, and amenities
 
 ### 3. La Baia (`labaia`)
 
-- **Spanish**: "La Baia" - "Elegancia frente a la Bahía"
-- **English**: "La Baia" - "Waterfront Elegance"
+- **Spanish**:"latest"
+- **English**:"latest"
 - **Content**: Description of 57 luxury residences in Bay Harbor Islands
 
 ### 4. Elle Residences (`elleResidences`)
 
-- **Spanish**: "Elle Residences" - "El Nuevo Hogar Del Alto Estilo"
-- **English**: "Elle Residences" - "The New Home of High Style"
+- **Spanish**:"latest"
+- **English**:"latest"
 - **Content**:
     - Full introduction with 3 paragraphs
-    - Address: "3618 NE 5th Ave, Miami, FL 33137"
+    - Address:"latest"
     - Detailed residence characteristics (9 features)
 
 ### 5. Aria Reserve (`ariaReserve`)
 
-- **Spanish**: "Aria Reserve" - "Lujo sin Compromisos"
-- **English**: "Aria Reserve" - "Uncompromising Luxury"
+- **Spanish**:"latest"
+- **English**:"latest"
 - **Content**: Ultra-luxury residences description
 
 ### 6. Ella Miami Beach (`ella`)
 
-- **Spanish**: "Ella Miami Beach" - "Un Tributo Al Glamuroso Pasado De Miami Beach"
-- **English**: "Ella Miami Beach" - "A Tribute To Miami Beach's Glamorous Past"
+- **Spanish**:"latest"
+- **English**:"latest"
 - **Content**:
     - Full introduction with 3 paragraphs
-    - Address: "6940 Abbot Avenue, Miami Beach, FL 33141"
+    - Address:"latest"
     - Building characteristics (4 features)
     - Residence characteristics (9 features)
 
 ### 7. Aston Martin Residences (`astonMartin`)
 
-- **Spanish**: "Aston Martin Residences" - "Lujo Automotriz Redefinido"
-- **English**: "Aston Martin Residences" - "Automotive Luxury Redefined"
+- **Spanish**:"latest"
+- **English**:"latest"
 - **Content**:
     - Full introduction with 3 paragraphs
-    - Address: "300 Biscayne Boulevard Way"
+    - Address:"latest"
     - Building characteristics (3 features)
 
 ## Translation Structure
@@ -78,8 +78,6 @@ Each development includes:
 To use these translations in development files:
 
 ```typescript
-import {useDesarrolloI18n} from "../useDesarrolloI18n";
-
 export default function YourDevelopment() {
     const {getLocalizedField, getLocalizedArray} = useDesarrolloI18n("developmentKey");
 

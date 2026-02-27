@@ -1,34 +1,27 @@
 import "./App.scss";
-import "vite/modulepreload-polyfill";
 import "bootstrap/dist/css/bootstrap.css";
-import AreasComponent from "./components/AreasComponent.tsx";
 import "material-components-web/dist/material-components-web.css";
-import { Home } from "./Home";
 import Contacto from "./components/ContactoComponent.tsx";
-import "material-components-web/dist/material-components-web.js";
 import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
-import Equipo from "./components/AsociadosComponent.tsx";
 import ManzioneProperties from "./components/aliados/ManzioneProperties";
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
 import Nav from "./components/Nav";
-import AliadosComponent from "./components/AliadosComponent.tsx";
 import Liderazgo from "./components/Liderazgo.tsx";
-import { FloatingWhatsApp } from "react-floating-whatsapp";
 import AreasRoutes from "./routes/AreasRoutes.tsx";
-import DesarrollosRoutes from "./routes/DesarrollosRoutes.tsx";
-import { useLayoutEffect } from "react";
-import ContactFormComponent from "./components/ContactFormComponent.tsx";
+import React, { useLayoutEffect } from "react";
 import ContactoComponent from "./components/ContactoComponent.tsx";
-
-import { useTranslation } from "./i18n.tsx";
-import { AuthProvider } from "./contexts/AuthContext.tsx";
+import AliadosComponent from "./components/AliadosComponent.tsx";
+import AreasComponent from "./components/AreasComponent.tsx";
+import Equipo from "./components/AsociadosComponent.tsx";
 import Login from "./components/auth/Login.tsx";
-import Editor from "./components/editor/Editor.tsx";
 import ProtectedRoute from "./components/auth/ProtectedRoute.tsx";
-
+import Editor from "./components/editor/Editor.tsx";
+import Footer from "./components/Footer.tsx";
+import { AuthProvider } from "./contexts/AuthContext.tsx";
+import Home from "./Home.tsx";
+import { useTranslation } from "./i18n.tsx";
+import DesarrollosRoutes from "./routes/DesarrollosRoutes.tsx";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 export default function App() {
   const { t } = useTranslation();
   useLayoutEffect(() => {
@@ -49,12 +42,12 @@ export default function App() {
           <Route element={<DesarrollosTodos />} path={"/desarrollos"} />
           <Route element={<AreasComponent />} path="/areas" />
 
-          <DesarrollosRoutes />
+          {DesarrollosRoutes()}
 
           <Route element={<Equipo />} path={"/asociados"} />
 
           <Route element={<ManzioneProperties />} path={"/manzione-properties"} />
-          <AreasRoutes />
+          {AreasRoutes()}
           
           {/* Authentication Routes */}
           <Route element={<Login />} path="/login" />

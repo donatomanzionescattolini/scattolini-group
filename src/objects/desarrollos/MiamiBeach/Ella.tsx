@@ -120,6 +120,6 @@ export default function Ella(lang: "en" | "es" = "es") {
         en: "A Tribute to Miami Beach's Glamorous Past"
     };
     EllaObject.numberOfImages = 21;
-    EllaObject.video = <iframe width="555" height="500" className="object-fit-cover" src="https://www.youtube.com/embed/mIbAaxXmKTI?autoplay=1"  title="Ella Miami Beach - Airbnb boutique"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>;
+    EllaObject.video = <iframe width="555" height="500" className="object-fit-cover" src="https://www.youtube.com/embed/mIbAaxXmKTIautoplay=1"  title="Ella Miami Beach - Airbnb boutique"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>;
     return EllaObject;
 }

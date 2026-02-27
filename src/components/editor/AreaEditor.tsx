@@ -44,12 +44,12 @@ export default function AreaEditor() {
     try {
       const areaId = data.name || data.id;
       await saveArea(areaId, serializeArea(data));
-      setMessage(t('pages.editor.messages.areaSaved', 'Area saved successfully'));
+      setMessage(String(t('pages.editor.messages.areaSaved', 'Area saved successfully')));
       setMessageType('success');
       setTimeout(() => setMessage(''), 3000);
     } catch (error) {
       console.error('Error saving area:', error);
-      setMessage(t('pages.editor.messages.areaSaveError', 'Error saving area'));
+      setMessage(String(t('pages.editor.messages.areaSaveError', 'Error saving area')));
       setMessageType('error');
     } finally {
       setSaving(false);

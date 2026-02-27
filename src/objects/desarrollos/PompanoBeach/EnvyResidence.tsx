@@ -1,6 +1,6 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo";
-import PompanoBeach from "../../areas/PompanoBeach";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import PompanoBeach from "../../areas/PompanoBeach.tsx";
 
 export default function EnvyResidence(lang: "en" | "es" = "es") {
   const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("envyResidence", lang);
@@ -8,13 +8,13 @@ export default function EnvyResidence(lang: "en" | "es" = "es") {
 
   envyResidenceObject.nombre = "envy-residence";
   envyResidenceObject.titulo = getLocalizedField("titulo", "ENVY Pompano Beach");
-  envyResidenceObject.subtitulo = getLocalizedField("subtitulo", "Vive más allá de lo ordinario");
+  envyResidenceObject.subtitulo = getLocalizedField("subtitulo", "Vive mÁs allÁ de lo ordinario");
   envyResidenceObject.banner = true;
   envyResidenceObject.numberOfImages = 72;
   envyResidenceObject.introduccion = getLocalizedArray("introduccion", [
-    "Envy Residences combina la vibra moderno y ubicación estratégica. Construido en 2021, ofrece 214 unidades desde estudios hasta apartamentos de 3 habitaciones. Disfruta de amenidades de primera clase, como piscina estilo resort, gimnasio con pared de escalar, mini golf y áreas sociales. A solo 1.8 millas de la playa y con restricciones de alquiler flexibles, Envy es perfecto para vivir o invertir.",
+    "Envy Residences combina la vibra moderno y ubicación estratégica. Construido en 2021, ofrece 214 unidades desde estudios hasta apartamentos de 3 habitaciones. Disfruta de amenidades de primera clase, como piscina estilo resort, gimnasio con pared de escalar, mini golf y Áreas sociales. A solo 1.8 millas de la playa y con restricciones de alquiler flexibles, Envy es perfecto para vivir o invertir.",
   ]);
-  envyResidenceObject.slogan = getLocalizedField("slogan", "Vive más allá de lo ordinario.");
+  envyResidenceObject.slogan = getLocalizedField("slogan", "Vive mÁs allÁ de lo ordinario.");
   envyResidenceObject.direccion = getLocalizedField("direccion", "475 SE 1st St, Pompano Beach, FL 33060");
   envyResidenceObject.ubicación = getLocalizedField("ubicacion", "475 SE 1st St, Pompano Beach, FL 33060");
 envyResidenceObject.caracteristicas = {
@@ -53,16 +53,16 @@ envyResidenceObject.caracteristicas = {
     <>
       <ul>
         <li>
-          {getLocalizedField("caracteristicas.amenidades.bienestar", "Centro de bienestar: un gimnasio de última generación y espacio de yoga.")}
+          {getLocalizedField("caracteristicas.amenidades.bienestar", "Centro de bienestar: un gimnasio de última generaci�n y espacio de yoga.")}
         </li>
         <li>
-          {getLocalizedField("caracteristicas.amenidades.piscina", "Piscina estilo resort: una cubierta de piscina hermosamente ajardinada para la máxima relajación.")}
+          {getLocalizedField("caracteristicas.amenidades.piscina", "Piscina estilo resort: una cubierta de piscina hermosamente ajardinada para la mÁxima relajación.")}
         </li>
         <li>
-          {getLocalizedField("caracteristicas.amenidades.salon", "Sofisticado salón y sala de entretenimiento: un área común elegante para socializar.")}
+          {getLocalizedField("caracteristicas.amenidades.salon", "Sofisticado sal�n y sala de entretenimiento: un �rea común elegante para socializar.")}
         </li>
         <li>
-          {getLocalizedField("caracteristicas.amenidades.mascotas", "Ventajas para mascotas: un área de mascotas designada para sus amigos peludos.")}
+          {getLocalizedField("caracteristicas.amenidades.mascotas", "Ventajas para mascotas: un Área de mascotas designada para sus amigos peludos.")}
         </li>
         <li>
           {getLocalizedField("caracteristicas.amenidades.parque", "Parque infantil: un espacio divertido y seguro para que los niños jueguen.")}
@@ -84,3 +84,5 @@ envyResidenceObject.numberOfRooms = {start:1,end: 3}  ;
 
 return envyResidenceObject;
 }
+
+

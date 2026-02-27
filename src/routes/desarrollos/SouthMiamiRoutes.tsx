@@ -1,7 +1,7 @@
 import React from "react";
 
 const SouthMiamiRoutes = ()=> {
-  return <React.Fragment>
-  </React.Fragment>}
+  return <>
+  </>}
 
   export default SouthMiamiRoutes;

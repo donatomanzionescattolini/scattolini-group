@@ -7,7 +7,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "upgrade:vercel": "npm install vercel@latest"
+    "upgrade:vercel": "latest"
   },
   "dependencies": {
     "@emailjs/browser": "latest",
@@ -26,13 +26,15 @@
     "material-components-web": "^14.0.0",
     "mdb-react-ui-kit": "^10.0.0",
     "mdb-ui-kit": "^9.3.0",
+    "react": "^19.2.4",
     "react-bootstrap": "latest",
+    "react-dom": "^19.2.4",
     "react-floating-whatsapp": "latest",
     "react-hook-form": "latest",
     "react-router-dom": "latest",
     "sirv": "latest",
     "uuid": "latest",
-    "vercel": "latest",
+    "vercel": "^41.0.2",
     "vite-tsconfig-paths": "latest",
     "zod": "latest"
   },
@@ -55,8 +57,8 @@
     "@types/prop-types": "latest",
     "@types/qs": "latest",
     "@types/range-parser": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
     "@types/react-transition-group": "latest",
     "@types/responselike": "latest",
     "@types/scheduler": "latest",
@@ -65,18 +67,16 @@
     "@types/serve-static": "latest",
     "@types/unist": "latest",
     "@types/warning": "latest",
-    "@typescript-eslint/eslint-plugin": "latest",
-    "@typescript-eslint/parser": "latest",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
     "@vitejs/plugin-react": "latest",
-    "eslint": "latest",
-    "eslint-plugin-react": "latest",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "latest",
-    "eslint-plugin-react-refresh": "latest",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "eslint-plugin-react-refresh": "^0.4.7",
     "sass": "latest",
     "sass-loader": "latest",
     "typescript": "latest",
-    "vite": "^7.3.1"
+    "vite": "latest"
   }
 }

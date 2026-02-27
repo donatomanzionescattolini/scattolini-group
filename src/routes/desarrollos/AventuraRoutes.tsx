@@ -1,5 +1,5 @@
 import React from "react";
-const AventuraRoutesEl =<React.Fragment></React.Fragment>;
+const AventuraRoutesEl =<></>;
 
 export default function AventuraRoutes(){
     return AventuraRoutesEl;

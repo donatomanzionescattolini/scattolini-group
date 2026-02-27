@@ -1,16 +1,15 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import MidtownMiami from "../../areas/MidtownMiami";
-
-const MidtownParkResidences = new Desarrollo(MidtownMiami);
+const MidtownParkResidences = new Desarrollo(MidtownMiami());
 MidtownParkResidences.titulo = "Midtown Park Residences";
 MidtownParkResidences.nombre = "midtown-park-residences";
 MidtownParkResidences.introduccion = [
-  "Midtown Park es un animado centro de cinco acres las 24 horas del día en Midtown Miami, que une Design District, Wynwood y Edgewater. Este espacio de uso mixto combina oficinas, casas de lujo y áreas públicas vibrantes, fomentando la creatividad y la comunidad. Con más de 100,000 pies cuadrados de tiendas y restaurantes a nivel de calle, mejora el ambiente transitable. El desarrollo cuenta con un acre de espacios verdes, incluidos los parques East y West y dos paseos sombreados. Una entrada empedrada en Midtown Boulevard agrega comodidad, mientras que el tercer piso alberga un club de raqueta de ocho canchas para recreación de primer nivel. Las oficinas boutique atraen a firmas creativas, prácticas legales y profesionales de las finanzas, enriqueciendo la escena dinámica de Midtown.",
+  "Midtown Park es un animado centro de cinco acres las 24 horas del día en Midtown Miami, que une Design District, Wynwood y Edgewater. Este espacio de uso mixto combina oficinas, casas de lujo y �reas públicas vibrantes, fomentando la creatividad y la comunidad. Con m�s de 100,000 pies cuadrados de tiendas y restaurantes a nivel de calle, mejora el ambiente transitable. El desarrollo cuenta con un acre de espacios verdes, incluidos los parques East y West y dos paseos sombreados. Una entrada empedrada en Midtown Boulevard agrega comodidad, mientras que el tercer piso alberga un club de raqueta de ocho canchas para recreación de primer nivel. Las oficinas boutique atraen a firmas creativas, pr�cticas legales y profesionales de las finanzas, enriqueciendo la escena din�mica de Midtown.",
 ];
 MidtownParkResidences.slogan =
   "El mejor lugar para estar es ahora es el mejor lugar para vivir";
 MidtownParkResidences.numberOfImages = 49;
-MidtownParkResidences.ubicación = "2916 N Miami Ave, Miami, FL 33127 ";
+MidtownParkResidences.ubicacion = "2916 N Miami Ave, Miami, FL 33127 ";
 MidtownParkResidences.numberOfFloors = 30;
 MidtownParkResidences.numberOfUnits = 290;
 MidtownParkResidences.typeOfUnits = "Estudios, 1-5 habitaciones";
@@ -19,8 +18,8 @@ MidtownParkResidences.caracteristicas = {
   edificio: (
     <>
       <dl>
-        <dt>Ubicación</dt>
-        <dd>{MidtownParkResidences.ubicación}</dd>
+        <dt>ubicacion</dt>
+        <dd>{MidtownParkResidences.ubicacion}</dd>
         <dt>Año de apertura</dt>
         <dd>{MidtownParkResidences.estimatedCompletionYear}</dd>
         <dt>Numero de pisos</dt>
@@ -37,7 +36,7 @@ MidtownParkResidences.caracteristicas = {
       <ul>
         <li>
           Amplios estudios de concepto abierto, completamente terminados,
-          residencias de una y dos habitaciones, con alturas de techo de más de
+          residencias de una y dos habitaciones, con alturas de techo de mÁs de
           9 pies
         </li>
         <li>
@@ -63,7 +62,7 @@ MidtownParkResidences.caracteristicas = {
         </li>
         <li>
           Baños principales con duchas dobles con mampara de vidrio, accesorios
-          de latón Hansgrohe y paredes de cerámica Jade exclusivas diseñadas por
+          de latón Hansgrohe y paredes de cer�mica Jade exclusivas diseñadas por
           Meyer Davis Studio
         </li>
         <li>
@@ -123,15 +122,15 @@ MidtownParkResidences.caracteristicas = {
       </li>
       <li>
         Un calendario completo de reuniones sociales, fitness, bienestar y mucho
-        más.
+        mÁs.
       </li>
       <li>
         Servicios a domicilio a pedido, como entrega de comestibles, catering,
         servicio culinario personalizado, limpieza, servicio de lavandería y
-        más.
+        mÁs.
       </li>
       <li>
-        Servicios mientras está fuera, incluido el cuidado de mascotas, cuidado
+        Servicios mientras estÁ fuera, incluido el cuidado de mascotas, cuidado
         de plantas y mantenimiento de rutina del hogar*
       </li>
       <li>Masajes a la carta y tratamientos de spa.</li>
@@ -164,3 +163,4 @@ MidtownParkResidences.caracteristicas = {
 MidtownParkResidences.banner = true;
 
 export default MidtownParkResidences;
+

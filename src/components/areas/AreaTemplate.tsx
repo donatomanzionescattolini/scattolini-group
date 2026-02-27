@@ -1,39 +1,44 @@
-import { Image } from "react-bootstrap";
-import { MDBCol, MDBRow } from "mdb-react-ui-kit";
-import { useLayoutEffect, useState } from "react";
-import { useTranslation } from "../../i18n.tsx";
+import { useLayoutEffect, useMemo } from "react";
+import { Col, Image, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
-import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
+import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos";
+import Desarrollo from "../../models/desarrollos/Desarrollo";
+import { resolveLocalizedValue, useTranslation } from "../../i18n.tsx";
 import { Area } from "../../models/areas/Area.tsx";
-import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
-
 interface AreaProps {
   area: Area;
 }
 
 export default function AreaTemplate(props: AreaProps) {
   const { t, lang } = useTranslation();
-  const [area] = useState(props.area);
+  const area = props.area;
 
-  const getLocalized = (field: any) => {
-    if (field && typeof field === 'object' && ('en' in field || 'es' in field)) {
-      return field[lang] || field['es'];
-    }
-    return field;
+  const getLocalizedString = (field: unknown, fallback = ""): string => {
+    const resolved = resolveLocalizedValue<string>(field as any, lang);
+    if (typeof resolved === "string") return resolved;
+    if (typeof field === "string") return field;
+    return fallback;
+  };
+
+  const getLocalizedArray = (field: unknown, fallback: string[] = []): string[] => {
+    const resolved = resolveLocalizedValue<string[]>(field as any, lang);
+    if (Array.isArray(resolved)) return resolved;
+    if (Array.isArray(field)) return field as string[];
+    return fallback;
   };
 
   const nombre = area.name;
-  const titulo = getLocalized(area.titulo);
-  const slogan = getLocalized(area.slogan);
-  const descripcion = getLocalized(area.descripcion);
+  const titulo = getLocalizedString(area.titulo) || nombre;
+  const slogan = getLocalizedString(area.slogan);
+  const descripcion = getLocalizedArray(area.descripcion);
   const photoAlt = String(t("pages.areas.photoAlt")).replace("{title}", String(titulo || nombre));
   const images = [];
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [areaDesarrollos] = useState<Set<Desarrollo>>(
-    getDesarrollosForArea(area)
+  const areaDesarrollos = useMemo<Set<Desarrollo>>(
+    () => getDesarrollosForArea(area, lang),
+    [area, lang]
   );
   for (let i = 1; i <= area.numberOfImages; i++) {
     images.push(
@@ -60,9 +65,9 @@ export default function AreaTemplate(props: AreaProps) {
         <h2 className="text-center mt-5">{slogan}</h2>
         <hr className="hr hr-blurry w-50 mx-auto" />
       </div>
-      <MDBRow className="px-4">
-        <MDBCol md={1} sm={1} className=""></MDBCol>
-        <MDBCol
+      <Row className="px-4">
+        <Col md={1} sm={1} className=""></Col>
+        <Col
           md={5}
           sm={10}
           className="py-5 px-3 d-flex flex-column justify-content-center align-items-start"
@@ -80,16 +85,16 @@ export default function AreaTemplate(props: AreaProps) {
               </p>
             );
           })}
-        </MDBCol>
-        <MDBCol
+        </Col>
+        <Col
           md={5}
           sm={10}
           className="d-flex justify-content-center align-items-center"
         >
           <img src={firstImage} alt={photoAlt} />
-        </MDBCol>
-        <MDBCol className="" md={1} sm={1}></MDBCol>
-      </MDBRow>
+        </Col>
+        <Col className="" md={1} sm={1}></Col>
+      </Row>
       <div className="city-firstcarousel">{images.map((image) => image)}</div>
       {/* <DividerFirstComponent /> */}
       <div className="propiedades">
@@ -99,10 +104,10 @@ export default function AreaTemplate(props: AreaProps) {
           </div>
         )}
         <br></br>
-        <MDBRow>
+        <Row>
           {[...areaDesarrollos.values()].map((desarrollo) => {
             return (
-              <MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>
+              <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                 <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                   <div
                     className="propiedades-img p-0 m-0"
@@ -117,20 +122,20 @@ export default function AreaTemplate(props: AreaProps) {
                   ></div>
 
                   <h4 className="text-center card-title m-2 ">
-                    {getLocalized(desarrollo.titulo) ||
+                    {getLocalizedString(desarrollo.titulo) ||
                       desarrollo.nombre
                         .split("-")
                         .map(
-                          (word) =>
+                          (word: string) =>
                             word.charAt(0).toUpperCase() + word.substring(1)
                         )
                         .join(" ")}
                   </h4>
                 </Link>
-              </MDBCol>
+              </Col>
             );
           })}
-        </MDBRow>
+        </Row>
       </div>
       <div className="container-fluid m-0 p-0 overflow-scroll horizontal-scrollable"></div>
     </>

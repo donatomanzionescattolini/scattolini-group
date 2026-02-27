@@ -1,12 +1,6 @@
-
-
-import React from "react";
-import Desarrollo from "../../../models/desarrollos/Desarrollo";
-import Brickell from "../../areas/Brickell";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
-import "bootstrap/dist/js/bootstrap.js";
-import "bootstrap/dist/css/bootstrap.css";
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import Brickell from "../../areas/Brickell.tsx";
 
 export default function _2200Brickell(lang: "en" | "es" = "es") {
   const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("brickell2200", lang);
@@ -57,3 +51,4 @@ export default function _2200Brickell(lang: "en" | "es" = "es") {
   return _2200BrickellObject;
 }
 _2200Brickell.nombre = "2200-brickell";
+

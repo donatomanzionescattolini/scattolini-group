@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+﻿import React, { useState, useEffect, useCallback } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import {
   MDBRow,
@@ -40,11 +40,11 @@ export default function MultiStepWizard({
       return [
         {
           title: t('pages.editor.wizard.desarrollo.basic', 'Basic info'),
-          fields: ['nombre', 'titulo', 'slogan'],
+          fields: ['nombre', 'titulo', 'slogan', 'areaName'],
         },
         {
           title: t('pages.editor.wizard.desarrollo.details', 'Details'),
-          fields: ['introduccion', 'ubicacion', 'ubicación'],
+          fields: ['introduccion', 'ubicacion'],
         },
         {
           title: t('pages.editor.wizard.desarrollo.features', 'Features'),
@@ -247,3 +247,4 @@ export default function MultiStepWizard({
     </div>
   );
 }
+

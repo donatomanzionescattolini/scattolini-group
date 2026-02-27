@@ -1,15 +1,13 @@
 import { Area } from "../../models/areas/Area";
-import React from "react";
-
 export default function PompanoBeach() {
     const PompanoBeachObject = new Area("pompano-beach");
     PompanoBeachObject.titulo = {
         es: "Pompano Beach",
-        en: "Pompano Beach"
+        en:"latest"
     };
     PompanoBeachObject.slogan = {
         es: "La bienvenida más cálida de Florida.",
-        en: "Florida's Warmest Welcome."
+        en:"latest"
     };
     PompanoBeachObject.descripcion = {
         es: [

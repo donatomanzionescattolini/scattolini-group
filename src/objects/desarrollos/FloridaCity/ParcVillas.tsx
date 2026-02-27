@@ -1,6 +1,6 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import FloridaCity from "../../areas/FloridaCity.tsx";
+﻿import FloridaCity from "../../areas/FloridaCity.tsx";
 import { getDesarrolloI18n } from "../useDesarrolloI18n";
+import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
 export default function ParcVillas(lang: "en" | "es" = "es") {
   const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("parc-villas", lang);
@@ -17,3 +17,5 @@ export default function ParcVillas(lang: "en" | "es" = "es") {
   ParcVillasObject.area = FloridaCity();
   return ParcVillasObject;
 }
+
+

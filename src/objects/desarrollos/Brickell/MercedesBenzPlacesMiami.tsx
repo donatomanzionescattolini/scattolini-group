@@ -1,8 +1,6 @@
-import React from 'react'
-import Desarrollo from '../../../models/desarrollos/Desarrollo'
-import Brickell from '../../areas/Brickell'
-import { getDesarrolloI18n } from '../useDesarrolloI18n'
-
+import Desarrollo from "../../../models/desarrollos/Desarrollo";
+import Brickell from "../../areas/Brickell";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 export default function MercedesBenzPlacesMiami(lang: "en" | "es" = "es") {
   const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n('mercedes-benz-places-miami', lang)
   const MercedesBenzPlacesObject = new Desarrollo(Brickell());

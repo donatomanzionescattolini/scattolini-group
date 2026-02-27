@@ -11,30 +11,30 @@
     "asociados": "Asociados",
     "aliados": "Aliados",
     "equipo": "Nuestro Equipo",
-    "search": "Buscar"
+    "search":"latest"
   },
   "hero": {
     "title": "SCATTOLINI GROUP",
     "subtitle": "Agencia Inmobiliaria",
     "cta": "Contáctanos Hoy",
-    "contact_cta": "Contáctanos Hoy"
+    "contact_cta":"latest"
   },
   "areas": {
-    "title": "Áreas"
+    "title":"latest"
   },
   "project": {
     "features": "Características",
     "gallery": "Galería Fotográfica",
     "documents": "Documentos De Interés",
     "download": "Descargar",
-    "properties_in_area": "Propiedades en el Área"
+    "properties_in_area":"latest"
   },
   "pages": {
     "areas": {
-      "title": "Áreas"
+      "title":"latest"
     },
     "desarrollos": {
-      "title": "Desarrollos"
+      "title":"latest"
     },
     "about": {
       "whoWeAre": "Quiénes Somos",
@@ -42,7 +42,7 @@
       "requestConsultation": "Solicita una Consulta",
       "callUs": "Llámanos hoy",
       "consultationText": "Cualquiera de nuestros expertos estaría encantado de programar una consulta para explorar las opciones disponibles de acuerdo a tus necesidades",
-      "seeMore": "Ver Más"
+      "seeMore":"latest"
     },
     "services": {
       "title": "Servicios",
@@ -54,7 +54,7 @@
       "salesDesc": "Asistencia experta en la venta de su propiedad.",
       "purchase": "Compra de Propiedades",
       "purchaseDesc": "Orientación profesional en la compra de propiedades.",
-      "moreInfo": "Obtener más información"
+      "moreInfo":"latest"
     },
     "project": {
       "caracteristicas": "Características",
@@ -67,14 +67,14 @@
       "pdf": {
         "brochure": "Brochure",
         "hoja": "Hoja Informativa",
-        "planos": "Planos"
+        "planos":"latest"
       },
       "pdfUI": {
         "documentsTitle": "Documentos de Interés",
         "download": "Descargar",
-        "downloadBtn": "Descargar",
+        "downloadButton": "Descargar",
         "cantDisplay": "No se puede mostrar el PDF",
-        "instead": "en su lugar"
+        "instead":"latest"
       }
     },
     "contacto": {
@@ -82,7 +82,7 @@
         "successTitle": "Mensaje Enviado",
         "successMessage": "¡Mensaje enviado con éxito!",
         "failureTitle": "Error al Enviar",
-        "failureMessage": "Hubo un problema enviando el correo. Por favor intente de nuevo o envíenos un correo desde su propio servicio a"
+        "failureMessage":"latest"
       },
       "form": {
         "name": "Nombre",
@@ -90,20 +90,20 @@
         "phone": "Número de Teléfono",
         "message": "Mensaje",
         "sendButton": "Enviar",
-        "emailLink": "este correo"
+        "emailLink":"latest"
       }
     }
   },
   "whatsapp": {
     "status": "Normalmente responde en 1 hora",
-    "placeholder": "Escribe un mensaje..."
+    "placeholder":"latest"
   },
   "footer": {
-    "copyright": "© {year} Scattolini Group"
+    "copyright":"latest"
   },
   "docs": {
     "brochure": "Brochure",
     "hoja": "Hoja Informativa",
-    "planos": "Planos"
+    "planos":"latest"
   }
 }

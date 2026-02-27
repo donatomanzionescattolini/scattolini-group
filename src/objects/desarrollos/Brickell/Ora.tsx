@@ -1,8 +1,7 @@
-import React from "react";
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+﻿import React from "react";
 import Brickell from "../../areas/Brickell.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
-
+import { getDesarrolloI18n } from "../useDesarrolloI18n.ts";
+import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 export default function Ora(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("ora", lang);
     const OraObject = new Desarrollo(Brickell());
@@ -91,8 +90,7 @@ export default function Ora(lang: "en" | "es" = "es") {
         ),
         amenidades: (
             <ul>
-                EL SALÓN SOCIAL
-                <br></br>
+                <li>EL SAL�N SOCIAL</li>
                 <li>
                     Justo debajo del parque del cielo, el único espacio de un
                     propietario para reunirse y jugar, reconectarse y recargarse.
@@ -104,11 +102,9 @@ export default function Ora(lang: "en" | "es" = "es") {
                 <li>Biblioteca de lectura</li>
                 <li>
                     Espacios de trabajo abiertos y compartidos, oficinas privadas,
-                    salas de creación de contenido y energía inspirada y dinámica
+                    salas de creaci�n de contenido y energía inspirada y dinámica
                 </li>
-                <br/>
-                LA PISCINA
-                <br/>
+                <li><b>LA PISCINA</b></li>
                 <li>
                     Expansivo pero íntimo, con impresionantes vistas al mar, ricos
                     paisajes y naturaleza alrededor.
@@ -119,14 +115,12 @@ export default function Ora(lang: "en" | "es" = "es") {
                     Servicio de alimentos y bebidas y toallas junto a la piscina
                 </li>
                 <li>Vibrante paisaje tropical</li>
-                <br/>
-                APTITUD
-                <br/>
+                <li><b>APTITUD</b></li>
                 <li>
                     Un espacio abierto y amplio diseñado para todo tipo de
                     entrenamiento o sesión de entrenamiento.
                 </li>
-                <li>Equipos de última generación enfocados en el rendimiento</li>
+                <li>Equipos de última generaci�n enfocados en el rendimiento</li>
                 <li>
                     cardio, entrenamiento de resistencia y acondicionamiento de fuerza
                 </li>
@@ -136,9 +130,7 @@ export default function Ora(lang: "en" | "es" = "es") {
                 </li>
                 <li>Salas privadas para entrenadores virtuales</li>
                 <li>Espacios de fitness al aire libre</li>
-                <br/>
-                BIENESTAR
-                <br></br>
+                <li><b>BIENESTAR</b></li>
                 <li>
                     Nuestro Centro de Bienestar es tanto un club social como un lugar
                     para recentrarse, basado en el bienestar general generado por la
@@ -168,11 +160,13 @@ export default function Ora(lang: "en" | "es" = "es") {
             className="embed-responsive  d-flex flex-row justify-content-center"
             width={700}
             height={500}
-            src={getLocalizedField("video", "https://player.vimeo.com/video/806352821?autoplay=true")}
+            src={getLocalizedField("video", "https://player.vimeo.com/video/806352821autoplay=true")}
             allowFullScreen
             autoFocus
+            title="Ora by Casa Tua video"
             data-ready="true"
         ></iframe>
     );
     return OraObject;
 }
+

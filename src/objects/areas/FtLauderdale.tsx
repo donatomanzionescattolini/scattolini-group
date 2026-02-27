@@ -1,12 +1,11 @@
-import React from 'react'
-import { Area } from '../../models/areas/Area'
+import { AreaDto } from "../../models/areas/Area.tsx";
 
 export default function FtLauderdale() {
-    const FtLauderdaleObject = new Area("ft-lauderdale");
+    const FtLauderdaleObject = AreaDto("ft-lauderdale");
     FtLauderdaleObject.numberOfImages = 34;
     FtLauderdaleObject.titulo = {
         es: "Ft. Lauderdale",
-        en: "Ft. Lauderdale"
+        en:"latest"
     };
     FtLauderdaleObject.name = "ft-lauderdale";
     FtLauderdaleObject.descripcion = {
@@ -19,7 +18,7 @@ export default function FtLauderdale() {
     };
     FtLauderdaleObject.slogan = {
         es: "Venecia de América",
-        en: "Venice of America"
+        en:"latest"
     };
     
     return FtLauderdaleObject;

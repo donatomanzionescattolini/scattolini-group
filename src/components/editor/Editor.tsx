@@ -1,24 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { useAuth } from '../../contexts/AuthContext';
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBBtn,
-  MDBTabs,
-  MDBTabsItem,
-  MDBTabsLink,
-  MDBTabsContent,
-  MDBTabsPane,
-} from 'mdb-react-ui-kit';
-import { useNavigate } from 'react-router-dom';
-import DesarrolloEditor from './DesarrolloEditor';
-import AreaEditor from './AreaEditor';
-import './Editor.scss';
-import { useTranslation } from '../../i18n.tsx';
-
+import { useState } from "react";
+import { Button, Card, Col, Container, Nav, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from "../../i18n";
+import { useAuth } from "../../contexts/AuthContext";
+import AreaEditor from "./AreaEditor";
+import DesarrolloEditor from "./DesarrolloEditor";
+import "./Editor.scss";
 export default function Editor() {
   const { t } = useTranslation();
   const { logout, currentUser } = useAuth();
@@ -37,56 +24,50 @@ export default function Editor() {
   return (
     <div className="editor-page">
       <div className="editor-header">
-        <MDBContainer>
-          <MDBRow className="align-items-center py-3">
-            <MDBCol md="6">
+        <Container>
+          <Row className="align-items-center py-3">
+            <Col md="6">
               <h1 className="mb-0">{t('pages.editor.title', 'Admin Panel')}</h1>
               <p className="text-muted mb-0">
-                {t('pages.editor.signedInAs', 'Signed in as')}: {currentUser?.email}
+                {t('pages.editor.signedInAs', 'Signed in as')}: {currentUser?.email || '-'}
               </p>
-            </MDBCol>
-            <MDBCol md="6" className="text-end">
-              <MDBBtn color="secondary" onClick={handleLogout}>
+            </Col>
+            <Col md="6" className="text-end">
+              <Button variant="secondary" onClick={handleLogout}>
                 {t('pages.editor.logout', 'Sign out')}
-              </MDBBtn>
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
+              </Button>
+            </Col>
+          </Row>
+        </Container>
       </div>
 
-      <MDBContainer className="py-4">
-        <MDBCard>
-          <MDBCardBody>
-            <MDBTabs className="mb-4">
-              <MDBTabsItem>
-                <MDBTabsLink
+      <Container className="py-4">
+        <Card>
+          <Card.Body>
+            <Nav variant="tabs" className="mb-4">
+              <Nav.Item>
+                <Nav.Link
                   onClick={() => setActiveTab('desarrollos')}
                   active={activeTab === 'desarrollos'}
                 >
                   {t('pages.editor.tabs.desarrollos', 'Developments')}
-                </MDBTabsLink>
-              </MDBTabsItem>
-              <MDBTabsItem>
-                <MDBTabsLink
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link
                   onClick={() => setActiveTab('areas')}
                   active={activeTab === 'areas'}
                 >
                   {t('pages.editor.tabs.areas', 'Areas')}
-                </MDBTabsLink>
-              </MDBTabsItem>
-            </MDBTabs>
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
 
-            <MDBTabsContent>
-              <MDBTabsPane open={activeTab === 'desarrollos'}>
-                <DesarrolloEditor />
-              </MDBTabsPane>
-              <MDBTabsPane open={activeTab === 'areas'}>
-                <AreaEditor />
-              </MDBTabsPane>
-            </MDBTabsContent>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBContainer>
+            {activeTab === 'desarrollos' && <DesarrolloEditor />}
+            {activeTab === 'areas' && <AreaEditor />}
+          </Card.Body>
+        </Card>
+      </Container>
     </div>
   );
 }

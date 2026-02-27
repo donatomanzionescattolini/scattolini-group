@@ -1,8 +1,7 @@
-import React from "react";
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
-
+import React from "react";
 export default function FourteenTwentyEight(lang: "en" | "es" = "es") {
     const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("1428-brickell", lang);
     const FourteenTwentyEightObject = new Desarrollo(Brickell());
@@ -20,41 +19,41 @@ export default function FourteenTwentyEight(lang: "en" | "es" = "es") {
     FourteenTwentyEightObject.caracteristicas = {
         edificio: (
             <ul>
-                <li>Rascacielos de 70 pisos que hará historia en el perfil</li>
+                <li>Rascacielos de 70 pisos que harÁ historia en el perfil</li>
                 <li>urbano de Miami</li>
                 <li>Oferta de 189 residencias exclusivas</li>
                 <li>Primera torre residencial de gran altura en el mundo</li>
                 <li>impulsada parcialmente por el sol</li>
                 <li>80,000 pies cuadrados de instalaciones para el uso</li>
                 <li>exclusivo de las 189 residencias</li>
-                <li>Ascensores privados de última generación y alta velocidad</li>
+                <li>Ascensores privados de última generaci�n y alta velocidad</li>
                 <li>Propiedad completamente privada solo para residentes</li>
                 <li>Amplio vestíbulo</li>
-                <li>Estación de vigilancia atendida a toda hora más</li>
+                <li>Estación de vigilancia atendida a toda hora mÁs</li>
                 <li>entrada con verja</li>
-                <li>Recepción las 24 horas del día con servicio tiempo completo</li>
+                <li>Recepci�n las 24 horas del día con servicio tiempo completo</li>
                 <li>de conserjes, aparcacoches y porteros</li>
-                <li>Cada residencia incluye dos o más espacios de</li>
-                <li>estacionamiento con servicio de valet y áreas privadas</li>
+                <li>Cada residencia incluye dos o mÁs espacios de</li>
+                <li>estacionamiento con servicio de valet y Áreas privadas</li>
                 <li>de carga y descarga</li>
                 <li>Espacios de desembarque privados con valet</li>
                 <li>Construcción con muros macizos de concreto entre las</li>
                 <li>
-                    residencias para preservar la privacidad, eliminar al máximo
+                    residencias para preservar la privacidad, eliminar al mÁximo
                 </li>
                 <li>la transmisión de sonidos y generar mayor seguridad</li>
-                <li>Estaciones de carga para vehículos eléctricos</li>
+                <li>Estaciones de carga para vehículos el�ctricos</li>
             </ul>
         ),
         residencias: (
             <ul>
                 <li>
-                    &nbsp;Cada residencia está orientada hacia la bahía de Biscayne y
+                    &nbsp;Cada residencia est� orientada hacia la bahía de Biscayne y
                     cuenta con espacios amplios y luminosos permitidos por paredes de
                     vidrio.
                 </li>
                 <li>
-                    Amplias terrazas con cocina exterior para máxima comodidad al aire
+                    Amplias terrazas con cocina exterior para mÁxima comodidad al aire
                     libre
                 </li>
                 <li>
@@ -85,17 +84,17 @@ export default function FourteenTwentyEight(lang: "en" | "es" = "es") {
                 <li>Servicio de aparcacoches y seguridad las 24 horas</li>
                 <li>Diseño y mantenimiento de plantas en el hogar</li>
                 <li>
-                    Entrega local de CSA para productos orgánicos frescos, pescados y
+                    Entrega local de CSA para productos orgÁnicos frescos, pescados y
                     carnes
                 </li>
                 <li>Ceremonia de limpieza de energía de cada nueva residencia</li>
-                <li>Servicios de limpieza orgánicos y libres de toxinas</li>
+                <li>Servicios de limpieza orgÁnicos y libres de toxinas</li>
                 <li>
                     Productos de bienestar seleccionados y examinados por THE WELL
                     Practitioners, diseñados para enriquecer su experiencia de
                     bienestar en el hogar y apoyar sus rituales diarios de bienestar,
                     desde aceites esenciales y productos para el cuidado del cuerpo,
-                    hasta difusores, cepillos secos y más
+                    hasta difusores, cepillos secos y mÁs
                 </li>
                 <li>
                     Azotea: piscina y bañera de hidromasaje con cabañas privadas,
@@ -118,9 +117,9 @@ export default function FourteenTwentyEight(lang: "en" | "es" = "es") {
                 <li>Acceso exclusivo a un club de playa privado</li>
                 <li>Coche eléctrico dedicado para excursiones locales</li>
                 <li>
-                    THE WELL Locker: la última colección de tecnología de bienestar,
+                    THE WELL Locker: la última colecci�n de tecnología de bienestar,
                     que incluye Theragun, Therabeam, mantas infrarrojas, botas
-                    linfáticas, FaceWare Pro y otros, para uso exclusivo de los
+                    linfÁticas, FaceWare Pro y otros, para uso exclusivo de los
                     residentes
                 </li>
             </ul>
@@ -128,3 +127,4 @@ export default function FourteenTwentyEight(lang: "en" | "es" = "es") {
     };
     return FourteenTwentyEightObject;
 }
+

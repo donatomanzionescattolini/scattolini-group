@@ -33,13 +33,13 @@ desarrollos: {
     caracteristicas: {
       edificio: {
         entrada: "Entrada Porte-cochère",
-        vestibulo: "Vestíbulo de entrada exquisitamente decorado"
+        vestibulo:"latest"
       },
       residencias: {
-        planos: "Planos de planta contemporáneos"
+        planos:"latest"
       },
       amenidades: {
-        gimnasio: "Gimnasio totalmente equipado"
+        gimnasio:"latest"
       }
     }
   }
@@ -59,11 +59,7 @@ desarrollos: {
 
 Replace your development file with the internationalized pattern:
 
-```typescript
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import Brickell from "../../areas/Brickell.tsx";
-import { useDesarrolloI18n } from "../useDesarrolloI18n";
-
+```typescriptimport Brickell from "../../areas/Brickell.tsx";
 export default function YourDevelopment() {
     const { getLocalizedField, getLocalizedArray } = useDesarrolloI18n("yourDevelopmentKey");
 
@@ -126,8 +122,8 @@ export default function YourDevelopment() {
 Use the development name as the key:
 - Remove spaces and hyphens
 - Convert to lowercase
-- Example: "Baccarat Residences" → "baccarat"
-- Example: "2200 Brickell" → "brickell2200"
+- Example:"latest"
+- Example:"latest"
 
 ## Migration Steps
 

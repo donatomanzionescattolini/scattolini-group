@@ -1,8 +1,8 @@
 import React from "react";
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import Brickell from "../../areas/Brickell.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
+import Brickell from "../../areas/Brickell.tsx";
+import Desarrollo from "../../../models/desarrollos/Desarrollo";
+import { getDesarrolloI18n } from "../useDesarrolloI18n";
 export default function ViceroyBrickell(lang: "en" | "es" = "es") {
   const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("viceroy-brickell", lang);
   const Viceroy = new Desarrollo(Brickell());

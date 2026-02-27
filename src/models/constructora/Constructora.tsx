@@ -1,9 +1,9 @@
-export default class Constructora {
+﻿export default class Constructora {
     public name: string;
-    public descripción: string;
+    public descripcion: string;
 
-    constructor(name?: string, descripción?: string) {
+    constructor(name = "", descripcion = "") {
         this.name = name;
-        this.descripción = descripción;
+        this.descripcion = descripcion;
     }
 }

@@ -1,4 +1,4 @@
-import {
+﻿import {
   collection,
   doc,
   getDoc,
@@ -8,9 +8,9 @@ import {
   query,
   where,
 } from 'firebase/firestore';
-import { db } from '../config/firebase';
+import { db } from "../config/firebase";
+import { Area } from "../models/areas/Area";
 import Desarrollo from '../models/desarrollos/Desarrollo';
-import { Area } from '../models/areas/Area';
 import { DesarrolloDocument, AreaDocument } from '../types/firestore';
 
 // Collection names
@@ -133,3 +133,4 @@ export async function updateArea(
   const docRef = doc(db, AREAS_COLLECTION, id);
   await updateDoc(docRef, data);
 }
+

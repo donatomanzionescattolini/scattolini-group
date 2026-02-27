@@ -1,8 +1,11 @@
-import AreaTemplate from "./AreaTemplate.tsx";
-import MiamiBeach from "../../objects/areas/MiamiBeach.tsx";
+import { useLayoutEffect } from "react";
+import MiamiBeach from "../../objects/areas/MiamiBeach";
+import AreaTemplate from "./AreaTemplate";
 
-import {useLayoutEffect} from "react";export default function MiamiBeachComponent() {
- useLayoutEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);    return <AreaTemplate area={MiamiBeach()}/>
+export default function MiamiBeachComponent() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return <AreaTemplate area={MiamiBeach()} />;
 }

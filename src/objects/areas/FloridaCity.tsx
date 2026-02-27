@@ -1,12 +1,15 @@
-import React from "react";
-import { AreaDto } from "../../models/areas/Area";
 
+
+
+
+
+import React from "react";
 export default function FloridaCity() {
   const floridaDto = AreaDto("florida-city");
   floridaDto.name = "florida-city";
   floridaDto.titulo = {
     es: "Florida City",
-    en: "Florida City"
+    en:"latest"
   };
   floridaDto.descripcion = {
     es: [
@@ -18,8 +21,31 @@ export default function FloridaCity() {
   };
   floridaDto.slogan = {
     es: "Puerta de Entrada a los Cayos de Florida y los Everglades",
-    en: "Gateway to the Florida Keys and the Everglades"
+    en:"latest"
   };
   floridaDto.numberOfImages = 15;
   return floridaDto;
 }
+type LocalizedStrings = { es: string; en: string };
+type LocalizedParagraphs = { es: string[]; en: string[] };
+
+interface AreaData {
+  id: string;
+  name: string;
+  titulo: LocalizedStrings;
+  descripcion: LocalizedParagraphs;
+  slogan: LocalizedStrings;
+  numberOfImages: number;
+}
+
+function AreaDto(id: string): AreaData {
+  return {
+    id,
+    name: "",
+    titulo: { es: "", en: "" },
+    descripcion: { es: [], en: [] },
+    slogan: { es: "", en: "" },
+    numberOfImages: 0,
+  };
+}
+

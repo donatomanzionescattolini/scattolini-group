@@ -1,8 +1,11 @@
-import AreaTemplate from "./AreaTemplate.tsx";
-import Homestead from "../../objects/areas/Homestead.tsx";
+import { useLayoutEffect } from "react";
+import Homestead from "../../objects/areas/Homestead";
+import AreaTemplate from "./AreaTemplate";
 
-import {useLayoutEffect} from "react";export default function HomesteadComponent() {
- useLayoutEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);    return <AreaTemplate area={Homestead()}/>
+export default function HomesteadComponent() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return <AreaTemplate area={Homestead()} />;
 }

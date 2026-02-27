@@ -1,11 +1,11 @@
-import {MDBSpinner} from "mdb-react-ui-kit";
 import { useTranslation } from "../i18n.tsx";
+import { Spinner } from "react-bootstrap";
 
 export default function Loading() {
     const { t } = useTranslation();
     return (
-        <MDBSpinner role="status">
+        <Spinner role="status">
             <span className="visually-hidden">{t("common.loading", "Loading...")}</span>
-        </MDBSpinner>
+        </Spinner>
     );
 }

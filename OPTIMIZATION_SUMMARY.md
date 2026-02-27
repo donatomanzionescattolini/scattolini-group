@@ -11,15 +11,14 @@
 #### DesarrollosComponent.tsx
 - Imported and used `formatDesarrolloName()` utility
 - Replaced `== 0` with `=== 0` for strict equality
-- Removed unnecessary empty `<MDBCol>` returns, using `return null` instead
+- Removed unnecessary empty `<Col>` returns, using `return null` instead
 - Added proper React keys to fragments
 - Simplified JSX with implicit returns
 - Used constants for breakpoints and asset URLs
 - Replaced `<br></br>` with self-closing `<br />`
 
 #### Footer.tsx
-- Removed unused imports (MDBBtn, MDBIcon)
-- Used `formatDesarrolloName()` utility function
+- Removed unused - Used `formatDesarrolloName()` utility function
 - Cached `getDesarrollosForArea()` result to avoid multiple calls
 - Added proper React keys
 - Simplified conditional rendering

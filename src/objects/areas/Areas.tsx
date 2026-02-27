@@ -1,6 +1,4 @@
-
-
-import { Area } from "../../models/areas/Area.tsx";
+import { Area } from "../../models/areas/Area";
 import { desarrolloMap } from "../desarrollos/Desarrollos";
 
 export default function Areas() {

@@ -7,7 +7,7 @@ export default function Hollywood() {
     const HollywoodObject = new Area("hollywood");
     HollywoodObject.titulo = {
         es: "Hollywood",
-        en: "Hollywood"
+        en:"latest"
     };
     HollywoodObject.descripcion = {
         es: [
@@ -21,7 +21,7 @@ export default function Hollywood() {
     HollywoodObject.numberOfImages = 19;
     HollywoodObject.slogan = {
         es: "La mejor ciudad del sur de Florida para vivir, aprender, trabajar, invertir y divertirse.",
-        en: "The best city in South Florida to live, learn, work, invest and have fun."
+        en:"latest"
     };
 
 

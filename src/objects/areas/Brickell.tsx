@@ -8,11 +8,11 @@ export default function Brickell(): Area {
     brickell.name = "brickell";
     brickell.titulo = {
         es: "Brickell",
-        en: "Brickell"
+        en:"latest"
     };
     brickell.slogan = {
         es: "El Distrito Financiero de Miami",
-        en: "Miami's Financial District"
+        en:"latest"
     };
     brickell.descripcion = {
         es: [

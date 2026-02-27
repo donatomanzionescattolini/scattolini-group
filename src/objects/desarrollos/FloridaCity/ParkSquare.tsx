@@ -1,6 +1,6 @@
+﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import FloridaCity from "../../areas/FloridaCity.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
 
 export default function ParkSquare(lang: "en" | "es" = "es") {
   const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("park-square", lang);
@@ -18,3 +18,5 @@ export default function ParkSquare(lang: "en" | "es" = "es") {
 
   return ParkSquareObject;
 }
+
+

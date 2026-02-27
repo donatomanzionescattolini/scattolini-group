@@ -5,11 +5,11 @@ export default function Homestead() {
     homestead.name = "homestead";
     homestead.titulo = {
         es: "Homestead",
-        en: "Homestead"
+        en:"latest"
     };
     homestead.slogan = {
         es: "Descubre las Oportunidades",
-        en: "Discover the Opportunities"
+        en:"latest"
     };
     homestead.descripcion = {
         es: [

@@ -1,7 +1,6 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
-
-export default function TheElse() {
+export default function TheElser() {
     const TheElserObject = new Desarrollo();
     TheElserObject.caracteristicas = {
         edificio:
@@ -100,7 +99,7 @@ export default function TheElse() {
         <iframe
             width="1280"
             height="720"
-            src="https://www.youtube.com/embed/BaD-8BLN9nM?autoplay=1&controls=0"
+            src="https://www.youtube.com/embed/BaD-8BLN9nMautoplay=1&controls=0"
             title="Episode 15: The Elser in Downtown Miami (Short-term Rentals Allowed)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen

@@ -65,7 +65,7 @@ This guide provides step-by-step instructions for manually testing the authentic
 - [x] **Step 4: Revisión**
   - Verify all changes are shown in review
   - Click "Guardar Cambios"
-  - Wait for success message: "✓ Desarrollo guardado exitosamente"
+  - Wait for success message:"latest"
 - [x] Click "Volver a la lista"
 - [x] Verify you're back at the desarrollos list
 

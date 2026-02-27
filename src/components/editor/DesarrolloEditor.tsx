@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import {
-  MDBRow,
-  MDBCol,
   MDBBtn,
-  MDBInput,
   MDBSpinner,
   MDBListGroup,
   MDBListGroupItem,
 } from 'mdb-react-ui-kit';
-import { desarrolloMap } from '../../objects/desarrollos/Desarrollos';
+import Areas from '../../objects/areas/Areas';
+import { getDesarrollosForArea } from '../../objects/desarrollos/Desarrollos';
 import {
-  getAllDesarrollos,
   saveDesarrollo,
   serializeDesarrollo,
 } from '../../services/database';
-import Desarrollo from '../../models/desarrollos/Desarrollo';
 import MultiStepWizard from './MultiStepWizard';
 import { useTranslation } from '../../i18n.tsx';
 
@@ -26,10 +22,11 @@ export default function DesarrolloEditor() {
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState<'success' | 'error' | ''>('');
   const [desarrollos, setDesarrollos] = useState<any[]>([]);
+  const [isCreating, setIsCreating] = useState(false);
 
   useEffect(() => {
     loadDesarrollos();
-  }, []);
+  }, [lang]);
 
   const getLocalized = (field: any) => {
     if (!field) return '';
@@ -38,12 +35,13 @@ export default function DesarrolloEditor() {
   };
 
   const loadDesarrollos = () => {
-    // Get desarrollos from the desarrolloMap
     const allDesarrollos: any[] = [];
-    desarrolloMap.forEach((item) => {
-      item.des.forEach((desarrollo) => {
+    Areas().forEach((area) => {
+      const desSet = getDesarrollosForArea(area, lang);
+      desSet.forEach((desarrollo) => {
         allDesarrollos.push({
           id: desarrollo.nombre || 'unknown',
+          areaName: desarrollo?.area?.name || area.name,
           ...desarrollo,
         });
       });
@@ -53,6 +51,26 @@ export default function DesarrolloEditor() {
 
   const handleSelectDesarrollo = (desarrollo: any) => {
     setSelectedDesarrollo(desarrollo);
+    setIsCreating(false);
+    setMessage('');
+    setMessageType('');
+  };
+
+  const handleCreateNew = () => {
+    const firstArea = Areas()[0];
+    setSelectedDesarrollo({
+      id: '',
+      nombre: '',
+      titulo: '',
+      slogan: '',
+      introduccion: [],
+      ubicacion: '',
+      numberOfUnits: 0,
+      numberOfFloors: 0,
+      estimatedCompletionYear: new Date().getFullYear(),
+      areaName: firstArea?.name || '',
+    });
+    setIsCreating(true);
     setMessage('');
     setMessageType('');
   };
@@ -62,14 +80,32 @@ export default function DesarrolloEditor() {
     setMessage('');
     setMessageType('');
     try {
-      const desarrolloId = data.nombre || data.id;
-      await saveDesarrollo(desarrolloId, serializeDesarrollo(data));
-      setMessage(t('pages.editor.messages.desarrolloSaved', 'Development saved successfully'));
+      const desarrolloId = String(data.nombre || data.id || '').trim();
+      if (!desarrolloId) throw new Error('Missing desarrollo id');
+
+      const payload = { ...data } as any;
+      const areaName = String(payload.areaName || payload?.area?.name || '').trim();
+      if (areaName) {
+        const matchedArea = Areas().find((area) => area.name === areaName);
+        payload.area = matchedArea || {
+          name: areaName,
+          titulo: areaName,
+          slogan: '',
+          descripcion: [],
+          numberOfImages: 0,
+        };
+      }
+      delete payload.areaName;
+
+      await saveDesarrollo(desarrolloId, serializeDesarrollo(payload));
+      loadDesarrollos();
+      setMessage(String(t('pages.editor.messages.desarrolloSaved', 'Development saved successfully')));
       setMessageType('success');
+      setIsCreating(false);
       setTimeout(() => setMessage(''), 3000);
     } catch (error) {
       console.error('Error saving desarrollo:', error);
-      setMessage(t('pages.editor.messages.desarrolloSaveError', 'Error saving development'));
+      setMessage(String(t('pages.editor.messages.desarrolloSaveError', 'Error saving development')));
       setMessageType('error');
     } finally {
       setSaving(false);
@@ -78,6 +114,7 @@ export default function DesarrolloEditor() {
 
   const handleCancel = () => {
     setSelectedDesarrollo(null);
+    setIsCreating(false);
     setMessage('');
     setMessageType('');
   };
@@ -87,7 +124,7 @@ export default function DesarrolloEditor() {
       <div>
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h3>
-            {t('pages.editor.edit', 'Edit')}: {getLocalized(selectedDesarrollo.titulo) || selectedDesarrollo.nombre}
+            {(isCreating ? t('pages.editor.createDesarrollo', 'Create development') : t('pages.editor.edit', 'Edit'))}: {getLocalized(selectedDesarrollo.titulo) || selectedDesarrollo.nombre || 'Nuevo'}
           </h3>
           <MDBBtn color="secondary" onClick={handleCancel}>
             {t('pages.editor.backToList', 'Back to list')}
@@ -115,7 +152,12 @@ export default function DesarrolloEditor() {
 
   return (
     <div>
-      <h3 className="mb-4">{t('pages.editor.selectDesarrollo', 'Select a development to edit')}</h3>
+      <div className="d-flex justify-content-between align-items-center mb-4">
+        <h3 className="mb-0">{t('pages.editor.selectDesarrollo', 'Select a development to edit')}</h3>
+        <MDBBtn onClick={handleCreateNew}>
+          {t('pages.editor.addDesarrollo', 'Add development')}
+        </MDBBtn>
+      </div>
       
       {loading ? (
         <div className="text-center py-5">
