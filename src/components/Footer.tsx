@@ -1,48 +1,49 @@
 import React from "react";
-import Areas from "../objects/areas/Areas";
-import { getDesarrollosForArea } from "../objects/desarrollos/Desarrollos";
+import { desarrolloMap } from "../objects/desarrollos/Desarrollos";
 import { useTranslation } from "../i18n.tsx";
 
 export default function Footer() {
   const { t, lang } = useTranslation();
-  const areas = Areas();
-  const getLocalized = (field: any, l = lang) => {
-    if (!field) return "";
-    if (typeof field === "object")
-      return (
-        field[l] ||
-        field.es ||
-        Object.values(field)[0] ||
-        ""
-      );
-    return field;
+
+  const getLocalized = (field: any, fallback = "") => {
+    if (!field) return fallback;
+    if (typeof field === "object") {
+      return field[lang] || field.es || Object.values(field)[0] || fallback;
+    }
+    return field || fallback;
   };
 
-  // Filter areas to only include those with developments
-  const areasWithDesarrollos = areas.filter((area) => {
-    const desarrollos = getDesarrollosForArea(area);
-    return desarrollos && desarrollos.size > 0;
+  // Filter to only include areas that have developments and have a valid title
+  const areasWithDesarrollos = desarrolloMap.filter((entry) => {
+    const hasDesarrollos = entry.des && entry.des.size > 0;
+    const hasTitle = entry.area && (entry.area.titulo || entry.area.name);
+    return hasDesarrollos && hasTitle;
   });
 
   return (
     <footer className="font-small bg-light pt-4">
       <div className="container text-center">
         <div className="row justify-content-center">
-          {areasWithDesarrollos.map((area) => {
-            const desarrollos = getDesarrollosForArea(area);
+          {areasWithDesarrollos.map((entry) => {
+            const areaTitle = getLocalized(entry.area.titulo, entry.area.name);
+            if (!areaTitle) return null;
+            
             return (
-              <div key={area.name} className="col-auto mb-md-0 mb-3 text-center px-4">
-                <h5 className="text-uppercase">{getLocalized(area.titulo)}</h5>
+              <div key={entry.area.name} className="col-auto mb-md-0 mb-3 text-center px-4">
+                <h5 className="text-uppercase">{areaTitle}</h5>
                 <ul className="list-unstyled text-center">
-                  {[...desarrollos].map((des) => (
-                    <li key={des.nombre ?? des.titulo ?? Math.random()}>
-                      <a href={`/desarrollos/${des.nombre}/`}>
-                        {typeof des.titulo === "object"
-                          ? getLocalized(des.titulo)
-                          : des.titulo || des.nombre}
-                      </a>
-                    </li>
-                  ))}
+                  {[...entry.des].map((des, idx) => {
+                    const desTitle = getLocalized(des.titulo, des.nombre);
+                    if (!desTitle) return null;
+                    
+                    return (
+                      <li key={des.nombre || idx}>
+                        <a href={`/desarrollos/${des.nombre}/`}>
+                          {desTitle}
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             );

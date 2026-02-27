@@ -1,4 +1,4 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Hollywood from "../../areas/Hollywood.tsx";
 
 export default function SevenParkResidencesObject(lang: "en" | "es" = "es") {

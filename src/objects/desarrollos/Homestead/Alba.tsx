@@ -1,4 +1,4 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Homestead from "../../areas/Homestead.tsx";
 
 export default function Alba(lang: "en" | "es" = "es") {

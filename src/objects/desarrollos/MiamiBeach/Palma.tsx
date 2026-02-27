@@ -1,4 +1,4 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import MiamiBeach from "../../areas/MiamiBeach";
 
 export default function Palma(lang: "en" | "es" = "es") {

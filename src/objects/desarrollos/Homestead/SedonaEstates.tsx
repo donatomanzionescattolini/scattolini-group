@@ -1,4 +1,4 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
 export default function SedonaEstates(lang: "en" | "es" = "es") {
     const SedonaEstatesObject = {} as Desarrollo;

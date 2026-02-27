@@ -5,6 +5,7 @@ import AliadosComponent from "./components/AliadosComponent.tsx";
 import AsociadosSmallComponent from "./components/AsociadosSmallComponent.tsx";
 import Quotes from "./components/Quotes";
 import Servicios from "./components/Servicios.tsx";
+import TrustSignals from "./components/TrustSignals.tsx";
 import AreasComponent from "./components/areas/AreasComponent.tsx";
 import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
 import Quote, { quotes } from "./models/Quote";
@@ -64,15 +65,29 @@ export function Home() {
           <div className="content text-center ">
             <h1 className="display-2" id="hero-heading">{t("hero.title")}</h1>
             <p className="lead" id="hero-subheading">{t("hero.subtitle")}</p>
-            <a
-              className="btn btn-large btn-outline-secondary mt-3"
-              href="mailto:elda.scattolini@scattolinigroup.com"
-            >
-              {t("hero.cta")}
-            </a>
+            <p className="hero-tagline">{t("hero.tagline", "Your gateway to luxury living in South Florida")}</p>
+            <div className="hero-ctas d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
+              <a
+                className="btn btn-hero-primary"
+                href="https://wa.me/13056139338?text=Hola,%20me%20interesa%20información%20sobre%20propiedades"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-whatsapp me-2"></i>
+                {t("hero.whatsappCta", "Chat on WhatsApp")}
+              </a>
+              <a
+                className="btn btn-hero-outline"
+                href="mailto:elda.scattolini@scattolinigroup.com"
+              >
+                <i className="fas fa-envelope me-2"></i>
+                {t("hero.cta")}
+              </a>
+            </div>
           </div>
         </div>
       </Container>
+      <TrustSignals />
       {width < 768 && <br></br>}
       <section className="white-block pb-0 mb-0 pt-5">
         <AboutUs />

@@ -1,4 +1,4 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import Hollywood from "../../areas/Hollywood";
 
 export default function IconBeachResidencesObject(lang: "en" | "es" = "es") {

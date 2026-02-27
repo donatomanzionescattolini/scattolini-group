@@ -15,8 +15,10 @@
   },
   "hero": {
     "title": "SCATTOLINI GROUP",
-    "subtitle": "Agencia Inmobiliaria",
-    "cta": "Contáctanos Hoy",
+    "subtitle": "Bienes Raíces de Lujo",
+    "tagline": "Tu puerta a la vida exclusiva en el Sur de Florida",
+    "cta": "Contáctanos",
+    "whatsappCta": "Chatea por WhatsApp",
     "contact_cta": "Contáctanos"
   },
   "areas": {
@@ -112,5 +114,11 @@
   },
   "common": {
     "videoNotSupported": "Su navegador no soporta la etiqueta de video."
+  },
+  "trust": {
+    "yearsExperience": "Años de Experiencia",
+    "salesVolume": "en Volumen de Ventas",
+    "clientFocus": "Enfoque al Cliente",
+    "availability": "Disponibilidad"
   }
 }

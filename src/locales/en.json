@@ -15,8 +15,10 @@
   },
   "hero": {
     "title": "SCATTOLINI GROUP",
-    "subtitle": "Real Estate Agency",
+    "subtitle": "Luxury Real Estate",
+    "tagline": "Your gateway to exclusive living in South Florida",
     "cta": "Contact Us",
+    "whatsappCta": "Chat on WhatsApp",
     "contact_cta": "Get in Touch"
   },
   "areas": {
@@ -112,5 +114,11 @@
   },
   "common": {
     "videoNotSupported": "Your browser does not support the video tag."
+  },
+  "trust": {
+    "yearsExperience": "Years of Experience",
+    "salesVolume": "in Sales Volume",
+    "clientFocus": "Client Focused",
+    "availability": "Availability"
   }
 }

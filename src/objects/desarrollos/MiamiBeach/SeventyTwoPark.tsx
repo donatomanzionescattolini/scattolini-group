@@ -1,4 +1,4 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
 export default function SeventyTwoPark(lang: "en" | "es" = "es") {

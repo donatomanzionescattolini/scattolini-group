@@ -1,4 +1,4 @@
-import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
 export default function TerraSol(lang: "en" | "es" = "es") {
     const TerraSolObject = new Desarrollo();
