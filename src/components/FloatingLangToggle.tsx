@@ -2,7 +2,7 @@ import {useTranslation} from '../i18n.tsx';
 import './FloatingLangToggle.scss';
 
 export default function FloatingLangToggle() {
-    const {lang, setLang} = useTranslation();
+    const {lang, setLang, t} = useTranslation();
 
     return (
         <div className="floating-lang-toggle d-lg-none">
@@ -10,7 +10,7 @@ export default function FloatingLangToggle() {
                 type="button"
                 className={`lang-btn ${lang === 'es' ? 'active' : ''}`}
                 onClick={() => setLang('es')}
-                aria-label="Cambiar a español"
+                aria-label={String(t('nav.switchToSpanish') || '')}
             >
                 ES
             </button>
@@ -18,7 +18,7 @@ export default function FloatingLangToggle() {
                 type="button"
                 className={`lang-btn ${lang === 'en' ? 'active' : ''}`}
                 onClick={() => setLang('en')}
-                aria-label="Switch to English"
+                aria-label={String(t('nav.switchToEnglish') || '')}
             >
                 EN
             </button>

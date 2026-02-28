@@ -5,13 +5,18 @@
     "areas": "Areas",
     "desarrollos": "Developments",
     "contact": "Contact",
+    "contacto": "Contact",
     "leadership": "Leadership",
     "liderazgo": "Leadership",
     "partners": "Partners",
     "asociados": "Partners",
     "aliados": "Allies",
     "equipo": "Our Team",
-    "search": "Search"
+    "search": "Search",
+    "logoAlt": "Scattolini Group logo",
+    "switchToEnglish": "Switch to English",
+    "switchToSpanish": "Switch to Spanish",
+    "toggleNavigation": "Toggle navigation"
   },
   "hero": {
     "title": "SCATTOLINI GROUP",
@@ -41,12 +46,122 @@
       "title": "Developments"
     },
     "about": {
+      "title": "Scattolini Group",
       "whoWeAre": "Who We Are",
       "paragraph": "Scattolini Group is a team of experts with decades of experience in the South Florida real estate market. We have had the privilege of assisting numerous clients from diverse parts of the world, providing them with our wide range of services in the real estate field in this vibrant region.",
       "requestConsultation": "Request a Consultation",
       "callUs": "Call us today",
       "consultationText": "Any of our experts would be delighted to schedule a consultation to explore the options available according to your needs",
       "seeMore": "See More"
+    },
+    "aliados": {
+      "hueHouseAlt": "Hue House logo",
+      "manzioneDesignAlt": "Manzione Design logo",
+      "manzionePropertiesAlt": "Manzione Properties logo"
+    },
+    "asociados": {
+      "title": "Partners"
+    },
+    "auth": {
+      "login": {
+        "title": "Sign in",
+        "subtitle": "Access the internal editor",
+        "emailLabel": "Email",
+        "passwordLabel": "Password",
+        "submit": "Sign in",
+        "loading": "Signing in...",
+        "errors": {
+          "missingFields": "Please enter your email and password.",
+          "invalidCredentials": "Invalid credentials. Please verify your email and password.",
+          "generic": "Unable to sign in at this moment. Please try again."
+        }
+      }
+    },
+    "editor": {
+      "title": "Content editor",
+      "signedInAs": "Signed in as",
+      "logout": "Sign out",
+      "reviewTitle": "Review and publish",
+      "addDesarrollo": "Add development",
+      "selectArea": "Select an area to edit",
+      "areaSelectPlaceholder": "-- Select an area --",
+      "selectDesarrollo": "Select a development to edit",
+      "createDesarrollo": "Create development",
+      "edit": "Edit",
+      "backToList": "Back to list",
+      "areaLabel": "Area",
+      "areaHelp": "Select the area this development belongs to.",
+      "fields": {
+        "areaName": "Area name"
+      },
+      "tabs": {
+        "areas": "Areas",
+        "desarrollos": "Developments"
+      },
+      "wizard": {
+        "review": "Review",
+        "area": {
+          "basic": "Basic information",
+          "description": "Description"
+        },
+        "desarrollo": {
+          "basic": "Basic information",
+          "details": "Details",
+          "features": "Features",
+          "media": "Media",
+          "mediaInfo": "Upload media files"
+        }
+      },
+      "messages": {
+        "areaSaved": "Area saved successfully",
+        "areaSaveError": "Error saving area",
+        "desarrolloSaved": "Development saved successfully",
+        "desarrolloSaveError": "Error saving development"
+      },
+      "media": {
+        "images": "Images",
+        "gallery": "Gallery",
+        "galleryHelp": "Upload gallery images in JPG format.",
+        "galleryJpgOnly": "Only JPG images are allowed for gallery uploads.",
+        "imagesUploaded": "Images uploaded successfully",
+        "uploadingImageTemplate": "Uploading image ({number}).jpg... ({current}/{total})",
+        "pdfs": "PDF documents",
+        "pdfHelp": "Upload brochure, fact sheet, and floor plans as PDF files.",
+        "pdfNameError": "PDF filename is invalid.",
+        "pdfsUploaded": "PDFs uploaded successfully",
+        "uploadFailed": "Upload failed",
+        "video": "Video",
+        "videoHelp": "Upload a promotional video for this development.",
+        "videoNameError": "Video filename is invalid.",
+        "videoUploaded": "Video uploaded successfully",
+        "banner": "Banner",
+        "bannerHelp": "Upload the main banner image.",
+        "bannerNameError": "Banner filename is invalid.",
+        "bannerUploaded": "Banner uploaded successfully",
+        "bannerPreviewAlt": "Banner preview",
+        "thumbnailPreviewAlt": "Thumbnail preview",
+        "uploadBannerTitle": "Upload banner image",
+        "uploadThumbnailTitle": "Upload area thumbnail",
+        "uploadVideoTitle": "Upload video file",
+        "viewPdf": "View PDF",
+        "uploadPdfTitle": "Upload PDF files",
+        "deleteImage": "Delete image",
+        "uploadGalleryTitle": "Upload gallery images",
+        "thumbnail": "Thumbnail",
+        "thumbnailHelp": "Upload a thumbnail image for cards and previews.",
+        "thumbnailInfo": "Recommended format: square JPG image.",
+        "thumbnailFormatError": "Thumbnail format is invalid.",
+        "thumbnailUploaded": "Thumbnail uploaded successfully",
+        "uploading": "Uploading files...",
+        "uploadingBanner": "Uploading banner...",
+        "uploadingThumbnail": "Uploading thumbnail...",
+        "uploadingVideo": "Uploading video...",
+        "loadingMedia": "Loading media files...",
+        "missing": "Missing media file",
+        "noProjectName": "Please provide a project name before uploading files.",
+        "confirmDelete": "Are you sure you want to delete this file?",
+        "deleteError": "Error deleting file"
+      }
     },
     "services": {
       "title": "Services",
@@ -98,7 +213,30 @@
         "sendButton": "Send",
         "emailLink": "Or email us at"
       }
+    },
+    "liderazgo": {
+      "title": "Expert team, personalized service",
+      "imageAlt": "Elda Scattolini",
+      "paragraph1": "Scattolini Group is led by Elda Scattolini, a real estate agent with 20 years of experience in the South Florida market. Elda has helped hundreds of clients from around the world reach their real estate goals with professionalism, integrity, and dedication.",
+      "paragraph2": "Elda and her team are experts in South Florida, with deep knowledge of neighborhoods, schools, amenities, and market trends. They will guide you through every step of the process, from finding the right property to negotiating the best price and closing efficiently."
+    },
+    "manzione": {
+      "title": "Manzione Properties",
+      "descripcion": "Specialists in architecture, design, and high-end residential development.",
+      "imageAlt": "Manzione Properties"
     }
+  },
+  "contacto": {
+    "title": "Scattolini Group",
+    "mapTitle": "Scattolini Group office location",
+    "address": "12750 NW 17th Street Unit 222, Miami, Florida 33182",
+    "telefono": "Phone:",
+    "fax": "Fax:",
+    "horasOficina": "Office Hours",
+    "horasTexto": "Monday to Friday: 9am - 5pm\nSaturday: By appointment\nSunday: Closed",
+    "cerrarFormulario": "Close contact form",
+    "enviarCorreo": "Send an email",
+    "formularioTitulo": "Contact form"
   },
   "whatsapp": {
     "status": "Typically replies within 1 hour",
@@ -113,7 +251,15 @@
     "planos": "Floor Plans"
   },
   "common": {
-    "videoNotSupported": "Your browser does not support the video tag."
+    "videoNotSupported": "Your browser does not support the video tag.",
+    "videoUnsupported": "Your browser does not support the video tag.",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "cancel": "Cancel",
+    "saveChanges": "Save changes",
+    "saving": "Saving...",
+    "na": "N/A"
   },
   "trust": {
     "yearsExperience": "Years of Experience",

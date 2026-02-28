@@ -5,13 +5,18 @@
     "areas": "Áreas",
     "desarrollos": "Desarrollos",
     "contact": "Contacto",
+    "contacto": "Contacto",
     "leadership": "Liderazgo",
     "liderazgo": "Liderazgo",
     "partners": "Asociados",
     "asociados": "Asociados",
     "aliados": "Aliados",
     "equipo": "Nuestro Equipo",
-    "search": "Buscar"
+    "search": "Buscar",
+    "logoAlt": "Logo de Scattolini Group",
+    "switchToEnglish": "Cambiar a inglés",
+    "switchToSpanish": "Cambiar a español",
+    "toggleNavigation": "Alternar navegación"
   },
   "hero": {
     "title": "SCATTOLINI GROUP",
@@ -41,12 +46,122 @@
       "title": "Desarrollos"
     },
     "about": {
+      "title": "Scattolini Group",
       "whoWeAre": "Quiénes Somos",
       "paragraph": "Scattolini Group es un equipo de expertos con décadas de experiencia en el mercado inmobiliario del sur de Florida. Hemos tenido el privilegio de asistir a numerosos clientes provenientes de diversas partes del mundo, brindándoles nuestra amplia gama de servicios en el ámbito de los bienes raíces en esta vibrante región.",
       "requestConsultation": "Solicita una Consulta",
       "callUs": "Llámanos hoy",
       "consultationText": "Cualquiera de nuestros expertos estaría encantado de programar una consulta para explorar las opciones disponibles de acuerdo a tus necesidades",
       "seeMore": "Ver Más"
+    },
+    "aliados": {
+      "hueHouseAlt": "Logo de Hue House",
+      "manzioneDesignAlt": "Logo de Manzione Design",
+      "manzionePropertiesAlt": "Logo de Manzione Properties"
+    },
+    "asociados": {
+      "title": "Asociados"
+    },
+    "auth": {
+      "login": {
+        "title": "Iniciar sesión",
+        "subtitle": "Accede al editor interno",
+        "emailLabel": "Correo electrónico",
+        "passwordLabel": "Contraseña",
+        "submit": "Iniciar sesión",
+        "loading": "Iniciando sesión...",
+        "errors": {
+          "missingFields": "Por favor ingresa correo y contraseña.",
+          "invalidCredentials": "Credenciales inválidas. Verifica tu correo y contraseña.",
+          "generic": "No fue posible iniciar sesión en este momento. Inténtalo de nuevo."
+        }
+      }
+    },
+    "editor": {
+      "title": "Editor de contenido",
+      "signedInAs": "Sesión iniciada como",
+      "logout": "Cerrar sesión",
+      "reviewTitle": "Revisar y publicar",
+      "addDesarrollo": "Agregar desarrollo",
+      "selectArea": "Selecciona un área para editar",
+      "areaSelectPlaceholder": "-- Selecciona un área --",
+      "selectDesarrollo": "Selecciona un desarrollo para editar",
+      "createDesarrollo": "Crear desarrollo",
+      "edit": "Editar",
+      "backToList": "Volver a la lista",
+      "areaLabel": "Área",
+      "areaHelp": "Selecciona el área a la que pertenece este desarrollo.",
+      "fields": {
+        "areaName": "Nombre del área"
+      },
+      "tabs": {
+        "areas": "Áreas",
+        "desarrollos": "Desarrollos"
+      },
+      "wizard": {
+        "review": "Revisión",
+        "area": {
+          "basic": "Información básica",
+          "description": "Descripción"
+        },
+        "desarrollo": {
+          "basic": "Información básica",
+          "details": "Detalles",
+          "features": "Características",
+          "media": "Multimedia",
+          "mediaInfo": "Subir archivos multimedia"
+        }
+      },
+      "messages": {
+        "areaSaved": "Área guardada con éxito",
+        "areaSaveError": "Error al guardar el área",
+        "desarrolloSaved": "Desarrollo guardado con éxito",
+        "desarrolloSaveError": "Error al guardar el desarrollo"
+      },
+      "media": {
+        "images": "Imágenes",
+        "gallery": "Galería",
+        "galleryHelp": "Sube imágenes de la galería en formato JPG.",
+        "galleryJpgOnly": "Solo se permiten imágenes JPG para la galería.",
+        "imagesUploaded": "Imágenes subidas con éxito",
+        "uploadingImageTemplate": "Subiendo imagen ({number}).jpg... ({current}/{total})",
+        "pdfs": "Documentos PDF",
+        "pdfHelp": "Sube brochure, hoja informativa y planos en formato PDF.",
+        "pdfNameError": "El nombre del archivo PDF no es válido.",
+        "pdfsUploaded": "PDFs subidos con éxito",
+        "uploadFailed": "La carga falló",
+        "video": "Video",
+        "videoHelp": "Sube un video promocional para este desarrollo.",
+        "videoNameError": "El nombre del archivo de video no es válido.",
+        "videoUploaded": "Video subido con éxito",
+        "banner": "Banner",
+        "bannerHelp": "Sube la imagen principal del banner.",
+        "bannerNameError": "El nombre del archivo del banner no es válido.",
+        "bannerUploaded": "Banner subido con éxito",
+        "bannerPreviewAlt": "Vista previa del banner",
+        "thumbnailPreviewAlt": "Vista previa de la miniatura",
+        "uploadBannerTitle": "Subir imagen de banner",
+        "uploadThumbnailTitle": "Subir miniatura del área",
+        "uploadVideoTitle": "Subir archivo de video",
+        "viewPdf": "Ver PDF",
+        "uploadPdfTitle": "Subir archivos PDF",
+        "deleteImage": "Eliminar imagen",
+        "uploadGalleryTitle": "Subir imágenes de galería",
+        "thumbnail": "Miniatura",
+        "thumbnailHelp": "Sube una imagen miniatura para tarjetas y vistas previas.",
+        "thumbnailInfo": "Formato recomendado: imagen JPG cuadrada.",
+        "thumbnailFormatError": "El formato de la miniatura no es válido.",
+        "thumbnailUploaded": "Miniatura subida con éxito",
+        "uploading": "Subiendo archivos...",
+        "uploadingBanner": "Subiendo banner...",
+        "uploadingThumbnail": "Subiendo miniatura...",
+        "uploadingVideo": "Subiendo video...",
+        "loadingMedia": "Cargando archivos multimedia...",
+        "missing": "Falta un archivo multimedia",
+        "noProjectName": "Ingresa un nombre del proyecto antes de subir archivos.",
+        "confirmDelete": "¿Seguro que deseas eliminar este archivo?",
+        "deleteError": "Error al eliminar archivo"
+      }
     },
     "services": {
       "title": "Servicios",
@@ -98,7 +213,30 @@
         "sendButton": "Enviar",
         "emailLink": "O envíanos un correo a"
       }
+    },
+    "liderazgo": {
+      "title": "Equipo experto, servicio personalizado",
+      "imageAlt": "Elda Scattolini",
+      "paragraph1": "Scattolini Group está liderado por Elda Scattolini, una agente de bienes raíces con 20 años de experiencia en el mercado del sur de Florida. Elda ha ayudado a cientos de clientes de todo el mundo a alcanzar sus objetivos inmobiliarios con profesionalismo, integridad y dedicación.",
+      "paragraph2": "Elda y su equipo son expertos en el sur de Florida, con amplio conocimiento de vecindarios, escuelas, amenidades y tendencias del mercado. Te guiarán en cada etapa del proceso, desde encontrar la propiedad ideal hasta negociar el mejor precio y cerrar de manera eficiente."
+    },
+    "manzione": {
+      "title": "Manzione Properties",
+      "descripcion": "Especialistas en arquitectura, diseño y desarrollo residencial de alta gama.",
+      "imageAlt": "Manzione Properties"
     }
+  },
+  "contacto": {
+    "title": "Scattolini Group",
+    "mapTitle": "Ubicación de la oficina de Scattolini Group",
+    "address": "12750 NW 17th Street Unit 222, Miami, Florida 33182",
+    "telefono": "Teléfono:",
+    "fax": "Fax:",
+    "horasOficina": "Horas de Oficina",
+    "horasTexto": "Lunes a viernes: 9am - 5pm\nSábado: Con cita\nDomingo: Cerrado",
+    "cerrarFormulario": "Cerrar formulario de contacto",
+    "enviarCorreo": "Enviar un correo",
+    "formularioTitulo": "Formulario de contacto"
   },
   "whatsapp": {
     "status": "Normalmente responde en 1 hora",
@@ -113,7 +251,15 @@
     "planos": "Planos"
   },
   "common": {
-    "videoNotSupported": "Su navegador no soporta la etiqueta de video."
+    "videoNotSupported": "Su navegador no soporta la etiqueta de video.",
+    "videoUnsupported": "Su navegador no soporta la etiqueta de video.",
+    "close": "Cerrar",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "cancel": "Cancelar",
+    "saveChanges": "Guardar cambios",
+    "saving": "Guardando...",
+    "na": "N/D"
   },
   "trust": {
     "yearsExperience": "Años de Experiencia",

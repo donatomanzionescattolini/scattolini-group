@@ -1,41 +1,41 @@
-import React, {useEffect, useLayoutEffect, useState} from "react";
-import {Container} from "react-bootstrap";
-import {AboutUs} from "./AboutUs";
+import React, { useEffect, useLayoutEffect, useState } from "react";
+import { Container } from "react-bootstrap";
+import { AboutUs } from "./AboutUs";
 import AliadosComponent from "./components/AliadosComponent.tsx";
 import AsociadosSmallComponent from "./components/AsociadosSmallComponent.tsx";
 import Quotes from "./components/Quotes";
 import Servicios from "./components/Servicios.tsx";
 import AreasComponent from "./components/areas/AreasComponent.tsx";
 import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
-import Quote, {quotes} from "./models/Quote";
-import {useTranslation} from "./i18n.tsx";
+import Quote, { quotes } from "./models/Quote";
+import { useTranslation } from "./i18n.tsx";
 
 export function Home() {
-    const {t} = useTranslation();
-    const [width, setWidth] = React.useState(window.innerWidth);
+  const { t } = useTranslation();
+  const [width, setWidth] = React.useState(window.innerWidth);
 
-    useEffect(() => {
-        const handleResizeWindow = () => setWidth(window.innerWidth);
-        // subscribe to window resize event "onComponentDidMount"
-        window.addEventListener("resize", handleResizeWindow);
-        return () => {
-            // unsubscribe "onComponentDestroy"
-            window.removeEventListener("resize", handleResizeWindow);
-        };
-    }, []);
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    // subscribe to window resize event "onComponentDidMount"
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      // unsubscribe "onComponentDestroy"
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
 
-    useLayoutEffect(() => {
-        window.resizeTo(0, 0);
-    });
-    // State variable to store the visibility of the floating element
-    const [show, setShow] = useState(true);
+  useLayoutEffect(() => {
+    window.resizeTo(0, 0);
+  });
+  // State variable to store the visibility of the floating element
+  const [show, setShow] = useState(true);
 
-    // Function to toggle the visibility of the floating element
+  // Function to toggle the visibility of the floating element
 
-    const [quotez] = useState<Quote[]>(quotes);
-    return (
-        <>
-            {/* {show && (
+  const [quotez] = useState<Quote[]>(quotes);
+  return (
+    <>
+      {/* {show && (
         <div
           className={"floating-element object-fit-cover"}
           style={{ background: "rgb(255,255,255,0.0)" }}
@@ -44,95 +44,106 @@ export function Home() {
             Close
           </Button>
           {/* <FloatingContactFormComponent /> */}
-            {/* </div> */}
-            {/* )} */}
-            <Container fluid className="jumbotron">
-                <div className="video-container">
-                    <video autoPlay loop muted playsInline className={" m-0 p-0"} preload="auto">
-                        <source
-                            src="https://pagina-mama.s3.amazonaws.com/assets2/video-homepage.mp4"
-                            type="video/mp4"
-                        />
-                        <source
-                            src="https://pagina-mama.s3.amazonaws.com/assets2/video-homepage.mp4"
-                            type="video/webm"
-                        />
-                        {t("common.videoUnsupported")}
-                    </video>
-                    <div className="overlay"></div>
+      {/* </div> */}
+      {/* )} */}
+      <Container fluid className="jumbotron">
+        <div className="video-container">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className={" m-0 p-0"}
+            preload="auto"
+          >
+            <source
+              src="https://pagina-mama.s3.amazonaws.com/assets2/video-homepage.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="https://pagina-mama.s3.amazonaws.com/assets2/video-homepage.mp4"
+              type="video/webm"
+            />
+            {t("common.videoUnsupported")}
+          </video>
+          <div className="overlay"></div>
 
-                    <div className="content text-center ">
-                        <h1 className="display-2" id="hero-heading">{t("hero.title")}</h1>
-                        <p className="lead" id="hero-subheading">{t("hero.subtitle")}</p>
-                        <p className="hero-tagline">{t("hero.tagline", "Your gateway to luxury living in South Florida")}</p>
-                        <div className="hero-ctas d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
-                            <a
-                                className="btn btn-hero-primary"
-                                href="https://wa.me/13056139338?text=Hola,%20me%20interesa%20información%20sobre%20propiedades"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i className="fab fa-whatsapp me-2"></i>
-                                {t("hero.whatsappCta", "Chat on WhatsApp")}
-                            </a>
-                            <a
-                                className="btn btn-hero-outline"
-                                href="mailto:elda.scattolini@scattolinigroup.com"
-                            >
-                                <i className="fas fa-envelope me-2"></i>
-                                {t("hero.cta")}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </Container>
-            {/* <TrustSignals /> */}
-            {width < 768 && <br></br>}
-            <section className="white-block pb-0 mb-0 pt-5">
-                <AboutUs/>
-            </section>
-            {/* <div> */}
-            {/* <h3 className="text-center">Otras Áreas</h3> */}
-            {/* </div> */}
-            <div className="skew-c"></div>
+          <div className="content text-center ">
+            <h1 className="display-2" id="hero-heading">
+              {t("hero.title")}
+            </h1>
+            <p className="lead" id="hero-subheading">
+              {t("hero.subtitle")}
+            </p>
+            <p className="hero-tagline">{t("hero.tagline")}</p>
+            <div className="hero-ctas d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
+              <a
+                className="btn btn-hero-primary"
+                href="https://wa.me/13056139338?text=Hola,%20me%20interesa%20información%20sobre%20propiedades"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-whatsapp me-2"></i>
+                {t("hero.whatsappCta")}
+              </a>
+              <a
+                className="btn btn-hero-outline"
+                href="mailto:elda.scattolini@scattolinigroup.com"
+              >
+                <i className="fas fa-envelope me-2"></i>
+                {t("hero.cta")}
+              </a>
+            </div>
+          </div>
+        </div>
+      </Container>
+      {/* <TrustSignals /> */}
+      {width < 768 && <br></br>}
+      <section className="white-block pb-0 mb-0 pt-5">
+        <AboutUs />
+      </section>
+      {/* <div> */}
+      {/* <h3 className="text-center">Otras Áreas</h3> */}
+      {/* </div> */}
+      <div className="skew-c"></div>
 
-            <section className="colour-block">
-                <AreasComponent/>
-            </section>
+      <section className="colour-block">
+        <AreasComponent />
+      </section>
 
-            <div className="skew-cc"></div>
-            <section className="white-block">
-                <Container>
-                    <AsociadosSmallComponent/>
-                </Container>
-            </section>
-            <div className="skew-c"></div>
-            {/* <DividerSecondComponent /> */}
-            <br/>
-            <section className="colour-block">
-                <Container>
-                    <Servicios/>
-                </Container>
-                <br/>
-            </section>
-            <div className="skew-cc"></div>
-            <section className="white-block">
-                <Container>
-                    <DesarrollosTodos/>
-                </Container>
-            </section>
-            <div className="skew-c"></div>
-            <section className="colour-block">
-                <Container>
-                    <AliadosComponent/>
-                </Container>
-            </section>
-            <div className="skew-cc"></div>
-            <section className="white-block">
-                <Quotes quotes={quotez}/>
-            </section>
-        </>
-    );
+      <div className="skew-cc"></div>
+      <section className="white-block">
+        <Container>
+          <AsociadosSmallComponent />
+        </Container>
+      </section>
+      <div className="skew-c"></div>
+      {/* <DividerSecondComponent /> */}
+      <br />
+      <section className="colour-block">
+        <Container>
+          <Servicios />
+        </Container>
+        <br />
+      </section>
+      <div className="skew-cc"></div>
+      <section className="white-block">
+        <Container>
+          <DesarrollosTodos />
+        </Container>
+      </section>
+      <div className="skew-c"></div>
+      <section className="colour-block">
+        <Container>
+          <AliadosComponent />
+        </Container>
+      </section>
+      <div className="skew-cc"></div>
+      <section className="white-block">
+        <Quotes quotes={quotez} />
+      </section>
+    </>
+  );
 }
 
 export default Home;
