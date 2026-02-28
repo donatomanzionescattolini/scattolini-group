@@ -3,7 +3,7 @@ import MidtownParkResidences from "../../../objects/desarrollos/MidtownMiami/Mid
 
 export default function MidtownParkResidencesProject() {
 
-    return <ProjectTemplate desarrollo={MidtownParkResidences}    />;
-  
+    return <ProjectTemplate desarrollo={MidtownParkResidences}/>;
+
 
 }

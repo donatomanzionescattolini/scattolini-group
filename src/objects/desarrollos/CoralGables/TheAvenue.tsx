@@ -1,9 +1,10 @@
-﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+﻿import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import CoralGables from "../../areas/CoralGables.tsx";
 import React from "react";
+
 export default function TheAvenue(lang: "en" | "es" = "es") {
-    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("the-avenue", lang);
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("the-avenue", lang);
     const TheAvenueObject = new Desarrollo();
     TheAvenueObject.nombre = getLocalizedField("nombre", "the-avenue");
     TheAvenueObject.caracteristicas = {

@@ -1,10 +1,10 @@
-﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+﻿import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
 export default function AriaReserve(lang: "en" | "es" = "es") {
 
-    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("aria-reserve", lang);
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("aria-reserve", lang);
     const AriaReserveObject = new Desarrollo();
     AriaReserveObject.nombre = getLocalizedField("nombre", "aria-reserve");
     AriaReserveObject.caracteristicas = {

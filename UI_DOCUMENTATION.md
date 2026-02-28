@@ -7,6 +7,7 @@ This document provides visual examples of the authentication and editor interfac
 **Route**: `/login`
 
 The login page features:
+
 - Clean, centered design matching site theme
 - Email and password input fields
 - Error message display area
@@ -14,6 +15,7 @@ The login page features:
 - Theme colors: Dark blue (#0e2d2f) headers with light brown (#ede3d6) accents
 
 Key Features:
+
 - Responsive design that works on all screen sizes
 - Form validation (requires both email and password)
 - Error messages in Spanish
@@ -24,38 +26,45 @@ Key Features:
 **Route**: `/editor` (requires authentication)
 
 ### Header Section
+
 - Company branding
 - User email display
 - "Cerrar Sesión" (Logout) button
 - Dark theme (#0e2d2f background)
 
 ### Tab Navigation
+
 Two main tabs:
+
 1. **Desarrollos** - For editing property developments
 2. **Áreas** - For editing area/neighborhood information
 
 ### List View (Both Tabs)
+
 - Displays all available items in a clean list
 - Each item shows:
-  - Primary title in bold
-  - Secondary information in gray text
-  - Chevron icon indicating it's clickable
+    - Primary title in bold
+    - Secondary information in gray text
+    - Chevron icon indicating it's clickable
 - Hover effect on list items
 - Click to open multi-step editor
 
 ## Multi-Step Wizard
 
 ### Common Elements
+
 All wizard screens include:
+
 - **Progress indicator**: Visual steps showing current position
 - **Step title**: Clear heading for current step
 - **Navigation buttons**:
-  - "Anterior" (Previous) - Returns to previous step
-  - "Siguiente" (Next) - Advances to next step
-  - "Cancelar" (Cancel) - Returns to list without saving
-  - "Guardar Cambios" (Save Changes) - On final step
+    - "Anterior" (Previous) - Returns to previous step
+    - "Siguiente" (Next) - Advances to next step
+    - "Cancelar" (Cancel) - Returns to list without saving
+    - "Guardar Cambios" (Save Changes) - On final step
 
 ### Step Indicators
+
 - **Inactive steps**: Gray circles with numbers
 - **Active step**: Teal/blue circle (#1f595a), slightly larger
 - **Completed steps**: Brown circles (#8a6944)
@@ -64,23 +73,30 @@ All wizard screens include:
 ### Desarrollo Editor Steps
 
 #### Step 1: Información Básica
+
 Fields:
+
 - Nombre (Name)
 - Titulo (Title)
 - Slogan
 
 #### Step 2: Detalles
+
 Fields:
+
 - Introduccion (Introduction) - Multi-line textarea
 - Ubicación (Location)
 
 #### Step 3: Características
+
 Fields:
+
 - Number of Units
 - Number of Floors
 - Estimated Completion Year
 
 #### Step 4: Revisión
+
 - Read-only display of all edited fields
 - Shows field name in bold, value below
 - Grouped in a card with light background
@@ -89,29 +105,36 @@ Fields:
 ### Area Editor Steps
 
 #### Step 1: Información Básica
+
 Fields:
+
 - Name
 - Titulo (Title)
 - Slogan
 
 #### Step 2: Descripción
+
 Fields:
+
 - Descripcion (Description) - Large textarea
 - Supports multiple paragraphs
 
 #### Step 3: Revisión
+
 - Same format as Desarrollo review
 - Shows all changes before saving
 
 ## Success/Error Messages
 
 ### Success Message
+
 - Green alert box
 - Check mark (✓) icon
 - Text:"latest"
 - Auto-dismisses after 3 seconds
 
 ### Error Message
+
 - Red alert box
 - X icon (✗)
 - Error description
@@ -120,6 +143,7 @@ Fields:
 ## Responsive Behavior
 
 ### Mobile (< 768px)
+
 - Single column layout
 - Stacked form fields
 - Smaller step indicators
@@ -127,11 +151,13 @@ Fields:
 - Collapsible navigation
 
 ### Tablet (768px - 1024px)
+
 - Optimized spacing
 - Two-column layout where appropriate
 - Touch-friendly button sizes
 
 ### Desktop (> 1024px)
+
 - Full layout with sidebars
 - Multi-column forms
 - Larger step indicators
@@ -177,6 +203,7 @@ The editor uses the existing site theme:
 ## Browser Compatibility
 
 Tested and working on:
+
 - ✅ Chrome 90+
 - ✅ Firefox 88+
 - ✅ Safari 14+
@@ -194,4 +221,5 @@ Tested and working on:
 
 ---
 
-**Note**: For actual screenshots, please refer to the PR description or run the application locally following the SETUP_GUIDE.md instructions.
+**Note**: For actual screenshots, please refer to the PR description or run the application locally following the
+SETUP_GUIDE.md instructions.

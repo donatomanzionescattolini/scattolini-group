@@ -1,9 +1,9 @@
-﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+﻿import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
 export default function EditionResidences(lang: "en" | "es" = "es") {
-    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("edition-residences", lang);
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("edition-residences", lang);
     const TheEditionResidencesObject = new Desarrollo();
     TheEditionResidencesObject.banner = getLocalizedField("banner", "true") === "true";
     TheEditionResidencesObject.area = Edgewater();

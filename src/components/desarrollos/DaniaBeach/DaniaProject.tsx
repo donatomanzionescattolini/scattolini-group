@@ -2,8 +2,8 @@
 import createDaniaProject from "../../../objects/desarrollos/DaniaBeach/DaniaProject";
 
 export default function DaniaProject() {
-  return (
-    <ProjectTemplate desarrollo={createDaniaProject} />
-  )
+    return (
+        <ProjectTemplate desarrollo={createDaniaProject}/>
+    )
 }
 

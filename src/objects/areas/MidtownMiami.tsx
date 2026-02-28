@@ -1,4 +1,5 @@
-import { Area } from "../../models/areas/Area";
+import {Area} from "../../models/areas/Area";
+
 export default function MidtownMiami() {
     const MidtownMiamiObject = new Area("midtown-miami");
     MidtownMiamiObject.name = "midtown-miami";

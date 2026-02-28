@@ -43,46 +43,54 @@ export default function FaenaResidences(lang: "en" | "es" = "es") {
 
             </dl>
         </>,
-        amenidades: lang === "en" ? <><ul>
-            <li>Spectacular triple-height lobby with tranquil pools flowing through the area.</li>
-            <li>High-speed elevators</li>
-            <li>Porte-cochère entrance</li>
-            <li>24-hour doorman, valet parking, security, and concierge services.</li>
-            <li>Spa with separate sauna and steam room for men and women.</li>
-            <li>Fitness center with direct ocean views.</li>
-            <li>Beach Club with cabana service. Landscaped pool, children's pool, and playroom</li>
+        amenidades: lang === "en" ? <>
+            <ul>
+                <li>Spectacular triple-height lobby with tranquil pools flowing through the area.</li>
+                <li>High-speed elevators</li>
+                <li>Porte-cochère entrance</li>
+                <li>24-hour doorman, valet parking, security, and concierge services.</li>
+                <li>Spa with separate sauna and steam room for men and women.</li>
+                <li>Fitness center with direct ocean views.</li>
+                <li>Beach Club with cabana service. Landscaped pool, children's pool, and playroom</li>
 
 
-        </ul></> : <><ul>
-            <li>Espectacular vestíbulo de triple altura, con tranquilas piscinas que atraviesan el área.</li>
-            <li>Ascensores de alta velocidad</li>
-            <li>Entrada de porte-coch</li>
-            <li>Servicios de portero, valet parking, seguridad y conserjería las 24 horas.</li>
-            <li>Spa con sauna y baño de vapor separados para hombres y mujeres.</li>
-            <li>Gimnasio con vistas directas al mar.</li>
-            <li>Club de Playa con servicio de cabañas Piscina ajardinada, piscina infantil y sala de juegos</li>
+            </ul>
+        </> : <>
+            <ul>
+                <li>Espectacular vestíbulo de triple altura, con tranquilas piscinas que atraviesan el área.</li>
+                <li>Ascensores de alta velocidad</li>
+                <li>Entrada de porte-coch</li>
+                <li>Servicios de portero, valet parking, seguridad y conserjería las 24 horas.</li>
+                <li>Spa con sauna y baño de vapor separados para hombres y mujeres.</li>
+                <li>Gimnasio con vistas directas al mar.</li>
+                <li>Club de Playa con servicio de cabañas Piscina ajardinada, piscina infantil y sala de juegos</li>
 
 
-        </ul></>,
-        residencias: lang === "en" ? <><ul>
-            <li>Ceiling heights of 10'-6", 11' on floors 14 and 15, 13' in penthouse</li>
-            <li>Master bathrooms with vanities featuring double sinks and separate bathtubs.</li>
-            <li>High-gloss white lacquer kitchen cabinets</li>
-            <li>High-gloss white lacquered kitchen cabinets</li>
-            <li>Miele kitchen appliances</li>
-            <li>White marble bathroom walls.</li>
-            <li>Glass rain showers with polished chrome finishes</li>
+            </ul>
+        </>,
+        residencias: lang === "en" ? <>
+            <ul>
+                <li>Ceiling heights of 10'-6", 11' on floors 14 and 15, 13' in penthouse</li>
+                <li>Master bathrooms with vanities featuring double sinks and separate bathtubs.</li>
+                <li>High-gloss white lacquer kitchen cabinets</li>
+                <li>High-gloss white lacquered kitchen cabinets</li>
+                <li>Miele kitchen appliances</li>
+                <li>White marble bathroom walls.</li>
+                <li>Glass rain showers with polished chrome finishes</li>
 
-        </ul></> : <><ul>
-            <li>Alturas de techo de 10'-6", 11' en los pisos 14 y 15, 13' en el penthouse</li>
-            <li>Baños principales con tocadores con lavabos dobles y bañeras separadas.</li>
-            <li>Gabinetes con laca blanca brillante en cocina</li>
-            <li>Gabinetes de cocina lacados en blanco brillante</li>
-            <li>Electrodomésticos de cocina Miele</li>
-            <li>Paredes de mármol blanco en el baño.</li>
-            <li>Duchas de lluvia de cristal con acabados en cromo pulido</li>
+            </ul>
+        </> : <>
+            <ul>
+                <li>Alturas de techo de 10'-6", 11' en los pisos 14 y 15, 13' en el penthouse</li>
+                <li>Baños principales con tocadores con lavabos dobles y bañeras separadas.</li>
+                <li>Gabinetes con laca blanca brillante en cocina</li>
+                <li>Gabinetes de cocina lacados en blanco brillante</li>
+                <li>Electrodomésticos de cocina Miele</li>
+                <li>Paredes de mármol blanco en el baño.</li>
+                <li>Duchas de lluvia de cristal con acabados en cromo pulido</li>
 
-        </ul></>
+            </ul>
+        </>
     };
 
     return FaenaResidencesObject;

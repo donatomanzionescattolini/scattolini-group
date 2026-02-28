@@ -1,9 +1,10 @@
-﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+﻿import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 import React from "react";
+
 export default function FourteenTwentyEight(lang: "en" | "es" = "es") {
-    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("1428-brickell", lang);
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("1428-brickell", lang);
     const FourteenTwentyEightObject = new Desarrollo(Brickell());
     FourteenTwentyEightObject.banner = getLocalizedField("banner", "true") === "true";
     FourteenTwentyEightObject.area = Brickell();

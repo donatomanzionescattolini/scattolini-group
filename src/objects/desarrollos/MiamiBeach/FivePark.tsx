@@ -20,14 +20,19 @@ export default function FivePark(lang: "en" | "es" = "es") {
                     <li>Transportation to Beach Club via electric vehicle</li>
                     <li>Fully equipped fitness center</li>
                     <li>Spa and treatment rooms</li>
-                    <li>State-of-the-art fiber optics provide high-quality internet and WiFi service from every corner of Five Park residences and amenities, including garage and elevator spaces</li>
-
-                    <li>
-                        The adjacent 3-acre Canopy Park features a MONSTRUM playground, outdoor gym, picnic areas, dog park, shaded gardens, and art installations
+                    <li>State-of-the-art fiber optics provide high-quality internet and WiFi service from every corner
+                        of Five Park residences and amenities, including garage and elevator spaces
                     </li>
 
                     <li>
-                        The green, plant-filled amenity deck boasts stunning sunset views of the Miami skyline and bay, visible from adult and family pools. The expansive space also offers unparalleled relaxation with shaded trellises, sunset terrace, numerous cabanas and lounges, and meditation deck
+                        The adjacent 3-acre Canopy Park features a MONSTRUM playground, outdoor gym, picnic areas, dog
+                        park, shaded gardens, and art installations
+                    </li>
+
+                    <li>
+                        The green, plant-filled amenity deck boasts stunning sunset views of the Miami skyline and bay,
+                        visible from adult and family pools. The expansive space also offers unparalleled relaxation
+                        with shaded trellises, sunset terrace, numerous cabanas and lounges, and meditation deck
                     </li>
 
                     <li>
@@ -92,10 +97,14 @@ export default function FivePark(lang: "en" | "es" = "es") {
                     <li>Private porte-cochère and residents' lobby</li>
                     <li>Electric vehicle charging stations</li>
                     <li>
-                        The adjacent 3-acre Canopy Park features a MONSTRUM playground, outdoor gym, picnic areas, dog park, shaded gardens, and art installations
+                        The adjacent 3-acre Canopy Park features a MONSTRUM playground, outdoor gym, picnic areas, dog
+                        park, shaded gardens, and art installations
                     </li>
                     <li>
-                        The green, plant-filled amenity terrace boasts stunning sunset views of the Miami skyline and bay, visible from adult and family pools. The expansive space also offers unparalleled relaxation with shaded trellises, sunset terrace, numerous cabanas and lounges, and meditation deck
+                        The green, plant-filled amenity terrace boasts stunning sunset views of the Miami skyline and
+                        bay, visible from adult and family pools. The expansive space also offers unparalleled
+                        relaxation with shaded trellises, sunset terrace, numerous cabanas and lounges, and meditation
+                        deck
                     </li>
                     <li>Private Beach Club</li>
                     <li>Coworking area with private offices and meeting rooms</li>
@@ -109,7 +118,8 @@ export default function FivePark(lang: "en" | "es" = "es") {
                     <li>Fitness center</li>
                     <li>Spa and treatment rooms</li>
                     <li>
-                        State-of-the-art fiber optics provide high-quality Internet and WiFi service from every corner of Five Park residences and amenities, including garage and elevator spaces
+                        State-of-the-art fiber optics provide high-quality Internet and WiFi service from every corner
+                        of Five Park residences and amenities, including garage and elevator spaces
                     </li>
                 </ul>
             </>
@@ -178,7 +188,8 @@ export default function FivePark(lang: "en" | "es" = "es") {
                     </li>
                     <li>Master bedrooms with walk-in closets</li>
                     <li>
-                        Custom-designed Gabellini Sheppard master bathrooms feature Italian-made vanities and textured glass shower doors
+                        Custom-designed Gabellini Sheppard master bathrooms feature Italian-made vanities and textured
+                        glass shower doors
                     </li>
                     <li>
                         Cutting-edge Hansgrohe bathroom fixtures are present in secondary bathrooms

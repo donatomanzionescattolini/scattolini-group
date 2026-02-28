@@ -1,7 +1,7 @@
-import { useTranslation } from "./i18n.tsx";
+import {useTranslation} from "./i18n.tsx";
 
 export function AboutUs() {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     return (
         <>
             <h2

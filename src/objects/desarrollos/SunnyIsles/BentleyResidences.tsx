@@ -1,9 +1,9 @@
-﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+﻿import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
 
 export default function BentleyResidences(lang: "en" | "es" = "es") {
-    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("bentley-residences", lang);
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("bentley-residences", lang);
     const BentleyResidencesObject = new Desarrollo();
 
     BentleyResidencesObject.nombre = "bentley-residences";

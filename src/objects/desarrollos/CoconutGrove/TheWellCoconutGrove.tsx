@@ -1,5 +1,6 @@
 ﻿import CoconutGrove from "../../areas/CoconutGrove.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+
 const TheWellCoconutGrove = new Desarrollo(CoconutGrove());
 TheWellCoconutGrove.nombre = "the-well-coconut-grove";
 TheWellCoconutGrove.titulo = "The Well | Coconut Grove";
@@ -18,7 +19,9 @@ TheWellCoconutGrove.caracteristicas = {
     amenidades: (
         <>
             <ul>
-                <li>Edificio boutique de 8 pisos con fachada de piedra coral que recuerda la arquitectura histórica de Coconut Grove</li>
+                <li>Edificio boutique de 8 pisos con fachada de piedra coral que recuerda la arquitectura histórica de
+                    Coconut Grove
+                </li>
                 <li>Diseño de edificios ecológicos de Florida con certificación Silver y mentalidad sostenible</li>
                 <li>194 residencias con 94 planos de planta distintos</li>
                 <li>VestÃ­bulo de llegada de residentes sereno e inmerso en una luz natural difusa</li>
@@ -26,17 +29,32 @@ TheWellCoconutGrove.caracteristicas = {
                 <li>Sensación holÃ­stica de serenidad: aromaterapia sutil y jardines interiores restauradores</li>
                 <li>Iluminación natural optimizada en todas partes</li>
                 <li>Casas adosadas seleccionadas con acceso directo a la calle y entrada con jardÃ­n privado</li>
-                <li>Lofts en planta baja con techo de 22' de altura en gran sala y pared de ventanas de doble altura</li>
-                <li>Azotea de 40.000 pies cuadrados diseñada como un oasis de bienestar al aire libre con 2 piscinas, baños de agua frÃ­a y caliente, cancha de pickleball, Fitness Forest, bar y restaurante</li>
-                <li>Club de bienestar de Ãºltima generación de 13.000 pies cuadrados con cafeterÃ­a, espacios sociales y de trabajo conjunto, bar de jugos frescos y refrigerios orgÃ¡nicos</li>
+                <li>Lofts en planta baja con techo de 22' de altura en gran sala y pared de ventanas de doble altura
+                </li>
+                <li>Azotea de 40.000 pies cuadrados diseñada como un oasis de bienestar al aire libre con 2 piscinas,
+                    baños de agua frÃ­a y caliente, cancha de pickleball, Fitness Forest, bar y restaurante
+                </li>
+                <li>Club de bienestar de Ãºltima generación de 13.000 pies cuadrados con cafeterÃ­a, espacios sociales y
+                    de trabajo conjunto, bar de jugos frescos y refrigerios orgÃ¡nicos
+                </li>
                 <li>Servicio de toallas frÃ­as y calientes a la llegada y a la salida</li>
                 <li>Biblioteca del vestÃ­bulo</li>
                 <li>JardÃ­n de hierbas exclusivo para residentes en el jardÃ­n del vestÃ­bulo</li>
-                <li>El jardÃ­n de té cuenta con un exuberante paisaje, un patio interior y exterior y un estanque de reflexión</li>
-                <li>El invernadero lleno de luz exclusivo para residentes cuenta con vidrios de doble altura con vista al jardÃ­n de té interior y exterior con una silla de recuperación Shiftwave para restablecer el sistema nervioso después de un largo dÃ­a y un salón de bienestar para trabajar en conjunto y recibir terapia intravenosa</li>
-                <li>Centro de fitness exclusivo para residentes y estudio de movimiento para grupos pequeños, perfecto para entrenamiento privado</li>
+                <li>El jardÃ­n de té cuenta con un exuberante paisaje, un patio interior y exterior y un estanque de
+                    reflexión
+                </li>
+                <li>El invernadero lleno de luz exclusivo para residentes cuenta con vidrios de doble altura con vista
+                    al jardÃ­n de té interior y exterior con una silla de recuperación Shiftwave para restablecer el
+                    sistema nervioso después de un largo dÃ­a y un salón de bienestar para trabajar en conjunto y
+                    recibir terapia intravenosa
+                </li>
+                <li>Centro de fitness exclusivo para residentes y estudio de movimiento para grupos pequeños, perfecto
+                    para entrenamiento privado
+                </li>
                 <li>Piscina exclusiva para residentes en la azotea con cabañas y tumbonas privadas</li>
-                <li>Segunda piscina en la azotea y jacuzzi con cabañas privadas y tumbonas para residentes y miembros del THE WELL Club</li>
+                <li>Segunda piscina en la azotea y jacuzzi con cabañas privadas y tumbonas para residentes y miembros
+                    del THE WELL Club
+                </li>
                 <li>Comedor privado con cocina de catering y barra para eventos</li>
                 <li>Seguridad las 24 horas</li>
                 <li>Estaciones de carga de vehÃ­culos eléctricos disponibles para los residentes</li>
@@ -66,12 +84,21 @@ TheWellCoconutGrove.caracteristicas = {
             <dt>Amenidades</dt>
             <dd>
                 <ul>
-                    <li>Amplios planos de planta (960-4200 pies cuadrados) con amplias ventanas de vidrio diseñadas pensando en la salud y el bienestar</li>
+                    <li>Amplios planos de planta (960-4200 pies cuadrados) con amplias ventanas de vidrio diseñadas
+                        pensando en la salud y el bienestar
+                    </li>
                     <li>Balcones o terrazas privadas en todas las residencias</li>
-                    <li>Espacios flexibles en residencias selectas para prÃ¡cticas de bienestar en el hogar, como meditación, ejercicios o masajes, con la opción de mejorar su experiencia a través de paquetes de bienestar personalizados</li>
+                    <li>Espacios flexibles en residencias selectas para prÃ¡cticas de bienestar en el hogar, como
+                        meditación, ejercicios o masajes, con la opción de mejorar su experiencia a través de paquetes
+                        de bienestar personalizados
+                    </li>
                     <li>Pisos de madera de ingenierÃ­a neutra en todas partes</li>
-                    <li>Los dormitorios principales cuentan con sistemas de vestidores italianos Italkraft con terapia de luz roja incorporada para mejorar la salud, la energÃ­a y el bienestar</li>
-                    <li>Lavadoras y secadoras Samsung en cada unidad, con lavanderÃ­as exclusivas en unidades seleccionadas</li>
+                    <li>Los dormitorios principales cuentan con sistemas de vestidores italianos Italkraft con terapia
+                        de luz roja incorporada para mejorar la salud, la energÃ­a y el bienestar
+                    </li>
+                    <li>Lavadoras y secadoras Samsung en cada unidad, con lavanderÃ­as exclusivas en unidades
+                        seleccionadas
+                    </li>
                 </ul>
             </dd>
             <dt>Cocina</dt>
@@ -81,20 +108,31 @@ TheWellCoconutGrove.caracteristicas = {
                     <li>Gabinetes italianos Italkraft personalizados</li>
                     <li>Islas de cocina o penÃ­nsulas en cada residencia con espacio para sentarse</li>
                     <li>Encimeras y salpicaderos de cuarcita</li>
-                    <li>Fregadero de cocina Kraus Koreâ„¢, conocido por su diseño uniforme, su función y su espacio de trabajo equilibrado con accesorios integrados</li>
+                    <li>Fregadero de cocina Kraus Koreâ„¢, conocido por su diseño uniforme, su función y su espacio de
+                        trabajo equilibrado con accesorios integrados
+                    </li>
                     <li>Grifo extraÃ­ble Grohe con opciones de agua filtrada, frÃ­a, sin gas y con gas</li>
-                    <li>Electrodomésticos Sub-Zero, Wolf y ASKO, incluido un refrigerador para vinos Sub-Zero integrado</li>
-                    <li>Accesorios de cocina especiales: hervidor eléctrico, Nutri Bullet, robot de cocina Suvie y freidora de aire</li>
+                    <li>Electrodomésticos Sub-Zero, Wolf y ASKO, incluido un refrigerador para vinos Sub-Zero
+                        integrado
+                    </li>
+                    <li>Accesorios de cocina especiales: hervidor eléctrico, Nutri Bullet, robot de cocina Suvie y
+                        freidora de aire
+                    </li>
                 </ul>
             </dd>
             <dt>Baño Principal</dt>
             <dd>
                 <ul>
-                    <li>Cabezal de ducha de lluvia Dornbracht con barra deslizante de pared incluida, con ducha de mano o ducha linfÃ¡tica</li>
+                    <li>Cabezal de ducha de lluvia Dornbracht con barra deslizante de pared incluida, con ducha de mano
+                        o ducha linfÃ¡tica
+                    </li>
                     <li>Duchas de vapor en residencias de 3 y 4 dormitorios</li>
-                    <li>Bañeras independientes para aliviar mÃºsculos y articulaciones cansadas disponibles en unidades seleccionadas</li>
+                    <li>Bañeras independientes para aliviar mÃºsculos y articulaciones cansadas disponibles en unidades
+                        seleccionadas
+                    </li>
                     <li>Pisos de piedra natural y paredes de piedra revestida detrÃ¡s de los tocadores principales</li>
-                    <li>Tocadores de piedra natural con lavabos dobles y gabinetes italianos Italkraft personalizados</li>
+                    <li>Tocadores de piedra natural con lavabos dobles y gabinetes italianos Italkraft personalizados
+                    </li>
                     <li>Espejos de tocador iluminados</li>
                 </ul>
             </dd>

@@ -1,9 +1,10 @@
-﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+﻿import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 import React from "react";
+
 export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
-    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("14-river-district", lang);
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("14-river-district", lang);
     const FourteenRiverDistrictObject = new Desarrollo(Brickell());
 
     FourteenRiverDistrictObject.nombre = "14-river-district";

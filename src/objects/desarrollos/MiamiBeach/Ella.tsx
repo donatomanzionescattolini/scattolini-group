@@ -5,10 +5,10 @@ import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
 export default function Ella(lang: "en" | "es" = "es") {
     const EllaObject = new Desarrollo(Brickell());
-    EllaObject.estimatedCompletionYear=2026;
-    EllaObject.numberOfRooms={start:1,end:2};
-    EllaObject.numberOfUnits=95;
-    EllaObject.typeOfUnits= lang === "en" ? "Apartments" : "Apartamentos";
+    EllaObject.estimatedCompletionYear = 2026;
+    EllaObject.numberOfRooms = {start: 1, end: 2};
+    EllaObject.numberOfUnits = 95;
+    EllaObject.typeOfUnits = lang === "en" ? "Apartments" : "Apartamentos";
     EllaObject.ubicación = "6940 Abbot Avenue, Miami Beach, FL 33141";
 
     EllaObject.nombre = "ella";
@@ -111,17 +111,25 @@ export default function Ella(lang: "en" | "es" = "es") {
         "Inodoro y lavabo Laufen",
         "Residencias totalmente amuebladas disponibles en Interiors by Steven G para su compra"
     ];
-    EllaObject.caracteristicas = {edificio: EllaObject.displayCaracteristicasEdificio(), residencias: EllaObject.displayCaracteristicasResidencias(), amenidades: EllaObject.displayAmenidades()};
-    
+    EllaObject.caracteristicas = {
+        edificio: EllaObject.displayCaracteristicasEdificio(),
+        residencias: EllaObject.displayCaracteristicasResidencias(),
+        amenidades: EllaObject.displayAmenidades()
+    };
+
     EllaObject.banner = true;
     EllaObject.area = MiamiBeach();
-    EllaObject.constructora=new Constructora("Constellation");
+    EllaObject.constructora = new Constructora("Constellation");
     EllaObject.slogan = {
         es: "Un Tributo Al Glamuroso Pasado De Miami Beach",
         en: "A Tribute To Miami Beach's Glamorous Past"
     };
     EllaObject.numberOfImages = 21;
-    EllaObject.video = <iframe width="555" height="500" className="object-fit-cover" src="https://www.youtube.com/embed/mIbAaxXmKTI?autoplay=1"  title="Ella Miami Beach - Airbnb boutique"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>;
+    EllaObject.video = <iframe width="555" height="500" className="object-fit-cover"
+                               src="https://www.youtube.com/embed/mIbAaxXmKTI?autoplay=1"
+                               title="Ella Miami Beach - Airbnb boutique"
+                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                               allowFullScreen></iframe>;
     return EllaObject;
 }
 

@@ -1,9 +1,9 @@
-﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+﻿import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
 
 export default function TheMansionsAtAcqualina(lang: "en" | "es" = "es") {
-    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("the-mansions-at-acqualina", lang);
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("the-mansions-at-acqualina", lang);
     const TheMansionsAtAcqualinaObject = new Desarrollo();
 
     TheMansionsAtAcqualinaObject.video =

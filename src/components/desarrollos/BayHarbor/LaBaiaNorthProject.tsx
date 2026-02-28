@@ -2,5 +2,5 @@
 import LaBaia from "../../../objects/desarrollos/BayHarbor/LaBaia.tsx";
 
 export default function LaBaiaNorthProject() {
-    return (<ProjectTemplate desarrollo={LaBaia}/>) 
+    return (<ProjectTemplate desarrollo={LaBaia}/>)
 }

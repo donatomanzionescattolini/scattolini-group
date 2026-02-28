@@ -1,9 +1,10 @@
-﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+﻿import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
 import React from "react";
+
 export default function ShomaBay(lang: "en" | "es" = "es") {
-    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("shoma-bay", lang);
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("shoma-bay", lang);
     const ShomaBayObject = new Desarrollo();
     ShomaBayObject.nombre = getLocalizedField("nombre", "shoma-bay");
 

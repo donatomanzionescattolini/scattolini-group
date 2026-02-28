@@ -1,10 +1,12 @@
 # Authentication and Editor Setup Guide
 
-This guide explains how to set up and use the new authentication system and multi-step content editor for managing Desarrollo and Area objects in the Scattolini Group website.
+This guide explains how to set up and use the new authentication system and multi-step content editor for managing
+Desarrollo and Area objects in the Scattolini Group website.
 
 ## Overview
 
 The implementation includes:
+
 - **Firebase Authentication** for secure user login/logout
 - **Firebase Firestore** for data persistence
 - **Multi-step wizard** for editing Desarrollo and Area objects
@@ -23,13 +25,13 @@ The implementation includes:
 1. Go to [Firebase Console](https://console.firebase.google.com/)
 2. Create a new project or select an existing one
 3. Enable **Authentication**:
-   - Navigate to Authentication > Sign-in method
-   - Enable "Email/Password" provider
-   - Add authorized users in the Users tab
+    - Navigate to Authentication > Sign-in method
+    - Enable "Email/Password" provider
+    - Add authorized users in the Users tab
 4. Enable **Firestore Database**:
-   - Navigate to Firestore Database
-   - Create database in production mode
-   - Choose a region close to your users
+    - Navigate to Firestore Database
+    - Create database in production mode
+    - Choose a region close to your users
 
 ### 2. Get Firebase Credentials
 
@@ -56,6 +58,7 @@ VITE_FIREBASE_APP_ID=your_app_id
 ### 3. Create Firebase User
 
 In Firebase Console > Authentication > Users:
+
 1. Click "Add user"
 2. Enter email and password
 3. Save the credentials (you'll need them to log in)
@@ -69,11 +72,13 @@ npm install --legacy-peer-deps
 ### 5. Run the Application
 
 **Development mode:**
+
 ```bash
 npm run dev
 ```
 
 **Production build:**
+
 ```bash
 npm run build
 npm run preview
@@ -93,10 +98,10 @@ npm run preview
 1. In the editor, stay on the "Desarrollos" tab
 2. Click on any desarrollo from the list
 3. Follow the multi-step wizard:
-   - **Step 1: Información Básica** - Edit name, title, slogan
-   - **Step 2: Detalles** - Edit introduction, location
-   - **Step 3: Características** - Edit units, floors, completion year
-   - **Step 4: Revisión** - Review all changes
+    - **Step 1: Información Básica** - Edit name, title, slogan
+    - **Step 2: Detalles** - Edit introduction, location
+    - **Step 3: Características** - Edit units, floors, completion year
+    - **Step 4: Revisión** - Review all changes
 4. Click "Guardar Cambios" to save
 
 ### Editing Areas
@@ -104,9 +109,9 @@ npm run preview
 1. In the editor, click the "Áreas" tab
 2. Click on any area from the list
 3. Follow the multi-step wizard:
-   - **Step 1: Información Básica** - Edit name, title, slogan
-   - **Step 2: Descripción** - Edit description paragraphs
-   - **Step 3: Revisión** - Review all changes
+    - **Step 1: Información Básica** - Edit name, title, slogan
+    - **Step 2: Descripción** - Edit description paragraphs
+    - **Step 3: Revisión** - Review all changes
 4. Click "Guardar Cambios" to save
 
 ### Logging Out
@@ -116,6 +121,7 @@ Click "Cerrar Sesión" in the top-right corner of the editor.
 ## Data Persistence
 
 Data is stored in Firebase Firestore in two collections:
+
 - `desarrollos` - Contains all Desarrollo objects
 - `areas` - Contains all Area objects
 
@@ -147,19 +153,23 @@ service cloud.firestore {
 ## Troubleshooting
 
 ### "Firebase not configured" error
+
 - Ensure `.env` file exists and contains all required values
 - Restart the development server after creating/updating `.env`
 
 ### Login fails with "auth/user-not-found"
+
 - Verify the user exists in Firebase Console > Authentication > Users
 - Check that email/password are correct
 
 ### Data not saving
+
 - Check Firebase Console > Firestore Database to see if data appears
 - Verify Firestore rules allow authenticated writes
 - Check browser console for error messages
 
 ### Build errors
+
 - Run `npm install --legacy-peer-deps` to ensure all dependencies are installed
 - Clear `node_modules` and `package-lock.json`, then reinstall if issues persist
 
@@ -198,6 +208,7 @@ To integrate Firestore data into the public site:
 ## Support
 
 For issues or questions:
+
 1. Check Firebase Console for errors
 2. Review browser console for client-side errors
 3. Verify `.env` configuration

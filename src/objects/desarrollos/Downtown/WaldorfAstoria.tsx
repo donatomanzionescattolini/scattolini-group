@@ -1,9 +1,9 @@
 ﻿import Downtown from "../../areas/Downtown.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import { getDesarrolloI18n } from "../useDesarrolloI18n";
+import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
 export default function WaldorfAstoria(lang: "en" | "es" = "es") {
-    const { getLocalizedField } = getDesarrolloI18n("waldorf-astoria", lang);
+    const {getLocalizedField} = getDesarrolloI18n("waldorf-astoria", lang);
     const WaldorfAstoriaObject = new Desarrollo();
 
 

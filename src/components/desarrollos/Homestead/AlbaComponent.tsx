@@ -2,6 +2,6 @@
 import Alba from "../../../objects/desarrollos/Homestead/Alba.tsx";
 
 export default function AlbaComponent() {
-  return <ProjectTemplate desarrollo={Alba} />;
+    return <ProjectTemplate desarrollo={Alba}/>;
 }
 

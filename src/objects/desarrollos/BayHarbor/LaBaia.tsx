@@ -1,5 +1,6 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import BayHarbor from "../../areas/BayHarbor.tsx";
+
 export default function LaBaia() {
     const LaBaiaObject = new Desarrollo();
     LaBaiaObject.nombre = 'la-baia';

@@ -1,9 +1,9 @@
-﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+﻿import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
 export default function AstonMartin(lang: "en" | "es" = "es") {
-    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("astonMartin", lang);
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("astonMartin", lang);
 
     const AstonMartinObject = new Desarrollo();
     AstonMartinObject.banner = true;

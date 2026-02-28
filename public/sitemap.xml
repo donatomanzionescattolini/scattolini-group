@@ -1,160 +1,524 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main Pages -->
-  <url>
-    <loc>https://scattolinigroup.com/</loc>
-    <lastmod>2026-02-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://scattolinigroup.com/liderazgo/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://scattolinigroup.com/asociados/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://scattolinigroup.com/contacto/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://scattolinigroup.com/desarrollos/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://scattolinigroup.com/areas/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Areas -->
-  <url><loc>https://scattolinigroup.com/areas/Aventura/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/BayHarbor/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/Brickell/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/CoconutGrove/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/CoralGables/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/DaniaBeach/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/Doral/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/Downtown/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/Edgewater/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/FloridaCity/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/FtLauderdale/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/Hollywood/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/Homestead/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/MiamiBeach/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/MidtownMiami/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/NorthBayVillage/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/PembrokePines/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/Pinecrest/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/PompanoBeach/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/SouthMiami/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/SunnyIsles/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://scattolinigroup.com/areas/Wynwood/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  
-  <!-- Desarrollos - Bay Harbor -->
-  <url><loc>https://scattolinigroup.com/desarrollos/LaBaia/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/LaMare/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/Origin/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/TheWell/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Brickell -->
-  <url><loc>https://scattolinigroup.com/desarrollos/2200Brickell/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/888BrickellDolceAndGabbanaResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/BaccaratResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/Cipriani/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/Domus/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/DomusBrickellCenter/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/FourteenRiverDistrict/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/FourteenTwentyEight/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/Lofty/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/MercedesBenzPlacesMiami/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/Ora/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/StRegisBrickell/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/ViceroyBrickell/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Coconut Grove -->
-  <url><loc>https://scattolinigroup.com/desarrollos/TheWellCoconutGrove/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/Vita/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Coral Gables -->
-  <url><loc>https://scattolinigroup.com/desarrollos/CoraMerrickPark/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/TheAvenue/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Downtown -->
-  <url><loc>https://scattolinigroup.com/desarrollos/AstonMartin/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/CasaBella/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/Jem/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/TheElser/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/W11/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/WaldorfAstoria/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Edgewater -->
-  <url><loc>https://scattolinigroup.com/desarrollos/AriaReserve/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/EdgeHouseResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/EditionResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/ElleResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/MissoniBaia/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/TheVilla/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/VidaResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Florida City -->
-  <url><loc>https://scattolinigroup.com/desarrollos/Alba/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/Oasis/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/ParcVillas/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/ParkSquare/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Hollywood -->
-  <url><loc>https://scattolinigroup.com/desarrollos/GaiaResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/IconBeachResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/SevenParkResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Homestead -->
-  <url><loc>https://scattolinigroup.com/desarrollos/OnGrandville/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/SalernoEstates/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/SedonaEstates/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/SilverlandEstates/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/TerraSol/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Miami Beach -->
-  <url><loc>https://scattolinigroup.com/desarrollos/72Carlyle/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/Ella/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/FaenaResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/FivePark/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/Nexo/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/OnePark/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/Palma/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/SeventyTwoPark/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/TheWilliam/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Midtown Miami -->
-  <url><loc>https://scattolinigroup.com/desarrollos/JeanGeorgesMiamiTropicResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/MidtownParkResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/TheStandardResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - North Bay Village -->
-  <url><loc>https://scattolinigroup.com/desarrollos/ShomaBay/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/TulaResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Pinecrest -->
-  <url><loc>https://scattolinigroup.com/desarrollos/Centris/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/PineParkVillas/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/PineRocklandEstates/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Pompano Beach -->
-  <url><loc>https://scattolinigroup.com/desarrollos/EnvyResidence/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/WPompanoBeach/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Sunny Isles -->
-  <url><loc>https://scattolinigroup.com/desarrollos/BentleyResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/StRegis/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://scattolinigroup.com/desarrollos/TheMansionsAtAcqualina/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Desarrollos - Wynwood -->
-  <url><loc>https://scattolinigroup.com/desarrollos/NomadResidences/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <!-- Main Pages -->
+    <url>
+        <loc>https://scattolinigroup.com/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/liderazgo/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/asociados/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/contacto/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Areas -->
+    <url>
+        <loc>https://scattolinigroup.com/areas/Aventura/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/BayHarbor/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/Brickell/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/CoconutGrove/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/CoralGables/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/DaniaBeach/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/Doral/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/Downtown/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/Edgewater/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/FloridaCity/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/FtLauderdale/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/Hollywood/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/Homestead/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/MiamiBeach/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/MidtownMiami/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/NorthBayVillage/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/PembrokePines/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/Pinecrest/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/PompanoBeach/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/SouthMiami/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/SunnyIsles/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/areas/Wynwood/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Desarrollos - Bay Harbor -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/LaBaia/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/LaMare/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Origin/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/TheWell/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Brickell -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/2200Brickell/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/888BrickellDolceAndGabbanaResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/BaccaratResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Cipriani/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Domus/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/DomusBrickellCenter/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/FourteenRiverDistrict/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/FourteenTwentyEight/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Lofty/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/MercedesBenzPlacesMiami/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Ora/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/StRegisBrickell/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/ViceroyBrickell/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Coconut Grove -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/TheWellCoconutGrove/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Vita/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Coral Gables -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/CoraMerrickPark/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/TheAvenue/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Downtown -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/AstonMartin/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/CasaBella/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Jem/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/TheElser/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/W11/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/WaldorfAstoria/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Edgewater -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/AriaReserve/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/EdgeHouseResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/EditionResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/ElleResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/MissoniBaia/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/TheVilla/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/VidaResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Florida City -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Alba/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Oasis/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/ParcVillas/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/ParkSquare/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Hollywood -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/GaiaResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/IconBeachResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/SevenParkResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Homestead -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/OnGrandville/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/SalernoEstates/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/SedonaEstates/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/SilverlandEstates/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/TerraSol/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Miami Beach -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/72Carlyle/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Ella/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/FaenaResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/FivePark/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Nexo/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/OnePark/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Palma/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/SeventyTwoPark/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/TheWilliam/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Midtown Miami -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/JeanGeorgesMiamiTropicResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/MidtownParkResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/TheStandardResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - North Bay Village -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/ShomaBay/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/TulaResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Pinecrest -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/Centris/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/PineParkVillas/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/PineRocklandEstates/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Pompano Beach -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/EnvyResidence/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/WPompanoBeach/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Sunny Isles -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/BentleyResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/StRegis/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/TheMansionsAtAcqualina/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Desarrollos - Wynwood -->
+    <url>
+        <loc>https://scattolinigroup.com/desarrollos/NomadResidences/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

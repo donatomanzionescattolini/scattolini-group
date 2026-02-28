@@ -1,9 +1,9 @@
-﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+﻿import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
 
 export default function StRegis(lang: "en" | "es" = "es") {
-    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("st-regis", lang);
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("st-regis", lang);
     const StRegisObject = new Desarrollo();
 
     StRegisObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "52"), 10) || 52;
@@ -20,7 +20,7 @@ export default function StRegis(lang: "en" | "es" = "es") {
     StRegisObject.caracteristicas = {
         edificio: (
             <p>
-                St. RegisÂ®  se encuentra dentro de una red de conexiones de
+                St. RegisÂ® se encuentra dentro de una red de conexiones de
                 transporte cercanas, lo que brinda fÃ¡cil acceso al Aeropuerto
                 Internacional de Miami, el Puerto de Miami, el Distrito de las Artes
                 de Wynwood, el Distrito de Diseño, los teatros y museos
@@ -32,7 +32,7 @@ export default function StRegis(lang: "en" | "es" = "es") {
             <div>
                 <p>
                     Una sola torre de 48 pisos que alberga 150 residencias, incluidos
-                    penthouses y sky villas. St. RegisÂ®  es una colección de
+                    penthouses y sky villas. St. RegisÂ® es una colección de
                     casas de 2 a 7 habitaciones que miden entre 2,616 y 7,391 pies
                     cuadrados. Pie. Con techos de 10 pies, tecnologÃ­a inteligente
                     integrada y tocador en cada unidad. Este edificio ofrece mucho

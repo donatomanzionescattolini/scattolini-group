@@ -1,4 +1,4 @@
-import { Area } from "../../models/areas/Area";
+import {Area} from "../../models/areas/Area";
 
 
 const PembrokePines = () => {
@@ -26,10 +26,7 @@ const PembrokePines = () => {
     PembrokePinesObject.numberOfImages = 11;
 
 
-
     return PembrokePinesObject;
-
-
 
 
 }

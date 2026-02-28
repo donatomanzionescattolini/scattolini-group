@@ -25,7 +25,7 @@
   padding: 1.5rem;
   border-radius: 8px;
   transition: var(--transition-smooth);
-  
+
   &:hover {
     background: rgba(201, 169, 97, 0.1);
     transform: translateY(-5px);
@@ -63,29 +63,29 @@
   .trust-signals-section {
     padding: 2.5rem 0;
   }
-  
+
   .trust-stat {
     padding: 0.75rem 0.5rem;
     /* 2x2 grid on mobile */
     flex: 0 0 50%;
     max-width: 50%;
   }
-  
+
   .trust-stat-inner {
     padding: 1rem;
     text-align: center;
   }
-  
+
   .trust-icon {
     font-size: 1.75rem;
     margin-bottom: 0.5rem;
   }
-  
+
   .trust-number {
     font-size: 1.5rem;
     margin-bottom: 0.25rem;
   }
-  
+
   .trust-label {
     font-size: 0.7rem;
     letter-spacing: 0.05em;
@@ -97,23 +97,23 @@
   .trust-signals-section {
     padding: 2rem 0.5rem;
   }
-  
+
   .trust-stat {
     padding: 0.5rem;
   }
-  
+
   .trust-stat-inner {
     padding: 0.75rem 0.5rem;
   }
-  
+
   .trust-icon {
     font-size: 1.5rem;
   }
-  
+
   .trust-number {
     font-size: 1.35rem;
   }
-  
+
   .trust-label {
     font-size: 0.65rem;
   }

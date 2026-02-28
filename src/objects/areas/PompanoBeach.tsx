@@ -1,4 +1,5 @@
-import { Area } from "../../models/areas/Area";
+import {Area} from "../../models/areas/Area";
+
 export default function PompanoBeach() {
     const PompanoBeachObject = new Area("pompano-beach");
     PompanoBeachObject.titulo = {

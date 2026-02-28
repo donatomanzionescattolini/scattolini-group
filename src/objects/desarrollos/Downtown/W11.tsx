@@ -1,5 +1,6 @@
 ﻿import Downtown from "../../areas/Downtown.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+
 export default function W11() {
     const W11Object = new Desarrollo();
     W11Object.banner = true;

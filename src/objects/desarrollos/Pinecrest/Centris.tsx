@@ -1,5 +1,6 @@
 ﻿import Pinecrest from "../../areas/Pinecrest.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+
 export default function Centris() {
     const CentrisObject = new Desarrollo();
     CentrisObject.banner = true;

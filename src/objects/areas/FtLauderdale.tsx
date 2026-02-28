@@ -1,4 +1,4 @@
-import { AreaDto } from "../../models/areas/Area.tsx";
+import {AreaDto} from "../../models/areas/Area.tsx";
 
 export default function FtLauderdale() {
     const FtLauderdaleObject = AreaDto("ft-lauderdale");
@@ -20,7 +20,7 @@ export default function FtLauderdale() {
         es: "Venecia de América",
         en: "Venice of America"
     };
-    
+
     return FtLauderdaleObject;
-  
+
 }

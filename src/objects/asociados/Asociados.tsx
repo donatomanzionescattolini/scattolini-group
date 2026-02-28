@@ -5,9 +5,9 @@ const dania = new Asociado("Dania", "Scattolini", "🏘️ Agente y Office Manag
 const laila = new Asociado("Laila", "Saade", "🏠 Agente");
 const veru = new Asociado("Veruschka", "Jaimes", "🏠 Agente");
 const monica = new Asociado(
-  "Mónica",
-  "Manzione",
-  "🏘️ Agente y Property Manager"
+    "Mónica",
+    "Manzione",
+    "🏘️ Agente y Property Manager"
 );
 
 const carmen = new Asociado("Carmen", "Herrera", "🏠 Agente");
@@ -23,24 +23,24 @@ const daniaDominguez = new Asociado("Dania Dominguez", "", "🏠 Agente");
 const shere = new Asociado("Sherezade", "Vacas", "🏠 Agente");
 const lauraMartinez = new Asociado("Laura", "Martínez", "🏠 Agente");
 const asociados = [
-  elda,
-  laila,
-  veru,
-lauraMartinez,
-  dania,
-  monica,
+    elda,
+    laila,
+    veru,
+    lauraMartinez,
+    dania,
+    monica,
 
-  carmen,
-  mariolga,
-  dayana,
-  robinson,
-  victoria,
-  gabriela,
-  daniaDominguez,
-  anahid,
-  shere
+    carmen,
+    mariolga,
+    dayana,
+    robinson,
+    victoria,
+    gabriela,
+    daniaDominguez,
+    anahid,
+    shere
 ];
 
 export default function Asociados() {
-  return asociados;
+    return asociados;
 }

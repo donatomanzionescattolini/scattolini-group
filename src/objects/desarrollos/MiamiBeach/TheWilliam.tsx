@@ -10,12 +10,13 @@ export default function TheWilliam(lang: "en" | "es" = "es") {
         en: "The William | North Miami Beach"
     };
     TheWilliamObject.slogan = {
-        es: <div className={"text-muted text-md-center font-style-italic font-variant-smallcaps"}>Todo Miami<br/>Perfectamente A
+        es: <div className={"text-muted text-md-center font-style-italic font-variant-smallcaps"}>Todo Miami<br/>Perfectamente
+            A
             Tu Alcance</div>,
         en: <div className={"text-muted text-md-center font-style-italic font-variant-smallcaps"}>All of Miami<br/>Perfectly
             Within Your Reach</div>
     };
-    TheWilliamObject.introduccion = lang === "en" 
+    TheWilliamObject.introduccion = lang === "en"
         ? ["The William is an elegant 26-story residence located in one of the city's best-connected districts. With an ideal location near top-tier shops and restaurants, pristine Atlantic beaches, waterways, shopping centers, airports, sports stadiums, and cultural events, it offers a lifestyle of comfort and prestige. Each home offers captivating sunrise and sunset views, while its carefully designed amenities provide spaces for enjoyment and family connection. Just minutes from the stunning Sunny Isles coast, this location represents modern living in a privileged setting."]
         : ["The William es una elegante residencia de 26 pisos, ubicada en uno de los distritos mejor conectados de la ciudad. Con una ubicación ideal cerca de tiendas y restaurantes de primer nivel, playas vírgenes del Atlántico, canales, centros comerciales, aeropuertos, estadios deportivos y eventos culturales, ofrece un estilo de vida de comodidad y prestigio. Cada casa ofrece cautivadoras vistas del amanecer y el atardecer, mientras que sus comodidades cuidadosamente diseñadas brindan espacios para el disfrute y la conexión familiar. A solo minutos de la impresionante costa de Sunny Isles, esta ubicación representa la vida moderna en un entorno privilegiado."];
 
@@ -91,7 +92,7 @@ export default function TheWilliam(lang: "en" | "es" = "es") {
                 <li>{lang === "en" ? "Reception with professional staff and concierge" : "Recepción con personal profesional y concierge"}</li>
 
                 <li>{lang === "en" ? "24-hour security" : "Seguridad las 24 horas del día"}</li>
-                <li>{lang === "en" 
+                <li>{lang === "en"
                     ? "At The William, you have total freedom to express your style, follow your instincts, spend time with the people who matter most to you, and know that you're exactly where you need to be."
                     : "En The William, tienes la total libertad para expresar tu estilo, seguir tus instintos, pasar tiempo con las personas que más te importan y saber que estás exactamente donde tienes que estar."}
                 </li>

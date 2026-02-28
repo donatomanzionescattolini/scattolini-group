@@ -1,25 +1,18 @@
-import {
-    Card,
-    CardBody,
-    CardGroup,
-    CardHeader,
-    CardLink,
-    CardText,
-    CardTitle,
-}     from  "react-bootstrap";
-import { useTranslation } from "../i18n.tsx";      
+import {Card, CardBody, CardGroup, CardHeader, CardLink, CardText, CardTitle,} from "react-bootstrap";
+import {useTranslation} from "../i18n.tsx";
+
 export default function Servicios() {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     return (
         <>
-       {innerWidth <= 560 && <><br></br><br></br></>}
-        <br></br>
+            {innerWidth <= 560 && <><br></br><br></br></>}
+            <br></br>
             <h2 className="text-center mt-5">{t("pages.services.title")}</h2>
             <hr className="hr hr-blurry w-50 mx-auto"/>
 
             <br/>
 
-            <CardGroup className="text-center" style={{ "textTransform": "capitalize"}}>
+            <CardGroup className="text-center" style={{"textTransform": "capitalize"}}>
                 <Card className="m-xs-0 m-sm-0 m-md-2 m-lg-2 m-xl-2">
                     <CardHeader>
                         <CardTitle>
@@ -34,7 +27,7 @@ export default function Servicios() {
                         <CardLink
                             href="/contacto"
                             className="btn btn-outline-secondary btn-outline-secondary"
-                            
+
                         >
                             {t("pages.services.moreInfo")}
                         </CardLink>

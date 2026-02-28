@@ -1,5 +1,6 @@
 ﻿import CoconutGrove from "../../areas/CoconutGrove.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+
 export default function Vita() {
     const VitaObject = new Desarrollo();
 

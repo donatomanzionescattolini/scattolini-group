@@ -4,7 +4,8 @@ This guide explains how to internationalize the development files in `/src/objec
 
 ## Overview
 
-The internationalization system allows development properties to display content in both Spanish and English based on the user's language preference.
+The internationalization system allows development properties to display content in both Spanish and English based on
+the user's language preference.
 
 ## Files Added
 
@@ -120,6 +121,7 @@ export default function YourDevelopment() {
 ## Development Key Naming
 
 Use the development name as the key:
+
 - Remove spaces and hyphens
 - Convert to lowercase
 - Example:"latest"

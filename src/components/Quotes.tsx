@@ -1,13 +1,13 @@
 import Quote from "../models/Quote";
 import {Carousel, CarouselItem} from "react-bootstrap";
-import { useTranslation } from "../i18n.tsx";
+import {useTranslation} from "../i18n.tsx";
 
 interface Props {
     quotes: Quote[];
 }
 
 export default function Quotes(props: Props) {
-    const { lang } = useTranslation();
+    const {lang} = useTranslation();
     const getLocalized = (field: string | Record<string, string> | undefined) => {
         if (!field) return "";
         const isPlaceholder = (value: unknown) =>
@@ -38,7 +38,7 @@ export default function Quotes(props: Props) {
         >
             {props.quotes.map((quote: Quote, idx: number) => (
                 <CarouselItem key={`quote-${idx}`}>
-      {innerWidth <= 560 && <><br></br><br></br></>}
+                    {innerWidth <= 560 && <><br></br><br></br></>}
 
                     <blockquote className="blockquote overflow-visible" style={{overflow: "visible!important"}}>
                         <p style={{
@@ -48,7 +48,7 @@ export default function Quotes(props: Props) {
                         <footer className="blockquote-footer">
                             <cite title="Source title">{quote.author}</cite>
                         </footer>
-        {innerWidth <= 560 && <><br></br><br></br></>}
+                        {innerWidth <= 560 && <><br></br><br></br></>}
 
                     </blockquote>
                 </CarouselItem>

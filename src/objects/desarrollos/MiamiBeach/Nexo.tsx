@@ -14,11 +14,11 @@ export default function Nexo(lang: "en" | "es" = "es") {
     };
     NexoObject.banner = true;
     NexoObject.area = MiamiBeach();
-    NexoObject.estimatedCompletionYear=2025;
-    NexoObject.numberOfUnits=254;
+    NexoObject.estimatedCompletionYear = 2025;
+    NexoObject.numberOfUnits = 254;
     NexoObject.typeOfUnits = lang === "en" ? "Studio Residences" : "Residencias de Estudios";
-    NexoObject.numberOfRooms={start: 1, end: 4};
-    NexoObject.ubicación="13899 Biscayne Blvd, North Miami Beach, FL 33181, Estados Unidos";
+    NexoObject.numberOfRooms = {start: 1, end: 4};
+    NexoObject.ubicación = "13899 Biscayne Blvd, North Miami Beach, FL 33181, Estados Unidos";
     NexoObject.introduccion = [lang === "en"
         ? "Nexo Residences is designed for the elite, with its unique modern architecture and sophisticated interior finishes, the building features effortless beauty. It features an unrestricted rental program, allowing residents to maximize their investment with famous platforms for short-term, seasonal, and long-term stays such as AirBnB. The building's architect is the award-winning firm Frankel Benayoun Architects Inc. Interior design and landscaping were conceived by Urban Robot. Its luxurious 254 residences, ranging from studios to 4-bedroom options, also feature stunning city views. Nexo North Miami Beach includes all amenities, from a resort-style pool with towel service to a high-tech fitness center. The building's convenient location allows proximity to downtown Miami and Aventura, Sunny Isles, and more."
         : "Nexo Residences está diseñado para la élite, con su arquitectura moderna única y sus sofisticados acabados interiores, el edificio cuenta con una belleza sin esfuerzo. Cuenta con el programa de alquiler sin restricciones, lo que permite a sus residentes maximizar la inversión con plataformas famosas para estadías a corto plazo, estacionales y a largo plazo como AirBnB. El arquitecto del edificio es la galardonada firma Frankel Benayoun Architects Inc. El diseño interior y el paisajismo fueron concebidos por Urban Robot. Sus lujosas 254 residencias, que van desde estudios hasta opciones de 4 dormitorios, también cuentan con impresionantes vistas de la ciudad. Nexo North Miami Beach incluye todas las comodidades, desde una piscina estilo centro turístico con servicio de toallas hasta un gimnasio de alta tecnología. La conveniente ubicación del edificio permite la proximidad al centro de Miami y Aventura, Sunny Isles y más."];
@@ -104,9 +104,18 @@ export default function Nexo(lang: "en" | "es" = "es") {
         "Cocinas de verano con barbacoa y zona de estar",
         "Cubierta de observatorio al aire libre con vistas de 360º"
     ];
-    NexoObject.caracteristicas={edificio:NexoObject.displayCaracteristicasEdificio(),residencias:NexoObject.displayCaracteristicasResidencias(),amenidades:NexoObject.displayAmenidades()};;
-    NexoObject.banner=true;
-    NexoObject.video=<iframe width="500" height="300" className="object-fit-cover" src="https://www.youtube.com/embed/E9S3zVDO1vsautoplay=1"  title="Nexo Residences - North Miami Beach (2024) por Julieta Lepre" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>;
-    NexoObject.numberOfImages=41;
+    NexoObject.caracteristicas = {
+        edificio: NexoObject.displayCaracteristicasEdificio(),
+        residencias: NexoObject.displayCaracteristicasResidencias(),
+        amenidades: NexoObject.displayAmenidades()
+    };
+    ;
+    NexoObject.banner = true;
+    NexoObject.video = <iframe width="500" height="300" className="object-fit-cover"
+                               src="https://www.youtube.com/embed/E9S3zVDO1vsautoplay=1"
+                               title="Nexo Residences - North Miami Beach (2024) por Julieta Lepre"
+                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                               allowFullScreen></iframe>;
+    NexoObject.numberOfImages = 41;
     return NexoObject;
 }

@@ -1,5 +1,4 @@
-import { Area } from "../../models/areas/Area";
-
+import {Area} from "../../models/areas/Area";
 
 
 export default function Aventura() {
@@ -26,7 +25,6 @@ export default function Aventura() {
     };
     AventuraObject.name = "aventura";
     return AventuraObject;
-
 
 
 }

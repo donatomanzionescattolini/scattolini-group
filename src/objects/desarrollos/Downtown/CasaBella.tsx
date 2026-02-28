@@ -1,8 +1,10 @@
-﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
+﻿import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
-import React from "react";export default function CasaBella(lang: "en" | "es" = "es") {
-    const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n("casa-bella", lang);
+import React from "react";
+
+export default function CasaBella(lang: "en" | "es" = "es") {
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("casa-bella", lang);
     const CasaBellaObject: Desarrollo = new Desarrollo();
 
     CasaBellaObject.banner = getLocalizedField("banner", "true") === "true";

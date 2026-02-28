@@ -4,7 +4,7 @@ import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
 
 const TulaResidences = new Desarrollo(NorthBayVillage());
 TulaResidences.nombre = "tula-residences";
-TulaResidences.titulo="Tula Residences";
+TulaResidences.titulo = "Tula Residences";
 TulaResidences.banner = true;
 TulaResidences.introduccion = ["Tula Residences Miami es un condominio frente al mar de lujo de 21 pisos, con 54 residencias en total, incluyendo seis Ã¡ticos Ãºnicos. Su arquitectura contemporÃ¡nea combina la simetrÃ­a con la individualidad. Mejorando el paisaje panorÃ¡mico de la BahÃ­a de Biscayne, la exuberante vegetación circundante crea un ambiente sereno. Las instalaciones de Tula enfatizan la conexión, la exclusividad, la elegancia y el diseño espacioso. A solo un breve paseo de distancia se encuentra Treasure Island Park, un lugar ideal para hacer picnics y ver una variedad de barcos deslizarse por la bahÃ­a."];
 TulaResidences.numberOfImages = 16;
@@ -34,25 +34,29 @@ TulaResidences.caracteristicas = {
         <ul>
 
             <li>Gran entrada en un vestÃ­bulo de diseño llamativo con conserje las 24 horas</li>
-          
-            <li>Piscina de estilo resort con terraza ajardinada y cabañas que ofrecen vistas al amanecer, al atardecer y nocturnas del horizonte de Miami y la BahÃ­a de Biscayne</li>
-          
-            <li>Suite de servicios de sexto piso con vistas panorÃ¡micas y oportunidades interiores / exteriores para el bienestar y la socialización</li>
-          
+
+            <li>Piscina de estilo resort con terraza ajardinada y cabañas que ofrecen vistas al amanecer, al atardecer y
+                nocturnas del horizonte de Miami y la BahÃ­a de Biscayne
+            </li>
+
+            <li>Suite de servicios de sexto piso con vistas panorÃ¡micas y oportunidades interiores / exteriores para el
+                bienestar y la socialización
+            </li>
+
             <li>Gran habitación con chimenea de mÃ¡rmol, ventanas de piso a techo y vistas a la bahÃ­a</li>
-          
+
             <li>Habitación Skyline Club, disponible para reservas privadas</li>
-          
+
             <li>Comedor privado para doce con cocina de calentamiento de chef para eventos atendidos</li>
-          
+
             <li>Gimnasio con 2.100 pies cuadrados de equipo totalmente equipado y de Ãºltima generación</li>
-          
+
             <li>Edificio que admite mascotas con spa dedicado a mascotas</li>
-          
+
             <li>Garaje de estacionamiento sobre el suelo</li>
-          
+
             <li>Sala de paquetes segura</li>
-          
+
             <li>Almacenamiento privado, disponible a un costo adicional</li>
         </ul>
 
@@ -60,7 +64,6 @@ TulaResidences.caracteristicas = {
     residencias: <></>
 
 };
-
 
 
 export default TulaResidences;

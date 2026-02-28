@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import {Route} from "react-router-dom";
 import FourteenRiverDistrictProject from "../../components/desarrollos/Brickell/FourteenRiverDistrictProject";
 import OraProject from "../../components/desarrollos/Brickell/OraProject";
 import FaenaResidencesProject from "../../components/desarrollos/MiamiBeach/FaenaResidencesProject";
@@ -13,19 +13,19 @@ import TheWilliamProject from "../../components/desarrollos/MiamiBeach/TheWillia
 import EllaProject from "../../components/desarrollos/MiamiBeach/EllaProject";
 
 export default function MiamiBeachRoutes() {
-  return (
-    <>
-      <Route element={<FiveParkProject />} path="/desarrollos/five-park" />
-      <Route element={<FaenaResidencesProject />} path="/desarrollos/faena-residences" />
-      <Route element={<SeventyTwoParkProject />} path="/desarrollos/72-park" />
-      <Route element={<OneParkProject />} path="/desarrollos/one-park" />
-      <Route element={<TheWilliamProject />} path="/desarrollos/the-william" />
-      <Route element={<SeventyTwoCarlyleProject />} path="/desarrollos/72-carlyle" />
-      <Route element={<FourteenRiverDistrictProject />} path="/desarrollos/14-river-district" />
-      <Route element={<OraProject />} path="/desarrollos/ora" />
-      <Route element={<EllaProject />} path="/desarrollos/ella" />
-      <Route element={<NexoProject />} path="/desarrollos/nexo" />
-      <Route element={<PalmaProject />} path="/desarrollos/palma" />
-    </>
-  );
+    return (
+        <>
+            <Route element={<FiveParkProject/>} path="/desarrollos/five-park"/>
+            <Route element={<FaenaResidencesProject/>} path="/desarrollos/faena-residences"/>
+            <Route element={<SeventyTwoParkProject/>} path="/desarrollos/72-park"/>
+            <Route element={<OneParkProject/>} path="/desarrollos/one-park"/>
+            <Route element={<TheWilliamProject/>} path="/desarrollos/the-william"/>
+            <Route element={<SeventyTwoCarlyleProject/>} path="/desarrollos/72-carlyle"/>
+            <Route element={<FourteenRiverDistrictProject/>} path="/desarrollos/14-river-district"/>
+            <Route element={<OraProject/>} path="/desarrollos/ora"/>
+            <Route element={<EllaProject/>} path="/desarrollos/ella"/>
+            <Route element={<NexoProject/>} path="/desarrollos/nexo"/>
+            <Route element={<PalmaProject/>} path="/desarrollos/palma"/>
+        </>
+    );
 }

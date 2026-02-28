@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {Carousel} from "react-bootstrap";
-import { useTranslation } from "../../i18n.tsx";
+import {useTranslation} from "../../i18n.tsx";
+
 interface Props {
     name: string;
     numberOfImages: number;
 }
 
 export default function SlideshowGalleryDesarrollo(props: Props) {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     const [name] = useState<string>(props.name);
 
     const returnEls: React.JSX.Element[] = [];
@@ -27,7 +28,13 @@ export default function SlideshowGalleryDesarrollo(props: Props) {
                         paddingInline: "auto",
                     }}
                 >
-                    <picture style={{ width: '100%', height: '500px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <picture style={{
+                        width: '100%',
+                        height: '500px',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    }}>
                         <source
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).JPEG`}
                         />
@@ -41,7 +48,13 @@ export default function SlideshowGalleryDesarrollo(props: Props) {
                             srcSet={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).webp`}
                         />
                         <img
-                            style={{ maxWidth: '100%', maxHeight: '500px', width: 'auto', height: 'auto', objectFit: 'contain' }}
+                            style={{
+                                maxWidth: '100%',
+                                maxHeight: '500px',
+                                width: 'auto',
+                                height: 'auto',
+                                objectFit: 'contain'
+                            }}
                             src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${name}/image-gallery/image (${j}).jpg`}
                             alt={String(t("pages.project.galleryImageAlt")).replace("{index}", String(j))}
                         />

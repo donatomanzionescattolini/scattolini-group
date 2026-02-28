@@ -1,6 +1,6 @@
-import { Area } from "../../models/areas/Area";
-import { desarrolloMap } from "../desarrollos/Desarrollos";
+import {Area} from "../../models/areas/Area";
+import {desarrolloMap} from "../desarrollos/Desarrollos";
 
 export default function Areas() {
-  return [...desarrolloMap.values()].map((x) => x.area) as Area[];
+    return [...desarrolloMap.values()].map((x) => x.area) as Area[];
 }

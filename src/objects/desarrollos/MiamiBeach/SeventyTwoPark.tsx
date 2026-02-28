@@ -24,7 +24,8 @@ export default function SeventyTwoPark(lang: "en" | "es" = "es") {
                 <li>24-hour reception</li>
                 <li>24-hour building security</li>
                 <li>
-                    Advanced smart building technology offers high-speed fiber optic wireless Internet access in all common areas and residences
+                    Advanced smart building technology offers high-speed fiber optic wireless Internet access in all
+                    common areas and residences
                 </li>
                 <li>
                     Prestigious LEED Gold certification, a testament to the commitment to sustainability
@@ -88,25 +89,32 @@ export default function SeventyTwoPark(lang: "en" | "es" = "es") {
                     Ceiling heights range from 9 to 10 feet, creating an atmosphere of grandeur and spaciousness
                 </li>
                 <li>
-                    Floor-to-ceiling glass sliding doors and impact-resistant glass in all residences allow an abundance of natural light while providing a seamless connection to the outside world
+                    Floor-to-ceiling glass sliding doors and impact-resistant glass in all residences allow an abundance
+                    of natural light while providing a seamless connection to the outside world
                 </li>
                 <li>
-                    Advanced smart building technology offering high-speed fiber optic wireless Internet, HDTV, keyless entry to all residences with SALTO and smart access controls, and telephone/data lines
+                    Advanced smart building technology offering high-speed fiber optic wireless Internet, HDTV, keyless
+                    entry to all residences with SALTO and smart access controls, and telephone/data lines
                 </li>
                 <li>
                     Energy-efficient central air conditioning with individual control and heating system
                 </li>
                 <li>
-                    Enjoy a chef's kitchen with a fully integrated European-style appliance package including refrigerator, oven, induction cooktop, speed oven, and dishwasher from Bosch, SMEG, and Fisher & Paykel
+                    Enjoy a chef's kitchen with a fully integrated European-style appliance package including
+                    refrigerator, oven, induction cooktop, speed oven, and dishwasher from Bosch, SMEG, and Fisher &
+                    Paykel
                 </li>
                 <li>
-                    Imported European cabinets with premium hardware, elegant imported quartz countertops, backsplashes, and contemporary stainless steel sink with gourmet faucet and integrated sprayer
+                    Imported European cabinets with premium hardware, elegant imported quartz countertops, backsplashes,
+                    and contemporary stainless steel sink with gourmet faucet and integrated sprayer
                 </li>
                 <li>
-                    Escape to your sanctuary within the bathroom, where imported European cabinets with premium hardware radiate elegance
+                    Escape to your sanctuary within the bathroom, where imported European cabinets with premium hardware
+                    radiate elegance
                 </li>
                 <li>
-                    Imported quartz countertops and backsplashes, custom-finished floors and walls in wet areas, and premium Hansgrohe fixtures, hardware, and accessories create a spa-like environment
+                    Imported quartz countertops and backsplashes, custom-finished floors and walls in wet areas, and
+                    premium Hansgrohe fixtures, hardware, and accessories create a spa-like environment
                 </li>
             </ul>
         ) : (
@@ -172,17 +180,20 @@ export default function SeventyTwoPark(lang: "en" | "es" = "es") {
                     Resort-style pool spanning over 150 feet, accompanied by poolside cabanas
                 </li>
                 <li>
-                    Pool terrace with outdoor bar located under a charming pergola, offering towel service and delicious cocktails
+                    Pool terrace with outdoor bar located under a charming pergola, offering towel service and delicious
+                    cocktails
                 </li>
                 <li>
                     Lush landscaping across nearly a full acre of 5th-floor pool terrace and amenity space
                 </li>
                 <li>
-                    5th-floor restaurant, bar, and lounge (with indoor and outdoor seating), providing pool service and offering captivating ocean views
+                    5th-floor restaurant, bar, and lounge (with indoor and outdoor seating), providing pool service and
+                    offering captivating ocean views
                 </li>
                 <li>24/7 coworking lounge</li>
                 <li>
-                    Distinctive double-height enclosed glazing, fully equipped, state-of-the-art fitness center with Technogym equipment and views of the pool and gardens
+                    Distinctive double-height enclosed glazing, fully equipped, state-of-the-art fitness center with
+                    Technogym equipment and views of the pool and gardens
                 </li>
                 <li>Yoga lounge</li>
                 <li>Children's playroom</li>
@@ -194,10 +205,13 @@ export default function SeventyTwoPark(lang: "en" | "es" = "es") {
                     Access to nearby Miami Beach Tennis Center and Normandy Shores golf club
                 </li>
                 <li>
-                    Use the private golf cart shuttle service for quick beach visits. Borrow children's beach toys, boogie boards, paddle boards, bicycles, and more
+                    Use the private golf cart shuttle service for quick beach visits. Borrow children's beach toys,
+                    boogie boards, paddle boards, bicycles, and more
                 </li>
                 <li>
-                    Owners-only private rooftop features a terrace with panoramic views of the beach, ocean, park, Intracoastal, and Miami skyline, as well as dining areas and grills. Relax in private seating areas, enjoy outdoor movie nights, or gather around the big screen for sporting events
+                    Owners-only private rooftop features a terrace with panoramic views of the beach, ocean, park,
+                    Intracoastal, and Miami skyline, as well as dining areas and grills. Relax in private seating areas,
+                    enjoy outdoor movie nights, or gather around the big screen for sporting events
                 </li>
                 <li>Pet spa on ground floor</li>
             </ul>

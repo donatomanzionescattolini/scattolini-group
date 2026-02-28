@@ -1,7 +1,8 @@
 import React from "react";
 
-const SouthMiamiRoutes = ()=> {
-  return <>
-  </>}
+const SouthMiamiRoutes = () => {
+    return <>
+    </>
+}
 
-  export default SouthMiamiRoutes;
+export default SouthMiamiRoutes;

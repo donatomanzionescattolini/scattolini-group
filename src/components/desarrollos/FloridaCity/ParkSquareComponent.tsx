@@ -2,8 +2,8 @@
 import ParkSquare from "../../../objects/desarrollos/FloridaCity/ParkSquare";
 
 export default function ParkSquareComponent() {
-  return (
-    <ProjectTemplate desarrollo={ParkSquare}/>
-  )
+    return (
+        <ProjectTemplate desarrollo={ParkSquare}/>
+    )
 }
 

@@ -13,7 +13,8 @@ Real estate website for Scattolini Group featuring property developments and are
 
 ## New: Authentication & Editor System
 
-This project now includes a secure content management system for authorized users to edit property and area information through a user-friendly interface.
+This project now includes a secure content management system for authorized users to edit property and area information
+through a user-friendly interface.
 
 ### Quick Links
 
@@ -43,21 +44,24 @@ This project now includes a secure content management system for authorized user
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/donatomanzionescattolini/scattolini-group.git
 cd scattolini-group
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install --legacy-peer-deps
 ```
 
 3. (Optional) For editor functionality, set up Firebase:
-   - Follow the [Setup Guide](./SETUP_GUIDE.md)
-   - Create `.env` file with Firebase credentials
+    - Follow the [Setup Guide](./SETUP_GUIDE.md)
+    - Create `.env` file with Firebase credentials
 
 4. Start development server:
+
 ```bash
 npm run dev
 ```
@@ -101,8 +105,8 @@ The content editor is available at `/editor` and requires authentication:
 1. Navigate to `/login`
 2. Enter credentials (configured in Firebase)
 3. Access the editor to manage:
-   - Desarrollo objects (property developments)
-   - Area objects (neighborhood information)
+    - Desarrollo objects (property developments)
+    - Area objects (neighborhood information)
 
 For detailed instructions, see the [Testing Guide](./TESTING_GUIDE.md).
 
@@ -124,6 +128,7 @@ VITE_FIREBASE_APP_ID=your_app_id
 For production deployment instructions, see the [Deployment Guide](./DEPLOYMENT_GUIDE.md).
 
 The application can be deployed to:
+
 - Vercel (recommended for Vite apps)
 - Firebase Hosting
 - Any static hosting service

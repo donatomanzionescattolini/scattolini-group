@@ -59,16 +59,19 @@ service cloud.firestore {
 ## Deployment to Vercel
 
 ### 1. Install Vercel CLI
+
 ```bash
 npm install -g vercel
 ```
 
 ### 2. Login to Vercel
+
 ```bash
 vercel login
 ```
 
 ### 3. Configure Environment Variables
+
 ```bash
 vercel env add VITE_FIREBASE_API_KEY
 vercel env add VITE_FIREBASE_AUTH_DOMAIN
@@ -79,11 +82,13 @@ vercel env add VITE_FIREBASE_APP_ID
 ```
 
 When prompted, enter the values for:
+
 - Production environment
 - Preview environment (optional)
 - Development environment (optional)
 
 ### 4. Deploy
+
 ```bash
 vercel --prod
 ```
@@ -91,18 +96,21 @@ vercel --prod
 ## Deployment to Firebase Hosting
 
 ### 1. Initialize Firebase Hosting
+
 ```bash
 firebase login
 firebase init hosting
 ```
 
 When prompted:
+
 - Select your Firebase project
 - Set public directory: `dist`
 - Configure as single-page app: Yes
 - Set up automatic builds: No
 
 ### 2. Create firebase.json
+
 ```json
 {
   "hosting": {
@@ -134,6 +142,7 @@ When prompted:
 ```
 
 ### 3. Build and Deploy
+
 ```bash
 # Build the project with environment variables
 npm run build
@@ -142,7 +151,8 @@ npm run build
 firebase deploy --only hosting
 ```
 
-**Note**: For Firebase Hosting, environment variables must be set during build time. You can use a `.env.production` file:
+**Note**: For Firebase Hosting, environment variables must be set during build time. You can use a `.env.production`
+file:
 
 ```bash
 # .env.production (DO NOT COMMIT)
@@ -154,11 +164,13 @@ VITE_FIREBASE_AUTH_DOMAIN=...
 ## Post-Deployment Checklist
 
 ### 1. Verify Firebase Configuration
+
 - [ ] Firestore security rules are published
 - [ ] Authentication Email/Password provider is enabled
 - [ ] Admin users are created in Firebase Console
 
 ### 2. Test Production Site
+
 - [ ] Public pages load correctly (/, /desarrollos, /areas)
 - [ ] /login page loads
 - [ ] /editor redirects to /login when not authenticated
@@ -169,12 +181,14 @@ VITE_FIREBASE_AUTH_DOMAIN=...
 - [ ] Logout works correctly
 
 ### 3. Security Checks
+
 - [ ] No sensitive credentials in client-side code
 - [ ] Firebase credentials in environment variables only
 - [ ] Firestore rules allow public read, authenticated write
 - [ ] Only intended users have access to Firebase Authentication
 
 ### 4. Performance Checks
+
 - [ ] Page load time < 3 seconds
 - [ ] Images load efficiently
 - [ ] No console errors in browser
@@ -183,6 +197,7 @@ VITE_FIREBASE_AUTH_DOMAIN=...
 ## Managing Users
 
 ### Add a New Editor User
+
 1. Go to Firebase Console > Authentication > Users
 2. Click "Add user"
 3. Enter email and password
@@ -190,6 +205,7 @@ VITE_FIREBASE_AUTH_DOMAIN=...
 5. Share credentials securely with the new user
 
 ### Remove User Access
+
 1. Go to Firebase Console > Authentication > Users
 2. Find the user
 3. Click the three dots menu
@@ -198,19 +214,23 @@ VITE_FIREBASE_AUTH_DOMAIN=...
 ## Monitoring and Maintenance
 
 ### View Authentication Activity
+
 - Firebase Console > Authentication > Users
 - Shows recent sign-ins and user activity
 
 ### View Firestore Data
+
 - Firebase Console > Firestore Database
 - Browse collections: `desarrollos` and `areas`
 - Can manually edit or delete documents if needed
 
 ### Monitor Errors
+
 - Firebase Console > Crashlytics (if configured)
 - Check browser console for client-side errors
 
 ### Backup Firestore Data
+
 ```bash
 # Install gcloud CLI
 # https://cloud.google.com/sdk/docs/install
@@ -224,6 +244,7 @@ gcloud firestore export gs://[BUCKET_NAME]/[EXPORT_FOLDER]
 If you need to rollback a deployment:
 
 ### Vercel
+
 ```bash
 # List deployments
 vercel list
@@ -233,6 +254,7 @@ vercel promote [deployment-url]
 ```
 
 ### Firebase Hosting
+
 ```bash
 # View previous releases
 firebase hosting:channel:list
@@ -244,19 +266,25 @@ firebase hosting:rollback
 ## Troubleshooting
 
 ### Issue: Users can't save data
+
 **Check**:
+
 1. Firestore security rules allow authenticated writes
 2. User is actually authenticated (check Firebase Console > Authentication)
 3. Browser console for specific error messages
 
 ### Issue: Environment variables not working
-**Solution**: 
+
+**Solution**:
+
 - Ensure all VITE_ prefixed variables are set in hosting platform
 - Rebuild the application after setting env vars
 - For Vite, env vars must be set at build time
 
 ### Issue: Login works locally but not in production
+
 **Check**:
+
 1. Firebase API key is correct for production
 2. Authorized domains include your production domain (Firebase Console > Authentication > Settings > Authorized domains)
 3. Browser console for specific auth errors
