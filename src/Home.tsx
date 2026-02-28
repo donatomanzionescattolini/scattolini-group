@@ -75,7 +75,7 @@ export function Home() {
             <p className="lead" id="hero-subheading">
               {t("hero.subtitle")}
             </p>
-            <p className="hero-tagline">{t("hero.tagline")}</p>
+            {/*<p className="hero-tagline">{t("hero.tagline")}</p>*/}
             <div className="hero-ctas d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
               <a
                 className="btn btn-hero-primary"
@@ -83,8 +83,7 @@ export function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-whatsapp me-2"></i>
-                {t("hero.whatsappCta")}
+                WhatsApp
               </a>
               <a
                 className="btn btn-hero-outline"

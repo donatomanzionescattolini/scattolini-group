@@ -688,10 +688,16 @@ nav {
 }
 
 #quotes .blockquote {
-  height: 100px;
+  height: auto;
+  min-height: 100px;
   color: var(--color-brown);
   font-size: 13px;
   vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
 }
 
 #servicios > div > div {
@@ -1198,7 +1204,8 @@ button,
 
   #quotes .blockquote {
     height: auto;
-    min-height: 80px;
+    min-height: 120px;
+    padding: 20px 0;
   }
 
   /* Footer mobile */

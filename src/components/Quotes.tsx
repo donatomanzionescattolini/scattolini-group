@@ -38,18 +38,11 @@ export default function Quotes(props: Props) {
         >
             {props.quotes.map((quote: Quote, idx: number) => (
                 <CarouselItem key={`quote-${idx}`}>
-                    {innerWidth <= 560 && <><br></br><br></br></>}
-
-                    <blockquote className="blockquote overflow-visible" style={{overflow: "visible!important"}}>
-                        <p style={{
-                            overflow: "scroll!important",
-                            minHeight: "fit-content!important"
-                        }}>{getLocalized(quote.quote)}</p>
+                    <blockquote className="blockquote">
+                        <p>{getLocalized(quote.quote)}</p>
                         <footer className="blockquote-footer">
                             <cite title="Source title">{quote.author}</cite>
                         </footer>
-                        {innerWidth <= 560 && <><br></br><br></br></>}
-
                     </blockquote>
                 </CarouselItem>
             ))}
