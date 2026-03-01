@@ -1,115 +1,43 @@
-﻿import CoralGables from "../../areas/CoralGables.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo";
+import MidtownMiami from "../../areas/MidtownMiami";
+import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-const CoraMerrickPark = new Desarrollo();
-CoraMerrickPark.nombre = "cora-merrick-park";
-
-CoraMerrickPark.titulo = "Cora Merrick Park";
-CoraMerrickPark.ubicación = "4241 Aurora Street, Coral Gables, FL 33146";
-CoraMerrickPark.direccion = "4241 Aurora Street, Coral Gables, FL 33146";
-CoraMerrickPark.area = CoralGables();
-CoraMerrickPark.banner = true;
-CoraMerrickPark.caracteristicas = {
-    edificio: <>
-        <dl>
-            <dt>Dirección</dt>
-            <dd>4241 Aurora Street, Coral Gables, FL 33146</dd>
-            <dt>Año de Finalización</dt>
-            <dd>2028</dd>
-            <dt>Unidades</dt>
-            <dd>74</dd>
-            <dt>Habitaciones</dt>
-            <dd>1 a 3</dd>
-            <dt>Numero de Pisos</dt>
-            <dd>12</dd>
-            <dt>Tipo de Residencia</dt>
-            <dd>Condominio</dd>
-            <dt>Estilo de Residencia</dt>
-            <dd>ContemporÃ¡neo</dd>
-        </dl>
-    </>,
-    residencias: <>
-        <ul>
-            <li>Diseño mediterrÃ¡neo contemporÃ¡neo</li>
-            <li>De una a tres habitaciones con residencias de estudio, que van desde 678 a 2,651 pies cuadrados</li>
-            <li>Combinaciones de unidades flexibles disponibles para crear espacios habitables mÃ¡s grandes y
-                personalizados
-            </li>
-            <li>Alturas de techo de 10'</li>
-            <li>Diseños llenos de luz con ventanas del piso al techo</li>
-            <li>Amplios balcones privados</li>
-            <li>Espaciosas terrazas, hasta 1,118 pies cuadrados, disponibles
-                en planos de planta selectos
-            </li>
-            <li>Sistemas avanzados de purificación de aire y agua</li>
-            <li>Encimeras de piedra con accesorios de diseñador</li>
-            <li>Amplias islas de cocina</li>
-            <li>Gabinetes italianos de diseño</li>
-            <li>Conjunto de electrodomésticos Sub-Zero/Wolf</li>
-            <li>Sofisticados suelos de piedra en toda la vivienda</li>
-            <li>Armarios de diseñador terminados</li>
-            <li>La terapia de luz roja incorporada en
-                Baños principales para mejorar el bienestar
-            </li>
-        </ul>
-    </>,
-    amenidades: <>
-        <ul>
-            <li>La primera pista de pÃ¡del de Coral Gable</li>
-            <li>Spa con sauna, baño de vapor y baño de agua frÃ­a y caliente</li>
-            <li>Gimnasio de Ãºltima generación</li>
-            <li>
-                Terraza con piscina al aire libre que incluye cabañas privadas y
-                cocina al aire libre
-            </li>
-            <li>Terraza de yoga</li>
-            <li>Salones de coworking</li>
-            <li>Sala de conferencias</li>
-            <li>Salas de estar con cocina interior</li>
-            <li>Salón de té</li>
-            <li>Guardabicicletas</li>
-            <li>Sala de conferencias</li>
-            <li>Gimnasio con equipo de bienestar y recuperación</li>
-            <li>Gran vestÃ­bulo</li>
-            <li>Parque exuberante de 5,000 pies cuadrados</li>
-            <li>Cora busca obtener la Certificación de Construcción WELL</li>
-            <li>Sistemas avanzados de purificación de aire y agua</li>
-            <li>
-                El diseño biofÃ­lico de Arquitectonica integra la naturaleza y los
-                materiales naturales, inspirando comunidad y movimiento
-            </li>
-            <li>
-                El diseño acÃºstico de Cora promueve la comodidad y la tranquilidad,
-                reduciendo el ruido y mejorando la productividad
-            </li>
-            <li>
-                La innovadora tecnologÃ­a de iluminación maximiza la luz natural y
-                proporciona una iluminación equilibrada para espacios vibrantes y bien
-                iluminados
-            </li>
-            <li>
-                Cora Materiales no tóxicos con pinturas, recubrimientos y selladores
-                con bajo contenido de COV para mejorar la calidad del aire y reducir
-                la exposición a toxinas
-            </li>
-            <li>
-                {" "}
-                Los productos de bienestar seleccionados en todas las Ã¡reas comunes
-                respaldan las elecciones saludables
-            </li>
-            <li>
-                TecnologÃ­a de monitoreo de salud en el hogar inteligente de vanguardia
-            </li>
-        </ul>
-    </>
-};
-CoraMerrickPark.numberOfImages = 45;
-CoraMerrickPark.introduccion = [
-    "Cora Merrick Park es un condominio residencial de lujo. Su fachada presenta acentos clÃ¡sicos de bronce, estuco texturizado y piedra oolita combinados con elegantes columnas tradicionales. Cora ofrece solo 12 pisos con 74 residencias sÃºper exclusivas de 1 a 3 recÃ¡maras, con acabados espectaculares y apartamentos totalmente amueblados diseñados por el famoso Robot Urbano. Las comodidades de primera lÃ­nea proporcionarÃ¡n una piscina, gimnasio, sauna, sala club, centro de negocios, Ã¡reas sociales y mucho mÃ¡s. Los residentes de Cora estÃ¡n perfectamente conectados con las tiendas en Merrick Park, restaurantes al aire libre y opciones de bienestar.",
-];
-CoraMerrickPark.numberOfFloors = 12;
-CoraMerrickPark.numberOfUnits = 74;
-CoraMerrickPark.estimatedCompletionYear = 2028;
-CoraMerrickPark.numberOfRooms = "1 a 3";
-CoraMerrickPark.slogan = <p>Estilo Boutique<br/>de lujo y serenidad</p>;
-export default CoraMerrickPark;
+export default function coramerrickpark(lang: "en" | "es" = "es") {
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("cora-merrick-park", lang);
+    const d = new Desarrollo(MidtownMiami());
+    d.titulo = getLocalizedField("titulo", "Cora Merrick Park");
+    d.nombre = "cora-merrick-park";
+    d.introduccion = getLocalizedArray("introduccion", ["Cora Merrick Park redefine la vida urbana en el prestigioso Coral Gables. A pasos de las exclusivas tiendas y restaurantes de Merrick Park, este desarrollo ofrece un estilo de vida sofisticado y conveniente. Con una arquitectura mediterránea contemporánea y acabados de lujo, Cora es el lugar perfecto para quienes buscan elegancia y modernidad."]);
+    d.slogan = getLocalizedField("slogan", "Estilo de Vida Sofisticado en Coral Gables");
+    d.typeOfUnits = getLocalizedField("typeOfUnits", "1, 2 y 3 habitaciones");
+    d.caracteristicas = {
+        edificio: (
+            <>
+                <dl>
+                    <dt>{getLocalizedField("caracteristicas.edificio.apertura", "Año de apertura")}</dt>
+                    <dd>{d.estimatedCompletionYear}</dd>
+                    <dt>{getLocalizedField("caracteristicas.edificio.pisos", "Número de pisos")}</dt>
+                    <dd>{d.numberOfFloors}</dd>
+                    <dt>{getLocalizedField("caracteristicas.edificio.unidades", "Número de unidades")}</dt>
+                    <dd>{d.numberOfUnits}</dd>
+                    <dt>{getLocalizedField("caracteristicas.edificio.tipo", "Tipo de unidades")}</dt>
+                    <dd>{d.typeOfUnits}</dd>
+                    <dt>{getLocalizedField("caracteristicas.edificio.ubicacion", "ubicacion")}</dt>
+                    <dd>{d.ubicacion}</dd>
+                </dl>
+            </>
+        ),
+        residencias: (
+            <ul>
+                {getLocalizedArray("caracteristicas.residencias.items", ["Pisos de porcelanato de alta calidad", "Cocinas modernas con gabinetes europeos y encimeras de cuarzo", "Electrodomésticos de acero inoxidable Bosch", "Techos de 9 pies de altura", "Balcones privados con vistas a Coral Gables"]).map((item, idx) => <li key={idx}>{item}</li>)}
+            </ul>
+        ),
+        amenidades: (
+            <ul>
+                {getLocalizedArray("caracteristicas.amenidades.items", ["Piscina estilo resort con solárium", "Gimnasio de última generación", "Sala club y espacio de entretenimiento", "Seguridad las 24 horas y acceso controlado", "Ubicación privilegiada junto a Merrick Park"]).map((item, idx) => <li key={idx}>{item}</li>)}
+            </ul>
+        ),
+    };
+    d.banner = true;
+    return d;
+}

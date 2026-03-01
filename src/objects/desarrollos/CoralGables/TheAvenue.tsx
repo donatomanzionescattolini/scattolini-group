@@ -18,7 +18,7 @@ export default function TheAvenue(lang: "en" | "es" = "es") {
                             Unidos
                         </address>
                     </dd>
-                    <dt>NÃºmero de Pisos</dt>
+                    <dt>Número de Pisos</dt>
                     <dd>Edificio boutique de lujo de 8 pisos</dd>
                     <dt>Unidades</dt>
                     <dd>
@@ -46,10 +46,10 @@ export default function TheAvenue(lang: "en" | "es" = "es") {
                     <li>Los dormitorios principales cuentan con baños en suite</li>
                     <li>Terrazas privadas en todas las residencias</li>
                     <li>
-                        Armarios seguros para el propietario para artÃ­culos personales
+                        Armarios seguros para el propietario para artículos personales
                     </li>
                     <li>
-                        Listo para el hogar inteligente, cableado para HDTV, lÃ­neas de
+                        Listo para el hogar inteligente, cableado para HDTV, líneas de
                         datos e Internet de fibra
                     </li>
                     <li>
@@ -61,7 +61,7 @@ export default function TheAvenue(lang: "en" | "es" = "es") {
                         refrigeradores y estufas Wolf; y gabinetes italianos importados
                         con herrajes de primera calidad
                     </li>
-                    <li>GriferÃ­a y accesorios de baño premium de estilo europeo</li>
+                    <li>Grifería y accesorios de baño premium de estilo europeo</li>
                 </ul>
             </>
         ),
@@ -69,7 +69,7 @@ export default function TheAvenue(lang: "en" | "es" = "es") {
             <>
                 <ul>
                     <li>
-                        Recepción 24 horas, servicio de aparcacoches, conserjerÃ­a y
+                        Recepción 24 horas, servicio de aparcacoches, conserjería y
                         seguridad
                     </li>
                     <li>
@@ -79,14 +79,14 @@ export default function TheAvenue(lang: "en" | "es" = "es") {
                         Oficina de gestión de alquileres a corto plazo en el lugar
                     </li>
                     <li>
-                        WiFi de fibra óptica ultrarrÃ¡pida en todas las zonas comunes
+                        WiFi de fibra óptica ultrarrápida en todas las zonas comunes
                     </li>
                     <li>
-                        Terraza de piscina ajardinada estilo centro turÃ­stico en el
+                        Terraza de piscina ajardinada estilo centro turístico en el
                         nivel 9
                     </li>
                     <li>Tumbonas y tumbonas junto a la piscina</li>
-                    <li>JardÃ­n de hamacas</li>
+                    <li>Jardín de hamacas</li>
                     <li>Ducha de lluvia al aire libre</li>
                     <li>Cocinas de verano y comedor familiar</li>
                     <li>Vistas despejadas de 360 grados de Coral Gables</li>
@@ -95,9 +95,9 @@ export default function TheAvenue(lang: "en" | "es" = "es") {
         ),
     };
     TheAvenueObject.introduccion = getLocalizedArray("introduccion", [
-        "Creado por el estudio de arquitectura lÃ­der Bermello Ajamil & Partners, The Avenue cobra vida con un diseño inspirado en el clasicismo mediterrÃ¡neo. Descubra un edificio esculpido y atemporal que encajarÃ¡ perfectamente en The City Beautiful mientras se destaca como una dirección emblemÃ¡tica",
+        "Creado por el estudio de arquitectura líder Bermello Ajamil & Partners, The Avenue cobra vida con un diseño inspirado en el clasicismo mediterráneo. Descubra un edificio esculpido y atemporal que encajará perfectamente en The City Beautiful mientras se destaca como una dirección emblemática",
 
-        "Cada residencia se completa con acabados de buen gusto y muebles y decoración seleccionados por expertos de Adriana Hoyos Design Studio. Después de redefinir el lujo tropical durante casi tres décadas, el equipo ahora dejarÃ¡ su huella en la mejor dirección de Coral Gables",
+        "Cada residencia se completa con acabados de buen gusto y muebles y decoración seleccionados por expertos de Adriana Hoyos Design Studio. Después de redefinir el lujo tropical durante casi tres décadas, el equipo ahora dejará su huella en la mejor dirección de Coral Gables",
 
         'Todos los partidos. Todos los acabados. Cada mueble. The Avenue es lo que significa estar verdaderamente "listo para mudarse".',
     ]);

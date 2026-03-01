@@ -23,7 +23,7 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                 <strong>Todas las Residencias</strong>
                 <br/>
                 <li>
-                    Las torres gemelas frente al mar mÃ¡s altas de Estados Unidos.
+                    Las torres gemelas frente al mar más altas de Estados Unidos.
                 </li>
                 <li>
                     Residencias de 1 a 4 dormitorios con oficina en casa que van desde
@@ -31,7 +31,7 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                 </li>
                 <li>
                     Cada residencia cuenta con ventanas de piso a techo con vistas
-                    directas a la bahÃ­a y al océano." ";
+                    directas a la bahía y al océano." ";
                 </li>
                 <li>Todas las residencias cuentan con habitaciones con baño.</li>
                 <li>
@@ -39,7 +39,7 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                 </li>
 
                 <br/>
-                <strong>Residencias PanorÃ¡micasPisos 3 al 50</strong>
+                <strong>Residencias PanorámicasPisos 3 al 50</strong>
                 <br/>
                 <li>Amplios diseños abiertos con techos de 10 pies</li>
                 <br/>
@@ -48,11 +48,11 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                 <li>Amplios diseños abiertos con techos de 11 pies.</li>
                 <li>Dos ascensores de alta velocidad.</li>
                 <li>
-                    Amplias terrazas con vista a la BahÃ­a de Biscayne que conectan con
-                    las Ã¡reas de estar y con el suite principal
+                    Amplias terrazas con vista a la Bahía de Biscayne que conectan con
+                    las áreas de estar y con el suite principal
                 </li>
                 <li>
-                    Diseño fluido Ãºnico que brinda a cada residencia vistas al mar
+                    Diseño fluido único que brinda a cada residencia vistas al mar
                     orientadas al este también como vistas del atardecer orientadas al
                     oeste desde los dormitorios.
                 </li>
@@ -61,30 +61,30 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                     estudio o sala multimedia." ";
                 </li>
 
-                <li>Incluye bóvedas de garaje privadas Ãºnicas para 2+3 coches</li>
+                <li>Incluye bóvedas de garaje privadas únicas para 2+3 coches</li>
             </ul>
         ),
         amenidades: (
             <>
                 <ul>
                     <br/>
-                    <strong>Nivel de la BahÃ­a</strong>
+                    <strong>Nivel de la Bahía</strong>
                     <br/>
                     <li>
-                        Puerto Deportivo AcuÃ¡tico con Servicio de Kayak y Paddle Board
+                        Puerto Deportivo Acuático con Servicio de Kayak y Paddle Board
                     </li>
                     <li>y almacenamiento</li>
                     <li>Acceso a Baywalk a lo largo del agua</li>
-                    <li>Restaurante con vistas a la bahÃ­a</li>
-                    <li>Café con vistas a la bahÃ­a y terrazas al aire libre</li>
+                    <li>Restaurante con vistas a la bahía</li>
+                    <li>Café con vistas a la bahía y terrazas al aire libre</li>
                     <li>Servicios de valet parking</li>
                     <li>Conserje personal y recepcionista las 24 horas</li>
                     <li>Sala de paquetes para entregas</li>
                     <li>Pozo de fuego</li>
                     <li>Piscina lounge</li>
-                    <li>Zonas de solÃ¡rium</li>
+                    <li>Zonas de solárium</li>
                     <li>Spa con hidromasaje y terraza solarium privada</li>
-                    <li>JardÃ­n de meditación</li>
+                    <li>Jardín de meditación</li>
                     <li>
                         Servicio de tabla de paddle surf con guarda y acceso a privado
                     </li>
@@ -93,11 +93,11 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                     <li>Zona del observatorio del telescopio</li>
                     <li>Parque para perros</li>
                     <br/>
-                    <strong>VestÃ­bulo del Cielo</strong>
+                    <strong>Vestíbulo del Cielo</strong>
                     <br/>
                     <li>Sala de estar exclusiva para adultos con exterior</li>
-                    <li>terraza con vistas a la bahÃ­a</li>
-                    <li>Ascensor y vestÃ­bulo privados</li>
+                    <li>terraza con vistas a la bahía</li>
+                    <li>Ascensor y vestíbulo privados</li>
                     <li>Sala privada de bodega</li>
                     <li>
                         Espacios de trabajo privados + centro de negocios + sala de
@@ -106,7 +106,7 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                     <br/>
                     <strong>Al Aire Libre</strong>
                     <br/>
-                    <li>Piscina de tamaño semiolÃ­mpico</li>
+                    <li>Piscina de tamaño semiolímpico</li>
                     <li>Spa con hidromasaje al aire libre</li>
                     <li>Divanes junto a la piscina</li>
                     <li>Zona de chapoteo para niños</li>
@@ -121,33 +121,33 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
                     <li>Teatro con audiovisuales profesionales y teatro</li>
                     <li>asientos de estilo</li>
                     <li>
-                        Sala de juegos para niños con Ã¡rea de juegos al aire libre
+                        Sala de juegos para niños con área de juegos al aire libre
                     </li>
                     <li>Salón para adolescentes y centro de juegos</li>
                     <br/>
                     <strong>Gimnasio y Spa</strong>
                     <br/>
                     <li>
-                        Gimnasio de Ãºltima generación con vistas al nivel del jardÃ­n
+                        Gimnasio de última generación con vistas al nivel del jardín
                     </li>
                     <li>con zona de ejercicio exterior</li>
                     <li>Canchas de tenis</li>
-                    <li>Pista de pÃ¡del</li>
+                    <li>Pista de pádel</li>
                     <li>Cancha de baloncesto</li>
                     <li>
-                        Ãrea de salón de yoga con jardÃ­n de meditación al aire libre
+                        Área de salón de yoga con jardín de meditación al aire libre
                     </li>
                     <li>Zona de relajación Spa</li>
                     <li>Salas y servicios de masajes exclusivos</li>
                     <li>Sauna</li>
                     <li>Baño de vapor</li>
-                    <li>Terraza solÃ¡rium con cabañas</li>
+                    <li>Terraza solárium con cabañas</li>
                 </ul>
             </>
         ),
     };
     AriaReserveObject.introduccion = getLocalizedArray("introduccion", [
-        getLocalizedField("introduccion.0", "Aria Reserve es un nuevo proyecto residencial de torres gemelas en la increÃ­ble zona de Edgewater, Miami."),
+        getLocalizedField("introduccion.0", "Aria Reserve es un nuevo proyecto residencial de torres gemelas en la increíble zona de Edgewater, Miami."),
     ]);
     AriaReserveObject.titulo = getLocalizedField("titulo", "Aria Reserve");
     AriaReserveObject.direccion = getLocalizedField("direccion", "708 NE 24th St, Miami, FL 33137")

@@ -25,11 +25,11 @@ export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
                 <dl>
                     <dt>Ubicación</dt>
                     <dd>{EdgeHouseResidences.ubicacion}</dd>
-                    <dt>NÃºmero de Unidades</dt>
+                    <dt>Número de Unidades</dt>
                     <dd>{EdgeHouseResidences.numberOfUnits}</dd>
-                    <dt>NÃºmero de pisos</dt>
+                    <dt>Número de pisos</dt>
                     <dd>{EdgeHouseResidences.numberOfFloors}</dd>
-                    <dt>NÃºmero de cuartos</dt>
+                    <dt>Número de cuartos</dt>
                     <dd>{EdgeHouseResidences.numberOfRooms}</dd>
                     <dt>Año de Apertura</dt>
                     <dd>{EdgeHouseResidences.estimatedCompletionYear}</dd>
@@ -53,7 +53,7 @@ export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
                     <li>Techos de 2.74 metros de altura</li>
                     <li>
                         Ventanas de piso a techo y puertas corredizas de vidrio con cristal
-                        laminado de alta calidad para aislamiento acÃºstico y resistencia al
+                        laminado de alta calidad para aislamiento acústico y resistencia al
                         impact{" "}
                     </li>
                     <li>Terrazas privadas al aire libre con impresionantes vista</li>
@@ -69,7 +69,7 @@ export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
         amenidades: (
             <>
                 <ul>
-                    <li>Recepción y conserjerÃ­a con servicios personalizado</li>
+                    <li>Recepción y conserjería con servicios personalizado</li>
                     <li>Lobby con salón y café-bar, con techos de doble altura</li>
                     <li>Mercado gourmet abierto 24/7</li>
                     <li>Sala de paquetes inteligente de LUXER ONE</li>
@@ -79,24 +79,24 @@ export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
                         aire libre
                     </li>
                     <li>Bar en la piscina con servicio completo</li>
-                    <li>Spa con sauna, baño de vapor y Ã¡rea de relajación</li>
+                    <li>Spa con sauna, baño de vapor y área de relajación</li>
                     <li>Salas de tratamiento de bienestar privadas</li>
                     <li>Gimnasio completamente equipado y estudio de yoga</li>
-                    <li>JardÃ­n zen con estanque de reflexión y deck de meditación</li>
+                    <li>Jardín zen con estanque de reflexión y deck de meditación</li>
                     <li>
                         Salón para residentes a nivel de la piscina, con asientos interiores y
                         exteriores
                     </li>
-                    <li>Sky bar y lounge con vistas despejadas a la BahÃ­a de Biscayne</li>
+                    <li>Sky bar y lounge con vistas despejadas a la Bahía de Biscayne</li>
                     <li>Espacios de co-working flexibles y salas de reuniones privadas</li>
                     <li>
-                        Sala de podcast con equipo profesional y paneles acÃºsticos
+                        Sala de podcast con equipo profesional y paneles acústicos
                         insonorizados
                     </li>
-                    <li>Ãrea de juegos para niños</li>
+                    <li>Área de juegos para niños</li>
                     <li>Putting green de golf</li>
                     <li>Cocina al aire libre con parrilla y asientos de lounge</li>
-                    <li>JardinerÃ­a exuberante</li>
+                    <li>Jardinería exuberante</li>
                     <li>Almacenamiento para bicicletas</li>
                 </ul>
             </>

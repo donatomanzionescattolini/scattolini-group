@@ -1129,18 +1129,25 @@ export function TranslationProvider({children, defaultLang = "es" as Lang}: {
 }) {
     const initial = ((): Lang => {
         try {
-            const saved = localStorage.getItem("scattolini_lang");
-            if (saved === "en" || saved === "es") return saved;
+            // Priority 1: Current session setting
+            const sessionSaved = sessionStorage.getItem("scattolini_lang");
+            if (sessionSaved === "en" || sessionSaved === "es") return sessionSaved;
+
+            // Priority 2: New session always starts with Spanish (as per requirement)
+            // We ignore localStorage here to satisfy "if the session is new, start with spanish"
         } catch (e) {
             /* ignore */
         }
-        return defaultLang;
+        return "es" as Lang;
     })();
 
     const [lang, setLangState] = useState<Lang>(initial);
 
     useEffect(() => {
         try {
+            sessionStorage.setItem("scattolini_lang", lang);
+            // Also keep it in localStorage in case they actually wanted persistence,
+            // but the initial logic above will favor the "new session -> spanish" rule.
             localStorage.setItem("scattolini_lang", lang);
         } catch (e) {
             // ignore

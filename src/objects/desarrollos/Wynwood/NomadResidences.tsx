@@ -6,8 +6,8 @@ export default function NomadResidences() {
     const NomadResidencesObject = new Desarrollo(Wynwood());
     NomadResidencesObject.nombre = "nomad-residences";
     NomadResidencesObject.titulo = "Nomad Residences";
-    NomadResidencesObject.slogan = "CarÃ¡cter individual, un mundo de confort";
-    NomadResidencesObject.introduccion = ["El Nomad Wynwood Residences cuenta con 329 residencias de lujo. Las unidades varÃ­an en tamaño desde 478 pies cuadrados hasta 911 pies cuadrados. Fue desarrollado por Related Group, el prestigioso desarrollador detrÃ¡s de Icon Brickell, SLS Lux, Brickell Heights, Hyde Beach, Baccarat Residences y muchos otros edificios de ultra lujo en el sur de Florida. Diseñado por Arquitectonica y con un elegante diseño interior de Design Agency. Este condominio residencial ubicado en el centro se encuentra en la vibrante Ã¡rea de Wynwood de Miami, Florida. Algunas de las atracciones mÃ¡s importantes son las paredes de Wynwood, las galerÃ­as de arte, la alta cocina, las tiendas y los lugares culturales que brindarÃ¡n a los residentes una experiencia de vida como en ningÃºn otro lugar del sur de la Florida."];
+    NomadResidencesObject.slogan = "Carácter individual, un mundo de confort";
+    NomadResidencesObject.introduccion = ["El Nomad Wynwood Residences cuenta con 329 residencias de lujo. Las unidades varían en tamaño desde 478 pies cuadrados hasta 911 pies cuadrados. Fue desarrollado por Related Group, el prestigioso desarrollador detrás de Icon Brickell, SLS Lux, Brickell Heights, Hyde Beach, Baccarat Residences y muchos otros edificios de ultra lujo en el sur de Florida. Diseñado por Arquitectonica y con un elegante diseño interior de Design Agency. Este condominio residencial ubicado en el centro se encuentra en la vibrante área de Wynwood de Miami, Florida. Algunas de las atracciones más importantes son las paredes de Wynwood, las galerías de arte, la alta cocina, las tiendas y los lugares culturales que brindarán a los residentes una experiencia de vida como en ningún otro lugar del sur de la Florida."];
     NomadResidencesObject.banner = true;
     NomadResidencesObject.ubicación = "280 NW 27th Street, Miami, FL 33127"
     NomadResidencesObject.numberOfUnits = 329;
@@ -30,9 +30,9 @@ export default function NomadResidences() {
                 <li>Totalmente amueblado y creativamente seleccionado por NoMad y la galardonada DesignAgency</li>
                 <li>Puertas correderas de vidrio de piso a techo</li>
                 <li>Balcones privados en todas las residencias</li>
-                <li>Vestidores espaciosos en la mayorÃ­a de las residencias</li>
+                <li>Vestidores espaciosos en la mayoría de las residencias</li>
                 <li>Techos de 9+ pies</li>
-                <li>Cocinas modernas y aerodinÃ¡micas con electrodomésticos Bosch</li>
+                <li>Cocinas modernas y aerodinámicas con electrodomésticos Bosch</li>
                 <li>Gabinetes importados de diseño italiano</li>
                 <li>Diseños adaptables y abiertos</li>
                 <li>Exquisitas encimeras de piedra</li>
@@ -43,12 +43,12 @@ export default function NomadResidences() {
         </>,
         amenidades: <>
             <ul>
-                <li>CuradurÃ­a y diseño NoMad aclamados a nivel mundial</li>
+                <li>Curaduría y diseño NoMad aclamados a nivel mundial</li>
                 <li>Restaurante y bar NoMad en la azotea con ascensor independiente</li>
                 <li>Paisajismo inspirado e impecable</li>
                 <li>Piscina en la azotea de servicio completo, terraza y cabañas</li>
-                <li>ConserjerÃ­a las 24 horas y seguridad del edificio</li>
-                <li>Dos amplios vestÃ­bulos y locales comerciales</li>
+                <li>Conserjería las 24 horas y seguridad del edificio</li>
+                <li>Dos amplios vestíbulos y locales comerciales</li>
                 <li>Servicio de aparcacoches 24/7 y garaje en el edificio</li>
                 <li>Centro de fitness y bienestar de primer nivel, con césped dedicado al fitness al aire libre</li>
                 <li>Zona de parrillas y cine al aire libre</li>

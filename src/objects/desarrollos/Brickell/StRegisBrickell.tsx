@@ -1,39 +1,43 @@
 ﻿import Brickell from "../../areas/Brickell.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-const StRegisBrickell = new Desarrollo(Brickell());
-StRegisBrickell.nombre = "st-regis-brickell";
-StRegisBrickell.titulo = "St Regis Brickell";
-StRegisBrickell.banner = true;
-StRegisBrickell.numberOfImages = 61;
+export default function StRegisBrickell(lang: "en" | "es" = "es") {
+    const {getLocalizedField} = getDesarrolloI18n("st-regis-brickell", lang);
+    const StRegisBrickellObject = new Desarrollo(Brickell());
+    StRegisBrickellObject.nombre = "st-regis-brickell";
+    StRegisBrickellObject.titulo = getLocalizedField("titulo", "St Regis Brickell");
+    StRegisBrickellObject.banner = true;
+    StRegisBrickellObject.numberOfImages = 61;
 
-StRegisBrickell.slogan = {es: "", en: ""};
-StRegisBrickell.area = Brickell();
+    StRegisBrickellObject.slogan = getLocalizedField("slogan", "");
+    StRegisBrickellObject.area = Brickell();
 
-StRegisBrickell.direccion = "";
-StRegisBrickell.numberOfUnits = 0;
-StRegisBrickell.typeOfUnits = "";
-StRegisBrickell.numberOfFloors = 0;
+    StRegisBrickellObject.direccion = getLocalizedField("direccion", "");
+    StRegisBrickellObject.numberOfUnits = 0;
+    StRegisBrickellObject.typeOfUnits = getLocalizedField("typeOfUnits", "");
+    StRegisBrickellObject.numberOfFloors = 0;
 
-StRegisBrickell.caracteristicas = {
-    edificio: <>
-        <dl>
-            <dt>Dirección</dt>
-            <dd>{StRegisBrickell.direccion}</dd>
+    StRegisBrickellObject.caracteristicas = {
+        edificio: <>
+            <dl>
+                <dt>{getLocalizedField("caracteristicas.edificio.direccion", "Dirección")}</dt>
+                <dd>{StRegisBrickellObject.direccion}</dd>
 
-            <dt>Numero de Pisos</dt>
-            <dd>{StRegisBrickell.numberOfFloors}</dd>
-            <dt>Numero de Unidades</dt>
-            <dd>{StRegisBrickell.numberOfUnits}</dd>
-            <dt>Tipo de Unidades</dt>
-            <dd>{StRegisBrickell.typeOfUnits}</dd>
+                <dt>{getLocalizedField("caracteristicas.edificio.pisos", "Numero de Pisos")}</dt>
+                <dd>{StRegisBrickellObject.numberOfFloors}</dd>
+                <dt>{getLocalizedField("caracteristicas.edificio.unidades", "Numero de Unidades")}</dt>
+                <dd>{StRegisBrickellObject.numberOfUnits}</dd>
+                <dt>{getLocalizedField("caracteristicas.edificio.tipo", "Tipo de Unidades")}</dt>
+                <dd>{StRegisBrickellObject.typeOfUnits}</dd>
 
-        </dl>
-    </>,
-    residencias: <></>,
-    amenidades: <></>,
-};
+            </dl>
+        </>,
+        residencias: <></>,
+        amenidades: <></>,
+    };
 
-StRegisBrickell.introduccion = [];
+    StRegisBrickellObject.introduccion = [];
 
-export default StRegisBrickell;
+    return StRegisBrickellObject;
+}

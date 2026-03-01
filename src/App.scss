@@ -447,41 +447,48 @@ nav {
 }
 
 .btn-hero-primary {
-  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-brown) 100%);
+  background: linear-gradient(135deg, #e0b355 0%, #c19a4a 100%);
   border: none;
-  color: white;
-  padding: 0.9rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  color: white !important;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase !important;
   border-radius: 50px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 25px rgba(201, 169, 97, 0.45);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-hero-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(138, 105, 68, 0.5);
-  background: linear-gradient(135deg, var(--color-brown) 0%, var(--color-darkblue) 100%);
-  color: white;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(138, 105, 68, 0.5);
+  background: linear-gradient(135deg, #f2c94c 0%, #f2994a 100%);
+  color: white !important;
 }
 
 .btn-hero-outline {
-  background: transparent;
-  border: 2px solid var(--color-lightbrown);
-  color: var(--color-lightbrown);
-  padding: 0.85rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: white !important;
+  padding: 0.95rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase !important;
   border-radius: 50px;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btn-hero-outline:hover {
-  background: var(--color-lightbrown);
-  color: var(--color-darkblue);
-  transform: translateY(-2px);
+  background: white;
+  color: var(--color-darkblue) !important;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
 }
 
 .hero-ctas {

@@ -1,70 +1,43 @@
-﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
+import Desarrollo from "../../../models/desarrollos/Desarrollo";
+import MidtownMiami from "../../areas/MidtownMiami";
+import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-
-const TulaResidences = new Desarrollo(NorthBayVillage());
-TulaResidences.nombre = "tula-residences";
-TulaResidences.titulo = "Tula Residences";
-TulaResidences.banner = true;
-TulaResidences.introduccion = ["Tula Residences Miami es un condominio frente al mar de lujo de 21 pisos, con 54 residencias en total, incluyendo seis Ã¡ticos Ãºnicos. Su arquitectura contemporÃ¡nea combina la simetrÃ­a con la individualidad. Mejorando el paisaje panorÃ¡mico de la BahÃ­a de Biscayne, la exuberante vegetación circundante crea un ambiente sereno. Las instalaciones de Tula enfatizan la conexión, la exclusividad, la elegancia y el diseño espacioso. A solo un breve paseo de distancia se encuentra Treasure Island Park, un lugar ideal para hacer picnics y ver una variedad de barcos deslizarse por la bahÃ­a."];
-TulaResidences.numberOfImages = 16;
-TulaResidences.numberOfUnits = 54;
-TulaResidences.numberOfFloors = 21;
-TulaResidences.typeOfUnits = "Condominios de lujo de 2, 3 y 5 dormitorios";
-TulaResidences.estimatedCompletionYear = 2026;
-TulaResidences.direccion = "7918 West Dr, Miami, FL 33141";
-
-TulaResidences.caracteristicas = {
-    edificio: <>
-        <dl>
-            <dt>Dirección</dt>
-            <dd>{TulaResidences.direccion}</dd>
-            <dt>Año De Construcción O Finalización</dt>
-            <dd>{TulaResidences.estimatedCompletionYear}</dd>
-            <dt>NÃºmero De Pisos</dt>
-            <dd>{TulaResidences.numberOfFloors}</dd>
-            <dt>NÃºmero de Unidades</dt>
-            <dd>{TulaResidences.numberOfUnits}</dd>
-            <dt>Tipo De Unidades</dt>
-            <dd>{TulaResidences.typeOfUnits}</dd>
-
-        </dl>
-    </>,
-    amenidades: <>
-        <ul>
-
-            <li>Gran entrada en un vestÃ­bulo de diseño llamativo con conserje las 24 horas</li>
-
-            <li>Piscina de estilo resort con terraza ajardinada y cabañas que ofrecen vistas al amanecer, al atardecer y
-                nocturnas del horizonte de Miami y la BahÃ­a de Biscayne
-            </li>
-
-            <li>Suite de servicios de sexto piso con vistas panorÃ¡micas y oportunidades interiores / exteriores para el
-                bienestar y la socialización
-            </li>
-
-            <li>Gran habitación con chimenea de mÃ¡rmol, ventanas de piso a techo y vistas a la bahÃ­a</li>
-
-            <li>Habitación Skyline Club, disponible para reservas privadas</li>
-
-            <li>Comedor privado para doce con cocina de calentamiento de chef para eventos atendidos</li>
-
-            <li>Gimnasio con 2.100 pies cuadrados de equipo totalmente equipado y de Ãºltima generación</li>
-
-            <li>Edificio que admite mascotas con spa dedicado a mascotas</li>
-
-            <li>Garaje de estacionamiento sobre el suelo</li>
-
-            <li>Sala de paquetes segura</li>
-
-            <li>Almacenamiento privado, disponible a un costo adicional</li>
-        </ul>
-
-    </>,
-    residencias: <></>
-
-};
-
-
-export default TulaResidences;
-
+export default function tularesidences(lang: "en" | "es" = "es") {
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("tula-residences", lang);
+    const d = new Desarrollo(MidtownMiami());
+    d.titulo = getLocalizedField("titulo", "Tula Residences");
+    d.nombre = "tula-residences";
+    d.introduccion = getLocalizedArray("introduccion", ["Tula Residences Miami es un condominio frente al mar de lujo de 21 pisos en el vecindario North Bay Village de Miami. El desarrollo de Tula North Bay Village es un proyecto de Shoma Group y los arquitectos de MSA Architects. El edificio Tula Residences Miami cuenta con solo 19 unidades, que varían de 1 a 4 dormitorios."]);
+    d.slogan = getLocalizedField("slogan", "Exclusividad Frente al Mar en North Bay Village");
+    d.typeOfUnits = getLocalizedField("typeOfUnits", "1, 2, 3 y 4 habitaciones");
+    d.caracteristicas = {
+        edificio: (
+            <>
+                <dl>
+                    <dt>{getLocalizedField("caracteristicas.edificio.apertura", "Año de apertura")}</dt>
+                    <dd>{d.estimatedCompletionYear}</dd>
+                    <dt>{getLocalizedField("caracteristicas.edificio.pisos", "Número de pisos")}</dt>
+                    <dd>{d.numberOfFloors}</dd>
+                    <dt>{getLocalizedField("caracteristicas.edificio.unidades", "Número de unidades")}</dt>
+                    <dd>{d.numberOfUnits}</dd>
+                    <dt>{getLocalizedField("caracteristicas.edificio.tipo", "Tipo de unidades")}</dt>
+                    <dd>{d.typeOfUnits}</dd>
+                    <dt>{getLocalizedField("caracteristicas.edificio.ubicacion", "ubicacion")}</dt>
+                    <dd>{d.ubicacion}</dd>
+                </dl>
+            </>
+        ),
+        residencias: (
+            <ul>
+                {getLocalizedArray("caracteristicas.residencias.items", ["Residencias de piso completo para máxima privacidad", "Vistas de 360 grados de la bahía y el océano", "Ascensores privados que abren directamente a la residencia", "Cocinas gourmet con electrodomésticos de grado profesional", "Amplias terrazas envolventes"]).map((item, idx) => <li key={idx}>{item}</li>)}
+            </ul>
+        ),
+        amenidades: (
+            <ul>
+                {getLocalizedArray("caracteristicas.amenidades.items", ["Piscina infinita frente a la bahía", "Muelle privado y acceso directo al agua", "Gimnasio y centro de bienestar privado", "Servicio de conserjería personalizado", "Seguridad de vanguardia"]).map((item, idx) => <li key={idx}>{item}</li>)}
+            </ul>
+        ),
+    };
+    d.banner = true;
+    return d;
+}

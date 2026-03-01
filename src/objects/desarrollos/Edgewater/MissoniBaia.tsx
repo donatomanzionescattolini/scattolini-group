@@ -174,7 +174,7 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     </li>
 
                     <li>
-                        Piscina olÃ­mpica: Una piscina de longitud olÃ­mpica que ofrece la
+                        Piscina olímpica: Una piscina de longitud olímpica que ofrece la
                         oportunidad de un entrenamiento atlético serio.
                     </li>
                     <br/>
@@ -188,14 +188,14 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                     </li>
                     <br/>
                     <li>
-                        MÃ¡s allÃ¡ del gimnasio, la cancha de tenis y las mÃºltiples
+                        Más allá del gimnasio, la cancha de tenis y las múltiples
                         piscinas, estas residencias de lujo ofrecen exclusivo para sus
-                        residentes, uno de los spas mÃ¡s grandes y lujosos de Miami.
+                        residentes, uno de los spas más grandes y lujosos de Miami.
                         Concebido por los diseñadores de Aman con interiores por Paris
-                        Forino, sus caracterÃ­sticas inigualables incluyen elegantes
+                        Forino, sus características inigualables incluyen elegantes
                         salas interiores para masajes, duchas de vapor, saunas,
                         vestidores, terrazas exteriores para masajes con vistas
-                        espectaculares de Biscayne Bay y la lÃ­nea del horizonte de
+                        espectaculares de Biscayne Bay y la línea del horizonte de
                         Miami.
                     </li>
                     <br/>
@@ -213,44 +213,44 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
                         Miami. Diseñado con una paleta serena y sofisticada, el spa
                         cuenta con salas privadas para masajes, duchas y terrazas
                         exteriores para masajes y tratamientos con una vista
-                        espectacular de Biscayne Bay y la lÃ­nea del horizonte de Miami.
+                        espectacular de Biscayne Bay y la línea del horizonte de Miami.
                     </li>
                     <br/>
                     <br/>
                     <li>
                         Gimnasio: un gimnasio moderno y vanguardista de 1,700 pies
-                        cuadrados que ofrece una vista de180Â° de Biscayne Bay.
+                        cuadrados que ofrece una vista de180° de Biscayne Bay.
                     </li>
                     <br/>
                     <strong>Espacios Familiares</strong>
                     <br/>
                     <li>
-                        MÃ¡s allÃ¡ de gimnasio, cancha de tenis y las mÃºltiples piscinas,
+                        Más allá de gimnasio, cancha de tenis y las múltiples piscinas,
                         este lujoso condominio ofrece un amplio spa exclusivo para sus
-                        residentes, el cual es uno de los spas mÃ¡s grandes y lujosos de
+                        residentes, el cual es uno de los spas más grandes y lujosos de
                         Miami. Concebido por los diseñadores de Aman y con interiores de
-                        Paris Forino, sus caracterÃ­sticas inigualables incluyen
+                        Paris Forino, sus características inigualables incluyen
                         elegantes salas para masajes, duchas de vapor, saunas,
                         vestidores, terrazas para tratamientos con vistas espectaculares
                         de Biscayne Bay y el horizonte de Miami.
                     </li>
                     <br/>
-                    <strong>Childrenâ€™s Playroom</strong>
+                    <strong>Children's Playroom</strong>
                     <br/>
                     <li>
-                        Club para niños: una sala de juegos Ãºnica en su clase con vista
+                        Club para niños: una sala de juegos única en su clase con vista
                         a Biscayne Bay celebra el gusto de Missoni por la familia y
-                        refleja la estética colorida y la sensibilidad fantÃ¡stica del
+                        refleja la estética colorida y la sensibilidad fantástica del
                         hogar de la propia Angela Missoni; con casas de muñecas vestidas
-                        de telas estampadas de Missoni y detalles lÃºdicos como banquitos
-                        de duendes de jardÃ­n y adornos de mariposas originales de
+                        de telas estampadas de Missoni y detalles lúdicos como banquitos
+                        de duendes de jardín y adornos de mariposas originales de
                         Missoni en las paredes.
                     </li>
                     <br/>
-                    <strong>Miami Luxury Condos: Kidsâ€™ Fountains</strong>
+                    <strong>Miami Luxury Condos: Kids' Fountains</strong>
                     <br/>
                     <li>
-                        Ãrea de juegos para niños: un Ã¡rea de juegos acuÃ¡ticos
+                        Área de juegos para niños: un área de juegos acuáticos
                         encantadora, diseñada especialmente para niños.
                     </li>
                 </ul>

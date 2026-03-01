@@ -21,16 +21,16 @@ const Nav = () => {
 
     // Only include areas that have projects to sell
     const allAreas = useMemo(() => {
-        return Areas().filter((area) => getDesarrollosForArea(area).size > 0);
-    }, []);
+        return Areas().filter((area) => getDesarrollosForArea(area, lang).size > 0);
+    }, [lang]);
     const [filteredAreas, setFilteredAreas] = useState<Array<Area>>(allAreas);
 
     const allDesarrollos = useMemo<Desarrollo[]>(
         () =>
             allAreas
-                .map((area) => [...getDesarrollosForArea(area)])
+                .map((area) => [...getDesarrollosForArea(area, lang)])
                 .reduce((prev, cur) => [...prev, ...cur], []),
-        [allAreas]
+        [allAreas, lang]
     );
 
     const [filteredDesarrollos, setFilteredDesarrollos] =

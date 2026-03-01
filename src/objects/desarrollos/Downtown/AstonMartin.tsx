@@ -28,16 +28,16 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
                 </li>
 
                 <li>
-                    <b>NÃºmero de residencias:</b> 391 Residencias en Condominio
+                    <b>Número de residencias:</b> 391 Residencias en Condominio
                 </li>
 
                 <li>
-                    <b>NÃºmero de pisos:</b> 66 Pisos
+                    <b>Número de pisos:</b> 66 Pisos
                 </li>
 
                 <li>
                     <b>Dormitorios por residencia:</b> Residencias de 1-5 dormitorios,
-                    dÃºplex, Ã¡ticos y Ã¡ticos triples
+                    dúplex, áticos y áticos triples
                 </li>
 
                 <li>
@@ -45,10 +45,10 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
 
                     <ul>
                         <li>Niveles 3-14: River Residences</li>
-                        <li> Niveles 15-45: Residencias panorÃ¡micas</li>
+                        <li> Niveles 15-45: Residencias panorámicas</li>
                         <li> Niveles 46-51: Sky Residences</li>
-                        <li> Niveles 56-62: Ãticos</li>
-                        <li> Niveles 63-65: Ãtico Triple</li>
+                        <li> Niveles 56-62: Áticos</li>
+                        <li> Niveles 63-65: Ático Triple</li>
                     </ul>
                 </li>
             </ul>
@@ -59,7 +59,7 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
                     <h5>Tamaños</h5>
 
                     <ul>
-                        <li>Ãtico Superior - 18,811 SF</li>
+                        <li>Ático Superior - 18,811 SF</li>
                         <li> Sky Penthouses - 8,977 a 10,463 SF</li>
                         <li> 5 dormitorios - 3.764 a 3.994 pies cuadrados</li>
                         <li> 4 dormitorios - 3.235 a 4.434 pies cuadrados</li>
@@ -73,25 +73,25 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
                     <br></br>
                 </li>
                 <li>
-                    <h5>CaracterÃ­sticas</h5>
+                    <h5>Características</h5>
                     <ul>
                         <li>
-                            Vistas panorÃ¡micas de la BahÃ­a de Biscayne, el océano y el
+                            Vistas panorámicas de la Bahía de Biscayne, el océano y el
                             icónico horizonte de Miami.
                         </li>
                         <li> 10 pies de altura de techo en residencias.</li>
-                        <li> Altura de techo de 12 pies en Ã¡ticos.</li>
+                        <li> Altura de techo de 12 pies en áticos.</li>
                         <li>
                             " "; Ventanas de piso a techo y puertas corredizas de vidrio en
                             todas las residencias.
                         </li>
                         <li>
-                            " "; Cocinas de primera lÃ­nea con gabinetes y electrodomésticos
+                            " "; Cocinas de primera línea con gabinetes y electrodomésticos
                             europeos.
                         </li>
                         <li> Baños con gabinetes europeos.</li>
                         <li>
-                            " "; Pisos de mÃ¡rmol de primera calidad en toda la sala de estar,
+                            " "; Pisos de mármol de primera calidad en toda la sala de estar,
                             cocina y baños.
                         </li>
                         <li>
@@ -108,7 +108,7 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
                     <h5>Amenidades y Servicios Generales</h5>
                     <ul>
                         <li>
-                            " "; Edificio de servicio completo con servicios de conserjerÃ­a y
+                            " "; Edificio de servicio completo con servicios de conserjería y
                             hospitalidad.
                         </li>
                         <li>
@@ -141,13 +141,13 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
                 <li>
                     " "; <i> Nivel 52</i>
                     <ul>
-                        <li> GalerÃ­a de Arte Curada</li>
+                        <li> Galería de Arte Curada</li>
                         <li> Centro de negocios</li>
                         <li> Sala de Conferencias</li>
                         <li> Sala de juegos para niños</li>
                         <li> Centro para adolescentes</li>
                         <li> Sala de juegos</li>
-                        <li> Ãrea de Venta</li>
+                        <li> Área de Venta</li>
                     </ul>
                 </li>
                 <li>
@@ -162,7 +162,7 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
                         <li> Sauna</li>
                         <li> Sala de meditación</li>
                         <li> Salón de belleza</li>
-                        <li> BarberÃ­a</li>
+                        <li> Barbería</li>
                     </ul>
                 </li>
 
@@ -183,7 +183,7 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
                         <li> Sky Bar y Lounge</li>
                         <li> Conserje de piscina</li>
                         <li> Gran Salón</li>
-                        <li> Cocina del chef de Ãºltima generación</li>
+                        <li> Cocina del chef de última generación</li>
                         <li> Comedor Privado</li>
                     </ul>
                 </li>

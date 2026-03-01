@@ -8,13 +8,13 @@ export default function EnvyResidence(lang: "en" | "es" = "es") {
 
     envyResidenceObject.nombre = "envy-residence";
     envyResidenceObject.titulo = getLocalizedField("titulo", "ENVY Pompano Beach");
-    envyResidenceObject.subtitulo = getLocalizedField("subtitulo", "Vive mÃ¡s allÃ¡ de lo ordinario");
+    envyResidenceObject.subtitulo = getLocalizedField("subtitulo", "Vive más allá de lo ordinario");
     envyResidenceObject.banner = true;
     envyResidenceObject.numberOfImages = 72;
     envyResidenceObject.introduccion = getLocalizedArray("introduccion", [
-        "Envy Residences combina la vibra moderno y ubicación estratégica. Construido en 2021, ofrece 214 unidades desde estudios hasta apartamentos de 3 habitaciones. Disfruta de amenidades de primera clase, como piscina estilo resort, gimnasio con pared de escalar, mini golf y Ã¡reas sociales. A solo 1.8 millas de la playa y con restricciones de alquiler flexibles, Envy es perfecto para vivir o invertir.",
+        "Envy Residences combina la vibra moderno y ubicación estratégica. Construido en 2021, ofrece 214 unidades desde estudios hasta apartamentos de 3 habitaciones. Disfruta de amenidades de primera clase, como piscina estilo resort, gimnasio con pared de escalar, mini golf y áreas sociales. A solo 1.8 millas de la playa y con restricciones de alquiler flexibles, Envy es perfecto para vivir o invertir.",
     ]);
-    envyResidenceObject.slogan = getLocalizedField("slogan", "Vive mÃ¡s allÃ¡ de lo ordinario.");
+    envyResidenceObject.slogan = getLocalizedField("slogan", "Vive más allá de lo ordinario.");
     envyResidenceObject.direccion = getLocalizedField("direccion", "475 SE 1st St, Pompano Beach, FL 33060");
     envyResidenceObject.ubicación = getLocalizedField("ubicacion", "475 SE 1st St, Pompano Beach, FL 33060");
     envyResidenceObject.caracteristicas = {
@@ -24,7 +24,7 @@ export default function EnvyResidence(lang: "en" | "es" = "es") {
                     <dt>{getLocalizedField("caracteristicas.edificio.ubicacion", "Ubicación")}</dt>
                     <dd>{getLocalizedField("direccion", "475 SE 1st St, Pompano Beach, FL 33060")}</dd>
 
-                    <dt>{getLocalizedField("caracteristicas.edificio.unidades", "NÃºmero de Unidades")}</dt>
+                    <dt>{getLocalizedField("caracteristicas.edificio.unidades", "Número de Unidades")}</dt>
                     <dd>{getLocalizedField("caracteristicas.edificio.unidadesCount", "213 Residencias")}</dd>
                     <dt>{getLocalizedField("caracteristicas.edificio.pisos", "Pisos")}</dt>
                     <dd>{getLocalizedField("caracteristicas.edificio.pisosCount", "Dos torres de 11 pisos cada una")}</dd>
@@ -53,16 +53,16 @@ export default function EnvyResidence(lang: "en" | "es" = "es") {
             <>
                 <ul>
                     <li>
-                        {getLocalizedField("caracteristicas.amenidades.bienestar", "Centro de bienestar: un gimnasio de Ãºltima generación y espacio de yoga.")}
+                        {getLocalizedField("caracteristicas.amenidades.bienestar", "Centro de bienestar: un gimnasio de última generación y espacio de yoga.")}
                     </li>
                     <li>
-                        {getLocalizedField("caracteristicas.amenidades.piscina", "Piscina estilo resort: una cubierta de piscina hermosamente ajardinada para la mÃ¡xima relajación.")}
+                        {getLocalizedField("caracteristicas.amenidades.piscina", "Piscina estilo resort: una cubierta de piscina hermosamente ajardinada para la máxima relajación.")}
                     </li>
                     <li>
-                        {getLocalizedField("caracteristicas.amenidades.salon", "Sofisticado salón y sala de entretenimiento: un Ã¡rea comÃºn elegante para socializar.")}
+                        {getLocalizedField("caracteristicas.amenidades.salon", "Sofisticado salón y sala de entretenimiento: un área común elegante para socializar.")}
                     </li>
                     <li>
-                        {getLocalizedField("caracteristicas.amenidades.mascotas", "Ventajas para mascotas: un Ã¡rea de mascotas designada para sus amigos peludos.")}
+                        {getLocalizedField("caracteristicas.amenidades.mascotas", "Ventajas para mascotas: un área de mascotas designada para sus amigos peludos.")}
                     </li>
                     <li>
                         {getLocalizedField("caracteristicas.amenidades.parque", "Parque infantil: un espacio divertido y seguro para que los niños jueguen.")}

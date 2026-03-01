@@ -24,10 +24,10 @@ export default function WaldorfAstoria(lang: "en" | "es" = "es") {
                 </li>
                 <li>Interiores creados por la firma de diseño BAMO</li>
                 <li>Callejón del pavo real</li>
-                <li>Piscina con cafeterÃ­a al aire libre y cabañas privadas</li>
+                <li>Piscina con cafetería al aire libre y cabañas privadas</li>
                 <li>Bar privado / sala de degustación de vinos</li>
                 <li>Restaurante de autor</li>
-                <li>Restaurante todo el dÃ­a Brasserie</li>
+                <li>Restaurante todo el día Brasserie</li>
                 <li>Salas de reuniones y juntas</li>
                 <li>Club infantil Waldorf Astoria</li>
                 <li>Servicio de aparcacoches las 24 horas</li>
@@ -36,14 +36,14 @@ export default function WaldorfAstoria(lang: "en" | "es" = "es") {
                     Gimnasio de vanguardia con estudios de entrenamiento privados
                 </li>
                 <li>
-                    Porteros las 24 horas y asistentes de recepción del vestÃ­bulo
+                    Porteros las 24 horas y asistentes de recepción del vestíbulo
                 </li>
                 <li>
-                    Porte cochÃ¨re privado con servicio de aparcacoches las 24 horas y
+                    Porte cochère privado con servicio de aparcacoches las 24 horas y
                     entrada residencial privada
                 </li>
                 <li>
-                    Servicios de conserjerÃ­a las 24 horas, ademÃ¡s de profesionales
+                    Servicios de conserjería las 24 horas, además de profesionales
                     dedicados en el lugar
                 </li>
                 <li>Gerente residente residente y seguridad las 24 horas</li>
@@ -61,22 +61,22 @@ export default function WaldorfAstoria(lang: "en" | "es" = "es") {
                     Residencias de 1, 2, 3 y 4 dormitorios totalmente terminadas
                 </li>
                 <li>
-                    Todos los interiores residenciales estÃ¡n diseñados por la
+                    Todos los interiores residenciales están diseñados por la
                     galardonada firma de diseño de interiores BAMO
                 </li>
                 <li>
                     Ventanas de piso a techo de 10 pies con impresionantes vistas del
                     horizonte de la ciudad y el centro de la ciudad, Miami Beach y el
-                    Océano AtlÃ¡ntico
+                    Océano Atlántico
                 </li>
                 <li>
-                    Experiencia de tecnologÃ­a doméstica inteligente para una
+                    Experiencia de tecnología doméstica inteligente para una
                     personalización perfecta con solo tocar un botón. Incluye sistemas
-                    integrados de audio, vÃ­deo e iluminación.
+                    integrados de audio, vídeo e iluminación.
                 </li>
                 <li>
                     Todas las residencias vienen equipadas con un paquete de
-                    iluminación contemporÃ¡neo, que incluye iluminación empotrada,
+                    iluminación contemporáneo, que incluye iluminación empotrada,
                     atenuadores y control de iluminación.
                 </li>
                 <li>
@@ -84,7 +84,7 @@ export default function WaldorfAstoria(lang: "en" | "es" = "es") {
                     por BAMO
                 </li>
                 <li>
-                    Construido en lavadora y secadora de primera lÃ­nea en la unidad
+                    Construido en lavadora y secadora de primera línea en la unidad
                 </li>
                 <li>
                     Selecciones de pisos incluidas con las especificaciones
@@ -109,7 +109,7 @@ export default function WaldorfAstoria(lang: "en" | "es" = "es") {
                     italianos personalizados
                 </li>
                 <li>
-                    Accesorios, caracterÃ­sticas y accesorios de baño Dornbracht y
+                    Accesorios, características y accesorios de baño Dornbracht y
                     Duravit
                 </li>
             </ul>
@@ -117,7 +117,7 @@ export default function WaldorfAstoria(lang: "en" | "es" = "es") {
         amenidades: undefined,
     };
     WaldorfAstoriaObject.introduccion = [
-        "Waldorf Astoria Miami presenta a la ciudad una de las marcas de hoteles de lujo mÃ¡s prestigiosas del mundo, propiedad de Hilton Hotels. La torre ofrece 100 pisos de residencias. Los arquitectos de la firma Sieger SuÃ¡rez diseñaron el edificio para parecerse a una pila de cubos de vidrio apilados de manera desigual. Con 1,049 pies de altura, Waldorf Astoria Hotel and Residences Miami es la torre mÃ¡s alta de Miami y el primer rascacielos superalto de Miami. Las residencias tienen vistas espectaculares de la BahÃ­a de Biscayne, el Puerto de Miami, Brickell Avenue, el centro de Miami, Key Biscayne y South Beach. La ubicación perfecta de Waldorf Astoria Miami permite a los residentes vivir a pocos minutos del nuevo Miami World Center, varias atracciones culturales, arte, turismo y moda.",
+        "Waldorf Astoria Miami presenta a la ciudad una de las marcas de hoteles de lujo más prestigiosas del mundo, propiedad de Hilton Hotels. La torre ofrece 100 pisos de residencias. Los arquitectos de la firma Sieger Suárez diseñaron el edificio para parecerse a una pila de cubos de vidrio apilados de manera desigual. Con 1,049 pies de altura, Waldorf Astoria Hotel and Residences Miami es la torre más alta de Miami y el primer rascacielos superalto de Miami. Las residencias tienen vistas espectaculares de la Bahía de Biscayne, el Puerto de Miami, Brickell Avenue, el centro de Miami, Key Biscayne y South Beach. La ubicación perfecta de Waldorf Astoria Miami permite a los residentes vivir a pocos minutos del nuevo Miami World Center, varias atracciones culturales, arte, turismo y moda.",
     ];
     WaldorfAstoriaObject.titulo = "Waldorf Astoria";
     WaldorfAstoriaObject.slogan = "";

@@ -14,9 +14,9 @@ export default function CasaBella(lang: "en" | "es" = "es") {
     CasaBellaObject.caracteristicas = {
         edificio: (
             <ul>
-                <li>NÃºmero de pisos:</li>
-                <li>NÃºmero de unidades: 306</li>
-                <li>Ubicación: 1444 Biscayne Blvd, Miami, FL 33132 Â·</li>
+                <li>Número de pisos:</li>
+                <li>Número de unidades: 306</li>
+                <li>Ubicación: 1444 Biscayne Blvd, Miami, FL 33132 ·</li>
                 <li>Habitaciones por unidad: 1-5 dormitorios</li>
             </ul>
         ),
@@ -24,15 +24,15 @@ export default function CasaBella(lang: "en" | "es" = "es") {
             <ul>
                 <li>
                     Todas las residencias cuentan con dos ascensores privados y
-                    vestÃ­bulo privado
+                    vestíbulo privado
                 </li>
                 <li>
-                    Los ascensores estÃ¡n equipados con control de acceso biométrico
+                    Los ascensores están equipados con control de acceso biométrico
                     para mejorar la seguridad
                 </li>
                 <li>
-                    La mayorÃ­a de las unidades disfrutan de amplios diseños de paso
-                    con techos altos de 10 pies y vistas impresionantes de la BahÃ­a de
+                    La mayoría de las unidades disfrutan de amplios diseños de paso
+                    con techos altos de 10 pies y vistas impresionantes de la Bahía de
                     Biscayne, el horizonte del centro de Miami y las impresionantes
                     puestas de sol desde el oeste
                 </li>
@@ -44,15 +44,15 @@ export default function CasaBella(lang: "en" | "es" = "es") {
                     seleccionados individualmente por Piero Lissoni
                 </li>
                 <li>
-                    El paquete de electrodomésticos de vidrio negro de primera lÃ­nea
+                    El paquete de electrodomésticos de vidrio negro de primera línea
                     incluye refrigerador / congelador Sub-Zero integrado de 36
                     pulgadas con paneles, microondas de cajón de transición Wolf,
                     lavavajillas silencioso, horno de convección incorporado Wolf,
-                    encimera de vidrio cerÃ¡mico y refrigeración de vino
+                    encimera de vidrio cerámico y refrigeración de vino
                 </li>
                 <li>
                     Fregadero de acero inoxidable de gran tamaño de radio cero con
-                    cajón de grifo extraÃ­ble de diseño europeo de una sola palanca
+                    cajón de grifo extraíble de diseño europeo de una sola palanca
                 </li>
                 <li>
                     Baños principales diseñados por Piero Lissoni con gabinetes y
@@ -73,10 +73,10 @@ export default function CasaBella(lang: "en" | "es" = "es") {
                     Sala de juegos para niños, con juegos educativos y pizarra
                     inteligente
                 </li>
-                <li>Amplia sala de fiestas con vistas a la bahÃ­a de Biscayne</li>
+                <li>Amplia sala de fiestas con vistas a la bahía de Biscayne</li>
                 <li>cine</li>
                 <li>Sala de vinos</li>
-                <li>Colección de arte de calidad museÃ­stica</li>
+                <li>Colección de arte de calidad museística</li>
                 <li>
                     Centro de negocios totalmente equipado, incluyendo sala de
                     conferencias
@@ -84,7 +84,7 @@ export default function CasaBella(lang: "en" | "es" = "es") {
                 <li>Espacio de coworking con un cómodo salón</li>
                 <li>Spa para mascotas</li>
                 <li>360 Wellness Center incluye:</li>
-                <li>Gimnasio de primer nivel con vistas a la bahÃ­a de Biscayne</li>
+                <li>Gimnasio de primer nivel con vistas a la bahía de Biscayne</li>
                 <li>Sala privada de yoga</li>
                 <li>Sala de spinning</li>
                 <li>

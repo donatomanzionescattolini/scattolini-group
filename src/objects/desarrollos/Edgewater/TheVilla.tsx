@@ -79,7 +79,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     Charles & Co.
                 </li>
                 <li>
-                    Infinitas vistas de 360Â° del amanecer y el atardecer que abarcan
+                    Infinitas vistas de 360° del amanecer y el atardecer que abarcan
                     la bahía, el océano, el centro de Miami y Miami Beach
                 </li>
                 <li>
@@ -105,18 +105,18 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     restaurantes del Design District
                 </li>
                 <li>Exuberantes jardines privados diseñados por Enzo Enea</li>
-                <li>Fachada de bahÃ­a premium que rodea dos lados del edificio</li>
+                <li>Fachada de bahía premium que rodea dos lados del edificio</li>
                 <li>
                     Embarcación flotante con piscina inspirada en el lago de Como en
-                    la BahÃ­a de Biscayne, junto a la cala
+                    la Bahía de Biscayne, junto a la cala
                 </li>
                 <li>Muelle privado con embarcadero</li>
                 <li>Acceso al helipuerto para llegadas y salidas sin problemas</li>
                 <li>Garaje privado con estaciones de carga eléctrica</li>
                 <li>
                     Un estilo de vida sin fisuras y de siguiente nivel imaginado y
-                    totalmente atendido por el aclamado equipo de MFG. Una filosofÃ­a
-                    de opulencia sin lÃ­mites en la que todas las necesidades se
+                    totalmente atendido por el aclamado equipo de MFG. Una filosofía
+                    de opulencia sin límites en la que todas las necesidades se
                     anticipan y se atienden
                 </li>
                 <li>Administrador de fincas in situ y curador interno</li>
@@ -133,7 +133,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                 <li>Bar de jugos y cafetería solo para residentes</li>
                 <li>Servicios de chef privado a domicilio y clases de cocina</li>
                 <li>
-                    Cocinas y comedores bajo demanda, asÃ­ como catering privado y en
+                    Cocinas y comedores bajo demanda, así como catering privado y en
                     el lugar
                 </li>
                 <li>Servicio de alimentos y bebidas junto a la piscina</li>
@@ -143,7 +143,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     amplio menú de tratamientos
                 </li>
                 <li>
-                    Gimnasio espacioso y lleno de luz con equipos Technogym de Ãºltima
+                    Gimnasio espacioso y lleno de luz con equipos Technogym de última
                     generación y estudios de yoga, pilates y boxeo totalmente
                     equipados
                 </li>
@@ -157,10 +157,10 @@ export default function TheVilla(lang: "en" | "es" = "es") {
             <>
                 <ul>
                     <li>
-                        Vistas panorÃ¡micas de la BahÃ­a de Biscayne y el Océano AtlÃ¡ntico
+                        Vistas panorámicas de la Bahía de Biscayne y el Océano Atlántico
                     </li>
                     <li>
-                        Los vestÃ­bulos de entrada se abren a amplios planos de planta
+                        Los vestíbulos de entrada se abren a amplios planos de planta
                         con alturas de techo de 10 a 11 pies
                     </li>
                     <li>
@@ -173,7 +173,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     </li>
                     <li>
                         Elección de pisos de madera o porcelana complementados con
-                        carpinterÃ­a personalizada para puertas, gabinetes y molduras
+                        carpintería personalizada para puertas, gabinetes y molduras
                     </li>
                     <li>
                         Cocinas de chef diseñadas a medida por Mario Carbone para
@@ -194,7 +194,7 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                         madera y la opción de acabado lacado verde o crema
                     </li>
                     <li>
-                        Despensas con microondas incorporado y estanterÃ­as generosas
+                        Despensas con microondas incorporado y estanterías generosas
                     </li>
                     <li>
                         Carta de materiales complementarios de latón, laca, acero
@@ -202,14 +202,14 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     </li>
                     <li>
                         Refrigeración y almacenamiento de vino incorporados con
-                        estanterÃ­as personalizadas y control de temperatura
+                        estanterías personalizadas y control de temperatura
                     </li>
                     <li>
-                        Amplias suites principales con vistas panorÃ¡micas, sala de estar
+                        Amplias suites principales con vistas panorámicas, sala de estar
                         y acceso directo al balcón
                     </li>
                     <li>
-                        Elegantes vestidores de estilo atelier con estanterÃ­as y
+                        Elegantes vestidores de estilo atelier con estanterías y
                         almacenamiento
                     </li>
                     <li>
@@ -219,9 +219,9 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     </li>
                     <li>
                         La bañera de gran tamaño a lo largo de la pared de la ventana
-                        ofrece vistas panorÃ¡micas del agua
+                        ofrece vistas panorámicas del agua
                     </li>
-                    <li>GriferÃ­a y molduras de baño Dornbracht y Duravit</li>
+                    <li>Grifería y molduras de baño Dornbracht y Duravit</li>
                     <li>Tocadores de madera italiana personalizados</li>
                     <li>
                         Hogar inteligente precableado para preferencias individuales de
@@ -229,21 +229,21 @@ export default function TheVilla(lang: "en" | "es" = "es") {
                     </li>
                     <li>
                         Todos los electrodomésticos de cocina de CornuFé, Wolf y
-                        Sub-Zero con electrodomésticos de lavanderÃ­a de Electrolux
+                        Sub-Zero con electrodomésticos de lavandería de Electrolux
                     </li>
                 </ul>
             </>
         ),
     };
     TheVillaObject.introduccion = [
-        "Las vibrantes vistas a la bahÃ­a y la ciudad, combinadas con 55 pisos de espacios indulgentes, definen este exclusivo desarrollo de condominio, compuesto por un total de 70 unidades que van desde 2,939 a 6,143 pies cuadrados. Con opciones de tres a cinco amplias habitaciones, cada detalle arquitectónico y de diseño se adapta de forma Ãºnica para crear un entorno lujoso y sin fisuras para los residentes. El renombrado equipo MFG se dedica a proporcionar un estilo de vida de alto nivel, anticipÃ¡ndose y respondiendo a cada necesidad con una filosofÃ­a de opulencia sin lÃ­mites. PrepÃ¡rese para sumergirse en una experiencia de primer nivel completamente incomparable.",
+        "Las vibrantes vistas a la bahía y la ciudad, combinadas con 55 pisos de espacios indulgentes, definen este exclusivo desarrollo de condominio, compuesto por un total de 70 unidades que van desde 2,939 a 6,143 pies cuadrados. Con opciones de tres a cinco amplias habitaciones, cada detalle arquitectónico y de diseño se adapta de forma única para crear un entorno lujoso y sin fisuras para los residentes. El renombrado equipo MFG se dedica a proporcionar un estilo de vida de alto nivel, anticipándose y respondiendo a cada necesidad con una filosofía de opulencia sin límites. Prepárese para sumergirse en una experiencia de primer nivel completamente incomparable.",
     ];
 
     TheVillaObject.slogan =
         <p className="text-lowercase w-50 mx-auto">
-            <span className="text-capitalize">Â¡El</span> rascacielos residencial
-            mÃ¡s sorprendente de" "; <span className="text-capitalize">Edgewater, Miami </span>finalmente
-            estÃ¡ aquÃ­!
+            <span className="text-capitalize">¡El</span> rascacielos residencial
+            más sorprendente de" "; <span className="text-capitalize">Edgewater, Miami </span>finalmente
+            está aquí!
             <br></br>
         </p>
     ;
