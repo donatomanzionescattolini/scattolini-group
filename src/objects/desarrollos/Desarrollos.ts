@@ -99,6 +99,27 @@ interface DesarrolloMapItem {
 
 export const desarrolloMap: DesarrolloMapItem[] =
     new Array<DesarrolloMapItem>();
+
+// Dynamic developments stored in Firestore
+export const dynamicDesarrolloMap: Record<string, Set<Desarrollo>> = {};
+
+/**
+ * Registers developments from Firestore into the dynamic map.
+ */
+export function registerDynamicDesarrollos(desarrollos: Desarrollo[]) {
+    desarrollos.forEach((des) => {
+        const areaName = des.area?.name || "Unknown";
+        if (!dynamicDesarrolloMap[areaName]) {
+            dynamicDesarrolloMap[areaName] = new Set<Desarrollo>();
+        }
+        // Avoid duplicates if already present
+        const existing = Array.from(dynamicDesarrolloMap[areaName]).find(d => d.nombre === des.nombre);
+        if (existing) {
+            dynamicDesarrolloMap[areaName].delete(existing);
+        }
+        dynamicDesarrolloMap[areaName].add(des);
+    });
+}
 desarrolloMap.push({
     area: Wynwood(),
     des: new Set([NomadResidences]),
@@ -239,11 +260,7 @@ export function getDesarrollosForArea(area: Area, lang: "en" | "es" = "es"): Set
     );
 
     const first = filtered[0];
-    if (!first) {
-        return new Set<Desarrollo>();
-    }
-
-    const instances = [...first.des].map((item) => {
+    const staticInstances = first ? [...first.des].map((item) => {
         let instance: Desarrollo;
         if (typeof item === "function") {
             instance = (item as (l: "en" | "es") => Desarrollo)(lang);
@@ -252,7 +269,18 @@ export function getDesarrollosForArea(area: Area, lang: "en" | "es" = "es"): Set
         }
         instance.area = first.area;
         return instance;
+    }) : [];
+
+    // Get dynamic developments for this area
+    const dynamicInstances = Array.from(dynamicDesarrolloMap[area.name] || []).map(des => {
+        // Ensure the area is set correctly
+        return { ...des, area };
     });
 
-    return new Set(instances);
+    // Merge static and dynamic, dynamic takes precedence for same nombre
+    const combined = new Map<string, Desarrollo>();
+    staticInstances.forEach(des => combined.set(des.nombre, des));
+    dynamicInstances.forEach(des => combined.set(des.nombre, des));
+
+    return new Set(combined.values());
 }

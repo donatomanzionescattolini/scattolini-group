@@ -8,7 +8,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Nav from "./components/Nav";
 import Liderazgo from "./components/Liderazgo.tsx";
 import AreasRoutes from "./routes/AreasRoutes.tsx";
-import React, {useLayoutEffect} from "react";
+import React, {useEffect, useLayoutEffect} from "react";
 import AliadosComponent from "./components/AliadosComponent.tsx";
 import AreasComponent from "./components/AreasComponent.tsx";
 import Equipo from "./components/AsociadosComponent.tsx";
@@ -22,9 +22,26 @@ import {useTranslation} from "./i18n.tsx";
 import DesarrollosRoutes from "./routes/DesarrollosRoutes.tsx";
 import {FloatingWhatsApp} from "react-floating-whatsapp";
 import FloatingLangToggle from "./components/FloatingLangToggle.tsx";
+import {getAllDesarrollos} from "./services/database";
+import {registerDynamicDesarrollos} from "./objects/desarrollos/Desarrollos";
 
 export default function App() {
     const {t} = useTranslation();
+
+    useEffect(() => {
+        const fetchDesarrollos = async () => {
+            try {
+                const dynamicDesarrollos = await getAllDesarrollos();
+                if (dynamicDesarrollos && dynamicDesarrollos.length > 0) {
+                    registerDynamicDesarrollos(dynamicDesarrollos as any);
+                }
+            } catch (error) {
+                console.error("Error fetching dynamic developments:", error);
+            }
+        };
+        fetchDesarrollos();
+    }, []);
+
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
     }, []);

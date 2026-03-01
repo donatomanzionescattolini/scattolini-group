@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Button, ListGroup, Spinner} from 'react-bootstrap';
 import Areas from '../../objects/areas/Areas';
-import {getDesarrollosForArea} from '../../objects/desarrollos/Desarrollos';
+import {getDesarrollosForArea, registerDynamicDesarrollos} from '../../objects/desarrollos/Desarrollos';
 import {saveDesarrollo, serializeDesarrollo,} from '../../services/database';
 import MultiStepWizard from './MultiStepWizard';
 import {useTranslation} from '../../i18n.tsx';
@@ -102,6 +102,8 @@ export default function DesarrolloEditor() {
             delete payload.areaName;
 
             await saveDesarrollo(desarrolloId, serializeDesarrollo(payload));
+            // Update the dynamic map immediately
+            registerDynamicDesarrollos([payload]);
             loadDesarrollos();
             setMessage(String(t('pages.editor.messages.desarrolloSaved', 'Development saved successfully')));
             setMessageType('success');

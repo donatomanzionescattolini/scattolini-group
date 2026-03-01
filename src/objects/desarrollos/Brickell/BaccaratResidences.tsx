@@ -5,7 +5,7 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 export default function BaccaratResidences(lang: "en" | "es" = "es") {
     const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("baccarat", lang);
 
-    const baccaratResidencesObject = Object.getPrototypeOf(Desarrollo);
+    const baccaratResidencesObject = new Desarrollo(Brickell());
     baccaratResidencesObject.banner = true;
     baccaratResidencesObject.area = Brickell();
 

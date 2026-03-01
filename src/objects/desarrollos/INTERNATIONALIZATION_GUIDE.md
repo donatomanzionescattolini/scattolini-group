@@ -60,11 +60,15 @@ desarrollos: {
 
 Replace your development file with the internationalized pattern:
 
-```typescriptimport Brickell from "../../areas/Brickell.tsx";
-export default function YourDevelopment() {
-    const { getLocalizedField, getLocalizedArray } = useDesarrolloI18n("yourDevelopmentKey");
+```typescript
+import Brickell from "../../areas/Brickell.tsx";
+import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
+import { useDesarrolloI18n } from "../useDesarrolloI18n";
 
-    const desarrolloObject = Object.getPrototypeOf(Desarrollo);
+export default function YourDevelopment(lang: "en" | "es" = "es") {
+    const { getLocalizedField, getLocalizedArray } = useDesarrolloI18n("yourDevelopmentKey", lang);
+
+    const desarrolloObject = new Desarrollo(Area());
     desarrolloObject.banner = true;
     desarrolloObject.area = Brickell();
     desarrolloObject.nombre = "your-development-key";

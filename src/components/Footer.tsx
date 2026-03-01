@@ -30,9 +30,19 @@ export default function Footer() {
 
                         return (
                             <div key={entry.area.name} className="col-auto mb-md-0 mb-3 text-center px-4">
-                                <h5 className="text-uppercase">{areaTitle}</h5>
+                                <h5 className="text-uppercase">
+                                    <a href={`/areas/${entry.area.name}/`} className="footer-area-link">
+                                        {areaTitle}
+                                    </a>
+                                </h5>
                                 <ul className="list-unstyled text-center">
-                                    {[...entry.des].map((des, idx) => {
+                                    {[...entry.des].map((item, idx) => {
+                                        let des: any;
+                                        if (typeof item === "function") {
+                                            des = item(lang);
+                                        } else {
+                                            des = item;
+                                        }
                                         const desTitle = getLocalized(des.titulo, des.nombre);
                                         if (!desTitle) return null;
 
