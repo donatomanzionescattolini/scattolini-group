@@ -19,6 +19,7 @@ import PompanoBeachRoutes from "./desarrollos/PompanoBeachRoutes";
 import SouthMiamiRoutes from "./desarrollos/SouthMiamiRoutes";
 import SunnyIslesRoutes from "./desarrollos/SunnyIslesRoutes";
 import WynwoodRoutes from "./desarrollos/WynwoodRoutes";
+import OrlandoRoutes from "./desarrollos/OrlandoRoutes.tsx";
 
 export default function DesarrollosRoutes() {
     return (
@@ -43,6 +44,7 @@ export default function DesarrollosRoutes() {
             {DaniaBeachRoutes()}
             {PompanoBeachRoutes()}
             {HollywoodRoutes()}
+            {OrlandoRoutes()}
         </>
     );
 }

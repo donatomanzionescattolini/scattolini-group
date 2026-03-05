@@ -91,6 +91,8 @@ import SevenParkResidences from "./Hollywood/SevenParkResidences.tsx";
 import GaiaResidences from "./Hollywood/GaiaResidences.tsx";
 import FaenaResidences from "./MiamiBeach/FaenaResidences.tsx";
 import TheWellCoconutGrove from "./CoconutGrove/TheWellCoconutGrove.tsx";
+import Orlando from "../areas/Orlando.tsx";
+import Cassia from "./CoralGables/Cassia.tsx";
 
 interface DesarrolloMapItem {
     area: Area;
@@ -124,7 +126,10 @@ desarrolloMap.push({
     area: Wynwood(),
     des: new Set([NomadResidences]),
 });
-
+desarrolloMap.push({
+    area: Orlando,
+    des: new Set([])
+})
 desarrolloMap.push({
     area: PompanoBeach(),
     des: new Set([WPompanoBeach, EnvyResidence]),
@@ -243,7 +248,7 @@ desarrolloMap.push({
 });
 desarrolloMap.push({
     area: CoralGables(),
-    des: new Set([TheAvenue, CoraMerrickPark]),
+    des: new Set([TheAvenue, CoraMerrickPark, Cassia]),
 });
 
 desarrolloMap.push({

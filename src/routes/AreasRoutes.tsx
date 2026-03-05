@@ -22,6 +22,7 @@ import PompanoBeachComponent from "../components/areas/PompanoBeachComponent";
 import SouthMiamiComponent from "../components/areas/SouthMiamiComponent";
 import SunnyIslesComponent from "../components/areas/SunnyIslesComponent";
 import WynwoodCoponent from "../components/areas/WynwoodComponent";
+import {OrlandoComponent} from "../components/areas/OrlandoComponent.tsx";
 
 export default function AreasRoutes() {
     return (
@@ -49,6 +50,7 @@ export default function AreasRoutes() {
                 element={<MiamiBeachComponent/>}
                 path="/areas/miami-beach"
             />
+                <Route element={<OrlandoComponent/>} path={"/areas/orlando"}/>
             <Route
                 element={<FtLauderdaleComponent/>}
                 path={"/areas/ft-lauderdale"}
