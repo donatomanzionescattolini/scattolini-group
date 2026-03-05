@@ -1,5 +1,4 @@
 import {Col, Row} from "react-bootstrap";
-import {Link} from "react-router-dom";
 import {useTranslation} from "../i18n";
 
 export default function AliadosComponent() {
@@ -17,20 +16,20 @@ export default function AliadosComponent() {
             <h2 className="text-center mt-5 display-6">{t("nav.aliados")}</h2>
             <hr className="hr hr-blurry w-50 mx-auto"/>
             <Row
-                style={{width: "60vw", marginInline: "auto"}}
-                className="p-5 d-flex flex-row flex-nowrap justify-content-center align-items-center"
+                style={{width: "80vw", marginInline: "auto"}}
+                className="p-5 d-flex flex-row flex-wrap justify-content-center align-items-center"
             >
-                <Col xs={12} sm={12} md={12} lg={4} xl={4}>
-                    <Link to="#">
+                <Col xs={6} sm={6} md={4} lg={2} xl={2} className="p-3">
+                    <a href="https://www.instagram.com/huehouseagency/" target="_blank" rel="noopener noreferrer">
                         <img
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/hue-house.png"
                             alt={String(t("pages.aliados.hueHouseAlt") || "")}
                             width="100%"
                         />
-                    </Link>
+                    </a>
                 </Col>
-                <Col xs={12} sm={12} md={12} lg={4} xl={4}>
-                    <a href="https://www.manzionesdesign.com/">
+                <Col xs={6} sm={6} md={4} lg={2} xl={2} className="p-3">
+                    <a href="https://www.manzionesdesign.com/" target="_blank" rel="noopener noreferrer">
                         <img
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/manzionesdesign.png"
                             alt={String(t("pages.aliados.manzioneDesignAlt") || "")}
@@ -38,12 +37,22 @@ export default function AliadosComponent() {
                         />
                     </a>
                 </Col>
-                <Col xs={12} sm={12} md={12} lg={4} xl={4}>
+                <Col xs={6} sm={6} md={4} lg={2} xl={2} className="p-3">
                     <a href="/manzione-properties/">
                         <img
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/manzioneproperties.webp"
                             alt={String(t("pages.aliados.manzionePropertiesAlt") || "")}
                             width="100%"
+                        />
+                    </a>
+                </Col>
+                <Col xs={6} sm={6} md={4} lg={3} xl={3} className="p-3">
+                    <a href="https://www.retimaca.com/" target="_blank" rel="noopener noreferrer">
+                        <img
+                            src="https://www.retimaca.com/logo.svg"
+                            alt={String(t("pages.aliados.hardwoodRetimacaAlt") || "")}
+                            width="100%"
+                            style={{mixBlendMode: "multiply"}}
                         />
                     </a>
                 </Col>

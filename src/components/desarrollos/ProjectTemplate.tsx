@@ -145,7 +145,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
               >
                 <i className="fas fa-map-marker-alt me-1"></i>
                 {t("pages.project.locatedIn", "Located in")}
-                <strong>{getLocalized(area.titulo)}</strong>
+                <b>&nbsp;{getLocalized(area.titulo)}</b>
               </Link>
             </div>
           )}
