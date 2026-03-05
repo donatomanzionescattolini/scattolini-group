@@ -93,6 +93,7 @@ import FaenaResidences from "./MiamiBeach/FaenaResidences.tsx";
 import TheWellCoconutGrove from "./CoconutGrove/TheWellCoconutGrove.tsx";
 import Orlando from "../areas/Orlando.tsx";
 import Cassia from "./CoralGables/Cassia.tsx";
+import WindsorCayResort from "./Orlando/WindsorCayResort.tsx";
 
 interface DesarrolloMapItem {
     area: Area;
@@ -128,7 +129,7 @@ desarrolloMap.push({
 });
 desarrolloMap.push({
     area: Orlando,
-    des: new Set([])
+    des: new Set([WindsorCayResort])
 })
 desarrolloMap.push({
     area: PompanoBeach(),

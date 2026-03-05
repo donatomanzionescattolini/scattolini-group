@@ -1,0 +1,4 @@
+find . -type f -name "*.pdf" -exec mv "{}" . \;
+
+find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.tiff" \) -exec mv {} . \;
+
