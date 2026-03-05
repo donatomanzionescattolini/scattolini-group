@@ -3,6 +3,7 @@ import "@material/banner/dist/mdc.banner.min.css";
 
 import * as React from "react";
 import {
+  JSX,
   ReactNode,
   useEffect,
   useLayoutEffect,
@@ -10,59 +11,38 @@ import {
   useState,
 } from "react";
 import { useTranslation } from "../../i18n.tsx";
-import { Col, Container, Nav, Row, Tab } from "react-bootstrap";
+import {Accordion, Col, Container, Nav, Row, Tab} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ProjectParams } from "../../models/desarrollos/ProjectParams.tsx";
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
 import ContactFormComponent from "../../components/ContactFormComponent.tsx";
 import AreasComponent from "../../components/AreasComponent.tsx";
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
+import SlideshowGalleryDesarrollo from "./SlideshowGalleryDesarrollo.tsx";
 
-export default function ProjectTemplate(paramz: ProjectParams) {
+export default function ProjectTemplate({ desarrollo }: ProjectParams) {
   const { t, lang } = useTranslation();
-  const params = useMemo<Desarrollo>(() => {
-    const desarrollo = paramz.desarrollo;
-    if (typeof desarrollo === "function") {
-      return (desarrollo as (locale?: "en" | "es") => Desarrollo)(lang);
-    }
-    return desarrollo;
-  }, [paramz.desarrollo, lang]);
-  const nombre = params.nombre;
-  const area = params.area;
+  const params = useMemo<Desarrollo>(
+    () => (typeof desarrollo === "function" ? desarrollo(lang) : desarrollo),
+    [desarrollo, lang]
+  );
+  const { nombre, area, video, banner, titulo, slogan, introduccion, numberOfImages, caracteristicas } = params;
   const desarrollosArea = useMemo(() => getDesarrollosForArea(area), [area]);
   const [tabVisible, setTabVisible] = useState("brochure");
-  const video: string | ReactNode = params.video
-    ? params.video
-    : `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`;
+  const videoUrl = video || `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`;
 
-  const banner = params.banner;
-  // compute localized values for titulo and subtitulo to avoid passing Record types into JSX
-  const isPlaceholder = (value: unknown): boolean =>
-    typeof value === "string" && value.trim().toLowerCase() === "latest";
-
-  const getLocalized = (
-    field: string | Record<string, string> | undefined | null,
-  ) => {
-    if (!field) return "";
+  const getLocalized = (field: string | Record<string, string> | undefined | null) => {
+    if (!field || (typeof field === "string" && field.trim().toLowerCase() === "latest")) return "";
     if (typeof field === "object") {
-      const preferred = field[lang];
-      if (preferred && !isPlaceholder(preferred)) return preferred;
-      const spanish = field["es"];
-      if (spanish && !isPlaceholder(spanish)) return spanish;
-      const firstValid = Object.values(field).find(
-        (value) => value && !isPlaceholder(value),
-      );
-      return firstValid || "";
+      return field[lang] || field.es || Object.values(field).find(v => v && v.trim().toLowerCase() !== "latest") || "";
     }
-    if (isPlaceholder(field)) return "";
     return field;
   };
-  const localizedTitulo: string = String(getLocalized(params.titulo));
-  const localizedSubtitulo: string = String(getLocalized(params.slogan));
-  const introduccion: Array<string> = Array.isArray(params.introduccion)
-    ? params.introduccion
-    : [];
+  const localizedTitulo = String(getLocalized(titulo));
+  const localizedSubtitulo = String(getLocalized(slogan));
+  const paragraphs = Array.isArray(introduccion) ? introduccion : [];
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+
 
   useEffect(() => {
     const onResize = () => setInnerWidth(window.innerWidth);
@@ -151,7 +131,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           )}
           <div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3    text-justify responsive">
             <div className=" mx-lg-5 mx-xl-5 mx-md-1 mx-sm-1 mx-xs-1 px-5 font-16 text-center">
-              {introduccion.map((par: string, idx: number) => (
+              {paragraphs.map((par: string, idx: number) => (
                 <p key={`intro-${idx}`}>{par}</p>
               ))}
             </div>
@@ -162,8 +142,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
       <section className="white-block">
         <div className="project-video-wrapper">
           <div className="project-video-inner">
-            {typeof video !== "string" || !video ? (
-              video
+            {typeof videoUrl !== "string" ? (
+              videoUrl
             ) : (
               <video
                 width="auto"
@@ -176,21 +156,79 @@ export default function ProjectTemplate(paramz: ProjectParams) {
                 preload="auto"
                 className="mx-auto my-0 p-0"
               >
-                <source
-                  src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`}
-                  type="video/mp4"
-                />
-                {t(
-                  "common.videoNotSupported",
-                  "Your browser does not support the video tag.",
-                )}
+                <source src={videoUrl} type="video/mp4" />
+                {t("common.videoNotSupported", "Your browser does not support the video tag.")}
               </video>
             )}
           </div>
         </div>
       </section>
-      <div className="skew-c"></div>
       <section className="colour-block">
+        <Container>
+          <br />
+          <div>
+            <h3 className="text-center">Características</h3>
+          </div>
+          <hr className="hr hr-blurry w-50 mx-auto" />
+
+          <Accordion id="accordion" className="m-5 w-fit-content">
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Edificio</Accordion.Header>
+              <Accordion.Body>{caracteristicas?.edificio}</Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>Residencias</Accordion.Header>
+              <Accordion.Body>{caracteristicas?.residencias}</Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="2">
+              <Accordion.Header>Amenidades</Accordion.Header>
+              <Accordion.Body>{caracteristicas?.amenidades}</Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </Container>
+      </section>
+      <div className="skew-cc"></div>
+      <section className="white-block" id="galeria-proyectos">
+        <Container>
+          <br></br>
+
+          <div>
+            <h3 className="text-center">Galería Fotográfica</h3>
+          </div>
+          <hr className="hr hr-blurry w-50 mx-auto" />
+
+          <br></br>
+
+          <SlideshowGalleryDesarrollo
+              name={nombre}
+              numberOfImages={numberOfImages as number}
+          />
+          {/* <SlideshowGalleryDesarrollo2
+          name={nombre}
+          numberOfImages={numberOfImages as number}
+        /> */}
+        </Container>
+      </section>
+      <div className="skew-c"></div>
+
+      <section className="colour-block">
+        <Container>
+          <h3 className="text-center mb-4">
+            {t("pages.project.galeria", "Photo Gallery")}
+          </h3>
+          <hr className="hr hr-blurry w-50 mx-auto" />
+          {numberOfImages > 0 && (
+            <SlideshowGalleryDesarrollo name={nombre} numberOfImages={numberOfImages} />
+          )}
+        </Container>
+      </section>
+
+      <div className="skew-cc"></div>
+
+
+      <section className="white-block">
         <Container className="embed-responsive small responsive centered">
           <br></br>
           <div>
@@ -365,8 +403,8 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           </Tab.Container>
         </Container>
       </section>
-      <div className="skew-cc"></div>
-      <section className="white-block">
+      <div className="skew-c"></div>
+      <section className="colour-block">
         <Container>
           <br />
           <br></br>
@@ -378,21 +416,21 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           <hr className="hr hr-blurry w-50 mx-auto" />
 
           <br></br>
-          {/*<MDBRow className="d-flex flex-row flex-wrap justify-content-between mt-3 mx-auto">*/}
+          {/*<Row className="d-flex flex-row flex-wrap justify-content-between mt-3 mx-auto">*/}
 
           {/*    {[...desarrollosArea].map((des) => {*/}
-          {/*        return (<MDBCol xs={12} sm={12} md={6} lg={4} xl={4}>*/}
-          {/*            <MDBCard>*/}
-          {/*                <MDBCardHeader><MDBCardTitle>{des.titulo}</MDBCardTitle></MDBCardHeader>*/}
-          {/*                <MDBCardSubTitle>{des.subtitulo}</MDBCardSubTitle>*/}
-          {/*                <MDBCardImage className="img-thumbnail img-fluid"*/}
-          {/*                              src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${des.nombre}.webp)`}></MDBCardImage>*/}
+          {/*        return (<Col xs={12} sm={12} md={6} lg={4} xl={4}>*/}
+          {/*            <Card>*/}
+          {/*                <CardHeader><CardTitle>{des.titulo}</CardTitle></CardHeader>*/}
+          {/*                <CardSubTitle>{des.subtitulo}</CardSubTitle>*/}
+          {/*                <CardImage className="img-thumbnail img-fluid"*/}
+          {/*                              src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${des.nombre}.webp)`}></CardImage>*/}
 
-          {/*            </MDBCard>*/}
-          {/*        </MDBCol>);*/}
+          {/*            </Card>*/}
+          {/*        </Col>);*/}
           {/*    })}*/}
 
-          {/*</MDBRow>*/}
+          {/*</Row>*/}
           <Row>
             {[...desarrollosArea.values()].map((desarrollo, idx) => {
               return (
@@ -434,12 +472,12 @@ export default function ProjectTemplate(paramz: ProjectParams) {
         {/* </div> */}
         <br></br>
       </section>
-      <div className="skew-c"></div>
-      <section className="colour-block">
-        <AreasComponent />
-      </section>
       <div className="skew-cc"></div>
       <section className="white-block">
+        <AreasComponent />
+      </section>
+      <div className="skew-c"></div>
+      <section className="colour-block">
         <h2 className={""}>{t("pages.project.contactUsToday")}</h2>
         {innerWidth <= 768 && (
           <Container>
@@ -455,7 +493,7 @@ export default function ProjectTemplate(paramz: ProjectParams) {
           </Container>
         )}
       </section>
-      <div className="skew-c"></div>
+      <div className="skew-cc"></div>
     </>
   );
 }
