@@ -1,17 +1,9 @@
 ﻿import "bootstrap/dist/css/bootstrap.min.css";
 import "@material/banner/dist/mdc.banner.min.css";
 
-import * as React from "react";
-import {
-  JSX,
-  ReactNode,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useState,
-} from "react";
-import { useTranslation } from "../../i18n.tsx";
-import {Accordion, Col, Container, Nav, Row, Tab} from "react-bootstrap";
+import { isValidElement, ReactNode, useEffect, useLayoutEffect, useMemo, useState } from "react";
+import { resolveLocalizedValue, useTranslation } from "../../i18n.tsx";
+import { Accordion, Col, Container, Nav, Row, Tab } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ProjectParams } from "../../models/desarrollos/ProjectParams.tsx";
 import Desarrollo from "../../models/desarrollos/Desarrollo.tsx";
@@ -20,42 +12,106 @@ import AreasComponent from "../../components/AreasComponent.tsx";
 import { getDesarrollosForArea } from "../../objects/desarrollos/Desarrollos.ts";
 import SlideshowGalleryDesarrollo from "./SlideshowGalleryDesarrollo.tsx";
 
+type LocalizedCharacteristics = {
+  edificio?: ReactNode;
+  residencias?: ReactNode;
+  amenidades?: ReactNode;
+};
+
+function hasRenderableContent(content: ReactNode): boolean {
+  if (content === null || content === undefined || content === false) return false;
+  if (typeof content === "string") return content.trim().length > 0;
+  if (typeof content === "number") return true;
+  if (Array.isArray(content)) return content.some(hasRenderableContent);
+  if (isValidElement(content)) return hasRenderableContent(content.props.children);
+  return false;
+}
+
 export default function ProjectTemplate({ desarrollo }: ProjectParams) {
   const { t, lang } = useTranslation();
   const params = useMemo<Desarrollo>(
     () => (typeof desarrollo === "function" ? desarrollo(lang) : desarrollo),
     [desarrollo, lang]
   );
-  const { nombre, area, video, banner, titulo, slogan, introduccion, numberOfImages, caracteristicas } = params;
-  const desarrollosArea = useMemo(() => getDesarrollosForArea(area), [area]);
+
+  const {
+    nombre,
+    area,
+    video,
+    banner,
+    titulo,
+    slogan,
+    introduccion,
+    numberOfImages,
+    caracteristicas,
+  } = params;
+
+  const desarrollosArea = useMemo(
+    () => getDesarrollosForArea(area, lang),
+    [area, lang]
+  );
   const [tabVisible, setTabVisible] = useState("brochure");
-  const videoUrl = video || `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`;
-
-  const getLocalized = (field: string | Record<string, string> | undefined | null) => {
-    if (!field || (typeof field === "string" && field.trim().toLowerCase() === "latest")) return "";
-    if (typeof field === "object") {
-      return field[lang] || field.es || Object.values(field).find(v => v && v.trim().toLowerCase() !== "latest") || "";
-    }
-    return field;
-  };
-  const localizedTitulo = String(getLocalized(titulo));
-  const localizedSubtitulo = String(getLocalized(slogan));
-  const paragraphs = Array.isArray(introduccion) ? introduccion : [];
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  const videoUrl =
+    video ||
+    `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`;
 
+  const getLocalizedString = (
+    field: string | Record<string, string | undefined> | undefined | null,
+    fallback = ""
+  ) => resolveLocalizedValue<string>(field ?? undefined, lang) || fallback;
+
+  const getLocalizedArray = (
+    field: string[] | Record<string, string[] | undefined> | undefined | null,
+    fallback: string[] = []
+  ) => resolveLocalizedValue<string[]>(field ?? undefined, lang) || fallback;
+
+  const getLocalizedCharacteristics = (
+    field:
+      | LocalizedCharacteristics
+      | Record<string, LocalizedCharacteristics | undefined>
+      | undefined
+      | null
+  ) => resolveLocalizedValue<LocalizedCharacteristics>(field ?? undefined, lang);
+
+  const localizedTitulo = getLocalizedString(titulo, nombre);
+  const localizedSubtitulo = getLocalizedString(slogan);
+  const localizedAreaTitle = getLocalizedString(area?.titulo, area?.name || "");
+  const paragraphs = getLocalizedArray(introduccion).filter(
+    (paragraph) => paragraph.trim().length > 0
+  );
+  const localizedCaracteristicas = getLocalizedCharacteristics(caracteristicas);
+  const characteristicSections = [
+    {
+      key: "edificio",
+      title: t("pages.project.edificio", "Edificio"),
+      content: localizedCaracteristicas?.edificio,
+    },
+    {
+      key: "residencias",
+      title: t("pages.project.residencias", "Residencias"),
+      content: localizedCaracteristicas?.residencias,
+    },
+    {
+      key: "amenidades",
+      title: t("pages.project.amenidades", "Amenidades"),
+      content: localizedCaracteristicas?.amenidades,
+    },
+  ].filter((section) => hasRenderableContent(section.content));
 
   useEffect(() => {
     const onResize = () => setInnerWidth(window.innerWidth);
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
+
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
-      <a id="top" href="#top">
+      <div id="top">
         <Container
           fluid
           id={"banner"}
@@ -105,18 +161,16 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
             </>
           )}
         </Container>
-      </a>
+      </div>
       <div className="skew-c"></div>
 
       <section className="colour-block">
         <Container>
-          <h2 className=" text-center animate-charcter" style={{}}>
-            {localizedTitulo}
-          </h2>
+          <h2 className=" text-center animate-charcter">{localizedTitulo}</h2>
 
           <hr className="hr hr-blurry w-50 mx-auto" />
-          {<h4 className="mt-0 text-center">{localizedSubtitulo}</h4>}
-          {area && (
+          {localizedSubtitulo && <h4 className="mt-0 text-center">{localizedSubtitulo}</h4>}
+          {area && localizedAreaTitle && (
             <div className="text-center mb-3">
               <Link
                 to={`/areas/${area.name}/`}
@@ -125,12 +179,12 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
               >
                 <i className="fas fa-map-marker-alt me-1"></i>
                 {t("pages.project.locatedIn", "Located in")}
-                <b>&nbsp;{getLocalized(area.titulo)}</b>
+                <b>&nbsp;{localizedAreaTitle}</b>
               </Link>
             </div>
           )}
-          <div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3    text-justify responsive">
-            <div className=" mx-lg-5 mx-xl-5 mx-md-1 mx-sm-1 mx-xs-1 px-5 font-16 text-center">
+          <div className="p-xl-5 p-lg-5 p-md-4 p-sm-4 p-xs-3 text-justify responsive">
+            <div className="mx-lg-5 mx-xl-5 mx-md-1 mx-sm-1 mx-xs-1 px-5 font-16 text-center">
               {paragraphs.map((par: string, idx: number) => (
                 <p key={`intro-${idx}`}>{par}</p>
               ))}
@@ -139,6 +193,7 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
         </Container>
       </section>
       <div className="skew-cc"></div>
+
       <section className="white-block">
         <div className="project-video-wrapper">
           <div className="project-video-inner">
@@ -157,78 +212,60 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
                 className="mx-auto my-0 p-0"
               >
                 <source src={videoUrl} type="video/mp4" />
-                {t("common.videoNotSupported", "Your browser does not support the video tag.")}
+                {t(
+                  "common.videoNotSupported",
+                  "Your browser does not support the video tag."
+                )}
               </video>
             )}
           </div>
         </div>
       </section>
+
       <section className="colour-block">
         <Container>
           <br />
           <div>
-            <h3 className="text-center">Características</h3>
+            <h3 className="text-center">
+              {t("pages.project.caracteristicas", "Características")}
+            </h3>
           </div>
           <hr className="hr hr-blurry w-50 mx-auto" />
 
-          <Accordion id="accordion" className="m-5 w-fit-content">
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>Edificio</Accordion.Header>
-              <Accordion.Body>{caracteristicas?.edificio}</Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="1">
-              <Accordion.Header>Residencias</Accordion.Header>
-              <Accordion.Body>{caracteristicas?.residencias}</Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="2">
-              <Accordion.Header>Amenidades</Accordion.Header>
-              <Accordion.Body>{caracteristicas?.amenidades}</Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
+          {characteristicSections.length > 0 && (
+            <Accordion id="accordion" className="m-5 w-fit-content">
+              {characteristicSections.map((section, idx) => (
+                <Accordion.Item eventKey={String(idx)} key={section.key}>
+                  <Accordion.Header>{section.title}</Accordion.Header>
+                  <Accordion.Body>{section.content}</Accordion.Body>
+                </Accordion.Item>
+              ))}
+            </Accordion>
+          )}
         </Container>
       </section>
       <div className="skew-cc"></div>
+
       <section className="white-block" id="galeria-proyectos">
         <Container>
           <br></br>
-
           <div>
-            <h3 className="text-center">Galería Fotográfica</h3>
+            <h3 className="text-center">
+              {t("pages.project.galeria", "Galería Fotográfica")}
+            </h3>
           </div>
           <hr className="hr hr-blurry w-50 mx-auto" />
-
           <br></br>
 
           <SlideshowGalleryDesarrollo
-              name={nombre}
-              numberOfImages={numberOfImages as number}
+            name={nombre}
+            numberOfImages={numberOfImages as number}
           />
-          {/* <SlideshowGalleryDesarrollo2
-          name={nombre}
-          numberOfImages={numberOfImages as number}
-        /> */}
         </Container>
       </section>
       <div className="skew-c"></div>
 
       <section className="colour-block">
-        <Container>
-          <h3 className="text-center mb-4">
-            {t("pages.project.galeria", "Photo Gallery")}
-          </h3>
-          <hr className="hr hr-blurry w-50 mx-auto" />
-          {numberOfImages > 0 && (
-            <SlideshowGalleryDesarrollo name={nombre} numberOfImages={numberOfImages} />
-          )}
-        </Container>
-      </section>
-
-      <div className="skew-cc"></div>
-
-
-      <section className="white-block">
         <Container className="embed-responsive small responsive centered">
           <br></br>
           <div>
@@ -260,31 +297,6 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
                 </Nav.Link>
               </Nav.Item>
             </Nav>
-            {/*{tabVisible === "none" &&*/}
-            {/*    (<><h1 className="display-6 text-center"><small className={"text-muted "}>Aprenda mas sobre este maravilloso proyecto!</small></h1>*/}
-            {/*    <br></br>*/}
-            {/*    <h1 className="display-3 text-center">Selecciona una de las fichas en la esquina izquierda de esta seccion </h1></>)*/}
-            {/*}*/}
-            {/* {(tabVisible === "brochure" ||
-            tabVisible === "hoja" ||
-            tabVisible === "planos") && (
-            <object
-              height={"100%"}
-              //   {/* const file =
-              //   fs.readFileSync(path.resolve("public/assets/Bonus_1.pdf")).toString("base64"); */}
-
-            {/* <PDFV
-              //     url={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-
-        {/* <embed
-              //     src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-              //     width="800px"
-              //     height="2100px" */}
-            {/* //   /> */}
-            {/* // </object> */}
-            {/* data={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/pdfs/${tabVisible}.pdf`}
-              style={{ width: "100%", height: 500 }}
-            > */}
             <Tab.Content>
               <Tab.Pane eventKey="brochure">
                 <div className="pdf-container text-center">
@@ -343,8 +355,7 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
                         className="btn btn-primary btn-lg"
                       >
                         <i className="fas fa-download me-2"></i>
-                        {t("pages.project.pdfUI.downloadBtn")}{" "}
-                        {t("pages.project.pdf.hoja")}
+                        {t("pages.project.pdfUI.downloadBtn")} {t("pages.project.pdf.hoja")}
                       </a>
                     </div>
                   </object>
@@ -381,8 +392,7 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
                         className="btn btn-primary btn-lg"
                       >
                         <i className="fas fa-download me-2"></i>
-                        {t("pages.project.pdfUI.downloadBtn")}{" "}
-                        {t("pages.project.pdf.planos")}
+                        {t("pages.project.pdfUI.downloadBtn")} {t("pages.project.pdf.planos")}
                       </a>
                     </div>
                   </object>
@@ -403,8 +413,9 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
           </Tab.Container>
         </Container>
       </section>
-      <div className="skew-c"></div>
-      <section className="colour-block">
+      <div className="skew-cc"></div>
+
+      <section className="white-block">
         <Container>
           <br />
           <br></br>
@@ -416,69 +427,50 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
           <hr className="hr hr-blurry w-50 mx-auto" />
 
           <br></br>
-          {/*<Row className="d-flex flex-row flex-wrap justify-content-between mt-3 mx-auto">*/}
-
-          {/*    {[...desarrollosArea].map((des) => {*/}
-          {/*        return (<Col xs={12} sm={12} md={6} lg={4} xl={4}>*/}
-          {/*            <Card>*/}
-          {/*                <CardHeader><CardTitle>{des.titulo}</CardTitle></CardHeader>*/}
-          {/*                <CardSubTitle>{des.subtitulo}</CardSubTitle>*/}
-          {/*                <CardImage className="img-thumbnail img-fluid"*/}
-          {/*                              src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${des.nombre}.webp)`}></CardImage>*/}
-
-          {/*            </Card>*/}
-          {/*        </Col>);*/}
-          {/*    })}*/}
-
-          {/*</Row>*/}
-          <Row>
-            {[...desarrollosArea.values()].map((desarrollo, idx) => {
-              return (
-                <Col
-                  key={desarrollo.nombre ?? idx}
-                  xs={12}
-                  sm={6}
-                  md={6}
-                  lg={4}
-                  xl={4}
-                  className="gallery-item"
-                >
-                  <Link to={`/desarrollos/${desarrollo.nombre}/`}>
-                    <div
-                      className="gallery-card"
-                      style={{
-                        backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
-                      }}
-                    />
-                    <h4 className="text-center">
-                      {getLocalized(desarrollo.titulo) ||
-                        (desarrollo.nombre || "")
-                          .split("-")
-                          .map((word: string, idx: number) => (
-                            <span key={`word-${idx}`}>
-                              {word.charAt(0).toUpperCase() +
-                                word.substring(1)}{" "}
-                            </span>
-                          ))}
-                    </h4>
-                  </Link>
-                </Col>
-              );
-            })}
+          <Row className="justify-content-center">
+            {[...desarrollosArea.values()].map((desarrollo, idx) => (
+              <Col
+                key={desarrollo.nombre ?? idx}
+                xs={12}
+                sm={6}
+                md={6}
+                lg={4}
+                xl={4}
+                className="gallery-item"
+              >
+                <Link to={`/desarrollos/${desarrollo.nombre}/`}>
+                  <div
+                    className="gallery-card"
+                    style={{
+                      backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
+                    }}
+                  />
+                  <h4 className="text-center">
+                    {getLocalizedString(desarrollo.titulo) ||
+                      (desarrollo.nombre || "")
+                        .split("-")
+                        .map((word: string, wordIdx: number) => (
+                          <span key={`word-${wordIdx}`}>
+                            {word.charAt(0).toUpperCase() + word.substring(1)}{" "}
+                          </span>
+                        ))}
+                  </h4>
+                </Link>
+              </Col>
+            ))}
           </Row>
         </Container>
-        {/* <div> */}
-        {/* <h3 className="text-center">Otras Áreas</h3> */}
-        {/* </div> */}
         <br></br>
       </section>
-      <div className="skew-cc"></div>
-      <section className="white-block">
+      <div className="skew-c"></div>
+
+      <section className="colour-block">
         <AreasComponent />
       </section>
-      <div className="skew-c"></div>
-      <section className="colour-block">
-        <h2 className={""}>{t("pages.project.contactUsToday")}</h2>
+      <div className="skew-cc"></div>
+
+      <section className="white-block">
+        <h2>{t("pages.project.contactUsToday")}</h2>
         {innerWidth <= 768 && (
           <Container>
             <ContactFormComponent />
@@ -493,7 +485,7 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
           </Container>
         )}
       </section>
-      <div className="skew-cc"></div>
+      <div className="skew-c"></div>
     </>
   );
 }

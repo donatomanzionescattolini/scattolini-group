@@ -1,16 +1,12 @@
 import React from "react";
 import {desarrolloMap} from "../objects/desarrollos/Desarrollos";
-import {useTranslation} from "../i18n.tsx";
+import {resolveLocalizedValue, useTranslation} from "../i18n.tsx";
 
 export default function Footer() {
     const {t, lang} = useTranslation();
 
     const getLocalized = (field: any, fallback = "") => {
-        if (!field) return fallback;
-        if (typeof field === "object") {
-            return field[lang] || field.es || Object.values(field)[0] || fallback;
-        }
-        return field || fallback;
+        return resolveLocalizedValue<string>(field, lang) || fallback;
     };
 
     // Filter to only include areas that have developments and have a valid title

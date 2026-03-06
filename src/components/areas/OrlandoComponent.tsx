@@ -8,6 +8,6 @@ export const OrlandoComponent = () => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <AreaTemplate area={Orlando}></AreaTemplate>
+        <AreaTemplate area={Orlando()}></AreaTemplate>
     );
 };

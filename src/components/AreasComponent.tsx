@@ -32,7 +32,7 @@ export default function AreasComponent(): React.ReactElement {
         const withoutProjects: typeof allAreas = [];
 
         allAreas.forEach((area) => {
-            const desarrollos = getDesarrollosForArea(area);
+            const desarrollos = getDesarrollosForArea(area, lang);
             if (desarrollos.size > 0) {
                 withProjects.push(area);
             } else {
@@ -41,7 +41,7 @@ export default function AreasComponent(): React.ReactElement {
         });
 
         return {areasWithProjects: withProjects, areasWithoutProjects: withoutProjects};
-    }, [allAreas]);
+    }, [allAreas, lang]);
 
     // Areas without projects (kept for future use):
     // These areas exist but have no active listings yet
@@ -58,7 +58,7 @@ export default function AreasComponent(): React.ReactElement {
             </div>
             <hr className="hr hr-blurry w-50 mx-auto"/>
 
-            <Row>
+            <Row className="justify-content-center">
                 {areas.map((area) => (
                     <Col key={area.name} xs={12} sm={6} md={6} lg={4} xl={4} className="gallery-item">
                         <Link to={`/areas/${area.name}/`}>

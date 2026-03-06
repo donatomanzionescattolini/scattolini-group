@@ -1,5 +1,5 @@
 import React, {useEffect, useMemo, useState} from "react";
-import {useTranslation} from "../i18n.tsx";
+import {resolveLocalizedValue, useTranslation} from "../i18n.tsx";
 import {useNavigate} from "react-router-dom";
 import {Container, Form, Nav as BsNav, Navbar, NavDropdown} from "react-bootstrap";
 import Areas from "../objects/areas/Areas";
@@ -85,21 +85,7 @@ const Nav = () => {
     };
 
     const getLocalized = (field: string | Record<string, string> | null | undefined) => {
-        if (!field) return "";
-        const isPlaceholder = (value: unknown) =>
-            typeof value === "string" && value.trim().toLowerCase() === "latest";
-        if (typeof field === "object") {
-            const preferred = field[lang];
-            if (preferred && !isPlaceholder(preferred)) return preferred;
-            const spanish = field.es;
-            if (spanish && !isPlaceholder(spanish)) return spanish;
-            const firstValid = Object.values(field).find(
-                (value) => value && !isPlaceholder(value)
-            );
-            return firstValid || "";
-        }
-        if (isPlaceholder(field)) return "";
-        return field;
+        return resolveLocalizedValue<string>(field, lang) || "";
     };
 
     return (

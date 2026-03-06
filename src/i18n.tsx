@@ -46,6 +46,14 @@ const translations: Record<Lang, any> = {
             areas: {
                 title: "Áreas",
                 photoAlt: "Foto del área",
+                orlando: {
+                    titulo: "Orlando",
+                    slogan: "The City Beautiful",
+                    descripcion: [
+                        "Orlando se ha consolidado como una de las ciudades más dinámicas y prometedoras de Florida, ideal tanto para quienes buscan un nuevo hogar como para quienes desean invertir estratégicamente en bienes raíces. Su crecimiento económico sostenido, la llegada constante de nuevas empresas y su calidad de vida —marcada por seguridad, áreas verdes y una oferta cultural en expansión— la convierten en una alternativa atractiva frente a los mercados más saturados del sur del estado. Además, su infraestructura moderna y su ubicación estratégica en el centro de Florida facilitan la conexión con el resto del país y con destinos internacionales.",
+                        "Para los inversionistas, Orlando ofrece un mercado inmobiliario con alta demanda de alquileres a largo y corto plazo, impulsado por su industria turística de clase mundial y por un flujo continuo de nuevos residentes. La combinación de precios competitivos, apreciación constante y un entorno favorable para negocios crea un escenario ideal para maximizar el retorno de inversión. En resumen, Orlando representa una oportunidad sólida y versátil, perfecta para quienes buscan estabilidad, crecimiento y un estilo de vida excepcional."
+                    ]
+                }
             },
             aliados: {
                 hueHouseAlt: "Logo de Hue House",
@@ -284,7 +292,7 @@ const translations: Record<Lang, any> = {
                         piscina: "Piscina estilo resort: una cubierta de piscina hermosamente ajardinada para la máxima relajación.",
                         salon: "Sofisticado salón y sala de entretenimiento: un área común elegante para socializar.",
                         mascotas: "Ventajas para mascotas: un área de mascotas designada para sus amigos peludos.",
-                        parque: "Parque infantil: un espacio divertido y seguro para que los niños prueguen.",
+                        parque: "Parque infantil: un espacio divertido y seguro para que los niños prueben.",
                     },
                 },
                 tipos: {
@@ -310,7 +318,7 @@ const translations: Record<Lang, any> = {
                 direccion: "2200 Brickell Ave, Miami, FL",
                 typeOfUnits: "Residencias de 1 a 4 habitaciones",
                 introduccion: [
-                    "2200 Brickell is a new condominio de lujo en South Brickell, diseñado por Revuelta Architecture y con diseño interior de ODA New York.",
+                    "2200 Brickell is a new condominio de lujo in South Brickell, diseñado por Revuelta Architecture y con diseño interior de ODA New York.",
                     "Estas lujosas residencias de 1 a 4 habitaciones ofrecen acabados espectaculares, electrodomésticos de alta calidad, ventanas de vidrio de piso a techo, estacionamiento asignado en espacios en el mismo piso y mucho más.",
                     "Los residentes en 2200 Brickell disfrutan de comodidades como una piscina estilo centro turístico con spa al aire libre y cabañas junto a la piscina, cancha de pickleball, cocina de verano, área de fitness al aire libre, área de juegos para niños, una pista para caminar de un cuarto de milla y más.",
                 ],
@@ -467,122 +475,124 @@ const translations: Record<Lang, any> = {
                     },
                 },
             },
-            "viceroy-brickell": {
-                titulo: "Viceroy Brickell",
+            cassia: {
+                titulo: "Cassia",
+                slogan: "A New Era of Classic Luxury",
+                direccion: "Merrick Park District, Coral Gables",
+                typeOfUnits: "1, 2 & 3 Bedrooms",
+                caracteristicas: {
+                    edificio: {
+                        direccion: "Address",
+                        pisos: "Number of Floors",
+                        unidades: "Number of Units",
+                        desarrollador: "Developer",
+                        espacioAmenidades: "Amenity Space",
+                        espacioAmenidadesValor: "Over 1 hectare of indoor and outdoor facilities",
+                    },
+                    residencias: {
+                        muebles: "Fully furnished with RH",
+                        cocina: "Italian kitchens with Bosch appliances",
+                        ventanas: "Floor-to-ceiling windows",
+                        tech: "Smart thermostats and TVs included",
+                        pisos: "Elegant imported large-format flooring",
+                        persianas: "Blackout blinds in bedrooms and living rooms",
+                        armarios: "Custom closets in master bedroom",
+                        armariosSeguridad: "Lockable closets for owners",
+                        backsplash: "Stunning backsplashes and elegant surfaces",
+                        gabinetes: "Imported soft-close cabinets",
+                    },
+                    amenidades: {
+                        spa: {
+                            titulo: "SPA",
+                            piscina: "Indoor pool",
+                            loungeRelax: "Relaxation lounge",
+                            vapor: "Steam room",
+                            sauna: "Sauna",
+                            masajes: "Massage and treatment cabins",
+                            banosDobles: "Spa baths for two",
+                            lockers: "Fully equipped lockers and showers",
+                            vestidores: "Dressing rooms",
+                        },
+                        fitness: {
+                            titulo: "State-of-the-Art Fitness Center",
+                            gym: "Fully equipped gym",
+                            yoga: "Yoga / Barre fitness studio",
+                            tech: "On-demand technology",
+                            equipamiento: "Cardio and strength training equipment",
+                            autoservicio: "24-hour self-service",
+                        },
+                        piscina: {
+                            titulo: "Resort-Style Elevated Pool",
+                            temperada: "Heated pool",
+                            cabinas: "Cabanas",
+                            espacioRelax: "Relaxation space",
+                            reposeras: "Lounge chairs",
+                            quincho: "BBQ/grill area",
+                            comedorExterior: "Outdoor dining areas",
+                            meson: "Bar and indoor dining",
+                            lounge: "Tropical-style poolside lounge",
+                            cocinaPrivada: "Private kitchen and dining for celebrations",
+                            loungeAmplio: "Spacious lounge area",
+                            entretenimiento: "Entertainment center",
+                            paisajismo: "Serene landscaping with lush vegetation",
+                        },
+                        negocios: {
+                            titulo: "Business Center",
+                            coworking: "Co-working Lounge",
+                            salaReuniones: "Meeting room",
+                            zoom: "Zoom offices",
+                            proyecciones: "Screening room",
+                        },
+                        lobby: {
+                            titulo: "Grand Lobby",
+                            cieloDoble: "Stunning double-height ceiling",
+                            espacios: "Sophisticated spaces",
+                        },
+                    },
+                },
                 introduccion: [
-                    "Viceroy Residences Brickell es una torre de lujo ubicada en Brickell, con impresionantes vistas y amenidades premium."
+                    "Discover a new dimension of luxury, where versatility meets refinement. Cassia brings a fresh perspective to the exclusive Coral Gables lifestyle, offering turnkey residences fully furnished by RH. Enjoy the flexibility to rent your home while traveling or keep it for your exclusive personal use.",
+                    "Following George Merrick's vision, who founded Coral Gables with pink sidewalks, vibrant gardens, and stunning architecture, Cassia proudly arrives with its 174 residences. Spacious one, two, and three-bedroom apartments, fully furnished with RH, offer a perfect fusion of comfort and elegance and are ready to be inhabited immediately. A captivating address in the center of the Merrick Park District, in the heart of Coral Gables, surrounded by beautiful gardens and selected art pieces.",
                 ],
-                direccion: "77 SE 5th St, Miami, FL 33131",
-                banner: "true",
-                numberOfImages: "35",
+                propiedadFlexible: "Enjoy the flexibility to rent your home when you're away or keep it exclusively for your personal use.",
+            },
+            "windsor-cay-resort": {
+                titulo: "Windsor Cay Resort",
+                slogan: "Casas vacacionales diseñadas para la vida estilo resort y una sólida proyección de alquiler",
+                introduccion: [
+                    "Windsor Cay Resort ofrece casas vacacionales en Orlando diseñadas para combinar estilo de resort, comodidad familiar y un fuerte atractivo para alquileres vacacionales.",
+                    "La comunidad reúne amenidades en el lugar, seguridad 24 horas y ubicaciones pensadas para aprovechar al máximo la cercanía a las atracciones más reconocidas de la zona."
+                ],
                 caracteristicas: {
                     edificio: {
-                        direccionLabel: "Dirección",
-                        añoLabel: "Año De Construcción O Finalización",
-                        pisosLabel: "Número De Pisos",
-                        unidadesLabel: "Número de Unidades",
-                        tipoLabel: "Tipo De Unidades",
-                        cuartosLabel: "Número de cuartos",
+                        resort: "Amenidades del resort en el lugar",
+                        marca: "Reconocimiento de marca internacional",
+                        seguridad: "Comunidad cerrada con vigilancia 24 horas",
+                        atracciones: "A minutos de atracciones de clase mundial",
+                        planos: "Planos diseñados para maximizar alquileres y retornos"
                     },
                     residencias: {
-                        p1: "Colección de residencias de torre con penthouses.",
-                        p2: "Planos de planta con estudios y residencias de 1–3 habitaciones."
+                        titulo: "Características principales de la casa",
+                        techo: "Techo de tejas",
+                        piscina: "Piscina privada climatizada",
+                        hab567: "5, 6 y 7 habitaciones con piscina de 12' x 24'",
+                        hab8910: "8, 9 y 10 habitaciones con piscina de 12' x 26'",
+                        townhomes: "Townhomes con piscina de 7.5' x 18'",
+                        entradas: "Entradas y terrazas de piscina con adoquines de ladrillo",
+                        electrodomesticos: "Electrodomésticos de acero inoxidable",
+                        closet: "Closet de almacenamiento para propietarios",
+                        granito: "Granito y azulejos en todas las cocinas y baños",
+                        persianas: "Persianas incluidas",
+                        lanai: "Lanai cubierto con cerca de seguridad para niños",
+                        lavadora: "Lavadora y secadora"
                     },
-                    amenidades: {
-                        p1: "Ubicación privilegiada en One Brickell con acceso al riverwalk.",
-                        p2: "Terraza estilo resort y servicios de bienestar."
+                    hoa: {
+                        titulo: "La asociación de propietarios incluye:",
+                        jardineria: "Mantenimiento completo de jardinería incluyendo riego de césped",
+                        internet: "Internet de alta velocidad y TV por cable",
+                        basura: "Recolección diaria de basura"
                     }
                 }
-            },
-            cipriani: {
-                titulo: "Cipriani Residences",
-                introduccion: ["Brillantemente diseñadas por Arquitectonica y 1508 London, estas elegantes residencias ofrecen lujo y servicio Cipriani."],
-                banner: "true",
-                numberOfImages: "14",
-                caracteristicas: {
-                    edificio: {
-                        p1: "Una adición distintiva al horizonte de Brickell.",
-                        li1: "Una elegante torre de 80 pisos con una fachada curva de vidrio en cascada",
-                        li2: "Colección de residencias incluidas áticos excepcionales",
-                        li3: "Servicios de comedor solo para residentes de Cipriani",
-                        li4: "Vistas panorámicas a la bahía y skyline",
-                    },
-                    residencias: {
-                        li1: "Amplias salas de estar con alturas de techo de 10 pies",
-                        li2: "Puertas y ventanas corredizas de vidrio de piso a techo",
-                        li3: "Acceso a terraza desde sala y dormitorio principal",
-                        li4: "Elegantes vestidores en cada dormitorio principal"
-                    },
-                    amenidades: {
-                        li1: "Entrada privada con jardines",
-                        li2: "Vestíbulo y ascensores de alta velocidad",
-                        li3: "Experiencias gastronómicas privadas Cipriani"
-                    }
-                }
-            },
-            lofty: {
-                titulo: "Lofty Residences Brickell",
-                introduccion: ["Lofty Residences es un condominio de 43 pisos que presenta un nuevo estándar de vida cosmopolita en Brickell."],
-                slogan: "Un Nuevo Estándar de Vida Cosmopolita en Brickell",
-                banner: "true",
-                numberOfImages: "55",
-                caracteristicas: {
-                    residencias: {
-                        title: "Las Residencias",
-                        li1: "Residencias urbanas de lujo con diseños abiertos modernos desde 485SF — 930 SF",
-                        li2: "Residencias entregadas completamente terminadas y amuebladas",
-                        li3: "Vistas panorámicas del río Miami"
-                    },
-                    edificio: {
-                        li1: "Alquileres a corto plazo permitidos",
-                        li2: "Vestíbulo de 2 pisos",
-                        li3: "Servicio de aparcacoches 24/7"
-                    },
-                    amenidades: {
-                        li1: "Piscina exótica del resort con cabañas",
-                        li2: "Bar y parrilla en la terraza de la piscina",
-                        li3: "Sala de coworking"
-                    }
-                }
-            },
-            "1428-brickell": {
-                titulo: "The Residences at 1428 Brickell",
-                introduccion: ["The Residences at 1428 Brickell fue cuidadosamente planificada para ofrecer comodidades y privacidad a cada residente."],
-                slogan: "Tu vida. A tu manera.",
-                banner: "true",
-                numberOfImages: "39"
-            },
-            "14-river-district": {
-                titulo: "14 River District",
-                introduccion: ["River District 14 ofrece un estilo de vida completo junto al río Miami y la bahía de Biscayne."],
-                direccion: "1420 NW 14th Ave, Miami, FL 33125",
-                numberOfImages: "27",
-                banner: "true"
-            },
-            "888-brickell-dolce-and-gabbana-residences": {
-                titulo: "888 Brickell Dolce & Gabbana Residences",
-                introduccion: ["888 Brickell by Dolce & Gabbana redefine la elegancia con residencias y hotel de marca en Miami."],
-                banner: "true",
-                numberOfImages: "21",
-                numberOfFloors: "90",
-                numberOfUnits: "259",
-                direccion: "888 Brickell Ave, Miami, FL 33131"
-            },
-            "mercedes-benz-places-miami": {
-                titulo: "Mercedes-Benz Places Miami",
-                introduccion: ["Mercedes-Benz Places Miami ofrece residencias de lujo con diseño y tecnología de primer nivel."],
-                slogan: "Miami, Living, Elevated",
-                nombre: "mercedes-benz-places-miami",
-                banner: "true",
-                numberOfImages: "17"
-            },
-            ora: {
-                titulo: "Ora by Casa Tua",
-                introduccion: ["ORA by Casa Tua ofrece residencias de propiedad flexible en Brickell con diseño italiano y servicios de hospitalidad."],
-                slogan: "Residencias con Alma en el Corazón de Miami",
-                banner: "true",
-                numberOfImages: "14",
-                video: "https://player.vimeo.com/video/806352821autoplay=true"
             },
         },
         common: {
@@ -642,6 +652,14 @@ const translations: Record<Lang, any> = {
             areas: {
                 title: "Areas",
                 photoAlt: "Area photo",
+                orlando: {
+                    titulo: "Orlando",
+                    slogan: "The City Beautiful",
+                    descripcion: [
+                        "Orlando has established itself as one of Florida's most dynamic and promising cities, ideal for both those seeking a new home and those looking to invest strategically in real estate. Its sustained economic growth, the constant arrival of new companies, and its quality of life—marked by safety, green spaces, and an expanding cultural offering—make it an attractive alternative to the more saturated markets in the southern part of the state. Additionally, its modern infrastructure and strategic location in central Florida facilitate connections with the rest of the country and international destinations.",
+                        "For investors, Orlando offers a real estate market with high demand for long and short-term rentals, driven by its world-class tourism industry and a continuous flow of new residents. The combination of competitive prices, constant appreciation, and a business-friendly environment creates an ideal scenario to maximize return on investment. In summary, Orlando represents a solid and versatile opportunity, perfect for those seeking stability, growth, and an exceptional lifestyle."
+                    ]
+                }
             },
             aliados: {
                 hueHouseAlt: "Hue House logo",
@@ -928,7 +946,7 @@ const translations: Record<Lang, any> = {
                     "Elle Residences Miami is a collection of 180 elegant residences with no rental restrictions. Its interior design features a nod to the magazine's Parisian roots.",
                     "Exclusive design by Behar Font & Partners and refined interiors by The One Atelier come together to offer an exquisite collection of homes in the Edgewater area.",
                 ],
-                direccion: "3618 NE 5th Ave, Miami, FL 33137, United States",
+                direccion: "3618 NE 5th Ave, Miami, FL 33137, Estados Unidos",
                 caracteristicas: {
                     residencias: {
                         descripcion: "Acquire your own floor in the heart of Miami. Inspired by the pages of ELLE Decor, the residences combine mid-century modern style and contemporary French style with a touch of tropical luxury.",
@@ -963,7 +981,7 @@ const translations: Record<Lang, any> = {
                 direccion: "6940 Abbot Avenue, Miami Beach, FL 33141",
                 caracteristicas: {
                     edificio: {
-                        pisos: "95 residences",
+                        pisos: "95 residencias",
                         unidades: "1 to 2 bedroom apartments",
                         constructora: "Constellation",
                         finalizacion: "2026",
@@ -1010,58 +1028,177 @@ const translations: Record<Lang, any> = {
                 ubicacion: "1034 SW 2nd Ave, Miami FL 33130",
                 caracteristicas: {
                     amenidades: {
-                        descripcion: "Domus Brickell Center offers unique amenities to cater to its residents' needs, such as a rooftop pool, bar, grilling area, lounge, 1,540-square-foot ground floor food and beverage, spacious lobby with approximately 4,000 square feet of meeting space, surround sound speakers and ambient music, pet-friendly building, EV charging stations, Domus bike sharing, specialized air filtration system in all common areas and more...",
-                        salonVestibulo: "The Cypress Room lobby lounge",
-                        cafe: "Barista café and bakery",
-                        vinos: "Wine bar with covered terrace",
-                        mercado: "Artisanal market",
-                        patio: "Outdoor patio in a covered garden",
-                        gimnasio: "State-of-the-art fitness center",
-                        piscinaAzotea: "Rooftop pool with panoramic city and bay views",
-                        cabanas: "Cabanas with day beds",
-                        jacuzzi: "Hot tub",
-                        yoga: "Rooftop yoga space",
-                        barAzotea: "Rooftop bar",
-                        coworking: "Ample coworking space",
-                        reuniones: "Meeting/conference room",
-                        bienvenida: "24-hour welcome room",
-                        valet: "24-hour valet service",
-                        atencion: "24-hour customer service line",
-                        operador: "Experienced hotel operator to oversee unit management",
-                        limpieza: "Experienced housekeeping team",
-                        hoteleria: "in hospitality",
-                        portal: "Rental portal for owners",
+                        descripcion: "Domus Brickell Center ofrece comodidades únicas para satisfacer las necesidades de sus residentes, como una piscina en la azotea, bar, área de parrilla, salón, alimentos y bebidas en la planta baja de 143 metros cuadrados, amplio lobby con aproximadamente 371 metros cuadrados de espacio para reuniones, parlantes con sonido envolvente y ambiente. Música, edificio que admite mascotas, estaciones de carga para vehículos eléctricos, bicicletas compartidas Domus, sistema de filtración de aire especializado en todas las áreas comunes y más...",
+                        salonVestibulo: "Salón del vestíbulo 'The Cypress Room'",
+                        cafe: "Café con barista y panadería",
+                        vinos: "Bar de vinos con terraza cubierta",
+                        mercado: "Mercado artesanal",
+                        patio: "Patio externo en un jardín cubierto",
+                        gimnasio: "Gimnasio con equipos de última generación",
+                        piscinaAzotea: "Piscina en la azotea con vistas panorámicas de la ciudad y la bahia.",
+                        cabanas: "Cabañas con camas de día",
+                        jacuzzi: "Jacuzzi",
+                        yoga: "Espacio de yoga en la azotea",
+                        barAzotea: "Bar en la azotea",
+                        coworking: "Amplio espacio de coworking",
+                        reuniones: "Sala de reuniones/conferencias",
+                        bienvenida: "Sala de bienvenida las 24 horas",
+                        valet: "Servicio de valet las 24 horas",
+                        atencion: "Línea de atención al cliente las 24 horas",
+                        operador: "Operador hotelero con amplia experiencia para supervisar el manejo de las unidades",
+                        limpieza: "Equipo de limpieza con experiencia",
+                        hoteleria: "en hotelería",
+                        portal: "Portal de alquiler para propietarios",
                     },
                     residencias: {
-                        descripcion: "All luxury residences at Domus Brickell Center include spacious floor plans, 9+ foot ceilings, wind-impact resistant windows, balconies, sleek kitchen cabinetry, stainless steel kitchen appliances, UV-filtered water and more! Enjoy spectacular views of the luxurious Brickell and Downtown buildings and the entire Miami skyline.",
-                        terminados: "Delivered fully finished and furnished. Private balcony in all apartments",
-                        cerradura: "Smart lock system with keyless entry",
-                        cocinaEquipada: "Kitchen equipped with Bosch appliances",
+                        descripcion: "¡Todas las residencias de lujo en Domus Brickell Center incluyen planos de planta espaciosos, techos de más de 2.7 metros, ventanas resistentes al impacto del viento, balcones, elegantes gabinetes de cocina, electrodomésticos de cocina de acero inoxidable, Agua filtrada por rayos ultravioleta y más! Disfrute de vistas espectaculares de los lujosos edificios de Brickell y del centro y de todo el horizonte de Miami.",
+                        terminados: "Entregados completamente terminados y amueblados Balcón privado en todos los departamentos",
+                        cerradura: "Sistema de cerradura inteligente con entrada sin llave",
+                        cocinaEquipada: "Cocina equipada con electrodomésticos marca Bosch",
                         accesorios: "Modern fixtures",
-                        cubiertas: "Quartz countertops",
-                        lavadora: "Washer/Dryer",
-                        aguaFiltrada: "UV-filtered water in all apartments",
+                        cubiertas: "Cubiertas de cuarzo",
+                        lavadora: "Lavadora/Secadora",
+                        aguaFiltrada: "Agua filtrada por rayos ultravioleta en todas los departamentos",
                     },
                     edificio: {
-                        ubicacion: "Location",
-                        pisos: "Floors",
+                        ubicacion: "Ubicación",
+                        pisos: "Pisos",
                         pisosCount: "35",
-                        residencias: "Number of Residences",
+                        residencias: "Número de Residencias",
                         residenciasCount: "579",
-                        tiposResidencias: "Types of Residences",
-                        tiposResidenciasDesc: "Studios, 1 & 2 bedrooms",
-                        finalizacion: "Year of Construction Completion",
+                        tiposResidencias: "Tipos de Residencias",
+                        tiposResidenciasDesc: "Estudios, 1 y 2 dormitorios",
+                        finalizacion: "Año de Finalizacion de la Construcción",
                         finalizacionYear: "2027",
-                        techos: "9+ foot ceilings in all apartments",
-                        vestibuloAmplio: "Spacious lobby with approximately 4,200 square feet of meeting space and high floor-to-ceiling windows",
-                        altavoces: "Speakers with ambient music in the Cypress Room",
-                        petFriendly: "Pet Friendly",
-                        ventanas: "Wind-impact resistant windows",
-                        estaciones: "Electric vehicle charging stations",
-                        bicicletas: "Bicycles for resident use",
-                        aire: "Filtered air conditioning in all common areas",
+                        techos: "Techos con más de 9 pies de altura en todos los departamentos",
+                        vestibuloAmplio: "Vestíbulo amplio con aproximadamente 390 metros cuadrados de espacio de reunión y ventanas altas de piso a techo",
+                        altavoces: "Altavoces con musica ambiental en el Cypress Room",
+                        petFriendly: "Pet Friendly (acceptamos mascotas)",
+                        ventanas: "Ventanas resistentes al impacto del viento",
+                        estaciones: "Estaciones de carga para vehículos eléctricos",
+                        bicicletas: "Bicicletas para el uso de los residentes",
+                        aire: "Aire acondicionado filtrado en todas las áreas comunes",
                     },
                 },
+            },
+            cassia: {
+                titulo: "Cassia",
+                slogan: "A New Era of Classic Luxury",
+                direccion: "Merrick Park District, Coral Gables",
+                typeOfUnits: "1, 2 & 3 Bedrooms",
+                caracteristicas: {
+                    edificio: {
+                        direccion: "Address",
+                        pisos: "Number of Floors",
+                        unidades: "Number of Units",
+                        desarrollador: "Developer",
+                        espacioAmenidades: "Amenity Space",
+                        espacioAmenidadesValor: "Over 1 hectare of indoor and outdoor facilities",
+                    },
+                    residencias: {
+                        muebles: "Fully furnished with RH",
+                        cocina: "Italian kitchens with Bosch appliances",
+                        ventanas: "Floor-to-ceiling windows",
+                        tech: "Smart thermostats and TVs included",
+                        pisos: "Elegant imported large-format flooring",
+                        persianas: "Blackout blinds in bedrooms and living rooms",
+                        armarios: "Custom closets in master bedroom",
+                        armariosSeguridad: "Lockable closets for owners",
+                        backsplash: "Stunning backsplashes and elegant surfaces",
+                        gabinetes: "Imported soft-close cabinets",
+                    },
+                    amenidades: {
+                        spa: {
+                            titulo: "SPA",
+                            piscina: "Indoor pool",
+                            loungeRelax: "Relaxation lounge",
+                            vapor: "Steam room",
+                            sauna: "Sauna",
+                            masajes: "Massage and treatment cabins",
+                            banosDobles: "Spa baths for two",
+                            lockers: "Fully equipped lockers and showers",
+                            vestidores: "Dressing rooms",
+                        },
+                        fitness: {
+                            titulo: "State-of-the-Art Fitness Center",
+                            gym: "Fully equipped gym",
+                            yoga: "Yoga / Barre fitness studio",
+                            tech: "On-demand technology",
+                            equipamiento: "Cardio and strength training equipment",
+                            autoservicio: "24-hour self-service",
+                        },
+                        piscina: {
+                            titulo: "Resort-Style Elevated Pool",
+                            temperada: "Heated pool",
+                            cabinas: "Cabanas",
+                            espacioRelax: "Relaxation space",
+                            reposeras: "Lounge chairs",
+                            quincho: "BBQ/grill area",
+                            comedorExterior: "Outdoor dining areas",
+                            meson: "Bar and indoor dining",
+                            lounge: "Tropical-style poolside lounge",
+                            cocinaPrivada: "Private kitchen and dining for celebrations",
+                            loungeAmplio: "Spacious lounge area",
+                            entretenimiento: "Entertainment center",
+                            paisajismo: "Serene landscaping with lush vegetation",
+                        },
+                        negocios: {
+                            titulo: "Business Center",
+                            coworking: "Co-working Lounge",
+                            salaReuniones: "Meeting room",
+                            zoom: "Zoom offices",
+                            proyecciones: "Screening room",
+                        },
+                        lobby: {
+                            titulo: "Grand Lobby",
+                            cieloDoble: "Stunning double-height ceiling",
+                            espacios: "Sophisticated spaces",
+                        },
+                    },
+                },
+                introduccion: [
+                    "Discover a new dimension of luxury, where versatility meets refinement. Cassia brings a fresh perspective to the exclusive Coral Gables lifestyle, offering turnkey residences fully furnished by RH. Enjoy the flexibility to rent your home while traveling or keep it for your exclusive personal use.",
+                    "Following George Merrick's vision, who founded Coral Gables with pink sidewalks, vibrant gardens, and stunning architecture, Cassia proudly arrives with its 174 residences. Spacious one, two, and three-bedroom apartments, fully furnished with RH, offer a perfect fusion of comfort and elegance and are ready to be inhabited immediately. A captivating address in the center of the Merrick Park District, in the heart of Coral Gables, surrounded by beautiful gardens and selected art pieces.",
+                ],
+                propiedadFlexible: "Enjoy the flexibility to rent your home when you're away or keep it exclusively for your personal use.",
+            },
+            "windsor-cay-resort": {
+                titulo: "Windsor Cay Resort",
+                slogan: "Vacation homes designed for resort living and strong rental appeal",
+                introduccion: [
+                    "Windsor Cay Resort offers vacation homes in Orlando designed to combine resort-style living, family comfort, and strong short-term rental appeal.",
+                    "The community brings together on-site resort amenities, 24-hour gated security, and a location planned to make the most of its proximity to the area's best-known attractions."
+                ],
+                caracteristicas: {
+                    edificio: {
+                        resort: "Resort amenities on site",
+                        marca: "International brand recognition",
+                        seguridad: "24-hour manned gated community",
+                        atracciones: "Minutes from world-class attractions",
+                        planos: "Floor plans designed to maximize rentals and returns"
+                    },
+                    residencias: {
+                        titulo: "Key home features",
+                        techo: "Shingle roof",
+                        piscina: "Private heated pool",
+                        hab567: "5, 6, and 7 bedrooms with a 12' x 24' pool",
+                        hab8910: "8, 9, and 10 bedrooms with a 12' x 26' pool",
+                        townhomes: "Townhomes with a 7.5' x 18' pool",
+                        entradas: "Brick paver driveways and pool decks",
+                        electrodomesticos: "Stainless steel appliances",
+                        closet: "Owner storage closet",
+                        granito: "Granite and tile throughout kitchens and all bathrooms",
+                        persianas: "Blinds included",
+                        lanai: "Covered lanai with child safety fence",
+                        lavadora: "Washer and dryer"
+                    },
+                    hoa: {
+                        titulo: "Homeowners association includes:",
+                        jardineria: "Fully maintained landscaping including lawn irrigation",
+                        internet: "High-speed internet and cable TV",
+                        basura: "Daily garbage disposal"
+                    }
+                }
             },
         },
         common: {
@@ -1146,7 +1283,7 @@ export function TranslationProvider({children, defaultLang = "es" as Lang}: {
         } catch (e) {
             /* ignore */
         }
-        return "es" as Lang;
+        return defaultLang;
     })();
 
     const [lang, setLangState] = useState<Lang>(initial);
@@ -1189,7 +1326,7 @@ export function TranslationProvider({children, defaultLang = "es" as Lang}: {
     return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
 
-export function getTranslation(path: string, lang: Lang, fallback?: string | null): string | string[] | null {
+export function getTranslation(path: string, lang: Lang, fallback?: string | string[] | null): string | string[] | null {
     const fallbackLang: Lang = lang === "es" ? "en" : "es";
     const currentValue = lookupTranslationValue(lang, path);
     const fallbackValue = lookupTranslationValue(fallbackLang, path);

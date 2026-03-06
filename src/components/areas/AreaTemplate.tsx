@@ -115,7 +115,7 @@ export default function AreaTemplate(props: AreaProps) {
                     </div>
                 )}
                 <br></br>
-                <Row>
+                <Row className="justify-content-center">
                     {[...areaDesarrollos.values()].map((desarrollo) => {
                         return (
                             <Col key={desarrollo.nombre} xs={12} sm={12} md={6} lg={4} xl={4}>

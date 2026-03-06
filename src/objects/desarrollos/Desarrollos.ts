@@ -128,7 +128,7 @@ desarrolloMap.push({
     des: new Set([NomadResidences]),
 });
 desarrolloMap.push({
-    area: Orlando,
+    area: Orlando(),
     des: new Set([WindsorCayResort])
 })
 desarrolloMap.push({
@@ -279,8 +279,9 @@ export function getDesarrollosForArea(area: Area, lang: "en" | "es" = "es"): Set
 
     // Get dynamic developments for this area
     const dynamicInstances = Array.from(dynamicDesarrolloMap[area.name] || []).map(des => {
-        // Ensure the area is set correctly
-        return { ...des, area };
+        const instance = Object.assign(new Desarrollo(area), des);
+        instance.area = area;
+        return instance;
     });
 
     // Merge static and dynamic, dynamic takes precedence for same nombre

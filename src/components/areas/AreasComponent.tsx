@@ -28,21 +28,18 @@ function AreasComponent() {
     const allAreas = Areas();
 
     // Filter to only show areas that have projects
-    const {areasWithProjects, areasWithoutProjects} = useMemo(() => {
+         const {areasWithProjects} = useMemo(() => {
         const withProjects: typeof allAreas = [];
-        const withoutProjects: typeof allAreas = [];
 
         allAreas.forEach((area) => {
-            const desarrollos = getDesarrollosForArea(area);
+            const desarrollos = getDesarrollosForArea(area, lang);
             if (desarrollos.size > 0) {
                 withProjects.push(area);
-            } else {
-                withoutProjects.push(area);
             }
         });
 
-        return {areasWithProjects: withProjects, areasWithoutProjects: withoutProjects};
-    }, [allAreas]);
+        return {areasWithProjects: withProjects};
+    }, [allAreas, lang]);
 
     // Areas without projects (kept for future use):
     // These areas exist but have no active listings yet
@@ -57,7 +54,7 @@ function AreasComponent() {
             </div>
             <hr className="hr hr-blurry w-50 mx-auto"/>
 
-            <Row>
+            <Row className="justify-content-center">
                 {areasWithProjects.map((area) => (
                     <Col key={area.name} xs={12} sm={6} md={6} lg={4} xl={4} className="gallery-item">
                         <Link to={`/areas/${area.name}/`}>

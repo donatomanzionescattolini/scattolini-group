@@ -20,8 +20,9 @@ export default function AliadosComponent() {
                 className="p-5 d-flex flex-row flex-wrap justify-content-center align-items-center"
             >
                 <Col xs={6} sm={6} md={4} lg={2} xl={2} className="p-3">
-                    <a href="https://www.instagram.com/huehouseagency/" target="_blank" rel="noopener noreferrer">
+                    <a className="ally-logo-link" href="https://www.instagram.com/huehouseagency/" target="_blank" rel="noopener noreferrer">
                         <img
+                            className="ally-logo"
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/hue-house.png"
                             alt={String(t("pages.aliados.hueHouseAlt") || "")}
                             width="100%"
@@ -29,8 +30,9 @@ export default function AliadosComponent() {
                     </a>
                 </Col>
                 <Col xs={6} sm={6} md={4} lg={2} xl={2} className="p-3">
-                    <a href="https://www.manzionesdesign.com/" target="_blank" rel="noopener noreferrer">
+                    <a className="ally-logo-link" href="https://www.manzionesdesign.com/" target="_blank" rel="noopener noreferrer">
                         <img
+                            className="ally-logo"
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/manzionesdesign.png"
                             alt={String(t("pages.aliados.manzioneDesignAlt") || "")}
                             width="100%"
@@ -38,21 +40,22 @@ export default function AliadosComponent() {
                     </a>
                 </Col>
                 <Col xs={6} sm={6} md={4} lg={2} xl={2} className="p-3">
-                    <a href="/manzione-properties/">
+                    <a className="ally-logo-link" href="/manzione-properties/">
                         <img
+                            className="ally-logo"
                             src="https://pagina-mama.s3.amazonaws.com/assets2/aliados/manzioneproperties.webp"
                             alt={String(t("pages.aliados.manzionePropertiesAlt") || "")}
                             width="100%"
                         />
                     </a>
                 </Col>
-                <Col xs={6} sm={6} md={4} lg={3} xl={3} className="p-3">
-                    <a href="https://www.retimaca.com/" target="_blank" rel="noopener noreferrer">
+                <Col xs={6} sm={6} md={4} lg={2} xl={2} className="p-3">
+                    <a className="ally-logo-link" href="https://www.retimaca.com/" target="_blank" rel="noopener noreferrer">
                         <img
-                            src="https://www.retimaca.com/logo.svg"
+                            className="ally-logo ally-logo--retimaca"
+                            src="https://pagina-mama.s3.us-east-1.amazonaws.com/pagina-tio/logos/hardwood-retimaca-logo-transparent-bg.png"
                             alt={String(t("pages.aliados.hardwoodRetimacaAlt") || "")}
                             width="100%"
-                            style={{mixBlendMode: "multiply"}}
                         />
                     </a>
                 </Col>
