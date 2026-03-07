@@ -65,12 +65,12 @@ export default function MediaUploadStep({
     const file = e.target.files?.[0];
     if (!file) return;
 
-    // Validate file name
-    if (file.name.toLowerCase() !== "banner.jpg") {
+    // Validate file type
+    if (!file.name.toLowerCase().endsWith('.jpg') && !file.name.toLowerCase().endsWith('.jpeg')) {
       setError(
         t(
           "pages.editor.media.bannerNameError",
-          'Banner must be named "banner.jpg"',
+          "Banner must be a .jpg or .jpeg file",
         ) as string,
       );
       return;

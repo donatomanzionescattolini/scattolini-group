@@ -5,6 +5,7 @@ import "./MultiStepWizard.scss";
 import { useTranslation } from "../../i18n.tsx";
 import MediaUploadStep from "./MediaUploadStep";
 import Areas from "../../objects/areas/Areas";
+import AddressAutocomplete from "./AddressAutocomplete";
 
 interface MultiStepWizardProps {
   type: "desarrollo" | "area";
@@ -219,6 +220,22 @@ export default function MultiStepWizard({
               "Select the area where this development is located",
             )}
           </div>
+        </div>
+      );
+    }
+
+    // Handle address field with autocomplete
+    if (fieldName === "ubicacion") {
+      return (
+        <div key={fieldName} className="mb-4">
+          <AddressAutocomplete
+            label={String(t("pages.editor.fields.ubicacion", "Address"))}
+            value={formData.ubicacion || ""}
+            onChange={(val) => {
+              setFormData((prev: any) => ({ ...prev, ubicacion: val }));
+              setValue("ubicacion", val);
+            }}
+          />
         </div>
       );
     }

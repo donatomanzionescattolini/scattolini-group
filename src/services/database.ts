@@ -1,4 +1,4 @@
-﻿import {collection, doc, getDoc, getDocs, query, setDoc, updateDoc, where,} from 'firebase/firestore';
+﻿import {collection, deleteDoc, doc, getDoc, getDocs, query, setDoc, updateDoc, where,} from 'firebase/firestore';
 import {db} from "../config/firebase";
 import {Area} from "../models/areas/Area";
 import Desarrollo from '../models/desarrollos/Desarrollo';
@@ -93,6 +93,11 @@ export async function updateDesarrollo(
     await updateDoc(docRef, data);
 }
 
+export async function deleteDesarrollo(id: string): Promise<void> {
+    const docRef = doc(db, DESARROLLOS_COLLECTION, id);
+    await deleteDoc(docRef);
+}
+
 // Area CRUD operations
 export async function getArea(id: string): Promise<AreaDocument | null> {
     const docRef = doc(db, AREAS_COLLECTION, id);
@@ -125,3 +130,7 @@ export async function updateArea(
     await updateDoc(docRef, data);
 }
 
+export async function deleteArea(id: string): Promise<void> {
+    const docRef = doc(db, AREAS_COLLECTION, id);
+    await deleteDoc(docRef);
+}

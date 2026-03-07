@@ -1,8 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import {Button, ListGroup, Spinner} from 'react-bootstrap';
+import {Button, ListGroup, Modal, Spinner} from 'react-bootstrap';
 import Areas from '../../objects/areas/Areas';
 import {getDesarrollosForArea, registerDynamicDesarrollos} from '../../objects/desarrollos/Desarrollos';
-import {saveDesarrollo, serializeDesarrollo,} from '../../services/database';
+import {
+    deleteDesarrollo,
+    getAllDesarrollos,
+    saveDesarrollo,
+    serializeDesarrollo,
+} from '../../services/database';
 import MultiStepWizard from './MultiStepWizard';
 import {useTranslation} from '../../i18n.tsx';
 
@@ -11,6 +16,8 @@ export default function DesarrolloEditor() {
     const [selectedDesarrollo, setSelectedDesarrollo] = useState<any | null>(null);
     const [loading, setLoading] = useState(false);
     const [saving, setSaving] = useState(false);
+    const [deleting, setDeleting] = useState(false);
+    const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
     const [message, setMessage] = useState('');
     const [messageType, setMessageType] = useState<'success' | 'error' | ''>('');
     const [desarrollos, setDesarrollos] = useState<any[]>([]);
@@ -38,19 +45,36 @@ export default function DesarrolloEditor() {
         return field;
     };
 
-    const loadDesarrollos = () => {
-        const allDesarrollos: any[] = [];
-        Areas().forEach((area) => {
-            const desSet = getDesarrollosForArea(area, lang);
-            desSet.forEach((desarrollo) => {
-                allDesarrollos.push({
-                    id: desarrollo.nombre || 'unknown',
-                    areaName: desarrollo?.area?.name || area.name,
-                    ...desarrollo,
+    const loadDesarrollos = async () => {
+        setLoading(true);
+        try {
+            const dbDesarrollos = await getAllDesarrollos();
+            const allDesarrollos: any[] = [...dbDesarrollos].map(d => ({
+                ...d,
+                areaName: d.area?.name || d.areaName || 'unknown'
+            }));
+
+            // Load static ones only if not present in DB
+            Areas().forEach((area) => {
+                const desSet = getDesarrollosForArea(area, lang);
+                desSet.forEach((desarrollo) => {
+                    const id = desarrollo.nombre || 'unknown';
+                    if (!allDesarrollos.find(d => d.id === id || d.nombre === id)) {
+                        allDesarrollos.push({
+                            id: id,
+                            areaName: desarrollo?.area?.name || area.name,
+                            ...desarrollo,
+                        });
+                    }
                 });
             });
-        });
-        setDesarrollos(allDesarrollos);
+            setDesarrollos(allDesarrollos);
+        } catch (error) {
+            console.error("Error loading developments", error);
+            // Fallback
+        } finally {
+            setLoading(false);
+        }
     };
 
     const handleSelectDesarrollo = (desarrollo: any) => {
@@ -87,6 +111,9 @@ export default function DesarrolloEditor() {
             const desarrolloId = String(data.nombre || data.id || '').trim();
             if (!desarrolloId) throw new Error('Missing desarrollo id');
 
+            // If ID changed (renaming), we might want to delete the old one, but let's just save for now.
+            // If the user wants to rename, they strictly create a new one.
+
             const payload = {...data} as any;
             const areaName = String(payload.areaName || payload?.area?.name || '').trim();
             if (areaName) {
@@ -102,9 +129,10 @@ export default function DesarrolloEditor() {
             delete payload.areaName;
 
             await saveDesarrollo(desarrolloId, serializeDesarrollo(payload));
-            // Update the dynamic map immediately
-            registerDynamicDesarrollos([payload]);
+
+            // Re-fetch to update list
             loadDesarrollos();
+
             setMessage(String(t('pages.editor.messages.desarrolloSaved', 'Development saved successfully')));
             setMessageType('success');
             setIsCreating(false);
@@ -115,6 +143,30 @@ export default function DesarrolloEditor() {
             setMessageType('error');
         } finally {
             setSaving(false);
+        }
+    };
+
+    const handleDeleteClick = () => {
+        setShowDeleteConfirm(true);
+    };
+
+    const confirmDelete = async () => {
+        if (!selectedDesarrollo) return;
+        setDeleting(true);
+        try {
+            const id = selectedDesarrollo.id || selectedDesarrollo.nombre;
+            await deleteDesarrollo(id);
+            setMessage('Development deleted successfully');
+            setMessageType('success');
+            setShowDeleteConfirm(false);
+            setSelectedDesarrollo(null);
+            loadDesarrollos();
+        } catch (error) {
+            console.error("Error deleting development", error);
+            setMessage('Error deleting development');
+            setMessageType('error');
+        } finally {
+            setDeleting(false);
         }
     };
 
@@ -132,9 +184,16 @@ export default function DesarrolloEditor() {
                     <h3>
                         {(isCreating ? t('pages.editor.createDesarrollo', 'Create development') : t('pages.editor.edit', 'Edit'))}: {getLocalized(selectedDesarrollo.titulo) || selectedDesarrollo.nombre || 'Nuevo'}
                     </h3>
-                    <Button variant="secondary" onClick={handleCancel}>
-                        {t('pages.editor.backToList', 'Back to list')}
-                    </Button>
+                    <div>
+                         {!isCreating && (
+                            <Button variant="danger" className="me-2" onClick={handleDeleteClick} disabled={deleting}>
+                                {deleting ? <Spinner size="sm" animation="border" /> : t('pages.editor.delete', 'Delete')}
+                            </Button>
+                        )}
+                        <Button variant="secondary" onClick={handleCancel}>
+                            {t('pages.editor.backToList', 'Back to list')}
+                        </Button>
+                    </div>
                 </div>
 
                 {message && (
@@ -152,6 +211,25 @@ export default function DesarrolloEditor() {
                     onCancel={handleCancel}
                     saving={saving}
                 />
+
+                 <Modal show={showDeleteConfirm} onHide={() => setShowDeleteConfirm(false)}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>{t('pages.editor.confirmDelete', 'Confirm Deletion')}</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <p>
+                            {t('pages.editor.deleteProjectWarning', 'Are you sure you want to delete this development?')}
+                        </p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => setShowDeleteConfirm(false)}>
+                            {t('common.cancel', 'Cancel')}
+                        </Button>
+                        <Button variant="danger" onClick={confirmDelete} disabled={deleting}>
+                            {deleting ? <Spinner size="sm" animation="border"/> : t('common.delete', 'Delete')}
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
             </div>
         );
     }

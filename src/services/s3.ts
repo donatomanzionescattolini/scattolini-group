@@ -57,13 +57,13 @@ export function validateFileName(fileName: string, fileType: "pdf" | "video" | "
             }
             break;
         case "video":
-            if (normalizedName !== "video.mp4") {
-                return {valid: false, error: "Video must be named 'video.mp4'"};
+            if (!normalizedName.endsWith(".mp4")) {
+                return {valid: false, error: "Video must be an .mp4 file"};
             }
             break;
         case "banner":
-            if (normalizedName !== "banner.jpg") {
-                return {valid: false, error: "Banner must be named 'banner.jpg'"};
+            if (!normalizedName.endsWith(".jpg") && !normalizedName.endsWith(".jpeg")) {
+                return {valid: false, error: "Banner must be a .jpg or .jpeg file"};
             }
             break;
         case "thumbnail":
