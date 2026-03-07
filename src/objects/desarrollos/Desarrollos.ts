@@ -94,6 +94,7 @@ import TheWellCoconutGrove from "./CoconutGrove/TheWellCoconutGrove.tsx";
 import Orlando from "../areas/Orlando.tsx";
 import Cassia from "./CoralGables/Cassia.tsx";
 import WindsorCayResort from "./Orlando/WindsorCayResort.tsx";
+import Doppio from "./Orlando/Doppio.tsx";
 
 interface DesarrolloMapItem {
     area: Area;
@@ -129,7 +130,7 @@ desarrolloMap.push({
 });
 desarrolloMap.push({
     area: Orlando(),
-    des: new Set([WindsorCayResort])
+    des: new Set([WindsorCayResort, Doppio])
 })
 desarrolloMap.push({
     area: PompanoBeach(),

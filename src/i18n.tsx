@@ -594,6 +594,44 @@ const translations: Record<Lang, any> = {
                     }
                 }
             },
+            doppio: {
+                titulo: "Doppio Westside",
+                slogan: "El futuro de las residencias vacacionales",
+                introduccion: [
+                    "Doppio Westside redefine las residencias vacacionales al combinar hospitalidad de alto nivel, tecnología y administración profesional en un modelo turnkey pensado tanto para disfrutar como para generar ingresos.",
+                    "Ubicado en Kissimmee, a solo 10 minutos de Disney, el proyecto combina residencias premium, servicios con estándar hotelero y una fuerte proyección de renta cerca de parques temáticos, outlets, campos de golf y restaurantes."
+                ],
+                caracteristicas: {
+                    edificio: {
+                        concepto: "Una nueva categoría que une la comodidad de un hotel con la libertad de una residencia privada",
+                        construccion: "Construcción premium en bloque, diseñada para durabilidad y valor a largo plazo",
+                        ubicacion: "Ubicación estratégica en Kissimmee, a minutos de Disney, Universal, outlets, golf y gastronomía",
+                        eficiencia: "Diseño de alta gama y eficiencia energética, enfocado en confort y menores costos operativos",
+                        ventanas: "Ventanales premium con aislamiento, reducción de ruido y estilo contemporáneo"
+                    },
+                    residencias: {
+                        titulo: "Formatos residenciales",
+                        casas: "Casas amobladas de 2,133 pies cuadrados con piscina privada climatizada",
+                        suites: "Colección de townhomes con 4 suites y 5 baños",
+                        cocinaGourmet: "Cocina gourmet y terminaciones con estándar internacional",
+                        apartamentos: "Apartamentos de 980 pies cuadrados diseñados para estadías prácticas con estilo resort",
+                        dormitorios: "Distribuciones de 2 dormitorios",
+                        cocinaEquipada: "Cocinas completamente equipadas",
+                        diseno: "Diseño contemporáneo con cabinetry de inspiración italiana",
+                        isla: "Isla de cocina en cuarzo estilo waterfall, ideal para reuniones y vida familiar"
+                    },
+                    amenidades: {
+                        piscina: "Piscina estilo lagoon con experiencia de resort",
+                        fitness: "Fitness center y área para niños",
+                        concierge: "Concierge, restaurante y centro de convenciones",
+                        limpieza: "Servicio de limpieza on-demand",
+                        seguridad: "Servicios de traslado y seguridad",
+                        equipaje: "Almacenamiento de equipaje",
+                        servicios: "Servicios pay-per-use como chef, niñera y lavandería",
+                        ingreso: "Operación turnkey con marketing global y pagos mensuales transparentes"
+                    }
+                }
+            },
         },
         common: {
             loading: "Cargando...",
@@ -1197,6 +1235,44 @@ const translations: Record<Lang, any> = {
                         jardineria: "Fully maintained landscaping including lawn irrigation",
                         internet: "High-speed internet and cable TV",
                         basura: "Daily garbage disposal"
+                    }
+                }
+            },
+            doppio: {
+                titulo: "Doppio Westside",
+                slogan: "The future of vacation homes",
+                introduccion: [
+                    "Doppio Westside redefines vacation homes by combining high-end hospitality, technology, and professional management in a turnkey model built for both enjoyment and income.",
+                    "Located in Kissimmee, just 10 minutes from Disney, the project blends premium residences, hotel-style services, and strong rental positioning near theme parks, outlets, golf courses, and restaurants."
+                ],
+                caracteristicas: {
+                    edificio: {
+                        concepto: "A new category that blends the comfort of a hotel with the freedom of a private home",
+                        construccion: "Premium block construction designed for durability and long-term value",
+                        ubicacion: "Prime Kissimmee location, minutes from Disney, Universal, outlets, golf, and dining",
+                        eficiencia: "High-end energy-efficient design focused on comfort and lower operating costs",
+                        ventanas: "Luxury windows with insulation, noise reduction, and contemporary style"
+                    },
+                    residencias: {
+                        titulo: "Residential formats",
+                        casas: "Furnished 2,133-square-foot homes with a private heated pool",
+                        suites: "Townhome collection with 4 suites and 5 bathrooms",
+                        cocinaGourmet: "Gourmet kitchen with international-standard finishes",
+                        apartamentos: "980-square-foot apartments designed for practical resort-style stays",
+                        dormitorios: "2-bedroom apartment layouts",
+                        cocinaEquipada: "Fully equipped kitchens",
+                        diseno: "Contemporary design with Italian-inspired cabinetry",
+                        isla: "Quartz waterfall kitchen island ideal for hosting and family gatherings"
+                    },
+                    amenidades: {
+                        piscina: "Lagoon-style resort pool",
+                        fitness: "Fitness center and kids' area",
+                        concierge: "Concierge, restaurant, and convention center",
+                        limpieza: "On-demand cleaning",
+                        seguridad: "Transfer and security services",
+                        equipaje: "Luggage storage",
+                        servicios: "Pay-per-use services such as chef, babysitter, and laundry",
+                        ingreso: "Turnkey operations supported by global marketing and transparent monthly payouts"
                     }
                 }
             },
