@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Button, ListGroup, Spinner} from 'react-bootstrap';
 import Areas from '../../objects/areas/Areas';
 import {getDesarrollosForArea, registerDynamicDesarrollos} from '../../objects/desarrollos/Desarrollos';
-import {saveDesarrollo, serializeDesarrollo,} from '../../services/database';
+import {deleteDesarrollo, saveDesarrollo, serializeDesarrollo,} from '../../services/database';
 import MultiStepWizard from './MultiStepWizard';
 import {useTranslation} from '../../i18n.tsx';
 
@@ -125,6 +125,24 @@ export default function DesarrolloEditor() {
         setMessageType('');
     };
 
+    const handleDeleteDesarrollo = async (desarrollo: any, e: React.MouseEvent) => {
+        e.stopPropagation();
+        const name = getLocalized(desarrollo.titulo) || desarrollo.nombre || 'this development';
+        if (!confirm(`Are you sure you want to delete "${name}"? This action cannot be undone.`)) return;
+        try {
+            const id = String(desarrollo.nombre || desarrollo.id || '').trim();
+            await deleteDesarrollo(id);
+            loadDesarrollos();
+            setMessage(String(t('pages.editor.messages.desarrolloDeleted', 'Development deleted successfully')));
+            setMessageType('success');
+            setTimeout(() => setMessage(''), 3000);
+        } catch (error) {
+            console.error('Error deleting desarrollo:', error);
+            setMessage(String(t('pages.editor.messages.desarrolloDeleteError', 'Error deleting development')));
+            setMessageType('error');
+        }
+    };
+
     if (selectedDesarrollo) {
         return (
             <div>
@@ -165,6 +183,12 @@ export default function DesarrolloEditor() {
                 </Button>
             </div>
 
+            {message && (
+                <div className={`alert ${messageType === 'success' ? 'alert-success' : 'alert-danger'} mb-3`}>
+                    {message}
+                </div>
+            )}
+
             {loading ? (
                 <div className="text-center py-5">
                     <Spinner animation="border"/>
@@ -174,11 +198,13 @@ export default function DesarrolloEditor() {
                     {desarrollos.map((desarrollo, index) => (
                         <ListGroup.Item
                             key={index}
-                            action
-                            onClick={() => handleSelectDesarrollo(desarrollo)}
                             className="d-flex justify-content-between align-items-center"
                         >
-                            <div>
+                            <div
+                                className="flex-grow-1"
+                                style={{cursor: 'pointer'}}
+                                onClick={() => handleSelectDesarrollo(desarrollo)}
+                            >
                                 <strong>{getLocalized(desarrollo.titulo) || desarrollo.nombre}</strong>
                                 {desarrollo.area && (
                                     <div className="text-muted small">
@@ -186,7 +212,22 @@ export default function DesarrolloEditor() {
                                     </div>
                                 )}
                             </div>
-                            <i className="fas fa-chevron-right"></i>
+                            <div className="d-flex gap-2">
+                                <Button
+                                    size="sm"
+                                    variant="outline-primary"
+                                    onClick={() => handleSelectDesarrollo(desarrollo)}
+                                >
+                                    {t('common.edit', 'Edit')}
+                                </Button>
+                                <Button
+                                    size="sm"
+                                    variant="outline-danger"
+                                    onClick={(e) => handleDeleteDesarrollo(desarrollo, e)}
+                                >
+                                    {t('common.delete', 'Delete')}
+                                </Button>
+                            </div>
                         </ListGroup.Item>
                     ))}
                 </ListGroup>

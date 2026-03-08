@@ -1,10 +1,11 @@
-﻿import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import "./MultiStepWizard.scss";
 import { useTranslation } from "../../i18n.tsx";
 import MediaUploadStep from "./MediaUploadStep";
 import Areas from "../../objects/areas/Areas";
+import AddressAutocomplete from "./AddressAutocomplete";
 
 interface MultiStepWizardProps {
   type: "desarrollo" | "area";
@@ -218,6 +219,28 @@ export default function MultiStepWizard({
               "pages.editor.areaHelp",
               "Select the area where this development is located",
             )}
+          </div>
+        </div>
+      );
+    }
+
+    // Handle address autocomplete for ubicacion field
+    if (fieldName === "ubicacion" || fieldName === "ubicación") {
+      const label = String(t("pages.editor.fields.ubicacion", "Location / Address") ?? "Location / Address");
+      return (
+        <div key={fieldName} className="mb-4">
+          <AddressAutocomplete
+            id={`${fieldName}-autocomplete`}
+            value={getFieldValue(fieldName)}
+            label={label}
+            placeholder="Search for an address..."
+            onChange={(address) => {
+              setFormData((prev: any) => ({ ...prev, [fieldName]: address }));
+              setValue(fieldName as any, address);
+            }}
+          />
+          <div className="form-text text-muted">
+            {t("pages.editor.ubicacionHelp", "Type to search — select an address from the suggestions")}
           </div>
         </div>
       );

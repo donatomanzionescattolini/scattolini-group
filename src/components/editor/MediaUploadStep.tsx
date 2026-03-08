@@ -61,18 +61,15 @@ export default function MediaUploadStep({
     }
   }, [projectName, loadCurrentMedia]);
 
+  const [pdfType, setPdfType] = useState<"brochure.pdf" | "hoja.pdf" | "planos.pdf">("brochure.pdf");
+
   const handleBannerUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    // Validate file name
-    if (file.name.toLowerCase() !== "banner.jpg") {
-      setError(
-        t(
-          "pages.editor.media.bannerNameError",
-          'Banner must be named "banner.jpg"',
-        ) as string,
-      );
+    // Accept any image file — it will be uploaded as banner.jpg automatically
+    if (!file.type.startsWith("image/")) {
+      setError("Banner must be an image file (JPG, PNG, etc.)");
       return;
     }
 
@@ -155,14 +152,9 @@ export default function MediaUploadStep({
     const file = e.target.files?.[0];
     if (!file) return;
 
-    // Validate file name
-    if (file.name.toLowerCase() !== "video.mp4") {
-      setError(
-        t(
-          "pages.editor.media.videoNameError",
-          'Video must be named "video.mp4"',
-        ) as string,
-      );
+    // Accept any MP4 file — it will be uploaded as video.mp4 automatically
+    if (!file.type.includes("video/mp4") && !file.name.toLowerCase().endsWith(".mp4")) {
+      setError("Video must be an MP4 file.");
       return;
     }
 
@@ -198,35 +190,25 @@ export default function MediaUploadStep({
     setUploading(true);
     setError("");
 
-    for (let i = 0; i < files.length; i++) {
-      const file = files[i];
-      const fileName = file.name.toLowerCase();
+    // Only one PDF per upload — use the selected type
+    const file = files[0];
 
-      // Validate file name
-      if (!(VALID_FILE_TYPES.pdfs as readonly string[]).includes(fileName)) {
-        setError(
-          `${file.name}: ${t("pages.editor.media.pdfNameError", "PDF must be named brochure.pdf, hoja.pdf, or planos.pdf")}`,
-        );
-        continue;
-      }
-
-      setUploadProgress(
-        `${t("pages.editor.media.uploading", "Uploading")} ${file.name}... (${i + 1}/${files.length})`,
-      );
-
-      const result = await uploadFileToS3(file, areaName, projectName, "pdf");
-
-      if (!result.success) {
-        setError(`${file.name}: ${result.error}`);
-      }
-    }
-
-    setSuccess(
-      t(
-        "pages.editor.media.pdfsUploaded",
-        "PDFs uploaded successfully",
-      ) as string,
+    setUploadProgress(
+      `${t("pages.editor.media.uploading", "Uploading")} ${pdfType}...`,
     );
+
+    const result = await uploadFileToS3(file, areaName, projectName, "pdf", pdfType);
+
+    if (!result.success) {
+      setError(`${result.error}`);
+    } else {
+      setSuccess(
+        t(
+          "pages.editor.media.pdfsUploaded",
+          "PDF uploaded successfully",
+        ) as string,
+      );
+    }
     await loadCurrentMedia();
     setUploading(false);
     setUploadProgress("");
@@ -431,7 +413,7 @@ export default function MediaUploadStep({
               ref={bannerInputRef}
               type="file"
               className="form-control form-control-sm"
-              accept="image/jpeg"
+              accept="image/*"
               onChange={handleBannerUpload}
               disabled={uploading}
               title={String(t("pages.editor.media.uploadBannerTitle"))}
@@ -439,7 +421,7 @@ export default function MediaUploadStep({
             <div className="form-text">
               {t(
                 "pages.editor.media.bannerHelp",
-                'File must be named "banner.jpg"',
+                "Upload any image — it will be saved as banner.jpg automatically.",
               )}
             </div>
           </div>
@@ -565,7 +547,7 @@ export default function MediaUploadStep({
             <div className="form-text">
               {t(
                 "pages.editor.media.videoHelp",
-                'File must be named "video.mp4"',
+                "Upload any MP4 file — it will be saved as video.mp4 automatically.",
               )}
             </div>
           </div>
@@ -619,12 +601,27 @@ export default function MediaUploadStep({
           ))}
 
           <div className="mt-2">
+            <div className="mb-2">
+              <label htmlFor="pdf-type-select" className="form-label form-label-sm fw-semibold">
+                {t("pages.editor.media.pdfType", "PDF Type")}
+              </label>
+              <select
+                id="pdf-type-select"
+                className="form-select form-select-sm mb-2"
+                value={pdfType}
+                onChange={(e) => setPdfType(e.target.value as typeof pdfType)}
+                title="Select PDF type"
+              >
+                <option value="brochure.pdf">Brochure (brochure.pdf)</option>
+                <option value="hoja.pdf">Fact Sheet / Hoja (hoja.pdf)</option>
+                <option value="planos.pdf">Floor Plans / Planos (planos.pdf)</option>
+              </select>
+            </div>
             <input
               ref={pdfInputRef}
               type="file"
               className="form-control form-control-sm"
               accept=".pdf"
-              multiple
               onChange={handlePdfUpload}
               disabled={uploading}
               title={String(t("pages.editor.media.uploadPdfTitle"))}
@@ -632,7 +629,7 @@ export default function MediaUploadStep({
             <div className="form-text">
               {t(
                 "pages.editor.media.pdfHelp",
-                "Files must be named: brochure.pdf, hoja.pdf, or planos.pdf",
+                "Select the PDF type above, then upload your file. It will be saved with the correct name automatically.",
               )}
             </div>
           </div>

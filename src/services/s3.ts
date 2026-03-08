@@ -86,32 +86,40 @@ export function validateFileName(fileName: string, fileType: "pdf" | "video" | "
 }
 
 /**
- * Upload a file to S3
+ * Upload a file to S3. For banner/video/thumbnail, files are auto-renamed
+ * to the canonical S3 name regardless of the original filename.
+ * For PDF, pass targetFileName to override the original filename.
  */
 export async function uploadFileToS3(
     file: File,
     areaName: string,
     desarrolloName: string,
-    fileType: "pdf" | "video" | "banner" | "gallery" | "thumbnail"
+    fileType: "pdf" | "video" | "banner" | "gallery" | "thumbnail",
+    targetFileName?: string
 ): Promise<UploadResult> {
-    // Validate file name
-    const validation = validateFileName(file.name, fileType);
-    if (!validation.valid) {
-        return {success: false, error: validation.error};
-    }
-
     // Determine the S3 path based on file type
     // Path structure: assets2/desarrollos/{areaName}/{desarrolloName}/...
     // Thumbnail goes to: assets2/areas/{areaName}/{desarrolloName}.webp
     let s3Path: string;
     switch (fileType) {
-        case "pdf":
-            s3Path = `${ASSETS_PREFIX}/${areaName}/${desarrolloName}/pdfs/${file.name}`;
+        case "pdf": {
+            const pdfName = targetFileName || file.name;
+            const normalizedPdfName = pdfName.toLowerCase();
+            if (!(VALID_FILE_TYPES.pdfs as readonly string[]).includes(normalizedPdfName)) {
+                return {
+                    success: false,
+                    error: `Invalid PDF name. Must be one of: ${VALID_FILE_TYPES.pdfs.join(", ")}`
+                };
+            }
+            s3Path = `${ASSETS_PREFIX}/${areaName}/${desarrolloName}/pdfs/${normalizedPdfName}`;
             break;
+        }
         case "video":
+            // Always stored as video.mp4 regardless of original filename
             s3Path = `${ASSETS_PREFIX}/${areaName}/${desarrolloName}/video.mp4`;
             break;
         case "banner":
+            // Always stored as banner.jpg regardless of original filename
             s3Path = `${ASSETS_PREFIX}/${areaName}/${desarrolloName}/banner.jpg`;
             break;
         case "thumbnail":
