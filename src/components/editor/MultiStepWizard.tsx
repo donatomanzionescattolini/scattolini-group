@@ -1,10 +1,11 @@
-﻿import React, { useCallback, useMemo, useState } from "react";
+﻿import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import "./MultiStepWizard.scss";
 import { useTranslation } from "../../i18n.tsx";
 import MediaUploadStep from "./MediaUploadStep";
 import Areas from "../../objects/areas/Areas";
+import AddressAutocompleteField from "./AddressAutocompleteField";
 
 interface MultiStepWizardProps {
   type: "desarrollo" | "area";
@@ -24,9 +25,23 @@ export default function MultiStepWizard({
   const { t, lang } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<any>(data);
+
+  const getLocationValue = (source: any) =>
+    source?.ubicacion ?? source?.["ubicación"] ?? "";
+
+  const [addressSelected, setAddressSelected] = useState(
+    Boolean(getLocationValue(data)),
+  );
+  const [formError, setFormError] = useState("");
   const { control, handleSubmit, setValue } = useForm({
     defaultValues: formData,
   });
+
+  useEffect(() => {
+    setFormData(data);
+    setAddressSelected(Boolean(getLocationValue(data)));
+    setFormError("");
+  }, [data]);
 
   // Get available areas for select dropdown
   const areas = useMemo(() => {
@@ -113,6 +128,33 @@ export default function MultiStepWizard({
 
   const onSubmit = async (data: any) => {
     setFormData(data);
+    setFormError("");
+
+    const activeFields = steps[currentStep].fields;
+    if (activeFields.includes("ubicacion") && type === "desarrollo" && !addressSelected) {
+      setFormError(
+        String(
+          t(
+            "pages.editor.address.validation",
+            "Please choose an address from the suggestions before continuing.",
+          ),
+        ),
+      );
+      return;
+    }
+
+    if (currentStep === steps.length - 1 && type === "desarrollo" && !addressSelected) {
+      setFormError(
+        String(
+          t(
+            "pages.editor.address.validation",
+            "Please choose an address from the suggestions before continuing.",
+          ),
+        ),
+      );
+      return;
+    }
+
     if (currentStep === steps.length - 1) {
       // Final step - save
       await onSave(data);
@@ -140,6 +182,10 @@ export default function MultiStepWizard({
       // Handle arrays (like introduccion and descripcion)
       if (fieldName === "introduccion" || fieldName === "descripcion") {
         processedValue = value.split("\n\n").filter((p) => p.trim());
+      }
+
+      if (fieldName === "ubicacion" || fieldName === "ubicación") {
+        setAddressSelected(false);
       }
 
       setFormData((prev: any) => ({ ...prev, [fieldName]: processedValue }));
@@ -226,6 +272,27 @@ export default function MultiStepWizard({
     const isTextarea = ["introduccion", "descripcion", "slogan"].includes(
       fieldName,
     );
+
+    if (fieldName === "ubicacion" || fieldName === "ubicación") {
+      const label = t("pages.editor.fields.ubicacion", "Location");
+      return (
+        <div key={fieldName} className="mb-4">
+          <Form.Group>
+            <Form.Label>{label}</Form.Label>
+            <AddressAutocompleteField
+              value={String(getFieldValue(fieldName))}
+              selected={addressSelected}
+              onValueChange={(value) => setFieldValue(fieldName, value)}
+              onSelectSuggestion={(value) => {
+                setAddressSelected(true);
+                setFieldValue(fieldName, value);
+              }}
+            />
+          </Form.Group>
+        </div>
+      );
+    }
+
     const fallbackLabel =
       fieldName.charAt(0).toUpperCase() + fieldName.slice(1);
     const label = t(`pages.editor.fields.${fieldName}`, fallbackLabel);
@@ -235,7 +302,7 @@ export default function MultiStepWizard({
         <Controller
           name={fieldName}
           control={control}
-          render={({ field }) =>
+          render={() =>
             isTextarea ? (
               <Form.Group>
                 <Form.Label>{label}</Form.Label>
@@ -337,6 +404,8 @@ export default function MultiStepWizard({
 
       <form onSubmit={handleSubmit(onSubmit)}>
         {renderStep()}
+
+        {formError && <div className="alert alert-danger mt-3 mb-0">{formError}</div>}
 
         <Row className="mt-4">
           <Col>

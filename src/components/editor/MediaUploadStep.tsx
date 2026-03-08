@@ -9,7 +9,6 @@ import {
   MediaFile,
   uploadFileToS3,
   uploadGalleryImage,
-  VALID_FILE_TYPES,
 } from "../../services/s3";
 import "./MediaUploadStep.scss";
 
@@ -65,17 +64,6 @@ export default function MediaUploadStep({
     const file = e.target.files?.[0];
     if (!file) return;
 
-    // Validate file name
-    if (file.name.toLowerCase() !== "banner.jpg") {
-      setError(
-        t(
-          "pages.editor.media.bannerNameError",
-          'Banner must be named "banner.jpg"',
-        ) as string,
-      );
-      return;
-    }
-
     setUploading(true);
     setError("");
     setUploadProgress(
@@ -86,10 +74,13 @@ export default function MediaUploadStep({
 
     if (result.success) {
       setSuccess(
-        t(
-          "pages.editor.media.bannerUploaded",
-          "Banner uploaded successfully",
-        ) as string,
+        String(
+          t(
+            "pages.editor.media.bannerUploaded",
+            "Banner uploaded successfully",
+          ),
+        ) +
+          ` (${file.name} -> ${result.targetName || "banner.jpg"})`,
       );
       await loadCurrentMedia();
     } else {
@@ -106,17 +97,6 @@ export default function MediaUploadStep({
   ) => {
     const file = e.target.files?.[0];
     if (!file) return;
-
-    // Validate file type
-    if (!file.name.toLowerCase().endsWith(".webp")) {
-      setError(
-        t(
-          "pages.editor.media.thumbnailFormatError",
-          "Thumbnail must be a .webp file",
-        ) as string,
-      );
-      return;
-    }
 
     setUploading(true);
     setError("");
@@ -136,10 +116,12 @@ export default function MediaUploadStep({
 
     if (result.success) {
       setSuccess(
-        t(
-          "pages.editor.media.thumbnailUploaded",
-          "Area thumbnail uploaded successfully",
-        ) as string,
+        String(
+          t(
+            "pages.editor.media.thumbnailUploaded",
+            "Area thumbnail uploaded successfully",
+          ),
+        ) + ` (${file.name} -> ${result.targetName || `${projectName}.webp`})`,
       );
       await loadCurrentMedia();
     } else {
@@ -155,17 +137,6 @@ export default function MediaUploadStep({
     const file = e.target.files?.[0];
     if (!file) return;
 
-    // Validate file name
-    if (file.name.toLowerCase() !== "video.mp4") {
-      setError(
-        t(
-          "pages.editor.media.videoNameError",
-          'Video must be named "video.mp4"',
-        ) as string,
-      );
-      return;
-    }
-
     setUploading(true);
     setError("");
     setUploadProgress(
@@ -176,10 +147,13 @@ export default function MediaUploadStep({
 
     if (result.success) {
       setSuccess(
-        t(
-          "pages.editor.media.videoUploaded",
-          "Video uploaded successfully",
-        ) as string,
+        String(
+          t(
+            "pages.editor.media.videoUploaded",
+            "Video uploaded successfully",
+          ),
+        ) +
+          ` (${file.name} -> ${result.targetName || "video.mp4"})`,
       );
       await loadCurrentMedia();
     } else {
@@ -195,17 +169,17 @@ export default function MediaUploadStep({
     const files = e.target.files;
     if (!files || files.length === 0) return;
 
+    const targetPdfNames = ["brochure.pdf", "hoja.pdf", "planos.pdf"];
     setUploading(true);
     setError("");
 
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
-      const fileName = file.name.toLowerCase();
+      const targetName = targetPdfNames[i] || `document-${i + 1}.pdf`;
 
-      // Validate file name
-      if (!(VALID_FILE_TYPES.pdfs as readonly string[]).includes(fileName)) {
+      if (!file.name.toLowerCase().endsWith(".pdf") && file.type !== "application/pdf") {
         setError(
-          `${file.name}: ${t("pages.editor.media.pdfNameError", "PDF must be named brochure.pdf, hoja.pdf, or planos.pdf")}`,
+          `${file.name}: ${t("pages.editor.media.pdfTypeError", "Only PDF files are allowed")}`,
         );
         continue;
       }
@@ -214,7 +188,9 @@ export default function MediaUploadStep({
         `${t("pages.editor.media.uploading", "Uploading")} ${file.name}... (${i + 1}/${files.length})`,
       );
 
-      const result = await uploadFileToS3(file, areaName, projectName, "pdf");
+      const result = await uploadFileToS3(file, areaName, projectName, "pdf", {
+        targetName,
+      });
 
       if (!result.success) {
         setError(`${file.name}: ${result.error}`);
@@ -248,10 +224,9 @@ export default function MediaUploadStep({
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
 
-      // Only accept jpg/jpeg files
-      if (!file.type.includes("jpeg") && !file.type.includes("jpg")) {
+      if (!file.type.startsWith("image/")) {
         setError(
-          `${file.name}: ${t("pages.editor.media.galleryJpgOnly", "Gallery images must be JPG format")}`,
+          `${file.name}: ${t("pages.editor.media.galleryImageOnly", "Gallery files must be images")}`,
         );
         continue;
       }
@@ -431,7 +406,7 @@ export default function MediaUploadStep({
               ref={bannerInputRef}
               type="file"
               className="form-control form-control-sm"
-              accept="image/jpeg"
+              accept="image/*"
               onChange={handleBannerUpload}
               disabled={uploading}
               title={String(t("pages.editor.media.uploadBannerTitle"))}
@@ -439,7 +414,7 @@ export default function MediaUploadStep({
             <div className="form-text">
               {t(
                 "pages.editor.media.bannerHelp",
-                'File must be named "banner.jpg"',
+                'Upload any image. It will be converted and saved as "banner.jpg".',
               )}
             </div>
           </div>
@@ -501,7 +476,7 @@ export default function MediaUploadStep({
               ref={thumbnailInputRef}
               type="file"
               className="form-control form-control-sm"
-              accept="image/webp"
+              accept="image/*"
               onChange={handleThumbnailUpload}
               disabled={uploading}
               title={String(t("pages.editor.media.uploadThumbnailTitle"))}
@@ -509,7 +484,7 @@ export default function MediaUploadStep({
             <div className="form-text">
               {t(
                 "pages.editor.media.thumbnailHelp",
-                "Upload a .webp image for area listings",
+                "Upload any image. It will be converted to .webp for area listings.",
               )}
             </div>
           </div>
@@ -557,7 +532,7 @@ export default function MediaUploadStep({
               ref={videoInputRef}
               type="file"
               className="form-control form-control-sm"
-              accept="video/mp4"
+              accept="video/*"
               onChange={handleVideoUpload}
               disabled={uploading}
               title={String(t("pages.editor.media.uploadVideoTitle"))}
@@ -565,7 +540,7 @@ export default function MediaUploadStep({
             <div className="form-text">
               {t(
                 "pages.editor.media.videoHelp",
-                'File must be named "video.mp4"',
+                'Upload any video file. It will be stored as "video.mp4".',
               )}
             </div>
           </div>
@@ -632,7 +607,7 @@ export default function MediaUploadStep({
             <div className="form-text">
               {t(
                 "pages.editor.media.pdfHelp",
-                "Files must be named: brochure.pdf, hoja.pdf, or planos.pdf",
+                "Upload PDF files. They will be auto-renamed to brochure.pdf, hoja.pdf, and planos.pdf.",
               )}
             </div>
           </div>
@@ -689,7 +664,7 @@ export default function MediaUploadStep({
               ref={galleryInputRef}
               type="file"
               className="form-control form-control-sm"
-              accept="image/jpeg"
+              accept="image/*"
               multiple
               onChange={handleGalleryUpload}
               disabled={uploading}
@@ -698,7 +673,7 @@ export default function MediaUploadStep({
             <div className="form-text">
               {t(
                 "pages.editor.media.galleryHelp",
-                'Upload JPG images. They will be automatically renamed to "image (1).jpg", "image (2).jpg", etc.',
+                'Upload any image format. Files are converted and renamed to "image (1).jpg", "image (2).jpg", etc.',
               )}
             </div>
           </div>

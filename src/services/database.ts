@@ -1,4 +1,4 @@
-﻿import {collection, doc, getDoc, getDocs, query, setDoc, updateDoc, where,} from 'firebase/firestore';
+﻿import {collection, deleteDoc, doc, getDoc, getDocs, query, setDoc, updateDoc, where,} from 'firebase/firestore';
 import {db} from "../config/firebase";
 import {Area} from "../models/areas/Area";
 import Desarrollo from '../models/desarrollos/Desarrollo';
@@ -69,15 +69,29 @@ export async function getAllDesarrollos(): Promise<DesarrolloDocument[]> {
 }
 
 export async function getDesarrollosByArea(areaName: string): Promise<DesarrolloDocument[]> {
-    const q = query(
+    const byAreaObject = query(
         collection(db, DESARROLLOS_COLLECTION),
         where('area.name', '==', areaName)
     );
-    const querySnapshot = await getDocs(q);
-    return querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-    })) as DesarrolloDocument[];
+    const byAreaName = query(
+        collection(db, DESARROLLOS_COLLECTION),
+        where('areaName', '==', areaName)
+    );
+
+    const [objectSnapshot, nameSnapshot] = await Promise.all([
+        getDocs(byAreaObject),
+        getDocs(byAreaName),
+    ]);
+
+    const merged = new Map<string, DesarrolloDocument>();
+    [...objectSnapshot.docs, ...nameSnapshot.docs].forEach((desarrolloDoc) => {
+        merged.set(desarrolloDoc.id, {
+            id: desarrolloDoc.id,
+            ...desarrolloDoc.data(),
+        } as DesarrolloDocument);
+    });
+
+    return Array.from(merged.values());
 }
 
 export async function saveDesarrollo(id: string, data: any): Promise<void> {
@@ -91,6 +105,11 @@ export async function updateDesarrollo(
 ): Promise<void> {
     const docRef = doc(db, DESARROLLOS_COLLECTION, id);
     await updateDoc(docRef, data);
+}
+
+export async function deleteDesarrollo(id: string): Promise<void> {
+    const docRef = doc(db, DESARROLLOS_COLLECTION, id);
+    await deleteDoc(docRef);
 }
 
 // Area CRUD operations
@@ -125,3 +144,20 @@ export async function updateArea(
     await updateDoc(docRef, data);
 }
 
+export async function deleteArea(id: string): Promise<void> {
+    const docRef = doc(db, AREAS_COLLECTION, id);
+    await deleteDoc(docRef);
+}
+
+export async function deleteAreaWithProjects(areaName: string): Promise<{ deletedProjects: string[] }> {
+    const impactedProjects = await getDesarrollosByArea(areaName);
+
+    await Promise.all([
+        deleteArea(areaName),
+        ...impactedProjects.map((project) => deleteDesarrollo(project.id)),
+    ]);
+
+    return {
+        deletedProjects: impactedProjects.map((project) => project.nombre || project.id),
+    };
+}
