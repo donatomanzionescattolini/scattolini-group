@@ -99,10 +99,8 @@ export default function AreaEditor() {
         if (!area) return;
         setDeleteModal(prev => ({...prev, loading: true}));
         try {
-            // Delete all associated projects first
-            for (const project of affectedProjects) {
-                await deleteDesarrollo(project.id);
-            }
+            // Delete all associated projects concurrently
+            await Promise.all(affectedProjects.map((project) => deleteDesarrollo(project.id)));
             // Delete the area itself
             await deleteArea(area.name || area.id);
             setDeleteModal({show: false, area: null, affectedProjects: [], loading: false});

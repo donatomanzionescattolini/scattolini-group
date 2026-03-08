@@ -1,5 +1,8 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {Form} from 'react-bootstrap';
+import {useTranslation} from '../../i18n.tsx';
+
+const DEBOUNCE_DELAY_MS = 350;
 
 interface NominatimResult {
     place_id: number;
@@ -23,6 +26,7 @@ export default function AddressAutocomplete({
     placeholder = 'Start typing an address...',
     id = 'address-autocomplete',
 }: AddressAutocompleteProps) {
+    const {lang} = useTranslation();
     const [inputValue, setInputValue] = useState(value);
     const [suggestions, setSuggestions] = useState<NominatimResult[]>([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -60,9 +64,9 @@ export default function AddressAutocomplete({
         }
         setLoading(true);
         try {
-            const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=6&addressdetails=1`;
+            const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=6&addressdetails=1&accept-language=${lang}`;
             const res = await fetch(url, {
-                headers: {'Accept-Language': 'en', 'User-Agent': 'ScattoliniGroupAdmin/1.0'},
+                headers: {'Accept-Language': lang, 'User-Agent': 'ScattoliniGroupAdmin/1.0'},
             });
             const data: NominatimResult[] = await res.json();
             setSuggestions(data);
@@ -73,7 +77,7 @@ export default function AddressAutocomplete({
         } finally {
             setLoading(false);
         }
-    }, []);
+    }, [lang]);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const val = e.target.value;
@@ -81,7 +85,7 @@ export default function AddressAutocomplete({
         setConfirmed(false);
 
         if (debounceRef.current) clearTimeout(debounceRef.current);
-        debounceRef.current = setTimeout(() => fetchSuggestions(val), 350);
+        debounceRef.current = setTimeout(() => fetchSuggestions(val), DEBOUNCE_DELAY_MS);
     };
 
     const handleSelect = (result: NominatimResult) => {

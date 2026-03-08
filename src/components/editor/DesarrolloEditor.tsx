@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Button, ListGroup, Spinner} from 'react-bootstrap';
+import {Button, ListGroup, Modal, Spinner} from 'react-bootstrap';
 import Areas from '../../objects/areas/Areas';
 import {getDesarrollosForArea, registerDynamicDesarrollos} from '../../objects/desarrollos/Desarrollos';
 import {deleteDesarrollo, saveDesarrollo, serializeDesarrollo,} from '../../services/database';
@@ -15,6 +15,9 @@ export default function DesarrolloEditor() {
     const [messageType, setMessageType] = useState<'success' | 'error' | ''>('');
     const [desarrollos, setDesarrollos] = useState<any[]>([]);
     const [isCreating, setIsCreating] = useState(false);
+    const [deleteModal, setDeleteModal] = useState<{show: boolean; desarrollo: any | null; deleting: boolean}>({
+        show: false, desarrollo: null, deleting: false,
+    });
 
     useEffect(() => {
         loadDesarrollos();
@@ -125,19 +128,26 @@ export default function DesarrolloEditor() {
         setMessageType('');
     };
 
-    const handleDeleteDesarrollo = async (desarrollo: any, e: React.MouseEvent) => {
+    const handleDeleteDesarrollo = (desarrollo: any, e: React.MouseEvent) => {
         e.stopPropagation();
-        const name = getLocalized(desarrollo.titulo) || desarrollo.nombre || 'this development';
-        if (!confirm(`Are you sure you want to delete "${name}"? This action cannot be undone.`)) return;
+        setDeleteModal({show: true, desarrollo, deleting: false});
+    };
+
+    const handleConfirmDelete = async () => {
+        const {desarrollo} = deleteModal;
+        if (!desarrollo) return;
+        setDeleteModal(prev => ({...prev, deleting: true}));
         try {
             const id = String(desarrollo.nombre || desarrollo.id || '').trim();
             await deleteDesarrollo(id);
+            setDeleteModal({show: false, desarrollo: null, deleting: false});
             loadDesarrollos();
             setMessage(String(t('pages.editor.messages.desarrolloDeleted', 'Development deleted successfully')));
             setMessageType('success');
             setTimeout(() => setMessage(''), 3000);
         } catch (error) {
             console.error('Error deleting desarrollo:', error);
+            setDeleteModal(prev => ({...prev, deleting: false}));
             setMessage(String(t('pages.editor.messages.desarrolloDeleteError', 'Error deleting development')));
             setMessageType('error');
         }
@@ -232,6 +242,38 @@ export default function DesarrolloEditor() {
                     ))}
                 </ListGroup>
             )}
+
+            {/* Delete Confirmation Modal */}
+            <Modal show={deleteModal.show} onHide={() => setDeleteModal(prev => ({...prev, show: false}))} centered>
+                <Modal.Header closeButton>
+                    <Modal.Title className="text-danger">
+                        ⚠️ {t('pages.editor.deleteDesarrollo', 'Delete Development')}
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>
+                        Are you sure you want to delete{' '}
+                        <strong>"{getLocalized(deleteModal.desarrollo?.titulo) || deleteModal.desarrollo?.nombre}"</strong>?
+                    </p>
+                    <p className="text-danger">This action cannot be undone.</p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button
+                        variant="secondary"
+                        onClick={() => setDeleteModal(prev => ({...prev, show: false}))}
+                        disabled={deleteModal.deleting}
+                    >
+                        Cancel
+                    </Button>
+                    <Button
+                        variant="danger"
+                        onClick={handleConfirmDelete}
+                        disabled={deleteModal.deleting}
+                    >
+                        {deleteModal.deleting ? <Spinner animation="border" size="sm"/> : 'Delete'}
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     );
 }
