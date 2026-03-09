@@ -106,32 +106,91 @@ export const desarrolloMap: DesarrolloMapItem[] =
 
 // Dynamic developments stored in Firestore
 export const dynamicDesarrolloMap: Record<string, Set<Desarrollo>> = {};
+export const DYNAMIC_DESARROLLOS_UPDATED_EVENT = "dynamic-desarrollos-updated";
+
+function emitDynamicDesarrollosUpdated() {
+    if (typeof window !== "undefined") {
+        window.dispatchEvent(new CustomEvent(DYNAMIC_DESARROLLOS_UPDATED_EVENT));
+    }
+}
+
+function toSlug(value: string): string {
+    return decodeURIComponent(String(value || ""))
+        .trim()
+        .replace(/([a-z0-9])([A-Z])/g, "$1-$2")
+        .replace(/[\s_]+/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-|-$/g, "")
+        .toLowerCase();
+}
+
+function matchesSlug(nombre: string, slug: string): boolean {
+    const raw = decodeURIComponent(String(slug || "")).trim().toLowerCase();
+    const normalized = toSlug(slug);
+    const candidates = new Set([
+        String(nombre || "").trim().toLowerCase(),
+        toSlug(nombre),
+        decodeURIComponent(encodeURIComponent(String(nombre || ""))).trim().toLowerCase(),
+    ]);
+    return candidates.has(raw) || candidates.has(normalized);
+}
 
 /**
  * Registers developments from Firestore into the dynamic map.
  */
-export function registerDynamicDesarrollos(desarrollos: Desarrollo[]) {
+export function registerDynamicDesarrollos(desarrollos: Desarrollo[], options?: { emit?: boolean }) {
     desarrollos.forEach((des) => {
-        const areaName = des.area?.name || "Unknown";
+        const areaName = des.area?.name || des.areaName || "Unknown";
         if (!dynamicDesarrolloMap[areaName]) {
             dynamicDesarrolloMap[areaName] = new Set<Desarrollo>();
         }
-        // Avoid duplicates if already present
         const existing = Array.from(dynamicDesarrolloMap[areaName]).find(d => d.nombre === des.nombre);
         if (existing) {
             dynamicDesarrolloMap[areaName].delete(existing);
         }
         dynamicDesarrolloMap[areaName].add(des);
     });
+
+    if (options?.emit !== false) {
+        emitDynamicDesarrollosUpdated();
+    }
 }
+
+export function replaceDynamicDesarrollos(desarrollos: Desarrollo[]) {
+    Object.keys(dynamicDesarrolloMap).forEach((key) => delete dynamicDesarrolloMap[key]);
+    registerDynamicDesarrollos(desarrollos, { emit: false });
+    emitDynamicDesarrollosUpdated();
+}
+
+export function findDesarrolloBySlug(slug: string, lang: "en" | "es" = "es"): Desarrollo | null {
+    for (const entry of desarrolloMap) {
+        const desarrollos = getDesarrollosForArea(entry.area, lang);
+        for (const desarrollo of desarrollos) {
+            if (matchesSlug(String(desarrollo.nombre || ""), slug)) {
+                return desarrollo;
+            }
+        }
+    }
+
+    for (const areaName of Object.keys(dynamicDesarrolloMap)) {
+        for (const desarrollo of Array.from(dynamicDesarrolloMap[areaName] || [])) {
+            if (matchesSlug(String(desarrollo.nombre || ""), slug)) {
+                return desarrollo;
+            }
+        }
+    }
+
+    return null;
+}
+
 desarrolloMap.push({
     area: Wynwood(),
     des: new Set([NomadResidences]),
 });
 desarrolloMap.push({
     area: Orlando(),
-    des: new Set([WindsorCayResort, Doppio])
-})
+    des: new Set([WindsorCayResort, Doppio]),
+});
 desarrolloMap.push({
     area: PompanoBeach(),
     des: new Set([WPompanoBeach, EnvyResidence]),
@@ -180,7 +239,7 @@ desarrolloMap.push({
     area: BayHarbor(),
     des: new Set([LaMaré, LaBaia, Origin, TheWell]),
 });
-desarrolloMap.push({area: CoconutGrove(), des: new Set([Vita, TheWellCoconutGrove]),});
+desarrolloMap.push({area: CoconutGrove(), des: new Set([Vita, TheWellCoconutGrove])});
 desarrolloMap.push({area: Doral(), des: new Set([])});
 desarrolloMap.push({
     area: Downtown(),
@@ -255,7 +314,7 @@ desarrolloMap.push({
 
 desarrolloMap.push({
     area: MidtownMiami(),
-    des: new Set([MidtownParkResidences, TheStandardResidences, JeanGeorgesMiamiTropicResidences])
+    des: new Set([MidtownParkResidences, TheStandardResidences, JeanGeorgesMiamiTropicResidences]),
 });
 
 export function getDesarrollosForArea(area: Area, lang: "en" | "es" = "es"): Set<Desarrollo> {

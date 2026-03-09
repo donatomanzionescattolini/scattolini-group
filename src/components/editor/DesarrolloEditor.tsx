@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Button, ButtonGroup, ListGroup, Spinner} from 'react-bootstrap';
 import {deleteDesarrollo, getAllDesarrollos, saveDesarrollo, serializeDesarrollo} from '../../services/database';
+import {replaceDynamicDesarrollos, getDesarrollosForArea} from '../../objects/desarrollos/Desarrollos';
 import Areas from '../../objects/areas/Areas';
-import {getDesarrollosForArea} from '../../objects/desarrollos/Desarrollos';
 import MultiStepWizard from './MultiStepWizard';
 import {useTranslation} from '../../i18n.tsx';
 
@@ -153,6 +153,8 @@ export default function DesarrolloEditor() {
 
             delete payload.id;
             await saveDesarrollo(desarrolloId, serializeDesarrollo(payload));
+            const refreshedDynamicDesarrollos = await getAllDesarrollos();
+            replaceDynamicDesarrollos(refreshedDynamicDesarrollos as any);
             await loadDesarrollos();
             setMessage(String(t('pages.editor.messages.desarrolloSaved', 'Development saved successfully')));
             setMessageType('success');
@@ -188,6 +190,8 @@ export default function DesarrolloEditor() {
 
         try {
             await deleteDesarrollo(desarrolloId);
+            const refreshedDynamicDesarrollos = await getAllDesarrollos();
+            replaceDynamicDesarrollos(refreshedDynamicDesarrollos as any);
             await loadDesarrollos();
             setMessage(String(t('pages.editor.messages.desarrolloDeleted', 'Development deleted successfully')));
             setMessageType('success');

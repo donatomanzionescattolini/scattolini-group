@@ -3,7 +3,7 @@ import {resolveLocalizedValue, useTranslation} from "../i18n.tsx";
 import {useNavigate} from "react-router-dom";
 import {Container, Form, Nav as BsNav, Navbar, NavDropdown} from "react-bootstrap";
 import Areas from "../objects/areas/Areas";
-import {getDesarrollosForArea} from "../objects/desarrollos/Desarrollos";
+import {getDesarrollosForArea, DYNAMIC_DESARROLLOS_UPDATED_EVENT} from "../objects/desarrollos/Desarrollos";
 import Desarrollo from "../models/desarrollos/Desarrollo";
 import {Area} from "../models/areas/Area";
 
@@ -12,17 +12,23 @@ const Nav = () => {
     const navigate = useNavigate();
     const [showNavCentred, setShowNavCentred] = useState(false);
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+    const [dynamicVersion, setDynamicVersion] = useState(0);
 
     useEffect(() => {
         const handleResize = () => setInnerWidth(window.innerWidth);
+        const handleDynamicUpdate = () => setDynamicVersion((prev) => prev + 1);
         window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+        window.addEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleDynamicUpdate as EventListener);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+            window.removeEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleDynamicUpdate as EventListener);
+        };
     }, []);
 
     // Only include areas that have projects to sell
     const allAreas = useMemo(() => {
         return Areas().filter((area) => getDesarrollosForArea(area, lang).size > 0);
-    }, [lang]);
+    }, [lang, dynamicVersion, Areas, getDesarrollosForArea]);
     const [filteredAreas, setFilteredAreas] = useState<Array<Area>>(allAreas);
 
     const allDesarrollos = useMemo<Desarrollo[]>(
@@ -30,7 +36,7 @@ const Nav = () => {
             allAreas
                 .map((area) => [...getDesarrollosForArea(area, lang)])
                 .reduce((prev, cur) => [...prev, ...cur], []),
-        [allAreas, lang]
+        [allAreas, lang, dynamicVersion, getDesarrollosForArea]
     );
 
     const [filteredDesarrollos, setFilteredDesarrollos] =
@@ -84,8 +90,8 @@ const Nav = () => {
         setShowNavCentred(false);
     };
 
-    const getLocalized = (field: string | Record<string, string> | null | undefined) => {
-        return resolveLocalizedValue<string>(field, lang) || "";
+    const getLocalized = (field: string | Record<string, string | undefined> | null | undefined) => {
+        return resolveLocalizedValue<string>(field || undefined, lang) || "";
     };
 
     return (

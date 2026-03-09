@@ -33,15 +33,17 @@ export default function MultiStepWizard({
     Boolean(getLocationValue(data)),
   );
   const [formError, setFormError] = useState("");
-  const { control, handleSubmit, setValue } = useForm({
+  const { control, handleSubmit, setValue, reset } = useForm({
     defaultValues: formData,
   });
 
   useEffect(() => {
     setFormData(data);
+    reset(data);
+    setCurrentStep(0);
     setAddressSelected(Boolean(getLocationValue(data)));
     setFormError("");
-  }, [data]);
+  }, [data, reset]);
 
   // Get available areas for select dropdown
   const areas = useMemo(() => {
@@ -127,15 +129,19 @@ export default function MultiStepWizard({
   };
 
   const onSubmit = async (data: any) => {
-    setFormData(data);
+    const mergedData = {
+      ...formData,
+      ...data,
+    };
+
+    setFormData(mergedData);
     setFormError("");
 
     const activeFields = steps[currentStep].fields;
     const isLocationStep = activeFields.includes("ubicacion") || activeFields.includes("ubicación");
 
     if (isLocationStep && type === "desarrollo") {
-        const locationVal = String(getFieldValue("ubicacion") || getFieldValue("ubicación") || "").trim();
-        // If there's a value but it hasn't been "selected" from autocomplete, and it's not the original value
+        const locationVal = String(mergedData.ubicacion || mergedData["ubicación"] || "").trim();
         if (locationVal && !addressSelected && locationVal !== String(getLocationValue(data)).trim()) {
           setFormError(
             String(
@@ -145,17 +151,13 @@ export default function MultiStepWizard({
               ),
             ),
           );
-          // Allow override on second click or if they really want it?
-          // Actually, let's just make it a soft warning or allow them to proceed if they have a value.
-          // For now, let's just set addressSelected to true if they click next again? No, let's just let them through if there is a value.
           setAddressSelected(true);
           return;
         }
     }
 
     if (currentStep === steps.length - 1) {
-      // Final step - save
-      await onSave(data);
+      await onSave(mergedData);
     } else {
       handleNext();
     }

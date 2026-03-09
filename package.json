@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.999.0",
-    "@aws-sdk/s3-request-presigner": "^3.999.0",
+    "@aws-sdk/client-s3": "^3.1004.0",
+    "@aws-sdk/s3-request-presigner": "^3.1004.0",
     "@emailjs/browser": "latest",
     "@material/banner": "latest",
     "@popperjs/core": "latest",

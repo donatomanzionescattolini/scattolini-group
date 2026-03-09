@@ -5,18 +5,32 @@ import {
     S3Client,
 } from "@aws-sdk/client-s3";
 
-const BUCKET_NAME = import.meta.env.VITE_S3_BUCKET || "pagina-mama";
+const AWS_REGION = (import.meta.env.VITE_AWS_REGION || "").trim() && import.meta.env.VITE_AWS_REGION !== "N/A"
+    ? import.meta.env.VITE_AWS_REGION.trim()
+    : "us-east-1";
+const AWS_ACCESS_KEY_ID = (import.meta.env.VITE_AWS_ACCESS_KEY_ID || "").trim();
+const AWS_SECRET_ACCESS_KEY = (import.meta.env.VITE_AWS_SECRET_ACCESS_KEY || "").trim();
+const AWS_SESSION_TOKEN = (import.meta.env.VITE_AWS_SESSION_TOKEN || "").trim() || undefined;
+const BUCKET_NAME = (import.meta.env.VITE_S3_BUCKET || "pagina-mama").trim();
 const ASSETS_PREFIX = "assets2/desarrollos";
 const AREAS_PREFIX = "assets2/areas";
 
+if (import.meta.env.DEV) {
+    console.info("[S3 config]", {
+        bucket: BUCKET_NAME,
+        region: AWS_REGION,
+        accessKeyIdSuffix: AWS_ACCESS_KEY_ID ? `***${AWS_ACCESS_KEY_ID.slice(-4)}` : "(missing)",
+        hasSecretAccessKey: Boolean(AWS_SECRET_ACCESS_KEY),
+        hasSessionToken: Boolean(AWS_SESSION_TOKEN),
+    });
+}
+
 const s3Client = new S3Client({
-    region: (import.meta.env.VITE_AWS_REGION && import.meta.env.VITE_AWS_REGION !== "N/A")
-        ? import.meta.env.VITE_AWS_REGION
-        : "us-east-1",
+    region: AWS_REGION,
     credentials: {
-        accessKeyId: import.meta.env.VITE_AWS_ACCESS_KEY_ID || "",
-        secretAccessKey: import.meta.env.VITE_AWS_SECRET_ACCESS_KEY || "",
-        sessionToken: import.meta.env.VITE_AWS_SESSION_TOKEN || undefined,
+        accessKeyId: AWS_ACCESS_KEY_ID,
+        secretAccessKey: AWS_SECRET_ACCESS_KEY,
+        sessionToken: AWS_SESSION_TOKEN,
     },
 });
 
@@ -84,6 +98,9 @@ function getFriendlyS3Error(error: unknown): string {
     if (!error || typeof error !== "object") return defaultMessage;
 
     const err = error as { name?: string; message?: string };
+    if (err.name === "InvalidAccessKeyId" || (err.message || "").includes("Access Key Id")) {
+        return "S3 rejected the access key ID. This is not a CORS error. Check which env file is winning and restart the Vite server so the browser picks up the latest credentials.";
+    }
     if (err.name === "SignatureDoesNotMatch" || (err.message || "").includes("signature")) {
         return "S3 signature mismatch. Verify VITE_AWS_REGION, access key, secret key, and optional session token.";
     }
