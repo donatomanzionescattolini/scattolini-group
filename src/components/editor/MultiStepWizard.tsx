@@ -131,28 +131,26 @@ export default function MultiStepWizard({
     setFormError("");
 
     const activeFields = steps[currentStep].fields;
-    if (activeFields.includes("ubicacion") && type === "desarrollo" && !addressSelected) {
-      setFormError(
-        String(
-          t(
-            "pages.editor.address.validation",
-            "Please choose an address from the suggestions before continuing.",
-          ),
-        ),
-      );
-      return;
-    }
+    const isLocationStep = activeFields.includes("ubicacion") || activeFields.includes("ubicación");
 
-    if (currentStep === steps.length - 1 && type === "desarrollo" && !addressSelected) {
-      setFormError(
-        String(
-          t(
-            "pages.editor.address.validation",
-            "Please choose an address from the suggestions before continuing.",
-          ),
-        ),
-      );
-      return;
+    if (isLocationStep && type === "desarrollo") {
+        const locationVal = String(getFieldValue("ubicacion") || getFieldValue("ubicación") || "").trim();
+        // If there's a value but it hasn't been "selected" from autocomplete, and it's not the original value
+        if (locationVal && !addressSelected && locationVal !== String(getLocationValue(data)).trim()) {
+          setFormError(
+            String(
+              t(
+                "pages.editor.address.validation",
+                "Please choose an address from the suggestions to ensure accuracy, or click next again to use what you typed.",
+              ),
+            ),
+          );
+          // Allow override on second click or if they really want it?
+          // Actually, let's just make it a soft warning or allow them to proceed if they have a value.
+          // For now, let's just set addressSelected to true if they click next again? No, let's just let them through if there is a value.
+          setAddressSelected(true);
+          return;
+        }
     }
 
     if (currentStep === steps.length - 1) {
@@ -176,7 +174,7 @@ export default function MultiStepWizard({
   };
 
   const setFieldValue = useCallback(
-    (fieldName: string, value: string) => {
+    (fieldName: string, value: string, isFromAutocomplete = false) => {
       let processedValue: any = value;
 
       // Handle arrays (like introduccion and descripcion)
@@ -184,7 +182,7 @@ export default function MultiStepWizard({
         processedValue = value.split("\n\n").filter((p) => p.trim());
       }
 
-      if (fieldName === "ubicacion" || fieldName === "ubicación") {
+      if ((fieldName === "ubicacion" || fieldName === "ubicación") && !isFromAutocomplete) {
         setAddressSelected(false);
       }
 
@@ -285,7 +283,7 @@ export default function MultiStepWizard({
               onValueChange={(value) => setFieldValue(fieldName, value)}
               onSelectSuggestion={(value) => {
                 setAddressSelected(true);
-                setFieldValue(fieldName, value);
+                setFieldValue(fieldName, value, true);
               }}
             />
           </Form.Group>

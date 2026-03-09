@@ -7,6 +7,7 @@ import {
   getNextGalleryImageNumber,
   listDesarrolloMedia,
   MediaFile,
+  normalizePathSegment,
   uploadFileToS3,
   uploadGalleryImage,
 } from "../../services/s3";
@@ -37,8 +38,11 @@ export default function MediaUploadStep({
   const bannerInputRef = useRef<HTMLInputElement>(null);
   const thumbnailInputRef = useRef<HTMLInputElement>(null);
 
-  const baseUrl = `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${areaName}/${projectName}`;
-  const thumbnailUrl = `https://pagina-mama.s3.amazonaws.com/assets2/areas/${areaName}/${projectName}.webp`;
+  const safeArea = normalizePathSegment(areaName);
+  const safeProject = normalizePathSegment(projectName);
+
+  const baseUrl = `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${safeProject}`;
+  const thumbnailUrl = `https://pagina-mama.s3.amazonaws.com/assets2/areas/${safeArea}/${safeProject}.webp`;
 
   const loadCurrentMedia = useCallback(async () => {
     setLoading(true);

@@ -279,11 +279,11 @@ export default function DesarrolloEditor() {
                     <Spinner animation="border"/>
                 </div>
             ) : sortedDesarrollos.length === 0 ? (
-                <div className="alert alert-warning">
-                    {t('pages.editor.noDesarrollos', 'No developments found yet.')}
+                <div className="alert alert-info">
+                    {t('pages.editor.noDesarrollos', 'No developments found in database or static files.')}
                 </div>
             ) : (
-                <ListGroup>
+                <ListGroup className="mt-3">
                     {sortedDesarrollos.map((desarrollo) => {
                         const id = String(desarrollo.id || desarrollo.nombre || '');
                         const areaName = desarrollo.area?.name || desarrollo.areaName || '-';

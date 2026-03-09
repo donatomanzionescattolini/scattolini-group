@@ -131,7 +131,7 @@ export default function AddressAutocompleteField({
         <div className="form-text text-warning mt-2">
           {t(
             "pages.editor.address.mustSelect",
-            "You must click one suggested address before saving.",
+            "Please click the matching address from the list above to confirm it.",
           )}
         </div>
       )}
