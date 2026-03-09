@@ -170,44 +170,35 @@ export default function MediaUploadStep({
   };
 
   const handlePdfUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (!files || files.length === 0) return;
+    const file = e.target.files?.[0];
+    if (!file) return;
 
-    const targetPdfNames = ["brochure.pdf", "hoja.pdf", "planos.pdf"];
-    setUploading(true);
-    setError("");
-
-    for (let i = 0; i < files.length; i++) {
-      const file = files[i];
-      const targetName = targetPdfNames[i] || `document-${i + 1}.pdf`;
-
-      if (!file.name.toLowerCase().endsWith(".pdf") && file.type !== "application/pdf") {
-        setError(
-          `${file.name}: ${t("pages.editor.media.pdfTypeError", "Only PDF files are allowed")}`,
-        );
-        continue;
-      }
-
-      setUploadProgress(
-        `${t("pages.editor.media.uploading", "Uploading")} ${file.name}... (${i + 1}/${files.length})`,
+    if (!file.name.toLowerCase().endsWith(".pdf") && file.type !== "application/pdf") {
+      setError(
+        `${file.name}: ${t("pages.editor.media.pdfTypeError", "Only PDF files are allowed")}`,
       );
-
-      const result = await uploadFileToS3(file, areaName, projectName, "pdf", {
-        targetName,
-      });
-
-      if (!result.success) {
-        setError(`${file.name}: ${result.error}`);
-      }
+      return;
     }
 
-    setSuccess(
-      t(
-        "pages.editor.media.pdfsUploaded",
-        "PDFs uploaded successfully",
-      ) as string,
+    setUploading(true);
+    setError("");
+    setUploadProgress(
+      `${t("pages.editor.media.uploading", "Uploading")} ${file.name}...`,
     );
-    await loadCurrentMedia();
+
+    const result = await uploadFileToS3(file, areaName, projectName, "pdf", {
+      targetName: file.name,
+    });
+
+    if (result.success) {
+      setSuccess(
+        `${t("pages.editor.media.pdfUploaded", "PDF uploaded successfully")}: ${file.name} -> ${result.targetName}`,
+      );
+      await loadCurrentMedia();
+    } else {
+      setError(`${file.name}: ${result.error}`);
+    }
+
     setUploading(false);
     setUploadProgress("");
     if (pdfInputRef.current) pdfInputRef.current.value = "";
@@ -603,7 +594,6 @@ export default function MediaUploadStep({
               type="file"
               className="form-control form-control-sm"
               accept=".pdf"
-              multiple
               onChange={handlePdfUpload}
               disabled={uploading}
               title={String(t("pages.editor.media.uploadPdfTitle"))}
@@ -611,7 +601,7 @@ export default function MediaUploadStep({
             <div className="form-text">
               {t(
                 "pages.editor.media.pdfHelp",
-                "Upload PDF files. They will be auto-renamed to brochure.pdf, hoja.pdf, and planos.pdf.",
+                "Upload PDF files one at a time. Name them brochure.pdf, hoja.pdf, or planos.pdf.",
               )}
             </div>
           </div>

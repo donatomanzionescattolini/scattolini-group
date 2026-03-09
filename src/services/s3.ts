@@ -25,6 +25,13 @@ if (import.meta.env.DEV) {
     });
 }
 
+if (!AWS_ACCESS_KEY_ID || !AWS_SECRET_ACCESS_KEY) {
+    console.error("[S3 config] Missing AWS credentials. Uploads will fail.", {
+        hasAccessKey: Boolean(AWS_ACCESS_KEY_ID),
+        hasSecretKey: Boolean(AWS_SECRET_ACCESS_KEY),
+    });
+}
+
 const s3Client = new S3Client({
     region: AWS_REGION,
     credentials: {
@@ -121,46 +128,43 @@ export async function uploadFileToS3(
         return { success: false, error: "Project name is required before uploading media." };
     }
 
-    const arrayBuffer = await file.arrayBuffer();
-    let body: Uint8Array = new Uint8Array(arrayBuffer);
-    let s3Path = "";
-    let contentType = file.type || "application/octet-stream";
-    let targetName = options?.targetName || file.name;
+    let body: Uint8Array;
+    let s3Path: string;
+    let contentType: string;
+    let targetName: string;
 
     if (fileType === "banner") {
         targetName = "banner.jpg";
         s3Path = `${ASSETS_PREFIX}/${safeProject}/${targetName}`;
         contentType = "image/jpeg";
         body = await convertImageToMime(file, "image/jpeg");
-    }
-
-    if (fileType === "thumbnail") {
+    } else if (fileType === "thumbnail") {
         if (!safeArea) return { success: false, error: "Area name is required for thumbnails." };
         targetName = `${safeProject}.webp`;
         s3Path = `${AREAS_PREFIX}/${safeArea}/${targetName}`;
         contentType = "image/webp";
         body = await convertImageToMime(file, "image/webp");
-    }
-
-    if (fileType === "video") {
+    } else if (fileType === "video") {
         targetName = "video.mp4";
         s3Path = `${ASSETS_PREFIX}/${safeProject}/${targetName}`;
         contentType = file.type || "video/mp4";
-    }
-
-    if (fileType === "pdf") {
+        const arrayBuffer = await file.arrayBuffer();
+        body = new Uint8Array(arrayBuffer);
+    } else if (fileType === "pdf") {
         const rawName = options?.targetName || file.name || "document.pdf";
         targetName = rawName.toLowerCase().endsWith(".pdf") ? rawName : `${rawName}.pdf`;
         s3Path = `${ASSETS_PREFIX}/${safeProject}/pdfs/${targetName}`;
         contentType = "application/pdf";
-    }
-
-    if (fileType === "gallery") {
+        const arrayBuffer = await file.arrayBuffer();
+        body = new Uint8Array(arrayBuffer);
+    } else if (fileType === "gallery") {
         const rawName = options?.targetName || file.name || "image.jpg";
         targetName = rawName.toLowerCase().endsWith(".jpg") ? rawName : `${rawName}.jpg`;
         s3Path = `${ASSETS_PREFIX}/${safeProject}/image-gallery/${targetName}`;
         contentType = "image/jpeg";
         body = await convertImageToMime(file, "image/jpeg");
+    } else {
+        return { success: false, error: `Unknown file type: ${fileType}` };
     }
 
     try {
@@ -183,6 +187,7 @@ export async function uploadFileToS3(
         };
     } catch (error) {
         console.error("S3 upload error:", error);
+        console.error("Upload details:", { bucket: BUCKET_NAME, key: s3Path, fileType, fileSize: body.length });
         return {
             success: false,
             error: getFriendlyS3Error(error),
