@@ -5,15 +5,24 @@ import {
     S3Client,
 } from "@aws-sdk/client-s3";
 
-const BUCKET_NAME = "pagina-mama";
+const BUCKET_NAME = import.meta.env.VITE_S3_BUCKET || "pagina-mama";
 const ASSETS_PREFIX = "assets2/desarrollos";
 const AREAS_PREFIX = "assets2/areas";
 
+const accessKeyId = import.meta.env.VITE_AWS_ACCESS_KEY_ID || "";
+const secretAccessKey = import.meta.env.VITE_AWS_SECRET_ACCESS_KEY || "";
+
+if (!accessKeyId || !secretAccessKey) {
+    console.warn("AWS credentials (VITE_AWS_ACCESS_KEY_ID / VITE_AWS_SECRET_ACCESS_KEY) are not set. S3 operations will fail.");
+}
+
 const s3Client = new S3Client({
-    region: import.meta.env.VITE_AWS_REGION || "us-east-1",
+    region: (import.meta.env.VITE_AWS_REGION && import.meta.env.VITE_AWS_REGION !== "N/A")
+        ? import.meta.env.VITE_AWS_REGION
+        : "us-east-1",
     credentials: {
-        accessKeyId: import.meta.env.VITE_AWS_ACCESS_KEY_ID || "",
-        secretAccessKey: import.meta.env.VITE_AWS_SECRET_ACCESS_KEY || "",
+        accessKeyId,
+        secretAccessKey,
         sessionToken: import.meta.env.VITE_AWS_SESSION_TOKEN || undefined,
     },
 });
