@@ -37,4 +37,28 @@
       }
     }
   }
+
+  // Mobile optimizations
+  @media (max-width: 768px) {
+    .form-control,
+    .form-select,
+    input[type="file"] {
+      font-size: 16px !important; // Prevents iOS zoom on focus
+      min-height: 44px; // Touch-friendly
+    }
+
+    .btn {
+      min-height: 44px; // Touch-friendly buttons
+      padding: 0.65rem 1rem;
+    }
+
+    .card {
+      margin-bottom: 1rem;
+    }
+
+    .nav-tabs .nav-link {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.75rem;
+    }
+  }
 }

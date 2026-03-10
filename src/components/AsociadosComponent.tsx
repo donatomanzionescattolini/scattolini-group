@@ -1,9 +1,14 @@
 import "material-components-web/dist/material-components-web.css";
+import "./Asociados.scss";
 import { useTranslation } from "../i18n.tsx";
 import Asociados from "../objects/asociados/Asociados";
+import {useLayoutEffect} from "react";
 
 export default function Equipo() {
   const { t } = useTranslation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section
       id="asociados"

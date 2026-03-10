@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { AboutUs } from "./AboutUs";
 import AliadosComponent from "./components/AliadosComponent.tsx";
@@ -23,14 +23,6 @@ export function Home() {
       window.removeEventListener("resize", handleResizeWindow);
     };
   }, []);
-
-  useLayoutEffect(() => {
-    window.resizeTo(0, 0);
-  });
-  // State variable to store the visibility of the floating element
-  const [show, setShow] = useState(true);
-
-  // Function to toggle the visibility of the floating element
 
   const [quotez] = useState<Quote[]>(quotes);
   return (
@@ -60,9 +52,24 @@ export function Home() {
             color: #8a6944;
           }
           @media (max-width: 768px) {
+            .sticky-subnav .container {
+              overflow-x: auto;
+              -webkit-overflow-scrolling: touch;
+              scrollbar-width: thin;
+            }
+            .sticky-subnav .container > div {
+              flex-wrap: nowrap !important;
+              justify-content: flex-start !important;
+              min-width: max-content;
+              gap: 0.35rem;
+            }
             .subnav-link {
-              font-size: 0.7rem;
-              padding: 0.8rem 0.3rem;
+              font-size: 0.75rem;
+              padding: 0.8rem 0.7rem;
+              white-space: nowrap;
+              min-height: 44px;
+              display: inline-flex;
+              align-items: center;
             }
           }
         `}

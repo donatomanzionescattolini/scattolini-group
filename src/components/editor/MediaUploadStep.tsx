@@ -402,6 +402,7 @@ export default function MediaUploadStep({
               type="file"
               className="form-control form-control-sm"
               accept="image/*"
+              capture="environment"
               onChange={handleBannerUpload}
               disabled={uploading}
               title={String(t("pages.editor.media.uploadBannerTitle"))}
@@ -472,6 +473,7 @@ export default function MediaUploadStep({
               type="file"
               className="form-control form-control-sm"
               accept="image/*"
+              capture="environment"
               onChange={handleThumbnailUpload}
               disabled={uploading}
               title={String(t("pages.editor.media.uploadThumbnailTitle"))}
@@ -659,6 +661,7 @@ export default function MediaUploadStep({
               type="file"
               className="form-control form-control-sm"
               accept="image/*"
+              capture="environment"
               multiple
               onChange={handleGalleryUpload}
               disabled={uploading}
