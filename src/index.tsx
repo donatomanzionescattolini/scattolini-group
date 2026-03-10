@@ -55,3 +55,11 @@ const sections = document.querySelectorAll("section");
 for (const section of sections) {
     section.classList.add("p-2 m-0");
 }
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js").catch((error) => {
+            console.error("Service worker registration failed:", error);
+        });
+    });
+}
