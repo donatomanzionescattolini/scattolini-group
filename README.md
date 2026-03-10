@@ -133,6 +133,51 @@ The application can be deployed to:
 - Firebase Hosting
 - Any static hosting service
 
+## Native Mobile Apps (App Store + Play Store)
+
+If you need the same experience distributed through the Apple App Store and Google Play,
+you should wrap this React/Vite web app in a native container and publish native binaries.
+
+Recommended approach:
+
+1. Use **Capacitor** to package the existing web app for iOS and Android.
+2. Keep this repository as the single source of UI/business logic.
+3. Add native capabilities (push notifications, deep links, biometrics) via Capacitor plugins as needed.
+4. Create production builds and publish via:
+   - Apple App Store Connect (iOS)
+   - Google Play Console (Android)
+
+Repository setup status:
+
+- `@capacitor/core` and `@capacitor/cli` are now declared in `package.json`.
+- `capacitor.config.ts` is included with app id `com.scattolini.group` and `webDir: dist`.
+- Convenience scripts are included:
+  - `npm run mobile:sync`
+  - `npm run mobile:ios`
+  - `npm run mobile:android`
+
+First-time local bootstrap:
+
+```bash
+npm install
+npx cap add ios
+npx cap add android
+npm run mobile:sync
+```
+
+Then open native projects for signing and release:
+
+- `npx cap open ios` (Xcode)
+- `npx cap open android` (Android Studio)
+
+Notes:
+
+- You still maintain the website and app in one codebase.
+- Store compliance items (privacy labels, permissions descriptions, age rating, screenshots, metadata)
+  are required before approval.
+- This PWA-style setup can coexist with store apps, but App Store/Play distribution requires the
+  native packaging and release process above.
+
 ## Security
 
 - Authentication handled by Firebase Auth
