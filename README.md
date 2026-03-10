@@ -147,15 +147,22 @@ Recommended approach:
    - Apple App Store Connect (iOS)
    - Google Play Console (Android)
 
-High-level workflow:
+Repository setup status:
+
+- `@capacitor/core` and `@capacitor/cli` are now declared in `package.json`.
+- `capacitor.config.ts` is included with app id `com.scattolini.group` and `webDir: dist`.
+- Convenience scripts are included:
+  - `npm run mobile:sync`
+  - `npm run mobile:ios`
+  - `npm run mobile:android`
+
+First-time local bootstrap:
 
 ```bash
-npm install @capacitor/core @capacitor/cli
-npx cap init
-npm run build
+npm install
 npx cap add ios
 npx cap add android
-npx cap sync
+npm run mobile:sync
 ```
 
 Then open native projects for signing and release:
