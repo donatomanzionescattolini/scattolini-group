@@ -169,7 +169,7 @@ const Nav = () => {
                         </BsNav.Item>
                         {innerWidth > 650 && (
                             <BsNav.Item>
-                                <Navbar.Brand href="/" onClick={goTo("/")}>
+                                <Navbar.Brand href="/" onClick={goTo("/")} className="border-0" >
                                     <img
                                         width={300}
                                         src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
