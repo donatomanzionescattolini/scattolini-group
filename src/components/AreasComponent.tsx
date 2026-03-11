@@ -60,7 +60,7 @@ export default function AreasComponent(): React.ReactElement {
 
             <Row className="justify-content-center">
                 {areas.map((area) => (
-                    <Col key={area.name} xs={12} sm={6} md={6} lg={4} xl={4} className="gallery-item">
+                    <Col key={area.name} xs={6} sm={6} md={6} lg={4} xl={4} className="gallery-item">
                         <Link to={`/areas/${area.name}/`}>
                             <div
                                 className="gallery-card"
