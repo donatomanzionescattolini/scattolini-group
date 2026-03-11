@@ -43,10 +43,12 @@
   border-color: var(--color-brown);
 }
 
-/* Hide on desktop (lg and up) */
+/* On desktop, move to right side and align vertically with the WhatsApp button */
 @media (min-width: 992px) {
   .floating-lang-toggle {
-    display: none !important;
+    left: auto;
+    right: 20px;
+    bottom: 90px;
   }
 }
 
