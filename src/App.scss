@@ -1475,10 +1475,10 @@ line-height: 1;
     text-decoration: none !important;
   }
 }
-.site-logo-container {
+.site-logo-container, .navbar-brand, .navbar-brand img {
 border: none!important;
 }
-.navbar-brand, .navbar-brand img {
+a {
 
 background-color: transparent!important;
 }
