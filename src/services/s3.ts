@@ -24,6 +24,39 @@ const s3Client = new S3Client({
         accessKeyId,
         secretAccessKey,
         sessionToken: import.meta.env.VITE_AWS_SESSION_TOKEN || undefined,
+const AWS_REGION = (import.meta.env.VITE_AWS_REGION || "").trim() && import.meta.env.VITE_AWS_REGION !== "N/A"
+    ? import.meta.env.VITE_AWS_REGION.trim()
+    : "us-east-1";
+const AWS_ACCESS_KEY_ID = (import.meta.env.VITE_AWS_ACCESS_KEY_ID || "").trim();
+const AWS_SECRET_ACCESS_KEY = (import.meta.env.VITE_AWS_SECRET_ACCESS_KEY || "").trim();
+const AWS_SESSION_TOKEN = (import.meta.env.VITE_AWS_SESSION_TOKEN || "").trim() || undefined;
+const BUCKET_NAME = (import.meta.env.VITE_S3_BUCKET || "pagina-mama").trim();
+const ASSETS_PREFIX = "assets2/desarrollos";
+const AREAS_PREFIX = "assets2/areas";
+
+if (import.meta.env.DEV) {
+    console.info("[S3 config]", {
+        bucket: BUCKET_NAME,
+        region: AWS_REGION,
+        accessKeyIdSuffix: AWS_ACCESS_KEY_ID ? `***${AWS_ACCESS_KEY_ID.slice(-4)}` : "(missing)",
+        hasSecretAccessKey: Boolean(AWS_SECRET_ACCESS_KEY),
+        hasSessionToken: Boolean(AWS_SESSION_TOKEN),
+    });
+}
+
+if (!AWS_ACCESS_KEY_ID || !AWS_SECRET_ACCESS_KEY) {
+    console.error("[S3 config] Missing AWS credentials. Uploads will fail.", {
+        hasAccessKey: Boolean(AWS_ACCESS_KEY_ID),
+        hasSecretKey: Boolean(AWS_SECRET_ACCESS_KEY),
+    });
+}
+
+const s3Client = new S3Client({
+    region: AWS_REGION,
+    credentials: {
+        accessKeyId: AWS_ACCESS_KEY_ID,
+        secretAccessKey: AWS_SECRET_ACCESS_KEY,
+        sessionToken: AWS_SESSION_TOKEN,
     },
 });
 
@@ -52,11 +85,13 @@ export interface MediaFile {
     lastModified?: Date;
 }
 
-function normalizePathSegment(value: string): string {
-    return String(value || "")
-        .trim()
-        .replace(/[\\]+/g, "-")
-        .replace(/\s+/g, " ");
+/**
+ * Normalizes a string for use in S3 paths.
+ * We keep it minimal but ensure consistent case if needed.
+ * For now, we just trim as per user request for exact matches.
+ */
+export function normalizePathSegment(value: string): string {
+    return String(value || "").trim();
 }
 
 async function convertImageToMime(file: File, mimeType: "image/jpeg" | "image/webp"): Promise<Uint8Array> {
@@ -89,6 +124,9 @@ function getFriendlyS3Error(error: unknown): string {
     if (!error || typeof error !== "object") return defaultMessage;
 
     const err = error as { name?: string; message?: string };
+    if (err.name === "InvalidAccessKeyId" || (err.message || "").includes("Access Key Id")) {
+        return "S3 rejected the access key ID. This is not a CORS error. Check which env file is winning and restart the Vite server so the browser picks up the latest credentials.";
+    }
     if (err.name === "SignatureDoesNotMatch" || (err.message || "").includes("signature")) {
         return "S3 signature mismatch. Verify VITE_AWS_REGION, access key, secret key, and optional session token.";
     }
@@ -105,51 +143,51 @@ export async function uploadFileToS3(
     const safeArea = normalizePathSegment(areaName);
     const safeProject = normalizePathSegment(desarrolloName);
 
-    if (!safeArea || !safeProject) {
-        return { success: false, error: "Area and project name are required before uploading media." };
+    if (!safeProject) {
+        return { success: false, error: "Project name is required before uploading media." };
     }
 
-    let s3Path = "";
-    let contentType = file.type || "application/octet-stream";
-    let body: Uint8Array = new Uint8Array(await file.arrayBuffer());
-    let targetName = options?.targetName || file.name;
+    let body: Uint8Array;
+    let s3Path: string;
+    let contentType: string;
+    let targetName: string;
 
     if (fileType === "banner") {
         targetName = "banner.jpg";
-        s3Path = `${ASSETS_PREFIX}/${safeArea}/${safeProject}/${targetName}`;
+        s3Path = `${ASSETS_PREFIX}/${safeProject}/${targetName}`;
         contentType = "image/jpeg";
         body = await convertImageToMime(file, "image/jpeg");
-    }
-
-    if (fileType === "thumbnail") {
+    } else if (fileType === "thumbnail") {
+        if (!safeArea) return { success: false, error: "Area name is required for thumbnails." };
         targetName = `${safeProject}.webp`;
         s3Path = `${AREAS_PREFIX}/${safeArea}/${targetName}`;
         contentType = "image/webp";
         body = await convertImageToMime(file, "image/webp");
-    }
-
-    if (fileType === "video") {
+    } else if (fileType === "video") {
         targetName = "video.mp4";
-        s3Path = `${ASSETS_PREFIX}/${safeArea}/${safeProject}/${targetName}`;
+        s3Path = `${ASSETS_PREFIX}/${safeProject}/${targetName}`;
         contentType = file.type || "video/mp4";
-    }
-
-    if (fileType === "pdf") {
+        const arrayBuffer = await file.arrayBuffer();
+        body = new Uint8Array(arrayBuffer);
+    } else if (fileType === "pdf") {
         const rawName = options?.targetName || file.name || "document.pdf";
         targetName = rawName.toLowerCase().endsWith(".pdf") ? rawName : `${rawName}.pdf`;
-        s3Path = `${ASSETS_PREFIX}/${safeArea}/${safeProject}/pdfs/${targetName}`;
+        s3Path = `${ASSETS_PREFIX}/${safeProject}/pdfs/${targetName}`;
         contentType = "application/pdf";
-    }
-
-    if (fileType === "gallery") {
+        const arrayBuffer = await file.arrayBuffer();
+        body = new Uint8Array(arrayBuffer);
+    } else if (fileType === "gallery") {
         const rawName = options?.targetName || file.name || "image.jpg";
         targetName = rawName.toLowerCase().endsWith(".jpg") ? rawName : `${rawName}.jpg`;
-        s3Path = `${ASSETS_PREFIX}/${safeArea}/${safeProject}/image-gallery/${targetName}`;
+        s3Path = `${ASSETS_PREFIX}/${safeProject}/image-gallery/${targetName}`;
         contentType = "image/jpeg";
         body = await convertImageToMime(file, "image/jpeg");
+    } else {
+        return { success: false, error: `Unknown file type: ${fileType}` };
     }
 
     try {
+        console.log(`Uploading to S3: bucket=${BUCKET_NAME}, key=${s3Path}, contentType=${contentType}`);
         const command = new PutObjectCommand({
             Bucket: BUCKET_NAME,
             Key: s3Path,
@@ -157,7 +195,8 @@ export async function uploadFileToS3(
             ContentType: contentType,
         });
 
-        await s3Client.send(command);
+        const sendResult = await s3Client.send(command);
+        console.log("S3 upload success result:", sendResult);
 
         return {
             success: true,
@@ -167,6 +206,7 @@ export async function uploadFileToS3(
         };
     } catch (error) {
         console.error("S3 upload error:", error);
+        console.error("Upload details:", { bucket: BUCKET_NAME, key: s3Path, fileType, fileSize: body.length });
         return {
             success: false,
             error: getFriendlyS3Error(error),
@@ -177,7 +217,7 @@ export async function uploadFileToS3(
 export async function listDesarrolloMedia(areaName: string, desarrolloName: string): Promise<MediaFile[]> {
     const safeArea = normalizePathSegment(areaName);
     const safeProject = normalizePathSegment(desarrolloName);
-    const prefix = `${ASSETS_PREFIX}/${safeArea}/${safeProject}/`;
+    const prefix = `${ASSETS_PREFIX}/${safeProject}/`;
     const files: MediaFile[] = [];
 
     try {

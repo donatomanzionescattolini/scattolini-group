@@ -134,7 +134,7 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
                 className="col-4 m-0 p-0 responsive"
                 style={{
                   height: "250px",
-                  backgroundImage: `url(../../..https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-left.jpg)`,
+                  backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-left.jpg')`,
                   backgroundSize: "cover",
                 }}
               />
@@ -153,7 +153,7 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
                 autoFocus
                 style={{
                   height: "250px",
-                  backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-right.jpg')`,
+                  backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg')`,
                   backgroundSize: "cover",
                 }}
                 className="col-4 m-0 p-0 responsive"

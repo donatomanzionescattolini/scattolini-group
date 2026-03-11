@@ -23,7 +23,7 @@ import DesarrollosRoutes from "./routes/DesarrollosRoutes.tsx";
 import {FloatingWhatsApp} from "react-floating-whatsapp";
 import FloatingLangToggle from "./components/FloatingLangToggle.tsx";
 import {getAllDesarrollos} from "./services/database";
-import {registerDynamicDesarrollos} from "./objects/desarrollos/Desarrollos";
+import {replaceDynamicDesarrollos} from "./objects/desarrollos/Desarrollos";
 
 export default function App() {
     const {t} = useTranslation();
@@ -32,9 +32,7 @@ export default function App() {
         const fetchDesarrollos = async () => {
             try {
                 const dynamicDesarrollos = await getAllDesarrollos();
-                if (dynamicDesarrollos && dynamicDesarrollos.length > 0) {
-                    registerDynamicDesarrollos(dynamicDesarrollos as any);
-                }
+                replaceDynamicDesarrollos(dynamicDesarrollos as any);
             } catch (error) {
                 console.error("Error fetching dynamic developments:", error);
             }

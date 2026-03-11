@@ -33,15 +33,17 @@ export default function MultiStepWizard({
     Boolean(getLocationValue(data)),
   );
   const [formError, setFormError] = useState("");
-  const { control, handleSubmit, setValue } = useForm({
+  const { control, handleSubmit, setValue, reset } = useForm({
     defaultValues: formData,
   });
 
   useEffect(() => {
     setFormData(data);
+    reset(data);
+    setCurrentStep(0);
     setAddressSelected(Boolean(getLocationValue(data)));
     setFormError("");
-  }, [data]);
+  }, [data, reset]);
 
   // Get available areas for select dropdown
   const areas = useMemo(() => {
@@ -127,37 +129,35 @@ export default function MultiStepWizard({
   };
 
   const onSubmit = async (data: any) => {
-    setFormData(data);
+    const mergedData = {
+      ...formData,
+      ...data,
+    };
+
+    setFormData(mergedData);
     setFormError("");
 
     const activeFields = steps[currentStep].fields;
-    if (activeFields.includes("ubicacion") && type === "desarrollo" && !addressSelected) {
-      setFormError(
-        String(
-          t(
-            "pages.editor.address.validation",
-            "Please choose an address from the suggestions before continuing.",
-          ),
-        ),
-      );
-      return;
-    }
+    const isLocationStep = activeFields.includes("ubicacion") || activeFields.includes("ubicación");
 
-    if (currentStep === steps.length - 1 && type === "desarrollo" && !addressSelected) {
-      setFormError(
-        String(
-          t(
-            "pages.editor.address.validation",
-            "Please choose an address from the suggestions before continuing.",
-          ),
-        ),
-      );
-      return;
+    if (isLocationStep && type === "desarrollo") {
+        const locationVal = String(mergedData.ubicacion || mergedData["ubicación"] || "").trim();
+        if (locationVal && !addressSelected && locationVal !== String(getLocationValue(data)).trim()) {
+          setFormError(
+            String(
+              t(
+                "pages.editor.address.validation",
+                "Please choose an address from the suggestions to ensure accuracy, or click next again to use what you typed.",
+              ),
+            ),
+          );
+          setAddressSelected(true);
+          return;
+        }
     }
 
     if (currentStep === steps.length - 1) {
-      // Final step - save
-      await onSave(data);
+      await onSave(mergedData);
     } else {
       handleNext();
     }
@@ -176,7 +176,7 @@ export default function MultiStepWizard({
   };
 
   const setFieldValue = useCallback(
-    (fieldName: string, value: string) => {
+    (fieldName: string, value: string, isFromAutocomplete = false) => {
       let processedValue: any = value;
 
       // Handle arrays (like introduccion and descripcion)
@@ -184,7 +184,7 @@ export default function MultiStepWizard({
         processedValue = value.split("\n\n").filter((p) => p.trim());
       }
 
-      if (fieldName === "ubicacion" || fieldName === "ubicación") {
+      if ((fieldName === "ubicacion" || fieldName === "ubicación") && !isFromAutocomplete) {
         setAddressSelected(false);
       }
 
@@ -285,7 +285,7 @@ export default function MultiStepWizard({
               onValueChange={(value) => setFieldValue(fieldName, value)}
               onSelectSuggestion={(value) => {
                 setAddressSelected(true);
-                setFieldValue(fieldName, value);
+                setFieldValue(fieldName, value, true);
               }}
             />
           </Form.Group>

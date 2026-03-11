@@ -5,6 +5,7 @@ import {useTranslation} from "../../i18n";
 import {useAuth} from "../../contexts/AuthContext";
 import AreaEditor from "./AreaEditor";
 import DesarrolloEditor from "./DesarrolloEditor";
+import MobileDebugLogger from "../MobileDebugLogger";
 import "./Editor.scss";
 
 export default function Editor() {
@@ -24,6 +25,7 @@ export default function Editor() {
 
     return (
         <div className="editor-page">
+            <MobileDebugLogger />
             <div className="editor-header">
                 <Container>
                     <Row className="align-items-center py-3">
