@@ -102,7 +102,7 @@ const Nav = () => {
                     aria-label={String(t("nav.toggleNavigation") || "")}
                     onClick={() => setShowNavCentred(!showNavCentred)}
                 >
-                    <div className="d-flex flex-column align-items-top justify-content-center">
+                    <div className="d-flex flex-column align-items-top justify-content-center border-0">
                         {innerWidth < 650 && (
                             <div>
                                 <img
@@ -163,8 +163,8 @@ const Nav = () => {
                                         onClick={goTo("/liderazgo")}>{t('nav.liderazgo')}</BsNav.Link>
                         </BsNav.Item>
 
-                        <BsNav.Item>
-                            <BsNav.Link href="/asociados/"
+                        <BsNav.Item className="border-0">
+                            <BsNav.Link href="/asociados/" className="border-0" 
                                         onClick={goTo("/asociados")}>{t('nav.asociados')}</BsNav.Link>
                         </BsNav.Item>
                         {innerWidth > 650 && (
