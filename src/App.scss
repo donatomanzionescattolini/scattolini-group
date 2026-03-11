@@ -66,6 +66,7 @@ h2 {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-darkblue);
+border: none!important;
 }
 
 h3 {
@@ -1473,4 +1474,8 @@ button,
     color: inherit !important;
     text-decoration: none !important;
   }
+}
+.subnav a {
+
+background-color: transparent!important;
 }
