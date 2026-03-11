@@ -1486,5 +1486,7 @@ footer .col-auto,
 footer ul li,
 footer ul li a,
 footer ul { 
-line-height: 1!important;
+line-height: 0.5 !important;
+margin-block: 0!important;
+padding-block: 0!important;
 }
