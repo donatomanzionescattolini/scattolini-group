@@ -1478,8 +1478,13 @@ line-height: 1;
 .site-logo-container {
 border: none!important;
 }
-.navbar-brand, .navbar-brand a {
+.navbar-brand, .navbar-brand img {
 
 background-color: transparent!important;
 }
-
+footer .col-auto,
+footer ul li,
+footer ul li a,
+footer ul { 
+line-height: 1!important;
+}
