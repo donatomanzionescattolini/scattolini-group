@@ -16,18 +16,17 @@ export default function Servicios() {
                 <Card className="m-xs-0 m-sm-0 m-md-2 m-lg-2 m-xl-2">
                     <CardHeader>
                         <CardTitle>
-                            <h4>{t("pages.services.advisory")}</h4>
+                            <h4>{t("pages.services.realEstate")}</h4>
                         </CardTitle>
                     </CardHeader>
                     <CardBody>
                         <CardText className="text-center">
-                            {t("pages.services.advisoryDesc")}
+                            {t("pages.services.realEstateDesc")}
                         </CardText>
                         <br/>
                         <CardLink
                             href="/contacto"
-                            className="btn btn-outline-secondary btn-outline-secondary"
-
+                            className="btn btn-outline-secondary"
                         >
                             {t("pages.services.moreInfo")}
                         </CardLink>
@@ -46,27 +45,8 @@ export default function Servicios() {
                         </CardText>
                         <br/>
                         <CardLink
-                            href="/contacto"
-                            className="btn btn-outline-secondary btn-outline-secondary"
-                        >
-                            {t("pages.services.moreInfo")}
-                        </CardLink>
-                    </CardBody>
-                </Card>
-            </CardGroup>
-            <CardGroup className="text-center">
-                <Card className="m-2">
-                    <CardHeader>
-                        <CardTitle>{t("pages.services.sales")}</CardTitle>
-                    </CardHeader>
-                    <CardBody>
-                        <CardText>
-                            {t("pages.services.salesDesc")}
-                        </CardText>
-                        <br/>
-                        <CardLink
-                            href="/contacto"
-                            className="btn btn-outline-secondary btn-outline-secondary"
+                            href="/manzione-properties"
+                            className="btn btn-outline-secondary"
                         >
                             {t("pages.services.moreInfo")}
                         </CardLink>
@@ -75,16 +55,20 @@ export default function Servicios() {
 
                 <Card className="m-2">
                     <CardHeader>
-                        <CardTitle>{t("pages.services.purchase")}</CardTitle>
+                        <CardTitle>
+                            <h4>{t("pages.services.interiorDesign")}</h4>
+                        </CardTitle>
                     </CardHeader>
                     <CardBody>
                         <CardText>
-                            {t("pages.services.purchaseDesc")}
+                            {t("pages.services.interiorDesignDesc")}
                         </CardText>
                         <br/>
                         <CardLink
-                            href="/contacto"
-                            className="btn btn-outline-secondary btn-outline-secondary"
+                            href="https://www.manzionesdesign.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-outline-secondary"
                         >
                             {t("pages.services.moreInfo")}
                         </CardLink>
