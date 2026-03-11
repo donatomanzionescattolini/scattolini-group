@@ -30,7 +30,7 @@ export default function DesarrollosComponent() {
                         <Row className="justify-content-center">
                             {Array.from(desarr).map((desarrollo, idx: number) => {
                                 return (
-                                    <Col key={desarrollo.nombre ?? `${area.name}-${idx}`} xs={12} sm={12} md={6} lg={4}
+                                    <Col key={desarrollo.nombre ?? `${area.name}-${idx}`} xs={6} sm={6} md={6} lg={4}
                                          xl={4} className="mb-4">
                                         <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                                             <div
