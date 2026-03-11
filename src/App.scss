@@ -1475,7 +1475,7 @@ line-height: 1;
     text-decoration: none !important;
   }
 }
-.site-logo-container, .navbar-brand, .navbar-brand img, img, .navbar *{
+.site-logo-container, .navbar-brand, .navbar-brand img, img, .navbar *, .nav * {
 border: none!important;
 }
 a {
