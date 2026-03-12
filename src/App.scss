@@ -1483,8 +1483,13 @@ border: none!important;
 
 background-color: transparent!important;
 }
-footer .col-auto,
-footer ul li,
+@media (min-width: 600px) {
+
+footer ul li {
+
+padding: 0!important;
+}
+
 footer ul li a,
 footer ul { 
 line-height: 1;
@@ -1493,7 +1498,7 @@ margin-bottom:0!important;
 padding-top: 0!important;
 padding-bottom:0!important;
 }
-
+}
 
 #root > div.floating-lang-toggle {
 
