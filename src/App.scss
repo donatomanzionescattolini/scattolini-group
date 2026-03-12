@@ -1247,7 +1247,8 @@ button,
 
   footer ul li {
     font-size: 0.95rem;
-    margin-bo
+    margin:0;
+padding:0!important;
   }
 
   footer ul li a {
@@ -1367,7 +1368,7 @@ button,
   }
 
   footer .col-auto {
-    padding: 0 0.75rem;
+    
   }
 
   /* Touch-friendly buttons */
@@ -1482,7 +1483,17 @@ border: none!important;
 
 background-color: transparent!important;
 }
-@media (min-width: 600px) {
+@media (min-width: 600px) {.footer-area-link {
+  color: inherit !important;
+  text-decoration: none !important;
+
+  &:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+margin:0!important;
+
+}
 
 footer ul li a ,
 
@@ -1495,6 +1506,7 @@ margin-bottom:0!important;
 padding-top: 0!important;
 padding-bottom:0!important;
 }
+
 }
 
 #root > div.floating-lang-toggle {
