@@ -1485,13 +1485,11 @@ background-color: transparent!important;
 }
 @media (min-width: 600px) {
 
-footer ul li {
+footer ul li a ,
 
-padding: 0!important;
-}
 
-footer ul li a,
-footer ul { 
+footer ul li
+ { 
 line-height: 0.6;
 margin-top: 0!important;
 margin-bottom:0!important;
