@@ -1,26 +1,34 @@
 import React, {useEffect, useMemo, useState} from "react";
 import {resolveLocalizedValue, useTranslation} from "../i18n.tsx";
 import {useNavigate} from "react-router-dom";
-import {Container, Form, Nav as BsNav, Navbar, NavDropdown} from "react-bootstrap";
+import {Form} from "react-bootstrap";
 import Areas from "../objects/areas/Areas";
 import {getDesarrollosForArea, DYNAMIC_DESARROLLOS_UPDATED_EVENT} from "../objects/desarrollos/Desarrollos";
 import Desarrollo from "../models/desarrollos/Desarrollo";
 import {Area} from "../models/areas/Area";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 
 const Nav = () => {
     const {t, lang, setLang} = useTranslation();
     const navigate = useNavigate();
-    const [showNavCentred, setShowNavCentred] = useState(false);
-    const [innerWidth, setInnerWidth] = useState(window.innerWidth);
     const [dynamicVersion, setDynamicVersion] = useState(0);
 
     useEffect(() => {
-        const handleResize = () => setInnerWidth(window.innerWidth);
         const handleDynamicUpdate = () => setDynamicVersion((prev) => prev + 1);
-        window.addEventListener("resize", handleResize);
         window.addEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleDynamicUpdate as EventListener);
         return () => {
-            window.removeEventListener("resize", handleResize);
             window.removeEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleDynamicUpdate as EventListener);
         };
     }, []);
@@ -87,146 +95,181 @@ const Nav = () => {
     const goTo = (path: string) => (event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault();
         navigate(path);
-        setShowNavCentred(false);
     };
 
     const getLocalized = (field: string | Record<string, string | undefined> | null | undefined) => {
         return resolveLocalizedValue<string>(field || undefined, lang) || "";
     };
 
+    const [areasAnchorEl, setAreasAnchorEl] = useState<null | HTMLElement>(null);
+    const [desarrollosAnchorEl, setDesarrollosAnchorEl] = useState<null | HTMLElement>(null);
+    const [mobileOpen, setMobileOpen] = useState(false);
+
+    const handleAreasOpen = (e: React.MouseEvent<HTMLElement>) => setAreasAnchorEl(e.currentTarget);
+    const handleAreasClose = () => setAreasAnchorEl(null);
+    const handleDesarrollosOpen = (e: React.MouseEvent<HTMLElement>) => setDesarrollosAnchorEl(e.currentTarget);
+    const handleDesarrollosClose = () => setDesarrollosAnchorEl(null);
+
+    const navLinkSx = {
+        fontFamily: "'Montserrat', sans-serif",
+        fontSize: "0.78rem",
+        letterSpacing: "0.06em",
+        textTransform: "uppercase" as const,
+        color: "#0e2d2f",
+        "&:hover": { color: "#8a6944", backgroundColor: "transparent" },
+    };
+
+    const langBtnSx = (active: boolean) => ({
+        minWidth: 0,
+        px: 1,
+        py: 0.5,
+        fontSize: "0.7rem",
+        fontFamily: "'Montserrat', sans-serif",
+        fontWeight: active ? 700 : 400,
+        borderColor: "#8a6944",
+        color: active ? "#fff" : "#8a6944",
+        backgroundColor: active ? "#8a6944" : "transparent",
+        "&:hover": {
+            backgroundColor: active ? "#5c4630" : "rgba(138,105,68,0.08)",
+            borderColor: "#8a6944",
+        },
+    });
+
     return (
-        <Navbar expand="lg" bg="light" variant="light">
-            <Container fluid>
-                <Navbar.Toggle
-                    aria-controls="navbarCenteredExample"
-                    aria-label={String(t("nav.toggleNavigation") || "")}
-                    onClick={() => setShowNavCentred(!showNavCentred)}
-                >
-                    <div className="d-flex flex-column align-items-top justify-content-center border-0">
-                        {innerWidth < 650 && (
-                            <div>
+        <>
+            <AppBar position="sticky" elevation={1} sx={{ backgroundColor: "#f2f2ed", color: "#0e2d2f" }}>
+                <Toolbar sx={{ justifyContent: "space-between", flexWrap: "wrap", gap: 0.5, minHeight: { xs: 56, sm: 64 } }}>
+                    {/* Mobile: hamburger + logo */}
+                    <Box sx={{ display: { xs: "flex", md: "none" }, alignItems: "center", gap: 1 }}>
+                        <IconButton
+                            edge="start"
+                            aria-label={String(t("nav.toggleNavigation") || "")}
+                            onClick={() => setMobileOpen(true)}
+                            sx={{ color: "#0e2d2f" }}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <a href="/" onClick={goTo("/")} style={{ lineHeight: 0, background: "transparent" }}>
+                            <img
+                                height={36}
+                                src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
+                                alt={String(t("nav.logoAlt") || "")}
+                                style={{ objectFit: "contain" }}
+                            />
+                        </a>
+                    </Box>
+
+                    {/* Desktop nav */}
+                    <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 0.5, flex: 1 }}>
+                        {/* Language toggle */}
+                        <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, mr: 1 }}>
+                            <Button variant="outlined" size="small" sx={langBtnSx(lang === "es")}
+                                onClick={() => switchLang("es")} aria-label={String(t("nav.switchToSpanish") || "")}>
+                                ES
+                            </Button>
+                            <Button variant="outlined" size="small" sx={langBtnSx(lang === "en")}
+                                onClick={() => switchLang("en")} aria-label={String(t("nav.switchToEnglish") || "")}>
+                                EN
+                            </Button>
+                        </Box>
+
+                        <Button sx={navLinkSx} onClick={goTo("/")}>{t("nav.inicio")}</Button>
+                        <Button sx={navLinkSx} onClick={goTo("/liderazgo")}>{t("nav.liderazgo")}</Button>
+                        <Button sx={navLinkSx} onClick={goTo("/asociados")}>{t("nav.asociados")}</Button>
+
+                        {/* Logo center */}
+                        <Box sx={{ flex: 1, display: "flex", justifyContent: "center" }}>
+                            <a href="/" onClick={goTo("/")} style={{ background: "transparent", lineHeight: 0 }}>
                                 <img
-                                    width="40%"
+                                    height={44}
                                     src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
                                     alt={String(t("nav.logoAlt") || "")}
+                                    style={{ objectFit: "contain" }}
                                 />
-                            </div>
-                        )}
-                        <div>
-                            <i className="fas fa-caret-down"/>
-                        </div>
-                    </div>
-                </Navbar.Toggle>
+                            </a>
+                        </Box>
 
-                <Navbar.Collapse id="navbarCenteredExample" in={showNavCentred}>
-                    <BsNav className="w-100 mb-2 mb-lg-0">
-                        {/* Language toggle - hidden on mobile (uses FloatingLangToggle instead) */}
-                        <BsNav.Item className="d-none d-lg-block">
-                            <div className="d-flex align-items-center ms-3">
-                                <button
-                                    type="button"
-                                    className={`lang-toggle-btn btn btn-sm me-1 ${lang === 'es' ? 'active' : ''}`}
-                                    onClick={() => switchLang('es')}
-                                    aria-label={String(t("nav.switchToSpanish") || "")}
-                                    style={{
-                                        backgroundColor: lang === 'es' ? '#8a6944' : 'transparent',
-                                        color: lang === 'es' ? '#fff' : '#8a6944',
-                                        border: '1px solid #8a6944',
-                                        fontWeight: lang === 'es' ? 'bold' : 'normal'
-                                    }}
-                                >
-                                    ES
-                                </button>
-                                <button
-                                    type="button"
-                                    className={`lang-toggle-btn btn btn-sm ${lang === 'en' ? 'active' : ''}`}
-                                    onClick={() => switchLang('en')}
-                                    aria-label={String(t("nav.switchToEnglish") || "")}
-                                    style={{
-                                        backgroundColor: lang === 'en' ? '#8a6944' : 'transparent',
-                                        color: lang === 'en' ? '#fff' : '#8a6944',
-                                        border: '1px solid #8a6944',
-                                        fontWeight: lang === 'en' ? 'bold' : 'normal'
-                                    }}
-                                >
-                                    EN
-                                </button>
-                            </div>
-                        </BsNav.Item>
-                        <BsNav.Item>
-                            <BsNav.Link href="/" onClick={goTo("/")}>
-                                {t('nav.inicio')}
-                            </BsNav.Link>
-                        </BsNav.Item>
-                        <BsNav.Item>
-                            <BsNav.Link href="/liderazgo/"
-                                        onClick={goTo("/liderazgo")}>{t('nav.liderazgo')}</BsNav.Link>
-                        </BsNav.Item>
-
-                        <BsNav.Item className="border-0">
-                            <BsNav.Link href="/asociados/" className="border-0" 
-                                        onClick={goTo("/asociados")}>{t('nav.asociados')}</BsNav.Link>
-                        </BsNav.Item>
-                        {innerWidth > 650 && (
-                            <BsNav.Item>
-                                <Navbar.Brand href="/" onClick={goTo("/")} className="border-0" >
-                                    <img
-                                        width={300}
-                                        src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
-                                        alt={String(t("nav.logoAlt") || "")}
-                                    />
-                                </Navbar.Brand>
-                            </BsNav.Item>
-                        )}
-                        <NavDropdown title={t('nav.areas')} id="areas-dropdown" className="responsive column">
-                            <div className="d-flex w-75 ms-4 my-3">
+                        {/* Areas dropdown */}
+                        <Button sx={navLinkSx} onClick={handleAreasOpen}>{t("nav.areas")}</Button>
+                        <Menu anchorEl={areasAnchorEl} open={Boolean(areasAnchorEl)} onClose={handleAreasClose}
+                            PaperProps={{ sx: { minWidth: 220, maxHeight: 400 } }}>
+                            <Box sx={{ px: 2, py: 1 }}>
                                 <Form.Control
-                                    placeholder={t('nav.search') as string}
-                                    aria-label={t('nav.search') as string}
+                                    placeholder={t("nav.search") as string}
                                     type="search"
                                     value={searchQueryArea}
                                     onChange={handleSearchArea}
+                                    style={{ fontSize: "0.85rem" }}
                                 />
-                            </div>
+                            </Box>
+                            <Divider />
                             {filteredAreas.map((area) => (
-                                <NavDropdown.Item
-                                    key={area.name}
-                                    href={"/areas/" + area.name}
-                                    onClick={goTo("/areas/" + encodeURIComponent(area.name))}
-                                >
+                                <MenuItem key={area.name} onClick={() => { handleAreasClose(); navigate("/areas/" + encodeURIComponent(area.name)); }}
+                                    sx={{ fontSize: "0.85rem", fontFamily: "'Montserrat', sans-serif" }}>
                                     {getLocalized(area.titulo)}
-                                </NavDropdown.Item>
+                                </MenuItem>
                             ))}
-                        </NavDropdown>
+                        </Menu>
 
-                        <BsNav.Item>
-                            <BsNav.Link href="/contacto/" onClick={goTo("/contacto")}>{t('nav.contacto')}</BsNav.Link>
-                        </BsNav.Item>
-                        <NavDropdown title={t('nav.desarrollos')} id="desarrollos-dropdown"
-                                     className="responsive column">
-                            <div className="d-flex w-75 ms-4 my-3">
+                        <Button sx={navLinkSx} onClick={goTo("/contacto")}>{t("nav.contacto")}</Button>
+
+                        {/* Desarrollos dropdown */}
+                        <Button sx={navLinkSx} onClick={handleDesarrollosOpen}>{t("nav.desarrollos")}</Button>
+                        <Menu anchorEl={desarrollosAnchorEl} open={Boolean(desarrollosAnchorEl)} onClose={handleDesarrollosClose}
+                            PaperProps={{ sx: { minWidth: 240, maxHeight: 400 } }}>
+                            <Box sx={{ px: 2, py: 1 }}>
                                 <Form.Control
-                                    placeholder={t('nav.search') as string}
-                                    aria-label={t('nav.search') as string}
+                                    placeholder={t("nav.search") as string}
                                     type="search"
                                     value={searchQueryDesarrollo}
                                     onChange={handleSearchDesarrollo}
+                                    style={{ fontSize: "0.85rem" }}
                                 />
-                            </div>
+                            </Box>
+                            <Divider />
                             {filteredDesarrollos.map((desarrollo, idx) => (
-                                <NavDropdown.Item
-                                    key={desarrollo.nombre ?? idx}
-                                    href={'/desarrollos/' + (desarrollo.nombre ?? idx)}
-                                    onClick={goTo('/desarrollos/' + encodeURIComponent(String(desarrollo.nombre ?? idx)))}
-                                >
+                                <MenuItem key={desarrollo.nombre ?? idx}
+                                    onClick={() => { handleDesarrollosClose(); navigate("/desarrollos/" + encodeURIComponent(String(desarrollo.nombre ?? idx))); }}
+                                    sx={{ fontSize: "0.85rem", fontFamily: "'Montserrat', sans-serif" }}>
                                     {getLocalized(desarrollo.titulo) || desarrollo.nombre}
-                                </NavDropdown.Item>
+                                </MenuItem>
                             ))}
-                        </NavDropdown>
-                    </BsNav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+                        </Menu>
+                    </Box>
+                </Toolbar>
+            </AppBar>
+
+            {/* Mobile Drawer */}
+            <Drawer anchor="left" open={mobileOpen} onClose={() => setMobileOpen(false)}>
+                <Box sx={{ width: 260, pt: 2 }}>
+                    <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
+                        <img height={40}
+                            src="https://pagina-mama.s3.amazonaws.com/assets2/logos/logo-transparent-background-1.png"
+                            alt={String(t("nav.logoAlt") || "")} style={{ objectFit: "contain" }} />
+                    </Box>
+                    <Box sx={{ display: "flex", justifyContent: "center", gap: 1, mb: 1 }}>
+                        <Button variant="outlined" size="small" sx={langBtnSx(lang === "es")} onClick={() => switchLang("es")}>ES</Button>
+                        <Button variant="outlined" size="small" sx={langBtnSx(lang === "en")} onClick={() => switchLang("en")}>EN</Button>
+                    </Box>
+                    <Divider />
+                    <List dense>
+                        {[
+                            { label: t("nav.inicio"), path: "/" },
+                            { label: t("nav.liderazgo"), path: "/liderazgo" },
+                            { label: t("nav.asociados"), path: "/asociados" },
+                            { label: t("nav.contacto"), path: "/contacto" },
+                            { label: t("nav.desarrollos"), path: "/desarrollos" },
+                            { label: t("nav.areas"), path: "/areas" },
+                        ].map((item) => (
+                            <ListItemButton key={item.path} onClick={() => { setMobileOpen(false); navigate(item.path); }}>
+                                <ListItemText primary={String(item.label || "")}
+                                    primaryTypographyProps={{ sx: { fontFamily: "'Montserrat', sans-serif", fontSize: "0.85rem", letterSpacing: "0.05em", textTransform: "uppercase" } }} />
+                            </ListItemButton>
+                        ))}
+                    </List>
+                </Box>
+            </Drawer>
+        </>
     );
 };
 
