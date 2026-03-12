@@ -5,13 +5,13 @@ const dania = new Asociado("Dania", "Scattolini", "🏘️ Agente y Office Manag
 const laila = new Asociado("Laila", "Saade", "🏠 Agente");
 const veru = new Asociado("Veruschka", "Jaimes", "🏠 Agente");
 const monica = new Asociado(
-  "Mónica",
+  "Monica",
   "Manzione",
   "🏘️ Agente y Property Manager"
 );
 
 const carmen = new Asociado("Carmen", "Herrera", "🏠 Agente");
-const robinson = new Asociado("Róbinson", "Ávila", "🏠 Agente");
+const robinson = new Asociado("Robinson", "Ávila", "🏠 Agente");
 const mariolga = new Asociado("Mariolga", "Villasana", "🏠 Agente");
 
 const dayana = new Asociado("Dayana", "Trejo", "🏠 Agente");
@@ -36,7 +36,6 @@ lauraMartinez,
   robinson,
   victoria,
   gabriela,
-  daniaDominguez,
   anahid,
   shere
 ];
