@@ -1483,7 +1483,8 @@ border: none!important;
 
 background-color: transparent!important;
 }
-@media (max-width: 600px) {.footer-area-link {
+@media (max-width: 600px) {
+  .footer-area-link {
   color: inherit !important;
   text-decoration: none !important;
 
@@ -1513,5 +1514,14 @@ padding-bottom:0!important;
 
 
   width: fit-content!important;
+}
+
+footer {
+  column-count:3;
+  column-gap: 3rem;
+}
+footer ul {
+break-inside: avoid;
+  margin-bottom: 2rem;
 }
   
