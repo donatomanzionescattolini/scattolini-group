@@ -56,6 +56,8 @@ export default function ContactFormComponent() {
         setToSend({...toSend, [e.target.name]: e.target.value});
     };
 
+    const fieldSx = { "& label": { fontFamily: "'Montserrat', sans-serif", fontSize: "0.85rem" } };
+
     return (
         <Paper elevation={2} sx={{ maxWidth: 700, mx: "auto", p: { xs: 3, sm: 5 }, borderRadius: 3, backgroundColor: "#fafaf7" }}>
             {successAlert && (
@@ -83,7 +85,7 @@ export default function ContactFormComponent() {
                     fullWidth
                     variant="outlined"
                     size="small"
-                    sx={{ "& label": { fontFamily: "'Montserrat', sans-serif", fontSize: "0.85rem" } }}
+                    sx={fieldSx}
                 />
 
                 <TextField
@@ -96,7 +98,7 @@ export default function ContactFormComponent() {
                     fullWidth
                     variant="outlined"
                     size="small"
-                    sx={{ "& label": { fontFamily: "'Montserrat', sans-serif", fontSize: "0.85rem" } }}
+                    sx={fieldSx}
                 />
 
                 <TextField
@@ -109,7 +111,7 @@ export default function ContactFormComponent() {
                     fullWidth
                     variant="outlined"
                     size="small"
-                    sx={{ "& label": { fontFamily: "'Montserrat', sans-serif", fontSize: "0.85rem" } }}
+                    sx={fieldSx}
                 />
 
                 <TextField
@@ -122,7 +124,7 @@ export default function ContactFormComponent() {
                     multiline
                     rows={4}
                     variant="outlined"
-                    sx={{ "& label": { fontFamily: "'Montserrat', sans-serif", fontSize: "0.85rem" } }}
+                    sx={fieldSx}
                 />
 
                 <Button

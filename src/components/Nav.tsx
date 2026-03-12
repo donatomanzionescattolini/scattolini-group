@@ -204,7 +204,7 @@ const Nav = () => {
                             </Box>
                             <Divider />
                             {filteredAreas.map((area) => (
-                                <MenuItem key={area.name} onClick={() => { handleAreasClose(); navigate("/areas/" + encodeURIComponent(area.name)); }}
+                                <MenuItem key={area.name} onClick={() => { handleAreasClose(); navigate(`/areas/${encodeURIComponent(area.name)}`); }}
                                     sx={{ fontSize: "0.85rem", fontFamily: "'Montserrat', sans-serif" }}>
                                     {getLocalized(area.titulo)}
                                 </MenuItem>

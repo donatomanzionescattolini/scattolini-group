@@ -41,8 +41,8 @@ export default function Servicios() {
             <Divider sx={{ width: "50%", mx: "auto", my: 2, borderColor: "#8a6944" }} />
             <br />
             <Grid container spacing={3} sx={{ mt: 1, textAlign: "center" }}>
-                {services.map((svc) => (
-                    <Grid item xs={12} md={4} key={String(svc.title)}>
+                {services.map((svc, idx) => (
+                    <Grid item xs={12} md={4} key={idx}>
                         <Card elevation={3} sx={{ height: "100%", display: "flex", flexDirection: "column", borderRadius: 3, backgroundColor: "#fafaf7" }}>
                             <CardHeader
                                 title={<Typography variant="h5" sx={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: "1.1rem", color: "#0e2d2f" }}>{svc.title}</Typography>}

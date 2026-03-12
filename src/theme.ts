@@ -1,5 +1,8 @@
 import { createTheme } from "@mui/material/styles";
 
+const FONT_CORMORANT = "'Cormorant Garamond', serif";
+const FONT_MONTSERRAT = "'Montserrat', sans-serif";
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -24,50 +27,45 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: [
-      "Cormorant Garamond",
-      "Montserrat",
-      "Georgia",
-      "serif",
-    ].join(","),
+    fontFamily: [FONT_CORMORANT, FONT_MONTSERRAT, "Georgia", "serif"].join(","),
     h1: {
-      fontFamily: "'Montserrat', sans-serif",
+      fontFamily: FONT_MONTSERRAT,
       fontWeight: 300,
       letterSpacing: "0.05em",
     },
     h2: {
-      fontFamily: "'Montserrat', sans-serif",
+      fontFamily: FONT_MONTSERRAT,
       fontWeight: 300,
       letterSpacing: "0.05em",
     },
     h3: {
-      fontFamily: "'Montserrat', sans-serif",
+      fontFamily: FONT_MONTSERRAT,
       fontWeight: 400,
       letterSpacing: "0.03em",
     },
     h4: {
-      fontFamily: "'Montserrat', sans-serif",
+      fontFamily: FONT_MONTSERRAT,
       fontWeight: 400,
     },
     h5: {
-      fontFamily: "'Montserrat', sans-serif",
+      fontFamily: FONT_MONTSERRAT,
       fontWeight: 400,
     },
     h6: {
-      fontFamily: "'Montserrat', sans-serif",
+      fontFamily: FONT_MONTSERRAT,
       fontWeight: 500,
     },
     body1: {
-      fontFamily: "'Cormorant Garamond', serif",
+      fontFamily: FONT_CORMORANT,
       fontSize: "1rem",
       lineHeight: 1.7,
     },
     body2: {
-      fontFamily: "'Cormorant Garamond', serif",
+      fontFamily: FONT_CORMORANT,
       fontSize: "0.938rem",
     },
     button: {
-      fontFamily: "'Montserrat', sans-serif",
+      fontFamily: FONT_MONTSERRAT,
       letterSpacing: "0.08em",
       textTransform: "uppercase",
     },
@@ -90,7 +88,7 @@ const theme = createTheme({
         root: {
           borderRadius: 4,
           padding: "0.6rem 1.5rem",
-          fontFamily: "'Montserrat', sans-serif",
+          fontFamily: FONT_MONTSERRAT,
           letterSpacing: "0.08em",
         },
         outlinedPrimary: {
@@ -137,7 +135,7 @@ const theme = createTheme({
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          fontFamily: "'Montserrat', sans-serif",
+          fontFamily: FONT_MONTSERRAT,
           fontSize: "0.85rem",
         },
       },
@@ -145,7 +143,7 @@ const theme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          fontFamily: "'Cormorant Garamond', serif",
+          fontFamily: FONT_CORMORANT,
           "&:hover .MuiOutlinedInput-notchedOutline": {
             borderColor: "#8a6944",
           },
