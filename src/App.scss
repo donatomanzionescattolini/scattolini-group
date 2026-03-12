@@ -1479,7 +1479,7 @@ margin-block:0!important;
 .site-logo-container, .navbar-brand, .navbar-brand img, img, .navbar *, .nav * {
 border: none!important;
 }
-a {
+#root > div.sticky-subnav > div > div > a{
 
 background-color: transparent!important;
 }
@@ -1493,3 +1493,11 @@ margin-bottom:0!important;
 padding-top: 0!important;
 padding-bottom:0!important;
 }
+
+
+#root > div.floating-lang-toggle {
+
+
+  width: fit-content!important;
+}
+  
