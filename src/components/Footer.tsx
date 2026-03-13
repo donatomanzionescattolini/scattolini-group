@@ -1,10 +1,6 @@
 import React from "react";
 import {desarrolloMap} from "../objects/desarrollos/Desarrollos";
 import {resolveLocalizedValue, useTranslation} from "../i18n.tsx";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
-import MuiLink from "@mui/material/Link";
 
 export default function Footer() {
     const {t, lang} = useTranslation();
@@ -21,34 +17,21 @@ export default function Footer() {
     });
 
     return (
-        <Box component="footer" sx={{ backgroundColor: "#0e2d2f", color: "#ede3d6", pt: 5, pb: 3, mt: 4 }}>
-            <Box sx={{ maxWidth: 1200, mx: "auto", px: { xs: 2, sm: 4 } }}>
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3, justifyContent: "center", mb: 4 }}>
+        <footer className="font-small bg-light pt-4">
+            <div className="container text-center">
+                <div className="row justify-content-center">
                     {areasWithDesarrollos.map((entry) => {
                         const areaTitle = getLocalized(entry.area.titulo, entry.area.name);
                         if (!areaTitle) return null;
 
                         return (
-                            <Box key={entry.area.name} sx={{ minWidth: 140, textAlign: "center" }}>
-                                <Typography variant="subtitle2" sx={{
-                                    fontFamily: "'Montserrat', sans-serif",
-                                    fontWeight: 600,
-                                    letterSpacing: "0.08em",
-                                    textTransform: "uppercase",
-                                    fontSize: "0.75rem",
-                                    color: "#c9a961",
-                                    mb: 1,
-                                }}>
-                                    <MuiLink href={`/areas/${entry.area.name}/`} sx={{
-                                        color: "inherit",
-                                        textDecoration: "none",
-                                        background: "transparent",
-                                        "&:hover": { color: "#e5d5a8" },
-                                    }}>
+                            <div key={entry.area.name} className="col-6 col-md-auto mb-md-0 mb-3 text-center px-2 px-md-4">
+                                <h5 className="text-uppercase">
+                                    <a href={`/areas/${entry.area.name}/`} className="footer-area-link">
                                         {areaTitle}
-                                    </MuiLink>
-                                </Typography>
-                                <Box component="ul" sx={{ listStyle: "none", p: 0, m: 0 }}>
+                                    </a>
+                                </h5>
+                                <ul className="list-unstyled text-center">
                                     {[...entry.des].map((item, idx) => {
                                         let des: any;
                                         if (typeof item === "function") {
@@ -60,30 +43,22 @@ export default function Footer() {
                                         if (!desTitle) return null;
 
                                         return (
-                                            <Box component="li" key={des.nombre || idx} sx={{ mb: 0.4 }}>
-                                                <MuiLink href={`/desarrollos/${des.nombre}/`} sx={{
-                                                    color: "#ede3d6",
-                                                    textDecoration: "none",
-                                                    fontSize: "0.82rem",
-                                                    fontFamily: "'Cormorant Garamond', serif",
-                                                    "&:hover": { color: "#c9a961" },
-                                                    background: "transparent",
-                                                }}>
+                                            <li key={des.nombre || idx}>
+                                                <a href={`/desarrollos/${des.nombre}/`}>
                                                     {desTitle}
-                                                </MuiLink>
-                                            </Box>
+                                                </a>
+                                            </li>
                                         );
                                     })}
-                                </Box>
-                            </Box>
+                                </ul>
+                            </div>
                         );
                     })}
-                </Box>
-                <Divider sx={{ borderColor: "rgba(237,227,214,0.2)", mb: 2 }} />
-                <Typography align="center" sx={{ fontSize: "0.82rem", color: "rgba(237,227,214,0.7)", fontFamily: "'Montserrat', sans-serif" }}>
-                    © {new Date().getFullYear()} {t("pages.about.title")}
-                </Typography>
-            </Box>
-        </Box>
+                </div>
+            </div>
+            <div className="text-center py-3">
+                © {new Date().getFullYear()} {t("pages.about.title")}
+            </div>
+        </footer>
     );
 }
