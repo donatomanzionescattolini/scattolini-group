@@ -2,14 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap');
 
 :root {
-  --color-darkblue: #0e2d2f;
-  --color-brown: #8a6944;
-  --color-brown-light: #84705c;
-  --color-lightbrown: #ede3d6;
-  --color-background: #f2f2ed;
-  --color-second-bg: rgb(251, 251, 251);
-  --color-overlay: #2b2a2e;
-  --color-gold: #c9a961;
   --color-gold-light: #e5d5a8;
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -32,9 +24,9 @@ html {
   background: var(--color-background);
   color: rgba(138, 105, 68, 0.85);
   font-family: "Cormorant Garamond", serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   /* Ensure body doesn't block interactions */
   pointer-events: auto;
@@ -54,21 +46,24 @@ section {
   margin: 0;
   color: var(--color-brown);
   font-weight: 500;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 h2 {
   text-align: center;
   font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   margin-top: 2rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
   color: var(--color-darkblue);
+border: none!important;
 }
 
 h3 {
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
 }
 
 h4 {
@@ -77,7 +72,8 @@ h4 {
 }
 
 p {
-  font-size: 13px;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 a {
@@ -216,8 +212,9 @@ a:active {
 }
 
 hr {
-  border: 1px solid var(--color-darkblue);
+  border: none;
   height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-darkblue), transparent);
   width: 10%;
   position: relative;
   margin: 30px auto;
@@ -674,8 +671,9 @@ nav {
 
 #hero-heading {
   font-variant: normal !important;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: bolder;
+  font-family: 'Gayathri', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 #hero-subheading {
@@ -698,13 +696,14 @@ nav {
   height: auto;
   min-height: 100px;
   color: var(--color-brown);
-  font-size: 13px;
+  font-size: 1.05rem;
+  font-style: italic;
   vertical-align: middle;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 #servicios > div > div {
@@ -771,8 +770,9 @@ dt {
 }
 
 .Servicios a {
-  font-size: 12px;
-  font-weight: bolder;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
 }
 
 .Servicios p {
@@ -889,7 +889,7 @@ button,
   font-family: "Cormorant Garamond", serif;
   color: var(--color-brown);
   font-weight: 500;
-  font-size: 13px;
+  font-size: 15px;
   margin: 1%;
   display: flex;
   flex-wrap: nowrap;
@@ -1223,12 +1223,12 @@ button,
   footer .col-auto {
     width: 100% !important;
     text-align: center;
-    margin-bottom: 1.75rem;
+  align-items: middle;
   }
 
   footer h5 {
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
     font-weight: 600;
   }
 
@@ -1239,14 +1239,14 @@ button,
 
   footer ul li {
     font-size: 0.95rem;
-    margin-bottom: 0.5rem;
+    margin:0;
+padding:0!important;
   }
 
   footer ul li a {
-    padding: 0.5rem 0;
-    display: inline-block;
-    min-height: 44px;
-    line-height: 1.5;
+    
+    min-height: fit-content;
+    line-height: 0.75;
   }
 
   /* Hero section mobile */
@@ -1340,7 +1340,7 @@ button,
   }
 
   .propiedades-img {
-    height: 180px !important;
+    height: 140px !important;
     aspect-ratio: 16/10;
   }
 
@@ -1360,7 +1360,7 @@ button,
   }
 
   footer .col-auto {
-    padding: 0 0.75rem;
+    
   }
 
   /* Touch-friendly buttons */
@@ -1457,6 +1457,10 @@ button,
   }
 }
 
+footer a {
+  background: transparent;
+}
+
 .footer-area-link {
   color: inherit !important;
   text-decoration: none !important;
@@ -1465,4 +1469,57 @@ button,
     color: inherit !important;
     text-decoration: none !important;
   }
+margin-block:0!important;
+
+}
+.site-logo-container, .navbar-brand, .navbar-brand img, img, .navbar *, .nav * {
+border: none!important;
+}
+#root > div.sticky-subnav > div > div > a{
+
+background-color: transparent!important;
+}
+@media (max-width: 600px) {
+  .footer-area-link {
+  color: inherit !important;
+  text-decoration: none !important;
+
+  &:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+margin:0!important;
+
+}
+
+.footer ul li a ,
+
+
+.footer ul li
+ { 
+line-height: 0.6;
+margin-top: 0!important;
+margin-bottom:0!important;
+padding-top: 0!important;
+padding-bottom:0!important;
+}
+
+}
+
+#root > div.floating-lang-toggle {
+
+
+  width: fit-content!important;
+}
+
+footer {
+  column-count:3;
+  column-gap: 3rem;
+}
+footer ul {
+break-inside: avoid;
+  margin-bottom: 2rem;
+}
+#root > header > div {
+  text-transform:capitalize!important;
 }

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useTranslation } from "../i18n.tsx";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import ContactFormComponent from "./ContactFormComponent.tsx";
+import Button from "@mui/material/Button";
 
 export default function Page() {
   const [show, setShow] = useState(false);
@@ -73,11 +74,21 @@ export default function Page() {
         <Row className="w-100 p-0 m-0">
           <Col></Col>
           <Col className="text-center">
-            <Button
-              type="button"
-              className="d-block my-5 py-2 btn btn-xl"
-              style={{ backgroundColor: "#82725650", color: "#1b3433" }}
+          <Button
+              variant="outlined"
+              color="primary"
               onClick={openContact}
+              sx={{
+                  display: "block",
+                  my: 5,
+                  py: 1.5,
+                  px: 4,
+                  fontFamily: "'Montserrat', sans-serif",
+                  letterSpacing: "0.08em",
+                  borderColor: "#0e2d2f",
+                  color: "#0e2d2f",
+                  "&:hover": { backgroundColor: "rgba(14,45,47,0.08)", borderColor: "#0e2d2f" },
+              }}
             >
               {(show &&
                 t(

@@ -118,7 +118,7 @@ export default function AreaTemplate(props: AreaProps) {
                 <Row className="justify-content-center">
                     {[...areaDesarrollos.values()].map((desarrollo) => {
                         return (
-                            <Col key={desarrollo.nombre} xs={12} sm={12} md={6} lg={4} xl={4}>
+                            <Col key={desarrollo.nombre} xs={6} sm={6} md={6} lg={4} xl={4}>
                                 <Link to={`/desarrollos/${desarrollo.nombre}/`}>
                                     <div
                                         className="propiedades-img p-0 m-0"

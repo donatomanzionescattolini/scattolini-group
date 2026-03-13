@@ -5,7 +5,7 @@ export default function FloatingLangToggle() {
     const {lang, setLang, t} = useTranslation();
 
     return (
-        <div className="floating-lang-toggle d-lg-none">
+        <div className="floating-lang-toggle">
             <button
                 type="button"
                 className={`lang-btn ${lang === 'es' ? 'active' : ''}`}
