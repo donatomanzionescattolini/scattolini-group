@@ -39,7 +39,12 @@ export default function Footer() {
                                     color: "#c9a961",
                                     mb: 1,
                                 }}>
-                                    <MuiLink href={`/areas/${entry.area.name}/`} sx={{ color: "inherit", textDecoration: "none", "&:hover": { color: "#e5d5a8" } }}>
+                                    <MuiLink href={`/areas/${entry.area.name}/`} sx={{
+                                        color: "inherit",
+                                        textDecoration: "none",
+                                        background: "transparent",
+                                        "&:hover": { color: "#e5d5a8" },
+                                    }}>
                                         {areaTitle}
                                     </MuiLink>
                                 </Typography>
