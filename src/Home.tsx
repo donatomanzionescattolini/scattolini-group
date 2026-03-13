@@ -9,7 +9,6 @@ import AreasComponent from "./components/areas/AreasComponent.tsx";
 import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
 import Quote, { quotes } from "./models/Quote";
 import { useTranslation } from "./i18n.tsx";
-import MuiButton from "@mui/material/Button";
 
 export function Home() {
   const { t } = useTranslation();
@@ -106,41 +105,21 @@ export function Home() {
             </p>
             {/*<p className="hero-tagline">{t("hero.tagline")}</p>*/}
             <div className="hero-ctas d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
-              <MuiButton
-                variant="contained"
+              <a
+                className="btn btn-hero-primary"
                 href="https://wa.me/13056139338?text=Hola,%20me%20interesa%20información%20sobre%20propiedades"
                 target="_blank"
                 rel="noopener noreferrer"
-                sx={{
-                  backgroundColor: "#8a6944",
-                  color: "#fff",
-                  fontFamily: "'Montserrat', sans-serif",
-                  letterSpacing: "0.08em",
-                  px: 4,
-                  py: 1.5,
-                  "&:hover": { backgroundColor: "#5c4630" },
-                  textTransform: "uppercase",
-                }}
               >
                 WhatsApp
-              </MuiButton>
-              <MuiButton
-                variant="outlined"
+              </a>
+              <a
+                className="btn btn-hero-outline"
                 href="mailto:elda.scattolini@scattolinigroup.com"
-                sx={{
-                  borderColor: "#f2f2ed",
-                  color: "#f2f2ed",
-                  fontFamily: "'Montserrat', sans-serif",
-                  letterSpacing: "0.08em",
-                  px: 4,
-                  py: 1.5,
-                  "&:hover": { backgroundColor: "rgba(242,242,237,0.15)", borderColor: "#f2f2ed" },
-                  textTransform: "uppercase",
-                }}
               >
                 <i className="fas fa-envelope me-2"></i>
                 {t("hero.cta")}
-              </MuiButton>
+              </a>
             </div>
           </div>
         </div>

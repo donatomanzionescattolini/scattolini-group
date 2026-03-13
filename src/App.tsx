@@ -1,8 +1,6 @@
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.css";
 import "material-components-web/dist/material-components-web.css";
-import { ThemeProvider, CssBaseline } from "@mui/material";
-import theme from "./theme";
 import ContactoComponent from "./components/ContactoComponent.tsx";
 import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
 import ManzioneProperties from "./components/aliados/ManzioneProperties";
@@ -46,8 +44,6 @@ export default function App() {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <ThemeProvider theme={theme}>
-            <CssBaseline />
         <BrowserRouter>
             <AuthProvider>
                 <Nav/>
@@ -95,6 +91,5 @@ export default function App() {
                 <Footer/>
             </AuthProvider>
         </BrowserRouter>
-        </ThemeProvider>
     );
 }

@@ -1,12 +1,7 @@
 import {send} from "@emailjs/browser";
 import {type ChangeEvent, type FormEvent, useState} from "react";
+import {Alert, Container, Form} from "react-bootstrap";
 import {useTranslation} from "../i18n";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import Alert from "@mui/material/Alert";
-import AlertTitle from "@mui/material/AlertTitle";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 
 type ContactPayload = {
     from_name: string;
@@ -56,94 +51,62 @@ export default function ContactFormComponent() {
         setToSend({...toSend, [e.target.name]: e.target.value});
     };
 
-    const fieldSx = { "& label": { fontFamily: "'Montserrat', sans-serif", fontSize: "0.85rem" } };
-
     return (
-        <Paper elevation={2} sx={{ maxWidth: 700, mx: "auto", p: { xs: 3, sm: 5 }, borderRadius: 3, backgroundColor: "#fafaf7" }}>
+        <Container className="d-flex flex-column justify-content-center p-5 shadow-1 rounded-3"
+                   style={{maxWidth: "700px"}}>
             {successAlert && (
-                <Alert severity="success" onClose={() => setSuccessAlert(false)} sx={{ mb: 3 }}>
-                    <AlertTitle>{t("pages.contacto.alerts.successTitle")}</AlertTitle>
-                    {t("pages.contacto.alerts.successMessage")}
+                <Alert className="w-50 bottom-0 right-50 left-50 mx-auto" variant="success" dismissible
+                       onClose={() => setSuccessAlert(false)}>
+                    <Alert.Heading>{t("pages.contacto.alerts.successTitle")}</Alert.Heading>
+                    <p>{t("pages.contacto.alerts.successMessage")}</p>
                 </Alert>
             )}
 
             {failureAlert && (
-                <Alert severity="error" onClose={() => setFailureAlert(false)} sx={{ mb: 3 }}>
-                    <AlertTitle>{t("pages.contacto.alerts.failureTitle")}</AlertTitle>
-                    {t("pages.contacto.alerts.failureMessage")}{" "}
-                    <a href="mailto:info@scattolinigroup.com">{t("pages.contacto.form.emailLink")}</a>
+                <Alert className="w-50 position-absolute bottom-0 mx-auto" variant="danger" dismissible
+                       onClose={() => setFailureAlert(false)}>
+                    <Alert.Heading>{t("pages.contacto.alerts.failureTitle")}</Alert.Heading>
+                    <p>
+                        {t("pages.contacto.alerts.failureMessage")}{" "}
+                        <a href="mailto:info@scattolinigroup.com">{t("pages.contacto.form.emailLink")}</a>
+                    </p>
                 </Alert>
             )}
 
-            <Box component="form" onSubmit={onSubmit} sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
-                <TextField
-                    label={t("pages.contacto.form.name") as string}
-                    name="from_name"
-                    value={toSend.from_name}
-                    required
-                    onChange={handleChange}
-                    fullWidth
-                    variant="outlined"
-                    size="small"
-                    sx={fieldSx}
-                />
+            <Form onSubmit={onSubmit} action="#top" className="flex-column my-2">
+                <Form.Group className="mb-4">
+                    <Form.Label>{t("pages.contacto.form.name")}</Form.Label>
+                    <Form.Control name="from_name" value={toSend.from_name} required onChange={handleChange}/>
+                </Form.Group>
 
-                <TextField
-                    label={t("pages.contacto.form.email") as string}
-                    type="email"
-                    name="client_email"
-                    value={toSend.client_email}
-                    required
-                    onChange={handleChange}
-                    fullWidth
-                    variant="outlined"
-                    size="small"
-                    sx={fieldSx}
-                />
+                <Form.Group className="mb-4">
+                    <Form.Label>{t("pages.contacto.form.email")}</Form.Label>
+                    <Form.Control
+                        type="email"
+                        name="client_email"
+                        value={toSend.client_email}
+                        required
+                        onChange={handleChange}
+                    />
+                </Form.Group>
 
-                <TextField
-                    label={t("pages.contacto.form.phone") as string}
-                    type="tel"
-                    name="phone"
-                    value={toSend.phone}
-                    required
-                    onChange={handleChange}
-                    fullWidth
-                    variant="outlined"
-                    size="small"
-                    sx={fieldSx}
-                />
+                <Form.Group className="mb-4">
+                    <Form.Label>{t("pages.contacto.form.phone")}</Form.Label>
+                    <Form.Control type="tel" name="phone" value={toSend.phone} required onChange={handleChange}/>
+                </Form.Group>
 
-                <TextField
-                    label={t("pages.contacto.form.message") as string}
-                    name="message"
-                    value={toSend.message}
-                    required
-                    onChange={handleChange}
-                    fullWidth
-                    multiline
-                    rows={4}
-                    variant="outlined"
-                    sx={fieldSx}
-                />
+                <Form.Group className="mb-4">
+                    <Form.Label>{t("pages.contacto.form.message")}</Form.Label>
+                    <Form.Control as="textarea" rows={4} name="message" value={toSend.message} required
+                                  onChange={handleChange}/>
+                </Form.Group>
 
-                <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    sx={{
-                        alignSelf: "flex-start",
-                        fontFamily: "'Montserrat', sans-serif",
-                        letterSpacing: "0.08em",
-                        px: 4,
-                        py: 1.5,
-                        backgroundColor: "#0e2d2f",
-                        "&:hover": { backgroundColor: "#1f595a" },
-                    }}
-                >
+                <button className="mb-4 btn btn-sm" formAction="#top" type="submit">
                     {t("pages.contacto.form.sendButton")}
-                </Button>
-            </Box>
-        </Paper>
+                </button>
+            </Form>
+
+            <footer id="top"></footer>
+        </Container>
     );
 }
