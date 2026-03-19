@@ -643,6 +643,11 @@ const translations: Record<Lang, any> = {
         footer: {
             contact: "Contáctanos",
             address: "Doral, FL",
+            tagline: "Bienes Raíces de Lujo en el Sur de Florida",
+            contactTitle: "Contacto",
+            quickLinksTitle: "Enlaces Rápidos",
+            areasTitle: "Áreas y Desarrollos",
+            followUs: "Síguenos",
         },
     },
     en: {
@@ -1281,6 +1286,11 @@ const translations: Record<Lang, any> = {
         footer: {
             contact: "Get in touch",
             address: "Doral, FL",
+            tagline: "Luxury Real Estate in South Florida",
+            contactTitle: "Contact",
+            quickLinksTitle: "Quick Links",
+            areasTitle: "Areas & Developments",
+            followUs: "Follow Us",
         },
     },
 };

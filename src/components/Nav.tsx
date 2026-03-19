@@ -13,15 +13,19 @@ const Nav = () => {
     const [showNavCentred, setShowNavCentred] = useState(false);
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
     const [dynamicVersion, setDynamicVersion] = useState(0);
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         const handleResize = () => setInnerWidth(window.innerWidth);
         const handleDynamicUpdate = () => setDynamicVersion((prev) => prev + 1);
+        const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener("resize", handleResize);
         window.addEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleDynamicUpdate as EventListener);
+        window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("resize", handleResize);
             window.removeEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleDynamicUpdate as EventListener);
+            window.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
@@ -95,7 +99,19 @@ const Nav = () => {
     };
 
     return (
-        <Navbar expand="lg" bg="light" variant="light">
+        <Navbar
+            expand="lg"
+            bg="light"
+            variant="light"
+            className={scrolled ? 'navbar-scrolled' : ''}
+            style={{
+                transition: 'background 0.3s ease, box-shadow 0.3s ease',
+                ...(scrolled && {
+                    boxShadow: '0 4px 30px rgba(0,0,0,0.08)',
+                    background: 'rgba(242,242,237,0.98)',
+                }),
+            }}
+        >
             <Container fluid>
                 <Navbar.Toggle
                     aria-controls="navbarCenteredExample"
@@ -118,7 +134,7 @@ const Nav = () => {
                     </div>
                 </Navbar.Toggle>
 
-                <Navbar.Collapse id="navbarCenteredExample" in={showNavCentred}>
+                <Navbar.Collapse id="navbarCenteredExample" in={showNavCentred} style={{ transition: 'all 0.3s ease' }}>
                     <BsNav className="w-100 mb-2 mb-lg-0">
                         {/* Language toggle - hidden on mobile (uses FloatingLangToggle instead) */}
                         <BsNav.Item className="d-none d-lg-block">
