@@ -18,6 +18,7 @@
   --color-second-bg: rgb(251, 251, 251);
   --color-overlay: #2b2a2e;
   --color-gold: #c9a961;
+  --color-gold-dark: #b08d3e;
   --color-gold-light: #e5d5a8;
 
   --spacing-xs: 0.4rem;
@@ -51,7 +52,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 14px; // Intentional: sets 1rem = 14px site-wide for refined compact type scale
+  font-size: 87.5%; // 14px base — uses % to respect user browser font-size preferences
 }
 
 body {
@@ -228,7 +229,7 @@ a {
 }
 
 .btn-hero-primary {
-  background: linear-gradient(135deg, var(--color-gold) 0%, #b08d3e 100%);
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
   border: none;
   color: #fff;
   padding: 0.9rem 2.5rem;
@@ -423,6 +424,11 @@ nav {
   position: relative;
   z-index: 1000;
   transition: background 0.3s ease, box-shadow 0.3s ease;
+
+  &.navbar-scrolled {
+    background: rgba(242, 242, 237, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  }
 }
 
 .navbar-brand {
@@ -1538,7 +1544,7 @@ button,
     display: inline-block;
     width: 100%;
     padding: 0.8rem 1.5rem;
-    background: linear-gradient(135deg, var(--color-gold) 0%, #b08d3e 100%);
+    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
     border: none;
     border-radius: var(--radius-sm);
     color: #fff;
