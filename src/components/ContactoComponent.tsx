@@ -26,9 +26,9 @@ export default function Page() {
           <RevealSection direction="left" delay={100}>
             <div className="text-left justify-content-center pt-1 pl-5 pr-0 m-0">
               <div className="text-justify">
-                <h1 className="h1-responsive font-weight-bold text-center my-5">
+                <h2 className="text-center my-4">
                   {t("contacto.title", "Scattolini Group")}
-                </h1>
+                </h2>
 
                 <p className="mb-3">
                   <span className="me-2">📍</span>

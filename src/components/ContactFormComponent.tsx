@@ -52,10 +52,9 @@ export default function ContactFormComponent() {
     };
 
     return (
-        <Container className="d-flex flex-column justify-content-center p-5 shadow-1 rounded-3"
-                   style={{maxWidth: "700px"}}>
+        <Container className="contact-form">
             {successAlert && (
-                <Alert className="w-50 bottom-0 right-50 left-50 mx-auto" variant="success" dismissible
+                <Alert className="mx-auto" variant="success" dismissible
                        onClose={() => setSuccessAlert(false)}>
                     <Alert.Heading>{t("pages.contacto.alerts.successTitle")}</Alert.Heading>
                     <p>{t("pages.contacto.alerts.successMessage")}</p>
@@ -63,7 +62,7 @@ export default function ContactFormComponent() {
             )}
 
             {failureAlert && (
-                <Alert className="w-50 position-absolute bottom-0 mx-auto" variant="danger" dismissible
+                <Alert className="mx-auto" variant="danger" dismissible
                        onClose={() => setFailureAlert(false)}>
                     <Alert.Heading>{t("pages.contacto.alerts.failureTitle")}</Alert.Heading>
                     <p>
@@ -101,12 +100,12 @@ export default function ContactFormComponent() {
                                   onChange={handleChange}/>
                 </Form.Group>
 
-                <button className="mb-4 btn btn-sm" formAction="#top" type="submit">
+                <button className="btn-submit" formAction="#top" type="submit">
                     {t("pages.contacto.form.sendButton")}
                 </button>
             </Form>
 
-            <footer id="top"></footer>
+            <div id="top"></div>
         </Container>
     );
 }

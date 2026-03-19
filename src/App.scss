@@ -87,11 +87,11 @@ section {
 
 h2 {
   text-align: center;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-family: "Montserrat", sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   margin-top: 2rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   color: var(--color-darkblue);
   border: none !important;
   position: relative;
@@ -100,25 +100,27 @@ h2 {
   &::after {
     content: "";
     display: block;
-    width: 60px;
-    height: 2px;
+    width: 40px;
+    height: 1px;
     background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light));
-    margin: 1rem auto 0;
+    margin: 0.75rem auto 0;
   }
 }
 
 h3 {
   font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   font-weight: 400;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   color: var(--color-darkblue);
 }
 
 h4 {
   text-decoration: none;
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  letter-spacing: 0.03em;
   color: var(--color-darkblue);
 }
 
@@ -1235,10 +1237,9 @@ video {
 footer {
   background: var(--color-darkblue);
   color: rgba(237, 227, 214, 0.8);
-  padding: 4rem 3rem 3rem;
-  column-count: 3;
-  column-gap: 3rem;
+  padding: 3rem 2rem 2rem;
   position: relative;
+  font-size: 0.9rem;
 
   &::before {
     content: "";
@@ -1261,31 +1262,76 @@ footer {
     }
   }
 
-  h5 {
+  h5, h6 {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-gold-light);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
   }
 
   ul {
     list-style: none;
     padding: 0;
-    break-inside: avoid;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 
     li {
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.85rem;
+      line-height: 1.6;
 
       a {
         font-family: "Cormorant Garamond", serif;
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
     }
+  }
+
+  .footer-logo {
+    max-height: 60px;
+    width: auto;
+  }
+
+  .footer-tagline {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: rgba(237, 227, 214, 0.6);
+    letter-spacing: 0.03em;
+  }
+
+  .footer-col-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--color-gold-light);
+  }
+
+  .footer-contact-list li {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .footer-icon {
+    font-size: 0.85rem;
+  }
+
+  .footer-follow-label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(237, 227, 214, 0.5);
+  }
+
+  .footer-social-link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 }
 
@@ -1379,18 +1425,66 @@ img,
 
 // Contact form
 .contact-form {
-  input,
-  textarea {
+  background: var(--color-second-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 2.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+
+  .form-label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-brown-light);
+    margin-bottom: 0.4rem;
+  }
+
+  .form-control {
     border: 1px solid rgba(138, 105, 68, 0.2);
     border-radius: var(--radius-sm);
-    padding: 0.75rem 1rem;
+    padding: 0.7rem 1rem;
     font-family: "Cormorant Garamond", serif;
-    transition: border-color 0.3s ease;
+    font-size: 1rem;
+    color: var(--color-brown);
+    background: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
     &:focus {
       border-color: var(--color-gold);
       outline: none;
       box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
+    }
+
+    &::placeholder {
+      color: rgba(138, 105, 68, 0.35);
+    }
+  }
+
+  textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .btn-submit {
+    background: linear-gradient(135deg, var(--color-gold) 0%, #b08d3e 100%);
+    border: none;
+    color: white;
+    padding: 0.75rem 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
     }
   }
 }
@@ -1517,17 +1611,17 @@ img,
   }
 
   h2 {
-    font-size: clamp(1.75rem, 7vw, 2.75rem);
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
     margin-top: 1rem;
     padding: 0 0.5rem;
   }
 
   h3 {
-    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    font-size: clamp(1rem, 4vw, 1.3rem);
   }
 
   h4 {
-    font-size: clamp(1rem, 4vw, 1.4rem);
+    font-size: clamp(0.95rem, 3.5vw, 1.15rem);
   }
 
   p {
@@ -1831,17 +1925,16 @@ img,
 
   // Footer mobile
   footer {
-    padding: 2.5rem 1rem 2rem;
-    column-count: 2;
+    padding: 2rem 1rem 1.5rem;
 
     .col-auto {
       width: 100% !important;
       text-align: center;
     }
 
-    h5 {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
+    h5, h6 {
+      font-size: 0.7rem;
+      margin-bottom: 0.75rem;
     }
 
     ul {
@@ -1849,15 +1942,18 @@ img,
       margin: 0;
 
       li {
-        font-size: 0.95rem;
-        margin: 0;
-        padding: 0 !important;
+        font-size: 0.85rem;
+        margin-bottom: 0.25rem;
 
         a {
           min-height: fit-content;
-          line-height: 0.75;
+          line-height: 1.4;
         }
       }
+    }
+
+    .footer-tagline {
+      font-size: 0.85rem;
     }
   }
 
@@ -1910,7 +2006,7 @@ img,
   }
 
   h2 {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
   }
 
   .colour-block,
@@ -1930,7 +2026,7 @@ img,
 
 @media screen and (max-width: 480px) {
   h2 {
-    font-size: clamp(1.4rem, 7vw, 2.25rem);
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
     padding: 0 0.75rem;
   }
 
@@ -2059,11 +2155,9 @@ img,
 
   footer ul li a,
   footer ul li {
-    line-height: 0.6;
+    line-height: 1.4;
     margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    margin-bottom: 0.2rem !important;
   }
 }
 
@@ -2163,12 +2257,12 @@ img,
 }
 
 .stat-number {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--color-brown, #8a6944);
   line-height: 1;
   margin-bottom: 0.5rem;
-  font-family: var(--font-heading, inherit);
+  font-family: "Montserrat", sans-serif;
 }
 
 .stat-label {
