@@ -51,7 +51,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 14px;
+  font-size: 14px; // Intentional: sets 1rem = 14px site-wide for refined compact type scale
 }
 
 body {
