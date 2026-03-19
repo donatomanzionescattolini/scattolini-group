@@ -1,9 +1,0 @@
-tesseract:no
-magick:no
-convert:yes
-ffmpeg:no
-powershell:yes
-pwsh:no
-perl:yes
-ruby:no
-php:no

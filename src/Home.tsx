@@ -9,6 +9,49 @@ import AreasComponent from "./components/areas/AreasComponent.tsx";
 import DesarrollosTodos from "./components/desarrollos/DesarrollosComponent.tsx";
 import Quote, { quotes } from "./models/Quote";
 import { useTranslation } from "./i18n.tsx";
+import { RevealSection, useScrollReveal } from "./hooks/useScrollReveal.tsx";
+
+interface StatItemProps {
+  value: number;
+  suffix: string;
+  label: string;
+  delay: number;
+}
+
+function StatItem({ value, suffix, label, delay }: StatItemProps) {
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.3 });
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isVisible) return;
+    const duration = 1800;
+    const steps = 60;
+    const increment = value / steps;
+    let current = 0;
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      current = Math.min(Math.round(increment * step), value);
+      setCount(current);
+      if (step >= steps) clearInterval(timer);
+    }, duration / steps);
+    return () => clearInterval(timer);
+  }, [isVisible, value]);
+
+  return (
+    <div
+      ref={ref}
+      className="stat-item text-center"
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      <div className="stat-number">
+        {count}
+        {suffix}
+      </div>
+      <div className="stat-label">{label}</div>
+    </div>
+  );
+}
 
 export function Home() {
   const { t } = useTranslation();
@@ -25,55 +68,10 @@ export function Home() {
   }, []);
 
   const [quotez] = useState<Quote[]>(quotes);
+
   return (
     <>
-      <style>
-        {`
-          .sticky-subnav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
-            border-bottom: 1px solid #eee;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-          }
-          .subnav-link {
-            color: #555;
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 1rem 0.5rem;
-            transition: color 0.3s;
-          }
-          .subnav-link:hover {
-            color: #8a6944;
-          }
-          @media (max-width: 768px) {
-            .sticky-subnav .container {
-              overflow-x: auto;
-              -webkit-overflow-scrolling: touch;
-              scrollbar-width: thin;
-            }
-            .sticky-subnav .container > div {
-              flex-wrap: nowrap !important;
-              justify-content: flex-start !important;
-              min-width: max-content;
-              gap: 0.35rem;
-            }
-            .subnav-link {
-              font-size: 0.75rem;
-              padding: 0.8rem 0.7rem;
-              white-space: nowrap;
-              min-height: 44px;
-              display: inline-flex;
-              align-items: center;
-            }
-          }
-        `}
-      </style>
+      {/* ── Hero ── */}
       <Container fluid className="jumbotron">
         <div className="video-container">
           <video
@@ -122,8 +120,15 @@ export function Home() {
               </a>
             </div>
           </div>
+
+          {/* Scroll-down indicator */}
+          <a href="#stats" className="scroll-down-indicator" aria-label="Scroll down">
+            <i className="fas fa-chevron-down"></i>
+          </a>
         </div>
       </Container>
+
+      {/* ── Sticky sub-navigation ── */}
       <div className="sticky-subnav">
         <Container>
           <div className="d-flex justify-content-around flex-wrap">
@@ -137,53 +142,93 @@ export function Home() {
           </div>
         </Container>
       </div>
+
+      {/* ── Stats ── */}
+      <section className="colour-block stats-section" id="stats">
+        <Container>
+          <RevealSection direction="fade">
+            <div className="stats-grid">
+              <StatItem value={20} suffix="+" label={t("stats.experience", "Years of Experience") as string} delay={0} />
+              <StatItem value={500} suffix="+" label={t("stats.clients", "Happy Clients") as string} delay={150} />
+              <StatItem value={1000} suffix="+" label={t("stats.properties", "Properties Sold") as string} delay={300} />
+              <StatItem value={11} suffix="+" label={t("stats.areas", "Areas Served") as string} delay={450} />
+            </div>
+          </RevealSection>
+        </Container>
+      </section>
+
+      {/* ── About Us ── */}
       {/* <TrustSignals /> */}
       {width < 768 && <br></br>}
-      {/*<div className="skew-cc"></div>*/}
+      <div className="skew-cc"></div>
       <section className="white-block" id="about-us">
-        <AboutUs />
+        <RevealSection direction="up">
+          <AboutUs />
+        </RevealSection>
       </section>
+
+      {/* ── Areas ── */}
       {/* <div> */}
       {/* <h3 className="text-center">Otras Áreas</h3> */}
       {/* </div> */}
       <div className="skew-c"></div>
-
       <section className="colour-block" id="areas">
-        <AreasComponent />
+        <RevealSection direction="fade">
+          <AreasComponent />
+        </RevealSection>
       </section>
 
+      {/* ── Associates ── */}
       <div className="skew-cc"></div>
-        <br></br>
+      <br></br>
       <section className="white-block" id="associates">
         <Container>
-          <AsociadosSmallComponent />
+          <RevealSection direction="up">
+            <AsociadosSmallComponent />
+          </RevealSection>
         </Container>
       </section>
+
+      {/* ── Services ── */}
       <div className="skew-c"></div>
       {/* <DividerSecondComponent /> */}
       <section className="colour-block" id="services">
         <Container>
-          <Servicios />
+          <RevealSection direction="left">
+            <Servicios />
+          </RevealSection>
         </Container>
         <br />
       </section>
+
+      {/* ── Developments ── */}
       <div className="skew-cc"></div>
       <section className="white-block" id="projects">
         <Container>
-          <DesarrollosTodos />
+          <RevealSection direction="right">
+            <DesarrollosTodos />
+          </RevealSection>
         </Container>
       </section>
+
+      {/* ── Allies ── */}
       <div className="skew-c"></div>
       <section className="colour-block" id="allies">
         <Container>
-          <AliadosComponent />
+          <RevealSection direction="left" delay={100}>
+            <AliadosComponent />
+          </RevealSection>
         </Container>
       </section>
+
+      {/* ── Testimonials ── */}
       <div className="skew-cc"></div>
       <section className="white-block" id="quotes-section">
-        <Quotes quotes={quotez} />
+        <RevealSection direction="up" delay={50}>
+          <Quotes quotes={quotez} />
+        </RevealSection>
       </section>
-        <div className="skew-c"></div>
+      <div className="skew-c"></div>
     </>
   );
 }

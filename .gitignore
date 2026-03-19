@@ -29,3 +29,11 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+# Temporary files
+.tmp-*
+*.tmp
+doppio-site*
+vowels-with-tildes.txt
+script-jpg-ext
+extract-files-from-folder-structure
