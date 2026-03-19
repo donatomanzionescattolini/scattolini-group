@@ -139,6 +139,7 @@ export function Home() {
       </div>
       {/* <TrustSignals /> */}
       {width < 768 && <br></br>}
+      <div className="skew-cc"></div>
       <section className="white-block pb-0 mb-0 pt-5" id="about-us">
         <AboutUs />
       </section>
@@ -182,6 +183,7 @@ export function Home() {
       <section className="white-block" id="quotes-section">
         <Quotes quotes={quotez} />
       </section>
+        <div className="skew-c"></div>
     </>
   );
 }
