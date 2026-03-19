@@ -139,8 +139,8 @@ export function Home() {
       </div>
       {/* <TrustSignals /> */}
       {width < 768 && <br></br>}
-      <div className="skew-cc"></div>
-      <section className="white-block pb-0 mb-0 pt-5" id="about-us">
+      {/*<div className="skew-cc"></div>*/}
+      <section className="white-block" id="about-us">
         <AboutUs />
       </section>
       {/* <div> */}
@@ -153,6 +153,7 @@ export function Home() {
       </section>
 
       <div className="skew-cc"></div>
+        <br></br>
       <section className="white-block" id="associates">
         <Container>
           <AsociadosSmallComponent />
@@ -160,7 +161,6 @@ export function Home() {
       </section>
       <div className="skew-c"></div>
       {/* <DividerSecondComponent /> */}
-      <br />
       <section className="colour-block" id="services">
         <Container>
           <Servicios />

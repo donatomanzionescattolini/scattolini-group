@@ -16,8 +16,7 @@ export default function Footer() {
         return hasDesarrollos && hasTitle;
     });
 
-    return (
-        <footer className="font-small bg-light pt-4">
+    return (<footer className="font-small pt-4" style={{ background: "var(--color-background)" }}>
             <div className="container text-center">
                 <div className="row justify-content-center">
                     {areasWithDesarrollos.map((entry) => {

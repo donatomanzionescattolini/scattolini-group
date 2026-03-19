@@ -72,83 +72,90 @@ export default function AreaTemplate(props: AreaProps) {
             >
                 <h1 className="text-white">{titulo}</h1>
             </div>
-            <div className="container-fluid text-center">
-                <h2 className="text-center mt-5">{slogan}</h2>
-                <hr className="hr hr-blurry w-50 mx-auto"/>
-            </div>
-            <Row className="px-4">
-                <Col md={1} sm={1} className=""></Col>
-                <Col
-                    md={5}
-                    sm={10}
-                    className="py-5 px-3 d-flex flex-column justify-content-center align-items-start"
-                >
-                    {descripcion.map((paragraph: string) => {
-                        return (
-                            <p
-                                className={"text-muted mx-3"}
-                                key={descripcion.indexOf(paragraph) + 1}
-                                style={{textIndent: "1.5em"}}
-                            >
-                                {paragraph}
-                                <br/>
-                                <br/>
-                            </p>
-                        );
-                    })}
-                </Col>
-                <Col
-                    md={5}
-                    sm={10}
-                    className="d-flex justify-content-center align-items-center"
-                >
-                    <img src={firstImage} alt={photoAlt}/>
-                </Col>
-                <Col className="" md={1} sm={1}></Col>
-            </Row>
-            <div className="city-firstcarousel">{images.map((image) => image)}</div>
-            {/* <DividerFirstComponent /> */}
-            <div className="propiedades">
-                {areaDesarrollos.size > 0 && (
-                    <div>
-                        <h3 className="text-center">{t("pages.project.propertiesInArea")}</h3>
-                    </div>
-                )}
-                <br></br>
-                <Row className="justify-content-center">
-                    {[...areaDesarrollos.values()].map((desarrollo) => {
-                        return (
-                            <Col key={desarrollo.nombre} xs={6} sm={6} md={6} lg={4} xl={4}>
-                                <Link to={`/desarrollos/${desarrollo.nombre}/`}>
-                                    <div
-                                        className="propiedades-img p-0 m-0"
-                                        style={{
-                                            background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
-                                            height: "200px",
-                                            width: "100%",
-                                            backgroundPosition: "center",
-                                            backgroundRepeat: "no-repeat",
-                                            backgroundSize: "cover",
-                                        }}
-                                    ></div>
+            <div className="skew-c"></div>
+            <section className="colour-block">
+                <div className="container-fluid text-center">
+                    <h2 className="text-center mt-5">{slogan}</h2>
+                    <hr className="hr hr-blurry w-50 mx-auto"/>
+                    <Row className="px-4">
+                        <Col md={1} sm={1} className=""></Col>
+                        <Col
+                            md={5}
+                            sm={10}
+                            className="py-5 px-3 d-flex flex-column justify-content-center align-items-start"
+                        >
+                            {descripcion.map((paragraph: string) => {
+                                return (
+                                    <p
+                                        className={"text-muted mx-3"}
+                                        key={descripcion.indexOf(paragraph) + 1}
+                                        style={{textIndent: "1.5em"}}
+                                    >
+                                        {paragraph}
+                                        <br/>
+                                        <br/>
+                                    </p>
+                                );
+                            })}
+                        </Col>
+                        <Col
+                            md={5}
+                            sm={10}
+                            className="d-flex justify-content-center align-items-center"
+                        >
+                            <img src={firstImage} alt={photoAlt}/>
+                        </Col>
+                        <Col className="" md={1} sm={1}></Col>
+                    </Row>
+                    <div className="city-firstcarousel">{images.map((image) => image)}</div>
+                </div>
+            </section>
+            <div className="skew-cc"></div>
+            <section className="white-block">
+                <Container>
+                    {/* <DividerFirstComponent /> */}
+                    <div className="propiedades">
+                        {areaDesarrollos.size > 0 && (
+                            <div>
+                                <h3 className="text-center">{t("pages.project.propertiesInArea")}</h3>
+                            </div>
+                        )}
+                        <br></br>
+                        <Row className="justify-content-center">
+                            {[...areaDesarrollos.values()].map((desarrollo) => {
+                                return (
+                                    <Col key={desarrollo.nombre} xs={6} sm={6} md={6} lg={4} xl={4}>
+                                        <Link to={`/desarrollos/${desarrollo.nombre}/`}>
+                                            <div
+                                                className="propiedades-img p-0 m-0"
+                                                style={{
+                                                    background: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
+                                                    height: "200px",
+                                                    width: "100%",
+                                                    backgroundPosition: "center",
+                                                    backgroundRepeat: "no-repeat",
+                                                    backgroundSize: "cover",
+                                                }}
+                                            ></div>
 
-                                    <h4 className="text-center card-title m-2 ">
-                                        {getLocalizedString(desarrollo.titulo) ||
-                                            desarrollo.nombre
-                                                .split("-")
-                                                .map(
-                                                    (word: string) =>
-                                                        word.charAt(0).toUpperCase() + word.substring(1)
-                                                )
-                                                .join(" ")}
-                                    </h4>
-                                </Link>
-                            </Col>
-                        );
-                    })}
-                </Row>
-            </div>
-            <div className="container-fluid m-0 p-0 overflow-scroll horizontal-scrollable"></div>
+                                            <h4 className="text-center card-title m-2 ">
+                                                {getLocalizedString(desarrollo.titulo) ||
+                                                    desarrollo.nombre
+                                                        .split("-")
+                                                        .map(
+                                                            (word: string) =>
+                                                                word.charAt(0).toUpperCase() + word.substring(1)
+                                                        )
+                                                        .join(" ")}
+                                            </h4>
+                                        </Link>
+                                    </Col>
+                                );
+                            })}
+                        </Row>
+                    </div>
+                </Container>
+            </section>
             <div className="skew-c"></div>
             <section className="colour-block">
                 <AreasComponent/>
