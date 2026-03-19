@@ -7,7 +7,7 @@ interface ScrollRevealOptions {
 }
 
 export function useScrollReveal(options: ScrollRevealOptions = {}) {
-    const { threshold = 0.15, rootMargin = "0px 0px -50px 0px", triggerOnce = true } = options;
+    const { threshold = 0.01, rootMargin = "0px 0px -20px 0px", triggerOnce = true } = options;
     const ref = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -41,10 +41,11 @@ interface RevealSectionProps {
     className?: string;
     delay?: number;
     direction?: "up" | "left" | "right" | "fade";
+    threshold?: number;
 }
 
-export function RevealSection({ children, className = "", delay = 0, direction = "up" }: RevealSectionProps) {
-    const { ref, isVisible } = useScrollReveal();
+export function RevealSection({ children, className = "", delay = 0, direction = "up", threshold }: RevealSectionProps) {
+    const { ref, isVisible } = useScrollReveal(threshold !== undefined ? { threshold } : undefined);
 
     const directionClass = `reveal-${direction}`;
 
