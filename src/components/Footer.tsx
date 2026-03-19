@@ -9,13 +9,16 @@ export default function Footer() {
         return resolveLocalizedValue<string>(field, lang) || fallback;
     };
 
+    const MAX_FOOTER_AREAS = 3;
+    const MAX_FOOTER_DEVELOPMENTS = 3;
+
     const areasWithDesarrollos = desarrolloMap
         .filter((entry) => {
             const hasDesarrollos = entry.des && entry.des.size > 0;
             const hasTitle = entry.area && (entry.area.titulo || entry.area.name);
             return hasDesarrollos && hasTitle;
         })
-        .slice(0, 3);
+        .slice(0, MAX_FOOTER_AREAS);
 
     return (
         <footer className="font-small pt-5">
@@ -87,7 +90,7 @@ export default function Footer() {
                             const areaTitle = getLocalized(entry.area.titulo, entry.area.name);
                             if (!areaTitle) return null;
 
-                            const developments = [...entry.des].slice(0, 3);
+                            const developments = [...entry.des].slice(0, MAX_FOOTER_DEVELOPMENTS);
 
                             return (
                                 <div key={entry.area.name} className="mb-3">

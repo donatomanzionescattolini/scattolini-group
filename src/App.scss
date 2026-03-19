@@ -1491,7 +1491,7 @@ img,
 // Staggered children for lists/grids
 .reveal-visible {
   &.reveal-stagger > * {
-    @for $i from 1 through 12 {
+    @for $i from 1 through 6 {
       &:nth-child(#{$i}) {
         transition-delay: #{$i * 0.1}s;
       }
