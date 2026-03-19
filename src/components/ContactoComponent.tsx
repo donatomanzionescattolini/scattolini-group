@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "../i18n.tsx";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import ContactFormComponent from "./ContactFormComponent.tsx";
+import { RevealSection } from "../hooks/useScrollReveal.tsx";
 
 export default function Page() {
   const [show, setShow] = useState(false);
@@ -20,72 +21,91 @@ export default function Page() {
       <Row>
         <Col
           md={6}
-          className=" p-0 pw-5 d-flex flex-row justify-content-center"
+          className="p-0 pw-5 d-flex flex-row justify-content-center"
         >
-          <div className="text-left justify-content-center pt-1 pl-5 pr-0 m-0">
-            <div className="text-justify">
-              <h1 className="h1-responsive font-weight-bold text-center my-5">
-                {t("contacto.title", "Scattolini Group")}
-              </h1>
-              <address>
-                {" "}
-                {t(
-                  "contacto.address",
-                  "12750 NW 17th Street Unit 222, Miami, Florida 33182",
-                )}
-              </address>
-              {t("contacto.telefono", "Teléfono:")} (305) 381-5120<br></br>
-              {t("contacto.fax", "Fax:")} (305) 381-5423<br></br>
-              <br></br>
-              <b> {t("contacto.horasOficina", "Horas de Oficina")}</b>
-              <br></br>
-              <br></br>
-              {String(
-                t(
-                  "contacto.horasTexto",
-                  "Lunes a viernes: 9am - 5pm\nSábado: Con cita\nDomingo: Cerrado",
-                ) ||
-                  "Lunes a viernes: 9am - 5pm\nSábado: Con cita\nDomingo: Cerrado",
-              )
-                .split("\n")
-                .map((line, index) => (
-                  <span key={index}>
-                    {line}
-                    {index < 2 && <br></br>}
-                  </span>
-                ))}
-              <br></br>
+          <RevealSection direction="left" delay={100}>
+            <div className="text-left justify-content-center pt-1 pl-5 pr-0 m-0">
+              <div className="text-justify">
+                <h1 className="h1-responsive font-weight-bold text-center my-5">
+                  {t("contacto.title", "Scattolini Group")}
+                </h1>
+
+                <p className="mb-3">
+                  <span className="me-2">📍</span>
+                  <address style={{ display: "inline" }}>
+                    {t(
+                      "contacto.address",
+                      "12750 NW 17th Street Unit 222, Miami, Florida 33182",
+                    )}
+                  </address>
+                </p>
+
+                <p className="mb-2">
+                  <span className="me-2">📞</span>
+                  {t("contacto.telefono", "Teléfono:")} (305) 381-5120
+                </p>
+
+                <p className="mb-3">
+                  <span className="me-2">📠</span>
+                  {t("contacto.fax", "Fax:")} (305) 381-5423
+                </p>
+
+                <p className="mb-1">
+                  <span className="me-2">🕐</span>
+                  <b>{t("contacto.horasOficina", "Horas de Oficina")}</b>
+                </p>
+                <div className="ms-4">
+                  {String(
+                    t(
+                      "contacto.horasTexto",
+                      "Lunes a viernes: 9am - 5pm\nSábado: Con cita\nDomingo: Cerrado",
+                    ) ||
+                      "Lunes a viernes: 9am - 5pm\nSábado: Con cita\nDomingo: Cerrado",
+                  )
+                    .split("\n")
+                    .map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        {index < 2 && <br />}
+                      </span>
+                    ))}
+                </div>
+              </div>
             </div>
-          </div>
+          </RevealSection>
         </Col>
 
         <Col md={6}>
-          <iframe
-            title={String(t("contacto.mapTitle") || "")}
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.434979553679!2d-80.40457942587769!3d25.789220007469854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9bef22d2a8b8d%3A0xeb3e2fa5183c827!2s12750%20NW%2017th%20St%2C%20Miami%2C%20FL%2033182!5e0!3m2!1sen!2sus!4v1691887259163!5m2!1sen!2sus"
-            style={{ border: "0", width: "100%", minHeight: "300px" }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="h-100 align-items-center my-auto"
-          ></iframe>
+          <RevealSection direction="right" delay={200}>
+            <iframe
+              title={String(t("contacto.mapTitle") || "")}
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.434979553679!2d-80.40457942587769!3d25.789220007469854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9bef22d2a8b8d%3A0xeb3e2fa5183c827!2s12750%20NW%2017th%20St%2C%20Miami%2C%20FL%2033182!5e0!3m2!1sen!2sus!4v1691887259163!5m2!1sen!2sus"
+              style={{ border: "0", width: "100%", minHeight: "300px" }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="h-100 align-items-center my-auto"
+            ></iframe>
+          </RevealSection>
         </Col>
+
         <Row className="w-100 p-0 m-0">
           <Col></Col>
           <Col className="text-center">
-            <Button
-              type="button"
-              className="d-block my-5 py-2 btn btn-xl"
-              style={{ backgroundColor: "#82725650", color: "#1b3433" }}
-              onClick={openContact}
-            >
-              {(show &&
-                t(
-                  "contacto.cerrarFormulario",
-                  "Cerrar Formulario de Contacto",
-                )) ||
-                t("contacto.enviarCorreo", "Enviar un correo")}
-            </Button>
+            <RevealSection direction="up" delay={300}>
+              <Button
+                type="button"
+                className="btn btn-hero-primary d-block my-5 py-2"
+                onClick={openContact}
+              >
+                {(show &&
+                  t(
+                    "contacto.cerrarFormulario",
+                    "Cerrar Formulario de Contacto",
+                  )) ||
+                  t("contacto.enviarCorreo", "Enviar un correo")}
+              </Button>
+            </RevealSection>
           </Col>
           <Col></Col>
         </Row>
@@ -93,10 +113,12 @@ export default function Page() {
       </Row>
       {show && (
         <Row id="contact-form" className="my-5 d-flex justify-content-center">
-          <h2>{t("contacto.formularioTitulo", "Formulario de contacto")}</h2>
-          <br />
-          <br />
-          <ContactFormComponent />
+          <RevealSection direction="up" delay={0}>
+            <h2>{t("contacto.formularioTitulo", "Formulario de contacto")}</h2>
+            <br />
+            <br />
+            <ContactFormComponent />
+          </RevealSection>
         </Row>
       )}
     </Container>
