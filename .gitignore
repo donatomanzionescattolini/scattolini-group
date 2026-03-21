@@ -29,3 +29,7 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+# Temporary files
+.tmp-*
+*.tmp
