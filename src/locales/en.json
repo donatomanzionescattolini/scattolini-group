@@ -266,5 +266,64 @@
     "salesVolume": "in Sales Volume",
     "clientFocus": "Client Focused",
     "availability": "Availability"
+  },
+  "desarrollos": {
+    "tula-residences": {
+      "titulo": "Tula Residences",
+      "direccion": "7918 West Drive, North Bay Village, FL 33141",
+      "estimatedCompletionYear": "To be announced",
+      "numberOfFloors": "21",
+      "numberOfUnits": "54",
+      "typeOfUnits": "2, 2 + den, and 3 bedrooms",
+      "piesCuadrados": "1,590 to 2,440 square feet",
+      "constructora": "Bayshore Grove Capital; Pacific & Orient Properties, LLC",
+      "slogan": "One foot in the city. One foot in the sand.",
+      "introduccion": {
+        "0": "Serenity with a Miami address: 21 waterfront stories on Biscayne Bay with only 54 residences and six exclusive penthouses.",
+        "1": "Corner-only layout with four residences per floor (levels 7 to 19), wraparound glass terraces, and pre-wired high-speed connectivity."
+      },
+      "caracteristicas": {
+        "edificio": {
+          "apertura": "Opening year",
+          "pisos": "Number of floors",
+          "unidades": "Number of units",
+          "tipo": "Unit types",
+          "ubicacion": "Location",
+          "items": {
+            "0": "Corner-only residences with four units per floor (levels 7 to 19)",
+            "1": "Six exclusive penthouses across floors 20 to 22",
+            "2": "Wraparound glass terraces for every residence",
+            "3": "Kinetic modern architecture balancing uniformity and singularity",
+            "4": "Refined, organic interiors with contemporary finishes",
+            "5": "Pre-wired fiber-optic, high-speed Wi-Fi connectivity",
+            "6": "Biscayne Bay views with direct access to the promenade"
+          }
+        },
+        "residencias": {
+          "items": {
+            "0": "Two-, two-plus-den, and three-bedroom residences from 1,590 to 2,440 square feet",
+            "1": "Open-concept layouts with 10-foot ceilings",
+            "2": "Expansive private terraces",
+            "3": "Italian-designed kitchens with integrated Miele appliances",
+            "4": "Dedicated walk-in laundry rooms",
+            "5": "Custom European flooring throughout",
+            "6": "Penthouses: 3,700 to 4,140 square feet, five bedrooms plus den, and five-and-a-half bathrooms",
+            "7": "Panoramic Biscayne Bay and Miami skyline views"
+          }
+        },
+        "amenidades": {
+          "items": {
+            "0": "Resort-style pool with deck and private cabanas",
+            "1": "Wellness center with state-of-the-art fitness facility",
+            "2": "Pet spa and pet-friendly building",
+            "3": "Media room for private screenings",
+            "4": "Private dining room with catering kitchen",
+            "5": "Residents' lounge with bay views and promenade access",
+            "6": "24-hour concierge",
+            "7": "Skyline club room"
+          }
+        }
+      }
+    }
   }
 }

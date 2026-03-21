@@ -266,5 +266,64 @@
     "salesVolume": "en Volumen de Ventas",
     "clientFocus": "Enfoque al Cliente",
     "availability": "Disponibilidad"
+  },
+  "desarrollos": {
+    "tula-residences": {
+      "titulo": "Tula Residences",
+      "direccion": "7918 West Drive, North Bay Village, FL 33141",
+      "estimatedCompletionYear": "Por anunciar",
+      "numberOfFloors": "21",
+      "numberOfUnits": "54",
+      "typeOfUnits": "2, 2 + den y 3 habitaciones",
+      "piesCuadrados": "1,590 a 2,440 pies cuadrados",
+      "constructora": "Bayshore Grove Capital; Pacific & Orient Properties, LLC",
+      "slogan": "Un pie en la ciudad. Un pie en la arena.",
+      "introduccion": {
+        "0": "Serenidad con dirección en Miami: 21 pisos frente a la Bahía Biscayne con solo 54 residencias y seis penthouses exclusivos.",
+        "1": "Un diseño de esquina con cuatro residencias por piso (niveles 7 al 19), terrazas de vidrio envolventes y conectividad de alta velocidad preinstalada."
+      },
+      "caracteristicas": {
+        "edificio": {
+          "apertura": "Año de apertura",
+          "pisos": "Número de pisos",
+          "unidades": "Número de unidades",
+          "tipo": "Tipo de unidades",
+          "ubicacion": "Ubicación",
+          "items": {
+            "0": "Residencias solo de esquina con cuatro unidades por piso (niveles 7 al 19)",
+            "1": "Seis penthouses exclusivos entre los pisos 20 al 22",
+            "2": "Terrazas de vidrio envolventes en cada residencia",
+            "3": "Arquitectura de modernidad cinética con equilibrio entre uniformidad y singularidad",
+            "4": "Interiores refinados y orgánicos con acabados contemporáneos",
+            "5": "Conectividad preinstalada con fibra óptica y Wi-Fi de alta velocidad",
+            "6": "Vistas a Biscayne Bay y acceso directo al paseo marítimo"
+          }
+        },
+        "residencias": {
+          "items": {
+            "0": "Residencias de 2, 2 + den y 3 habitaciones de 1,590 a 2,440 pies cuadrados",
+            "1": "Distribuciones de concepto abierto con techos de 10 pies",
+            "2": "Terrazas privadas amplias",
+            "3": "Cocinas italianas con electrodomésticos Miele integrados",
+            "4": "Lavanderías con cuarto independiente",
+            "5": "Pisos europeos personalizados en toda la residencia",
+            "6": "Penthouses: 3,700 a 4,140 pies cuadrados, cinco habitaciones + den y cinco baños y medio",
+            "7": "Vistas panorámicas a la Bahía Biscayne y al skyline de Miami"
+          }
+        },
+        "amenidades": {
+          "items": {
+            "0": "Piscina estilo resort con deck y cabanas privadas",
+            "1": "Centro de bienestar con gimnasio de última generación",
+            "2": "Spa para mascotas y edificio pet-friendly",
+            "3": "Sala de medios para proyecciones privadas",
+            "4": "Comedor privado con cocina de apoyo para eventos",
+            "5": "Lounge para residentes con vista a la bahía y acceso al paseo marítimo",
+            "6": "Concierge 24 horas",
+            "7": "Skyline club room"
+          }
+        }
+      }
+    }
   }
 }

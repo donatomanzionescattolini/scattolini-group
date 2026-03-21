@@ -266,7 +266,7 @@ desarrolloMap.push({
 });
 desarrolloMap.push({
     area: NorthBayVillage(),
-    des: new Set([TulaResidences, ShomaBay]),
+    des: new Set([ShomaBay]),
 });
 desarrolloMap.push({
     area: MiamiBeach(),
@@ -314,7 +314,7 @@ desarrolloMap.push({
 
 desarrolloMap.push({
     area: MidtownMiami(),
-    des: new Set([MidtownParkResidences, TheStandardResidences, JeanGeorgesMiamiTropicResidences]),
+    des: new Set([MidtownParkResidences, TheStandardResidences, JeanGeorgesMiamiTropicResidences, TulaResidences]),
 });
 
 export function getDesarrollosForArea(area: Area, lang: "en" | "es" = "es"): Set<Desarrollo> {

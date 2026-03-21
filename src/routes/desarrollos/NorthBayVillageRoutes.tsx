@@ -1,6 +1,6 @@
 import {Route} from "react-router-dom";
 import ShomaBayProject from "../../components/desarrollos/NorthBayVillage/ShomaBayProject";
-import {TulaResidencesProject} from "../../components/desarrollos/NorthBayVillage/TulaResidencesProject";
+import {TulaResidencesProject} from "../../components/desarrollos/MidtownMiami/TulaResidencesProject.tsx";
 
 export default function NorthBayVillageRoutes() {
     return (
