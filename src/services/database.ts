@@ -1,4 +1,4 @@
-﻿import {collection, deleteDoc, doc, getDoc, getDocs, query, setDoc, updateDoc, where,} from 'firebase/firestore';
+﻿import {collection, deleteDoc, doc, getDoc, getDocs, query, setDoc, updateDoc, where, writeBatch} from 'firebase/firestore';
 import {db} from "../config/firebase";
 import {Area} from "../models/areas/Area";
 import Desarrollo from '../models/desarrollos/Desarrollo';
@@ -7,6 +7,68 @@ import {AreaDocument, DesarrolloDocument} from '../types/firestore';
 // Collection names
 const DESARROLLOS_COLLECTION = 'desarrollos';
 const AREAS_COLLECTION = 'areas';
+
+const BATCH_WRITE_LIMIT = 400;
+
+function isReactElementLike(value: unknown): boolean {
+    return Boolean(value && typeof value === 'object' && '$$typeof' in (value as Record<string, unknown>));
+}
+
+export function sanitizeForFirestore(value: any): any {
+    if (value === undefined) return undefined;
+    if (value === null) return null;
+    if (typeof value === 'function') return undefined;
+    if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') return value;
+    if (value instanceof Date) return value;
+    if (Array.isArray(value)) {
+        return value
+            .map((item) => sanitizeForFirestore(item))
+            .filter((item) => item !== undefined);
+    }
+    if (value instanceof Map) {
+        const mapped: Record<string, any> = {};
+        value.forEach((entryValue, entryKey) => {
+            const sanitized = sanitizeForFirestore(entryValue);
+            if (sanitized !== undefined) {
+                mapped[String(entryKey)] = sanitized;
+            }
+        });
+        return mapped;
+    }
+    if (isReactElementLike(value)) return undefined;
+    if (typeof value === 'object') {
+        const data: Record<string, any> = {};
+        Object.entries(value).forEach(([key, entryValue]) => {
+            const sanitized = sanitizeForFirestore(entryValue);
+            if (sanitized !== undefined) {
+                data[key] = sanitized;
+            }
+        });
+        return data;
+    }
+    return undefined;
+}
+
+async function saveDocumentsBatch(
+    collectionName: string,
+    documents: Array<{ id: string; data: Record<string, any> }>
+): Promise<void> {
+    const sanitizedDocuments = documents
+        .map(({id, data}) => ({
+            id: String(id || '').trim(),
+            data: sanitizeForFirestore(data),
+        }))
+        .filter((entry) => entry.id && entry.data && Object.keys(entry.data).length > 0);
+
+    for (let index = 0; index < sanitizedDocuments.length; index += BATCH_WRITE_LIMIT) {
+        const batch = writeBatch(db);
+        const chunk = sanitizedDocuments.slice(index, index + BATCH_WRITE_LIMIT);
+        chunk.forEach(({id, data}) => {
+            batch.set(doc(db, collectionName, id), data, {merge: true});
+        });
+        await batch.commit();
+    }
+}
 
 // Helper to serialize Desarrollo for Firestore
 export function serializeDesarrollo(desarrollo: Desarrollo): any {
@@ -18,7 +80,7 @@ export function serializeDesarrollo(desarrollo: Desarrollo): any {
 
         // Skip functions and React elements
         if (typeof value === 'function') return;
-        if (value && typeof value === 'object' && '$$typeof' in value) return;
+        if (isReactElementLike(value)) return;
 
         // Handle caracteristicas specially - store as strings or skip JSX
         if (key === 'caracteristicas' && value && typeof value === 'object') {
@@ -26,7 +88,10 @@ export function serializeDesarrollo(desarrollo: Desarrollo): any {
             return;
         }
 
-        data[key] = value;
+        const sanitized = sanitizeForFirestore(value);
+        if (sanitized !== undefined) {
+            data[key] = sanitized;
+        }
     });
 
     return data;
@@ -41,9 +106,12 @@ export function serializeArea(area: Area): any {
 
         // Skip functions and React elements
         if (typeof value === 'function') return;
-        if (value && typeof value === 'object' && '$$typeof' in value) return;
+        if (isReactElementLike(value)) return;
 
-        data[key] = value;
+        const sanitized = sanitizeForFirestore(value);
+        if (sanitized !== undefined) {
+            data[key] = sanitized;
+        }
     });
 
     return data;
@@ -96,7 +164,11 @@ export async function getDesarrollosByArea(areaName: string): Promise<Desarrollo
 
 export async function saveDesarrollo(id: string, data: any): Promise<void> {
     const docRef = doc(db, DESARROLLOS_COLLECTION, id);
-    await setDoc(docRef, data, {merge: true});
+    await setDoc(docRef, sanitizeForFirestore(data), {merge: true});
+}
+
+export async function saveDesarrollosBatch(documents: Array<{ id: string; data: Record<string, any> }>): Promise<void> {
+    await saveDocumentsBatch(DESARROLLOS_COLLECTION, documents);
 }
 
 export async function updateDesarrollo(
@@ -133,7 +205,11 @@ export async function getAllAreas(): Promise<AreaDocument[]> {
 
 export async function saveArea(id: string, data: any): Promise<void> {
     const docRef = doc(db, AREAS_COLLECTION, id);
-    await setDoc(docRef, data, {merge: true});
+    await setDoc(docRef, sanitizeForFirestore(data), {merge: true});
+}
+
+export async function saveAreasBatch(documents: Array<{ id: string; data: Record<string, any> }>): Promise<void> {
+    await saveDocumentsBatch(AREAS_COLLECTION, documents);
 }
 
 export async function updateArea(

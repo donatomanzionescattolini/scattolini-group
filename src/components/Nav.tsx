@@ -2,7 +2,7 @@ import React, {useEffect, useMemo, useState} from "react";
 import {resolveLocalizedValue, useTranslation} from "../i18n.tsx";
 import {useNavigate} from "react-router-dom";
 import {Container, Form, Nav as BsNav, Navbar, NavDropdown} from "react-bootstrap";
-import Areas from "../objects/areas/Areas";
+import Areas, {DYNAMIC_AREAS_UPDATED_EVENT} from "../objects/areas/Areas";
 import {getDesarrollosForArea, DYNAMIC_DESARROLLOS_UPDATED_EVENT} from "../objects/desarrollos/Desarrollos";
 import Desarrollo from "../models/desarrollos/Desarrollo";
 import {Area} from "../models/areas/Area";
@@ -13,22 +13,26 @@ const Nav = () => {
     const [showNavCentred, setShowNavCentred] = useState(false);
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
     const [dynamicVersion, setDynamicVersion] = useState(0);
+    const [dynamicAreaVersion, setDynamicAreaVersion] = useState(0);
 
     useEffect(() => {
         const handleResize = () => setInnerWidth(window.innerWidth);
         const handleDynamicUpdate = () => setDynamicVersion((prev) => prev + 1);
+        const handleDynamicAreaUpdate = () => setDynamicAreaVersion((prev) => prev + 1);
         window.addEventListener("resize", handleResize);
         window.addEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleDynamicUpdate as EventListener);
+        window.addEventListener(DYNAMIC_AREAS_UPDATED_EVENT, handleDynamicAreaUpdate as EventListener);
         return () => {
             window.removeEventListener("resize", handleResize);
             window.removeEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleDynamicUpdate as EventListener);
+            window.removeEventListener(DYNAMIC_AREAS_UPDATED_EVENT, handleDynamicAreaUpdate as EventListener);
         };
     }, []);
 
     // Only include areas that have projects to sell
     const allAreas = useMemo(() => {
         return Areas().filter((area) => getDesarrollosForArea(area, lang).size > 0);
-    }, [lang, dynamicVersion, Areas, getDesarrollosForArea]);
+    }, [lang, dynamicVersion, dynamicAreaVersion]);
     const [filteredAreas, setFilteredAreas] = useState<Array<Area>>(allAreas);
 
     const allDesarrollos = useMemo<Desarrollo[]>(
@@ -36,7 +40,7 @@ const Nav = () => {
             allAreas
                 .map((area) => [...getDesarrollosForArea(area, lang)])
                 .reduce((prev, cur) => [...prev, ...cur], []),
-        [allAreas, lang, dynamicVersion, getDesarrollosForArea]
+        [allAreas, lang, dynamicVersion, dynamicAreaVersion]
     );
 
     const [filteredDesarrollos, setFilteredDesarrollos] =

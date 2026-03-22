@@ -1,7 +1,7 @@
 import {useEffect, useLayoutEffect, useMemo, useState} from "react";
 import {Col, Container, Image, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos";
+import {DYNAMIC_DESARROLLOS_UPDATED_EVENT, getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos";
 import Desarrollo from "../../models/desarrollos/Desarrollo";
 import {resolveLocalizedValue, useTranslation} from "../../i18n.tsx";
 import {Area} from "../../models/areas/Area.tsx";
@@ -16,11 +16,17 @@ export default function AreaTemplate(props: AreaProps) {
     const {t, lang} = useTranslation();
     const area = props.area;
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+    const [contentVersion, setContentVersion] = useState(0);
 
     useEffect(() => {
         const onResize = () => setInnerWidth(window.innerWidth);
+        const onDynamicDesarrollosUpdated = () => setContentVersion((prev) => prev + 1);
         window.addEventListener("resize", onResize);
-        return () => window.removeEventListener("resize", onResize);
+        window.addEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, onDynamicDesarrollosUpdated as EventListener);
+        return () => {
+            window.removeEventListener("resize", onResize);
+            window.removeEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, onDynamicDesarrollosUpdated as EventListener);
+        };
     }, []);
 
     const getLocalizedString = (field: unknown, fallback = ""): string => {
@@ -48,7 +54,7 @@ export default function AreaTemplate(props: AreaProps) {
     }, []);
     const areaDesarrollos = useMemo<Set<Desarrollo>>(
         () => getDesarrollosForArea(area, lang),
-        [area, lang]
+        [area, lang, contentVersion]
     );
     for (let i = 1; i <= area.numberOfImages; i++) {
         images.push(

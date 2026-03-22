@@ -1,17 +1,29 @@
+import {useEffect, useMemo, useState} from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import {getDesarrollosForArea} from '../../objects/desarrollos/Desarrollos';
-import Areas from '../../objects/areas/Areas';
+import {DYNAMIC_DESARROLLOS_UPDATED_EVENT, getDesarrollosForArea} from '../../objects/desarrollos/Desarrollos';
+import Areas, {DYNAMIC_AREAS_UPDATED_EVENT} from '../../objects/areas/Areas';
 import {resolveLocalizedValue, useTranslation} from '../../i18n.tsx';
 
 export default function DesarrollosComponent() {
     const {t, lang} = useTranslation();
+    const [contentVersion, setContentVersion] = useState(0);
+
+    useEffect(() => {
+        const handleContentUpdated = () => setContentVersion((prev) => prev + 1);
+        window.addEventListener(DYNAMIC_AREAS_UPDATED_EVENT, handleContentUpdated as EventListener);
+        window.addEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleContentUpdated as EventListener);
+        return () => {
+            window.removeEventListener(DYNAMIC_AREAS_UPDATED_EVENT, handleContentUpdated as EventListener);
+            window.removeEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleContentUpdated as EventListener);
+        };
+    }, []);
 
     const getLocalized = (field: any): string => {
         return resolveLocalizedValue<string>(field, lang) || '';
     };
 
-    const areas = Areas();
+    const areas = useMemo(() => Areas(), [contentVersion]);
 
     return (
         <Container>

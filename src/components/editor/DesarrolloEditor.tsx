@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Button, ButtonGroup, ListGroup, Spinner} from 'react-bootstrap';
 import {deleteDesarrollo, getAllDesarrollos, saveDesarrollo, serializeDesarrollo} from '../../services/database';
-import {replaceDynamicDesarrollos, getDesarrollosForArea} from '../../objects/desarrollos/Desarrollos';
-import Areas from '../../objects/areas/Areas';
+import {DYNAMIC_DESARROLLOS_UPDATED_EVENT, replaceDynamicDesarrollos, getDesarrollosForArea} from '../../objects/desarrollos/Desarrollos';
+import Areas, {DYNAMIC_AREAS_UPDATED_EVENT} from '../../objects/areas/Areas';
 import MultiStepWizard from './MultiStepWizard';
 import {useTranslation} from '../../i18n.tsx';
 
@@ -22,6 +22,20 @@ export default function DesarrolloEditor() {
     useEffect(() => {
         loadDesarrollos();
     }, []);
+
+    useEffect(() => {
+        const handleContentUpdated = () => {
+            if (!selectedDesarrollo) {
+                loadDesarrollos();
+            }
+        };
+        window.addEventListener(DYNAMIC_AREAS_UPDATED_EVENT, handleContentUpdated as EventListener);
+        window.addEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleContentUpdated as EventListener);
+        return () => {
+            window.removeEventListener(DYNAMIC_AREAS_UPDATED_EVENT, handleContentUpdated as EventListener);
+            window.removeEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleContentUpdated as EventListener);
+        };
+    }, [selectedDesarrollo]);
 
     const getLocalized = (field: any) => {
         if (!field) return '';

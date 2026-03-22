@@ -5,6 +5,7 @@ import {useTranslation} from "../../i18n";
 import {useAuth} from "../../contexts/AuthContext";
 import AreaEditor from "./AreaEditor";
 import DesarrolloEditor from "./DesarrolloEditor";
+import LegacyMigrationPanel from "./LegacyMigrationPanel";
 import MobileDebugLogger from "../MobileDebugLogger";
 import "./Editor.scss";
 
@@ -45,6 +46,7 @@ export default function Editor() {
             </div>
 
             <Container className="py-4">
+                <LegacyMigrationPanel/>
                 <Card>
                     <Card.Body>
                         <Nav variant="tabs" className="mb-4">

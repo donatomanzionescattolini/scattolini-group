@@ -10,7 +10,6 @@ import Liderazgo from "./components/Liderazgo.tsx";
 import AreasRoutes from "./routes/AreasRoutes.tsx";
 import React, {useEffect, useLayoutEffect} from "react";
 import AliadosComponent from "./components/AliadosComponent.tsx";
-import AreasComponent from "./components/AreasComponent.tsx";
 import Equipo from "./components/AsociadosComponent.tsx";
 import Login from "./components/auth/Login.tsx";
 import ProtectedRoute from "./components/auth/ProtectedRoute.tsx";
@@ -22,22 +21,27 @@ import {useTranslation} from "./i18n.tsx";
 import DesarrollosRoutes from "./routes/DesarrollosRoutes.tsx";
 import {FloatingWhatsApp} from "react-floating-whatsapp";
 import FloatingLangToggle from "./components/FloatingLangToggle.tsx";
-import {getAllDesarrollos} from "./services/database";
+import {getAllAreas, getAllDesarrollos} from "./services/database";
+import {replaceDynamicAreas} from "./objects/areas/Areas";
 import {replaceDynamicDesarrollos} from "./objects/desarrollos/Desarrollos";
 
 export default function App() {
     const {t} = useTranslation();
 
     useEffect(() => {
-        const fetchDesarrollos = async () => {
+        const fetchContent = async () => {
             try {
-                const dynamicDesarrollos = await getAllDesarrollos();
+                const [dynamicAreas, dynamicDesarrollos] = await Promise.all([
+                    getAllAreas(),
+                    getAllDesarrollos(),
+                ]);
+                replaceDynamicAreas(dynamicAreas as any);
                 replaceDynamicDesarrollos(dynamicDesarrollos as any);
             } catch (error) {
-                console.error("Error fetching dynamic developments:", error);
+                console.error("Error fetching dynamic content:", error);
             }
         };
-        fetchDesarrollos();
+        fetchContent();
     }, []);
 
     useLayoutEffect(() => {
@@ -56,7 +60,6 @@ export default function App() {
                     <Route element={<Liderazgo/>} path="/liderazgo"/>
                     <Route element={<ContactoComponent/>} path="/contacto"/>
                     <Route element={<DesarrollosTodos/>} path={"/desarrollos"}/>
-                    <Route element={<AreasComponent/>} path="/areas"/>
 
                     {DesarrollosRoutes()}
 

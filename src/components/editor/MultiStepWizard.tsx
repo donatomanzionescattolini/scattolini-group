@@ -4,7 +4,7 @@ import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import "./MultiStepWizard.scss";
 import { useTranslation } from "../../i18n.tsx";
 import MediaUploadStep from "./MediaUploadStep";
-import Areas from "../../objects/areas/Areas";
+import Areas, {DYNAMIC_AREAS_UPDATED_EVENT} from "../../objects/areas/Areas";
 import AddressAutocompleteField from "./AddressAutocompleteField";
 
 interface MultiStepWizardProps {
@@ -25,6 +25,7 @@ export default function MultiStepWizard({
   const { t, lang } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<any>(data);
+  const [areaVersion, setAreaVersion] = useState(0);
 
   const getLocationValue = (source: any) =>
     source?.ubicacion ?? source?.["ubicación"] ?? "";
@@ -45,6 +46,14 @@ export default function MultiStepWizard({
     setFormError("");
   }, [data, reset]);
 
+  useEffect(() => {
+    const handleAreasUpdated = () => setAreaVersion((prev) => prev + 1);
+    window.addEventListener(DYNAMIC_AREAS_UPDATED_EVENT, handleAreasUpdated as EventListener);
+    return () => {
+      window.removeEventListener(DYNAMIC_AREAS_UPDATED_EVENT, handleAreasUpdated as EventListener);
+    };
+  }, []);
+
   // Get available areas for select dropdown
   const areas = useMemo(() => {
     const areaList = Areas();
@@ -56,7 +65,7 @@ export default function MultiStepWizard({
       }
     });
     return Array.from(unique.values());
-  }, []);
+  }, [areaVersion]);
 
   // Helper to get localized value from an area
   const getLocalizedValue = (

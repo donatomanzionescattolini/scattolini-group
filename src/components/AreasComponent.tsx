@@ -1,11 +1,24 @@
-import React, {useMemo} from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {desarrolloMap, getDesarrollosForArea} from "../objects/desarrollos/Desarrollos.ts";
+import Areas, {DYNAMIC_AREAS_UPDATED_EVENT} from "../objects/areas/Areas";
+import {DYNAMIC_DESARROLLOS_UPDATED_EVENT, getDesarrollosForArea} from "../objects/desarrollos/Desarrollos.ts";
 import {useTranslation} from "../i18n.tsx";
 
 export default function AreasComponent(): React.ReactElement {
     const {t, lang} = useTranslation();
+    const [contentVersion, setContentVersion] = useState(0);
+
+    useEffect(() => {
+        const handleContentUpdated = () => setContentVersion((prev) => prev + 1);
+        window.addEventListener(DYNAMIC_AREAS_UPDATED_EVENT, handleContentUpdated as EventListener);
+        window.addEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleContentUpdated as EventListener);
+        return () => {
+            window.removeEventListener(DYNAMIC_AREAS_UPDATED_EVENT, handleContentUpdated as EventListener);
+            window.removeEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleContentUpdated as EventListener);
+        };
+    }, []);
+
     const getLocalized = (field: string | Record<string, string> | null | undefined) => {
         if (!field) return "";
         const isPlaceholder = (value: unknown) =>
@@ -24,7 +37,7 @@ export default function AreasComponent(): React.ReactElement {
         return field;
     };
 
-    const allAreas = [...desarrolloMap.values()].map((x) => x.area);
+    const allAreas = useMemo(() => Areas(), [contentVersion]);
 
     // Filter to only show areas that have projects
     const {areasWithProjects} = useMemo(() => {
@@ -41,7 +54,7 @@ export default function AreasComponent(): React.ReactElement {
         });
 
         return {areasWithProjects: withProjects, areasWithoutProjects: withoutProjects};
-    }, [allAreas, lang]);
+    }, [allAreas, lang, contentVersion]);
 
     // Areas without projects (kept for future use):
     // These areas exist but have no active listings yet

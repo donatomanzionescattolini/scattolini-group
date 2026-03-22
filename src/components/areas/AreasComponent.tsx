@@ -1,12 +1,24 @@
-import {useMemo} from "react";
+import {useEffect, useMemo, useState} from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import Areas from "../../objects/areas/Areas";
-import {getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos";
+import Areas, {DYNAMIC_AREAS_UPDATED_EVENT} from "../../objects/areas/Areas";
+import {DYNAMIC_DESARROLLOS_UPDATED_EVENT, getDesarrollosForArea} from "../../objects/desarrollos/Desarrollos";
 import {useTranslation} from "../../i18n.tsx";
 
 function AreasComponent() {
     const {t, lang} = useTranslation();
+    const [contentVersion, setContentVersion] = useState(0);
+
+    useEffect(() => {
+        const handleContentUpdated = () => setContentVersion((prev) => prev + 1);
+        window.addEventListener(DYNAMIC_AREAS_UPDATED_EVENT, handleContentUpdated as EventListener);
+        window.addEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleContentUpdated as EventListener);
+        return () => {
+            window.removeEventListener(DYNAMIC_AREAS_UPDATED_EVENT, handleContentUpdated as EventListener);
+            window.removeEventListener(DYNAMIC_DESARROLLOS_UPDATED_EVENT, handleContentUpdated as EventListener);
+        };
+    }, []);
+
     const getLocalized = (field: any) => {
         if (!field) return "";
         const isPlaceholder = (value: unknown) =>
@@ -25,7 +37,7 @@ function AreasComponent() {
         return field;
     };
 
-    const allAreas = Areas();
+    const allAreas = useMemo(() => Areas(), [contentVersion]);
 
     // Filter to only show areas that have projects
          const {areasWithProjects} = useMemo(() => {
@@ -39,7 +51,7 @@ function AreasComponent() {
         });
 
         return {areasWithProjects: withProjects};
-    }, [allAreas, lang]);
+    }, [allAreas, lang, contentVersion]);
 
     // Areas without projects (kept for future use):
     // These areas exist but have no active listings yet

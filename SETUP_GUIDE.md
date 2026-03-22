@@ -104,6 +104,29 @@ npm run preview
     - **Step 4: Revisión** - Review all changes
 4. Click "Guardar Cambios" to save
 
+### Importing Existing File-Based Content into Firestore
+
+If your existing `Area` and `Desarrollo` content still lives in `src/objects/**`, you can import that legacy content into Firestore from the admin panel.
+
+1. Log in and open `/editor`
+2. At the top of the editor page, find the **Legacy content migration** panel
+3. Review the counts for areas and developments detected from the legacy files
+4. Click **Import legacy content into Firestore**
+5. Confirm the import when prompted
+
+What this does:
+
+- Reads the legacy static content already defined in the codebase
+- Serializes it into Firestore-safe data
+- Writes it into the `areas` and `desarrollos` collections using merge writes
+- Refreshes the in-memory site content so imported records are available immediately
+
+Important notes:
+
+- The migration is safe to re-run because it uses document IDs derived from the existing content and writes with merge semantics
+- Existing Firestore documents with the same IDs will be updated
+- Rich JSX-only fields from legacy objects are skipped or normalized during serialization so Firestore import does not fail
+
 ### Editing Areas
 
 1. In the editor, click the "Áreas" tab
@@ -136,15 +159,35 @@ Each object is serialized to remove React components and functions before storag
 
 ## Firestore Security Rules
 
-Add these rules in Firebase Console > Firestore Database > Rules:
+This repository already includes a `firestore.rules` file. The intended behavior is:
+
+- Public read access for `areas` and `desarrollos` so the website can render dynamic content
+- Authenticated write access for the admin editor and legacy migration tool
+
+If you are configuring rules manually in Firebase Console > Firestore Database > Rules, use the rules from this repository rather than the old fully-authenticated example.
+
+Current project rules:
 
 ```javascript
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Only authenticated users can read/write
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    match /desarrollos/{documentId} {
+      allow read: if true;
+      allow create, update, delete: if isSignedIn();
+    }
+
+    match /areas/{documentId} {
+      allow read: if true;
+      allow create, update, delete: if isSignedIn();
+    }
+
     match /{document=**} {
-      allow read, write: if request.auth != null;
+      allow read, write: if false;
     }
   }
 }
@@ -167,6 +210,13 @@ service cloud.firestore {
 - Check Firebase Console > Firestore Database to see if data appears
 - Verify Firestore rules allow authenticated writes
 - Check browser console for error messages
+
+### Legacy migration fails
+
+- Verify you are signed in before running the migration from `/editor`
+- Confirm Firestore rules allow authenticated writes to `areas` and `desarrollos`
+- Check that your Firebase project is correctly configured in `.env`
+- Open browser devtools and review any logged Firestore permission or network errors
 
 ### Build errors
 
@@ -192,18 +242,18 @@ service cloud.firestore {
 1. User logs in via Firebase Auth
 2. AuthContext stores user session
 3. Protected routes verify authentication
-4. Editor loads data from local objects
-5. Changes are saved to Firestore
-6. Future: Public site can read from Firestore
+4. Editor can import legacy file-based content into Firestore
+5. Editor changes are saved to Firestore
+6. Public site reads merged legacy-plus-Firestore content, with Firestore-backed areas and developments available dynamically
 
 ## Next Steps
 
-To integrate Firestore data into the public site:
+Recommended follow-up improvements:
 
-1. Update components to fetch from Firestore instead of local objects
-2. Implement caching for better performance
-3. Add loading states and error handling
-4. Consider implementing server-side rendering or static generation
+1. Migrate any remaining object-based content types into Firestore using the same pattern
+2. Expand editor fields for any rich structured data you still keep only in code
+3. Add content versioning or backups before large admin edits
+4. Consider moving heavy public reads behind a cache or API layer if content volume grows
 
 ## Support
 
