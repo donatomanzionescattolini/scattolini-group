@@ -106,19 +106,19 @@ export default function ShomaBay(lang: "en" | "es" = "es") {
     ShomaBayObject.titulo = getLocalizedField("titulo", "Shoma Bay");
     ShomaBayObject.slogan = getLocalizedField("slogan", "El primero de su clase: lujo, bienestar y estilo de vida frente al agua.");
     ShomaBayObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "16"), 10) || 16;
-    ShomaBayObject.video =
-        <div className="d-flex flex-row p-0 m-0 h-100 embed-responsive justify-content-center">
-            <iframe
-                width={"100%"}
-                height={500}
-                src="https://www.youtube.com/embed/UIfivX8efkQautoplay=true"
-                title="Shoma Bay North Bay Village... Presented by Ashton Coleman"
-                allowFullScreen
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                autoFocus
-            ></iframe>
-        </div>
-    ;
+//     ShomaBayObject.video =
+//         <div className="d-flex flex-row p-0 m-0 h-100 embed-responsive justify-content-center">
+//             <iframe
+//                 width={"100%"}
+//                 height={500}
+//                 src="https://www.youtube.com/embed/UIfivX8efkQautoplay=true"
+//                 title="Shoma Bay North Bay Village... Presented by Ashton Coleman"
+//                 allowFullScreen
+//                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+//                 autoFocus
+//             ></iframe>
+//         </div>
+//     ;
     return ShomaBayObject;
 }
 

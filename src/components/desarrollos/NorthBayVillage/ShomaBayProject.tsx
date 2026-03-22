@@ -3,7 +3,5 @@ import ShomaBay from "../../../objects/desarrollos/NorthBayVillage/ShomaBay.tsx"
 
 export default function ShomaBayProject() {
     return (
-        <ProjectTemplate
-
-            desarrollo={ShomaBay}/>);
+        <ProjectTemplate desarrollo={ShomaBay}/>);
 }
