@@ -95,6 +95,7 @@ import Orlando from "../areas/Orlando.tsx";
 import Cassia from "./CoralGables/Cassia.tsx";
 import WindsorCayResort from "./Orlando/WindsorCayResort.tsx";
 import Doppio from "./Orlando/Doppio.tsx";
+import VistaHarbor from "./Downtown/VistaHarbor.tsx";
 
 interface DesarrolloMapItem {
     area: Area;
@@ -250,6 +251,7 @@ desarrolloMap.push({
         W11,
         WaldorfAstoria,
         Jem,
+        VistaHarbor(),
     ]),
 });
 desarrolloMap.push({

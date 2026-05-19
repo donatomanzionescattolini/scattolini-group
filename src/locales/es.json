@@ -268,6 +268,53 @@
     "availability": "Disponibilidad"
   },
   "desarrollos": {
+    "vista-harbor": {
+      "titulo": "Vista Harbor Residences & Yacht Club",
+      "slogan": "Vida de lujo a orillas del río Miami",
+      "introduccion": {
+        "0": "Continuando la visión transformadora de Henry Pino sobre el río Miami, ALTA Development presenta Vista Harbor Residences & Yacht Club — una comunidad de condominios de 12 pisos con 242 residencias y 37,000 pies cuadrados de amenidades exclusivas, frente a 650 pies del pintoresco río Miami.",
+        "1": "Distribuidas en dos torres independientes con lobbies separados, la colección incluye estudios y residencias de uno a cuatro dormitorios. Este audaz diseño moderno ofrece un acceso inigualable al río, con vistas impresionantes y conectividad directa a la Bahía Biscayne y lo mejor de Miami."
+      },
+      "caracteristicas": {
+        "edificio": {
+          "ubicacion": "Ubicación",
+          "ubicacionValor": "A orillas del río Miami, Miami, FL",
+          "desarrollador": "Desarrollador",
+          "desarrolladorValor": "ALTA Development",
+          "pisos": "Pisos",
+          "pisosValor": "12 niveles — dos torres independientes (Este y Oeste)",
+          "unidades": "Residencias",
+          "unidadesValor": "242 residencias",
+          "amenidades": "Amenidades",
+          "amenidadesValor": "37,000 pies cuadrados de amenidades exclusivas",
+          "frente": "Frente al río",
+          "frenteValor": "650 pies sobre el río Miami",
+          "alquiler": "Torre Oeste: renta a corto plazo permitida (mínimo 30 días), oportunidad de inversión llave en mano",
+          "hospital": "A minutos del campus de salud de la Universidad de Miami y del Hospital Jackson Memorial"
+        },
+        "residencias": {
+          "tipos": "Tipos de unidades",
+          "tipos1": "Estudios, residencias de 1, 2, 3 y 4 dormitorios",
+          "rangoPrecio": "Desde $648,900",
+          "vistas": "Impresionantes vistas al río Miami y a la Bahía Biscayne",
+          "pisoACielo": "Ventanas de piso a techo en todas las residencias",
+          "cocina": "Cocinas gourmet con acabados de alta gama",
+          "paquetes": "Paquetes de amueblado disponibles (diseño Adriana Hoyos) — listo para alquilar",
+          "penthouse": "Colección de penthouses disponible (unidades PH)"
+        },
+        "amenidades": {
+          "muelle": "Muelles privados — navegue por la ciudad directamente desde su hogar (Yacht Club)",
+          "piscina": "Piscina en rooftop con vistas al río y la ciudad",
+          "gym": "Gimnasio de última generación",
+          "pickleball": "Canchas de pickleball",
+          "business": "Centro de negocios",
+          "lobby": "Lobbies exclusivos (independientes por cada torre)",
+          "alquilerServicio": "Servicios de gestión de alquiler a corto plazo en el edificio",
+          "acceso": "Acceso rápido a Downtown Miami, Midtown, Edgewater, Miami Beach, Design District, Aeropuerto Internacional de Miami, Puerto de Miami y estación Brightline",
+          "riverLanding": "A 5 minutos del centro comercial River Landing — Publix, 9 restaurantes y 21 tiendas"
+        }
+      }
+    },
     "tula-residences": {
       "titulo": "Tula Residences",
       "direccion": "7918 West Drive, North Bay Village, FL 33141",

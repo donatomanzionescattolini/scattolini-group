@@ -5,6 +5,7 @@ import JemProject from "../../components/desarrollos/Downtown/JemProject";
 import TheElserProject from "../../components/desarrollos/Downtown/TheElserProject";
 import WaldorfAstoriaProject from "../../components/desarrollos/Downtown/WaldorfAstoriaProject";
 import {W11Project} from "../../components/desarrollos/Downtown/W11Project";
+import VistaHarborProject from "../../components/desarrollos/Downtown/VistaHarborProject";
 
 export default function DowntownRoutes() {
     return (
@@ -15,6 +16,7 @@ export default function DowntownRoutes() {
             <Route element={<CasaBellaProject/>} path="/desarrollos/casa-bella"/>
             <Route element={<WaldorfAstoriaProject/>} path="/desarrollos/waldorf-astoria"/>
             <Route path="/desarrollos/jem" element={<JemProject/>}/>
+            <Route path="/desarrollos/vista-harbor" element={<VistaHarborProject/>}/>
         </>
     );
 }
