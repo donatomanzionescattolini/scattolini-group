@@ -371,6 +371,66 @@
           }
         }
       }
+    },
+    "kempinski-residences": {
+      "titulo": "Kempinski Residences Miami Design District",
+      "slogan": "Refinamiento europeo redefinido en Miami",
+      "introduccion": {
+        "0": "Kempinski Residences Miami Design District presenta un hito del lujo europeo en una de las direcciones más prestigiosas de Miami. Ubicado en 3801 y 3883 Biscayne Blvd — en la entrada al Miami Design District™ — este desarrollo de dos torres trae la legendaria marca hotelera Kempinski a través de dos torres residenciales de 23 pisos, unidas por un exclusivo puente de amenidades en el cuarto piso.",
+        "1": "Con 64 residencias por torre, 22 suites privadas para huéspedes, 6 townhomes y aproximadamente 70,000 pies cuadrados de amenidades curadas, Kempinski Residences ofrece un estilo de vida sin igual rodeado de boutiques de lujo, restaurantes de alta cocina, instituciones culturales y vistas panorámicas de la Bahía Biscayne y el horizonte de Miami."
+      },
+      "direccion": "3801 & 3883 Biscayne Blvd, Miami, FL 33137",
+      "caracteristicas": {
+        "edificio": {
+          "ubicacion": "Dirección",
+          "ubicacionValor": "3801 & 3883 Biscayne Blvd, Miami, FL 33137",
+          "ubicacionDesc": "Ubicación",
+          "ubicacionDescValor": "Puerta de entrada al Miami Design District™",
+          "torres": "Torres",
+          "torresValor": "Dos torres residenciales de 23 pisos (Norte y Sur)",
+          "unidades": "Residencias",
+          "unidadesValor": "64 residencias por torre + 22 suites privadas + 6 townhomes",
+          "amenidades": "Amenidades",
+          "amenidadesValor": "Aprox. 70,000 pies cuadrados en ambas torres",
+          "puente": "Puente de Amenidades",
+          "puenteValor": "Puente en el cuarto piso que conecta ambas torres",
+          "concierge": "Conserje 24 horas capacitado por Kempinski",
+          "carService": "Servicio de auto privado de lujo",
+          "porteCochere": "Porte-Cochère privada con elementos acuáticos",
+          "parking": "Estacionamiento estructurado para residentes y huéspedes"
+        },
+        "residencias": {
+          "tipos": "Tipos de Unidades",
+          "tiposValor": "2 Hab / 2.5 Baños + Den y 4 Hab / 4.5 Baños + Den",
+          "precio": "Precio Inicial",
+          "precioValor": "Desde $3,895,900",
+          "techos": "Techos de 11' en sala, habitaciones, den y balcón",
+          "balcon": "Balcones de 10' de profundidad con vistas a la Bahía Biscayne",
+          "elevador": "Lobby privado de ascensor por residencia",
+          "closet": "Clóset privado de mayordomo",
+          "piedra": "Acabados en piedra natural en toda la residencia, curados por Rockwell Group",
+          "lavanderia": "Cuarto de lavandería en cada residencia",
+          "cocina": "Cocina",
+          "cocinaValor": "Paquete completo de electrodomésticos Gaggenau, isla con cascada, encimeras de piedra natural, gabinetes personalizados por Rockwell Group",
+          "suite": "Suite Principal",
+          "suiteValor": "Griferías Kallista, walk-in closet amplio, bañera independiente, inodoro inteligente Kohler Leap"
+        },
+        "amenidades": {
+          "lap": "Piscina de nado de 85' con plataforma solar",
+          "beach": "Piscina de entrada tipo playa con plataforma solar",
+          "cabanas": "Cabañas al aire libre, tumbonas y cabañas sociales junto a la piscina",
+          "outdoor": "Teatro al aire libre, deck de juegos y lounge exterior",
+          "padel": "Cancha de pádel en planta baja y parque para perros",
+          "wellness": "Santuario de bienestar: inmersión fría, sauna infrarrojo, sauna seco, baños de vapor, jardín de meditación y yoga",
+          "spa": "Spa mixto con salas de tratamiento privadas y lounge de relajación",
+          "gym": "Centro de fitness de última generación + estudio de yoga y pilates",
+          "familia": "Splash pad, parque infantil, sala de juegos, sala recreativa, simulador F1, simulador de golf y sala para adolescentes",
+          "social": "Owner's Lounge, lounge de vinos y cigarros, comedor privado, cocina del chef, sala de música y sala de podcast",
+          "business": "Centro de negocios y sala de juntas ejecutiva privada",
+          "cafe": "Sunrise Café y Wellness Café con desayuno diario",
+          "beach2": "Servicio de playa fuera del sitio"
+        }
+      }
     }
   }
 }

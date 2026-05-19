@@ -6,6 +6,7 @@ import MissoniBaiaProject from "../../components/desarrollos/Edgewater/MissoniBa
 import {TheEditionResidencesProject} from "../../components/desarrollos/Edgewater/TheEditionResidencesProject";
 import TheVillaProject from "../../components/desarrollos/Edgewater/TheVillaProject";
 import VidaProject from "../../components/desarrollos/Edgewater/VidaProject";
+import KempinskiResidencesProject from "../../components/desarrollos/Edgewater/KempinskiResidencesProject";
 
 export default function EdgewaterRoutes() {
     return (
@@ -17,6 +18,7 @@ export default function EdgewaterRoutes() {
             <Route element={<TheEditionResidencesProject/>} path="/desarrollos/edition-residences"/>
             <Route element={<EdgeHouseProject/>} path="/desarrollos/edge-house-residences"/>
             <Route element={<VidaProject/>} path="/desarrollos/vida"/>
+            <Route element={<KempinskiResidencesProject/>} path="/desarrollos/kempinski-residences"/>
         </>
     );
 }

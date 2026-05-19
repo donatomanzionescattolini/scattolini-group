@@ -96,6 +96,7 @@ import Cassia from "./CoralGables/Cassia.tsx";
 import WindsorCayResort from "./Orlando/WindsorCayResort.tsx";
 import Doppio from "./Orlando/Doppio.tsx";
 import VistaHarbor from "./Downtown/VistaHarbor.tsx";
+import KempinskiResidences from "./Edgewater/KempinskiResidences.tsx";
 
 interface DesarrolloMapItem {
     area: Area;
@@ -264,6 +265,7 @@ desarrolloMap.push({
         VidaResidences,
         ElleResidences,
         EdgeHouseResidences,
+        KempinskiResidences(),
     ]),
 });
 desarrolloMap.push({

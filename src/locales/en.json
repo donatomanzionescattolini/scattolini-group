@@ -371,6 +371,66 @@
           }
         }
       }
+    },
+    "kempinski-residences": {
+      "titulo": "Kempinski Residences Miami Design District",
+      "slogan": "European refinement redefined in Miami",
+      "introduccion": {
+        "0": "Kempinski Residences Miami Design District introduces a landmark of European luxury to one of Miami's most prestigious addresses. Located at 3801 & 3883 Biscayne Blvd — at the gateway to the Miami Design District™ — this dual-tower development brings the legendary Kempinski hospitality brand to life through two 23-story residential towers, united by an exclusive amenity bridge on the fourth floor.",
+        "1": "With 64 residences per tower, 22 private guest suites, 6 townhomes, and approximately 70,000 square feet of curated amenities, Kempinski Residences offers an unparalleled lifestyle surrounded by luxury retail, chef-driven dining, cultural institutions, and sweeping views of Biscayne Bay and the Miami skyline."
+      },
+      "direccion": "3801 & 3883 Biscayne Blvd, Miami, FL 33137",
+      "caracteristicas": {
+        "edificio": {
+          "ubicacion": "Address",
+          "ubicacionValor": "3801 & 3883 Biscayne Blvd, Miami, FL 33137",
+          "ubicacionDesc": "Location",
+          "ubicacionDescValor": "Gateway to the Miami Design District™",
+          "torres": "Towers",
+          "torresValor": "Two 23-story residential towers (North & South)",
+          "unidades": "Residences",
+          "unidadesValor": "64 residences per tower + 22 private guest suites + 6 townhomes",
+          "amenidades": "Amenities",
+          "amenidadesValor": "Approx. 70,000 sq ft across both towers",
+          "puente": "Amenity Bridge",
+          "puenteValor": "Fourth-floor bridge connecting both towers",
+          "concierge": "24-Hour Concierge trained by Kempinski",
+          "carService": "Luxury house car service",
+          "porteCochere": "Private Porte-Cochère with water features",
+          "parking": "Onsite structured parking for residents and guests"
+        },
+        "residencias": {
+          "tipos": "Unit Types",
+          "tiposValor": "2 Bed / 2.5 Bath + Den and 4 Bed / 4.5 Bath + Den",
+          "precio": "Starting Price",
+          "precioValor": "From $3,895,900",
+          "techos": "11' high ceilings in Great Room, Bedrooms, Den and Balcony",
+          "balcon": "10' deep balconies with unobstructed Biscayne Bay views",
+          "elevador": "Private elevator lobby per residence",
+          "closet": "Private valet closet",
+          "piedra": "Natural stone finishes throughout, curated by Rockwell Group",
+          "lavanderia": "Laundry room in each residence",
+          "cocina": "Kitchen",
+          "cocinaValor": "Full Gaggenau appliance package, waterfall island, natural stone countertops, custom cabinetry by Rockwell Group",
+          "suite": "Primary Suite",
+          "suiteValor": "Kallista fixtures, oversized walk-in closet, freestanding tub, Kohler Leap Smart Toilet"
+        },
+        "amenidades": {
+          "lap": "85' Lap Pool with sun shelf",
+          "beach": "Beach entry pool with sun shelf",
+          "cabanas": "Open-air cabanas, daybeds & poolside social cabanas",
+          "outdoor": "Outdoor theater, games deck & outdoor lounge",
+          "padel": "Ground level Padel court & dog park",
+          "wellness": "Wellness sanctuary: cold plunge, infrared sauna, dry sauna, steam rooms, meditation & yoga garden",
+          "spa": "Coed spa with private treatment rooms & relaxation lounge",
+          "gym": "State-of-the-art fitness center + yoga & pilates movement studio",
+          "familia": "Children's splash pad, playground, playroom, game room, F1 simulator, golf simulator & teen's room",
+          "social": "Owner's Lounge, wine & cigar lounge, private dining room, chef's kitchen, music room & podcast room",
+          "business": "Business center & private executive boardroom",
+          "cafe": "Sunrise Café & Wellness Café offering daily breakfast",
+          "beach2": "Offsite beach service"
+        }
+      }
     }
   }
 }
