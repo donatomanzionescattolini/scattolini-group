@@ -133,7 +133,6 @@ export function Home() {
             <a href="#services" className="subnav-link">{t("nav.servicios")}</a>
             <a href="#projects" className="subnav-link">{t("nav.desarrollos")}</a>
             <a href="#allies" className="subnav-link">{t("nav.aliados")}</a>
-            <a href="#quotes-section" className="subnav-link">{t("nav.quotes")}</a>
           </div>
         </Container>
       </div>
