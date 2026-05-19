@@ -8,7 +8,7 @@ export default function KempinskiResidences(lang: "en" | "es" = "es") {
 
     project.nombre = "kempinski-residences";
     project.area = Edgewater();
-    project.banner = false;
+    project.banner = true;
     project.numberOfImages = 17;
     project.direccion = getLocalizedField("direccion", "3801 & 3883 Biscayne Blvd, Miami, FL 33137");
     project.titulo = getLocalizedField("titulo", "Kempinski Residences Miami Design District");
