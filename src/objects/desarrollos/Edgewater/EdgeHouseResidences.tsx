@@ -2,9 +2,9 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("edge-house-residences", lang);
-    const EdgeHouseResidences = new Desarrollo(Edgewater());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("edge-house-residences", "es");
+    const EdgeHouseResidences = new Desarrollo(Edgewater);
     EdgeHouseResidences.nombre = getLocalizedField("nombre", "edge-house-residences");
     EdgeHouseResidences.titulo = getLocalizedField("titulo", "Edge House Residences");
     EdgeHouseResidences.introduccion = getLocalizedArray("introduccion", [
@@ -18,7 +18,7 @@ export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
     EdgeHouseResidences.numberOfRooms = getLocalizedField("numberOfRooms", "Estudios y 1, 2 y 3 dormitorios");
     EdgeHouseResidences.estimatedCompletionYear = parseInt(getLocalizedField("estimatedCompletionYear", "2028"), 10) || 2028;
     EdgeHouseResidences.numberOfUnits = parseInt(getLocalizedField("numberOfUnits", "592"), 10) || 592;
-    EdgeHouseResidences.area = Edgewater();
+    EdgeHouseResidences.area = Edgewater;
     EdgeHouseResidences.caracteristicas = {
         edificio: (
             <>
@@ -102,8 +102,5 @@ export default function EdgeHouseResidences(lang: "en" | "es" = "es") {
             </>
         ),
     };
-    return EdgeHouseResidences;
-}
 
-
-
+export default EdgeHouseResidences;

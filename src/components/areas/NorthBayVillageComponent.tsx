@@ -7,5 +7,5 @@ export default function NorthBayVillageComponent() {
         window.scrollTo(0, 0);
     }, []);
 
-    return <AreaTemplate area={NorthBayVillage()}/>;
+    return <AreaTemplate area={NorthBayVillage}/>;
 }

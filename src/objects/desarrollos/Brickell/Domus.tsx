@@ -3,12 +3,12 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 import React from "react";
 
-export default function Domus(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("domus", lang);
-    const Domus = new Desarrollo(Brickell());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("domus", "es");
+    const Domus = new Desarrollo(Brickell);
     Domus.nombre = "domus";
     Domus.titulo = getLocalizedField("titulo", "Domus FLATS");
-    Domus.area = Brickell();
+    Domus.area = Brickell;
     Domus.caracteristicas = {
         edificio: (
             <ul>
@@ -80,6 +80,5 @@ export default function Domus(lang: "en" | "es" = "es") {
     Domus.titulo = getLocalizedField("titulo", "Domus FLATS");
     Domus.slogan = getLocalizedField("slogan", "");
     Domus.numberOfImages = parseInt(getLocalizedField("numberOfImages", "7"), 10) || 7;
-    return Domus;
-}
 
+export default Domus;

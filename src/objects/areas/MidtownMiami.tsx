@@ -1,6 +1,6 @@
 import {Area} from "../../models/areas/Area";
 
-export default function MidtownMiami() {
+
     const MidtownMiamiObject = new Area("midtown-miami");
     MidtownMiamiObject.name = "midtown-miami";
     MidtownMiamiObject.titulo = {
@@ -22,6 +22,4 @@ export default function MidtownMiami() {
         es: "Donde la Creatividad y la Ciudad se Encuentran",
         en: "Where Creativity and the City Meet"
     };
-
-    return MidtownMiamiObject;
-}
+export default MidtownMiamiObject;

@@ -2,8 +2,8 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
-export default function TheVilla(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("the-villa", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("the-villa", "es");
     const TheVillaObject = new Desarrollo();
 
 
@@ -249,8 +249,6 @@ export default function TheVilla(lang: "en" | "es" = "es") {
     ;
     TheVillaObject.numberOfImages = 70;
     TheVillaObject.banner = true;
-    TheVillaObject.area = Edgewater();
-    return TheVillaObject;
+    TheVillaObject.area = Edgewater;
 
-}
-
+export default TheVillaObject;

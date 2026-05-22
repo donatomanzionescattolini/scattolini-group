@@ -1,7 +1,7 @@
 import {Area} from "../../models/areas/Area";
 
 
-export default function DaniaBeach() {
+
 
     const DaniaBeachObject = new Area("dania-beach");
 
@@ -22,9 +22,4 @@ export default function DaniaBeach() {
         es: "Vívela, Disfrútala, Pláyala",
         en: "Live It, Enjoy It, Beach It"
     };
-
-
-    return DaniaBeachObject;
-
-
-}
+export default DaniaBeachObject;

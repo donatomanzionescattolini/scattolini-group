@@ -2,12 +2,12 @@
 import Brickell from "../../areas/Brickell.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function BaccaratResidences(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("baccarat", lang);
 
-    const baccaratResidencesObject = new Desarrollo(Brickell());
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("baccarat", "es");
+
+    const baccaratResidencesObject = new Desarrollo(Brickell);
     baccaratResidencesObject.banner = true;
-    baccaratResidencesObject.area = Brickell();
+    baccaratResidencesObject.area = Brickell;
 
     baccaratResidencesObject.nombre = "baccarat";
     baccaratResidencesObject.video = <div className={"video-container container-fluid justify-content-center"}>
@@ -202,5 +202,5 @@ export default function BaccaratResidences(lang: "en" | "es" = "es") {
     );
     baccaratResidencesObject.numberOfImages = 79;
 
-    return baccaratResidencesObject;
-}
+
+export default baccaratResidencesObject;

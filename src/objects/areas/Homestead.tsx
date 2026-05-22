@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function Homestead() {
+
     const homestead = AreaDto("homestead");
     homestead.name = "homestead";
     homestead.titulo = {
@@ -22,7 +22,4 @@ export default function Homestead() {
         ]
     };
     homestead.numberOfImages = 11;
-
-
-    return homestead;
-}
+export default homestead;

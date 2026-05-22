@@ -2,8 +2,8 @@
 import FloridaCity from "../../areas/FloridaCity.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function Alba(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("alba", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("alba", "es");
     const AlbaObject = new Desarrollo();
     AlbaObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "7"), 10) || 7;
     AlbaObject.banner = getLocalizedField("banner", "true") === "true";
@@ -49,9 +49,7 @@ export default function Alba(lang: "en" | "es" = "es") {
     ]);
 
     AlbaObject.caracteristicas = AlbaObject.createCaracteristicas();
-    AlbaObject.area = FloridaCity();
-
-    return AlbaObject;
-}
+    AlbaObject.area = FloridaCity;
 
 
+export default AlbaObject;

@@ -1,8 +1,8 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import Homestead from "../../areas/Homestead";
 
-export default function OnGrandville(lang: "en" | "es" = "es") {
-    const OnGrandvilleObject = new Desarrollo(Homestead());
+
+    const OnGrandvilleObject = new Desarrollo(Homestead);
     OnGrandvilleObject.nombre = "on-grandville";
     OnGrandvilleObject.titulo = {es: "On Grandville", en: "On Grandville"};
     OnGrandvilleObject.numberOfImages = 0;
@@ -28,7 +28,7 @@ export default function OnGrandville(lang: "en" | "es" = "es") {
         "On Grandville is a vibrant community of 165 newly built townhomes. These homes are beautifully designed and fully concrete. Each home comes equipped with 4 bedrooms, 3 full bathrooms, modern open kitchen, dining and guest room, energy-efficient appliances, balcony, a modern rooftop terrace and access to community spaces. Onx homes are built using X+ Construction™ design features such as hurricane-proof windows and doors, quartz countertops and porcelain tile floors. On Grandville's prime location, next to US1, provides easy access to the Florida Turnpike, shops and providing direct routes to surrounding convenience activities. These main routes offer direct access to the Florida Keys, downtown Dadeland and Miami's famous beaches and attractions",
     ];
     OnGrandvilleObject.ubicación = "14505 SW 260th St. Homestead, FL 33032";
-    OnGrandvilleObject.area = Homestead();
+    OnGrandvilleObject.area = Homestead;
 
     OnGrandvilleObject.caracteristicas = [];
 
@@ -143,5 +143,5 @@ export default function OnGrandville(lang: "en" | "es" = "es") {
     //   "Cortinas para ventanas",
     // ];
     OnGrandvilleObject.caracteristicas = OnGrandvilleObject.createCaracteristicas();
-    return OnGrandvilleObject;
-}
+
+export default OnGrandvilleObject;

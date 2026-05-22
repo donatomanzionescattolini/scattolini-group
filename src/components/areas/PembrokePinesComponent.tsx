@@ -3,5 +3,5 @@ import AreaTemplate from "./AreaTemplate";
 
 export default function PembrokePinesComponent() {
 
-    return <AreaTemplate area={PembrokePines()}/>
+    return <AreaTemplate area={PembrokePines}/>
 }

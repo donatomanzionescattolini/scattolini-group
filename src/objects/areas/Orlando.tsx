@@ -1,6 +1,6 @@
 import {Area} from "../../models/areas/Area.tsx";
 
-export default function Orlando() {
+
     const area = new Area("orlando");
     area.name = "orlando";
     area.titulo = {
@@ -22,5 +22,4 @@ export default function Orlando() {
         ],
     };
     area.numberOfImages = 52;
-    return area;
-}
+export default area;

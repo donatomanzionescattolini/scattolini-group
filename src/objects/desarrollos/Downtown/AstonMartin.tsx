@@ -2,12 +2,12 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 
-export default function AstonMartin(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("astonMartin", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("astonMartin", "es");
 
     const AstonMartinObject = new Desarrollo();
     AstonMartinObject.banner = true;
-    AstonMartinObject.area = Downtown();
+    AstonMartinObject.area = Downtown;
 
     AstonMartinObject.nombre = "aston-martin";
     AstonMartinObject.video =
@@ -196,6 +196,5 @@ export default function AstonMartin(lang: "en" | "es" = "es") {
     AstonMartinObject.titulo = getLocalizedField("titulo", "Aston Martin Residences");
     AstonMartinObject.slogan = getLocalizedField("slogan", "");
     AstonMartinObject.numberOfImages = 29;
-    return AstonMartinObject;
-}
 
+export default AstonMartinObject;

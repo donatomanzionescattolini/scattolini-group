@@ -3,13 +3,13 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 import React from "react";
 
-export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("14-river-district", lang);
-    const FourteenRiverDistrictObject = new Desarrollo(Brickell());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("14-river-district", "es");
+    const FourteenRiverDistrictObject = new Desarrollo(Brickell);
 
     FourteenRiverDistrictObject.nombre = "14-river-district";
     FourteenRiverDistrictObject.banner = getLocalizedField("banner", "true") === "true";
-    FourteenRiverDistrictObject.area = Brickell();
+    FourteenRiverDistrictObject.area = Brickell;
     FourteenRiverDistrictObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "27"), 10) || 27;
 
     FourteenRiverDistrictObject.caracteristicas = {
@@ -103,6 +103,5 @@ export default function FourteenRiverDistrict(lang: "en" | "es" = "es") {
     FourteenRiverDistrictObject.titulo = getLocalizedField("titulo", "14 River District");
     FourteenRiverDistrictObject.slogan = getLocalizedField("slogan", "");
     FourteenRiverDistrictObject.direccion = getLocalizedField("direccion", "1420 NW 14th Ave, Miami, FL 33125, USA");
-    return FourteenRiverDistrictObject;
-}
 
+export default FourteenRiverDistrictObject;

@@ -3,8 +3,8 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import Downtown from "../../areas/Downtown";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function Jem(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("jem", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("jem", "es");
     const Jem = new Desarrollo();
     Jem.nombre = getLocalizedField("nombre", "jem");
     Jem.titulo = "The Jem Miami Private Residences";
@@ -16,7 +16,7 @@ export default function Jem(lang: "en" | "es" = "es") {
 
     Jem.slogan = "La Joya de Miami";
     Jem.introduccion = ["Concebido como una audaz declaración arquitectónica que redefine el horizonte, JEM ofrece una experiencia de vida singular—donde cada detalle es cuidadosamente diseñado y ejecutado impecablemente por Naftali Group. Desde la llegada a través del bucólico ‘porte-cochère’ privado hasta la icónica piscina infinita en el exclusivo JEM Club, la colección de residencias privadas tiene en cuenta cada matiz de un estilo de vida global contemporáneo dentro del próximo vecindario ‘it’ de Miami."];
-    Jem.area = Downtown();
+    Jem.area = Downtown;
     Jem.ubicación = '110 NE 10th St, Miami, FL 33132';
     Jem.estimatedCompletionYear = 2026;
     Jem.residencias = ["RESIDENCIAS", "Desde  estudios  hasta  residencias  de  cuatro  dormitorios, incluidas  espectaculares  residencias  Penthouse  en  la  corona  del  edificio", "Ventanas  de  impacto  de  piso  a  techo  que  abarcan  espacios  completos  con  puertas  de  balcón  que  conducen  a  terrazas  completamente  ", "revestidas  con  barandillas  de  vidrio.", "Pisos  de  tablones  de  roble  blanco  en  todas  las  residencias.", "Puertas  interiores  de  madera  con  herrajes  cromados  en  todas  partes.", "Las  salas  de  lavandería  incluyen  lavadoras  y  secadoras  de  carga  frontal  apiladas  o  una  al  lado  de  la  otra.Lavanderías  con  fregadero  en  ", "residencias  selectas", "COCINA", "Gabinetes  de  carpintería  diseñados  a  medida  por  Rockwell  Group", "Encimera  y  protector  contra  salpicaduras  de  losa  de  cuarzo  dorado  Calacatta  pulido", "Isla  de  cocina  de  losa  de  cuarzo  dorado  Calacatta  pulido  con  bases  de  roble;  en  residencias  selectas", "Frigorífico  y  congelador  con  paneles  de  roble  Miele(o  similar)", "Lavavajillas  con  paneles  de  roble  Miele(o  similar)", "Neveras  para  vinos  totalmente  integradas  Miele(o  comparables);  Sub­Zero  de  altura  completa(o  comparable)  en  residencias  ", "selectas", "Estufa  Miele(o  similar)  con  horno  rápido;  cajón  calentador  y  horno  de  convección  en  residencias  selectas", "Fregadero  bajo  encimera  de  acero  inoxidable  Kohler  combinado  con  rociador  extraíble  con  tres  funciones  y  triturador  de  ", "basura", "Machine Translated by Google", "BAÑO  PRINCIPAL", "Tocadores  personalizados  diseñados  por  Rockwell  Group, con  acabados  de  roble  y  herrajes  de  níquel  pulido  con  almacenamiento  y  estantes  ", "abiertos.", "Botiquines  de  diseño  personalizado  con  iluminación  y  almacenamiento  integrados  montados  en  espejos", "Encimera  de  losa  de  porcelana  blanca  Bianco  Dolomite  perfeccionada", "Pisos  y  paredes  de  porcelanato  blanco  Bianco  Dolomite  pulido;  piso  de  mosaico  en  la  ducha", "Lavabos  de  tocador  Kohler  con  grifos  Kohler  de  níquel  pulido", "Ducha  de  mano  de  níquel  pulido  Kohler, cabezal  de  ducha", "Bañera  independiente  de  Porcelanosa  con  grifo  para  bañera  independiente  de  níquel  pulido  Kohler;  en  residencias  selectas", "Nicho  de  piedra  personalizado  en  las  duchas", "Inodoro  Kohler  con  mecanismo  de  doble  descarga.", "BAÑOS  SECUNDARIOS", "Tocadores  personalizados  diseñados  por  Rockwell  Group  con  acabado  en  roble  blanco  y  herrajes  en  níquel  pulido.", "Encimera  de  losa  de  porcelana  blanca  Bianco  Dolomite  perfeccionada", "Pavimentos  y  revestimientos  de  piedra  porcelánica  blanca  Bianco  Dolomite  pulidos", "Lavabos  de  tocador  Kohler  con  grifos  Kohler  de  níquel  pulido", "Tinas  Kohler", "Inodoros  Kohler", "TOCADORES", "Tocadores  a  medida  con  losas  de  porcelana  Honed  Dolomite  y  una  pared  característica  de  losa  estriada  de  Dolomite", "Suelos  de  tablones  de  madera  de  roble  blanco", "Lavabo  Kohler  con  grifo  Kohler  en  níquel  pulido", "Apliques  personalizados  que  flanquean  un  espejo  personalizado", "Inodoro  Kohler  con  mecanismo  de  doble  descarga.", "Iluminación  de  cala  personalizada"];
@@ -29,5 +29,5 @@ export default function Jem(lang: "en" | "es" = "es") {
         edificio: Jem.displayCaracteristicasEdificio()
     };
     Jem.numberOfImages = 12;
-    return Jem;
-}
+
+export default Jem;

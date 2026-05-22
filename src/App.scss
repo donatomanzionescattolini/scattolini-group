@@ -1239,11 +1239,10 @@ button,
     align-items: start;
   }
 
-  footer .row.justify-content-center > [class*="col-"] {
+  footer .col-auto {
     width: 100% !important;
     text-align: center;
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
+  align-items: middle;
   }
 
   footer h5 {
@@ -1264,7 +1263,7 @@ padding:0!important;
   }
 
   footer ul li a {
-
+    
     min-height: fit-content;
     line-height: 0.75;
   }
@@ -1379,7 +1378,9 @@ padding:0!important;
     height: 300px;
   }
 
-  /* Footer already uses a single-column grid at <=768px */
+  footer .col-auto {
+    
+  }
 
   /* Touch-friendly buttons */
   .btn {

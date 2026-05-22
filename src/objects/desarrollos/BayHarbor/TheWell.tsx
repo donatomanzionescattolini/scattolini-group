@@ -1,6 +1,6 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function TheWell() {
+
     const TheWellObject = new Desarrollo();
 
     TheWellObject.numberOfImages = 40;
@@ -160,5 +160,5 @@ export default function TheWell() {
     TheWellObject.titulo = "The Well";
     TheWellObject.slogan = "Bienvenido al Bienestar";
     TheWellObject.area = "Bay Harbor";
-    return TheWellObject;
-}
+
+export default TheWellObject;

@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function CoconutGrove() {
+
 
     const coconutGroveObject = AreaDto("coconut-grove");
     coconutGroveObject.name = "coconut-grove";
@@ -23,7 +23,4 @@ export default function CoconutGrove() {
             "If you are looking to invest or buy a property in Miami, you cannot fail to consider Coconut Grove. This neighborhood offers a wide variety of real estate options, from historic homes to modern condominiums, that suit all tastes and budgets. Coconut Grove also has an excellent location, close to downtown Miami, the beaches, and the international airport. Furthermore, it has a vibrant cultural, gastronomic, and commercial life, which will make you feel part of a unique and diverse community. Wait no longer and discover the opportunities offered by Coconut Grove, Miami's oldest and most charming neighborhood."
         ]
     };
-
-    return coconutGroveObject;
-}
-
+export default coconutGroveObject;

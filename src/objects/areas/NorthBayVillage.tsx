@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function NorthBayVillage() {
+
     const northBayVillage = AreaDto("north-bay-village");
     northBayVillage.name = "north-bay-village";
     northBayVillage.titulo = {
@@ -20,7 +20,4 @@ export default function NorthBayVillage() {
         ]
     };
     northBayVillage.numberOfImages = 12;
-
-    return northBayVillage;
-}
-
+export default northBayVillage;

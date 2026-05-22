@@ -2,8 +2,8 @@
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function ParcVillas(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("parc-villas", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("parc-villas", "es");
     const ParcVillasObject = new Desarrollo();
     ParcVillasObject.nombre = getLocalizedField("nombre", "parc-villas");
     ParcVillasObject.titulo = getLocalizedField("titulo", "Parc Villas");
@@ -14,8 +14,6 @@ export default function ParcVillas(lang: "en" | "es" = "es") {
         amenidades: <></>,
     };
     ParcVillasObject.introduccion = getLocalizedArray("introduccion", []);
-    ParcVillasObject.area = FloridaCity();
-    return ParcVillasObject;
-}
+    ParcVillasObject.area = FloridaCity;
 
-
+export default ParcVillasObject;

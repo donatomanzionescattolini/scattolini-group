@@ -2,11 +2,11 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
-export default function EditionResidences(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("edition-residences", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("edition-residences", "es");
     const TheEditionResidencesObject = new Desarrollo();
     TheEditionResidencesObject.banner = getLocalizedField("banner", "true") === "true";
-    TheEditionResidencesObject.area = Edgewater();
+    TheEditionResidencesObject.area = Edgewater;
 
     TheEditionResidencesObject.nombre = getLocalizedField("nombre", "edition-residences");
     TheEditionResidencesObject.caracteristicas = {
@@ -97,6 +97,5 @@ export default function EditionResidences(lang: "en" | "es" = "es") {
     TheEditionResidencesObject.titulo = getLocalizedField("titulo", "Edition Residences");
     TheEditionResidencesObject.slogan = getLocalizedField("slogan", "Un desarrollo exclusivo en Miami Beach");
     TheEditionResidencesObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "29"), 10) || 29;
-    return TheEditionResidencesObject;
-}
 
+export default TheEditionResidencesObject;

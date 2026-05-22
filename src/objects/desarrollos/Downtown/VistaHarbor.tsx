@@ -2,12 +2,12 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 import {getDesarrolloI18n} from "../useDesarrolloI18n.ts";
 
-export default function VistaHarbor(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("vista-harbor", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("vista-harbor", "es");
     const project = new Desarrollo();
 
     project.nombre = "vista-harbor";
-    project.area = Downtown();
+    project.area = Downtown;
     project.banner = true;
     project.numberOfImages = 13;
     project.titulo = getLocalizedField("titulo", "Vista Harbor Residences & Yacht Club");
@@ -56,6 +56,5 @@ export default function VistaHarbor(lang: "en" | "es" = "es") {
         )
     };
 
-    return project;
-}
 
+export default project;

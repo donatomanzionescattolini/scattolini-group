@@ -2,9 +2,9 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import MidtownMiami from "../../areas/MidtownMiami";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function jeangeorgesmiamitropicresidences(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("jean-georges-miami-tropic-residences", lang);
-    const d = new Desarrollo(MidtownMiami());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("jean-georges-miami-tropic-residences", "es");
+    const d = new Desarrollo(MidtownMiami);
     d.titulo = getLocalizedField("titulo", "Jean-Georges Miami Tropic Residences");
     d.nombre = "jean-georges-miami-tropic-residences";
     d.introduccion = getLocalizedArray("introduccion", ["Ubicado en el corazón de Midtown Miami, Jean-Georges Miami Tropic Residences es un desarrollo residencial de lujo de 48 pisos que ofrece 329 residencias exquisitamente diseñadas. Este proyecto marca la primera incursión residencial de Jean-Georges Vongerichten en Miami, combinando la elegancia de su marca culinaria con un diseño tropical moderno. Los residentes disfrutarán de impresionantes vistas de la bahía y la ciudad, así como de acceso exclusivo a una variedad de comodidades de primer nivel."]);
@@ -39,5 +39,5 @@ export default function jeangeorgesmiamitropicresidences(lang: "en" | "es" = "es
         ),
     };
     d.banner = true;
-    return d;
-}
+
+export default d;

@@ -7,5 +7,5 @@ export default function HomesteadComponent() {
         window.scrollTo(0, 0);
     }, []);
 
-    return <AreaTemplate area={Homestead()}/>;
+    return <AreaTemplate area={Homestead}/>;
 }

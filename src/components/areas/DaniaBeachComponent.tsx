@@ -3,5 +3,5 @@ import AreaTemplate from "./AreaTemplate";
 
 export default function DaniaBeachComponent() {
 
-    return <AreaTemplate area={DaniaBeach()}/>
+    return <AreaTemplate area={DaniaBeach}/>
 }

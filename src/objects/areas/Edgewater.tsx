@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function Edgewater() {
+
     const edgewater = AreaDto("edgewater");
     edgewater.name = "edgewater";
     edgewater.titulo = {
@@ -22,7 +22,4 @@ export default function Edgewater() {
         ]
     };
     edgewater.numberOfImages = 14;
-
-
-    return edgewater;
-}
+export default edgewater;

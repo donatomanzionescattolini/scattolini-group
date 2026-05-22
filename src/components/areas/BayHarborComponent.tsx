@@ -7,5 +7,5 @@ export default function BayHarborComponent() {
         window.scrollTo(0, 0);
     }, []);
 
-    return <AreaTemplate area={BayHarbor()}/>;
+    return <AreaTemplate area={BayHarbor}/>;
 }

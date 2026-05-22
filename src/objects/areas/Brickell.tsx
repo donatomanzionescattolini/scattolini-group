@@ -1,6 +1,6 @@
 import {Area, AreaDto} from "../../models/areas/Area.tsx";
 
-export default function Brickell(): Area {
+
 
 
     const brickell = AreaDto("brickell");
@@ -25,9 +25,4 @@ export default function Brickell(): Area {
         ]
     };
     brickell.numberOfImages = 10;
-
-
-    return brickell;
-}
-
-
+export default brickell;

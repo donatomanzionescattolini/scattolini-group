@@ -7,5 +7,5 @@ export default function SunnyIslesComponent() {
         window.scrollTo(0, 0);
     }, []);
 
-    return <AreaTemplate area={SunnyIsles()}/>;
+    return <AreaTemplate area={SunnyIsles}/>;
 }

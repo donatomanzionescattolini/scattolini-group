@@ -4,6 +4,6 @@ import AreaTemplate from "./AreaTemplate";
 export default function WynwoodCoponent() {
 
 
-    return <AreaTemplate area={Wynwood()}/>
+    return <AreaTemplate area={Wynwood}/>
 
 }

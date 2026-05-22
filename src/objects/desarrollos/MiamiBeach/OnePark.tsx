@@ -2,8 +2,8 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function OnePark(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("one-park", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("one-park", "es");
     const OneParkObject = new Desarrollo();
     OneParkObject.nombre = "one-park";
 
@@ -97,7 +97,7 @@ export default function OnePark(lang: "en" | "es" = "es") {
     OneParkObject.slogan = getLocalizedField("slogan", "by Turnberry");
     OneParkObject.numberOfImages = 27;
     OneParkObject.banner = true;
-    OneParkObject.area = MiamiBeach();
+    OneParkObject.area = MiamiBeach;
     OneParkObject.direccion = getLocalizedField("direccion", "2411 Laguna Circle, North Miami, FL 33181");
-    return OneParkObject;
-}
+
+export default OneParkObject;

@@ -3,9 +3,9 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import Brickell from "../../areas/Brickell";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function DolceAndGabbanaResidences(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("888-brickell-dolce-and-gabbana-residences", lang);
-    const DolceAndGabbanaResidences = new Desarrollo(Brickell());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("888-brickell-dolce-and-gabbana-residences", "es");
+    const DolceAndGabbanaResidences = new Desarrollo(Brickell);
     DolceAndGabbanaResidences.titulo = getLocalizedField("titulo", "888 Brickell Dolce & Gabbana Residences");
     DolceAndGabbanaResidences.slogan = getLocalizedField("slogan", "Para Los Nuevos Románticos");
     DolceAndGabbanaResidences.nombre = getLocalizedField("nombre", "888-brickell-dolce-and-gabbana-residences");
@@ -13,7 +13,7 @@ export default function DolceAndGabbanaResidences(lang: "en" | "es" = "es") {
     DolceAndGabbanaResidences.introduccion = getLocalizedArray("introduccion", [
         "Adéntrate en la cima del lujo italiano con 888 Brickell by Dolce & Gabbana..."
     ]);
-    DolceAndGabbanaResidences.area = Brickell();
+    DolceAndGabbanaResidences.area = Brickell;
     DolceAndGabbanaResidences.banner = getLocalizedField("banner", "true") === "true";
     DolceAndGabbanaResidences.estimatedCompletionYear = parseInt(getLocalizedField("estimatedCompletionYear", "2028"), 10) || 2028;
     DolceAndGabbanaResidences.numberOfImages = parseInt(getLocalizedField("numberOfImages", "21"), 10) || 21;
@@ -136,5 +136,5 @@ export default function DolceAndGabbanaResidences(lang: "en" | "es" = "es") {
             </>
         ),
     };
-    return DolceAndGabbanaResidences;
-}
+
+export default DolceAndGabbanaResidences;

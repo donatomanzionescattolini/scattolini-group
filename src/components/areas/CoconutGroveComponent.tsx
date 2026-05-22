@@ -7,6 +7,6 @@ export default function CoconutGroveComponent() {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <AreaTemplate area={CoconutGrove()}/>
+        <AreaTemplate area={CoconutGrove}/>
     );
 }

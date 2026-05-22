@@ -100,7 +100,7 @@ import KempinskiResidences from "./Edgewater/KempinskiResidences.tsx";
 
 interface DesarrolloMapItem {
     area: Area;
-    des: Set<((lang: "en" | "es") => Desarrollo) | Desarrollo>;
+    des: Set<Desarrollo>;
 }
 
 export const desarrolloMap: DesarrolloMapItem[] =
@@ -186,35 +186,35 @@ export function findDesarrolloBySlug(slug: string, lang: "en" | "es" = "es"): De
 }
 
 desarrolloMap.push({
-    area: Wynwood(),
+    area: Wynwood,
     des: new Set([NomadResidences]),
 });
 desarrolloMap.push({
-    area: Orlando(),
+    area: Orlando,
     des: new Set([WindsorCayResort, Doppio]),
 });
 desarrolloMap.push({
-    area: PompanoBeach(),
+    area: PompanoBeach,
     des: new Set([WPompanoBeach, EnvyResidence]),
 });
 
-desarrolloMap.push({area: PembrokePines(), des: new Set([])});
+desarrolloMap.push({area: PembrokePines, des: new Set([])});
 desarrolloMap.push({
-    area: Aventura(),
+    area: Aventura,
     des: new Set([]),
 });
 
 desarrolloMap.push({
-    area: DaniaBeach(),
+    area: DaniaBeach,
     des: new Set([]),
 });
 
 desarrolloMap.push({
-    area: Hollywood(),
+    area: Hollywood,
     des: new Set([IconBeachResidences, SevenParkResidences, GaiaResidences]),
 });
 desarrolloMap.push({
-    area: Brickell(),
+    area: Brickell,
     des: new Set([
         BaccaratResidences,
         DomusBrickellCenter,
@@ -233,18 +233,18 @@ desarrolloMap.push({
 });
 
 desarrolloMap.push({
-    area: SouthMiami(),
+    area: SouthMiami,
     des: new Set([]),
 });
 
 desarrolloMap.push({
-    area: BayHarbor(),
+    area: BayHarbor,
     des: new Set([LaMaré, LaBaia, Origin, TheWell]),
 });
-desarrolloMap.push({area: CoconutGrove(), des: new Set([Vita, TheWellCoconutGrove])});
-desarrolloMap.push({area: Doral(), des: new Set([])});
+desarrolloMap.push({area: CoconutGrove, des: new Set([Vita, TheWellCoconutGrove])});
+desarrolloMap.push({area: Doral, des: new Set([])});
 desarrolloMap.push({
-    area: Downtown(),
+    area: Downtown,
     des: new Set([
         AstonMartin,
         CasaBella,
@@ -252,11 +252,11 @@ desarrolloMap.push({
         W11,
         WaldorfAstoria,
         Jem,
-        VistaHarbor(),
+        VistaHarbor,
     ]),
 });
 desarrolloMap.push({
-    area: Edgewater(),
+    area: Edgewater,
     des: new Set([
         AriaReserve,
         MissoniBaia,
@@ -265,15 +265,15 @@ desarrolloMap.push({
         VidaResidences,
         ElleResidences,
         EdgeHouseResidences,
-        KempinskiResidences(),
+        KempinskiResidences,
     ]),
 });
 desarrolloMap.push({
-    area: NorthBayVillage(),
+    area: NorthBayVillage,
     des: new Set([ShomaBay]),
 });
 desarrolloMap.push({
-    area: MiamiBeach(),
+    area: MiamiBeach,
     des: new Set([
         Ella,
         FivePark,
@@ -288,21 +288,21 @@ desarrolloMap.push({
 });
 
 desarrolloMap.push({
-    area: Pinecrest(),
+    area: Pinecrest,
     des: new Set([Centris, PineRocklandEstates, PineParkVillas]),
 });
 desarrolloMap.push({
-    area: SunnyIsles(),
+    area: SunnyIsles,
     des: new Set([BentleyResidences, StRegis, TheMansionsAtAcqualina]),
 });
 
 desarrolloMap.push({
-    area: FloridaCity(),
+    area: FloridaCity,
     des: new Set([Alba, Oasis, ParcVillas, ParkSquare]),
 });
-desarrolloMap.push({area: FtLauderdale(), des: new Set([])});
+desarrolloMap.push({area: FtLauderdale, des: new Set([])});
 desarrolloMap.push({
-    area: Homestead(),
+    area: Homestead,
     des: new Set([
         SalernoEstates,
         SedonaEstates,
@@ -312,12 +312,12 @@ desarrolloMap.push({
     ]),
 });
 desarrolloMap.push({
-    area: CoralGables(),
+    area: CoralGables,
     des: new Set([TheAvenue, CoraMerrickPark, Cassia]),
 });
 
 desarrolloMap.push({
-    area: MidtownMiami(),
+    area: MidtownMiami,
     des: new Set([MidtownParkResidences, TheStandardResidences, JeanGeorgesMiamiTropicResidences, TulaResidences]),
 });
 
@@ -331,12 +331,7 @@ export function getDesarrollosForArea(area: Area, lang: "en" | "es" = "es"): Set
 
     const first = filtered[0];
     const staticInstances = first ? [...first.des].map((item) => {
-        let instance: Desarrollo;
-        if (typeof item === "function") {
-            instance = (item as (l: "en" | "es") => Desarrollo)(lang);
-        } else {
-            instance = item as Desarrollo;
-        }
+        const instance = item as Desarrollo;
         instance.area = first.area;
         return instance;
     }) : [];
@@ -345,7 +340,6 @@ export function getDesarrollosForArea(area: Area, lang: "en" | "es" = "es"): Set
     const dynamicInstances = Array.from(dynamicDesarrolloMap[area.name] || []).map(des => {
         const instance = Object.assign(new Desarrollo(area), des);
         instance.area = area;
-        return instance;
     });
 
     // Merge static and dynamic, dynamic takes precedence for same nombre
@@ -355,3 +349,4 @@ export function getDesarrollosForArea(area: Area, lang: "en" | "es" = "es"): Set
 
     return new Set(combined.values());
 }
+

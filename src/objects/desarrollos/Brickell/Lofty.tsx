@@ -3,9 +3,9 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 import React from "react";
 
-export default function Lofty(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("lofty", lang);
-    const Lofty = new Desarrollo(Brickell());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("lofty", "es");
+    const Lofty = new Desarrollo(Brickell);
     Lofty.nombre = "lofty";
     Lofty.titulo = getLocalizedField("titulo", "Lofty Residences Brickell");
     Lofty.caracteristicas = {
@@ -57,8 +57,7 @@ export default function Lofty(lang: "en" | "es" = "es") {
         ></iframe>
     );
     Lofty.banner = getLocalizedField("banner", "true") === "true";
-    Lofty.area = Brickell();
+    Lofty.area = Brickell;
 
-    return Lofty;
-}
 
+export default Lofty;

@@ -1,7 +1,7 @@
 ﻿import Pinecrest from "../../areas/Pinecrest.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function PineRocklandEstates() {
+
     const PinelandRocklandEstatesObject = new Desarrollo();
     PinelandRocklandEstatesObject.nombre = "pine-rockland-estates";
     PinelandRocklandEstatesObject.caracteristicas = {
@@ -28,7 +28,6 @@ export default function PineRocklandEstates() {
     PinelandRocklandEstatesObject.slogan = "El estilo de vida que sólo has soñado";
     PinelandRocklandEstatesObject.banner = true;
     PinelandRocklandEstatesObject.numberOfImages = 19;
-    PinelandRocklandEstatesObject.area = Pinecrest();
-    return PinelandRocklandEstatesObject;
-}
+    PinelandRocklandEstatesObject.area = Pinecrest;
 
+export default PinelandRocklandEstatesObject;

@@ -2,8 +2,8 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
 
-export default function BentleyResidences(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("bentley-residences", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("bentley-residences", "es");
     const BentleyResidencesObject = new Desarrollo();
 
     BentleyResidencesObject.nombre = "bentley-residences";
@@ -79,7 +79,7 @@ export default function BentleyResidences(lang: "en" | "es" = "es") {
     BentleyResidencesObject.slogan = getLocalizedField("slogan", "Space you can embrace");
     BentleyResidencesObject.numberOfImages = 47;
     BentleyResidencesObject.banner = true;
-    BentleyResidencesObject.area = SunnyIsles();
+    BentleyResidencesObject.area = SunnyIsles;
     BentleyResidencesObject.video = (
         <iframe
             width="1600"
@@ -91,6 +91,5 @@ export default function BentleyResidences(lang: "en" | "es" = "es") {
             allowFullScreen
         ></iframe>
     );
-    return BentleyResidencesObject;
-}
 
+export default BentleyResidencesObject;

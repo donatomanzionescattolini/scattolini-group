@@ -2,7 +2,7 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
 
-export default function StRegis(lang: "en" | "es" = "es") {
+
   const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n(
     "st-regis",
     lang,
@@ -23,7 +23,7 @@ export default function StRegis(lang: "en" | "es" = "es") {
     "Desarrollado por Grupo Relacionado e Integra Investments, St. Regis Residences ofrece un diseño majestuoso de Robert AM Stern Architects que presenta interiores exclusivos de Rockwell Group y paisajismo de Enzo Enea Group.",
   ]);
   StRegisObject.banner = true;
-  StRegisObject.area = SunnyIsles();
+  StRegisObject.area = SunnyIsles;
   StRegisObject.caracteristicas = {
     edificio: (
       <p>
@@ -171,5 +171,5 @@ export default function StRegis(lang: "en" | "es" = "es") {
       </ul>
     ),
   };
-  return StRegisObject;
-}
+
+export default StRegisObject;

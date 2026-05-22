@@ -1,7 +1,7 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import BayHarbor from "../../areas/BayHarbor.tsx";
 
-export default function LaBaia() {
+
     const LaBaiaObject = new Desarrollo();
     LaBaiaObject.nombre = 'la-baia';
     LaBaiaObject.caracteristicas = {
@@ -93,6 +93,6 @@ export default function LaBaia() {
     LaBaiaObject.slogan = "";
     LaBaiaObject.numberOfImages = 66;
     LaBaiaObject.banner = true;
-    LaBaiaObject.area = BayHarbor();
-    return LaBaiaObject;
-}
+    LaBaiaObject.area = BayHarbor;
+
+export default LaBaiaObject;

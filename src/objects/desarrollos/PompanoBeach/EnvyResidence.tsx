@@ -2,9 +2,9 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import PompanoBeach from "../../areas/PompanoBeach.tsx";
 
-export default function EnvyResidence(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("envyResidence", lang);
-    const envyResidenceObject = new Desarrollo(PompanoBeach());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("envyResidence", "es");
+    const envyResidenceObject = new Desarrollo(PompanoBeach);
 
     envyResidenceObject.nombre = "envy-residence";
     envyResidenceObject.titulo = getLocalizedField("titulo", "ENVY Pompano Beach");
@@ -82,7 +82,5 @@ export default function EnvyResidence(lang: "en" | "es" = "es") {
     ].join(", ");
     envyResidenceObject.numberOfRooms = {start: 1, end: 3};
 
-    return envyResidenceObject;
-}
 
-
+export default envyResidenceObject;

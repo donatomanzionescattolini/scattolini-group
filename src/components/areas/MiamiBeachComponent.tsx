@@ -7,5 +7,5 @@ export default function MiamiBeachComponent() {
         window.scrollTo(0, 0);
     }, []);
 
-    return <AreaTemplate area={MiamiBeach()}/>;
+    return <AreaTemplate area={MiamiBeach}/>;
 }

@@ -2,8 +2,8 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
-export default function VidaResidences(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("vida", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("vida", "es");
     const Vida = new Desarrollo();
     Vida.nombre = getLocalizedField("nombre", "vida");
     Vida.direccion = getLocalizedField("direccion", "3050 Biscayne Blvd, Miami, FL 33137");
@@ -76,8 +76,7 @@ export default function VidaResidences(lang: "en" | "es" = "es") {
     Vida.slogan = getLocalizedField("slogan", "Un tramo más allá de lo ordinario...");
     Vida.numberOfImages = parseInt(getLocalizedField("numberOfImages", "24"), 10) || 24;
     Vida.banner = getLocalizedField("banner", "true") === "true";
-    Vida.area = Edgewater();
+    Vida.area = Edgewater;
 
-    return Vida;
-}
 
+export default Vida;

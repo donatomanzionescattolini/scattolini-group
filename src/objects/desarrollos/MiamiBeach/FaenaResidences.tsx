@@ -1,8 +1,8 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
-export default function FaenaResidences(lang: "en" | "es" = "es") {
-    const FaenaResidencesObject = new Desarrollo(MiamiBeach());
+
+    const FaenaResidencesObject = new Desarrollo(MiamiBeach);
     FaenaResidencesObject.nombre = "faena-residences";
     FaenaResidencesObject.titulo = {
         es: "Faena Residences Miami Beach",
@@ -93,5 +93,5 @@ export default function FaenaResidences(lang: "en" | "es" = "es") {
         </>
     };
 
-    return FaenaResidencesObject;
-}
+
+export default FaenaResidencesObject;

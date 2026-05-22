@@ -1,8 +1,8 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Hollywood from "../../areas/Hollywood.tsx";
 
-export default function GaiaResidencesObject(lang: "en" | "es" = "es") {
-    const GaiaResidences = new Desarrollo(Hollywood());
+
+    const GaiaResidences = new Desarrollo(Hollywood);
     GaiaResidences.nombre = "gaia-residences";
     GaiaResidences.titulo = {
         es: "Gaia Residences",
@@ -87,5 +87,5 @@ export default function GaiaResidencesObject(lang: "en" | "es" = "es") {
         </>
     };
 
-    return GaiaResidences;
-}
+
+export default GaiaResidences;

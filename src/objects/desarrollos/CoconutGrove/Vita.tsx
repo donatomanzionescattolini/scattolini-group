@@ -1,7 +1,7 @@
 ﻿import CoconutGrove from "../../areas/CoconutGrove.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function Vita() {
+
     const VitaObject = new Desarrollo();
 
 
@@ -284,7 +284,7 @@ export default function Vita() {
     VitaObject.titulo = "Vita at Grove Isle";
     VitaObject.numberOfImages = 55;
     VitaObject.banner = true;
-    VitaObject.area = CoconutGrove();
+    VitaObject.area = CoconutGrove;
     VitaObject.video = <iframe
         height={500}
         className=" h-400 embed-responsive-item m-0 p-0"
@@ -295,5 +295,5 @@ export default function Vita() {
     ></iframe>;
 
 
-    return VitaObject;
-}
+
+export default VitaObject;

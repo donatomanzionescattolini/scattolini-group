@@ -5,5 +5,5 @@ import AreaTemplate from "./AreaTemplate";
 export default function HollyWoodComponent() {
 
 
-    return <AreaTemplate area={Hollywood()}/>
+    return <AreaTemplate area={Hollywood}/>
 }

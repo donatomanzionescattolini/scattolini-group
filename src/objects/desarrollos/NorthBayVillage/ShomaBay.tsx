@@ -3,8 +3,8 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import NorthBayVillage from "../../areas/NorthBayVillage.tsx";
 import React from "react";
 
-export default function ShomaBay(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("shoma-bay", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("shoma-bay", "es");
     const ShomaBayObject = new Desarrollo();
     ShomaBayObject.nombre = getLocalizedField("nombre", "shoma-bay");
 
@@ -102,7 +102,7 @@ export default function ShomaBay(lang: "en" | "es" = "es") {
         getLocalizedField("introduccion.7", "Dirigido por Shoma Group y con interiores firmados por Adriana Hoyos Design Studio, el proyecto une a uno de los desarrolladores inmobiliarios más destacados del sur de Florida con una firma de diseño galardonada para crear una propuesta residencial sofisticada, funcional y memorable."),
     ]);
     ShomaBayObject.banner = getLocalizedField("banner", "true") === "true";
-    ShomaBayObject.area = NorthBayVillage();
+    ShomaBayObject.area = NorthBayVillage;
     ShomaBayObject.titulo = getLocalizedField("titulo", "Shoma Bay");
     ShomaBayObject.slogan = getLocalizedField("slogan", "El primero de su clase: lujo, bienestar y estilo de vida frente al agua.");
     ShomaBayObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "16"), 10) || 16;
@@ -119,6 +119,5 @@ export default function ShomaBay(lang: "en" | "es" = "es") {
 //             ></iframe>
 //         </div>
 //     ;
-    return ShomaBayObject;
-}
 
+export default ShomaBayObject;

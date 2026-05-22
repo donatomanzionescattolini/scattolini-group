@@ -1,7 +1,7 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
-export default function Nexo(lang: "en" | "es" = "es") {
+
     const NexoObject = new Desarrollo();
     NexoObject.nombre = "nexo";
     NexoObject.titulo = {
@@ -13,7 +13,7 @@ export default function Nexo(lang: "en" | "es" = "es") {
         en: "Welcome to Connected Living."
     };
     NexoObject.banner = true;
-    NexoObject.area = MiamiBeach();
+    NexoObject.area = MiamiBeach;
     NexoObject.estimatedCompletionYear = 2025;
     NexoObject.numberOfUnits = 254;
     NexoObject.typeOfUnits = lang === "en" ? "Studio Residences" : "Residencias de Estudios";
@@ -117,5 +117,5 @@ export default function Nexo(lang: "en" | "es" = "es") {
                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                allowFullScreen></iframe>;
     NexoObject.numberOfImages = 41;
-    return NexoObject;
-}
+
+export default NexoObject;

@@ -1,8 +1,8 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import Hollywood from "../../areas/Hollywood";
 
-export default function IconBeachResidencesObject(lang: "en" | "es" = "es") {
-    const IconBeachResidences = new Desarrollo(Hollywood());
+
+    const IconBeachResidences = new Desarrollo(Hollywood);
     IconBeachResidences.titulo = {
         es: "Icon Beach Residences",
         en: "Icon Beach Residences"
@@ -13,7 +13,7 @@ export default function IconBeachResidencesObject(lang: "en" | "es" = "es") {
         lang === "en" ? "Welcome to Icon Beach Residences, a collection of one to three-bedroom residences representing an exquisite and innovative oceanfront lifestyle, with stunning water views, spacious balconies, access to a marina, and a range of amenities designed to make home life more comfortable and enjoyable." : "Bienvenidos a Icon Beach Residences, un conjunto de residencias que incluyen desde una hasta tres habitaciones y representan un exquisito e innovador estilo de vida frente al mar, con impresionantes vistas al agua, amplios balcones, acceso a una marina y a una gama de servicios pensados para que la vida en casa sea más cómoda y placentera.",
         lang === "en" ? "Located in a tranquil enclave of the wonderful and sunny Hollywood coast, Icon Beach Residences reflect a sophisticated and innovative vision of oceanfront living, with extraordinary views of the Atlantic Ocean and the Hollywood Beach canals. Perfectly positioned between the cosmopolitan energy of Miami and the serene elegance of Fort Lauderdale, the residences offer access to a full-service marina and beach club, as well as views of Hollywood's most spectacular seascapes." : "Situadas en un tranquilo enclave de la maravillosa y soleada costa de Hollywood, Icon Beach Residences reflejan una visión sofisticada e innovadora de la vida frente al mar, con extraordinarias vistas al océano Atlántico y a los canales de Hollywood Beach. Con una ubicación perfecta, entre la energía cosmopolita de Miami y la serena elegancia de Fort Lauderdale, las residencias ofrecen acceso a una marina y a un club de playa con todos los servicios, además de vistas a los paisajes marinos más espectaculares de Hollywood.",
     ];
-    IconBeachResidences.area = Hollywood();
+    IconBeachResidences.area = Hollywood;
     IconBeachResidences.banner = true;
     IconBeachResidences.estimatedCompletionYear = 2027;
     IconBeachResidences.numberOfImages = 40;
@@ -70,5 +70,5 @@ export default function IconBeachResidencesObject(lang: "en" | "es" = "es") {
             </dl>
         </>,
     };
-    return IconBeachResidences;
-}
+
+export default IconBeachResidences;

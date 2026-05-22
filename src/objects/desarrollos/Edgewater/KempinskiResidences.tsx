@@ -2,12 +2,12 @@ import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
-export default function KempinskiResidences(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("kempinski-residences", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("kempinski-residences", "es");
     const project = new Desarrollo();
 
     project.nombre = "kempinski-residences";
-    project.area = Edgewater();
+    project.area = Edgewater;
     project.banner = true;
     project.numberOfImages = 17;
     project.direccion = getLocalizedField("direccion", "3801 & 3883 Biscayne Blvd, Miami, FL 33137");
@@ -65,6 +65,5 @@ export default function KempinskiResidences(lang: "en" | "es" = "es") {
         )
     };
 
-    return project;
-}
 
+export default project;

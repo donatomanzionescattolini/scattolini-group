@@ -3,8 +3,8 @@ import Constructora from "../../../models/constructora/Constructora.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
-export default function Ella(lang: "en" | "es" = "es") {
-    const EllaObject = new Desarrollo(Brickell());
+
+    const EllaObject = new Desarrollo(Brickell);
     EllaObject.estimatedCompletionYear = 2026;
     EllaObject.numberOfRooms = {start: 1, end: 2};
     EllaObject.numberOfUnits = 95;
@@ -118,7 +118,7 @@ export default function Ella(lang: "en" | "es" = "es") {
     };
 
     EllaObject.banner = true;
-    EllaObject.area = MiamiBeach();
+    EllaObject.area = MiamiBeach;
     EllaObject.constructora = new Constructora("Constellation");
     EllaObject.slogan = {
         es: "Un Tributo Al Glamuroso Pasado De Miami Beach",
@@ -130,6 +130,5 @@ export default function Ella(lang: "en" | "es" = "es") {
                                title="Ella Miami Beach - Airbnb boutique"
                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                allowFullScreen></iframe>;
-    return EllaObject;
-}
 
+export default EllaObject;

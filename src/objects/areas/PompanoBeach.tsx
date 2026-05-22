@@ -1,6 +1,6 @@
 import {Area} from "../../models/areas/Area";
 
-export default function PompanoBeach() {
+
     const PompanoBeachObject = new Area("pompano-beach");
     PompanoBeachObject.titulo = {
         es: "Pompano Beach",
@@ -19,7 +19,4 @@ export default function PompanoBeach() {
         ]
     };
     PompanoBeachObject.numberOfImages = 15;
-
-    return PompanoBeachObject;
-}
-
+export default PompanoBeachObject;

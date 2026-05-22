@@ -1,6 +1,6 @@
 import {Area, AreaDto} from "../../models/areas/Area.tsx";
 
-export default function BayHarbor(): Area {
+
 
 // areasDesarrollos.push(DoralComponent);
     const bayHarbor: Area = AreaDto("bay-harbor");
@@ -26,7 +26,4 @@ export default function BayHarbor(): Area {
         ]
     };
     bayHarbor.numberOfImages = 13;
-
-
-    return bayHarbor;
-}
+export default bayHarbor;

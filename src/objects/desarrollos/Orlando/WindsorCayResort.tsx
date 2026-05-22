@@ -2,12 +2,12 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Orlando from "../../areas/Orlando.tsx";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function WindsorCayResort(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("windsor-cay-resort", lang);
-    const resort = new Desarrollo(Orlando());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("windsor-cay-resort", "es");
+    const resort = new Desarrollo(Orlando);
     resort.nombre = "windsor-cay-resort";
     resort.numberOfImages = 141;
-    resort.area = Orlando();
+    resort.area = Orlando;
     resort.banner = true;
     resort.titulo = getLocalizedField("titulo", "Windsor Cay Resort");
     resort.slogan = getLocalizedField("slogan", "Vacation homes designed for resort living and strong rental appeal");
@@ -51,5 +51,5 @@ export default function WindsorCayResort(lang: "en" | "es" = "es") {
         "Windsor Cay Resort ofrece casas vacacionales en Orlando diseñadas para combinar estilo de resort, comodidad familiar y un fuerte atractivo para alquileres vacacionales.",
         "La comunidad reúne amenidades en el lugar, seguridad 24 horas y ubicaciones pensadas para aprovechar al máximo la cercanía a las atracciones más reconocidas de la zona."
     ]);
-    return resort;
-}
+
+export default resort;
