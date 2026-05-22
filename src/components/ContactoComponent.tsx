@@ -76,7 +76,6 @@ export default function Page() {
             <Button
               type="button"
               className="d-block my-5 py-2 btn btn-xl"
-              style={{ backgroundColor: "#82725650", color: "#1b3433" }}
               onClick={openContact}
             >
               {(show &&

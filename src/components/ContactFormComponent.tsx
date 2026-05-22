@@ -52,7 +52,7 @@ export default function ContactFormComponent() {
     };
 
     return (
-        <Container className="d-flex flex-column justify-content-center p-5 shadow-1 rounded-3"
+        <Container className="contact-form d-flex flex-column justify-content-center"
                    style={{maxWidth: "700px"}}>
             {successAlert && (
                 <Alert className="w-50 bottom-0 right-50 left-50 mx-auto" variant="success" dismissible
