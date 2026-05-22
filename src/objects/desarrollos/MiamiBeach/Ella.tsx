@@ -2,6 +2,8 @@
 import Constructora from "../../../models/constructora/Constructora.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
+const lang: "en" | "es" = "es";
+
 
 
     const EllaObject = new Desarrollo(Brickell);

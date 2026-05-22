@@ -1,5 +1,7 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import Homestead from "../../areas/Homestead";
+const lang: "en" | "es" = "es";
+
 
 
     const OnGrandvilleObject = new Desarrollo(Homestead);

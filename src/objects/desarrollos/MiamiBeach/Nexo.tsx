@@ -1,5 +1,7 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
+const lang: "en" | "es" = "es";
+
 
 
     const NexoObject = new Desarrollo();

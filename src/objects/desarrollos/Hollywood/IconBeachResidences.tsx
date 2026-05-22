@@ -1,5 +1,7 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import Hollywood from "../../areas/Hollywood";
+const lang: "en" | "es" = "es";
+
 
 
     const IconBeachResidences = new Desarrollo(Hollywood);

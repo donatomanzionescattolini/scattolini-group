@@ -1,5 +1,7 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Hollywood from "../../areas/Hollywood.tsx";
+const lang: "en" | "es" = "es";
+
 
 
     const SevenParkResidences = new Desarrollo(Hollywood);
