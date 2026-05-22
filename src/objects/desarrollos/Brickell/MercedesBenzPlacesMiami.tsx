@@ -2,10 +2,10 @@
 import Brickell from "../../areas/Brickell";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function MercedesBenzPlacesMiami(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n('mercedes-benz-places-miami', lang)
-    const MercedesBenzPlacesObject = new Desarrollo(Brickell());
-    MercedesBenzPlacesObject.area = Brickell();
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n('mercedes-benz-places-miami', "es")
+    const MercedesBenzPlacesObject = new Desarrollo(Brickell);
+    MercedesBenzPlacesObject.area = Brickell;
     MercedesBenzPlacesObject.titulo = getLocalizedField('titulo', 'Mercedes-Benz Places Miami');
     MercedesBenzPlacesObject.slogan = getLocalizedField('slogan', 'Miami, Living, Elevated');
     MercedesBenzPlacesObject.caracteristicas = {
@@ -82,6 +82,5 @@ export default function MercedesBenzPlacesMiami(lang: "en" | "es" = "es") {
     MercedesBenzPlacesObject.banner = getLocalizedField('banner', 'true') === 'true'
     MercedesBenzPlacesObject.numberOfImages = parseInt(getLocalizedField('numberOfImages', '17'), 10) || 17
 
-    return MercedesBenzPlacesObject;
 
-}
+export default MercedesBenzPlacesObject;

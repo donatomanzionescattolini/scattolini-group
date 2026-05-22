@@ -3,7 +3,7 @@ import AreaTemplate from "./AreaTemplate";
 
 export default function AventuraComponent() {
 
-    return <AreaTemplate area={Aventura()}/>
+    return <AreaTemplate area={Aventura}/>
 
 
 }

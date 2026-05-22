@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function FtLauderdale() {
+
     const FtLauderdaleObject = AreaDto("ft-lauderdale");
     FtLauderdaleObject.numberOfImages = 34;
     FtLauderdaleObject.titulo = {
@@ -20,7 +20,4 @@ export default function FtLauderdale() {
         es: "Venecia de América",
         en: "Venice of America"
     };
-
-    return FtLauderdaleObject;
-
-}
+export default FtLauderdaleObject;

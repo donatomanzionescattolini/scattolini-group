@@ -2,8 +2,8 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import FloridaCity from "../../areas/FloridaCity.tsx";
 
-export default function ParkSquare(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("park-square", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("park-square", "es");
     const ParkSquareObject = new Desarrollo();
     ParkSquareObject.nombre = getLocalizedField("nombre", "park-square");
     ParkSquareObject.titulo = getLocalizedField("titulo", "Park Square");
@@ -14,9 +14,7 @@ export default function ParkSquare(lang: "en" | "es" = "es") {
         amenidades: <></>,
     };
     ParkSquareObject.introduccion = getLocalizedArray("introduccion", []);
-    ParkSquareObject.area = FloridaCity();
-
-    return ParkSquareObject;
-}
+    ParkSquareObject.area = FloridaCity;
 
 
+export default ParkSquareObject;

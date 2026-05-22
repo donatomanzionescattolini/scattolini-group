@@ -7,5 +7,5 @@ export default function PinecrestComponent() {
         window.scrollTo(0, 0);
     }, []);
 
-    return <AreaTemplate area={Pinecrest()}/>;
+    return <AreaTemplate area={Pinecrest}/>;
 }

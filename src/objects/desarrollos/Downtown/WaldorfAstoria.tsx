@@ -2,14 +2,14 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function WaldorfAstoria(lang: "en" | "es" = "es") {
-    const {getLocalizedField} = getDesarrolloI18n("waldorf-astoria", lang);
+
+    const {getLocalizedField} = getDesarrolloI18n("waldorf-astoria", "es");
     const WaldorfAstoriaObject = new Desarrollo();
 
 
     WaldorfAstoriaObject.nombre = getLocalizedField("nombrse", "waldorf-astoria");
     WaldorfAstoriaObject.banner = getLocalizedField("banner", "true") === "true";
-    WaldorfAstoriaObject.area = Downtown();
+    WaldorfAstoriaObject.area = Downtown;
     WaldorfAstoriaObject.video = (<iframe height={500} className=" h-300 m-auto autoplay"
                                           src="https://www.youtube.com/embed/ECvGpRYiy3k?si=ntjyJcGsf3V18EYm?autoplay=1"
                                           title="YouTube video player"
@@ -122,6 +122,5 @@ export default function WaldorfAstoria(lang: "en" | "es" = "es") {
     WaldorfAstoriaObject.titulo = "Waldorf Astoria";
     WaldorfAstoriaObject.slogan = "";
     WaldorfAstoriaObject.numberOfImages = 51;
-    return WaldorfAstoriaObject;
-}
 
+export default WaldorfAstoriaObject;

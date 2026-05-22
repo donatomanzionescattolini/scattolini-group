@@ -2,16 +2,16 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
-export default function _2200Brickell(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("brickell2200", lang);
-    const _2200BrickellObject = new Desarrollo(Brickell());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("brickell2200", "es");
+    const _2200BrickellObject = new Desarrollo(Brickell);
     _2200BrickellObject.nombre = "2200-brickell";
     _2200BrickellObject.titulo = getLocalizedField("titulo", "2200 Brickell");
     _2200BrickellObject.subtitulo = getLocalizedField("subtitulo", "An Urban Sanctuary in the Heart of Brickell");
     _2200BrickellObject.introduccion = getLocalizedArray("introduccion", [
         getLocalizedField("introduccion.0", "2200 Brickell is a new luxury condominium in South Brickell, designed by Revuelta Architecture and featuring interior design by ODA New York."),
     ]);
-    _2200BrickellObject.area = Brickell();
+    _2200BrickellObject.area = Brickell;
     _2200BrickellObject.caracteristicas = {
         edificio: (
             <>
@@ -48,7 +48,7 @@ export default function _2200Brickell(lang: "en" | "es" = "es") {
         en: getLocalizedField("slogan", "Where both city dwellers and nature lovers feel at home"),
     } as any;
     _2200BrickellObject.banner = getLocalizedField("banner", "true") === "true";
-    return _2200BrickellObject;
-}
 _2200Brickell.nombre = "2200-brickell";
 
+
+export default _2200BrickellObject;

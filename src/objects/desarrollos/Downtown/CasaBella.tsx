@@ -3,12 +3,12 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Downtown from "../../areas/Downtown.tsx";
 import React from "react";
 
-export default function CasaBella(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("casa-bella", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("casa-bella", "es");
     const CasaBellaObject: Desarrollo = new Desarrollo();
 
     CasaBellaObject.banner = getLocalizedField("banner", "true") === "true";
-    CasaBellaObject.area = Downtown();
+    CasaBellaObject.area = Downtown;
 
     CasaBellaObject.nombre = getLocalizedField("nombre", "casa-bella");
     CasaBellaObject.caracteristicas = {
@@ -102,5 +102,5 @@ export default function CasaBella(lang: "en" | "es" = "es") {
     CasaBellaObject.slogan = getLocalizedField("slogan", "Bienvenido a la cima de la sofisticada vida italiana");
     CasaBellaObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "16"), 10) || 16;
 
-    return CasaBellaObject;
-}
+
+export default CasaBellaObject;

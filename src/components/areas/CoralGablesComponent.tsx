@@ -7,5 +7,5 @@ export default function CoralGablesComponent() {
         window.scrollTo(0, 0);
     }, []);
 
-    return <AreaTemplate area={CoralGables()}/>;
+    return <AreaTemplate area={CoralGables}/>;
 }

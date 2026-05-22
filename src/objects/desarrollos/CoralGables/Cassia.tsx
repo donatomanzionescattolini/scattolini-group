@@ -2,15 +2,15 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import CoralGables from "../../areas/CoralGables.tsx";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function Cassia(lang: "en" | "es" = "es") {
-    const {getLocalizedField} = getDesarrolloI18n("cassia", lang);
-    const CassiaObject = new Desarrollo(CoralGables());
+
+    const {getLocalizedField} = getDesarrolloI18n("cassia", "es");
+    const CassiaObject = new Desarrollo(CoralGables);
     CassiaObject.nombre = "cassia";
     CassiaObject.titulo = getLocalizedField("titulo", "Cassia");
     CassiaObject.banner = true;
 
     CassiaObject.slogan = getLocalizedField("slogan", "Una nueva era de lujo clásico");
-    CassiaObject.area = CoralGables();
+    CassiaObject.area = CoralGables;
 
     CassiaObject.direccion = getLocalizedField("direccion", "Merrick Park District, Coral Gables");
     CassiaObject.numberOfUnits = 174;
@@ -128,5 +128,5 @@ export default function Cassia(lang: "en" | "es" = "es") {
     CassiaObject.disenoInterior = "IDDI";
     CassiaObject.mobiliario = "RH";
     CassiaObject.numberOfImages = 9;
-    return CassiaObject;
-}
+
+export default CassiaObject;

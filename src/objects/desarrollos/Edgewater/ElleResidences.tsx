@@ -4,15 +4,15 @@ import Edgewater from "../../areas/Edgewater";
 import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function ElleResidences(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("elle-residences", lang);
-    const ElleResidencesObject = new Desarrollo(Edgewater());
-    ElleResidencesObject.area = Edgewater();
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("elle-residences", "es");
+    const ElleResidencesObject = new Desarrollo(Edgewater);
+    ElleResidencesObject.area = Edgewater;
 
     ElleResidencesObject.nombre = getLocalizedField("nombre", "elle-residences");
 
     ElleResidencesObject.titulo = getLocalizedField("titulo", "Elle Residences");
-    ElleResidencesObject.area = Edgewater();
+    ElleResidencesObject.area = Edgewater;
     ElleResidencesObject.direccion = getLocalizedField("direccion", "3618 NE 5th Ave, Miami, FL 33137, Estados Unidos");
 
     ElleResidencesObject.amenidades = [];
@@ -88,5 +88,5 @@ export default function ElleResidences(lang: "en" | "es" = "es") {
             </>
     }
 
-    return ElleResidencesObject;
-}
+
+export default ElleResidencesObject;

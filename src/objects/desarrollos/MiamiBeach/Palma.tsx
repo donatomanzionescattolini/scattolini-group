@@ -1,7 +1,7 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import MiamiBeach from "../../areas/MiamiBeach";
 
-export default function Palma(lang: "en" | "es" = "es") {
+
     const PalmaObject = new Desarrollo();
     PalmaObject.banner = true;
     PalmaObject.nombre = "palma";
@@ -17,7 +17,7 @@ export default function Palma(lang: "en" | "es" = "es") {
         es: "Una Experiencia Mediterránea que Comienza en Miami Beach",
         en: "A Mediterranean Experience Beginning in Miami Beach"
     };
-    PalmaObject.area = MiamiBeach();
+    PalmaObject.area = MiamiBeach;
     PalmaObject.caracteristicas = {
         edificio: lang === "en" ? <ul>
             <li>Iconic 14-story building designed by Built Form</li>
@@ -112,5 +112,5 @@ export default function Palma(lang: "en" | "es" = "es") {
             </ul>
         </>
     };
-    return PalmaObject;
-}
+
+export default PalmaObject;

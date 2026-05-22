@@ -1,7 +1,7 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import DaniaBeach from "../../areas/DaniaBeach.tsx";
 
-export default function createDaniaProject() {
+
     const DaniaProjectObject = new Desarrollo();
     DaniaProjectObject.nombre = "dania-project";
     DaniaProjectObject.titulo = {
@@ -38,5 +38,5 @@ export default function createDaniaProject() {
     DaniaProjectObject.area = DaniaBeach;
     DaniaProjectObject.numberOfImages = 5;
 
-    return DaniaProjectObject;
-}
+
+export default DaniaProjectObject;

@@ -2,9 +2,9 @@
 import MidtownMiami from "../../areas/MidtownMiami";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function MidtownParkResidences(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("midtown-park-residences", lang);
-    const MidtownParkResidencesObject = new Desarrollo(MidtownMiami());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("midtown-park-residences", "es");
+    const MidtownParkResidencesObject = new Desarrollo(MidtownMiami);
     MidtownParkResidencesObject.titulo = getLocalizedField("titulo", "Midtown Park Residences");
     MidtownParkResidencesObject.nombre = "midtown-park-residences";
     MidtownParkResidencesObject.introduccion = getLocalizedArray("introduccion", [
@@ -81,5 +81,5 @@ export default function MidtownParkResidences(lang: "en" | "es" = "es") {
 
     MidtownParkResidencesObject.banner = true;
 
-    return MidtownParkResidencesObject;
-}
+
+export default MidtownParkResidencesObject;

@@ -2,9 +2,9 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
-export default function AriaReserve(lang: "en" | "es" = "es") {
 
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("aria-reserve", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("aria-reserve", "es");
     const AriaReserveObject = new Desarrollo();
     AriaReserveObject.nombre = getLocalizedField("nombre", "aria-reserve");
     AriaReserveObject.caracteristicas = {
@@ -164,7 +164,6 @@ export default function AriaReserve(lang: "en" | "es" = "es") {
     AriaReserveObject.slogan = getLocalizedField("slogan", " ");
     AriaReserveObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "59"), 10) || 59;
     AriaReserveObject.banner = getLocalizedField("banner", "true") === "true";
-    AriaReserveObject.area = Edgewater();
-    return AriaReserveObject;
-}
+    AriaReserveObject.area = Edgewater;
 
+export default AriaReserveObject;

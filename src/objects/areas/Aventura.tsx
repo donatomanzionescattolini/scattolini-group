@@ -1,7 +1,7 @@
 import {Area} from "../../models/areas/Area";
 
 
-export default function Aventura() {
+
 
     let AventuraObject = new Area("aventura");
     AventuraObject.titulo = {
@@ -24,7 +24,4 @@ export default function Aventura() {
         en: "City of Excellence"
     };
     AventuraObject.name = "aventura";
-    return AventuraObject;
-
-
-}
+export default AventuraObject;

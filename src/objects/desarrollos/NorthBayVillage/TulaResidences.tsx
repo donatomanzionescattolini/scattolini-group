@@ -2,9 +2,9 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import MidtownMiami from "../../areas/MidtownMiami";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function tularesidences(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("tula-residences", lang);
-    const d = new Desarrollo(MidtownMiami());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("tula-residences", "es");
+    const d = new Desarrollo(MidtownMiami);
     d.titulo = getLocalizedField("titulo", "Tula Residences");
     d.nombre = "tula-residences";
     d.direccion = getLocalizedField("direccion", "7918 West Drive, North Bay Village, FL 33141");
@@ -80,5 +80,5 @@ export default function tularesidences(lang: "en" | "es" = "es") {
     d.banner = true;
     d.numberOfImages = 16;
 
-    return d;
-}
+
+export default d;

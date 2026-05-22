@@ -2,9 +2,9 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import MidtownMiami from "../../areas/MidtownMiami";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function thewellcoconutgrove(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("the-well-coconut-grove", lang);
-    const d = new Desarrollo(MidtownMiami());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("the-well-coconut-grove", "es");
+    const d = new Desarrollo(MidtownMiami);
     d.titulo = getLocalizedField("titulo", "The Well Coconut Grove");
     d.nombre = "the-well-coconut-grove";
     d.introduccion = getLocalizedArray("introduccion", ["The Well Coconut Grove es un santuario de bienestar en el histórico barrio de Coconut Grove. Este desarrollo único integra residencias de lujo con un centro de bienestar de clase mundial, ofreciendo un estilo de vida enfocado en la salud y el equilibrio. Con un diseño orgánico y materiales naturales, The Well crea un ambiente de serenidad y sofisticación."]);
@@ -39,5 +39,5 @@ export default function thewellcoconutgrove(lang: "en" | "es" = "es") {
         ),
     };
     d.banner = true;
-    return d;
-}
+
+export default d;

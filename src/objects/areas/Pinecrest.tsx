@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function Pinecrest() {
+
     const pinecrest = AreaDto("pinecrest");
 
     pinecrest.name = "pinecrest";
@@ -23,7 +23,4 @@ export default function Pinecrest() {
         ]
     };
     pinecrest.numberOfImages = 5;
-
-
-    return pinecrest;
-}
+export default pinecrest;

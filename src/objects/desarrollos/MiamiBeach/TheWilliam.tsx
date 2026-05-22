@@ -1,8 +1,8 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
-export default function TheWilliam(lang: "en" | "es" = "es") {
-    const TheWilliamObject = new Desarrollo(MiamiBeach());
+
+    const TheWilliamObject = new Desarrollo(MiamiBeach);
 
     TheWilliamObject.nombre = "the-william";
     TheWilliamObject.titulo = {
@@ -138,5 +138,5 @@ export default function TheWilliam(lang: "en" | "es" = "es") {
         </>
     };
 
-    return TheWilliamObject;
-}
+
+export default TheWilliamObject;

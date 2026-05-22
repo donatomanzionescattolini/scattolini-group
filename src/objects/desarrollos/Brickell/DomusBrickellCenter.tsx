@@ -2,9 +2,9 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 
-export default function DomusBrickellCenter(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("domusBrickellCenter", lang);
-    const domusBrickellCenterObject = new Desarrollo(Brickell());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("domusBrickellCenter", "es");
+    const domusBrickellCenterObject = new Desarrollo(Brickell);
 
     domusBrickellCenterObject.nombre = "domus-brickell-center";
     domusBrickellCenterObject.titulo = getLocalizedField("titulo", "Domus Brickell Center");
@@ -117,7 +117,5 @@ export default function DomusBrickellCenter(lang: "en" | "es" = "es") {
     domusBrickellCenterObject.banner = true;
     domusBrickellCenterObject.estimatedCompletionYear = 2027;
 
-    return domusBrickellCenterObject;
-}
 
-
+export default domusBrickellCenterObject;

@@ -1,8 +1,8 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Hollywood from "../../areas/Hollywood.tsx";
 
-export default function SevenParkResidencesObject(lang: "en" | "es" = "es") {
-    const SevenParkResidences = new Desarrollo(Hollywood());
+
+    const SevenParkResidences = new Desarrollo(Hollywood);
     SevenParkResidences.nombre = "seven-park-residences";
     SevenParkResidences.titulo = {
         es: "Seven Park Residences",
@@ -89,5 +89,5 @@ export default function SevenParkResidencesObject(lang: "en" | "es" = "es") {
     };
     SevenParkResidences.numberOfImages = 33;
 
-    return SevenParkResidences;
-}
+
+export default SevenParkResidences;

@@ -1,7 +1,7 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import PompanoBeach from "../../areas/PompanoBeach";
 
-export default function WPompanoBeach(lang: "en" | "es" = "es") {
+
   const WPompanoBeachObject = new Desarrollo(PompanoBeach);
   WPompanoBeachObject.estimatedCompletionYear = 2029;
   WPompanoBeachObject.numberOfFloors = 29;
@@ -240,5 +240,5 @@ export default function WPompanoBeach(lang: "en" | "es" = "es") {
           "The Residences cuenta con 74 residencias personalizadas que van desde 2,400 hasta 3,400 pies cuadrados, además de 3 penthouses con piscinas en la azotea. Las residencias incluyen una colección privada de amenidades, además de todos los servicios del Hotel W.",
         ];
 
-  return WPompanoBeachObject;
-}
+
+export default WPompanoBeachObject;

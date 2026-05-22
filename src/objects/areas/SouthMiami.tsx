@@ -1,6 +1,6 @@
 import {Area, AreaDto} from "../../models/areas/Area.tsx";
 
-export default function SouthMiami(): Area {
+
 
 // areasDesarrollos.push(DoralComponent);
     const southMiami: Area = AreaDto("south-miami");
@@ -28,7 +28,4 @@ export default function SouthMiami(): Area {
         ]
     };
     southMiami.numberOfImages = 38;
-
-
-    return southMiami;
-}
+export default southMiami;

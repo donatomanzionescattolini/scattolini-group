@@ -1,8 +1,8 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import MiamiBeach from "../../areas/MiamiBeach.tsx";
 
-export default function SeventyTwoCarlyle(lang: "en" | "es" = "es") {
-    const SeventyTwoCarlyleObject = new Desarrollo(MiamiBeach());
+
+    const SeventyTwoCarlyleObject = new Desarrollo(MiamiBeach);
 
     SeventyTwoCarlyleObject.nombre = "72-carlyle";
     SeventyTwoCarlyleObject.titulo = {
@@ -168,5 +168,5 @@ export default function SeventyTwoCarlyle(lang: "en" | "es" = "es") {
             </ul>
     };
 
-    return SeventyTwoCarlyleObject;
-}
+
+export default SeventyTwoCarlyleObject;

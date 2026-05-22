@@ -2,12 +2,12 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Orlando from "../../areas/Orlando.tsx";
 import {getDesarrolloI18n} from "../useDesarrolloI18n.ts";
 
-export default function Doppio(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("doppio", lang);
-    const project = new Desarrollo(Orlando());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("doppio", "es");
+    const project = new Desarrollo(Orlando);
 
     project.nombre = "doppio";
-    project.area = Orlando();
+    project.area = Orlando;
     project.banner = true;
     project.numberOfImages = 116;
     project.titulo = getLocalizedField("titulo", "Doppio Westside");
@@ -53,5 +53,5 @@ export default function Doppio(lang: "en" | "es" = "es") {
         )
     };
 
-    return project;
-}
+
+export default project;

@@ -2,8 +2,8 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Edgewater from "../../areas/Edgewater.tsx";
 
-export default function MissoniBaia(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("missoni-baia", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("missoni-baia", "es");
     const MissoniBaiaObject = new Desarrollo();
     MissoniBaiaObject.nombre = getLocalizedField("nombre", "missoni-baia");
     MissoniBaiaObject.direccion = getLocalizedField("direccion", "700 NE 26th Ter, Miami, FL 33137")
@@ -264,7 +264,6 @@ export default function MissoniBaia(lang: "en" | "es" = "es") {
     MissoniBaiaObject.slogan = getLocalizedField("slogan", "");
     MissoniBaiaObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "51"), 10) || 51;
     MissoniBaiaObject.banner = getLocalizedField("banner", "true") === "true";
-    MissoniBaiaObject.area = Edgewater();
-    return MissoniBaiaObject;
-}
+    MissoniBaiaObject.area = Edgewater;
 
+export default MissoniBaiaObject;

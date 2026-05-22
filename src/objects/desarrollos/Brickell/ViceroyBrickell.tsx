@@ -4,9 +4,9 @@ import Brickell from "../../areas/Brickell.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function ViceroyBrickell(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("viceroy-brickell", lang);
-    const Viceroy = new Desarrollo(Brickell());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("viceroy-brickell", "es");
+    const Viceroy = new Desarrollo(Brickell);
     Viceroy.nombre = "viceroy-brickell";
     Viceroy.titulo = getLocalizedField("titulo", "Viceroy Brickell");
     Viceroy.introduccion = getLocalizedArray(
@@ -55,5 +55,5 @@ export default function ViceroyBrickell(lang: "en" | "es" = "es") {
         </>
     };
 
-    return Viceroy;
-}
+
+export default Viceroy;

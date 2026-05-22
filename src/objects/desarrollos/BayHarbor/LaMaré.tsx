@@ -1,8 +1,7 @@
 ﻿import BayHarbor from "../../areas/BayHarbor.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function LaMaré() {
-    const LaMaréObject = new Desarrollo(BayHarbor());
+    const LaMaréObject = new Desarrollo(BayHarbor);
 
     LaMaréObject.nombre = "la-maré";
 
@@ -111,6 +110,4 @@ export default function LaMaré() {
     LaMaréObject.numberOfImages = 24;
     LaMaréObject.banner = true;
 
-    return LaMaréObject;
-}
-
+export default LaMaréObject;

@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function MiamiBeach() {
+
     const miamiBeach = AreaDto("miami-beach");
     miamiBeach.name = "miami-beach";
     miamiBeach.titulo = {
@@ -24,8 +24,4 @@ export default function MiamiBeach() {
         ]
     };
     miamiBeach.numberOfImages = 15;
-
-
-    return miamiBeach;
-}
-
+export default miamiBeach;

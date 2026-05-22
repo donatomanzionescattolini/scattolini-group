@@ -2,9 +2,9 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import MidtownMiami from "../../areas/MidtownMiami";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function coramerrickpark(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("cora-merrick-park", lang);
-    const d = new Desarrollo(MidtownMiami());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("cora-merrick-park", "es");
+    const d = new Desarrollo(MidtownMiami);
     d.titulo = getLocalizedField("titulo", "Cora Merrick Park");
     d.nombre = "cora-merrick-park";
     d.introduccion = getLocalizedArray("introduccion", ["Cora Merrick Park redefine la vida urbana en el prestigioso Coral Gables. A pasos de las exclusivas tiendas y restaurantes de Merrick Park, este desarrollo ofrece un estilo de vida sofisticado y conveniente. Con una arquitectura mediterránea contemporánea y acabados de lujo, Cora es el lugar perfecto para quienes buscan elegancia y modernidad."]);
@@ -39,5 +39,5 @@ export default function coramerrickpark(lang: "en" | "es" = "es") {
         ),
     };
     d.banner = true;
-    return d;
-}
+
+export default d;

@@ -7,5 +7,5 @@ export default function EdgewaterComponent() {
         window.scrollTo(0, 0);
     }, []);
 
-    return <AreaTemplate area={Edgewater()}/>;
+    return <AreaTemplate area={Edgewater}/>;
 }

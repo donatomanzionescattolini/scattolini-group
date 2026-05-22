@@ -3,11 +3,11 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 import React from "react";
 
-export default function FourteenTwentyEight(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("1428-brickell", lang);
-    const FourteenTwentyEightObject = new Desarrollo(Brickell());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("1428-brickell", "es");
+    const FourteenTwentyEightObject = new Desarrollo(Brickell);
     FourteenTwentyEightObject.banner = getLocalizedField("banner", "true") === "true";
-    FourteenTwentyEightObject.area = Brickell();
+    FourteenTwentyEightObject.area = Brickell;
     FourteenTwentyEightObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "39"), 10) || 39;
 
     FourteenTwentyEightObject.nombre = "1428-brickell";
@@ -126,6 +126,5 @@ export default function FourteenTwentyEight(lang: "en" | "es" = "es") {
             </ul>
         ),
     };
-    return FourteenTwentyEightObject;
-}
 
+export default FourteenTwentyEightObject;

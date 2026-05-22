@@ -2,8 +2,8 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
 
-export default function TheMansionsAtAcqualina(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("the-mansions-at-acqualina", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("the-mansions-at-acqualina", "es");
     const TheMansionsAtAcqualinaObject = new Desarrollo();
 
     TheMansionsAtAcqualinaObject.video =
@@ -86,7 +86,6 @@ export default function TheMansionsAtAcqualina(lang: "en" | "es" = "es") {
     TheMansionsAtAcqualinaObject.slogan = getLocalizedField("slogan", "Descubre la vida en condominio en Sunny Isles Beach");
     TheMansionsAtAcqualinaObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "24"), 10) || 24;
     TheMansionsAtAcqualinaObject.banner = getLocalizedField("banner", "true") === "true";
-    TheMansionsAtAcqualinaObject.area = SunnyIsles();
-    return TheMansionsAtAcqualinaObject;
-}
+    TheMansionsAtAcqualinaObject.area = SunnyIsles;
 
+export default TheMansionsAtAcqualinaObject;

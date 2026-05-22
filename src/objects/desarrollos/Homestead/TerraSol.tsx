@@ -1,6 +1,6 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function TerraSol(lang: "en" | "es" = "es") {
+
     const TerraSolObject = new Desarrollo();
     TerraSolObject.nombre = "terra-sol";
     TerraSolObject.titulo = {es: "Terra Sol", en: "Terra Sol"};
@@ -10,5 +10,5 @@ export default function TerraSol(lang: "en" | "es" = "es") {
     TerraSolObject.introduccion = [];
 
 
-    return TerraSolObject;
-}
+
+export default TerraSolObject;

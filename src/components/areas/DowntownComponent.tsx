@@ -7,5 +7,5 @@ export default function DowntownComponent() {
         window.scrollTo(0, 0);
     }, []);
 
-    return <AreaTemplate area={Downtown()}/>;
+    return <AreaTemplate area={Downtown}/>;
 }

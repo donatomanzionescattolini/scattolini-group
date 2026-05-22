@@ -7,5 +7,5 @@ export default function BrickellComponent() {
         window.scrollTo(0, 0);
     }, []);
 
-    return <AreaTemplate area={Brickell()}/>;
+    return <AreaTemplate area={Brickell}/>;
 }

@@ -7,5 +7,5 @@ export default function DoralComponent() {
         window.scrollTo(0, 0);
     }, []);
 
-    return <AreaTemplate area={Doral()}/>;
+    return <AreaTemplate area={Doral}/>;
 }

@@ -2,11 +2,11 @@
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 
-export default function Centris(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("centris", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("centris", "es");
     const CentrisObject = new Desarrollo();
     CentrisObject.banner = true;
-    CentrisObject.area = Pinecrest();
+    CentrisObject.area = Pinecrest;
 
     CentrisObject.nombre = "centris";
 
@@ -88,6 +88,5 @@ export default function Centris(lang: "en" | "es" = "es") {
     CentrisObject.titulo = getLocalizedField("titulo", "Centris");
     CentrisObject.slogan = getLocalizedField("slogan", "");
     CentrisObject.numberOfImages = 36;
-    return CentrisObject;
-}
 
+export default CentrisObject;

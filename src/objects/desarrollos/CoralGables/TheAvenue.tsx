@@ -3,8 +3,8 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import CoralGables from "../../areas/CoralGables.tsx";
 import React from "react";
 
-export default function TheAvenue(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("the-avenue", lang);
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("the-avenue", "es");
     const TheAvenueObject = new Desarrollo();
     TheAvenueObject.nombre = getLocalizedField("nombre", "the-avenue");
     TheAvenueObject.caracteristicas = {
@@ -105,8 +105,7 @@ export default function TheAvenue(lang: "en" | "es" = "es") {
     TheAvenueObject.slogan = getLocalizedField("slogan", "La esencia de la avenida Coral Gables");
     TheAvenueObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "27"), 10) || 27;
     TheAvenueObject.banner = getLocalizedField("banner", "true") === "true";
-    TheAvenueObject.area = CoralGables();
+    TheAvenueObject.area = CoralGables;
 
-    return TheAvenueObject;
-}
 
+export default TheAvenueObject;

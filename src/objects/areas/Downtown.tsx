@@ -1,6 +1,6 @@
 import {AreaDto} from "../../models/areas/Area.tsx";
 
-export default function Downtown() {
+
     const downtown = AreaDto("downtown");
     downtown.name = "downtown";
     downtown.titulo = {
@@ -16,7 +16,4 @@ export default function Downtown() {
         en: ["Discover Downtown Miami, the vibrant and exciting heart of the city. With its stunning architecture, wide range of restaurants and shops, and lively nightlife, Downtown Miami is the perfect place for those seeking a unique urban experience. Additionally, there are many property options available, from luxurious condominiums with stunning views to modern lofts and apartments. Don't miss the opportunity to invest in this exciting area of Miami!"]
     };
     downtown.numberOfImages = 12;
-
-
-    return downtown;
-}
+export default downtown;

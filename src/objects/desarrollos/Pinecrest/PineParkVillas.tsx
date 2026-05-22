@@ -1,6 +1,6 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function PineParkVillas() {
+
     const PineParkVillasObject = new Desarrollo();
     PineParkVillasObject.nombre = "pine-park-villas";
     PineParkVillasObject.caracteristicas = {
@@ -97,8 +97,7 @@ export default function PineParkVillas() {
 //       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 //       allowFullScreen
 //     ></iframe>
-//   }    PineParkVillasObject.banner=true;     PineParkVillasObject.area =  Pinecrest();
+//   }    PineParkVillasObject.banner=true;     PineParkVillasObject.area =  Pinecrest;
 
-    return PineParkVillasObject;
-}
 
+export default PineParkVillasObject;

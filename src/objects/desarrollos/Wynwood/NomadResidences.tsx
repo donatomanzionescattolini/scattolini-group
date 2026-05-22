@@ -1,9 +1,9 @@
 ﻿import Wynwood from "../../areas/Wynwood.tsx";
 import Desarrollo from "../../../models/desarrollos/Desarrollo";
 
-export default function NomadResidences() {
 
-    const NomadResidencesObject = new Desarrollo(Wynwood());
+
+    const NomadResidencesObject = new Desarrollo(Wynwood);
     NomadResidencesObject.nombre = "nomad-residences";
     NomadResidencesObject.titulo = "Nomad Residences";
     NomadResidencesObject.slogan = "Carácter individual, un mundo de confort";
@@ -65,7 +65,5 @@ export default function NomadResidences() {
     }
 
 
-    return NomadResidencesObject;
 
-}
-
+export default NomadResidencesObject;

@@ -3,12 +3,12 @@ import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import Brickell from "../../areas/Brickell.tsx";
 import React from "react";
 
-export default function Cipriani(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("cipriani", lang);
-    const CiprianiObject = new Desarrollo(Brickell());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("cipriani", "es");
+    const CiprianiObject = new Desarrollo(Brickell);
 
     CiprianiObject.banner = getLocalizedField("banner", "true") === "true";
-    CiprianiObject.area = Brickell();
+    CiprianiObject.area = Brickell;
 
     CiprianiObject.nombre = "cipriani";
     CiprianiObject.titulo = getLocalizedField("titulo", "Cipriani Residences");
@@ -51,6 +51,5 @@ export default function Cipriani(lang: "en" | "es" = "es") {
         ),
     };
 
-    return CiprianiObject;
-}
 
+export default CiprianiObject;

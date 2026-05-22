@@ -1,7 +1,7 @@
 import {Area} from "../../models/areas/Area";
 
 
-export default function Hollywood() {
+
     const HollywoodObject = new Area("hollywood");
     HollywoodObject.titulo = {
         es: "Hollywood",
@@ -21,7 +21,4 @@ export default function Hollywood() {
         es: "La mejor ciudad del sur de Florida para vivir, aprender, trabajar, invertir y divertirse.",
         en: "The best city in South Florida to live, learn, work, invest, and have fun."
     };
-
-
-    return HollywoodObject;
-}
+export default HollywoodObject;

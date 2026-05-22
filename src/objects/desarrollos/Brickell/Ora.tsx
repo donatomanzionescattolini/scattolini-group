@@ -3,11 +3,11 @@ import Brickell from "../../areas/Brickell.tsx";
 import {getDesarrolloI18n} from "../useDesarrolloI18n.ts";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 
-export default function Ora(lang: "en" | "es" = "es") {
-    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("ora", lang);
-    const OraObject = new Desarrollo(Brickell());
+
+    const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("ora", "es");
+    const OraObject = new Desarrollo(Brickell);
     OraObject.banner = getLocalizedField("banner", "true") === "true";
-    OraObject.area = Brickell();
+    OraObject.area = Brickell;
 
     OraObject.nombre = getLocalizedField("nombre", "ora");
     OraObject.caracteristicas = {
@@ -168,5 +168,5 @@ export default function Ora(lang: "en" | "es" = "es") {
             data-ready="true"
         ></iframe>
     );
-    return OraObject;
-}
+
+export default OraObject;
