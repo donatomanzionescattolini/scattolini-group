@@ -190,6 +190,7 @@ const Nav = () => {
                                     type="search"
                                     value={searchQueryArea}
                                     onChange={handleSearchArea}
+                                    style={{border: '1px solid #8a6944'}}
                                 />
                             </div>
                             {filteredAreas.map((area) => (
@@ -215,6 +216,7 @@ const Nav = () => {
                                     type="search"
                                     value={searchQueryDesarrollo}
                                     onChange={handleSearchDesarrollo}
+                                    style={{border: '1px solid #8a6944'}}
                                 />
                             </div>
                             {filteredDesarrollos.map((desarrollo, idx) => (
