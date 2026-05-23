@@ -1239,10 +1239,11 @@ button,
     align-items: start;
   }
 
-  footer .col-auto {
+  footer .row.justify-content-center > [class*="col-"] {
     width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
     text-align: center;
-  align-items: middle;
   }
 
   footer h5 {
@@ -1535,6 +1536,14 @@ footer {
   column-count:3;
   column-gap: 3rem;
 }
+
+@media screen and (max-width: 768px) {
+  footer {
+    column-count: 1;
+    column-gap: 0;
+  }
+}
+
 footer ul {
 break-inside: avoid;
   margin-bottom: 2rem;
