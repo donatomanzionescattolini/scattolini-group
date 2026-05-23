@@ -48,7 +48,7 @@ import Brickell from "../../areas/Brickell.tsx";
         en: getLocalizedField("slogan", "Where both city dwellers and nature lovers feel at home"),
     } as any;
     _2200BrickellObject.banner = getLocalizedField("banner", "true") === "true";
-_2200Brickell.nombre = "2200-brickell";
+_2200BrickellObject.nombre = "2200-brickell";
 
 
 export default _2200BrickellObject;

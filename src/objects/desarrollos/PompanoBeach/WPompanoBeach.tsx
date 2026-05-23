@@ -1,5 +1,7 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import PompanoBeach from "../../areas/PompanoBeach";
+const lang: "en" | "es" = "es";
+
 
 
   const WPompanoBeachObject = new Desarrollo(PompanoBeach);

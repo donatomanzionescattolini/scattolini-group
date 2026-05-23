@@ -1,5 +1,7 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo";
 import MiamiBeach from "../../areas/MiamiBeach";
+const lang: "en" | "es" = "es";
+
 
 
     const PalmaObject = new Desarrollo();

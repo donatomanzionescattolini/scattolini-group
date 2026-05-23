@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
 import {initializeApp} from "firebase/app";
-import {getAnalytics} from "firebase/analytics";
 import {getAuth} from "firebase/auth";
 import {getFirestore} from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -19,16 +18,32 @@ const firebaseConfig = {
     measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-// Validate required config
-if (!firebaseConfig.projectId) {
-    console.error('Firebase config:', firebaseConfig);
-    throw new Error('Missing Firebase projectId. Check your .env file.');
+const hasRequiredFirebaseConfig = Boolean(
+    firebaseConfig.apiKey &&
+    firebaseConfig.authDomain &&
+    firebaseConfig.projectId &&
+    firebaseConfig.appId
+);
+
+const resolvedFirebaseConfig = hasRequiredFirebaseConfig
+    ? firebaseConfig
+    : {
+        apiKey: "dev-placeholder",
+        authDomain: "localhost",
+        databaseURL: "",
+        projectId: "dev-placeholder",
+        storageBucket: "dev-placeholder.appspot.com",
+        messagingSenderId: "000000000000",
+        appId: "1:000000000000:web:0000000000000000000000",
+        measurementId: undefined
+    };
+
+if (!hasRequiredFirebaseConfig) {
+    console.warn("Firebase env variables are missing; using placeholder config for non-authenticated browsing.");
 }
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-// Initialize Firebase
+const app = initializeApp(resolvedFirebaseConfig);
 
 // Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(app);

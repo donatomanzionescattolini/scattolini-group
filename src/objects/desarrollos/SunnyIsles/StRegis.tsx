@@ -1,6 +1,8 @@
 ﻿import { getDesarrolloI18n } from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
 import SunnyIsles from "../../areas/SunnyIsles.tsx";
+const lang: "en" | "es" = "es";
+
 
 
   const { getLocalizedField, getLocalizedArray } = getDesarrolloI18n(
