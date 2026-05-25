@@ -1,13 +1,13 @@
 import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import Edgewater from "../../areas/Edgewater.tsx";
+import MiamiDesignDistrict from "../../areas/MiamiDesignDistrict.tsx";
 
 
     const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("kempinski-residences", "es");
     const project = new Desarrollo();
 
     project.nombre = "kempinski-residences";
-    project.area = Edgewater;
+    project.area = MiamiDesignDistrict;
     project.banner = true;
     project.numberOfImages = 17;
     project.direccion = getLocalizedField("direccion", "3801 & 3883 Biscayne Blvd, Miami, FL 33137");

@@ -188,6 +188,10 @@ export function findDesarrolloBySlug(slug: string, lang: "en" | "es" = "es"): De
 }
 
 desarrolloMap.push({
+    area: MiamiDesignDistrict,
+    des: new Set([KempinskiResidences]),
+});
+desarrolloMap.push({
     area: Wynwood,
     des: new Set([NomadResidences]),
 });
@@ -269,10 +273,6 @@ desarrolloMap.push({
         ElleResidences,
         EdgeHouseResidences,
     ]),
-});
-desarrolloMap.push({
-    area: MiamiDesignDistrict,
-    des: new Set([KempinskiResidences]),
 });
 desarrolloMap.push({
     area: NorthBayVillage,
