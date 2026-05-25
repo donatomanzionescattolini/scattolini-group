@@ -11,6 +11,7 @@ import OraProject from "../../components/desarrollos/Brickell/OraProject";
 import ViceroyBrickellProject from "../../components/desarrollos/Brickell/ViceroyBrickellProject";
 import {CiprianiProjec} from "../../components/desarrollos/Brickell/CiprianiProject";
 import {FourteenTwentyEightProject} from "../../components/desarrollos/Brickell/FourteenTwentyEightProject";
+import ParksideProject from "../../components/desarrollos/Brickell/ParksideProject";
 
 export default function BrickellRoutes() {
     return (
@@ -30,6 +31,7 @@ export default function BrickellRoutes() {
                 path="/desarrollos/888-brickell-dolce-and-gabbana-residences"
             />
             <Route element={<ViceroyBrickellProject/>} path="/desarrollos/viceroy-brickell"/>
+            <Route element={<ParksideProject/>} path="/desarrollos/parkside"/>
         </>
     );
 }

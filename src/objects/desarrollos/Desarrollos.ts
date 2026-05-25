@@ -87,6 +87,7 @@ import SeventyTwoCarlyle from "./MiamiBeach/72Carlyle.tsx";
 import TulaResidences from "./NorthBayVillage/TulaResidences.tsx";
 import ViceroyBrickell from "./Brickell/ViceroyBrickell.tsx";
 import StRegisBrickell from "./Brickell/StRegisBrickell.tsx";
+import Parkside from "./Brickell/Parkside.tsx";
 import SevenParkResidences from "./Hollywood/SevenParkResidences.tsx";
 import GaiaResidences from "./Hollywood/GaiaResidences.tsx";
 import FaenaResidences from "./MiamiBeach/FaenaResidences.tsx";
@@ -230,6 +231,7 @@ desarrolloMap.push({
         DolceAndGabbanaResidences,
         ViceroyBrickell,
         StRegisBrickell,
+        Parkside,
     ]),
 });
 
