@@ -20,7 +20,7 @@ miamiDesignDistrict.descripcion = {
         "With a strategic location near Midtown, Wynwood, and Downtown, Miami Design District offers a unique urban experience with global luxury boutiques, galleries, and cultural spaces. Investing in this area means entering one of the city's most prestigious and high-growth real estate markets."
     ]
 };
-miamiDesignDistrict.numberOfImages = 1;
+miamiDesignDistrict.numberOfImages = 14;
 
 export default miamiDesignDistrict;
 

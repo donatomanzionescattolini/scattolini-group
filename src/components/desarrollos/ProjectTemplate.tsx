@@ -1,7 +1,16 @@
 ﻿import "bootstrap/dist/css/bootstrap.min.css";
 import "@material/banner/dist/mdc.banner.min.css";
 
-import { isValidElement, ReactNode, useEffect, useLayoutEffect, useMemo, useState } from "react";
+import {
+  CSSProperties,
+  ImgHTMLAttributes,
+  isValidElement,
+  ReactNode,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useState,
+} from "react";
 import { resolveLocalizedValue, useTranslation } from "../../i18n.tsx";
 import { Accordion, Col, Container, Nav, Row, Tab } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -17,6 +26,88 @@ type LocalizedCharacteristics = {
   residencias?: ReactNode;
   amenidades?: ReactNode;
 };
+
+const IMAGE_EXTENSIONS = ["jpg", "jpeg", "png", "webp", "avif"] as const;
+
+function buildImageCandidates(baseUrl: string) {
+  return IMAGE_EXTENSIONS.map((ext) => `${baseUrl}.${ext}`);
+}
+
+function ExtensionAgnosticImage({
+  baseUrl,
+  onError,
+  alt,
+  ...imgProps
+}: ImgHTMLAttributes<HTMLImageElement> & { baseUrl: string }) {
+  const candidates = useMemo(() => buildImageCandidates(baseUrl), [baseUrl]);
+  const [index, setIndex] = useState(0);
+
+  return (
+    <img
+      {...imgProps}
+      alt={alt ?? ""}
+      src={candidates[Math.min(index, candidates.length - 1)]}
+      onError={(event) => {
+        if (index < candidates.length - 1) {
+          setIndex((prev) => prev + 1);
+          return;
+        }
+        onError?.(event);
+      }}
+    />
+  );
+}
+
+function ExtensionAgnosticBackground({
+  baseUrl,
+  className,
+  style,
+}: {
+  baseUrl: string;
+  className?: string;
+  style?: CSSProperties;
+}) {
+  const candidates = useMemo(() => buildImageCandidates(baseUrl), [baseUrl]);
+  const [resolvedUrl, setResolvedUrl] = useState<string>(candidates[0]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const tryResolve = async () => {
+      for (const url of candidates) {
+        const exists = await new Promise<boolean>((resolve) => {
+          const img = new Image();
+          img.onload = () => resolve(true);
+          img.onerror = () => resolve(false);
+          img.src = url;
+        });
+
+        if (exists) {
+          if (!cancelled) setResolvedUrl(url);
+          return;
+        }
+      }
+
+      if (!cancelled) setResolvedUrl(candidates[0]);
+    };
+
+    void tryResolve();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [candidates]);
+
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        backgroundImage: `url('${resolvedUrl}')`,
+      }}
+    />
+  );
+}
 
 function hasRenderableContent(content: ReactNode): boolean {
   if (content === null || content === undefined || content === false) return false;
@@ -119,8 +210,9 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
           style={{ height: "fit-content" }}
         >
           {banner && (
-            <img
-              src={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg`}
+            <ExtensionAgnosticImage
+              key={`banner-${nombre}`}
+              baseUrl={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner`}
               width="100%"
               height="auto"
               alt={`${t("pages.project.bannerAlt", "Project banner")}: ${localizedTitulo || nombre}`}
@@ -129,31 +221,28 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
 
           {!banner && (
             <>
-              <div
-                autoFocus
+              <ExtensionAgnosticBackground
+                baseUrl={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-left`}
                 className="col-4 m-0 p-0 responsive"
                 style={{
                   height: "250px",
-                  backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-left.jpg')`,
                   backgroundSize: "cover",
                 }}
               />
-              <div
-                autoFocus
+              <ExtensionAgnosticBackground
+                baseUrl={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-center`}
                 style={{
                   height: "250px",
-                  backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner-center.jpg')`,
                   backgroundSize: "cover",
                   backgroundPositionX: "center",
                   backgroundPositionY: "top",
                 }}
                 className="col-4"
               />
-              <div
-                autoFocus
+              <ExtensionAgnosticBackground
+                baseUrl={`https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner`}
                 style={{
                   height: "250px",
-                  backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/banner.jpg')`,
                   backgroundSize: "cover",
                 }}
                 className="col-4 m-0 p-0 responsive"
@@ -439,11 +528,9 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
                 className="gallery-item"
               >
                 <Link to={`/desarrollos/${desarrollo.nombre}/`}>
-                  <div
+                  <ExtensionAgnosticBackground
+                    baseUrl={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}`}
                     className="gallery-card"
-                    style={{
-                      backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${area.name}/${desarrollo.nombre}.webp')`,
-                    }}
                   />
                   <h4 className="text-center">
                     {getLocalizedString(desarrollo.titulo) ||
