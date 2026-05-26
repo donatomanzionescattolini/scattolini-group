@@ -1228,8 +1228,6 @@ button,
   /* Footer mobile */
   footer {
     padding: 2.5rem 1rem 2rem;
-    column-count: 2;
-    column-gap: 1rem;
   }
 
   footer .row.justify-content-center {
@@ -1539,8 +1537,8 @@ footer {
 
 @media screen and (max-width: 768px) {
   footer {
-    column-count: 2;
-    column-gap: 1rem;
+    column-count: unset;
+    column-gap: unset;
   }
 }
 
