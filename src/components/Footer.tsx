@@ -24,7 +24,7 @@ export default function Footer() {
                         if (!areaTitle) return null;
 
                         return (
-                            <div key={entry.area.name} className="col-6 col-md-auto mb-md-0 mb-3 text-center px-2 px-md-4">
+                            <div key={entry.area.name} className="col-6 col-lg-4 mb-3 mb-lg-0 text-center px-2 px-lg-4">
                                 <h5 className="text-uppercase">
                                     <a href={`/areas/${entry.area.name}/`} className="footer-area-link">
                                         {areaTitle}
