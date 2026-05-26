@@ -117,9 +117,9 @@ export default function DesarrolloEditor() {
     const buildEmptyDesarrollo = () => ({
         id: '',
         nombre: '',
-        titulo: '',
-        slogan: '',
-        introduccion: [],
+        titulo: { es: '', en: '' },
+        slogan: { es: '', en: '' },
+        introduccion: { es: [], en: [] },
         ubicacion: '',
         numberOfUnits: 0,
         numberOfFloors: 0,

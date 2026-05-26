@@ -143,9 +143,12 @@ export default function MultiStepWizard({
   };
 
   const onSubmit = async (data: any) => {
+    // formData is authoritative — especially for bilingual fields (titulo, slogan,
+    // descripcion, introduccion) which update formData directly but may not be
+    // registered with react-hook-form. Spread formData last so it always wins.
     const mergedData = {
-      ...formData,
       ...data,
+      ...formData,
     };
 
     setFormData(mergedData);

@@ -10,6 +10,7 @@ import {
     saveArea,
     serializeArea,
 } from '../../services/database';
+import Areas from '../../objects/areas/Areas';
 
 type EditorMode = 'create' | 'edit' | 'delete';
 
@@ -31,12 +32,28 @@ export default function AreaEditor() {
     const loadAreas = async () => {
         setLoading(true);
         try {
-            const allAreas = await getAllAreas();
-            setAreas(allAreas as Area[]);
+            // Merge static areas (from desarrolloMap) with Firestore, Firestore wins
+            const staticAreas = Areas();
+            const firestoreAreas = await getAllAreas();
+
+            const merged = new Map<string, Area>();
+            staticAreas.forEach((area) => {
+                if (area.name) merged.set(area.name, area);
+            });
+            firestoreAreas.forEach((area) => {
+                if (area.name) merged.set(area.name, area as Area);
+            });
+
+            setAreas(Array.from(merged.values()));
         } catch (error) {
             console.error('Error loading areas:', error);
-            setMessage(String(t('pages.editor.messages.areaLoadError', 'Error loading areas')));
-            setMessageType('error');
+            // Firestore failed: still show static areas
+            const staticAreas = Areas();
+            setAreas(staticAreas);
+            if (staticAreas.length === 0) {
+                setMessage(String(t('pages.editor.messages.areaLoadError', 'Error loading areas')));
+                setMessageType('error');
+            }
         } finally {
             setLoading(false);
         }
@@ -77,10 +94,11 @@ export default function AreaEditor() {
         setSelectedArea({
             id: '',
             name: '',
-            titulo: '',
-            slogan: '',
-            descripcion: [],
+            titulo: { es: '', en: '' },
+            slogan: { es: '', en: '' },
+            descripcion: { es: [], en: [] },
             numberOfImages: 0,
+            imageExtension: 'jpg',
         });
         setMode('create');
         setMessage('');
