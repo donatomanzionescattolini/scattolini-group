@@ -72,23 +72,55 @@
     <link href="https://scattolinigroup.com/?lang=en" hreflang="en" rel="alternate"/>
     <link href="https://scattolinigroup.com/" hreflang="x-default" rel="alternate"/>
 
-    <!-- Structured Data -->
+    <!-- Structured Data / Schema.org — Generative Engine Optimization (GEO) -->
+
+    <!-- 1. WebSite — enables sitelinks search box and provides a canonical identity for AI engines -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "RealEstateAgent",
+            "@type": "WebSite",
+            "@id": "https://scattolinigroup.com/#website",
             "name": "Scattolini Group",
-            "description": "Boutique luxury real estate agency in Doral, Florida, serving South Florida with exclusive properties in Miami, Brickell, Sunny Isles, and Miami Beach.",
+            "alternateName": ["Scattolini Group Luxury Real Estate", "Scattolini Group Bienes Raíces"],
             "url": "https://scattolinigroup.com",
-            "logo": "https://pagina-mama.s3.amazonaws.com/assets2/logos/logo.png",
+            "description": "Boutique luxury real estate agency serving South Florida — Miami, Brickell, Sunny Isles, Miami Beach, Coral Gables, Aventura, Doral, and surrounding areas.",
+            "inLanguage": ["es", "en"],
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://scattolinigroup.com/?s={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+
+    <!-- 2. RealEstateAgent / Organization — core business entity -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": ["RealEstateAgent", "LocalBusiness"],
+            "@id": "https://scattolinigroup.com/#organization",
+            "name": "Scattolini Group",
+            "legalName": "Scattolini Group",
+            "description": "Scattolini Group is a boutique luxury real estate agency headquartered in Doral, Florida. Led by Elda Scattolini, with over 20 years of experience, the agency specializes in exclusive residential properties, pre-construction condominiums, and high-end real estate investments across South Florida — including Miami, Brickell, Sunny Isles Beach, Miami Beach, Coral Gables, Coconut Grove, Edgewater, Downtown Miami, Aventura, and Doral.",
+            "url": "https://scattolinigroup.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://pagina-mama.s3.amazonaws.com/assets2/logos/logo.png",
+                "width": 400,
+                "height": 400
+            },
             "image": "https://pagina-mama.s3.amazonaws.com/assets2/logos/logo.png",
             "telephone": "+1-305-613-9338",
             "email": "elda.scattolini@scattolinigroup.com",
             "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Doral",
+                "streetAddress": "12750 NW 17th Street, Unit 222",
+                "addressLocality": "Miami",
                 "addressRegion": "FL",
-                "postalCode": "33166",
+                "postalCode": "33182",
                 "addressCountry": "US"
             },
             "geo": {
@@ -96,24 +128,354 @@
                 "latitude": "25.8195",
                 "longitude": "-80.3553"
             },
+            "hasMap": "https://maps.google.com/?q=12750+NW+17th+Street+Unit+222+Miami+FL+33182",
             "areaServed": [
-                "Miami",
-                "Brickell",
-                "Sunny Isles",
-                "Miami Beach",
-                "Coral Gables",
-                "Coconut Grove",
-                "Edgewater",
-                "Downtown Miami",
-                "Aventura",
-                "Doral",
-                "South Florida"
+                {"@type": "City", "name": "Miami", "sameAs": "https://www.wikidata.org/wiki/Q8652"},
+                {"@type": "Neighborhood", "name": "Brickell"},
+                {"@type": "City", "name": "Sunny Isles Beach"},
+                {"@type": "Neighborhood", "name": "Miami Beach"},
+                {"@type": "City", "name": "Coral Gables"},
+                {"@type": "Neighborhood", "name": "Coconut Grove"},
+                {"@type": "Neighborhood", "name": "Edgewater"},
+                {"@type": "Neighborhood", "name": "Downtown Miami"},
+                {"@type": "City", "name": "Aventura"},
+                {"@type": "City", "name": "Doral"},
+                {"@type": "State", "name": "South Florida"}
+            ],
+            "knowsAbout": [
+                "Luxury real estate",
+                "Pre-construction condominiums",
+                "Real estate investment",
+                "Property management",
+                "Real estate advisory",
+                "South Florida real estate market",
+                "High-end residential properties"
             ],
             "priceRange": "$$$",
-            "openingHours": "Mo-Fr 09:00-18:00",
+            "openingHours": ["Mo-Fr 09:00-18:00", "Sa 10:00-14:00"],
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Saturday",
+                    "opens": "10:00",
+                    "closes": "14:00"
+                }
+            ],
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-305-613-9338",
+                    "contactType": "sales",
+                    "availableLanguage": ["English", "Spanish"],
+                    "areaServed": "US"
+                },
+                {
+                    "@type": "ContactPoint",
+                    "contactType": "customer service",
+                    "email": "elda.scattolini@scattolinigroup.com",
+                    "availableLanguage": ["English", "Spanish"]
+                }
+            ],
             "sameAs": [
                 "https://www.instagram.com/scattolinigroup",
                 "https://www.facebook.com/scattolinigroup"
+            ],
+            "founder": {
+                "@id": "https://scattolinigroup.com/#elda-scattolini"
+            }
+        }
+    </script>
+
+    <!-- 3. Person — Elda Scattolini, lead agent -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": "https://scattolinigroup.com/#elda-scattolini",
+            "name": "Elda Scattolini",
+            "jobTitle": "Luxury Real Estate Agent & Founder",
+            "description": "Elda Scattolini is the founder and lead agent of Scattolini Group, with over 20 years of experience in the South Florida luxury real estate market. She has helped hundreds of clients from around the world achieve their real estate goals with professionalism, integrity, and dedication.",
+            "worksFor": {
+                "@id": "https://scattolinigroup.com/#organization"
+            },
+            "knowsAbout": [
+                "South Florida luxury real estate",
+                "Pre-construction condominiums",
+                "Real estate investment",
+                "Property management",
+                "Miami real estate market"
+            ],
+            "telephone": "+1-305-613-9338",
+            "email": "elda.scattolini@scattolinigroup.com",
+            "url": "https://scattolinigroup.com",
+            "sameAs": [
+                "https://www.instagram.com/scattolinigroup"
+            ]
+        }
+    </script>
+
+    <!-- 4. WebPage with Speakable — signals key content for AI and voice assistants -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://scattolinigroup.com/#webpage",
+            "url": "https://scattolinigroup.com",
+            "name": "Scattolini Group — Luxury Real Estate South Florida | Bienes Raíces de Lujo Miami",
+            "description": "Boutique luxury real estate agency specializing in exclusive properties across South Florida. Expert guidance in buying, selling, and investing in luxury homes, condos, and pre-construction developments in Miami, Brickell, Sunny Isles, and Miami Beach.",
+            "isPartOf": {"@id": "https://scattolinigroup.com/#website"},
+            "about": {"@id": "https://scattolinigroup.com/#organization"},
+            "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["#hero-heading", "#hero-subheading", "#about-us"]
+            },
+            "inLanguage": ["es", "en"],
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://scattolinigroup.com"
+                    }
+                ]
+            }
+        }
+    </script>
+
+    <!-- 5. Services offered by Scattolini Group -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Services — Scattolini Group",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "Service",
+                        "name": "Real Estate Advisory",
+                        "description": "Expert advisory in all areas of the South Florida real estate market, including market analysis, property valuation, and investment strategy for luxury residential properties.",
+                        "provider": {"@id": "https://scattolinigroup.com/#organization"},
+                        "areaServed": "South Florida",
+                        "serviceType": "Real Estate Advisory"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "Service",
+                        "name": "Property Management",
+                        "description": "Full-service property management for luxury property owners and investors in South Florida, including tenant management, maintenance, and rental coordination.",
+                        "provider": {"@id": "https://scattolinigroup.com/#organization"},
+                        "areaServed": "South Florida",
+                        "serviceType": "Property Management"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@type": "Service",
+                        "name": "Property Sales",
+                        "description": "Expert assistance in selling luxury properties and condominiums across South Florida, including market positioning, negotiation, and closing support.",
+                        "provider": {"@id": "https://scattolinigroup.com/#organization"},
+                        "areaServed": "South Florida",
+                        "serviceType": "Real Estate Sales"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@type": "Service",
+                        "name": "Property Purchase",
+                        "description": "Professional guidance for buyers seeking luxury homes, condominiums, and pre-construction developments across Miami, Brickell, Sunny Isles, and South Florida.",
+                        "provider": {"@id": "https://scattolinigroup.com/#organization"},
+                        "areaServed": "South Florida",
+                        "serviceType": "Real Estate Purchase Guidance"
+                    }
+                }
+            ]
+        }
+    </script>
+
+    <!-- 6. Featured developments (ItemList) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Featured Luxury Developments — Scattolini Group",
+            "description": "Pre-construction and new luxury condominium developments in South Florida represented by Scattolini Group.",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "Residence",
+                        "name": "Vista Harbor Residences & Yacht Club",
+                        "description": "12-story condominium community with 242 residences and 37,000 SF of exclusive amenities along 650 feet of the Miami River. Studios, 1- to 4-bedroom residences starting from $648,900. West Tower permits short-term rentals (minimum 30 days).",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Miami",
+                            "addressRegion": "FL",
+                            "addressCountry": "US"
+                        },
+                        "numberOfRooms": "242",
+                        "amenityFeature": [
+                            {"@type": "LocationFeatureSpecification", "name": "Rooftop pool"},
+                            {"@type": "LocationFeatureSpecification", "name": "Private docks / Yacht Club"},
+                            {"@type": "LocationFeatureSpecification", "name": "State-of-the-art fitness center"},
+                            {"@type": "LocationFeatureSpecification", "name": "Pickleball courts"},
+                            {"@type": "LocationFeatureSpecification", "name": "Business center"}
+                        ],
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "648900",
+                            "priceCurrency": "USD",
+                            "availability": "https://schema.org/PreOrder",
+                            "seller": {"@id": "https://scattolinigroup.com/#organization"}
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "Residence",
+                        "name": "Tula Residences",
+                        "description": "21-story waterfront boutique tower on Biscayne Bay in North Bay Village with only 54 residences and six exclusive penthouses. Corner-only layouts with wraparound glass terraces. 2-, 2+den, and 3-bedroom residences from 1,590 to 2,440 sq ft.",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "7918 West Drive",
+                            "addressLocality": "North Bay Village",
+                            "addressRegion": "FL",
+                            "postalCode": "33141",
+                            "addressCountry": "US"
+                        },
+                        "numberOfRooms": "54",
+                        "amenityFeature": [
+                            {"@type": "LocationFeatureSpecification", "name": "Resort-style pool with private cabanas"},
+                            {"@type": "LocationFeatureSpecification", "name": "Wellness center"},
+                            {"@type": "LocationFeatureSpecification", "name": "24-hour concierge"},
+                            {"@type": "LocationFeatureSpecification", "name": "Private dining room"}
+                        ]
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@type": "Residence",
+                        "name": "Kempinski Residences Miami Design District",
+                        "description": "Two 23-story residential towers at the gateway to the Miami Design District with 64 residences per tower, 22 private guest suites, 6 townhomes, and approximately 70,000 sq ft of curated amenities. European luxury brand hospitality. Residences starting from $3,895,900.",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "3801 & 3883 Biscayne Blvd",
+                            "addressLocality": "Miami",
+                            "addressRegion": "FL",
+                            "postalCode": "33137",
+                            "addressCountry": "US"
+                        },
+                        "amenityFeature": [
+                            {"@type": "LocationFeatureSpecification", "name": "85-foot lap pool"},
+                            {"@type": "LocationFeatureSpecification", "name": "Wellness sanctuary with cold plunge and sauna"},
+                            {"@type": "LocationFeatureSpecification", "name": "Padel court"},
+                            {"@type": "LocationFeatureSpecification", "name": "24-hour Kempinski-trained concierge"},
+                            {"@type": "LocationFeatureSpecification", "name": "Private porte-cochère"}
+                        ],
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "3895900",
+                            "priceCurrency": "USD",
+                            "availability": "https://schema.org/PreOrder",
+                            "seller": {"@id": "https://scattolinigroup.com/#organization"}
+                        }
+                    }
+                }
+            ]
+        }
+    </script>
+
+    <!-- 7. FAQPage — directly answers common questions that AI engines surface -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is Scattolini Group?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Scattolini Group is a boutique luxury real estate agency based in Doral (Miami), Florida. Founded and led by Elda Scattolini — a real estate agent with over 20 years of experience — the agency specializes in exclusive residential properties, pre-construction condominiums, and high-end real estate investments across South Florida."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What areas does Scattolini Group serve?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Scattolini Group serves the entire South Florida region, with deep expertise in Miami, Brickell, Sunny Isles Beach, Miami Beach, Coral Gables, Coconut Grove, Edgewater, Downtown Miami, Aventura, and Doral."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What services does Scattolini Group offer?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Scattolini Group offers four core real estate services: (1) Real Estate Advisory — market analysis, property valuation, and investment strategy; (2) Property Management — full-service management for owners and investors; (3) Property Sales — expert guidance in selling luxury properties; and (4) Property Purchase — professional support for buyers of luxury homes, condominiums, and pre-construction developments."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does Scattolini Group work with international clients?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Scattolini Group has extensive experience assisting clients from around the world who are looking to purchase or invest in South Florida luxury real estate. The team is bilingual (English and Spanish) and familiar with the needs of international buyers and investors."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How can I contact Scattolini Group?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You can reach Scattolini Group by phone or WhatsApp at +1 (305) 613-9338, by email at elda.scattolini@scattolinigroup.com, or through the contact form on the website at scattolinigroup.com. The office is located at 12750 NW 17th Street, Unit 222, Miami, FL 33182. Office hours are Monday–Friday 9am–6pm and Saturday by appointment."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What luxury developments does Scattolini Group represent?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Scattolini Group currently represents several pre-construction luxury developments in South Florida, including: Vista Harbor Residences & Yacht Club (along the Miami River, from $648,900), Tula Residences (21-story waterfront boutique tower in North Bay Village on Biscayne Bay), and Kempinski Residences Miami Design District (two 23-story towers in Miami's Design District, from $3,895,900)."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does Scattolini Group offer pre-construction condominium investments?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Scattolini Group specializes in pre-construction luxury condominiums across South Florida. Their portfolio includes developments such as Vista Harbor Residences & Yacht Club, Tula Residences in North Bay Village, and Kempinski Residences in the Miami Design District, offering buyers exclusive access to new luxury inventory in prime locations."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who leads Scattolini Group?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Scattolini Group is led by Elda Scattolini, a real estate professional with over 20 years of experience in the South Florida luxury market. Elda and her team are experts in South Florida neighborhoods, schools, amenities, and market trends, guiding clients through every step of the real estate process — from finding the right property to negotiating the best price and closing efficiently."
+                    }
+                }
             ]
         }
     </script>
