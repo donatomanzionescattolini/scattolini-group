@@ -1,10 +1,10 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import MiamiBeach from "../../areas/MiamiBeach.tsx";
+import MiamiRiver from "../../areas/MiamiRiver.tsx";
 const lang: "en" | "es" = "es";
 
 
 
-    const FaenaResidencesObject = new Desarrollo(MiamiBeach);
+    const FaenaResidencesObject = new Desarrollo(MiamiRiver);
     FaenaResidencesObject.nombre = "faena-residences";
     FaenaResidencesObject.titulo = {
         es: "Faena Residences Miami Beach",
@@ -19,6 +19,7 @@ const lang: "en" | "es" = "es";
         : "Faena House Miami Beach cuenta con 47 unidades de lujo supremo en un extraordinario condominio de 18 pisos. La visión de Alan Faena y el diseño arquitectónico de Foster+Partners concibieron un nuevo y transformador vecindario en perfecta armonía con su entorno frente al mar; los innovadores avances arquitectónicos permiten vistas panorámicas desde el océano hasta la bahía. Ubicado en la franja de arena blanca más extensa de todo Miami Beach, Faena se encuentra a solo diez minutos en coche de Bal Harbour Shops, el Distrito de Diseño de Miami y South Beach.\n\n"];
     FaenaResidencesObject.banner = true;
     FaenaResidencesObject.numberOfImages = 22;
+    FaenaResidencesObject.area = MiamiRiver;
 
 
     FaenaResidencesObject.direccion = "3315 Collins Avenue, Miami Beach, FL 33140";
