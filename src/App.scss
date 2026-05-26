@@ -1238,9 +1238,9 @@ button,
   }
 
   footer .row.justify-content-center > [class*="col-"] {
-    width: 50% !important;
-    max-width: 50% !important;
-    flex: 0 0 50% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
     text-align: center;
   }
 
