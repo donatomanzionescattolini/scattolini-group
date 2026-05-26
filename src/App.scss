@@ -1530,16 +1530,12 @@ padding-bottom:0!important;
   width: fit-content!important;
 }
 
-footer {
-  column-count:3;
-  column-gap: 3rem;
-}
+/* footer column layout handled by Bootstrap col-6 / col-lg-4 classes */
 
-@media screen and (max-width: 768px) {
-  footer {
-    column-count: unset;
-    column-gap: unset;
-  }
+.footer-copyright {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
 }
 
 footer ul {

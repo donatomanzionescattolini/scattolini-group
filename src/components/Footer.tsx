@@ -55,7 +55,7 @@ export default function Footer() {
                     })}
                 </div>
             </div>
-            <div className="text-center py-3">
+            <div className="footer-copyright text-center py-3 mt-3">
                 © {new Date().getFullYear()} {t("pages.about.title")}
             </div>
         </footer>
