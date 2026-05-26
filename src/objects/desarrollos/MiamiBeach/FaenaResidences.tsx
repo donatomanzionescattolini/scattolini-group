@@ -7,8 +7,8 @@ const lang: string = "es";
     const FaenaResidencesObject = new Desarrollo(MiamiRiver);
     FaenaResidencesObject.nombre = "faena-residences";
     FaenaResidencesObject.titulo = {
-        es: "Faena Residences Miami Beach",
-        en: "Faena Residences Miami Beach"
+        es: "Faena Residences",
+        en: "Faena Residences"
     };
     FaenaResidencesObject.slogan = {
         es: "",
