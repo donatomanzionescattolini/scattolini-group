@@ -100,6 +100,7 @@ import Doppio from "./Orlando/Doppio.tsx";
 import VistaHarbor from "./Downtown/VistaHarbor.tsx";
 import KempinskiResidences from "./Edgewater/KempinskiResidences.tsx";
 import MiamiDesignDistrict from "../areas/MiamiDesignDistrict.tsx";
+import MiamiRiver from "../areas/MiamiRiver.tsx";
 
 interface DesarrolloMapItem {
     area: Area;
@@ -226,7 +227,6 @@ desarrolloMap.push({
         BaccaratResidences,
         DomusBrickellCenter,
         Domus,
-        FourteenRiverDistrict,
         FourteenTwentyEight,
         Lofty,
         Ora,
@@ -290,10 +290,12 @@ desarrolloMap.push({
         Palma,
         TheWilliam,
         SeventyTwoCarlyle,
-        FaenaResidences,
     ]),
 });
-
+desarrolloMap.push({
+    area: MiamiRiver,
+    des: new Set([FourteenRiverDistrict, FaenaResidences])
+});
 desarrolloMap.push({
     area: Pinecrest,
     des: new Set([Centris, PineRocklandEstates, PineParkVillas]),
