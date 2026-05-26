@@ -8,6 +8,8 @@ export class Area {
 
     public numberOfImages!: number;
     public video?: ReactNode;
+    /** File extension for carousel/banner images. Defaults to "webp". */
+    public imageExtension?: string;
 
     constructor(name: string) {
         this.name = name;

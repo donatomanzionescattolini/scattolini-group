@@ -48,6 +48,7 @@ export default function AreaTemplate(props: AreaProps) {
     const slogan = getLocalizedString(area.slogan);
     const descripcion = getLocalizedArray(area.descripcion);
     const photoAlt = String(t("pages.areas.photoAlt")).replace("{title}", String(titulo || nombre));
+    const imgExt = area.imageExtension || "webp";
     const images = [];
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
@@ -62,17 +63,17 @@ export default function AreaTemplate(props: AreaProps) {
                 key={`carousel-${nombre}-${i}`}
                 fluid
                 rounded
-                src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/carousel-${i}.webp`}
+                src={`https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/carousel-${i}.${imgExt}`}
             />
         );
     }
-    const firstImage = `https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/firstImage.jpg`;
+    const firstImage = `https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/firstImage.${imgExt === "webp" ? "jpg" : imgExt}`;
     return (
         <>
             <div
                 className="bg-image d-flex justify-content-center align-items-center"
                 style={{
-                    backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/banner.webp')`,
+                    backgroundImage: `url('https://pagina-mama.s3.amazonaws.com/assets2/areas/${nombre}/banner.${imgExt}')`,
                     height: "30vh",
                 }}
             >
