@@ -314,3 +314,133 @@ export async function uploadGalleryImage(
         targetName: `image (${imageNumber}).jpg`,
     });
 }
+
+// ─── Area media (banner, firstImage, carousel) ───────────────────────────────
+
+export interface AreaMediaFile {
+    key: string;
+    name: string;
+    url: string;
+    type: "banner" | "firstImage" | "carousel";
+    carouselNumber?: number;
+    size?: number;
+    lastModified?: Date;
+}
+
+export async function uploadAreaMedia(
+    file: File,
+    areaName: string,
+    fileType: "banner" | "firstImage" | "carousel",
+    options?: { carouselNumber?: number },
+): Promise<UploadResult> {
+    const safeArea = normalizePathSegment(areaName);
+    if (!safeArea) return { success: false, error: "Area name is required." };
+
+    let body: Uint8Array;
+    let s3Path: string;
+    let contentType: string;
+    let targetName: string;
+
+    if (fileType === "banner") {
+        targetName = "banner.jpg";
+        s3Path = `${AREAS_PREFIX}/${safeArea}/${targetName}`;
+        contentType = "image/jpeg";
+        body = await convertImageToMime(file, "image/jpeg");
+    } else if (fileType === "firstImage") {
+        targetName = "firstImage.jpg";
+        s3Path = `${AREAS_PREFIX}/${safeArea}/${targetName}`;
+        contentType = "image/jpeg";
+        body = await convertImageToMime(file, "image/jpeg");
+    } else if (fileType === "carousel") {
+        const num = options?.carouselNumber ?? 1;
+        targetName = `carousel-${num}.jpg`;
+        s3Path = `${AREAS_PREFIX}/${safeArea}/${targetName}`;
+        contentType = "image/jpeg";
+        body = await convertImageToMime(file, "image/jpeg");
+    } else {
+        return { success: false, error: "Unknown area media type." };
+    }
+
+    try {
+        console.log(`[S3] Uploading area media: bucket=${BUCKET_NAME}, key=${s3Path}`);
+        await s3Client.send(new PutObjectCommand({
+            Bucket: BUCKET_NAME,
+            Key: s3Path,
+            Body: body,
+            ContentType: contentType,
+        }));
+        return {
+            success: true,
+            key: s3Path,
+            targetName,
+            url: `https://${BUCKET_NAME}.s3.amazonaws.com/${s3Path}`,
+        };
+    } catch (error) {
+        console.error("[S3] Area upload error:", error);
+        return { success: false, error: getFriendlyS3Error(error) };
+    }
+}
+
+export async function listAreaMedia(areaName: string): Promise<AreaMediaFile[]> {
+    const safeArea = normalizePathSegment(areaName);
+    const prefix = `${AREAS_PREFIX}/${safeArea}/`;
+    const files: AreaMediaFile[] = [];
+
+    try {
+        const response = await s3Client.send(new ListObjectsV2Command({ Bucket: BUCKET_NAME, Prefix: prefix }));
+        if (response.Contents) {
+            for (const object of response.Contents) {
+                if (!object.Key) continue;
+                const fileName = object.Key.replace(prefix, "");
+
+                // Skip development thumbnails ({desarrolloName}.webp)
+                if (fileName.includes("/")) continue;
+
+                let type: AreaMediaFile["type"];
+                let carouselNumber: number | undefined;
+
+                if (fileName === "banner.jpg" || fileName === "banner.webp") {
+                    type = "banner";
+                } else if (fileName === "firstImage.jpg" || fileName === "firstImage.webp") {
+                    type = "firstImage";
+                } else {
+                    const m = fileName.match(/^carousel-(\d+)\.(jpg|webp)$/i);
+                    if (m) {
+                        type = "carousel";
+                        carouselNumber = parseInt(m[1], 10);
+                    } else {
+                        continue;
+                    }
+                }
+
+                files.push({
+                    key: object.Key,
+                    name: fileName,
+                    url: `https://${BUCKET_NAME}.s3.amazonaws.com/${object.Key}`,
+                    type,
+                    carouselNumber,
+                    size: object.Size,
+                    lastModified: object.LastModified,
+                });
+            }
+        }
+    } catch (error) {
+        console.error("[S3] listAreaMedia error:", error);
+    }
+
+    return files;
+}
+
+export async function countAreaCarouselImages(areaName: string): Promise<number> {
+    const files = await listAreaMedia(areaName);
+    return files.filter((f) => f.type === "carousel").length;
+}
+
+export async function getNextAreaCarouselNumber(areaName: string): Promise<number> {
+    const files = await listAreaMedia(areaName);
+    let max = 0;
+    for (const f of files) {
+        if (f.type === "carousel" && f.carouselNumber && f.carouselNumber > max) max = f.carouselNumber;
+    }
+    return max + 1;
+}

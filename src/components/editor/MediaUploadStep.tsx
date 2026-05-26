@@ -37,6 +37,7 @@ export default function MediaUploadStep({
   const videoInputRef = useRef<HTMLInputElement>(null);
   const bannerInputRef = useRef<HTMLInputElement>(null);
   const thumbnailInputRef = useRef<HTMLInputElement>(null);
+  const [selectedPdfType, setSelectedPdfType] = useState<"brochure" | "hoja" | "planos">("brochure");
 
   const safeArea = normalizePathSegment(areaName);
   const safeProject = normalizePathSegment(projectName);
@@ -187,7 +188,7 @@ export default function MediaUploadStep({
     );
 
     const result = await uploadFileToS3(file, areaName, projectName, "pdf", {
-      targetName: file.name,
+      targetName: `${selectedPdfType}.pdf`,
     });
 
     if (result.success) {
@@ -591,6 +592,22 @@ export default function MediaUploadStep({
           ))}
 
           <div className="mt-2">
+            <div className="mb-2">
+              <label className="form-label small">
+                {t("pages.editor.media.pdfTypeLabel", "PDF type")}
+              </label>
+              <select
+                className="form-select form-select-sm"
+                value={selectedPdfType}
+                title={String(t("pages.editor.media.pdfTypeLabel", "PDF type"))}
+                aria-label={String(t("pages.editor.media.pdfTypeLabel", "PDF type"))}
+                onChange={(e) => setSelectedPdfType(e.target.value as "brochure" | "hoja" | "planos")}
+              >
+                <option value="brochure">brochure.pdf — {t("pages.editor.media.pdfBrochure", "Brochure")}</option>
+                <option value="hoja">hoja.pdf — {t("pages.editor.media.pdfHoja", "Fact sheet")}</option>
+                <option value="planos">planos.pdf — {t("pages.editor.media.pdfPlanos", "Floor plans")}</option>
+              </select>
+            </div>
             <input
               ref={pdfInputRef}
               type="file"
@@ -603,7 +620,7 @@ export default function MediaUploadStep({
             <div className="form-text">
               {t(
                 "pages.editor.media.pdfHelp",
-                "Upload PDF files one at a time. Name them brochure.pdf, hoja.pdf, or planos.pdf.",
+                "Select the PDF type above, then choose the file. It will be saved with the correct name.",
               )}
             </div>
           </div>

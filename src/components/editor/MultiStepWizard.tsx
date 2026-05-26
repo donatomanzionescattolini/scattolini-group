@@ -4,6 +4,7 @@ import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import "./MultiStepWizard.scss";
 import { useTranslation } from "../../i18n.tsx";
 import MediaUploadStep from "./MediaUploadStep";
+import AreaMediaUploadStep from "./AreaMediaUploadStep";
 import Areas, {DYNAMIC_AREAS_UPDATED_EVENT} from "../../objects/areas/Areas";
 import AddressAutocompleteField from "./AddressAutocompleteField";
 
@@ -109,11 +110,15 @@ export default function MultiStepWizard({
       return [
         {
           title: t("pages.editor.wizard.area.basic", "Basic info"),
-          fields: ["name", "titulo", "slogan"],
+          fields: ["name", "titulo", "slogan", "imageExtension"],
         },
         {
           title: t("pages.editor.wizard.area.description", "Description"),
           fields: ["descripcion"],
+        },
+        {
+          title: t("pages.editor.wizard.area.media", "Media (S3)"),
+          fields: ["areaMediaUpload"],
         },
         {
           title: t("pages.editor.wizard.review", "Review"),
@@ -211,7 +216,155 @@ export default function MultiStepWizard({
     [setValue],
   );
 
+  // ── Bilingual helpers ──────────────────────────────────────────────────────
+
+  /** Fields that should always be stored as {es, en} text objects */
+  const BILINGUAL_TEXT_FIELDS = ["titulo", "slogan"];
+  /** Fields that should always be stored as {es: string[], en: string[]} */
+  const BILINGUAL_ARRAY_FIELDS = ["introduccion", "descripcion"];
+
+  const getBilingualTextValue = (fieldName: string): { es: string; en: string } => {
+    const raw = formData[fieldName];
+    if (!raw) return { es: "", en: "" };
+    if (typeof raw === "string") return { es: raw, en: "" };
+    if (typeof raw === "object" && !Array.isArray(raw)) return { es: raw.es || "", en: raw.en || "" };
+    return { es: "", en: "" };
+  };
+
+  const setBilingualTextValue = useCallback(
+    (fieldName: string, lang: "es" | "en", value: string) => {
+      setFormData((prev: any) => {
+        const current = prev[fieldName];
+        const obj = current && typeof current === "object" && !Array.isArray(current)
+          ? current : { es: typeof current === "string" ? current : "", en: "" };
+        const updated = { ...obj, [lang]: value };
+        return { ...prev, [fieldName]: updated };
+      });
+    },
+    [],
+  );
+
+  const getBilingualArrayValue = (fieldName: string): { es: string; en: string } => {
+    const raw = formData[fieldName];
+    if (!raw) return { es: "", en: "" };
+    if (Array.isArray(raw)) return { es: raw.join("\n\n"), en: "" };
+    if (typeof raw === "object" && !Array.isArray(raw)) {
+      return {
+        es: Array.isArray(raw.es) ? raw.es.join("\n\n") : (raw.es || ""),
+        en: Array.isArray(raw.en) ? raw.en.join("\n\n") : (raw.en || ""),
+      };
+    }
+    if (typeof raw === "string") return { es: raw, en: "" };
+    return { es: "", en: "" };
+  };
+
+  const setBilingualArrayValue = useCallback(
+    (fieldName: string, lang: "es" | "en", value: string) => {
+      const arr = value.split("\n\n").filter((p) => p.trim());
+      setFormData((prev: any) => {
+        const current = prev[fieldName];
+        const currentEs = current && typeof current === "object" && !Array.isArray(current)
+          ? (Array.isArray(current.es) ? current.es : [])
+          : (Array.isArray(current) ? current : []);
+        const currentEn = current && typeof current === "object" && !Array.isArray(current)
+          ? (Array.isArray(current.en) ? current.en : [])
+          : [];
+        return {
+          ...prev,
+          [fieldName]: {
+            es: lang === "es" ? arr : currentEs,
+            en: lang === "en" ? arr : currentEn,
+          },
+        };
+      });
+    },
+    [],
+  );
+
+  // ── Render helpers ─────────────────────────────────────────────────────────
+
+  const renderBilingualTextField = (fieldName: string) => {
+    const { es, en } = getBilingualTextValue(fieldName);
+    const fallbackLabel = fieldName.charAt(0).toUpperCase() + fieldName.slice(1);
+    const label = t(`pages.editor.fields.${fieldName}`, fallbackLabel);
+    return (
+      <div key={fieldName} className="mb-4">
+        <Form.Label className="fw-semibold">{label}</Form.Label>
+        <Row>
+          <Col md={6}>
+            <Form.Group>
+              <Form.Label className="small text-muted">🇪🇸 Español</Form.Label>
+              <Form.Control
+                type="text"
+                value={es}
+                onChange={(e) => setBilingualTextValue(fieldName, "es", e.target.value)}
+              />
+            </Form.Group>
+          </Col>
+          <Col md={6}>
+            <Form.Group>
+              <Form.Label className="small text-muted">🇺🇸 English</Form.Label>
+              <Form.Control
+                type="text"
+                value={en}
+                onChange={(e) => setBilingualTextValue(fieldName, "en", e.target.value)}
+              />
+            </Form.Group>
+          </Col>
+        </Row>
+      </div>
+    );
+  };
+
+  const renderBilingualArrayField = (fieldName: string) => {
+    const { es, en } = getBilingualArrayValue(fieldName);
+    const fallbackLabel = fieldName.charAt(0).toUpperCase() + fieldName.slice(1);
+    const label = t(`pages.editor.fields.${fieldName}`, fallbackLabel);
+    return (
+      <div key={fieldName} className="mb-4">
+        <Form.Label className="fw-semibold">{label}</Form.Label>
+        <Row>
+          <Col md={6}>
+            <Form.Group>
+              <Form.Label className="small text-muted">🇪🇸 Español</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={6}
+                value={es}
+                onChange={(e) => setBilingualArrayValue(fieldName, "es", e.target.value)}
+              />
+            </Form.Group>
+          </Col>
+          <Col md={6}>
+            <Form.Group>
+              <Form.Label className="small text-muted">🇺🇸 English</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={6}
+                value={en}
+                onChange={(e) => setBilingualArrayValue(fieldName, "en", e.target.value)}
+              />
+            </Form.Group>
+          </Col>
+        </Row>
+        <Form.Text className="text-muted">
+          {t("pages.editor.fields.paragraphHint", "Separate paragraphs with a blank line (double Enter).")}
+        </Form.Text>
+      </div>
+    );
+  };
+
   const renderField = (fieldName: string) => {
+    // Bilingual text fields
+    if (BILINGUAL_TEXT_FIELDS.includes(fieldName)) {
+      return renderBilingualTextField(fieldName);
+    }
+
+    // Bilingual array fields
+    if (BILINGUAL_ARRAY_FIELDS.includes(fieldName)) {
+      return renderBilingualArrayField(fieldName);
+    }
+
     if (fieldName === "mediaUpload") {
       const projectName = formData.nombre || "project-name";
       const areaName =
@@ -222,6 +375,18 @@ export default function MultiStepWizard({
           <MediaUploadStep
             areaName={areaName}
             projectName={projectName}
+            onNumberOfImagesChange={handleNumberOfImagesChange}
+          />
+        </div>
+      );
+    }
+
+    if (fieldName === "areaMediaUpload") {
+      const areaName = formData.name || "";
+      return (
+        <div key={fieldName} className="mb-4">
+          <AreaMediaUploadStep
+            areaName={areaName}
             onNumberOfImagesChange={handleNumberOfImagesChange}
           />
         </div>
@@ -278,9 +443,30 @@ export default function MultiStepWizard({
       );
     }
 
-    const isTextarea = ["introduccion", "descripcion", "slogan"].includes(
-      fieldName,
-    );
+    // Image extension selector (for area)
+    if (fieldName === "imageExtension") {
+      return (
+        <div key={fieldName} className="mb-4">
+          <Form.Group>
+            <Form.Label>{t("pages.editor.fields.imageExtension", "Image format")}</Form.Label>
+            <Form.Select
+              value={formData.imageExtension || "jpg"}
+              aria-label={String(t("pages.editor.fields.imageExtension", "Image format"))}
+              onChange={(e) => {
+                setFormData((prev: any) => ({ ...prev, imageExtension: e.target.value }));
+                setValue("imageExtension", e.target.value);
+              }}
+            >
+              <option value="jpg">JPG (new areas uploaded via this editor)</option>
+              <option value="webp">WebP (legacy static areas)</option>
+            </Form.Select>
+            <Form.Text className="text-muted">
+              {t("pages.editor.fields.imageExtensionHelp", "Choose JPG for new areas. WebP is only needed for pre-existing static areas.")}
+            </Form.Text>
+          </Form.Group>
+        </div>
+      );
+    }
 
     if (fieldName === "ubicacion" || fieldName === "ubicación") {
       const label = t("pages.editor.fields.ubicacion", "Location");
@@ -311,32 +497,16 @@ export default function MultiStepWizard({
         <Controller
           name={fieldName}
           control={control}
-          render={() =>
-            isTextarea ? (
-              <Form.Group>
-                <Form.Label>{label}</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={
-                    fieldName === "introduccion" || fieldName === "descripcion"
-                      ? 6
-                      : 3
-                  }
-                  value={getFieldValue(fieldName)}
-                  onChange={(e) => setFieldValue(fieldName, e.target.value)}
-                />
-              </Form.Group>
-            ) : (
-              <Form.Group>
-                <Form.Label>{label}</Form.Label>
-                <Form.Control
-                  type="text"
-                  value={getFieldValue(fieldName)}
-                  onChange={(e) => setFieldValue(fieldName, e.target.value)}
-                />
-              </Form.Group>
-            )
-          }
+          render={() => (
+            <Form.Group>
+              <Form.Label>{label}</Form.Label>
+              <Form.Control
+                type="text"
+                value={getFieldValue(fieldName)}
+                onChange={(e) => setFieldValue(fieldName, e.target.value)}
+              />
+            </Form.Group>
+          )}
         />
       </div>
     );
