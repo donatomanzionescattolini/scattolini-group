@@ -1,10 +1,10 @@
 ﻿import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import MiamiBeach from "../../areas/MiamiBeach.tsx";
-const lang: "en" | "es" = "es";
+import MiamiRiver from "../../areas/MiamiRiver.tsx";
+const lang: string = "es";
 
 
 
-    const FaenaResidencesObject = new Desarrollo(MiamiBeach);
+    const FaenaResidencesObject = new Desarrollo(MiamiRiver);
     FaenaResidencesObject.nombre = "faena-residences";
     FaenaResidencesObject.titulo = {
         es: "Faena Residences Miami Beach",
