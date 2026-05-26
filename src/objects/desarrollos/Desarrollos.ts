@@ -87,7 +87,8 @@ import SeventyTwoCarlyle from "./MiamiBeach/72Carlyle.tsx";
 import TulaResidences from "./NorthBayVillage/TulaResidences.tsx";
 import ViceroyBrickell from "./Brickell/ViceroyBrickell.tsx";
 import StRegisBrickell from "./Brickell/StRegisBrickell.tsx";
-import Parkside from "./Brickell/Parkside.tsx";
+import buildParkside from "./Brickell/Parkside.tsx";
+const Parkside = buildParkside("es");
 import SevenParkResidences from "./Hollywood/SevenParkResidences.tsx";
 import GaiaResidences from "./Hollywood/GaiaResidences.tsx";
 import FaenaResidences from "./MiamiBeach/FaenaResidences.tsx";
@@ -327,7 +328,8 @@ desarrolloMap.push({
     des: new Set([MidtownParkResidences, TheStandardResidences, JeanGeorgesMiamiTropicResidences, TulaResidences]),
 });
 
-export function getDesarrollosForArea(area: Area, lang: "en" | "es" = "es"): Set<Desarrollo> {
+desarrolloMap.sort();
+export function getDesarrollosForArea(area: Area, _lang: "en" | "es" = "es"): Set<Desarrollo> {
     const filtered = desarrolloMap.filter((entry) =>
         entry.area.name
             .toLowerCase()
@@ -346,6 +348,7 @@ export function getDesarrollosForArea(area: Area, lang: "en" | "es" = "es"): Set
     const dynamicInstances = Array.from(dynamicDesarrolloMap[area.name] || []).map(des => {
         const instance = Object.assign(new Desarrollo(area), des);
         instance.area = area;
+        return instance;
     });
 
     // Merge static and dynamic, dynamic takes precedence for same nombre

@@ -1,5 +1,5 @@
 import ProjectTemplate from "../ProjectTemplate.tsx";
-import Parkside from "../../../objects/desarrollos/Brickell/Parkside.tsx";
+import buildParkside from "../../../objects/desarrollos/Brickell/Parkside.tsx";
 export default function ParksideProject() {
-    return <ProjectTemplate desarrollo={Parkside}/>;
+    return <ProjectTemplate desarrollo={buildParkside}/>;
 }

@@ -50,6 +50,10 @@ function AreasComponent() {
             }
         });
 
+        withProjects.sort((a, b) =>
+            (getLocalized(a.titulo) || a.name).localeCompare(getLocalized(b.titulo) || b.name)
+        );
+
         return {areasWithProjects: withProjects};
     }, [allAreas, lang, contentVersion]);
 

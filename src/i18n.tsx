@@ -218,8 +218,16 @@ const translations: Record<Lang, any> = {
                 edificio: "Edificio",
                 residencias: "Residencias",
                 amenidades: "Amenidades",
+                planos: "Planos de Planta",
                 galeria: "Galería Fotográfica",
                 locatedIn: "Ubicado en",
+                buildingFields: {
+                    location: "Ubicación",
+                    builder: "Constructora",
+                    constructionYear: "Año de Finalización",
+                    squareFeet: "Pies Cuadrados",
+                    typeOfUnits: "Tipos de Unidades",
+                },
                 pdf: {
                     brochure: "Brochure",
                     hoja: "Hoja de Datos",
@@ -964,7 +972,15 @@ const translations: Record<Lang, any> = {
                 edificio: "Building",
                 residencias: "Residences",
                 amenidades: "Amenities",
+                planos: "Floor Plans",
                 galeria: "Photo Gallery",
+                buildingFields: {
+                    location: "Location",
+                    builder: "Builder",
+                    constructionYear: "Completion Year",
+                    squareFeet: "Square Feet",
+                    typeOfUnits: "Unit Types",
+                },
                 pdf: {
                     brochure: "Brochure",
                     hoja: "Spec Sheet",

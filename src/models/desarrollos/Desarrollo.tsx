@@ -145,6 +145,7 @@ class Desarrollo {
         const builderLabel = getTranslation("pages.project.buildingFields.builder", lang) as string;
         const constructionYearLabel = getTranslation("pages.project.buildingFields.constructionYear", lang) as string;
         const squareFeetLabel = getTranslation("pages.project.buildingFields.squareFeet", lang) as string;
+        const typeOfUnitsLabel = getTranslation("pages.project.buildingFields.typeOfUnits", lang) as string;
         return (
             <dl>
                 <dt>{locationLabel}</dt>
@@ -157,6 +158,12 @@ class Desarrollo {
                 )}
                 <dt>{constructionYearLabel}</dt>
                 <dd>{this.estimatedCompletionYear}</dd>
+                {this.typeOfUnits && (
+                    <>
+                        <dt>{typeOfUnitsLabel}</dt>
+                        <dd>{typeof this.typeOfUnits === "string" ? this.typeOfUnits : String(this.typeOfUnits)}</dd>
+                    </>
+                )}
                 {this.piesCuadrados && (
                     <>
                         <dt>{squareFeetLabel}</dt>

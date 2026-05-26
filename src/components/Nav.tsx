@@ -29,9 +29,17 @@ const Nav = () => {
         };
     }, []);
 
-    // Only include areas that have projects to sell
+    const getLocalized = (field: string | Record<string, string | undefined> | null | undefined) => {
+        return resolveLocalizedValue<string>(field || undefined, lang) || "";
+    };
+
+    // Only include areas that have projects to sell, sorted alphabetically
     const allAreas = useMemo(() => {
-        return Areas().filter((area) => getDesarrollosForArea(area, lang).size > 0);
+        return Areas()
+            .filter((area) => getDesarrollosForArea(area, lang).size > 0)
+            .sort((a, b) =>
+                (getLocalized(a.titulo) || a.name).localeCompare(getLocalized(b.titulo) || b.name)
+            );
     }, [lang, dynamicVersion, dynamicAreaVersion]);
     const [filteredAreas, setFilteredAreas] = useState<Array<Area>>(allAreas);
 
@@ -75,10 +83,14 @@ const Nav = () => {
             return;
         }
 
-        const filteredAreaz = allAreas.filter((area) => {
-            const title = (getLocalized(area.titulo) || "").toLowerCase();
-            return title.includes(q) || q.includes(title);
-        });
+        const filteredAreaz = allAreas
+            .filter((area) => {
+                const title = (getLocalized(area.titulo) || "").toLowerCase();
+                return title.includes(q) || q.includes(title);
+            })
+            .sort((a, b) =>
+                (getLocalized(a.titulo) || a.name).localeCompare(getLocalized(b.titulo) || b.name)
+            );
 
         setFilteredAreas(filteredAreaz);
     };
@@ -94,9 +106,6 @@ const Nav = () => {
         setShowNavCentred(false);
     };
 
-    const getLocalized = (field: string | Record<string, string | undefined> | null | undefined) => {
-        return resolveLocalizedValue<string>(field || undefined, lang) || "";
-    };
 
     return (
         <Navbar expand="lg" bg="light" variant="light">

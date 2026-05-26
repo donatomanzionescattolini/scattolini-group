@@ -25,6 +25,7 @@ type LocalizedCharacteristics = {
   edificio?: ReactNode;
   residencias?: ReactNode;
   amenidades?: ReactNode;
+  planos?: ReactNode;
 };
 
 const IMAGE_EXTENSIONS = ["jpg", "jpeg", "png", "webp", "avif"] as const;
@@ -143,6 +144,7 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
   );
   const [tabVisible, setTabVisible] = useState("brochure");
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  const [videoError, setVideoError] = useState(false);
   const videoUrl =
     video ||
     `https://pagina-mama.s3.amazonaws.com/assets2/desarrollos/${nombre}/video.mp4`;
@@ -188,6 +190,11 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
       title: t("pages.project.amenidades", "Amenidades"),
       content: localizedCaracteristicas?.amenidades,
     },
+    {
+      key: "planos",
+      title: t("pages.project.planos", "Planos de Planta"),
+      content: localizedCaracteristicas?.planos,
+    },
   ].filter((section) => hasRenderableContent(section.content));
 
   useEffect(() => {
@@ -195,6 +202,11 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
+
+  // Reset video error state when the project changes
+  useEffect(() => {
+    setVideoError(false);
+  }, [nombre]);
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -286,7 +298,7 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
       <section className="white-block">
         <div className="project-video-wrapper">
           <div className="project-video-inner">
-            {typeof videoUrl !== "string" ? (
+            {!videoError && (typeof videoUrl !== "string" ? (
               videoUrl
             ) : (
               <video
@@ -299,14 +311,16 @@ export default function ProjectTemplate({ desarrollo }: ProjectParams) {
                 playsInline
                 preload="auto"
                 className="mx-auto my-0 p-0"
+                onError={() => setVideoError(true)}
               >
                 <source src={videoUrl} type="video/mp4" />
+                <source src={videoUrl.replace(/\.mp4$/i, ".webm")} type="video/webm" />
                 {t(
                   "common.videoNotSupported",
                   "Your browser does not support the video tag."
                 )}
               </video>
-            )}
+            ))}
           </div>
         </div>
       </section>

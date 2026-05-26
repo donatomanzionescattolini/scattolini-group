@@ -60,7 +60,9 @@ export default function AreasComponent(): React.ReactElement {
     // These areas exist but have no active listings yet
     // console.log('Areas without projects:', areasWithoutProjects.map(a => a.name));
 
-    const areas = areasWithProjects;
+    const areas = [...areasWithProjects].sort((a, b) =>
+        (getLocalized(a.titulo) || a.name).localeCompare(getLocalized(b.titulo) || b.name)
+    );
 
     return (
         <Container>
