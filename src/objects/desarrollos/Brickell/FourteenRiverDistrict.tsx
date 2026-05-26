@@ -1,15 +1,15 @@
 ﻿import {getDesarrolloI18n} from "../useDesarrolloI18n";
 import Desarrollo from "../../../models/desarrollos/Desarrollo.tsx";
-import Brickell from "../../areas/Brickell.tsx";
+import MiamiRiver from "../../areas/MiamiRiver.tsx";
 import React from "react";
 
 
     const {getLocalizedField, getLocalizedArray} = getDesarrolloI18n("14-river-district", "es");
-    const FourteenRiverDistrictObject = new Desarrollo(Brickell);
+    const FourteenRiverDistrictObject = new Desarrollo(MiamiRiver);
 
     FourteenRiverDistrictObject.nombre = "14-river-district";
     FourteenRiverDistrictObject.banner = getLocalizedField("banner", "true") === "true";
-    FourteenRiverDistrictObject.area = Brickell;
+    FourteenRiverDistrictObject.area = MiamiRiver;
     FourteenRiverDistrictObject.numberOfImages = parseInt(getLocalizedField("numberOfImages", "27"), 10) || 27;
 
     FourteenRiverDistrictObject.caracteristicas = {
