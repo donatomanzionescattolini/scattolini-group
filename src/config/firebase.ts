@@ -1,6 +1,11 @@
 // Import the functions you need from the SDKs you need
 import {initializeApp} from "firebase/app";
-import {getAuth} from "firebase/auth";
+import {
+    browserLocalPersistence,
+    indexedDBLocalPersistence,
+    initializeAuth,
+    inMemoryPersistence,
+} from "firebase/auth";
 import {getFirestore} from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -45,8 +50,23 @@ if (!hasRequiredFirebaseConfig) {
 // Initialize Firebase
 const app = initializeApp(resolvedFirebaseConfig);
 
-// Initialize Firebase Authentication and get a reference to the service
-export const auth = getAuth(app);
+// Determine which persistence to use.
+// In sandboxed iframes or browsers with strict privacy settings,
+// accessing localStorage throws a SecurityError — use in-memory fallback.
+function getPreferredPersistence() {
+    try {
+        // Just accessing window.localStorage can throw a SecurityError
+        window.localStorage;
+        return [indexedDBLocalPersistence, browserLocalPersistence];
+    } catch {
+        return [inMemoryPersistence];
+    }
+}
+
+// Initialize Firebase Authentication with safe persistence
+export const auth = initializeAuth(app, {
+    persistence: getPreferredPersistence(),
+});
 
 // Initialize Cloud Firestore and get a reference to the service
 export const db = getFirestore(app);
