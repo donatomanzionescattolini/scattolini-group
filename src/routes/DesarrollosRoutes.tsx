@@ -20,6 +20,7 @@ import SouthMiamiRoutes from "./desarrollos/SouthMiamiRoutes";
 import SunnyIslesRoutes from "./desarrollos/SunnyIslesRoutes";
 import WynwoodRoutes from "./desarrollos/WynwoodRoutes";
 import OrlandoRoutes from "./desarrollos/OrlandoRoutes.tsx";
+import WestPalmBeachRoutes from "./desarrollos/WestPalmBeachRoutes.tsx";
 import { Route } from "react-router-dom";
 import DynamicDesarrolloRoute from "../components/desarrollos/DynamicDesarrolloRoute.tsx";
 
@@ -47,6 +48,7 @@ export default function DesarrollosRoutes() {
             {PompanoBeachRoutes()}
             {HollywoodRoutes()}
             {OrlandoRoutes()}
+            {WestPalmBeachRoutes()}
             <Route element={<DynamicDesarrolloRoute />} path="/desarrollos/:slug" />
         </>
     );

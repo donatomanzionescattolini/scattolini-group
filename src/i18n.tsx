@@ -80,6 +80,10 @@ const translations: Record<Lang, any> = {
                     ubicacion: "475 SE 1st St, Pompano Beach, FL 33060",
                 },
                 baccarat: {title: "Proyectos en Desarrollo"},
+                "alba-palm-beach": {
+                    titulo: "Alba Palm Beach",
+                    subtitulo: "Residencias de lujo frente al Intracoastal",
+                },
             },
             asociados: {title: "Asociados"},
             liderazgo: {
@@ -841,6 +845,10 @@ const translations: Record<Lang, any> = {
                     ubicacion: "475 SE 1st St, Pompano Beach, FL 33060",
                 },
                 baccarat: {title: "Developments"},
+                "alba-palm-beach": {
+                    titulo: "Alba Palm Beach",
+                    subtitulo: "Luxury residences on the Intracoastal",
+                },
             },
             asociados: {title: "Associates"},
             liderazgo: {

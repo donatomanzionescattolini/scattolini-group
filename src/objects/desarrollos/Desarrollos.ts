@@ -101,6 +101,9 @@ import VistaHarbor from "./Downtown/VistaHarbor.tsx";
 import KempinskiResidences from "./Edgewater/KempinskiResidences.tsx";
 import MiamiDesignDistrict from "../areas/MiamiDesignDistrict.tsx";
 import MiamiRiver from "../areas/MiamiRiver.tsx";
+import WestPalmBeachArea from "../areas/WestPalmBeach.tsx";
+import AlbaPalmBeach from "./WestPalmBeach/AlbaPalmBeach.tsx";
+
 
 interface DesarrolloMapItem {
     area: Area;
@@ -263,6 +266,7 @@ desarrolloMap.push({
         VistaHarbor,
     ]),
 });
+
 desarrolloMap.push({
     area: Edgewater,
     des: new Set([
@@ -295,6 +299,10 @@ desarrolloMap.push({
 desarrolloMap.push({
     area: MiamiRiver,
     des: new Set([FourteenRiverDistrict, FaenaResidences])
+});
+desarrolloMap.push({
+    area: WestPalmBeachArea,
+    des: new Set([AlbaPalmBeach]),
 });
 desarrolloMap.push({
     area: Pinecrest,
