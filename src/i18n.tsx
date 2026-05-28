@@ -53,6 +53,14 @@ const translations: Record<Lang, any> = {
                         "Orlando se ha consolidado como una de las ciudades más dinámicas y prometedoras de Florida, ideal tanto para quienes buscan un nuevo hogar como para quienes desean invertir estratégicamente en bienes raíces. Su crecimiento económico sostenido, la llegada constante de nuevas empresas y su calidad de vida —marcada por seguridad, áreas verdes y una oferta cultural en expansión— la convierten en una alternativa atractiva frente a los mercados más saturados del sur del estado. Además, su infraestructura moderna y su ubicación estratégica en el centro de Florida facilitan la conexión con el resto del país y con destinos internacionales.",
                         "Para los inversionistas, Orlando ofrece un mercado inmobiliario con alta demanda de alquileres a largo y corto plazo, impulsado por su industria turística de clase mundial y por un flujo continuo de nuevos residentes. La combinación de precios competitivos, apreciación constante y un entorno favorable para negocios crea un escenario ideal para maximizar el retorno de inversión. En resumen, Orlando representa una oportunidad sólida y versátil, perfecta para quienes buscan estabilidad, crecimiento y un estilo de vida excepcional."
                     ]
+                },
+                "west-palm-beach": {
+                    titulo: "West Palm Beach",
+                    slogan: "La Joya del Atlántico",
+                    descripcion: [
+                        "West Palm Beach se ha consolidado como uno de los mercados inmobiliarios más atractivos de Florida, ofreciendo una combinación única de lujo, cultura y naturaleza. Ubicada en el corazón del condado Palm Beach, esta ciudad ofrece acceso directo a algunas de las playas más hermosas del estado, junto con un dinámico centro urbano repleto de restaurantes, galerías de arte, boutiques exclusivas y una vibrante vida nocturna.",
+                        "Para los inversionistas, West Palm Beach representa una oportunidad estratégica de primer orden. La ciudad experimenta un crecimiento constante impulsado por la llegada de empresas financieras y tecnológicas de renombre, lo que ha generado una fuerte demanda de propiedades residenciales y comerciales de alta gama. Con precios aún competitivos en comparación con Miami y una apreciación sostenida del mercado, invertir aquí significa apostar por una ciudad en plena expansión con una proyección internacional en constante ascenso."
+                    ]
                 }
             },
             aliados: {
@@ -805,6 +813,14 @@ const translations: Record<Lang, any> = {
                     descripcion: [
                         "Orlando has established itself as one of Florida's most dynamic and promising cities, ideal for both those seeking a new home and those looking to invest strategically in real estate. Its sustained economic growth, the constant arrival of new companies, and its quality of life—marked by safety, green spaces, and an expanding cultural offering—make it an attractive alternative to the more saturated markets in the southern part of the state. Additionally, its modern infrastructure and strategic location in central Florida facilitate connections with the rest of the country and international destinations.",
                         "For investors, Orlando offers a real estate market with high demand for long and short-term rentals, driven by its world-class tourism industry and a continuous flow of new residents. The combination of competitive prices, constant appreciation, and a business-friendly environment creates an ideal scenario to maximize return on investment. In summary, Orlando represents a solid and versatile opportunity, perfect for those seeking stability, growth, and an exceptional lifestyle."
+                    ]
+                },
+                "west-palm-beach": {
+                    titulo: "West Palm Beach",
+                    slogan: "The Jewel of the Atlantic",
+                    descripcion: [
+                        "West Palm Beach has established itself as one of Florida's most attractive real estate markets, offering a unique combination of luxury, culture, and nature. Located in the heart of Palm Beach County, this city provides direct access to some of the state's most beautiful beaches, along with a dynamic urban core filled with restaurants, art galleries, exclusive boutiques, and a vibrant nightlife.",
+                        "For investors, West Palm Beach represents a top-tier strategic opportunity. The city is experiencing steady growth driven by the arrival of renowned financial and technology firms, generating strong demand for high-end residential and commercial properties. With prices still competitive compared to Miami and sustained market appreciation, investing here means betting on a city in full expansion with a steadily rising international profile."
                     ]
                 }
             },

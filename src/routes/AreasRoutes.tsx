@@ -24,6 +24,7 @@ import SunnyIslesComponent from "../components/areas/SunnyIslesComponent";
 import WynwoodCoponent from "../components/areas/WynwoodComponent";
 import {OrlandoComponent} from "../components/areas/OrlandoComponent.tsx";
 import MiamiRiverComponent from "../components/areas/MiamiRiverComponent.tsx";
+import WestPalmBeachComponent from "../components/areas/WestPalmBeachComponent.tsx";
 import DynamicAreaRoute from "../components/areas/DynamicAreaRoute.tsx";
 
 export default function AreasRoutes() {
@@ -75,6 +76,7 @@ export default function AreasRoutes() {
             <Route element={<DaniaBeachComponent/>} path="/areas/dania-beach"/>
             <Route element={<MidtownMiamiProject/>} path="/areas/midtown-miami"/>
             <Route element={<MiamiRiverComponent/>} path="/areas/miami-river"/>
+            <Route element={<WestPalmBeachComponent/>} path="/areas/west-palm-beach"/>
             <Route element={<DynamicAreaRoute/>} path="/areas/:slug"/>
         </>
     );
